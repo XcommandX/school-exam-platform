@@ -1,0 +1,51 @@
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+
+# OS / editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Dependencies and generated output
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+dist/
+build/
+.next/
+.nuxt/
+.output/
+coverage/
+.cache/
+.turbo/
+*.tsbuildinfo
+*.log
+
+# Local cloud tooling state
+.wrangler/
+.vercel/
+.netlify/
+supabase/.temp/
+supabase/.branches/
+
+# Local runtime databases and non-versioned data
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+private-data/
+backups/
+uploads/
