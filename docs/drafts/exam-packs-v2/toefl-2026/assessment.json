@@ -1,0 +1,553 @@
+{
+  "profile": {
+    "id": "toefl-ibt-2026-01-21-synthetic-structure",
+    "examVersion": "ibt-2026-01-21",
+    "effectiveFrom": "2026-01-21",
+    "administrationYear": 2026,
+    "subject": "Integrated four skills",
+    "assemblyStatus": "incomplete",
+    "mockReady": false,
+    "sequence": [
+      "reading",
+      "listening",
+      "writing",
+      "speaking"
+    ],
+    "rulesSourceRefs": [
+      "ets-content",
+      "ets-spec-2026",
+      "ets-teacher-faq"
+    ],
+    "includedTaskFamilies": 12,
+    "includedResponseParts": 31,
+    "pretestPolicy": {
+      "scope": [
+        "reading",
+        "listening"
+      ],
+      "hasOfficialUnscoredPretestItems": true,
+      "sampleContainsPretestItems": false,
+      "sourceRefs": [
+        "ets-teacher-faq"
+      ]
+    },
+    "completeness": {
+      "reading": "仅填词 10 小题、日常阅读 1 小题及学术阅读 2 小题，无可运行第二阶段。",
+      "listening": "四类各 1 小题，无可运行第二阶段。",
+      "writing": "组句仅 1/10；邮件和讨论各 1；媒体与最终试卷规则待编校。",
+      "speaking": "示例结构含 7 个复述和 4 个访谈响应，但媒体占位、复述逐题时限待核验。"
+    }
+  },
+  "sections": [
+    {
+      "id": "reading",
+      "title": "Reading",
+      "sequence": 1,
+      "assemblyStatus": "incomplete",
+      "nominalOfficialBlueprint": {
+        "itemCount": 50,
+        "approxBaseTimeSeconds": 1800,
+        "timeExcludesDirections": true,
+        "sourceRefs": [
+          "ets-content"
+        ]
+      },
+      "modules": [
+        {
+          "id": "reading-router",
+          "sequence": 1,
+          "itemRefs": [
+            "r-complete",
+            "r-daily",
+            "r-academic"
+          ],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": true,
+            "allowSkipWithinModule": true,
+            "allowBackAcrossModules": false,
+            "sourceRefs": [
+              "ets-practice-2026",
+              "ets-teacher-faq"
+            ]
+          },
+          "stageId": "reading-stage-1",
+          "timeProfileRef": "reading-router-time"
+        },
+        {
+          "id": "reading-lower",
+          "sequence": 2,
+          "itemRefs": [],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": true,
+            "allowSkipWithinModule": true,
+            "allowBackAcrossModules": false,
+            "sourceRefs": [
+              "ets-practice-2026",
+              "ets-teacher-faq"
+            ]
+          },
+          "stageId": "reading-stage-2",
+          "candidateRoute": "lower",
+          "timeProfileRef": "reading-lower-time"
+        },
+        {
+          "id": "reading-upper",
+          "sequence": 2,
+          "itemRefs": [],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": true,
+            "allowSkipWithinModule": true,
+            "allowBackAcrossModules": false,
+            "sourceRefs": [
+              "ets-practice-2026",
+              "ets-teacher-faq"
+            ]
+          },
+          "stageId": "reading-stage-2",
+          "candidateRoute": "upper",
+          "timeProfileRef": "reading-upper-time"
+        }
+      ],
+      "stages": [
+        {
+          "id": "reading-stage-1",
+          "sequence": 1,
+          "moduleRefs": [
+            "reading-router"
+          ]
+        },
+        {
+          "id": "reading-stage-2",
+          "sequence": 2,
+          "candidateModuleRefs": [
+            "reading-lower",
+            "reading-upper"
+          ],
+          "selectExactly": 1
+        }
+      ],
+      "routing": {
+        "kind": "two-stage-adaptive",
+        "implementationStatus": "not-implemented",
+        "decisionAfterModule": "reading-router",
+        "policyRef": null,
+        "requiredExternalInputs": [
+          "authorized calibrated item pool",
+          "versioned route policy",
+          "equated scoring model"
+        ],
+        "sampleRouteSimulation": false,
+        "sourceRefs": [
+          "ets-teacher-faq"
+        ],
+        "note": "样包不定义高低路线阈值；不能把未校准正确率路由称为 ETS 自适应实现。"
+      },
+      "officialTimingProfiles": [
+        {
+          "id": "reading-router-time",
+          "scope": "module",
+          "secondsRange": [
+            1080,
+            1260
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        },
+        {
+          "id": "reading-lower-time",
+          "scope": "module",
+          "secondsRange": [
+            540,
+            540
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        },
+        {
+          "id": "reading-upper-time",
+          "scope": "module",
+          "secondsRange": [
+            540,
+            540
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        }
+      ],
+      "timingNote": "须由正式试卷 profile 明确模块时限和媒体时钟规则；此处范围只记录规格文档，不能据样包启动真实模考。"
+    },
+    {
+      "id": "listening",
+      "title": "Listening",
+      "sequence": 2,
+      "assemblyStatus": "incomplete",
+      "nominalOfficialBlueprint": {
+        "itemCount": 47,
+        "approxBaseTimeSeconds": 1740,
+        "timeExcludesDirections": true,
+        "sourceRefs": [
+          "ets-content"
+        ]
+      },
+      "modules": [
+        {
+          "id": "listening-router",
+          "sequence": 1,
+          "itemRefs": [
+            "l-response",
+            "l-conversation",
+            "l-announcement",
+            "l-academic"
+          ],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": false,
+            "allowBackAcrossModules": false,
+            "questionOrder": "fixed",
+            "sourceRefs": [
+              "ets-practice-2026"
+            ]
+          },
+          "stageId": "listening-stage-1",
+          "timeProfileRef": "listening-router-time"
+        },
+        {
+          "id": "listening-lower",
+          "sequence": 2,
+          "itemRefs": [],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": false,
+            "allowBackAcrossModules": false,
+            "questionOrder": "fixed",
+            "sourceRefs": [
+              "ets-practice-2026"
+            ]
+          },
+          "stageId": "listening-stage-2",
+          "candidateRoute": "lower",
+          "timeProfileRef": "listening-lower-time"
+        },
+        {
+          "id": "listening-upper",
+          "sequence": 2,
+          "itemRefs": [],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackWithinModule": false,
+            "allowBackAcrossModules": false,
+            "questionOrder": "fixed",
+            "sourceRefs": [
+              "ets-practice-2026"
+            ]
+          },
+          "stageId": "listening-stage-2",
+          "candidateRoute": "upper",
+          "timeProfileRef": "listening-upper-time"
+        }
+      ],
+      "stages": [
+        {
+          "id": "listening-stage-1",
+          "sequence": 1,
+          "moduleRefs": [
+            "listening-router"
+          ]
+        },
+        {
+          "id": "listening-stage-2",
+          "sequence": 2,
+          "candidateModuleRefs": [
+            "listening-lower",
+            "listening-upper"
+          ],
+          "selectExactly": 1
+        }
+      ],
+      "routing": {
+        "kind": "two-stage-adaptive",
+        "implementationStatus": "not-implemented",
+        "decisionAfterModule": "listening-router",
+        "policyRef": null,
+        "requiredExternalInputs": [
+          "authorized calibrated item pool",
+          "versioned route policy",
+          "equated scoring model"
+        ],
+        "sampleRouteSimulation": false,
+        "sourceRefs": [
+          "ets-teacher-faq"
+        ],
+        "note": "样包不定义高低路线阈值；不能把未校准正确率路由称为 ETS 自适应实现。"
+      },
+      "officialTimingProfiles": [
+        {
+          "id": "listening-router-time",
+          "scope": "module",
+          "secondsRange": [
+            1080,
+            1080
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        },
+        {
+          "id": "listening-lower-time",
+          "scope": "module",
+          "secondsRange": [
+            420,
+            420
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        },
+        {
+          "id": "listening-upper-time",
+          "scope": "module",
+          "secondsRange": [
+            660,
+            660
+          ],
+          "verificationStatus": "blueprint-reference-not-runnable",
+          "sourceRefs": [
+            "ets-spec-2026"
+          ]
+        }
+      ],
+      "timingNote": "须由正式试卷 profile 明确模块时限和媒体时钟规则；此处范围只记录规格文档，不能据样包启动真实模考。"
+    },
+    {
+      "id": "writing",
+      "title": "Writing",
+      "sequence": 3,
+      "assemblyStatus": "incomplete",
+      "nominalOfficialBlueprint": {
+        "itemCount": 12,
+        "approxBaseTimeSeconds": 1380,
+        "timeExcludesDirections": true,
+        "sourceRefs": [
+          "ets-content"
+        ]
+      },
+      "modules": [
+        {
+          "id": "writing-linear",
+          "sequence": 1,
+          "itemRefs": [
+            "w-build",
+            "w-email",
+            "w-discussion"
+          ],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackAcrossSections": false,
+            "taskNavigationPolicy": "requires-form-verification"
+          },
+          "stageId": "writing-linear-stage",
+          "clockPolicy": {
+            "scope": "per-task-or-response",
+            "aggregateClock": "not-enforced",
+            "verificationStatus": "needs-form-verification",
+            "note": "科目约定基准仅保留在 nominalOfficialBlueprint，不与题目/录音倒计时叠加。"
+          }
+        }
+      ],
+      "routing": {
+        "kind": "linear",
+        "sourceRefs": [
+          "ets-spec-2026"
+        ]
+      },
+      "officialTaskCounts": {
+        "build_sentence": 10,
+        "email": 1,
+        "academic_discussion": 1
+      },
+      "stages": [
+        {
+          "id": "writing-linear-stage",
+          "sequence": 1,
+          "moduleRefs": [
+            "writing-linear"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speaking",
+      "title": "Speaking",
+      "sequence": 4,
+      "assemblyStatus": "incomplete",
+      "nominalOfficialBlueprint": {
+        "itemCount": 11,
+        "approxBaseTimeSeconds": 480,
+        "timeExcludesDirections": true,
+        "sourceRefs": [
+          "ets-content"
+        ]
+      },
+      "modules": [
+        {
+          "id": "speaking-linear",
+          "sequence": 1,
+          "itemRefs": [
+            "s-repeat",
+            "s-interview"
+          ],
+          "timeLimitSeconds": null,
+          "toolPolicy": {
+            "calculator": "not-allowed",
+            "desmos": "not-allowed",
+            "dictionary": "not-allowed",
+            "writingAssistance": "not-allowed"
+          },
+          "navigation": {
+            "allowBackAcrossSections": false,
+            "taskNavigationPolicy": "requires-form-verification"
+          },
+          "stageId": "speaking-linear-stage",
+          "clockPolicy": {
+            "scope": "per-task-or-response",
+            "aggregateClock": "not-enforced",
+            "verificationStatus": "needs-form-verification",
+            "note": "科目约定基准仅保留在 nominalOfficialBlueprint，不与题目/录音倒计时叠加。"
+          }
+        }
+      ],
+      "routing": {
+        "kind": "linear",
+        "sourceRefs": [
+          "ets-spec-2026"
+        ]
+      },
+      "officialTaskCounts": {
+        "listen_repeat": 7,
+        "interview": 4
+      },
+      "stages": [
+        {
+          "id": "speaking-linear-stage",
+          "sequence": 1,
+          "moduleRefs": [
+            "speaking-linear"
+          ]
+        }
+      ]
+    }
+  ],
+  "scoreReporting": {
+    "rawPractice": {
+      "authority": "platform-practice-only",
+      "readingListeningPerScoredResponseMax": 1,
+      "buildSentencePerResponseMax": 1,
+      "emailDiscussionPerResponseMax": 5,
+      "speakingPerResponseMax": 5,
+      "notScoredPretestContributes": false,
+      "rubricSourceRefs": [
+        "ets-spec-2026",
+        "ets-speaking-rubric",
+        "ets-writing-rubric"
+      ]
+    },
+    "officialScaled": {
+      "provider": "ETS",
+      "sectionScale": {
+        "min": 1,
+        "max": 6,
+        "increment": 0.5
+      },
+      "overallScale": {
+        "min": 1,
+        "max": 6,
+        "increment": 0.5
+      },
+      "overallRule": "Mean of four official section bands, rounded to nearest half band by ETS reporting rules.",
+      "transitionComparableOverallScale": {
+        "min": 0,
+        "max": 120,
+        "applicableFrom": "2026-01-21",
+        "transitionDurationYears": 2
+      },
+      "sourceRefs": [
+        "ets-content"
+      ],
+      "implemented": false,
+      "conversionModelRef": null,
+      "note": "没有官方校准/等值模型时仅报告练习原始分与能力反馈，不伪造 1–6 或 0–120 换分。"
+    },
+    "practiceAi": {
+      "official": false,
+      "scoreLabel": "练习估分",
+      "mustRecordEvidenceScope": true,
+      "transcriptOnlyCannotAssess": [
+        "pronunciation",
+        "pace",
+        "pauses",
+        "prosody",
+        "audio intelligibility"
+      ],
+      "storedIn": "attempt-only"
+    }
+  },
+  "draftNotes": [
+    "约 30/29/23/8 分钟及名义题量只是当前官方概览；正式总时长受自适应、说明与设备步骤影响。",
+    "R/L router+lower/upper 的蓝图范围来自规格 PDF；官方内容页的上限基准不代表每条路线相同时长。",
+    "写作与口语顺序为 Writing 后 Speaking，不沿用旧版科目顺序。",
+    "缺少真实媒体、路线题池与校准模型；不存在正式模拟考试可用性声明。"
+  ]
+}

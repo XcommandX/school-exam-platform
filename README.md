@@ -26,6 +26,7 @@ Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真�
 | 收集已有 SAT、托福代码 | [源码接入清单](docs/source-intake.md) |
 | 运行和继续开发 SAT 原型 | [SAT 接入记录](docs/sat-source-intake.md) |
 | 理解整合边界和数据约定 | [架构与整合计划](docs/architecture.md) |
+| 审阅完整套题包与渲染方案 | [所有题目包结构策略（草案）](docs/所有题目包结构策略.md) |
 | 选择免费部署服务 | [部署评估](docs/deployment.md) |
 
 ## 第一阶段完成标准

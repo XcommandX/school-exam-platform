@@ -1,0 +1,506 @@
+{
+  "materials": [
+    {
+      "id": "sat:material:linear-table",
+      "content": [
+        {
+          "type": "text",
+          "text": "The table shows values of a linear function f."
+        },
+        {
+          "type": "table",
+          "columns": [
+            {
+              "id": "x",
+              "label": "x"
+            },
+            {
+              "id": "fx",
+              "label": "f(x)"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r0",
+              "cells": [
+                "0",
+                "1"
+              ]
+            },
+            {
+              "id": "r1",
+              "cells": [
+                "1",
+                "3"
+              ]
+            },
+            {
+              "id": "r2",
+              "cells": [
+                "2",
+                "5"
+              ]
+            }
+          ],
+          "caption": "Original synthetic values for a linear function."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic"
+      },
+      "metadata": {
+        "language": "en"
+      }
+    },
+    {
+      "id": "sat:material:triangle",
+      "content": [
+        {
+          "type": "image",
+          "assetId": "sat-math:asset:triangle",
+          "alt": "A right triangle has perpendicular legs 6 units and 4 units. The diagram is not drawn to scale.",
+          "caption": "Diagram not drawn to scale."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic"
+      },
+      "metadata": {
+        "drawnToScale": false,
+        "units": "units"
+      }
+    },
+    {
+      "id": "sat:material:teaching-parabola",
+      "content": [
+        {
+          "type": "text",
+          "text": "Teaching extension: explore the graph, or use the static fallback if the interactive state is unavailable."
+        },
+        {
+          "type": "interactive",
+          "toolId": "sat-math:tool:teaching-plot",
+          "role": "stimulus",
+          "stateAssetId": "sat-math:asset:teaching-graph-state",
+          "fallbackAssetId": "sat-math:asset:parabola-fallback",
+          "alt": "The graph y=x squared minus 4 has vertex (0,-4) and crosses the x-axis at -2 and 2."
+        },
+        {
+          "type": "math",
+          "latex": "y=x^2-4",
+          "spokenText": "y equals x squared minus four"
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic"
+      },
+      "metadata": {
+        "teachingOnly": true,
+        "interactiveAvailability": "placeholder-use-static-fallback"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "sat:math:q-table-mcq",
+      "revision": "0.1.0",
+      "title": "Linear function from a table",
+      "sectionId": "sat:section:math",
+      "taskType": "single-choice",
+      "classification": {
+        "domain": "Algebra",
+        "skills": [
+          "Linear functions in one variable"
+        ],
+        "difficulty": "unrated-synthetic",
+        "sourceQuestionId": null
+      },
+      "stimulusRefs": [
+        "sat:material:linear-table"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is the value of f(4)?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "sat:part:table",
+          "label": "",
+          "prompt": [],
+          "interactions": [
+            {
+              "id": "sat:interaction:table",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [],
+              "options": [
+                {
+                  "id": "sat:interaction:table:A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "7"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:table:B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "8"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:table:C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "9"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:table:D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "10"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sat:solution:table"
+        }
+      ],
+      "delivery": {
+        "mode": "exam-sample",
+        "shuffleOptions": false,
+        "explanationAvailability": "after-submit",
+        "solutionDelivery": "server-stripped-during-test"
+      },
+      "provenance": {
+        "origin": "original-synthetic",
+        "reviewStatus": "needs-review"
+      }
+    },
+    {
+      "id": "sat:math:q-multiple-values-spr",
+      "revision": "0.1.0",
+      "title": "One of two possible values",
+      "sectionId": "sat:section:math",
+      "taskType": "numeric-entry",
+      "classification": {
+        "domain": "Advanced Math",
+        "skills": [
+          "Nonlinear equations in one variable"
+        ],
+        "difficulty": "unrated-synthetic",
+        "sourceQuestionId": null
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "math",
+          "latex": "x^2=9",
+          "spokenText": "x squared equals nine"
+        },
+        {
+          "type": "text",
+          "text": "What is one possible value of x?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "sat:part:multiple-values",
+          "label": "",
+          "prompt": [],
+          "interactions": [
+            {
+              "id": "sat:interaction:multiple-values",
+              "kind": "numeric-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "profileRef": "sat-spr-2026",
+                "responseCount": 1,
+                "inputMayIncludeUnits": false
+              }
+            }
+          ],
+          "solutionId": "sat:solution:multiple-values"
+        }
+      ],
+      "delivery": {
+        "mode": "exam-sample",
+        "shuffleOptions": false,
+        "explanationAvailability": "after-submit",
+        "solutionDelivery": "server-stripped-during-test"
+      },
+      "provenance": {
+        "origin": "original-synthetic",
+        "reviewStatus": "needs-review"
+      }
+    },
+    {
+      "id": "sat:math:q-fraction-spr",
+      "revision": "0.1.0",
+      "title": "Exact rational with field-limited decimal alternatives",
+      "sectionId": "sat:section:math",
+      "taskType": "numeric-entry",
+      "classification": {
+        "domain": "Algebra",
+        "skills": [
+          "Linear equations in one variable"
+        ],
+        "difficulty": "unrated-synthetic",
+        "sourceQuestionId": null
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "math",
+          "latex": "3x=2",
+          "spokenText": "three x equals two"
+        },
+        {
+          "type": "text",
+          "text": "What is the value of x?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "sat:part:fraction",
+          "label": "",
+          "prompt": [],
+          "interactions": [
+            {
+              "id": "sat:interaction:fraction",
+              "kind": "numeric-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "profileRef": "sat-spr-2026",
+                "responseCount": 1,
+                "inputMayIncludeUnits": false
+              }
+            }
+          ],
+          "solutionId": "sat:solution:fraction"
+        }
+      ],
+      "delivery": {
+        "mode": "exam-sample",
+        "shuffleOptions": false,
+        "explanationAvailability": "after-submit",
+        "solutionDelivery": "server-stripped-during-test"
+      },
+      "provenance": {
+        "origin": "original-synthetic",
+        "reviewStatus": "needs-review"
+      }
+    },
+    {
+      "id": "sat:math:q-geometry-mcq",
+      "revision": "0.1.0",
+      "title": "Area from perpendicular lengths",
+      "sectionId": "sat:section:math",
+      "taskType": "single-choice",
+      "classification": {
+        "domain": "Geometry and Trigonometry",
+        "skills": [
+          "Area and volume"
+        ],
+        "difficulty": "unrated-synthetic",
+        "sourceQuestionId": null
+      },
+      "stimulusRefs": [
+        "sat:material:triangle"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is the area, in square units, of the right triangle shown?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "sat:part:geometry",
+          "label": "",
+          "prompt": [],
+          "interactions": [
+            {
+              "id": "sat:interaction:geometry",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [],
+              "options": [
+                {
+                  "id": "sat:interaction:geometry:A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "10"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:geometry:B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "12"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:geometry:C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "20"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:geometry:D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "24"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sat:solution:geometry"
+        }
+      ],
+      "delivery": {
+        "mode": "exam-sample",
+        "shuffleOptions": false,
+        "explanationAvailability": "after-submit",
+        "solutionDelivery": "server-stripped-during-test"
+      },
+      "provenance": {
+        "origin": "original-synthetic",
+        "reviewStatus": "needs-review"
+      }
+    },
+    {
+      "id": "sat:math:teaching-parabola",
+      "revision": "0.1.0",
+      "title": "Optional teaching graph specimen",
+      "sectionId": "sat:section:math",
+      "taskType": "single-choice",
+      "classification": {
+        "domain": "Advanced Math",
+        "skills": [
+          "Nonlinear functions"
+        ],
+        "difficulty": "unrated-synthetic",
+        "sourceQuestionId": null
+      },
+      "stimulusRefs": [
+        "sat:material:teaching-parabola"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Which pair gives the x-intercepts of the graph?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "sat:part:teaching",
+          "label": "",
+          "prompt": [],
+          "interactions": [
+            {
+              "id": "sat:interaction:teaching",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [],
+              "options": [
+                {
+                  "id": "sat:interaction:teaching:A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "−4 and 4"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:teaching:B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "−2 and 2"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:teaching:C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "0 and 4"
+                    }
+                  ]
+                },
+                {
+                  "id": "sat:interaction:teaching:D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "2 and 4"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sat:solution:teaching"
+        }
+      ],
+      "delivery": {
+        "mode": "teaching-only",
+        "shuffleOptions": false,
+        "explanationAvailability": "after-submit",
+        "solutionDelivery": "server-stripped-during-test"
+      },
+      "provenance": {
+        "origin": "original-synthetic",
+        "reviewStatus": "needs-review"
+      }
+    }
+  ],
+  "assessmentTasks": [],
+  "draftNotes": [
+    "All 5 questions and both SVGs are original synthetic examples.",
+    "The teaching item is outside the official exam blueprint and is not included in module itemRefs.",
+    "LaTeX is declarative content for the future math renderer; no executable HTML or scripts are embedded."
+  ]
+}

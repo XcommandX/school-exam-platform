@@ -1,0 +1,2802 @@
+{
+  "materials": [
+    {
+      "id": "mat-r-complete",
+      "content": [
+        {
+          "type": "gap-text",
+          "segments": [
+            {
+              "type": "text",
+              "text": "A "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-1",
+              "prefix": "stu",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": " visited the "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-2",
+              "prefix": "lib",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": " to find a "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-3",
+              "prefix": "qui",
+              "missingCharacterCount": 2
+            },
+            {
+              "type": "text",
+              "text": " room. Regular "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-4",
+              "prefix": "prac",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": " and careful "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-5",
+              "prefix": "re",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": " helped the group see "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-6",
+              "prefix": "prog",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": ". They met "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-7",
+              "prefix": "wee",
+              "missingCharacterCount": 3
+            },
+            {
+              "type": "text",
+              "text": ", shared "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-8",
+              "prefix": "help",
+              "missingCharacterCount": 3
+            },
+            {
+              "type": "text",
+              "text": " notes, and discussed "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-9",
+              "prefix": "ques",
+              "missingCharacterCount": 5
+            },
+            {
+              "type": "text",
+              "text": " while working "
+            },
+            {
+              "type": "gap",
+              "id": "r-gap-10",
+              "prefix": "toge",
+              "missingCharacterCount": 4
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "metadataVersion": "1",
+        "taskFormat": "paragraph-with-incomplete-words"
+      }
+    },
+    {
+      "id": "mat-r-daily",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "email",
+          "fields": {
+            "from": "Campus Studio",
+            "to": "Workshop participants",
+            "subject": "Room update"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Tomorrow’s design workshop will meet in Room 204 instead of Room 110. The starting time remains 9 a.m. Please bring your registration badge."
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {}
+    },
+    {
+      "id": "mat-r-academic",
+      "content": [
+        {
+          "type": "text",
+          "text": "[loc-a] Cities can reduce summer heat by planting trees. [loc-b] Their leaves provide shade, while evaporation from leaves cools nearby air. [loc-c] These benefits depend on suitable tree species and access to water. [loc-d] Careful maintenance therefore remains necessary."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "insertionLocations": [
+          {
+            "id": "loc-a",
+            "before": "sentence-1"
+          },
+          {
+            "id": "loc-b",
+            "before": "sentence-2"
+          },
+          {
+            "id": "loc-c",
+            "before": "sentence-3"
+          },
+          {
+            "id": "loc-d",
+            "before": "sentence-4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mat-l-response",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-listening-response",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Could you tell me where to collect a badge?"
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "transcriptSource": "original-script-audio-not-yet-authored",
+        "timedTranscriptSegments": [],
+        "verificationStatus": "needs-review"
+      }
+    },
+    {
+      "id": "mat-l-conversation",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-listening-conversation",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Student: I cannot print my poster. Assistant: The studio printer is being repaired. Try the library printer this afternoon."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "transcriptSource": "original-script-audio-not-yet-authored",
+        "timedTranscriptSegments": [],
+        "verificationStatus": "needs-review"
+      }
+    },
+    {
+      "id": "mat-l-announcement",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-listening-announcement",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "The campus studio will close at five today for maintenance. Please return borrowed tools before four thirty."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "transcriptSource": "original-script-audio-not-yet-authored",
+        "timedTranscriptSegments": [],
+        "verificationStatus": "needs-review"
+      }
+    },
+    {
+      "id": "mat-l-academic",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-listening-academic-talk",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "A seed bank stores seeds under controlled conditions. Keeping temperature and humidity low can slow deterioration, although different species require different storage methods."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "transcriptSource": "original-script-audio-not-yet-authored",
+        "timedTranscriptSegments": [],
+        "verificationStatus": "needs-review"
+      }
+    },
+    {
+      "id": "mat-w-build",
+      "content": [
+        {
+          "type": "text",
+          "text": "A classmate asks: What did Mira want to find out?"
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {}
+    },
+    {
+      "id": "mat-w-email",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "email-task",
+          "fields": {
+            "recipient": "Studio coordinator",
+            "subject": "Request to change a workshop booking",
+            "scenario": "Your class schedule now overlaps with a workshop you booked.",
+            "requiredActions": [
+              {
+                "id": "explain-conflict",
+                "text": "Explain the schedule conflict."
+              },
+              {
+                "id": "request-alternative",
+                "text": "Ask whether another session is available."
+              },
+              {
+                "id": "offer-details",
+                "text": "Offer the details needed to find your booking."
+              }
+            ]
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Write an email that completes all three requested actions. Write in complete sentences."
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {}
+    },
+    {
+      "id": "mat-w-discussion",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "academic-discussion",
+          "fields": {
+            "course": "Campus planning",
+            "professor": {
+              "id": "professor",
+              "displayName": "Professor Chen",
+              "prompt": "Should universities invest more in quiet individual study rooms or shared group workspaces?"
+            },
+            "posts": [
+              {
+                "id": "post-a",
+                "authorId": "student-a",
+                "displayName": "Student A",
+                "text": "Group spaces help students learn to explain ideas and solve problems together."
+              },
+              {
+                "id": "post-b",
+                "authorId": "student-b",
+                "displayName": "Student B",
+                "text": "Quiet rooms are essential for students who need to read difficult material without interruptions."
+              }
+            ],
+            "requiredActions": [
+              "State and support your own opinion.",
+              "Make an original contribution to the discussion."
+            ]
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Contribute to the discussion in your own words."
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {}
+    },
+    {
+      "id": "mat-speaking-context",
+      "content": [
+        {
+          "type": "image",
+          "assetId": "img-campus-map",
+          "alt": "Original campus studio orientation map placeholder."
+        },
+        {
+          "type": "text",
+          "text": "You are helping visitors at a campus studio. Listen to the trainer and repeat each sentence."
+        },
+        {
+          "type": "audio",
+          "assetId": "audio-speaking-intro",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Original scenario introduction script: You are helping visitors at a campus studio."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "mediaStatus": "placeholder"
+      }
+    },
+    {
+      "id": "mat-repeat-1",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-1",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Welcome to the campus studio."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-2",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-2",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Please collect your badge at the desk."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-3",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-3",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "The workshop begins in the east room."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-4",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-4",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "You may leave your coat in the lockers beside the entrance."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-5",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-5",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "If you need paper, ask the assistant at the information desk."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-6",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-6",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Students who registered online can show their confirmation on a phone."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-repeat-7",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "audio-repeat-7",
+          "alt": "Original synthetic task audio placeholder; audio not authored.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "practiceMode": {
+              "replay": true,
+              "seek": true,
+              "rateControl": true
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Before leaving the building, please return borrowed equipment to the desk where you collected it."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-interview-context",
+      "content": [
+        {
+          "type": "image",
+          "assetId": "img-interviewer",
+          "alt": "Original illustrated interviewer portrait placeholder."
+        },
+        {
+          "type": "text",
+          "text": "You have volunteered for a campus study-space survey. Answer the interviewer’s questions."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {}
+    },
+    {
+      "id": "mat-interview-1",
+      "content": [
+        {
+          "type": "video",
+          "assetId": "video-interview-1",
+          "alt": "Original prerecorded interviewer question placeholder.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "What place on campus do you find useful for studying, and why?"
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-interview-2",
+      "content": [
+        {
+          "type": "video",
+          "assetId": "video-interview-2",
+          "alt": "Original prerecorded interviewer question placeholder.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Describe a time when you changed your study routine. What did you learn?"
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-interview-3",
+      "content": [
+        {
+          "type": "video",
+          "assetId": "video-interview-3",
+          "alt": "Original prerecorded interviewer question placeholder.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Some students prefer quiet study rooms, while others like shared spaces. Which should a university provide more of, and why?"
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    },
+    {
+      "id": "mat-interview-4",
+      "content": [
+        {
+          "type": "video",
+          "assetId": "video-interview-4",
+          "alt": "Original prerecorded interviewer question placeholder.",
+          "playback": {
+            "policyRef": null,
+            "verificationStatus": "needs-review",
+            "examMode": {
+              "replay": "requires-form-verification",
+              "seek": false,
+              "rateControl": false
+            },
+            "unresolvedReason": "正式试卷的播放次数、阶段与媒体时钟策略尚未冻结；当前只是结构占位，不能开考。"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "How might campus study spaces change in the next ten years? Explain your prediction."
+        }
+      ],
+      "attribution": {
+        "origin": "original-synthetic",
+        "containsOfficialContent": false
+      },
+      "metadata": {
+        "transcriptVisibility": "review-only-or-approved-accommodation",
+        "scriptStatus": "original-not-yet-recorded"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "r-complete",
+      "revision": "0.1.0",
+      "title": "Complete the Words — original paragraph",
+      "sectionId": "reading",
+      "taskType": "reading.complete_words",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-r-complete"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Fill in the missing letters in the paragraph."
+        }
+      ],
+      "parts": [
+        {
+          "id": "r-complete-1",
+          "label": "r-complete-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 1: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-1-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 1: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-1"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-1"
+        },
+        {
+          "id": "r-complete-2",
+          "label": "r-complete-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 2: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-2-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 2: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-2"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-2"
+        },
+        {
+          "id": "r-complete-3",
+          "label": "r-complete-3",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 3: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-3-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 3: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-3"
+                ],
+                "minCharacters": 2,
+                "maxCharacters": 2,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-3"
+        },
+        {
+          "id": "r-complete-4",
+          "label": "r-complete-4",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 4: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-4-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 4: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-4"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-4"
+        },
+        {
+          "id": "r-complete-5",
+          "label": "r-complete-5",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 5: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-5-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 5: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-5"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-5"
+        },
+        {
+          "id": "r-complete-6",
+          "label": "r-complete-6",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 6: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-6-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 6: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-6"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-6"
+        },
+        {
+          "id": "r-complete-7",
+          "label": "r-complete-7",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 7: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-7-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 7: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-7"
+                ],
+                "minCharacters": 3,
+                "maxCharacters": 3,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-7"
+        },
+        {
+          "id": "r-complete-8",
+          "label": "r-complete-8",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 8: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-8-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 8: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-8"
+                ],
+                "minCharacters": 3,
+                "maxCharacters": 3,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-8"
+        },
+        {
+          "id": "r-complete-9",
+          "label": "r-complete-9",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 9: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-9-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 9: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-9"
+                ],
+                "minCharacters": 5,
+                "maxCharacters": 5,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-9"
+        },
+        {
+          "id": "r-complete-10",
+          "label": "r-complete-10",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete word 10: type only the missing letters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-complete-10-response",
+              "kind": "gap-fill",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete word 10: type only the missing letters."
+                }
+              ],
+              "constraints": {
+                "targetGapIds": [
+                  "r-gap-10"
+                ],
+                "minCharacters": 4,
+                "maxCharacters": 4,
+                "inputAlphabet": "English letters"
+              },
+              "normalization": {
+                "unicode": "NFKC",
+                "trim": true,
+                "caseSensitive": false
+              }
+            }
+          ],
+          "solutionId": "sol-r-complete-10"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review"
+      }
+    },
+    {
+      "id": "r-daily",
+      "revision": "0.1.0",
+      "title": "Read in Daily Life — email",
+      "sectionId": "reading",
+      "taskType": "reading.daily_life",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-r-daily"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Read the email and answer the question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "r-daily-1",
+          "label": "r-daily-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What has changed about the workshop?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-daily-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "What has changed about the workshop?"
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Its location"
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Its starting time"
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Its registration fee"
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Its subject"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-r-daily-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review"
+      }
+    },
+    {
+      "id": "r-academic",
+      "revision": "0.1.0",
+      "title": "Read an Academic Passage — shared passage",
+      "sectionId": "reading",
+      "taskType": "reading.academic_passage",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-r-academic"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Read the passage and answer both questions."
+        }
+      ],
+      "parts": [
+        {
+          "id": "r-academic-1",
+          "label": "r-academic-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "According to the passage, how can trees cool nearby air?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-academic-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "According to the passage, how can trees cool nearby air?"
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "By evaporating water from leaves"
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "By removing all need for water"
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "By raising soil temperature"
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "By stopping sunlight from reaching every street"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-r-academic-1"
+        },
+        {
+          "id": "r-academic-2",
+          "label": "r-academic-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Where would this sentence fit best: “However, planting alone is not enough.”"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "r-academic-2-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Where would this sentence fit best: “However, planting alone is not enough.”"
+                }
+              ],
+              "options": [
+                {
+                  "id": "loc-a",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "loc-a"
+                    }
+                  ]
+                },
+                {
+                  "id": "loc-b",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "loc-b"
+                    }
+                  ]
+                },
+                {
+                  "id": "loc-c",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "loc-c"
+                    }
+                  ]
+                },
+                {
+                  "id": "loc-d",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "loc-d"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              },
+              "presentation": {
+                "kind": "passage-insertion",
+                "targetMaterialId": "mat-r-academic",
+                "locationIds": [
+                  "loc-a",
+                  "loc-b",
+                  "loc-c",
+                  "loc-d"
+                ]
+              }
+            }
+          ],
+          "solutionId": "sol-r-academic-2"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review"
+      }
+    },
+    {
+      "id": "l-response",
+      "revision": "0.1.0",
+      "title": "Listening — choose_response",
+      "sectionId": "listening",
+      "taskType": "listening.choose_response",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-l-response"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Choose the most appropriate response."
+        }
+      ],
+      "parts": [
+        {
+          "id": "l-response-1",
+          "label": "l-response-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Choose the most appropriate response."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "l-response-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Choose the most appropriate response."
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "At the desk near the entrance."
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "I collected it yesterday."
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "The badge is blue."
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "It takes an hour to print."
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-l-response-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "answerTimeLimitSeconds": null,
+        "timingVerificationStatus": "needs-form-review",
+        "clockStartEvent": "after-required-stimulus",
+        "navigation": {
+          "allowBackWithinModule": false,
+          "allowBackAcrossModules": false,
+          "questionOrder": "fixed",
+          "sourceRefs": [
+            "ets-practice-2026"
+          ]
+        }
+      }
+    },
+    {
+      "id": "l-conversation",
+      "revision": "0.1.0",
+      "title": "Listening — conversation",
+      "sectionId": "listening",
+      "taskType": "listening.conversation",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-l-conversation"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What does the assistant suggest?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "l-conversation-1",
+          "label": "l-conversation-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What does the assistant suggest?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "l-conversation-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "What does the assistant suggest?"
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Printing at the library"
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Canceling the poster"
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Buying a printer"
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Returning next week"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-l-conversation-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "answerTimeLimitSeconds": null,
+        "timingVerificationStatus": "needs-form-review",
+        "clockStartEvent": "after-required-stimulus",
+        "navigation": {
+          "allowBackWithinModule": false,
+          "allowBackAcrossModules": false,
+          "questionOrder": "fixed",
+          "sourceRefs": [
+            "ets-practice-2026"
+          ]
+        }
+      }
+    },
+    {
+      "id": "l-announcement",
+      "revision": "0.1.0",
+      "title": "Listening — announcement",
+      "sectionId": "listening",
+      "taskType": "listening.announcement",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-l-announcement"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "By what time should tools be returned?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "l-announcement-1",
+          "label": "l-announcement-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "By what time should tools be returned?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "l-announcement-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "By what time should tools be returned?"
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Four thirty"
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Five thirty"
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Six o’clock"
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Noon"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-l-announcement-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "answerTimeLimitSeconds": null,
+        "timingVerificationStatus": "needs-form-review",
+        "clockStartEvent": "after-required-stimulus",
+        "navigation": {
+          "allowBackWithinModule": false,
+          "allowBackAcrossModules": false,
+          "questionOrder": "fixed",
+          "sourceRefs": [
+            "ets-practice-2026"
+          ]
+        }
+      }
+    },
+    {
+      "id": "l-academic",
+      "revision": "0.1.0",
+      "title": "Listening — academic_talk",
+      "sectionId": "listening",
+      "taskType": "listening.academic_talk",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-l-academic"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Why are temperature and humidity controlled?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "l-academic-1",
+          "label": "l-academic-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Why are temperature and humidity controlled?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "l-academic-1-response",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Why are temperature and humidity controlled?"
+                }
+              ],
+              "options": [
+                {
+                  "id": "A",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "To slow deterioration"
+                    }
+                  ]
+                },
+                {
+                  "id": "B",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "To make all seeds identical"
+                    }
+                  ]
+                },
+                {
+                  "id": "C",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "To remove every species difference"
+                    }
+                  ]
+                },
+                {
+                  "id": "D",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "To accelerate germination immediately"
+                    }
+                  ]
+                }
+              ],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              }
+            }
+          ],
+          "solutionId": "sol-l-academic-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "answerTimeLimitSeconds": null,
+        "timingVerificationStatus": "needs-form-review",
+        "clockStartEvent": "after-required-stimulus",
+        "navigation": {
+          "allowBackWithinModule": false,
+          "allowBackAcrossModules": false,
+          "questionOrder": "fixed",
+          "sourceRefs": [
+            "ets-practice-2026"
+          ]
+        }
+      }
+    },
+    {
+      "id": "w-build",
+      "revision": "0.1.0",
+      "title": "Build a Sentence — stable tokens and slots",
+      "sectionId": "writing",
+      "taskType": "writing.build_sentence",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-w-build"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Arrange the provided words or phrases to complete a grammatical reply."
+        }
+      ],
+      "parts": [
+        {
+          "id": "w-build-1",
+          "label": "w-build-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Complete the reply: “She wanted to know ___ ___ ___.”"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "w-build-1-response",
+              "kind": "token-order",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Complete the reply: “She wanted to know ___ ___ ___.”"
+                }
+              ],
+              "constraints": {
+                "slotIds": [
+                  "slot-1",
+                  "slot-2",
+                  "slot-3"
+                ],
+                "allowTokenReuse": false,
+                "requiredTokenCount": 3,
+                "distractorTokenIds": [
+                  "tok-does"
+                ]
+              },
+              "tokens": [
+                {
+                  "id": "tok-when",
+                  "text": "when"
+                },
+                {
+                  "id": "tok-the",
+                  "text": "the workshop"
+                },
+                {
+                  "id": "tok-started",
+                  "text": "started"
+                },
+                {
+                  "id": "tok-does",
+                  "text": "does"
+                }
+              ],
+              "sentenceTemplate": [
+                {
+                  "kind": "fixed",
+                  "text": "She wanted to know "
+                },
+                {
+                  "kind": "slot",
+                  "id": "slot-1"
+                },
+                {
+                  "kind": "fixed",
+                  "text": " "
+                },
+                {
+                  "kind": "slot",
+                  "id": "slot-2"
+                },
+                {
+                  "kind": "fixed",
+                  "text": " "
+                },
+                {
+                  "kind": "slot",
+                  "id": "slot-3"
+                },
+                {
+                  "kind": "fixed",
+                  "text": "."
+                }
+              ]
+            }
+          ],
+          "solutionId": "sol-w-build-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "timeLimitSeconds": null,
+        "timingVerificationStatus": "part-of-form-writing-profile-needs-review",
+        "officialNominalTaskCount": 10,
+        "sampleTaskCount": 1
+      }
+    },
+    {
+      "id": "w-email",
+      "revision": "0.1.0",
+      "title": "Write an Email — request",
+      "sectionId": "writing",
+      "taskType": "writing.email",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-w-email"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Read the situation and compose an email."
+        }
+      ],
+      "parts": [
+        {
+          "id": "w-email-1",
+          "label": "w-email-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Write your email."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "w-email-1-response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Write your email."
+                }
+              ],
+              "constraints": {
+                "inputMode": "keyboard",
+                "language": "en",
+                "wordLimit": null,
+                "showWordCount": true,
+                "writingAssistance": false
+              }
+            }
+          ],
+          "solutionId": "sol-w-email-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "timeLimitSeconds": 420,
+        "preparationSeconds": 0,
+        "timeSourceRefs": [
+          "ets-practice-2026"
+        ],
+        "autoSubmitOnTimeout": true
+      }
+    },
+    {
+      "id": "w-discussion",
+      "revision": "0.1.0",
+      "title": "Write for an Academic Discussion",
+      "sectionId": "writing",
+      "taskType": "writing.academic_discussion",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-w-discussion"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Read the discussion and add your own contribution."
+        }
+      ],
+      "parts": [
+        {
+          "id": "w-discussion-1",
+          "label": "w-discussion-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Write your contribution."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "w-discussion-1-response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Write your contribution."
+                }
+              ],
+              "constraints": {
+                "inputMode": "keyboard",
+                "language": "en",
+                "showWordCount": true,
+                "wordLimit": null,
+                "recommendedMinimumWords": 100,
+                "recommendedMinimumIsHardScoringThreshold": false,
+                "writingAssistance": false
+              }
+            }
+          ],
+          "solutionId": "sol-w-discussion-1"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "timeLimitSeconds": 600,
+        "preparationSeconds": 0,
+        "timeSourceRefs": [
+          "ets-practice-2026"
+        ],
+        "autoSubmitOnTimeout": true
+      }
+    },
+    {
+      "id": "s-repeat",
+      "revision": "0.1.0",
+      "title": "Listen and Repeat — seven responses",
+      "sectionId": "speaking",
+      "taskType": "speaking.listen_repeat",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-speaking-context"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Listen to each sentence and repeat it once."
+        }
+      ],
+      "parts": [
+        {
+          "id": "s-repeat-1",
+          "label": "s-repeat-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-1-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-1"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-1"
+        },
+        {
+          "id": "s-repeat-2",
+          "label": "s-repeat-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-2-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-2"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-2"
+        },
+        {
+          "id": "s-repeat-3",
+          "label": "s-repeat-3",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-3-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-3"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-3"
+        },
+        {
+          "id": "s-repeat-4",
+          "label": "s-repeat-4",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-4-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-4"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-4"
+        },
+        {
+          "id": "s-repeat-5",
+          "label": "s-repeat-5",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-5-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-5"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-5"
+        },
+        {
+          "id": "s-repeat-6",
+          "label": "s-repeat-6",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-6-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-6"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-6"
+        },
+        {
+          "id": "s-repeat-7",
+          "label": "s-repeat-7",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Listen and repeat the sentence once."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-repeat-7-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Listen and repeat the sentence once."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": null,
+                "responseTimeVerificationStatus": "needs-review-per-item",
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-repeat-7"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-repeat-7"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "preparationSeconds": 0,
+        "partSequence": "fixed",
+        "responseCount": 7,
+        "recordingStartsAfter": "prompt-ended-and-start-cue",
+        "responseTimeSourceRefs": [
+          "ets-practice-2026"
+        ],
+        "playbackRulesStatus": "requires-form-verification",
+        "responseTimeVerificationStatus": "needs-review-per-item"
+      }
+    },
+    {
+      "id": "s-interview",
+      "revision": "0.1.0",
+      "title": "Take an Interview — four responses",
+      "sectionId": "speaking",
+      "taskType": "speaking.interview",
+      "classification": {
+        "examVersion": "ibt-2026-01-21",
+        "contentOrigin": "original-synthetic",
+        "cefrTarget": "not-calibrated"
+      },
+      "stimulusRefs": [
+        "mat-interview-context"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Listen to the interviewer and answer each question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "s-interview-1",
+          "label": "s-interview-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer the interviewer."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-interview-1-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Answer the interviewer."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": 45,
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-interview-1"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-interview-1"
+        },
+        {
+          "id": "s-interview-2",
+          "label": "s-interview-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer the interviewer."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-interview-2-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Answer the interviewer."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": 45,
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-interview-2"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-interview-2"
+        },
+        {
+          "id": "s-interview-3",
+          "label": "s-interview-3",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer the interviewer."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-interview-3-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Answer the interviewer."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": 45,
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-interview-3"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-interview-3"
+        },
+        {
+          "id": "s-interview-4",
+          "label": "s-interview-4",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer the interviewer."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "s-interview-4-response",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [
+                {
+                  "type": "text",
+                  "text": "Answer the interviewer."
+                }
+              ],
+              "constraints": {
+                "capture": "microphone",
+                "allowVideoCapture": false,
+                "responseTimeLimitSeconds": 45,
+                "preparationSeconds": 0,
+                "allowedMimeTypes": [
+                  "audio/webm;codecs=opus",
+                  "audio/mp4"
+                ],
+                "mimeTypesArePlatformCompatibilityNotEtsRequirement": true,
+                "retakesInExam": false,
+                "studentMediaStoredIn": "attempt-only"
+              },
+              "stimulusRefs": [
+                "mat-interview-4"
+              ]
+            }
+          ],
+          "solutionId": "sol-s-interview-4"
+        }
+      ],
+      "delivery": {
+        "mode": "structure-example",
+        "assemblyStatus": "incomplete",
+        "solutionsDelivery": "exclude-during-attempt",
+        "reviewOnlyMaterialsDelivery": "strip-until-review",
+        "preparationSeconds": 0,
+        "partSequence": "fixed",
+        "responseCount": 4,
+        "responseTimeLimitSeconds": 45,
+        "timeSourceRefs": [
+          "ets-overview",
+          "ets-practice-2026"
+        ],
+        "recordingStartsAfter": "prompt-ended-and-start-cue",
+        "autoSubmitOnTimeout": true
+      }
+    }
+  ],
+  "assessmentTasks": [],
+  "draftNotes": [
+    "items 以题组为粒度；名义题量是可评分响应数，不能用 items 数量代替。",
+    "听力原文、采访问题文字与复述原句放 reviewOnlyContent；正式投递应按权限剥离。",
+    "recording MIME 类型是本平台兼容性候选，不是 ETS 官方编码规范；尚未验证麦克风或浏览器。",
+    "所有 responseTimeLimitSeconds=null 均表示待核验，不能默认为无限时或据此开始考试。"
+  ]
+}

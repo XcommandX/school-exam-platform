@@ -1,0 +1,905 @@
+{
+  "profile": {
+    "id": "ap:catalogue-specimen:2026-2027",
+    "kind": "independent-course-profile-catalogue",
+    "examVersion": "2026-2027-structure-specimen",
+    "administrationYear": null,
+    "effectiveFrom": null,
+    "subject": "multiple-independent-courses",
+    "sourceRefs": [
+      "modes",
+      "calculator",
+      "csp",
+      "calculus",
+      "history",
+      "history-2026",
+      "spanish-2027",
+      "spanish-2026",
+      "music",
+      "physics",
+      "csa",
+      "cyber",
+      "art",
+      "capstone"
+    ],
+    "assemblyStatus": "incomplete",
+    "assemblyRule": "Select exactly one courseProfileId before assembling an assessment. Never concatenate all sections as one AP exam."
+  },
+  "courseProfiles": [
+    {
+      "id": "ap-computer-science-principles:2027",
+      "courseId": "ap-computer-science-principles",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital-plus-create-performance-task",
+      "sourceRefs": [
+        "csp",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialSectionOutline": [
+        "MCQ with single-select and select-two items",
+        "Create artifacts and end-of-course written responses"
+      ],
+      "officialMultiSelectCount": 8,
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-calculus-ab:2026",
+      "courseId": "ap-calculus-ab",
+      "administrationYear": 2026,
+      "examVersion": "2026",
+      "effectiveFrom": "2025-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "hybrid-digital",
+      "sourceRefs": [
+        "calculus"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialSectionOutline": [
+        "MCQ calculator-prohibited and calculator-required parts",
+        "FRQ calculator-required Part A and calculator-prohibited Part B"
+      ],
+      "yearSpecificWarning": "Do not reuse 2026 counts or timings for the updated 2027 exam.",
+      "frameworkVersion": "2025-26"
+    },
+    {
+      "id": "ap-united-states-history:2026",
+      "courseId": "ap-united-states-history",
+      "administrationYear": 2026,
+      "examVersion": "2026",
+      "effectiveFrom": "2025-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital",
+      "sourceRefs": [
+        "history-2026"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialChoicePolicy": {
+        "saq": "Questions 1 and 2 required; choose question 3 or 4.",
+        "leq": "Choose one of three prompts."
+      },
+      "frameworkVersion": "2025-26"
+    },
+    {
+      "id": "ap-united-states-history:2027",
+      "courseId": "ap-united-states-history",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital",
+      "sourceRefs": [
+        "history"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialChoicePolicy": {
+        "saq": "All three short-answer questions required.",
+        "leq": "One broad long-essay prompt is required."
+      },
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-spanish-language-and-culture:2026",
+      "courseId": "ap-spanish-language-and-culture",
+      "administrationYear": 2026,
+      "examVersion": "2026",
+      "effectiveFrom": "2025-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "paper-and-audio-recording",
+      "sourceRefs": [
+        "spanish-2026"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialFormatFamilies": [
+        "Interpretive reading/listening MCQ",
+        "Written response",
+        "Conversation",
+        "Cultural comparison"
+      ],
+      "yearSpecificWarning": "Not the 2027 project format; complete 2026 section timings and playback policies still need CED audit.",
+      "frameworkVersion": "2025-26"
+    },
+    {
+      "id": "ap-spanish-language-and-culture:2027",
+      "courseId": "ap-spanish-language-and-culture",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital-plus-project-reference",
+      "sourceRefs": [
+        "spanish-2027",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialSectionOutline": [
+        "Section I: project presentation, four-turn project Q&A, argumentative essay",
+        "Section II: listening and reading MCQ"
+      ],
+      "officialTiming": {
+        "projectPreparationSeconds": 180,
+        "projectPresentationSeconds": 180,
+        "qaResponseSecondsPerTurn": 40,
+        "qaTurns": 4,
+        "essaySeconds": 3300,
+        "listeningSeconds": 2400,
+        "readingSeconds": 2400
+      },
+      "projectTopicRelease": "January of exam year",
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-physics-1:2027",
+      "courseId": "ap-physics-1",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "hybrid-digital",
+      "sourceRefs": [
+        "physics",
+        "calculator"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialFRQTypes": [
+        "mathematical-routines",
+        "translation-between-representations",
+        "experimental-design-and-analysis",
+        "qualitative-quantitative-translation"
+      ],
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-music-theory:2027",
+      "courseId": "ap-music-theory",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "hybrid-digital-with-recorded-sight-singing",
+      "sourceRefs": [
+        "music",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialFRQFamilies": [
+        "melodic-dictation",
+        "harmonic-dictation",
+        "figured-bass-part-writing",
+        "roman-numeral-part-writing",
+        "bass-line-composition",
+        "sight-singing"
+      ],
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-computer-science-a:2027",
+      "courseId": "ap-computer-science-a",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital",
+      "sourceRefs": [
+        "csa",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "referenceAssets": [
+        "java-reference"
+      ],
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-cybersecurity:2027",
+      "courseId": "ap-cybersecurity",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "fully-digital",
+      "sourceRefs": [
+        "cyber",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "officialEvidenceTypes": [
+        "firewall-rules",
+        "system-and-application-logs",
+        "file-permissions",
+        "device-policy"
+      ],
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-2-d-art-and-design:2027",
+      "courseId": "ap-2-d-art-and-design",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "portfolio",
+      "sourceRefs": [
+        "art",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-research:2027",
+      "courseId": "ap-research",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "paper-presentation-oral-defense",
+      "sourceRefs": [
+        "capstone",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "hasEndOfCourseWrittenExam": false,
+      "frameworkVersion": "2026-27"
+    },
+    {
+      "id": "ap-seminar:2027",
+      "courseId": "ap-seminar",
+      "administrationYear": 2027,
+      "examVersion": "2027",
+      "effectiveFrom": "2026-08-01",
+      "effectiveDateMeaning": "Course-year namespace boundary for this draft; not an official exam-day date.",
+      "officialMode": "performance-tasks-plus-fully-digital-exam",
+      "sourceRefs": [
+        "capstone",
+        "modes"
+      ],
+      "assemblyStatus": "incomplete",
+      "completeOfficialExam": false,
+      "frameworkVersion": "2026-27"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ap-computer-science-principles:2027:mcq",
+      "courseProfileId": "ap-computer-science-principles:2027",
+      "title": "mcq",
+      "sequence": 1,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-computer-science-principles:2027:mcq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "csp:single",
+            "csp:select-two"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-calculus-ab:2026:frq-calculator",
+      "courseProfileId": "ap-calculus-ab:2026",
+      "title": "frq-calculator",
+      "sequence": 2,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-calculus-ab:2026:frq-calculator:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "calc:frq"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "required",
+            "allowedToolRefs": [
+              "desmos-graphing"
+            ],
+            "sourceRefs": [
+              "calculus",
+              "calculator"
+            ],
+            "officialFeatureParity": "unverified"
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-united-states-history:2026:saq-choice",
+      "courseProfileId": "ap-united-states-history:2026",
+      "title": "saq-choice",
+      "sequence": 3,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-united-states-history:2026:saq-choice:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "ush:saq-early",
+            "ush:saq-late"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete",
+          "choiceGroups": [
+            {
+              "id": "saq-last-question-choice",
+              "itemRefs": [
+                "ush:saq-early",
+                "ush:saq-late"
+              ],
+              "choose": 1,
+              "officialMapping": "2026 choice of final required SAQ (Q3 or Q4); other required SAQs absent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-united-states-history:2026:dbq",
+      "courseProfileId": "ap-united-states-history:2026",
+      "title": "dbq",
+      "sequence": 4,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-united-states-history:2026:dbq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "ush:dbq"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-united-states-history:2026:leq-choice",
+      "courseProfileId": "ap-united-states-history:2026",
+      "title": "leq-choice",
+      "sequence": 5,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-united-states-history:2026:leq-choice:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "ush:leq-2026-1",
+            "ush:leq-2026-2",
+            "ush:leq-2026-3"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete",
+          "choiceGroups": [
+            {
+              "id": "leq-choice",
+              "itemRefs": [
+                "ush:leq-2026-1",
+                "ush:leq-2026-2",
+                "ush:leq-2026-3"
+              ],
+              "choose": 1,
+              "officialMapping": "2026 choose one of three LEQ prompts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-united-states-history:2027:leq",
+      "courseProfileId": "ap-united-states-history:2027",
+      "title": "leq",
+      "sequence": 6,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-united-states-history:2027:leq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "ush:leq-2027"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-spanish-language-and-culture:2026:speaking",
+      "courseProfileId": "ap-spanish-language-and-culture:2026",
+      "title": "speaking",
+      "sequence": 7,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-spanish-language-and-culture:2026:speaking:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "language:conversation-2026"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-spanish-language-and-culture:2027:frq",
+      "courseProfileId": "ap-spanish-language-and-culture:2027",
+      "title": "frq",
+      "sequence": 8,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-spanish-language-and-culture:2027:frq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "language:essay-2027",
+            "language:project-2027"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete",
+          "orderedItemRefs": [
+            "language:project-2027",
+            "language:essay-2027"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-physics-1:2027:frq",
+      "courseProfileId": "ap-physics-1:2027",
+      "title": "frq",
+      "sequence": 9,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-physics-1:2027:frq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "physics:graph-method"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "allowed",
+            "allowedToolRefs": [
+              "desmos-scientific",
+              "desmos-graphing"
+            ],
+            "sourceRefs": [
+              "calculator"
+            ],
+            "officialFeatureParity": "unverified"
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-music-theory:2027:written-frq",
+      "courseProfileId": "ap-music-theory:2027",
+      "title": "written-frq",
+      "sequence": 10,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-music-theory:2027:written-frq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "music:dictation"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-music-theory:2027:sight-singing",
+      "courseProfileId": "ap-music-theory:2027",
+      "title": "sight-singing",
+      "sequence": 11,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-music-theory:2027:sight-singing:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "music:sight-sing"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-computer-science-a:2027:frq",
+      "courseProfileId": "ap-computer-science-a:2027",
+      "title": "frq",
+      "sequence": 12,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-computer-science-a:2027:frq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "csa:method"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-cybersecurity:2027:frq",
+      "courseProfileId": "ap-cybersecurity:2027",
+      "title": "frq",
+      "sequence": 13,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-cybersecurity:2027:frq:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "cyber:evidence"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-computer-science-principles:2027:create",
+      "courseProfileId": "ap-computer-science-principles:2027",
+      "title": "create",
+      "sequence": 14,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-computer-science-principles:2027:create:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "csp:create"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-2-d-art-and-design:2027:portfolio",
+      "courseProfileId": "ap-2-d-art-and-design:2027",
+      "title": "portfolio",
+      "sequence": 15,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-2-d-art-and-design:2027:portfolio:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "art:portfolio"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-research:2027:portfolio",
+      "courseProfileId": "ap-research:2027",
+      "title": "portfolio",
+      "sequence": 16,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-research:2027:portfolio:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "research:paper-defense"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    },
+    {
+      "id": "ap-seminar:2027:performance",
+      "courseProfileId": "ap-seminar:2027",
+      "title": "performance",
+      "sequence": 17,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "ap-seminar:2027:performance:specimen-module",
+          "sequence": 1,
+          "itemRefs": [
+            "seminar:team-project"
+          ],
+          "timeLimitSeconds": null,
+          "timingStatus": "no-exam-timer-specified-for-incomplete-sample",
+          "toolPolicy": {
+            "calculator": "prohibited",
+            "allowedToolRefs": [],
+            "sourceRefs": [
+              "calculator"
+            ]
+          },
+          "navigation": {
+            "policy": "course-year-specific-to-be-reviewed"
+          },
+          "assemblyStatus": "incomplete"
+        }
+      ]
+    }
+  ],
+  "toolPolicyProfiles": [
+    {
+      "id": "ap-biology-2027-calculator",
+      "courseId": "ap-biology",
+      "administrationYear": 2027,
+      "allowedToolRefs": [
+        "desmos-scientific"
+      ],
+      "handheldGraphingAllowed": false,
+      "sourceRefs": [
+        "calculator"
+      ],
+      "hasRepresentativeItems": false
+    },
+    {
+      "id": "ap-economics-2027-calculator",
+      "courseIds": [
+        "ap-macroeconomics",
+        "ap-microeconomics"
+      ],
+      "administrationYear": 2027,
+      "allowedToolRefs": [
+        "desmos-four-function"
+      ],
+      "sourceRefs": [
+        "calculator"
+      ],
+      "hasRepresentativeItems": false
+    },
+    {
+      "id": "ap-chemistry-2027-calculator",
+      "courseId": "ap-chemistry",
+      "administrationYear": 2027,
+      "allowedToolRefs": [
+        "desmos-scientific",
+        "desmos-graphing"
+      ],
+      "sourceRefs": [
+        "calculator"
+      ],
+      "hasRepresentativeItems": false
+    },
+    {
+      "id": "ap-calculus-noncalculator-part",
+      "courseIds": [
+        "ap-calculus-ab",
+        "ap-calculus-bc",
+        "ap-precalculus"
+      ],
+      "administrationYear": 2027,
+      "calculator": "prohibited",
+      "allowedToolRefs": [],
+      "sourceRefs": [
+        "calculator"
+      ],
+      "hasRepresentativeItems": false,
+      "note": "These courses also have calculator-required parts; this profile expresses prohibited parts only."
+    }
+  ],
+  "scoreReporting": {
+    "mode": "raw-practice-rubric",
+    "officialScaledScoreAvailable": false,
+    "apOneToFiveConversion": null,
+    "explanation": "Per-part synthetic scores are illustrative; no official 1–5 prediction or cross-course total is generated.",
+    "doNotSumAcrossCourseProfiles": true
+  },
+  "draftNotes": [
+    "All sections are incomplete structure specimens with original synthetic content.",
+    "AP is a catalogue of independent courses and assessment modes, not a single mixed examination.",
+    "Playback, rubric weights, accommodations, reference sheets, exact section counts and timings require a per-course/per-year release audit before production.",
+    "Official mode is exam-year-specific; 2027 transitions do not change the identity of a 2026 historical question.",
+    "Only platform tool declarations are included; no Desmos engine or key is distributed in a pack."
+  ]
+}
