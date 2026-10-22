@@ -3,59 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6fc">
-  <meta name="description" content="SAT、AP、TOEFL 与个人词汇的统一学习空间。">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="TOEFL 与 SAT 的统一学习空间。">
   <title>Study Space · 学习空间</title>
   <link rel="stylesheet" href="/web/styles.css">
+  <script src="/web/home-model.js" defer></script>
   <script src="/web/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳转到内容</a>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Study Space 首页">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 10v17M9.5 12h3M9.5 16h3M20 16l1.8 1.8L25 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="brand-type">Study Space<span>SCHOOL EXAM PLATFORM</span></span>
-      </a>
-      <nav class="exam-nav" aria-label="选择考试">
-        <button type="button" class="exam-tab active" data-exam="sat" aria-current="page">SAT</button>
-        <button type="button" class="exam-tab" data-exam="ap">AP</button>
-        <button type="button" class="exam-tab" data-exam="toefl">TOEFL</button>
-        <button type="button" class="exam-tab vocab-tab" data-exam="vocab">Personal Vocab</button>
-      </nav>
-      <div class="account-wrap">
-        <span class="test-badge"><span></span>本地测试</span>
-        <button type="button" class="avatar" id="account-button" aria-label="个人账号与设置" aria-expanded="false" aria-controls="account-menu"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 20v-1.3a6.5 6.5 0 0 1 13 0V20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        <div class="account-menu" id="account-menu" hidden>
-          <div class="menu-user"><span class="mini-avatar">G</span><span><strong>访客</strong><small>测试阶段 · 无需登录</small></span></div>
-          <button type="button" data-dialog="account"><span data-icon="user"></span>个人账号<span class="menu-trailing">测试中</span></button>
-          <button type="button" data-dialog="settings"><span data-icon="settings"></span>偏好设置</button>
-          <div class="menu-footnote">学习记录保存在当前浏览器</div>
+    <a class="brand" href="/" aria-label="Study Space 首页">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 10v17M9.5 12h3M9.5 16h3M20 16l1.8 1.8L25 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-type">Study Space</span>
+    </a>
+    <div class="account-wrap">
+      <button type="button" class="account-trigger" id="account-button" aria-label="admin 的个人账号与设置" aria-expanded="false" aria-controls="account-menu"><span class="avatar">A</span><span>admin</span><span data-icon="chevronDown"></span></button>
+      <div class="account-menu" id="account-menu" hidden>
+        <div class="menu-user"><span class="avatar large">A</span><span><strong>admin</strong></span></div>
+        <div class="menu-stats"><div><b id="menu-streak">0</b><small>连续天数</small></div><div><b id="menu-answers">0</b><small>已练题目</small></div><div><b id="menu-accuracy">—</b><small>客观题正确率</small></div></div>
+        <div class="menu-links">
+          <button type="button" data-dialog="account"><span data-icon="user"></span><span>个人中心</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="targets"><span data-icon="target"></span><span>目标分数</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="plan"><span data-icon="calendar"></span><span>学习计划</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="report"><span data-icon="chart"></span><span>成绩报告</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="records"><span data-icon="history"></span><span>练习记录</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="saved"><span data-icon="star"></span><span>我的收藏</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="settings"><span data-icon="settings"></span><span>设置</span><span data-icon="chevron"></span></button>
         </div>
       </div>
     </div>
   </header>
 
   <main id="main-content" class="page-shell">
-    <div id="page-content" aria-busy="true"></div>
-    <footer class="site-footer"><span>Study Space<span class="footer-dot">·</span>让学习更有条理</span><span>测试阶段 · 本地学习空间</span></footer>
+    <section class="welcome-row" aria-label="学习概览">
+      <h1><span id="greeting">你好</span>，admin<span class="sun-badge" data-icon="sun"></span></h1>
+      <div class="summary-chips">
+        <div class="summary-chip" aria-label="连续坚持天数"><span class="chip-icon orange" data-icon="flame"></span><b id="streak-days">0</b><small>连续天数</small></div>
+        <button type="button" class="summary-chip" data-dialog="plan" aria-label="查看今日完成与每日学习目标"><span class="chip-icon mint" data-icon="check"></span><b id="today-progress">0 / 30</b><small>今日完成 / 目标</small></button>
+        <div class="target-wrap"><button type="button" class="summary-chip target-chip" data-dialog="targets" aria-describedby="target-tooltip"><span class="chip-icon yellow" data-icon="trophy"></span><span class="score-pair"><b id="toefl-target">—</b><span>·</span><b id="sat-target">—</b></span><small>目标分数</small></button><div class="target-tooltip" id="target-tooltip" role="tooltip"></div></div>
+      </div>
+    </section>
+    <div class="service-note" id="service-note" role="status" hidden></div>
+    <section class="exam-entries" aria-label="选择考试">
+      <article class="exam-card toefl">
+        <div class="card-texture" aria-hidden="true"></div>
+        <div class="floating-tile tile-one" data-icon="globe" aria-hidden="true"></div><div class="floating-tile tile-two" data-icon="headphones" aria-hidden="true"></div><div class="floating-tile tile-three" data-icon="mic" aria-hidden="true"></div><div class="card-glyph" data-icon="globe" aria-hidden="true"></div>
+        <div class="card-badge"><span data-icon="plane"></span>iBT</div>
+        <div class="card-title"><h2>TOEFL</h2><p>托福</p></div>
+        <div class="card-bottom"><div class="subject-links" aria-label="TOEFL 分项练习"><a href="/toefl/?section=reading"><span data-icon="book"></span>阅读</a><a href="/toefl/?section=listening"><span data-icon="headphones"></span>听力</a><a href="/toefl/?section=speaking"><span data-icon="mic"></span>口语</a><a href="/toefl/?section=writing"><span data-icon="pencil"></span>写作</a></div><a class="start-button" href="/toefl/">开始练习<span data-icon="arrow"></span></a></div>
+      </article>
+      <article class="exam-card sat">
+        <div class="card-texture" aria-hidden="true"></div>
+        <div class="floating-tile tile-one" data-icon="sigma" aria-hidden="true"></div><div class="floating-tile tile-two" data-icon="book" aria-hidden="true"></div><div class="floating-tile tile-three" data-icon="calculator" aria-hidden="true"></div><div class="card-glyph" data-icon="cap" aria-hidden="true"></div>
+        <div class="card-badge"><span data-icon="landmark"></span>Digital SAT</div>
+        <div class="card-title"><h2>SAT</h2><p>美国高考</p></div>
+        <div class="card-bottom"><div class="subject-links" aria-label="SAT 分项练习"><a href="/sat/?view=practiceBuilder&amp;mode=custom"><span data-icon="book"></span>英语</a><button type="button" data-dialog="math"><span data-icon="function"></span>数学</button></div><a class="start-button" href="/sat/?view=dashboard">开始练习<span data-icon="arrow"></span></a></div>
+      </article>
+    </section>
+    <footer class="site-footer"><div><button type="button" data-dialog="ap">AP</button><span>·</span><button type="button" data-dialog="vocab">Personal Vocab</button></div></footer>
   </main>
-
-  <dialog class="settings-dialog" id="account-dialog" aria-labelledby="account-dialog-title">
-    <div class="dialog-heading"><h2 id="account-dialog-title">个人账号</h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div>
-    <div class="account-profile"><span class="profile-avatar"><span data-icon="user"></span></span><h3>欢迎，访客</h3><p>当前为测试阶段，直接开始学习即可。</p></div>
-    <div class="dialog-note"><span data-icon="shield"></span><p>练习记录只保存在当前浏览器。账号登录与跨设备同步将在后续开放。</p></div>
-    <button type="button" class="button primary dialog-done" data-close-dialog>知道了</button>
-  </dialog>
-
-  <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-dialog-title">
-    <div class="dialog-heading"><h2 id="settings-dialog-title">偏好设置</h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div>
-    <p class="dialog-description">调整这台设备上的学习体验。</p>
-    <label class="setting-row"><span><strong>减少界面动画</strong><small>使用更平静、直接的页面切换</small></span><input type="checkbox" id="reduce-motion"><span class="switch" aria-hidden="true"></span></label>
-    <label class="setting-row"><span><strong>紧凑题库列表</strong><small>在同一屏幕内展示更多题目来源</small></span><input type="checkbox" id="compact-list"><span class="switch" aria-hidden="true"></span></label>
-    <a class="settings-link" href="/sat/?view=timingSettings"><span data-icon="clock"></span>SAT 练习计时设置<span data-icon="arrow"></span></a>
-    <button type="button" class="button primary dialog-done" data-close-dialog>完成</button>
-  </dialog>
-  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  <dialog class="home-dialog" id="home-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
 </body>
 </html>

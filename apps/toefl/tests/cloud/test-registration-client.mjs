@@ -1,0 +1,11 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+let html=fs.readFileSync(new URL('./register.html',import.meta.url),'utf8'),script=html.match(/<script>([\s\S]*?)<\/script>/)[1],elements=new Map(),events={},requests=[],reloads=0,destination;
+const element=id=>{if(!elements.has(id))elements.set(id,{hidden:false,value:'',textContent:'',disabled:false,addEventListener(event,fn){this[event]=fn},focus(){}});return elements.get(id)};
+const token='ti_'+'a'.repeat(64),location={hash:'#token='+token,pathname:'/register',reload(){reloads++},replace(path){destination=path}};
+const c={URLSearchParams,location,history:{replaceState(){location.hash=''}},window:{addEventListener(k,fn){events[k]=fn}},document:{querySelector:element},fetch:async(path,init)=>{requests.push({path,data:JSON.parse(init.body)});return {ok:true,json:async()=>({ok:true,valid:true})}}};
+vm.createContext(c);vm.runInContext(script,c);await new Promise(setImmediate);
+assert.equal(location.hash,'');assert.equal(element('#register-form').hidden,false);assert.equal(requests[0].data.token,token);
+element('#password').value='test-password-123';element('#confirm-password').value='different-password';await element('#register-form').submit({preventDefault(){}});assert.equal(requests.length,1);assert.match(element('#message').textContent,/不一致/);
+element('#username').value='fixture_student';element('#confirm-password').value='test-password-123';await element('#register-form').submit({preventDefault(){}});assert.equal(requests[1].path,'/api/register');assert.equal(requests[1].data.token,token);assert.equal(destination,'/');assert.equal(element('#password').value,'');assert.equal(element('#confirm-password').value,'');
+location.hash='#token=ti_'+'b'.repeat(64);events.hashchange();assert.equal(reloads,1,'opening a new invitation in the same tab revalidates the new link');
+console.log('PASS: invitation stays out of the URL after opening; password confirmation, single submission, credential clearing and same-tab invitation revalidation.');

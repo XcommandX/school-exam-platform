@@ -4,7 +4,11 @@
 
 ## 当前状态
 
-本仓库提供新的统一学习首页，位于 `apps/web/`，顶部可切换 SAT、AP、TOEFL 和 Personal Vocab。SAT Reading & Writing 已接入原有的自定义训练、模考、复盘与错题本；其他考试预留独立题库与接入接口。测试阶段免登录，账号菜单提供设置入口，统一账号与云端记录尚未实现。
+统一学习首页位于 `apps/web/`，采用已确认的 Study Space 模板：暖白背景、TOEFL 蓝色主卡与 SAT 橙色主卡。首页保留四科托福入口，SAT 阅读与文法统一显示为“英语”；原模板的顶部白色导航、搜索、继续上次示例和底部工具栏已移除。学习计划、成绩报告、目标分数和设置从右上头像进入。
+
+SAT Reading & Writing 已接入自定义训练、按套练习、复盘与错题本；非考试管理页面已更新视觉，点击开始后的准备、考试、检查和完成阶段继续保护原有界面与行为。`apps/toefl/` 已接入 `feature/toefl-exam-interface` 分支 `72ab41d` 的源码，通过 `/toefl/` 运行原创匿名样例，支持四科入口和学习页面导航；完整私有题库、正式账号、云端同步与外部 AI 未接入，不能将匿名样例视为真实完整模考。AP、SAT 数学和跨考试 Personal Vocab 仍保留待接入接口。
+
+测试阶段直接使用 `admin` 本机测试身份，无需输入密码，不提供真实认证或管理员权限。每日目标、目标分数和练习统计只使用当前浏览器的新平台存储；支持新 TOEFL 1–6 分、0.5 分档及 SAT 两科目标，尚未实现统一账号与跨设备记录。
 
 Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。OCR 已取消，模型、PDF、HAR 和原浏览器数据均不导入。统一格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。
 
@@ -21,6 +25,7 @@ Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真�
 | 任务 | 文档 |
 | --- | --- |
 | 让 Codex 理解项目 | [AGENTS.md](AGENTS.md) |
+| 沿用首页与 SAT 管理页样式 | [参考样式](参考样式.md) · [参考 CSS](参考样式.css) |
 | 团队日常协作 | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | 三个人如何使用 Codex | [Codex 工作流程](docs/codex-workflow.md) |
 | 收集已有 SAT、托福代码 | [源码接入清单](docs/source-intake.md) |
@@ -37,15 +42,17 @@ Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真�
 
 ## 运行统一首页
 
-需要 Python 3.10 或以上版本，无需第三方依赖。在仓库根目录运行：
+需要 Python 3.10 或以上版本。要从源码构建 TOEFL 匿名样例，还需 Node.js 22.13 或以上版本；两部分均无需安装第三方包。在仓库根目录运行：
 
 ```sh
 python3 scripts/serve_platform.py --port 8888
 ```
 
-打开 [统一学习首页](http://127.0.0.1:8888/)。macOS 也可双击根目录的 `Start Study Platform.command`。新平台使用独立的浏览器存储名称，不读取原 SAT 原型的个人练习记录。服务仅监听本机，不用于校内公开部署。
+打开 [统一学习首页](http://127.0.0.1:8888/)。macOS 也可双击根目录的 `Start Study Platform.command`。服务启动时会调用 `PATH` 中的 Node.js 构建 TOEFL 匿名样例；也可先进入 `apps/toefl/` 运行 `node scripts/build.mjs`。没有 Node.js 时，已存在且通过匿名构建标记检查的 `dist/preview` 仍可使用；没有构建产物则托福入口提示未就绪，SAT 和首页可继续使用。生成的 `dist/` 不提交。
 
-其他开发者克隆后题库初始为空。使用 SAT 页的 JSON 导入或本地迁移脚本填充题库；不要通过 Git 共享真实题库。详见 [本地题库迁移](docs/unified-home.md)。
+新平台使用独立的浏览器存储名称，不读取原 SAT 或 TOEFL 应用的个人练习记录。服务仅监听本机，不用于校内公开部署。
+
+其他开发者克隆后 SAT 真实题库初始为空，TOEFL 只有原创匿名样例。使用 SAT 页的 JSON 导入或本地迁移脚本填充本机题库；TOEFL 私有题库尚未接入统一服务。不要通过 Git 共享真实题库或个人数据；所有层级的 `.DS_Store` 也应保持忽略。详见 [本地题库迁移](docs/unified-home.md)。
 
 ## 运行独立 SAT 原型
 

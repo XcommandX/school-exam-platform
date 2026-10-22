@@ -1,0 +1,909 @@
+{
+  "fixture": true,
+  "records": [
+    {
+      "id": "anonymous-reading-t1",
+      "module": "reading-t1",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "补全单词（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-reading-t1",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "mask": "le___",
+          "answer": "learn",
+          "prefix": "le",
+          "missingLetters": "arn",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q2",
+          "index": 2,
+          "mask": "st___",
+          "answer": "study",
+          "prefix": "st",
+          "missingLetters": "udy",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q3",
+          "index": 3,
+          "mask": "bo___",
+          "answer": "books",
+          "prefix": "bo",
+          "missingLetters": "oks",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q4",
+          "index": 4,
+          "mask": "cl___",
+          "answer": "class",
+          "prefix": "cl",
+          "missingLetters": "ass",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q5",
+          "index": 5,
+          "mask": "no___",
+          "answer": "notes",
+          "prefix": "no",
+          "missingLetters": "tes",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q6",
+          "index": 6,
+          "mask": "re__",
+          "answer": "read",
+          "prefix": "re",
+          "missingLetters": "ad",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q7",
+          "index": 7,
+          "mask": "wr___",
+          "answer": "write",
+          "prefix": "wr",
+          "missingLetters": "ite",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q8",
+          "index": 8,
+          "mask": "sp___",
+          "answer": "speak",
+          "prefix": "sp",
+          "missingLetters": "eak",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q9",
+          "index": 9,
+          "mask": "li____",
+          "answer": "listen",
+          "prefix": "li",
+          "missingLetters": "sten",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        },
+        {
+          "id": "q10",
+          "index": 10,
+          "mask": "re____",
+          "answer": "review",
+          "prefix": "re",
+          "missingLetters": "view",
+          "kind": "complete_word",
+          "meaning": "匿名测试词汇"
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1,
+      "content": [
+        {
+          "kind": "text",
+          "text": "Practice: "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q1"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q2"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q3"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q4"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q5"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q6"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q7"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q8"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q9"
+        },
+        {
+          "kind": "text",
+          "text": ", "
+        },
+        {
+          "kind": "blank",
+          "item_id": "q10"
+        },
+        {
+          "kind": "text",
+          "text": ". This is anonymous integration material."
+        }
+      ]
+    },
+    {
+      "id": "anonymous-reading-t2",
+      "module": "reading-t2",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "阅读样例（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-reading-t2",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "source-alpha",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does Alex study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "explanation": "The original anonymous passage supports option A."
+        },
+        {
+          "id": "source-beta",
+          "index": 2,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "When will Alex study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the morning."
+            },
+            {
+              "id": "B",
+              "text": "At midnight."
+            }
+          ],
+          "answer": "A",
+          "explanation": "The original anonymous passage supports option A."
+        },
+        {
+          "id": "source-gamma",
+          "index": 3,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "What will Alex bring?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "A notebook."
+            },
+            {
+              "id": "B",
+              "text": "A suitcase."
+            }
+          ],
+          "answer": "A",
+          "explanation": "The original anonymous passage supports option A."
+        }
+      ],
+      "passage": "Alex studies in the library in the morning. Alex will bring a notebook. This is original anonymous integration material.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-reading-t3",
+      "module": "reading-t3",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "阅读样例（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-reading-t3",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does the student study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "answer_time_sec": 20,
+          "explanation": "The anonymous passage mentions the library.",
+          "translation": {
+            "prompt_text": "学生在哪里学习？",
+            "choices": [
+              {
+                "id": "A",
+                "text": "在图书馆。"
+              },
+              {
+                "id": "B",
+                "text": "在车站。"
+              }
+            ]
+          }
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-listening-t1",
+      "module": "listening-t1",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "听力流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-listening-t1",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does the student study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "answer_time_sec": 20,
+          "explanation": "The anonymous passage mentions the library.",
+          "translation": {
+            "prompt_text": "学生在哪里学习？",
+            "choices": [
+              {
+                "id": "A",
+                "text": "在图书馆。"
+              },
+              {
+                "id": "B",
+                "text": "在车站。"
+              }
+            ]
+          }
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": "audio/fixture-tone.wav",
+      "audioRole": "fixture-tone",
+      "transcript": "This fixture audio is a tone, not speech.",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1,
+      "audioLocal": true,
+      "audioDuration": 2,
+      "transcriptSentences": [
+        {
+          "index": 0,
+          "text": "Synthetic fixture tone.",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "audioRanges": [
+        {
+          "start": 0,
+          "end": 2
+        }
+      ]
+    },
+    {
+      "id": "anonymous-listening-t2",
+      "module": "listening-t2",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "听力流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-listening-t2",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does the student study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "answer_time_sec": 20,
+          "explanation": "The anonymous passage mentions the library.",
+          "translation": {
+            "prompt_text": "学生在哪里学习？",
+            "choices": [
+              {
+                "id": "A",
+                "text": "在图书馆。"
+              },
+              {
+                "id": "B",
+                "text": "在车站。"
+              }
+            ]
+          }
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": "audio/fixture-tone.wav",
+      "audioRole": "fixture-tone",
+      "transcript": "This fixture audio is a tone, not speech.",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1,
+      "audioLocal": true,
+      "audioDuration": 2,
+      "transcriptSentences": [
+        {
+          "index": 0,
+          "text": "Synthetic fixture tone.",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "audioRanges": [
+        {
+          "start": 0,
+          "end": 2
+        }
+      ]
+    },
+    {
+      "id": "anonymous-listening-t3",
+      "module": "listening-t3",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "听力流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-listening-t3",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does the student study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "answer_time_sec": 20,
+          "explanation": "The anonymous passage mentions the library.",
+          "translation": {
+            "prompt_text": "学生在哪里学习？",
+            "choices": [
+              {
+                "id": "A",
+                "text": "在图书馆。"
+              },
+              {
+                "id": "B",
+                "text": "在车站。"
+              }
+            ]
+          }
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": "audio/fixture-tone.wav",
+      "audioRole": "fixture-tone",
+      "transcript": "This fixture audio is a tone, not speech.",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1,
+      "audioLocal": true,
+      "audioDuration": 2,
+      "transcriptSentences": [
+        {
+          "index": 0,
+          "text": "Synthetic fixture tone.",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "audioRanges": [
+        {
+          "start": 0,
+          "end": 2
+        }
+      ]
+    },
+    {
+      "id": "anonymous-listening-t4",
+      "module": "listening-t4",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "听力流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-listening-t4",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "choice_question",
+          "question_type": "detail",
+          "prompt_text": "Where does the student study?",
+          "choices": [
+            {
+              "id": "A",
+              "text": "In the library."
+            },
+            {
+              "id": "B",
+              "text": "At the station."
+            }
+          ],
+          "answer": "A",
+          "answer_time_sec": 20,
+          "explanation": "The anonymous passage mentions the library.",
+          "translation": {
+            "prompt_text": "学生在哪里学习？",
+            "choices": [
+              {
+                "id": "A",
+                "text": "在图书馆。"
+              },
+              {
+                "id": "B",
+                "text": "在车站。"
+              }
+            ]
+          }
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": "audio/fixture-tone.wav",
+      "audioRole": "fixture-tone",
+      "transcript": "This fixture audio is a tone, not speech.",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1,
+      "audioLocal": true,
+      "audioDuration": 2,
+      "transcriptSentences": [
+        {
+          "index": 0,
+          "text": "Synthetic fixture tone.",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "audioRanges": [
+        {
+          "start": 0,
+          "end": 2
+        }
+      ]
+    },
+    {
+      "id": "anonymous-speaking-t1",
+      "module": "speaking-t1",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "口语流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-speaking-t1",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "repeat",
+          "prompt_text": "This is an anonymous recording test.",
+          "audio_url": "audio/fixture-tone.wav",
+          "audioLocal": true,
+          "audioDuration": 2,
+          "answer_time_sec": 15,
+          "prep_time_sec": 2,
+          "translations": [
+            {
+              "locale": "zh-CN",
+              "prompt_text": "匿名录音流程测试，提示音不代表口语原文。"
+            }
+          ],
+          "visual_asset_url": "images/fixture-scene.svg"
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-speaking-t2",
+      "module": "speaking-t2",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "口语流程测试（提示音）（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-speaking-t2",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "interview",
+          "prompt_text": "Describe a place where you enjoy studying.",
+          "audio_url": "audio/fixture-tone.wav",
+          "audioLocal": true,
+          "audioDuration": 2,
+          "answer_time_sec": 15,
+          "prep_time_sec": 2,
+          "translations": [
+            {
+              "locale": "zh-CN",
+              "prompt_text": "匿名录音流程测试，提示音不代表口语原文。"
+            }
+          ]
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-writing-t1",
+      "module": "writing-t1",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "组句样例（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-writing-t1",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "build_sentence",
+          "context_text": "Describe the student.",
+          "sentence_parts": [
+            {
+              "type": "blank",
+              "leading_text": "",
+              "answer": "The student"
+            },
+            {
+              "type": "blank",
+              "leading_text": " ",
+              "answer": "is learning"
+            },
+            {
+              "type": "blank",
+              "leading_text": " ",
+              "answer": "today."
+            }
+          ],
+          "tokens": [
+            "today.",
+            "The student",
+            "is learning"
+          ],
+          "answer_text": "The student is learning today.",
+          "explanation": "Use subject, verb and time expression."
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-writing-t2",
+      "module": "writing-t2",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "邮件写作样例（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-writing-t2",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "email",
+          "prompt_text": "Write an email to a teacher asking for feedback on a study plan. This is anonymous test material.",
+          "recipient": "Teacher",
+          "subject_line": "Study plan feedback"
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    },
+    {
+      "id": "anonymous-writing-t3",
+      "module": "writing-t3",
+      "source": "ANONYMOUS_FIXTURE",
+      "title": "学术讨论样例（匿名样例，非机经）",
+      "date": "2026-10-21",
+      "group": "anonymous-writing-t3",
+      "duration": 180,
+      "complete": true,
+      "items": [
+        {
+          "id": "q1",
+          "index": 1,
+          "kind": "discussion",
+          "prompt_text": "Should students study alone or in groups? Explain your view. This is anonymous test material.",
+          "posts": [
+            {
+              "name": "Teacher",
+              "content": "Discuss an effective way to study."
+            },
+            {
+              "name": "Student A",
+              "content": "I prefer studying with a small group."
+            }
+          ]
+        }
+      ],
+      "passage": "This short passage is original anonymous test material. A student studies in the library.",
+      "intro": "Anonymous integration fixture.",
+      "audio": null,
+      "audioRole": "",
+      "transcript": "",
+      "translation": "用于本地接入验证的原创匿名样例。",
+      "topics": [
+        "接入测试"
+      ],
+      "occurrenceDates": [
+        "2026-10-21"
+      ],
+      "occurrenceCount": 1
+    }
+  ],
+  "vocab": [
+    {
+      "word": "environment",
+      "meanings": [
+        "环境"
+      ],
+      "kinds": [
+        "匿名样例"
+      ],
+      "count": 1,
+      "sources": []
+    },
+    {
+      "word": "environments",
+      "meanings": [
+        "环境（复数）"
+      ],
+      "kinds": [
+        "匿名样例"
+      ],
+      "count": 1,
+      "sources": []
+    }
+  ],
+  "vocabGroups": [
+    {
+      "word": "environment",
+      "forms": [
+        "environment",
+        "environments"
+      ],
+      "dictionary": {
+        "meaning": "环境"
+      },
+      "family": []
+    }
+  ],
+  "vocabularyMetadata": {},
+  "coverage": {
+    "fillOccurrences": 10,
+    "vocabularyQuestions": 0,
+    "choiceWordOccurrences": 0
+  }
+}

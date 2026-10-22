@@ -1,0 +1,236 @@
+/* Study Space 样式参考：可复制到新的管理页面，当前应用不会加载本文件。
+ * 实际首页：apps/web/styles.css
+ * 实际 SAT 管理页：apps/sat/css/dashboard.css 的 data-sat-management 部分
+ * 不要将本文件引入 SAT 考试页面。所有示例都限定在 .style-reference 下。
+ */
+.style-reference {
+  --ref-bg: #f5f4f0;
+  --ref-ink: #16181d;
+  --ref-muted: #72747d;
+  --ref-line: #e4e2dc;
+  --ref-blue: #2e5ec8;
+  --ref-orange: #e96336;
+  --ref-accent: var(--ref-orange);
+  --ref-radius: 28px;
+  --ref-ease: cubic-bezier(.2, .8, .2, 1);
+  margin: 0;
+  min-width: 320px;
+  color: var(--ref-ink);
+  background: var(--ref-bg);
+  font-family: "Avenir Next", Avenir, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.style-reference *,
+.style-reference *::before,
+.style-reference *::after { box-sizing: border-box; }
+.style-reference [hidden] { display: none !important; }
+.style-reference button,
+.style-reference input,
+.style-reference select,
+.style-reference textarea { font: inherit; color: inherit; }
+.style-reference button { cursor: pointer; }
+.style-reference a { color: inherit; text-decoration: none; }
+.style-reference :is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid var(--ref-blue);
+  outline-offset: 4px;
+}
+.style-reference .ref-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.style-reference .ref-shell {
+  max-width: 1440px;
+  margin: 22px auto 0;
+  padding: 0 48px 36px;
+}
+.style-reference .ref-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1600px;
+  margin: auto;
+  padding: 26px 48px;
+}
+.style-reference .ref-title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+.style-reference .ref-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.style-reference .ref-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: 482px;
+  padding: 34px;
+  border-radius: var(--ref-radius);
+  color: #fff;
+  transition: transform .4s var(--ref-ease), box-shadow .4s var(--ref-ease);
+}
+.style-reference .ref-card--toefl {
+  --ref-accent: var(--ref-blue);
+  background: linear-gradient(145deg, #3064d2, #2446a4);
+}
+.style-reference .ref-card--sat {
+  --ref-accent: var(--ref-orange);
+  background: linear-gradient(145deg, #f16a3c, #cc442b);
+}
+.style-reference .ref-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 56px -34px var(--ref-accent);
+}
+.style-reference .ref-card__title {
+  margin: auto 0 0;
+  padding-top: 78px;
+  font-size: clamp(96px, 9.1vw, 136px);
+  font-weight: 850;
+  line-height: .86;
+  letter-spacing: -.065em;
+}
+.style-reference .ref-panel {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--ref-line);
+  border-radius: 24px;
+}
+.style-reference .ref-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 11px 21px;
+  border: 1px solid var(--ref-line);
+  border-radius: 99px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.2;
+  transition: background-color .2s, border-color .2s, color .2s,
+    box-shadow .2s, transform .2s;
+}
+.style-reference .ref-button:hover {
+  background: #fff8f2;
+  border-color: #e9baa5;
+  transform: translateY(-2px);
+}
+.style-reference .ref-button:active { transform: translateY(0) scale(.98); }
+.style-reference .ref-button--primary {
+  color: #fff;
+  background: var(--ref-ink);
+  border-color: var(--ref-ink);
+}
+.style-reference .ref-button--primary:hover { background: #34373e; border-color: #34373e; }
+.style-reference .ref-button:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+  transform: none;
+  box-shadow: none;
+}
+.style-reference .ref-overview {
+  gap: 11px;
+  min-height: 50px;
+  padding: 10px 22px 10px 12px;
+  margin-bottom: 26px;
+  font-size: 16px;
+  box-shadow: 0 3px 10px -8px #33231d30;
+}
+.style-reference .ref-overview__arrow {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff0e7;
+  color: #c34c2d;
+  font-size: 21px;
+  font-weight: 500;
+  transition: transform .2s, background-color .2s;
+}
+.style-reference .ref-overview:hover {
+  color: #b84226;
+  box-shadow: 0 10px 22px -16px #8f351c70;
+}
+.style-reference .ref-overview:hover .ref-overview__arrow {
+  transform: translateX(-3px);
+  background: #ffe4d3;
+}
+.style-reference .ref-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f8d767, #ec753d);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 750;
+}
+.style-reference .ref-menu {
+  width: 318px;
+  max-width: calc(100vw - 32px);
+  padding: 14px;
+  border: 1px solid var(--ref-line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 64px -24px #28282e66;
+}
+.style-reference .ref-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  transition: background-color .15s;
+}
+.style-reference .ref-menu__item:hover { background: var(--ref-bg); }
+@media (max-width: 1240px) {
+  .style-reference .ref-shell { padding-inline: 32px; }
+  .style-reference .ref-header { padding-inline: 32px; }
+  .style-reference .ref-card { min-height: 458px; padding: 28px; }
+  .style-reference .ref-card__title { font-size: clamp(86px, 9.1vw, 112px); }
+}
+@media (max-width: 720px) {
+  .style-reference .ref-shell { padding: 0 20px 28px; margin-top: 18px; }
+  .style-reference .ref-header { padding: 20px; gap: 16px; }
+  .style-reference .ref-grid { grid-template-columns: 1fr; gap: 18px; }
+  .style-reference .ref-title { font-size: 30px; }
+  .style-reference .ref-card { min-height: 432px; padding: 26px; }
+  .style-reference .ref-card__title { font-size: clamp(84px, 21vw, 128px); }
+}
+/* 样式只控制视觉；账号菜单的保持/关闭逻辑由实际 app.js 管理。 */
+@media (prefers-reduced-motion: reduce) {
+  .style-reference *,
+  .style-reference *::before,
+  .style-reference *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .style-reference .ref-card:hover,
+  .style-reference .ref-button:hover,
+  .style-reference .ref-button:active,
+  .style-reference .ref-overview:hover .ref-overview__arrow { transform: none; }
+}
