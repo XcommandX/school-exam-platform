@@ -447,18 +447,18 @@ main{max-width:1240px}.subjects .subject{border-radius:4px;box-shadow:none}.subj
 .exam-mode .passage{text-align:left}
 @media(max-width:800px){.exam-mode .exam-bar.reference-titlebar{min-height:124px}.exam-mode .exam-statusbar{top:124px}}
 
-/* TOEFL dashboard and management shell. Based on SAT management in main 6e940a3.
+/* TOEFL dashboard and management shell. Green TOEFL balance with the shared management design.
  * Scoped to management/home; existing teal exam and review rules are separate. */
 body.home-mode,
 body.management-mode {
-  --bg: #f5f4f0;
+  --bg: #F6F7F3;
   --surface: #ffffff;
   --ink: #16181d;
   --muted: #72747d;
   --line: #e4e2dc;
-  --home-hero-start: #3064d2;
-  --home-hero-end: #2446a4;
-  --home-field: #fafaf8;
+  --home-hero-start: #167568;
+  --home-hero-end: #0a514b;
+  --home-field: #FBFCF9;
   --home-ease: cubic-bezier(.2, .8, .2, 1);
   background: var(--bg);
   background-image: none;
@@ -477,11 +477,11 @@ body.management-mode {
   --home-field: #1b2027;
 }
 body:is(.home-mode, .management-mode) :is(button, a, summary, input, select, textarea):focus-visible {
-  outline: 3px solid #2e5ec8;
+  outline: 3px solid #167568;
   outline-offset: 5px;
 }
 :root[data-theme=dark] body:is(.home-mode, .management-mode) :is(button, a, summary, input, select, textarea):focus-visible {
-  outline-color: #a8c7ff;
+  outline-color: #9edac6;
 }
 body:is(.home-mode, .management-mode) .site-header {
   position: relative;
@@ -701,10 +701,10 @@ body.home-mode button.home-tool-card {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 25px;
+  gap: 20px;
   min-width: 0;
-  min-height: 190px;
-  padding: 24px;
+  min-height: 160px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: var(--surface);
@@ -715,8 +715,8 @@ body.home-mode button.home-tool-card {
 }
 body.home-mode .home-tool-card:hover {
   transform: translateY(-4px);
-  border-color: #c8d1e4;
-  box-shadow: 0 18px 30px -24px #233e7150;
+  border-color: #bfd4c8;
+  box-shadow: 0 18px 30px -24px #234c3b40;
 }
 body.home-mode .home-tool-card strong {
   position: relative;
@@ -735,8 +735,8 @@ body.home-mode .home-tool-icon {
   height: 49px;
   flex: none;
   border-radius: 16px;
-  background: #e7efff;
-  color: #315fc9;
+  background: #e4f0e9;
+  color: #22735c;
 }
 body.home-mode .home-tool-icon[data-tone=green] {
   background: #e3f3ea;
@@ -777,8 +777,8 @@ body.home-mode .home-tool-card:hover .home-tool-arrow {
   color: var(--ink);
 }
 :root[data-theme=dark] body.home-mode .home-tool-icon {
-  background: #293b61;
-  color: #a8c6ff;
+  background: #273c33;
+  color: #a8dcc6;
 }
 :root[data-theme=dark] body.home-mode .home-tool-icon[data-tone=green] {
   background: #253e34;
@@ -793,7 +793,7 @@ body.home-mode .home-tool-card:hover .home-tool-arrow {
   color: #f1b08d;
 }
 :root[data-theme=dark] body.home-mode .home-tool-card:hover {
-  border-color: #627697;
+  border-color: #5f8072;
   box-shadow: none;
 }
 body.home-mode {
@@ -811,14 +811,14 @@ body.home-mode .home-hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
-  min-height: 280px;
+  gap: 28px;
+  min-height: 232px;
   overflow: hidden;
-  padding: 40px 48px;
+  padding: 28px 40px;
   border-radius: 32px;
-  background: linear-gradient(118deg, #3064d2, #2446a4);
+  background: linear-gradient(118deg, #167568, #0a514b);
   color: #fff;
-  box-shadow: 0 14px 30px -28px #2446a4;
+  box-shadow: 0 14px 30px -28px #0a514b;
 }
 body.home-mode .home-hero::after {
   content: "";
@@ -839,10 +839,11 @@ body.home-mode .home-hero-content {
   justify-content: center;
   min-width: 0;
   flex: 1;
+  max-width: 74%;
 }
 body.home-mode .home-hero .home-test-badge {
   min-height: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding: 5px 12px;
   border-color: #ffffff30;
   font-size: 12px;
@@ -852,7 +853,7 @@ body.home-mode .home-hero h1 {
   margin: 0;
   padding: 0;
   color: #fff;
-  font-size: clamp(64px, 7vw, 94px);
+  font-size: clamp(56px, 6vw, 76px);
   font-weight: 800;
   line-height: .95;
   letter-spacing: -5px;
@@ -862,7 +863,7 @@ body.home-mode .home-hero-actions {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 body.home-mode .home-hero-actions button.home-start,
 body.home-mode .home-hero-actions button.home-browse {
@@ -875,7 +876,7 @@ body.home-mode .home-hero-actions button.home-browse {
   border: 1px solid #fff;
   border-radius: 99px;
   background: #fff;
-  color: #2446a4;
+  color: #0a514b;
   font-size: 13px;
   font-weight: 650;
   line-height: 1.4;
@@ -907,9 +908,9 @@ body.home-mode .home-hero-actions .home-start svg {
 body.home-mode .home-hero-actions .home-start:hover {
   transform: translateY(-2px);
   border-color: #fff;
-  background: #edf3ff;
-  color: #1d3c90;
-  box-shadow: 0 8px 15px -12px #112557;
+  background: #edf7f2;
+  color: #0a514b;
+  box-shadow: 0 8px 15px -12px #123f36;
 }
 body.home-mode .home-hero-actions .home-start:hover > span {
   transform: translateX(2px);
@@ -923,87 +924,46 @@ body.home-mode .home-hero-actions .home-browse:hover {
 body.home-mode .home-hero :is(button, a):focus-visible {
   outline-color: #fff;
 }
-body.home-mode .home-hero .home-subjects {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  flex: none;
-  align-items: stretch;
-  gap: 10px;
-  width: min(48%, 480px);
-  margin: 0;
-}
-body.home-mode .home-hero .home-subjects > button {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  width: auto;
-  min-width: 0;
-  min-height: 56px;
-  padding: 14px 12px;
-  border: 1px solid #ffffff35;
-  border-radius: 16px;
-  background: #ffffff10;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 650;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-body.home-mode .home-hero .home-subjects > button:hover {
-  transform: translateY(-2px);
-  border-color: #ffffff80;
-  background: #ffffff26;
-  color: #fff;
-}
-body.home-mode .home-hero .home-subjects svg {
-  width: 21px;
-  height: 21px;
-  flex: none;
-}
-body.home-mode .home-card-decoration {
+body.home-mode .home-hero .home-card-decoration {
   position: absolute;
   z-index: -1;
-  top: -48px;
-  right: 70px;
-  width: 360px;
-  height: 360px;
+  top: 20px;
+  right: 36px;
+  width: 220px;
+  height: 180px;
   pointer-events: none;
-  opacity: .1;
+  opacity: .14;
 }
-body.home-mode .home-card-decoration svg:first-child {
+body.home-mode .home-hero .home-card-decoration svg:first-child {
   position: absolute;
-  top: 5px;
+  top: 0;
   right: 0;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   transform: rotate(12deg);
 }
-body.home-mode .home-card-decoration svg:last-child {
+body.home-mode .home-hero .home-card-decoration svg:last-child {
   position: absolute;
-  top: 160px;
-  right: 160px;
-  width: 120px;
-  height: 120px;
+  top: 90px;
+  right: 130px;
+  width: 82px;
+  height: 82px;
   transform: rotate(-12deg);
 }
 body.home-mode .home-summary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin: 24px 0 38px;
+  margin: 22px 0 28px;
 }
 body.home-mode .home-summary-grid > article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   min-width: 0;
-  min-height: 116px;
-  padding: 24px 26px;
+  min-height: 106px;
+  padding: 20px 24px;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: var(--surface);
@@ -1028,7 +988,7 @@ body.home-mode .home-tools-grid {
   margin: 0;
 }
 body.home-mode .home-recent {
-  margin-top: 34px;
+  margin-top: 28px;
 }
 body.home-mode .home-recent-heading {
   display: flex;
@@ -1134,7 +1094,7 @@ body.home-mode .home-recent-empty {
   box-shadow: none;
 }
 :root[data-theme=dark] body.home-mode .home-hero-actions .home-start {
-  color: #2446a4;
+  color: #0a514b;
 }
 :root[data-theme=dark] body.home-mode .home-hero-actions .home-browse {
   color: #fff;
@@ -1214,108 +1174,321 @@ body.management-mode .management-page-return button:active {
   transform: translateY(0) scale(.98);
 }
 @keyframes toefl-home-menu-in { from { opacity: 0; transform: translateY(-6px) scale(.98); } to { opacity: 1; transform: none; } }
-@media (max-width:1240px) {body.management-mode #app > main { padding-inline: 32px; }}
-@media (max-width:720px) {body:is(.home-mode, .management-mode) .site-brand { gap: 10px; font-size: 21px; }
+@media (max-width:1240px) {
+body.management-mode #app > main {
+  padding-inline: 32px;
+}
+}
+@media (max-width:720px) {
+body:is(.home-mode, .management-mode) .site-brand {
+  gap: 10px;
+  font-size: 21px;
+}
 body:is(.home-mode, .management-mode) .site-brand > svg,
-  body:is(.home-mode, .management-mode) .site-brand .brand-mark { width: 40px; height: 40px; border-radius: 12px; }
-body:is(.home-mode, .management-mode) .site-header-tools { gap: 9px; }
-body:is(.home-mode, .management-mode) .site-header-tools > #cloud-status { display: none; }
-body:is(.home-mode, .management-mode) .account-menu > summary { gap: 8px; padding-right: 10px; font-size: 12px; }
-body:is(.home-mode, .management-mode) .account-name { max-width: 100px; }
-body:is(.home-mode, .management-mode) .account-dropdown { right: -49px; }
-body:is(.home-mode, .management-mode) .site-header-tools > .icon-btn { width: 40px; height: 40px; }
-body.management-mode #app > main { padding: 14px 20px 48px; }}
-@media (max-width:410px) {body:is(.home-mode, .management-mode) .site-brand { font-size: 20px; }
-body:is(.home-mode, .management-mode) .account-name { max-width: 73px; }
-body:is(.home-mode, .management-mode) .account-menu > summary { gap: 6px; }
-body:is(.home-mode, .management-mode) .site-header-tools { gap: 7px; }
-body:is(.home-mode, .management-mode) .account-dropdown { right: -47px; }
-body.management-mode #app > main { padding-inline: 16px; }}
-@media (max-width:360px) {body:is(.home-mode, .management-mode) .account-name { display: none; }
-body:is(.home-mode, .management-mode) .account-menu > summary { padding-right: 8px; }}
-@media (max-width:1150px) {
-  body:is(.home-mode, .management-mode) .site-header { padding-inline: 28px; }
-  body.home-mode #app > main.home-dashboard { padding-inline: 28px; }
-  body.home-mode .home-hero { gap: 26px; padding: 38px; }
-  body.home-mode .home-hero .home-subjects { width: 48%; }
-  body.home-mode .home-hero .home-subjects > button { gap: 8px; padding-inline: 12px; }
-  body.home-mode button.home-tool-card { padding: 22px; }
-  body.home-mode .home-tool-card strong { font-size: 18px; }
-  body.home-mode .home-tool-arrow { top: 22px; right: 22px; }
+body:is(.home-mode, .management-mode) .site-brand .brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
 }
-@media (max-width:1050px) {
-  body.home-mode .home-hero { flex-wrap: wrap; gap: 25px; }
-  body.home-mode .home-hero-content { flex-basis: 100%; }
-  body.home-mode .home-hero .home-subjects { width: min(100%, 540px); }
+body:is(.home-mode, .management-mode) .site-header-tools {
+  gap: 9px;
 }
-@media (max-width:900px) {
-  body.home-mode .home-hero { padding: 35px 34px; }
-  body.home-mode .home-hero h1 { font-size: 76px; }
-  body.home-mode .home-tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  body.home-mode .home-tool-card strong { font-size: 20px; }
+body:is(.home-mode, .management-mode) .site-header-tools > #cloud-status {
+  display: none;
 }
-@media (max-width:700px) {
-  body:is(.home-mode, .management-mode) .site-header { min-height: 0; padding: 18px; gap: 16px; }
-  body.home-mode #app > main.home-dashboard { padding: 14px 18px 45px; }
-  body.home-mode .home-hero { flex-wrap: wrap; gap: 24px; min-height: 260px; padding: 32px 26px; border-radius: 25px; }
-  body.home-mode .home-hero-content { flex-basis: 100%; }
-  body.home-mode .home-hero .home-test-badge { margin-bottom: 13px; }
-  body.home-mode .home-hero h1 { font-size: 76px; }
-  body.home-mode .home-hero-actions { gap: 8px; margin-top: 23px; }
-  body.home-mode .home-hero-actions :is(button.home-start, button.home-browse) { padding-inline: 16px; font-size: 12px; }
-  body.home-mode .home-hero .home-subjects { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; gap: 7px; }
-  body.home-mode .home-hero .home-subjects > button { justify-content: center; flex-direction: column; gap: 8px; min-height: 69px; padding: 10px 4px; border-radius: 13px; font-size: 11px; }
-  body.home-mode .home-hero .home-subjects svg { width: 21px; height: 21px; }
-  body.home-mode .home-card-decoration { top: -40px; right: -85px; opacity: .08; }
-  body.home-mode .home-summary-grid { gap: 9px; margin: 15px 0 30px; }
-  body.home-mode .home-summary-grid > article { min-height: 98px; gap: 10px; padding: 18px 13px; border-radius: 17px; }
-  body.home-mode .home-summary-grid > article > span { font-size: 10px; line-height: 1.5; }
-  body.home-mode .home-summary-grid strong { font-size: 27px; }
-  body.home-mode .home-tools-grid { gap: 12px; }
-  body.home-mode button.home-tool-card { min-height: 174px; padding: 20px; gap: 20px; border-radius: 20px; }
-  body.home-mode .home-tool-card strong { padding-right: 0; font-size: 17px; line-height: 1.25; }
-  body.home-mode .home-tool-icon { width: 43px; height: 43px; border-radius: 14px; }
-  body.home-mode .home-tool-icon svg { width: 23px; height: 23px; }
-  body.home-mode .home-tool-arrow { top: 20px; right: 17px; bottom: auto; width: 25px; height: 25px; }
-  body.home-mode .home-tool-arrow svg { width: 15px; height: 15px; }
-  body.home-mode .home-recent { margin-top: 28px; }
-  body.home-mode .home-recent-heading { gap: 14px; margin-bottom: 14px; }
-  body.home-mode .home-recent-heading h2 { font-size: 21px; }
-  body.home-mode .home-recent-table { border-radius: 20px; }
-  body.home-mode .home-recent-row { grid-template-columns: minmax(0, 1fr) auto; gap: 10px 14px; padding: 19px 18px; }
-  body.home-mode .home-recent-row > div { grid-column: 1; }
-  body.home-mode .home-recent-score { grid-column: 2; grid-row: 1; font-size: 14px; }
-  body.home-mode .home-recent-row > button { grid-column: 1 / -1; justify-self: start; padding: 8px 15px; min-height: 36px; font-size: 11px; }
-  body.home-mode .home-recent-row strong { font-size: 13px; }
-  body.home-mode .home-recent-row small { font-size: 10px; }
+body:is(.home-mode, .management-mode) .account-menu > summary {
+  gap: 8px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+body:is(.home-mode, .management-mode) .account-name {
+  max-width: 100px;
+}
+body:is(.home-mode, .management-mode) .account-dropdown {
+  right: -49px;
+}
+body:is(.home-mode, .management-mode) .site-header-tools > .icon-btn {
+  width: 40px;
+  height: 40px;
+}
+body.management-mode #app > main {
+  padding: 14px 20px 48px;
+}
 }
 @media (max-width:410px) {
-  body:is(.home-mode, .management-mode) .site-header { padding: 18px 16px; gap: 10px; }
-  body.home-mode #app > main.home-dashboard { padding-inline: 16px; }
-  body.home-mode .home-hero { padding: 28px 23px; }
-  body.home-mode .home-hero h1 { font-size: 72px; }
-  body.home-mode .home-hero .home-subjects { gap: 6px; }
-  body.home-mode .home-summary-grid > article { padding-inline: 11px; }
-  body.home-mode button.home-tool-card { padding: 19px 17px; }
-  body.home-mode .home-tool-card strong { font-size: 17px; }
-  body.home-mode .home-tool-arrow { top: 19px; right: 14px; }
+body:is(.home-mode, .management-mode) .site-brand {
+  font-size: 20px;
+}
+body:is(.home-mode, .management-mode) .account-name {
+  max-width: 73px;
+}
+body:is(.home-mode, .management-mode) .account-menu > summary {
+  gap: 6px;
+}
+body:is(.home-mode, .management-mode) .site-header-tools {
+  gap: 7px;
+}
+body:is(.home-mode, .management-mode) .account-dropdown {
+  right: -47px;
+}
+body.management-mode #app > main {
+  padding-inline: 16px;
+}
+}
+@media (max-width:360px) {
+body:is(.home-mode, .management-mode) .account-name {
+  display: none;
+}
+body:is(.home-mode, .management-mode) .account-menu > summary {
+  padding-right: 8px;
+}
+}
+@media (max-width:1150px) {
+body:is(.home-mode, .management-mode) .site-header {
+  padding-inline: 28px;
+}
+body.home-mode #app > main.home-dashboard {
+  padding-inline: 28px;
+}
+body.home-mode .home-hero {
+  gap: 24px;
+  padding: 28px 32px;
+}
+body.home-mode button.home-tool-card {
+  padding: 22px;
+}
+body.home-mode .home-tool-card strong {
+  font-size: 18px;
+}
+body.home-mode .home-tool-arrow {
+  top: 22px;
+  right: 22px;
+}
+}
+@media (max-width:1050px) {
+body.home-mode .home-hero {
+  gap: 24px;
+}
+body.home-mode .home-hero-content {
+  flex-basis: auto;
+}
+}
+@media (max-width:900px) {
+body.home-mode .home-hero {
+  padding: 28px 30px;
+}
+body.home-mode .home-hero h1 {
+  font-size: 68px;
+}
+body.home-mode .home-tools-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+body.home-mode .home-tool-card strong {
+  font-size: 20px;
+}
 }
 @media (max-width:700px) {
-  body.management-mode .management-page-return { margin-bottom:22px; }
-  body.management-mode .management-page-return button { min-height:46px;padding-right:18px;font-size:15px; }
+body:is(.home-mode, .management-mode) .site-header {
+  min-height: 0;
+  padding: 18px;
+  gap: 16px;
+}
+body.home-mode #app > main.home-dashboard {
+  padding: 14px 18px 45px;
+}
+body.home-mode .home-hero {
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 232px;
+  padding: 26px 24px;
+  border-radius: 25px;
+}
+body.home-mode .home-hero-content {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+body.home-mode .home-hero .home-test-badge {
+  margin-bottom: 12px;
+}
+body.home-mode .home-hero h1 {
+  font-size: 64px;
+}
+body.home-mode .home-hero-actions {
+  gap: 8px;
+  margin-top: 22px;
+}
+body.home-mode .home-hero-actions :is(button.home-start, button.home-browse) {
+  padding-inline: 16px;
+  font-size: 12px;
+}
+body.home-mode .home-hero .home-card-decoration {
+  top: 16px;
+  right: -45px;
+  opacity: .1;
+}
+body.home-mode .home-summary-grid {
+  gap: 9px;
+  margin: 15px 0 30px;
+}
+body.home-mode .home-summary-grid > article {
+  min-height: 94px;
+  gap: 10px;
+  padding: 16px 12px;
+  border-radius: 17px;
+}
+body.home-mode .home-summary-grid > article > span {
+  font-size: 10px;
+  line-height: 1.5;
+}
+body.home-mode .home-summary-grid strong {
+  font-size: 27px;
+}
+body.home-mode .home-tools-grid {
+  gap: 12px;
+}
+body.home-mode button.home-tool-card {
+  min-height: 148px;
+  padding: 18px;
+  gap: 18px;
+  border-radius: 20px;
+}
+body.home-mode .home-tool-card strong {
+  padding-right: 0;
+  font-size: 17px;
+  line-height: 1.25;
+}
+body.home-mode .home-tool-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+}
+body.home-mode .home-tool-icon svg {
+  width: 23px;
+  height: 23px;
+}
+body.home-mode .home-tool-arrow {
+  top: 20px;
+  right: 17px;
+  bottom: auto;
+  width: 25px;
+  height: 25px;
+}
+body.home-mode .home-tool-arrow svg {
+  width: 15px;
+  height: 15px;
+}
+body.home-mode .home-recent {
+  margin-top: 28px;
+}
+body.home-mode .home-recent-heading {
+  gap: 14px;
+  margin-bottom: 14px;
+}
+body.home-mode .home-recent-heading h2 {
+  font-size: 21px;
+}
+body.home-mode .home-recent-table {
+  border-radius: 20px;
+}
+body.home-mode .home-recent-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 14px;
+  padding: 19px 18px;
+}
+body.home-mode .home-recent-row > div {
+  grid-column: 1;
+}
+body.home-mode .home-recent-score {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 14px;
+}
+body.home-mode .home-recent-row > button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 8px 15px;
+  min-height: 36px;
+  font-size: 11px;
+}
+body.home-mode .home-recent-row strong {
+  font-size: 13px;
+}
+body.home-mode .home-recent-row small {
+  font-size: 10px;
+}
+}
+@media (max-width:410px) {
+body:is(.home-mode, .management-mode) .site-header {
+  padding: 18px 16px;
+  gap: 10px;
+}
+body.home-mode #app > main.home-dashboard {
+  padding-inline: 16px;
+}
+body.home-mode .home-hero {
+  padding: 24px 22px;
+}
+body.home-mode .home-hero h1 {
+  font-size: 60px;
+}
+body.home-mode .home-summary-grid > article {
+  padding-inline: 11px;
+}
+body.home-mode button.home-tool-card {
+  padding: 18px 16px;
+}
+body.home-mode .home-tool-card strong {
+  font-size: 17px;
+}
+body.home-mode .home-tool-arrow {
+  top: 19px;
+  right: 14px;
+}
+}
+@media (max-width:700px) {
+body.management-mode .management-page-return {
+  margin-bottom: 22px;
+}
+body.management-mode .management-page-return button {
+  min-height: 46px;
+  padding-right: 18px;
+  font-size: 15px;
+}
 }
 @media (prefers-reduced-motion:reduce) {
-  body:is(.home-mode, .management-mode) *,
-  body:is(.home-mode, .management-mode) *::before,
-  body:is(.home-mode, .management-mode) *::after { animation:none!important;transition:none!important;scroll-behavior:auto!important; }
-  body.home-mode :is(.home-start, .home-browse, .home-tool-card):hover,
-  body.home-mode .home-start:hover > span,
-  body.home-mode .home-subjects > button:hover,
-  body.home-mode .home-tool-card:hover .home-tool-arrow,
-  body.management-mode .management-page-return button:hover,
-  body.management-mode .management-page-return button:hover svg,
-  body.management-mode .management-page-return button:active { transform:none; }
+body:is(.home-mode, .management-mode) *,
+body:is(.home-mode, .management-mode) *::before,
+body:is(.home-mode, .management-mode) *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
 }
+body.home-mode :is(.home-start, .home-browse, .home-tool-card):hover,
+body.home-mode .home-start:hover > span,
+body.home-mode .home-tool-card:hover .home-tool-arrow,
+body.management-mode .management-page-return button:hover,
+body.management-mode .management-page-return button:hover svg,
+body.management-mode .management-page-return button:active {
+  transform: none;
+}
+}
+
+/* Keep the former TOEFL resume workflow prominent and compact. */
+body.home-mode .home-dashboard > .continue-card {
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  margin:18px 0 0;padding:18px 22px;border:1px solid var(--line);
+  border-radius:20px;background:var(--surface);box-shadow:none;
+}
+body.home-mode .home-dashboard > .continue-card .continue-label { font-size:11px;color:var(--muted); }
+body.home-mode .home-dashboard > .continue-card strong { font-size:14px;line-height:1.5; }
+body.home-mode .home-dashboard > .continue-card small { font-size:11px; }
+body.home-mode .home-dashboard > .continue-card button { min-height:40px;border-radius:99px;font-size:12px; }
+body.home-mode .home-dashboard > .draft-list { margin:12px 0 0;border-radius:18px; }
+@media (max-width:700px) {
+  body.home-mode .home-dashboard > .continue-card { align-items:flex-start;flex-wrap:wrap;padding:17px 18px;gap:14px; }
+  body.home-mode .home-dashboard > .continue-card .row { width:100%;justify-content:flex-end; }
+}
+
 
 
 .review-mode .site-header{display:none}
