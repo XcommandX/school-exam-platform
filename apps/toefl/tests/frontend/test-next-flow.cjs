@@ -22,3 +22,39 @@ function context(values,names){let c={esc:x=>String(x??''),history:[],Learn,...v
  c=context({reviewItems:r=>r.items.map((q,i)=>({q,i}))},['reviewEntries']);assert.equal(c.reviewEntries([{...record,items:[{id:'q1'},{id:'q2'}]}]).length,1,'a fill passage is reviewed as one material');assert.equal(c.reviewEntries([{...record,module:'listening-t1'}]).length,2,'listening answers remain sequential questions');
  console.log('PASS: contextual next/submit actions; audio and recording-save guards; filtered material order without wraparound; daily and review continuation without repeating answered items; midnight-safe task plans; one primary review action.');
 })().catch(e=>{console.error(e);process.exitCode=1});
+
+// Regression: revisiting completed oral work must never silently overwrite it.
+{
+ const row={key:'speaking-t1:saved',module:'speaking-t1',items:[{id:'q1'},{id:'q2'}]};
+ let c=context({s:{q:0},guidedRecord:()=>true,session:{heard:{'speaking-t1:saved:q1':true},recorded:{'speaking-t1:saved:q1':true}}},['ensureFlow']);
+ let f=c.ensureFlow(row,{id:'q1',audio_url:'fixture.wav'});assert.equal(f.phase,'answer');assert.equal(f.recordingComplete,true);
+ c.s.q=1;f=c.ensureFlow(row,{id:'q2',audio_url:'fixture.wav'});assert.equal(f.phase,'ready');assert.equal(f.recordingComplete,false,'new question waits for source audio');
+ c=context({s:{q:0},guidedRecord:()=>true,session:{}},['ensureFlow']);f=c.ensureFlow({...row,audioRole:'intro',audio:'intro.wav'},{id:'q1',audio_url:'question.wav'});assert.equal(f.src,'intro.wav');assert.equal(f.questionSrc,'question.wav');assert.equal(f.intro,true,'first question retains task intro before its prompt');
+}
+// Module-relative numbering includes all materials without counting earlier modules.
+{
+ const rows=[{key:'a',module:'reading-t1',items:Array(10).fill({})},{key:'b',module:'reading-t2',items:Array(3).fill({})},{key:'c',module:'reading-t3',items:Array(2).fill({})}];
+ let c=context({session:{index:1,queue:['a','b','c']},s:{q:1},practiceRecord:k=>rows.find(r=>r.key===k)},['examPosition']);assert.equal(c.examPosition(rows[1]),'Question 12 of 15');
+ c.session={...c.session,fullSet:true,section:1,sections:[{start:0,end:1},{start:1,end:3}]};assert.equal(c.examPosition(rows[1]),'Question 2 of 5');
+ c.session.index=0;c.session.fullSet=false;assert.equal(c.examPosition(rows[0]),'Questions 1–10 of 15');
+}
+// Playback progress uses the current segment, rather than the whole source file.
+{
+ let progress={},elapsed={},c=context({$:id=>id==='#flow-progress'?progress:elapsed},['updateFlowProgress']);c.updateFlowProgress({start:30,end:50},{currentTime:35,duration:100});assert.equal(progress.value,25);assert.equal(elapsed.textContent,'00:05 / 00:20');c.updateFlowProgress({start:30,end:50},{currentTime:99,duration:100});assert.equal(progress.value,100);
+}
+console.log('PASS: saved oral answers survive revisits; first prompt retains intro; module question numbering; bounded segment playback progress.');
+// Waiting for permission must not prevent hearing the source prompt.
+(async()=>{
+ let a=src.indexOf("else if(a==='flow-play')"),b=src.indexOf("else if(a==='flow-pause')",a),action=src.slice(a+5,b),renders=0;
+ let c={a:'flow-play',session:{flow:{oral:true,phase:'ready'}},app:{querySelectorAll:()=>[]},requestMic:()=>new Promise(()=>{}),persist(){},renderExam(){renders++},toast(){}};
+ vm.createContext(c);await vm.runInContext('(async()=>{'+action+'})()',c);assert.equal(c.session.flow.phase,'playing');assert.equal(c.session.flow.shouldPlay,true);assert.equal(renders,1);
+ console.log('PASS: permission wait cannot block source playback.');
+})().catch(e=>{console.error(e);process.exitCode=1});
+{
+ let c=context({},['questionVisual']);assert(c.questionVisual({visual_asset_url:'images/fixture-scene.svg'}).includes('src="images/fixture-scene.svg"'));assert.equal(c.questionVisual({visual_asset_url:'https://example.test/scene.jpg'}),'');assert.equal(c.questionVisual({visual_asset_url:'images/../secret.svg'}),'');assert.equal(c.questionVisual({visual_asset_url:'images/a.jpg" onerror="x'}),'');
+ console.log('PASS: question scenes load controlled local resources only.');
+}
+{
+ let c=context({recorder:null},['flowClockDisplay']);assert.equal(c.flowClockDisplay({oral:true,phase:'answer',recordingComplete:true}).text,'已保存');assert.equal(c.flowClockDisplay({phase:'playing'}).label,'AUDIO');let display=c.flowClockDisplay({phase:'answer',answerUntil:Date.now()+60000});assert.equal(display.label,'RESPONSE TIME');assert.equal(display.text,'01:00');
+ console.log('PASS: restored flow clock reflects its current phase immediately.');
+}

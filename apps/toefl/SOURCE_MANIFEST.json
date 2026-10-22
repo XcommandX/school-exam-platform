@@ -12,7 +12,7 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "5e5076b94a1e5d8a5f679c04f1faf48327a2e114cf185820422a19a70b48b88b"
+      "sha256": "353fd798c55d1d91d1e450be2fafa5681f6423b6e290aafaa7b80bc4247e2e25"
     },
     {
       "path": "AGENTS.md",
@@ -20,11 +20,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "d7d1da396ae446f7344652c34ff92d425aedac91e2614d42856a689ba1dbeb80"
+      "sha256": "41dfb201e7ca1669251abdb7331f25fb958b8eb0f2d36a04e3a9f22a77611880"
     },
     {
       "path": "fixtures/anonymous-bank.json",
-      "sha256": "671b37c841fd93634a5d48bbf3d2c5204cbab8bd90be5ebd0fb80633d1dd1266"
+      "sha256": "a5ce6211985bd8e04b6ea2deeb7eba62e65d5e0d9decf71c8cd72c697686c5f2"
+    },
+    {
+      "path": "fixtures/anonymous-scene.svg",
+      "sha256": "9b67c7b2bb4c3a62960f80d5a1ebca4931f15aa48459508755d8de9a5f6615c3"
     },
     {
       "path": "package-lock.json",
@@ -36,7 +40,7 @@
     },
     {
       "path": "scripts/build.mjs",
-      "sha256": "1e0e3c689304d0460ac01a0a604651f2bdc2fc7f08604182cf701d4b81d9f4b0"
+      "sha256": "2c791aa92d9f40dc67a8474ba72d882ef684936636a67fa593697aea2193484a"
     },
     {
       "path": "scripts/check-source.mjs",
@@ -104,7 +108,7 @@
     },
     {
       "path": "src/frontend/four-app.js",
-      "sha256": "7d4ee49cb4ce6a647cb3882dcbc7b760ca02201b67abb19a27be5d236244cc1d"
+      "sha256": "63dc487c42d97174a3961b4fa635b887662fe90cb7723d5b90bdc4fd4693ea3d"
     },
     {
       "path": "src/frontend/four-learning.js",
@@ -116,7 +120,7 @@
     },
     {
       "path": "src/frontend/four.css",
-      "sha256": "3e1de95ca18bc33a6a20cc1b48c8ef67255f8443d5396d9be2dd7eb85866bf25"
+      "sha256": "50cf24bb1992956d80359230b7c81bbfc760e1bb7b45013b41c271ba6bf2b919"
     },
     {
       "path": "src/frontend/index.html",
@@ -228,7 +232,7 @@
     },
     {
       "path": "tests/frontend/test-next-flow.cjs",
-      "sha256": "fcddeb7e9c018223e5e8c5de712269519b56d4ef9f26f3d804e71b693cb4760f"
+      "sha256": "2522f993e36f2d895d51b6d06f0f5579ed7a83d9057b8edc6ab8bfda01965001"
     },
     {
       "path": "tests/frontend/test-practice-comfort.cjs",

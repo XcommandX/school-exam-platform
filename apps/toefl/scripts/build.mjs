@@ -35,6 +35,8 @@ export async function build() {
   for (let i = 0; i < samples; i++) wav.writeInt16LE(Math.round(2000 * Math.sin(2 * Math.PI * 440 * i / rate)), 44 + i * 2);
   await mkdir(path.join(preview, 'audio'), { recursive: true });
   await writeFile(path.join(preview, 'audio/fixture-tone.wav'), wav);
+  await mkdir(path.join(preview, 'images'), { recursive: true });
+  await cp(path.join(moduleRoot, 'fixtures/anonymous-scene.svg'), path.join(preview, 'images/fixture-scene.svg'));
   const html = await readFile(path.join(preview, 'index.html'), 'utf8');
   await writeFile(path.join(preview, 'index.html'), html
     .replace('<title>TOEFL Practice · 模拟考试</title>', '<title>本地接入样例 · TOEFL Practice</title>')
