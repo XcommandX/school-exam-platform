@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "manifest_file": "SOURCE_MANIFEST.json",
+  "manifest_is_not_self_hashed": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "method": "generated",
+      "sha256": "9782f47a2b632f8ea2ad766a859bd9848431109f250595d943db110ae976328d"
+    },
+    {
+      "path": "README.md",
+      "method": "generated",
+      "sha256": "277df5954d6f2481a765e1abbbf5ae390cd1bd2cf15aa1bbb9066b2137c19878"
+    },
+    {
+      "path": "Start SAT Practice.command",
+      "method": "generated",
+      "sha256": "0fbbf7600d96f99f0b87d0b729ca65d658fd3f916d85e771a77c705519de9a5f"
+    },
+    {
+      "path": "css/base.css",
+      "method": "copied",
+      "sha256": "2367dda8b80e85e32b074bea819101742cf8a8abcfa20031bf48226932e98ab7"
+    },
+    {
+      "path": "css/dashboard.css",
+      "method": "copied",
+      "sha256": "9c59333a1fd40e867f8e996c2692e31de72a006efe98184f37a1df4d178d24a6"
+    },
+    {
+      "path": "css/exam.css",
+      "method": "copied",
+      "sha256": "cc730594aac4a64a7c3bb2178fa23f5c99dde02e9fe456765022e3705d55046b"
+    },
+    {
+      "path": "data/examples/synthetic-practice.json",
+      "method": "generated",
+      "sha256": "3ac7138f281aec4a37fa78f70337ecc60ab861cadd536c9ceba0c07eab1a28c0"
+    },
+    {
+      "path": "data/question-categories.js",
+      "method": "generated",
+      "sha256": "77181c61208e5f879bd7a29928c874503e300d03aee45ee348a3a742e69d9600"
+    },
+    {
+      "path": "data/question-categories.json",
+      "method": "generated",
+      "sha256": "32bfc7d98376c4e12041ff672f7375ccdf79329aa191276686fae18b82a6e4d2"
+    },
+    {
+      "path": "data/questions.js",
+      "method": "generated",
+      "sha256": "40fa4a3b2c15f07a1b042d87893d6a4ce6c51038c3a28bb0409b3ed73c18afd1"
+    },
+    {
+      "path": "html/index.html",
+      "method": "copied",
+      "sha256": "43fa4a8216f43fe437044392f7055c22a88dec5d16238cbe6cb999a9d64b8a78"
+    },
+    {
+      "path": "js/app.js",
+      "method": "generated",
+      "sha256": "88b5108747ae0740846e2eb36e0ba7d4af6d3675c79da7dd535b2f6586520a48"
+    },
+    {
+      "path": "js/exam.js",
+      "method": "copied",
+      "sha256": "4e3c9e9a9024fe42cd4c403ab0e72648b971e0bcb9932fdb3e0a13a8bef057e7"
+    },
+    {
+      "path": "js/importer.js",
+      "method": "copied",
+      "sha256": "d2bf81fb03c2f3135478e72ae0003f82469701997b9abd88bc3c611c96eb4a20"
+    },
+    {
+      "path": "js/line-reader.js",
+      "method": "copied",
+      "sha256": "9a74714804c9a52e2e74507c4d1614eeab301afc10b68040817616dcd586bcae"
+    },
+    {
+      "path": "js/material-text.js",
+      "method": "copied",
+      "sha256": "048f62e24bb6565c40d9d8fbe4721771c06a7ce869f25065fb97567eacd190d5"
+    },
+    {
+      "path": "js/practice-model.js",
+      "method": "copied",
+      "sha256": "1363e6fbabcb1856b97e80b0837655ea0ac3a58bba600da4ed6d906cd6a83b00"
+    },
+    {
+      "path": "js/question-bank.js",
+      "method": "copied",
+      "sha256": "56c572ea4e8e95dadb6aa1bd1ae47707bd0fd2a8b43986bcd890730b88814252"
+    },
+    {
+      "path": "js/shortcuts.js",
+      "method": "copied",
+      "sha256": "26df0472c7bdf7b1b0f24603a46d8f68cee857dcd9c50097bcb4d4d1d1516267"
+    },
+    {
+      "path": "js/storage.js",
+      "method": "copied",
+      "sha256": "3ec52331930bf766b09f68d62ee7c94e2219b5617162ed527b5016df095fb132"
+    },
+    {
+      "path": "scripts/prepare_sat_source.py",
+      "method": "copied",
+      "sha256": "f09e29c50ea3b7a93b62212ef871b27d0d71600d9a090f64427a0e429a85faef"
+    },
+    {
+      "path": "scripts/question_bank_server.py",
+      "method": "generated",
+      "sha256": "a721be13cf3b4bd3fe651726fe36b5b8b4ab00ad06825a091d56ec7a922737ad"
+    }
+  ]
+}

@@ -4,7 +4,9 @@
 
 ## 当前状态
 
-本仓库目前是协作与整合基础，尚未导入两个现有网站的源码，也没有可启动的应用、数据库或已部署的网站。应用技术栈将在检查现有源码后确定。
+本仓库已导入 SAT Reading & Writing 独立练习原型，位于 `apps/sat/`，可在本机运行。该原型尚未接入统一登录、账号隔离或云端答题记录；托福源码尚未导入，统一平台的技术方案与部署仍待确定。
+
+本次 SAT 接入仅包含代码、空题库种子和两道原创合成示例题。真实题库、题目图片、PDF、个人答题记录与 HAR 均未导入。OCR 功能已取消，上传界面、任务代码和服务 API 已移除；仓库不包含 OCR 模型或运行环境，题目使用 JSON 导入。来源与已知限制见 [SAT 接入记录](docs/sat-source-intake.md)。
 
 已确认的要求：
 
@@ -22,6 +24,7 @@
 | 团队日常协作 | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | 三个人如何使用 Codex | [Codex 工作流程](docs/codex-workflow.md) |
 | 收集已有 SAT、托福代码 | [源码接入清单](docs/source-intake.md) |
+| 运行和继续开发 SAT 原型 | [SAT 接入记录](docs/sat-source-intake.md) |
 | 理解整合边界和数据约定 | [架构与整合计划](docs/architecture.md) |
 | 选择免费部署服务 | [部署评估](docs/deployment.md) |
 
@@ -32,12 +35,26 @@
 3. 确定统一网站、登录与答题记录的实现方式，并记录决定。
 4. 提供准确的安装、启动、检查和部署命令，随后补充自动检查。
 
-目前没有启动命令；导入应用后，负责接入的开发者应在此补充真实验证过的命令。不要根据仓库名称猜测运行方式。
+## 运行 SAT 原型
+
+需要 Python 3.10 或以上版本，无需安装第三方依赖。在仓库根目录运行：
+
+```sh
+python3 apps/sat/scripts/question_bank_server.py --root apps/sat --port 8876
+```
+
+打开 [SAT 本机页面](http://127.0.0.1:8876/html/index.html)。初始题库为空，可用 `apps/sat/data/examples/synthetic-practice.json` 导入两道原创合成题，检查基础练习流程。完整操作及验证范围见 [SAT 接入记录](docs/sat-source-intake.md)。
+
+本副本默认使用端口 8876。若该端口用于其他练习环境，请另选空闲端口，避免读到既有浏览器记录；同一端口下换页面路径不能隔离 IndexedDB / localStorage。
+
+Windows 可按本机 Python 安装方式把 `python3` 换为 `py -3` 或 `python`；Windows 启动尚未验证。此命令运行的是独立 SAT 原型，统一平台尚未部署。
 
 ## 合作方式
 
 领取任务 → 更新主分支 → 创建功能分支 → 使用 Codex 修改并验证 → 推送分支 → 提交 PR → 另一人检查 → 合并 → 其他人更新代码。
 
 `main` 保存团队认可的版本。每项任务使用短期分支，具体分支和提交操作见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+macOS 可在完成功能分支的本地提交后，双击仓库根目录的 `push.command` 推送。它只推送已经 commit 的当前功能分支，不会自动提交文件，也不会强制推送；检查方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。本轮 SAT 清理仅准备本地提交，由开发者自行推送。
 
 仓库同步源码、配置样例和数据库结构变更；数据库中的实际答题记录由网站后端保存，不通过 Git 同步。

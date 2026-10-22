@@ -1,0 +1,33 @@
+{
+  "title": "Synthetic Test Practice - Original Test Data",
+  "section": "Reading and Writing",
+  "durationMinutes": 2,
+  "questions": [
+    {
+      "passage": "Mira moved a library notice from a side wall to the entrance. During the next week, more visitors asked about the event described in the notice.",
+      "prompt": "Which conclusion is best supported by the text?",
+      "options": [
+        "The new location may have helped visitors notice the event.",
+        "The library stopped holding events.",
+        "Every visitor attended the event.",
+        "The notice described a different library."
+      ],
+      "answer": "A",
+      "questionType": "",
+      "explanation": "Original synthetic test item: more questions followed the move to a more visible location; the text does not establish attendance."
+    },
+    {
+      "passage": "A town installed a small rain gauge in its public garden. Volunteers record its reading at noon each day, creating a consistent record of local rainfall.",
+      "prompt": "What is the main purpose of the volunteers' daily readings?",
+      "options": [
+        "To predict the exact weather for the next year",
+        "To collect comparable observations over time",
+        "To keep visitors out of the garden",
+        "To replace all measurements of temperature"
+      ],
+      "answer": "B",
+      "questionType": "",
+      "explanation": "Original synthetic test item: using the same daily measurement time supports a consistent record."
+    }
+  ]
+}
