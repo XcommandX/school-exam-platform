@@ -1,0 +1,13 @@
+{
+  "name": "school-exam-toefl-intake",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "check:source": "node scripts/check-source.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node scripts/test.mjs"
+  }
+}
