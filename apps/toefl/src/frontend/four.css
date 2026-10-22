@@ -1602,3 +1602,36 @@ body.home-mode .site-header-tools {flex:none}
 @media(max-width:650px) {
   body.home-mode .header-inner {gap:10px}
 }
+
+/* One quiet management entry for the complete in-progress practice shelf. */
+.draft-shelf-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:22px 0 8px;color:var(--muted);font-size:12px}
+.draft-shelf-heading>button{min-height:36px;padding:6px 14px;border-radius:99px;font-size:12px;background:var(--surface);color:var(--ink)}
+.draft-shelf-heading+.continue-card{margin-top:0}
+.utility-dialog.draft-manager{width:min(740px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:26px;border-radius:22px}
+.utility-dialog.draft-manager[open]{display:flex;flex-direction:column}
+.draft-manager .panel-heading{flex:none;gap:16px}
+.draft-manager .panel-heading h2{font-size:22px;line-height:1.5}
+.draft-manager .panel-description{flex:none;margin:12px 0 16px;font-size:13px;line-height:1.7}
+.draft-select-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 2px 12px;border-bottom:1px solid var(--line);font-size:13px;flex:none}
+.draft-select-toolbar label{display:flex;align-items:center;gap:10px;min-height:30px;cursor:pointer}
+.draft-select-toolbar>span{color:var(--muted);font-size:12px}
+.draft-manager :is(.draft-select-toolbar,.draft-select-row) input{width:18px;height:18px;min-height:18px;flex:none;padding:0;accent-color:var(--brand)}
+.draft-manager-list{overflow:auto;overscroll-behavior:contain;max-height:46dvh;min-height:70px;padding:6px 2px;flex:1}
+.draft-select-row{display:grid;grid-template-columns:18px minmax(0,1fr);align-items:center;gap:14px;min-height:72px;padding:13px 14px;margin:4px 0;border:1px solid transparent;border-radius:12px;cursor:pointer}
+.draft-select-row:hover{background:var(--bg)}
+.draft-select-row:has(input:checked){background:var(--soft);border-color:var(--brand)}
+.draft-select-row>span{min-width:0}
+.draft-select-row strong{display:block;font-size:14px;font-weight:650;line-height:1.6;overflow-wrap:anywhere}
+.draft-select-row small{display:block;margin-top:5px;font-size:12px;color:var(--muted)}
+.draft-manager .panel-footer{margin-top:12px;padding-top:16px;border-top:1px solid var(--line);flex:none;gap:10px}
+.draft-manager .panel-footer button,.draft-discard-confirm button{min-height:42px;border-radius:99px;font-size:13px}
+.draft-manager button.draft-discard-button{background:#ac4333;border-color:#ac4333;color:#fff}
+.draft-manager button.draft-discard-button:hover:not(:disabled){background:#94392c;border-color:#94392c}
+.draft-discard-confirm{flex:none;border-top:1px solid var(--line);padding-top:10px;margin-top:8px}
+.draft-discard-confirm p{font-size:13px;line-height:1.7;margin:6px 0 12px}
+.draft-discard-confirm .row{justify-content:flex-end}
+#draft-manager-result:empty{display:none}
+#draft-manager-result{font-size:13px;line-height:1.6;color:var(--wrong);margin:8px 0 0;flex:none}
+@media(max-width:650px){.utility-dialog.draft-manager{padding:20px 18px;border-radius:18px}.draft-manager .panel-heading h2{font-size:19px}.draft-manager-list{max-height:40dvh}.draft-select-row{padding:12px 9px;gap:12px}.draft-select-row strong{font-size:13px}.draft-discard-confirm .row,.draft-manager .panel-footer{display:flex;flex-wrap:nowrap}.draft-discard-confirm button,.draft-manager .panel-footer button{flex:1;padding-inline:10px;white-space:nowrap}}
+
+.utility-dialog.draft-manager [hidden]{display:none!important}

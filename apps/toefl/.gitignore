@@ -110,3 +110,7 @@
 !/tests/integration/test-entry-links.mjs
 !/tests/frontend/test-history-completion.cjs
 !/tests/cloud/test-sync-queue-storage.mjs
+
+!/src/cloud/draft-cancellation.mjs
+
+!/tests/cloud/test-draft-cancellation.mjs

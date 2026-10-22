@@ -51,4 +51,42 @@ let usersBefore=db.prepare('SELECT * FROM users ORDER BY id').all();db.exec(fs.r
 // Canonical grouping, missing AI grades and false mastery remain explicit.
 let projected=projectAccountData({'four.words.v1':{child:{mastered:false},children:{mastered:true,note:sentinel}},'four.history.v1':[{finished:1,results:[{id:'speaking-t1:a',automatic:false,items:[{id:'q',correct:null}]}]}]},[{word:'child',forms:['children']}]);assert.equal(projected.words.child.mastered,false);assert.equal(projected.attempts[0].results[0].items[0].score,undefined);
 assert.doesNotThrow(()=>projectAccountData({'four.history.v1':[null,{finished:1,results:{bad:true}}],'four.learning.v1':[null]},[]));
-console.log('PASS: admin-only read projections and credential/answer exclusion; unchanged personal state; single-use hashed invitations; collisions, parallel claims, expiry, revocation, role injection and CSRF; additive migration.');
+// Drafts, including cancellation tombstones, never enter admin detail projections.
+assert.deepEqual(projectAccountData({...values,'four.drafts.v2':[{id:'cancelled-draft',cancelled:true,updated:Date.now(),answers:{q:'CANCELLED_PRIVATE_RESPONSE'}},{id:'active-draft',answers:{q:'PRIVATE_DRAFT_RESPONSE'}}]},[]),projectAccountData(values,[]));
+// Destructive account management requires the current administrator and an exact
+// username. All owned namespaces disappear together; adjacent accounts survive.
+const deleteId='delete_user',otherId='deleteXuser';
+for(let [id,username,role] of [[deleteId,'Wrong_Registration','user'],[otherId,'kept_student','user'],['other_admin','other_admin','admin']])db.prepare('INSERT INTO users(id,username,salt,password_hash,role,created) VALUES(?,?,?,?,?,?)').run(id,username,'qa-salt','qa-hash',role,Date.now());
+const deletePayload={userId:deleteId,confirmUsername:'Wrong_Registration'};
+assert.equal((await fetch('/api/users/delete','POST',deletePayload)).status,401);
+assert.equal((await fetch('/api/users/delete','POST',deletePayload,student,user.id)).status,403);
+assert.equal((await fetch('/api/users/delete','POST',deletePayload,admin,user.id)).status,401);
+let deleteCross=req('/api/users/delete','POST',deletePayload,admin);deleteCross.headers.set('Origin','https://evil.invalid');assert.equal((await worker.fetch(deleteCross,env)).status,403);
+for(let payload of [null,{}, {userId:deleteId,confirmUsername:null},{userId:'bad:id',confirmUsername:'x'},{userId:deleteId,confirmUsername:'wrong_registration'},{userId:deleteId,confirmUsername:'Wrong_Registration '}])assert.equal((await fetch('/api/users/delete','POST',payload,admin)).status,400);
+for(let id of ['owner','other_admin'])assert.equal((await fetch('/api/users/delete','POST',{userId:id,confirmUsername:id==='owner'?'admin_test':id},admin)).status,403);
+assert.equal((await fetch('/api/users/delete','POST',{userId:'no_such_account',confirmUsername:'nothing'},admin)).status,404);
+for(let table of ['states','recordings','assessments'])for(let key of [deleteId+':draft',deleteId+':attempt:question',otherId+':draft',deleteId+'_extra:draft',deleteId,deleteId+';keep','example:shared']){
+ if(table==='states')db.prepare('INSERT INTO states(key,value,revision) VALUES(?,?,1)').run(key,'qa-'+key);
+ else if(table==='recordings')db.prepare('INSERT INTO recordings(key,type,value) VALUES(?,?,?)').run(key,'audio/webm',Buffer.from('qa-'+key));
+ else db.prepare('INSERT INTO assessments(key,value) VALUES(?,?)').run(key,'qa-'+key);
+}
+db.prepare('INSERT INTO sessions(id,expires,user_id) VALUES(?,?,?)').run('delete-session',Date.now()+60000,deleteId);
+db.prepare('INSERT INTO account_activity(user_id,value) VALUES(?,?)').run(deleteId,'qa-activity');
+db.prepare('INSERT INTO invitations(id,token_hash,created_by,created,expires,used_at,used_by) VALUES(?,?,?,?,?,?,?)').run('delete-consumed','qa-hash-consumed','owner',1,9999999999999,2,deleteId);
+db.prepare('INSERT INTO invitations(id,token_hash,created_by,created,expires) VALUES(?,?,?,?,?)').run('delete-created','qa-hash-created',deleteId,1,9999999999999);
+const tableSnapshot=()=>Object.fromEntries(['users','sessions','states','recordings','assessments','account_activity','invitations'].map(table=>[table,db.prepare('SELECT * FROM '+table+' ORDER BY 1').all()]));
+const beforeDelete=tableSnapshot();
+const regularBatch=DB.batch;DB.batch=async statements=>{db.prepare("UPDATE users SET role='admin' WHERE id=?").run(deleteId);return regularBatch.call(DB,statements)};
+assert.equal((await fetch('/api/users/delete','POST',deletePayload,admin)).status,409,'a role change between lookup and batch must prevent every deletion');
+for(let table of ['sessions','states','recordings','assessments','account_activity','invitations'])assert.deepEqual(tableSnapshot()[table],beforeDelete[table]);
+DB.batch=regularBatch;db.prepare("UPDATE users SET role='user' WHERE id=?").run(deleteId);assert.deepEqual(tableSnapshot(),beforeDelete);
+db.exec("CREATE TRIGGER qa_fail_delete BEFORE DELETE ON users WHEN OLD.id='delete_user' BEGIN SELECT RAISE(ABORT,'qa-only'); END");
+assert.equal((await fetch('/api/users/delete','POST',deletePayload,admin)).status,503);assert.deepEqual(tableSnapshot(),beforeDelete,'a failing delete rolls back every related row');db.exec('DROP TRIGGER qa_fail_delete');
+const removed=await Promise.all([fetch('/api/users/delete','POST',deletePayload,admin),fetch('/api/users/delete','POST',deletePayload,admin)]);assert.equal(removed.filter(r=>r.status===200).length,1);assert(removed.every(r=>[200,404,409].includes(r.status)));
+const afterDelete=tableSnapshot();
+for(let table of ['states','recordings','assessments'])assert.deepEqual(afterDelete[table],beforeDelete[table].filter(row=>!row.key.startsWith(deleteId+':')),table+' removes only the exact account prefix');
+for(let table of ['users','sessions','account_activity'])assert.deepEqual(afterDelete[table],beforeDelete[table].filter(row=>(table==='users'?row.id:row.user_id)!==deleteId),table+' keeps every other account');
+let consumed=db.prepare('SELECT * FROM invitations WHERE id=?').get('delete-consumed');assert.equal(consumed.used_by,null);assert.equal(consumed.used_at,2);assert.equal(db.prepare('SELECT revoked_at FROM invitations WHERE id=?').get('delete-created').revoked_at>0,true);
+assert.deepEqual(afterDelete.invitations.filter(i=>!['delete-consumed','delete-created'].includes(i.id)),beforeDelete.invitations.filter(i=>!['delete-consumed','delete-created'].includes(i.id)),'other invitations are untouched');
+assert.equal((await fetch('/api/users/delete','POST',deletePayload,admin)).status,404);
+console.log('PASS: admin-only read projections and credential/answer exclusion; unchanged personal state; single-use hashed invitations; collisions, parallel claims, expiry, revocation, role injection and CSRF; additive migration; exact-confirmed atomic account deletion, protected admins, neighbouring accounts and consumed invitations.');
