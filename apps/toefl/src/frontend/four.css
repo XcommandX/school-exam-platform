@@ -1508,3 +1508,97 @@ body.home-mode .home-recent-heading>button svg{display:block;width:18px;height:1
 body:is(.home-mode,.management-mode) .platform-home-link{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;white-space:nowrap;padding:10px 5px}
 body:is(.home-mode,.management-mode) .platform-home-link:hover{color:var(--brand)}
 @media(max-width:650px){body:is(.home-mode,.management-mode) .platform-home-link{font-size:21px}body:is(.home-mode,.management-mode) .platform-home-link>span:last-child{display:none}}
+
+/* Retain the green navigation band, with the new account controls at its right. */
+body.management-mode:not(.home-mode) .site-header {
+  position: sticky;
+  top: 0;
+  display: block;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: var(--exam-band);
+  color: #fff;
+}
+body.management-mode:not(.home-mode) .header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1560px;
+  min-height: 80px;
+  margin: auto;
+  padding: 0 44px;
+}
+body.management-mode:not(.home-mode) .site-brand {color:#fff;font-size:21px}
+body.management-mode:not(.home-mode) .site-brand .brand-mark {width:40px;height:40px}
+body.management-mode:not(.home-mode) .site-header .nav {
+  display: flex;
+  align-self: stretch;
+  align-items: stretch;
+  flex: 1;
+  gap: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+body.management-mode:not(.home-mode) .site-header .nav button {
+  flex: none;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 14px 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #e1f4f1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+body.management-mode:not(.home-mode) .site-header .nav button:is(:hover,.active) {background:#ffffff14;color:#fff}
+body.management-mode:not(.home-mode) .site-header .nav button.active:after {left:12px;right:12px;background:#b8eeee}
+body.management-mode:not(.home-mode) .site-header-tools {flex:none;gap:12px}
+body.management-mode:not(.home-mode) .platform-home-link {color:#e1f4f1}
+body.management-mode:not(.home-mode) .platform-home-link:hover {color:#fff}
+body.management-mode:not(.home-mode) .site-header :is(button,a,summary):focus-visible {outline-color:#b8eeee;outline-offset:3px}
+@media(max-width:1250px) {
+  body.management-mode:not(.home-mode) .header-inner {gap:14px;padding-inline:28px}
+  body.management-mode:not(.home-mode) .site-header .nav button {padding-inline:10px}
+  body.management-mode:not(.home-mode) .site-header .nav svg {display:none}
+  body.management-mode:not(.home-mode) .account-name {max-width:100px}
+}
+@media(max-width:1100px) {
+  body.management-mode:not(.home-mode) .header-inner {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 16px;padding:12px 24px 0;min-height:0}
+  body.management-mode:not(.home-mode) .site-header .nav {grid-column:1/-1;grid-row:2;overflow-x:auto;overscroll-behavior-x:contain;width:100%;margin-top:8px;scrollbar-width:thin;scrollbar-color:#ffffff55 transparent}
+  body.management-mode:not(.home-mode) .site-header .nav button {flex:1 0 auto;padding:14px 17px;font-size:13px}
+  body.management-mode:not(.home-mode) .site-header-tools {grid-column:2;grid-row:1}
+}
+@media(max-width:650px) {
+  body.management-mode:not(.home-mode) .header-inner {padding:12px 16px 0;gap:0 10px}
+  body.management-mode:not(.home-mode) .site-brand {gap:8px;font-size:19px}
+  body.management-mode:not(.home-mode) .site-brand .brand-mark {width:36px;height:36px}
+  body.management-mode:not(.home-mode) .site-header-tools {gap:7px}
+  body.management-mode:not(.home-mode) .account-name {max-width:73px}
+  body.management-mode:not(.home-mode) .site-header .nav button {flex:0 0 auto;padding:12px 16px;font-size:13px}
+}
+
+/* Home keeps the new quiet header; the green band belongs to secondary pages. */
+body.home-mode .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+body.home-mode .site-header .nav {display:none}
+body.home-mode .site-header-tools {flex:none}
+@media(max-width:650px) {
+  body.home-mode .header-inner {gap:10px}
+}
