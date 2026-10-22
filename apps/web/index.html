@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6fc">
+  <meta name="description" content="SAT、AP、TOEFL 与个人词汇的统一学习空间。">
+  <title>Study Space · 学习空间</title>
+  <link rel="stylesheet" href="/web/styles.css">
+  <script src="/web/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳转到内容</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Study Space 首页">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 10v17M9.5 12h3M9.5 16h3M20 16l1.8 1.8L25 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-type">Study Space<span>SCHOOL EXAM PLATFORM</span></span>
+      </a>
+      <nav class="exam-nav" aria-label="选择考试">
+        <button type="button" class="exam-tab active" data-exam="sat" aria-current="page">SAT</button>
+        <button type="button" class="exam-tab" data-exam="ap">AP</button>
+        <button type="button" class="exam-tab" data-exam="toefl">TOEFL</button>
+        <button type="button" class="exam-tab vocab-tab" data-exam="vocab">Personal Vocab</button>
+      </nav>
+      <div class="account-wrap">
+        <span class="test-badge"><span></span>本地测试</span>
+        <button type="button" class="avatar" id="account-button" aria-label="个人账号与设置" aria-expanded="false" aria-controls="account-menu"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 20v-1.3a6.5 6.5 0 0 1 13 0V20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        <div class="account-menu" id="account-menu" hidden>
+          <div class="menu-user"><span class="mini-avatar">G</span><span><strong>访客</strong><small>测试阶段 · 无需登录</small></span></div>
+          <button type="button" data-dialog="account"><span data-icon="user"></span>个人账号<span class="menu-trailing">测试中</span></button>
+          <button type="button" data-dialog="settings"><span data-icon="settings"></span>偏好设置</button>
+          <div class="menu-footnote">学习记录保存在当前浏览器</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <div id="page-content" aria-busy="true"></div>
+    <footer class="site-footer"><span>Study Space<span class="footer-dot">·</span>让学习更有条理</span><span>测试阶段 · 本地学习空间</span></footer>
+  </main>
+
+  <dialog class="settings-dialog" id="account-dialog" aria-labelledby="account-dialog-title">
+    <div class="dialog-heading"><h2 id="account-dialog-title">个人账号</h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div>
+    <div class="account-profile"><span class="profile-avatar"><span data-icon="user"></span></span><h3>欢迎，访客</h3><p>当前为测试阶段，直接开始学习即可。</p></div>
+    <div class="dialog-note"><span data-icon="shield"></span><p>练习记录只保存在当前浏览器。账号登录与跨设备同步将在后续开放。</p></div>
+    <button type="button" class="button primary dialog-done" data-close-dialog>知道了</button>
+  </dialog>
+
+  <dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-dialog-title">
+    <div class="dialog-heading"><h2 id="settings-dialog-title">偏好设置</h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div>
+    <p class="dialog-description">调整这台设备上的学习体验。</p>
+    <label class="setting-row"><span><strong>减少界面动画</strong><small>使用更平静、直接的页面切换</small></span><input type="checkbox" id="reduce-motion"><span class="switch" aria-hidden="true"></span></label>
+    <label class="setting-row"><span><strong>紧凑题库列表</strong><small>在同一屏幕内展示更多题目来源</small></span><input type="checkbox" id="compact-list"><span class="switch" aria-hidden="true"></span></label>
+    <a class="settings-link" href="/sat/?view=timingSettings"><span data-icon="clock"></span>SAT 练习计时设置<span data-icon="arrow"></span></a>
+    <button type="button" class="button primary dialog-done" data-close-dialog>完成</button>
+  </dialog>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

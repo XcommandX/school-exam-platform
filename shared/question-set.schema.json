@@ -1,0 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:school-exam-platform:question-set:v1",
+  "title": "School Exam Platform question set v1",
+  "description": "Question content only. Student identities, attempts, chosen answers, scores and arbitrary metadata are forbidden.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "exam",
+    "id",
+    "title",
+    "section",
+    "defaultDurationSeconds",
+    "questions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "exam": {
+      "enum": [
+        "sat",
+        "ap",
+        "toefl",
+        "vocab"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^(sat|ap|toefl|vocab):[a-zA-Z0-9._-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "section": {
+      "type": "string"
+    },
+    "defaultDurationSeconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "moduleQuestionCounts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "moduleDurationsSeconds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "number",
+        "minimum": 60
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "exam": {
+            "const": "sat"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "section": {
+            "const": "Reading and Writing"
+          },
+          "questions": {
+            "items": {
+              "properties": {
+                "options": {
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "optionsFormatting": {
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "correctOption": {
+                  "maximum": 3
+                }
+              }
+            }
+          },
+          "moduleDurationsSeconds": {
+            "items": {
+              "maximum": 3840
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "section",
+        "passage",
+        "passageFormatting",
+        "passageStyle",
+        "prompt",
+        "promptFormatting",
+        "options",
+        "optionsFormatting",
+        "correctOption",
+        "questionType",
+        "explanation",
+        "aiExplanation",
+        "visualStimulus",
+        "customMetadata"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(sat|ap|toefl|vocab):[a-zA-Z0-9._-]+:.+$"
+        },
+        "section": {
+          "type": "string"
+        },
+        "passage": {
+          "type": "string"
+        },
+        "passageFormatting": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/formatSpan"
+          }
+        },
+        "passageStyle": {
+          "enum": [
+            "prose",
+            "poetry",
+            "literary"
+          ]
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "promptFormatting": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/formatSpan"
+          }
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "optionsFormatting": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/formatSpan"
+            }
+          }
+        },
+        "correctOption": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "questionType": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "aiExplanation": {
+          "type": "string"
+        },
+        "visualStimulus": {
+          "$ref": "#/$defs/visualStimulus"
+        },
+        "customMetadata": {
+          "$ref": "#/$defs/sourceMetadata"
+        },
+        "answerProvenance": {
+          "enum": [
+            "source",
+            "agent"
+          ]
+        },
+        "agentSuggestedAnswer": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "moduleIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "questionNumberInModule": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "formatSpan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end",
+        "kind"
+      ],
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "kind": {
+          "enum": [
+            "underline",
+            "italic",
+            "bold"
+          ]
+        }
+      }
+    },
+    "assetPath": {
+      "type": "string",
+      "pattern": "^question-assets/(?:[^/\\\\\\u0000-\\u001f?#%:]+/)*[^/\\\\\\u0000-\\u001f?#%:]+\\.(?:png|jpe?g|webp|gif|svg)$"
+    },
+    "visualStimulus": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "position",
+            "columns",
+            "rows"
+          ],
+          "properties": {
+            "type": {
+              "const": "table"
+            },
+            "position": {
+              "enum": [
+                "before-passage",
+                "after-passage"
+              ]
+            },
+            "title": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "columns": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "rows": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "position",
+            "src",
+            "alt"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "image",
+                "chart"
+              ]
+            },
+            "position": {
+              "enum": [
+                "before-passage",
+                "after-passage"
+              ]
+            },
+            "src": {
+              "$ref": "#/$defs/assetPath"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "caption": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "sourceMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceExamId": {
+          "type": "string"
+        },
+        "sourceQuestionId": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "sourceModule": {
+          "type": "integer"
+        },
+        "sourceQuestionNumberInModule": {
+          "type": "integer"
+        },
+        "sourceQuestionNumber": {
+          "type": "integer"
+        },
+        "sourceQuestionType": {
+          "type": "string"
+        },
+        "sourceSection": {
+          "type": "string"
+        },
+        "sourceTableImageAsset": {
+          "$ref": "#/$defs/assetPath"
+        }
+      }
+    }
+  }
+}
