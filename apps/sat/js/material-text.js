@@ -22,7 +22,12 @@ window.SATText=(()=>{
  function layout(root,q){
   const text=root.textContent;
   const attribution=/^\s*(?:©|copyright\b|source\s*[:：]|来源\s*[:：]|出处\s*[:：]|(?:adapted|excerpted|reprinted|reproduced) from\b|used (?:by|with) permission\b)/i;
-  const slice=(start,end)=>{const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node,offset=0,a,b;while((node=walker.nextNode())){const next=offset+node.length;if(!a&&start>=offset&&start<next)a=[node,start-offset];if(end>offset&&end<=next){b=[node,end-offset];break;}offset=next;}if(!a||!b)return document.createDocumentFragment();const r=document.createRange();r.setStart(...a);r.setEnd(...b);return r.cloneContents();};
+  const slice=(start,end)=>{const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node,offset=0,a,b;while((node=walker.nextNode())){const next=offset+node.length;if(!a&&start>=offset&&start<next)a=[node,start-offset];if(end>offset&&end<=next){b=[node,end-offset];break;}offset=next;}if(!a||!b)return document.createDocumentFragment();const r=document.createRange();r.setStart(...a);r.setEnd(...b);const fragment=r.cloneContents();
+   // cloneContents omits its common ancestor. Restore those wrappers so a
+   // whole-line highlight (including its source formatting) survives layout.
+   let ancestor=r.commonAncestorContainer.nodeType===Node.TEXT_NODE?r.commonAncestorContainer.parentElement:r.commonAncestorContainer;
+   while(ancestor&&ancestor!==root){const wrapper=ancestor.cloneNode(false);wrapper.append(...fragment.childNodes);fragment.append(wrapper);ancestor=ancestor.parentElement;}
+   return fragment;};
   if(/^• /m.test(text)){
    const out=document.createDocumentFragment();let pos=0,list=null;
    for(const line of text.match(/[^\n]*(?:\n|$)/g).filter(Boolean)){

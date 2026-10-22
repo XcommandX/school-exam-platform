@@ -4,10 +4,10 @@ let examQuestions=[], running=false, timerHandle=null, finishing=null, onFinish=
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'sat-reading-practice-v1';
 const duration = 32 * 60 * 1000;
-const emptyQuestionState = () => ({selectedOption:null,eliminatedOptions:[],markedForReview:false,highlights:[],timeSpentMs:0,materialScrollTop:0});
+const emptyQuestionState = () => ({selectedOption:null,eliminatedOptions:[],markedForReview:false,highlights:[],notesExpanded:false,timeSpentMs:0,materialScrollTop:0});
 const initialState = () => ({currentQuestion:0,view:'question',questionStates:examQuestions.map(emptyQuestionState),endTimestamp:Date.now()+duration,remainingSeconds:1920,highlightMode:false,highlightColor:'yellow',timerHidden:false,eliminationVisible:true,split:50,completed:false,activePractice:null,questionEnterTimestamp:null,phase:'active',elapsedMs:0,segmentStartedAt:null,lineReaderState:{enabled:false,y:0},directionsShown:false});
 let state=initialState();
-let activeHighlightId=null, suppressClickUntil=0, readingFontSize=null;
+let activeHighlightId=null, hoveredHighlightId=null, suppressClickUntil=0, readingFontSize=null;
 const currentState=()=>state.questionStates[state.currentQuestion];
 const isUntimed=()=>state.activePractice?.untimed===true;
 const allowsOvertime=()=>state.activePractice?.allowOvertime===true;
@@ -49,7 +49,7 @@ function startExam(loadedQuestions,practice,finishHandler,saved=null){
   state.endTimestamp=now+saved.remainingTimeMs;state.completed=false;state.finishPending=null;state.finishedAt=null;state.questionEnterTimestamp=null;state.segmentStartedAt=now;
  }
  state.phase='active';state.segmentStartedAt=state.segmentStartedAt??now;
- state.questionStates.forEach(q=>{q.timeSpentMs=q.timeSpentMs||0;if(q.eliminatedOptions.includes(q.selectedOption))q.selectedOption=null;});
+ state.questionStates.forEach(q=>{q.timeSpentMs=q.timeSpentMs||0;q.highlights??=[];if(q.eliminatedOptions.includes(q.selectedOption))q.selectedOption=null;});
  running=true;document.querySelector('.exam-shell').hidden=false;SATLineReader.bind(state.lineReaderState,save);
  if(saved)commitQuestionTime();
  if(state.view==='question'&&!state.completed)state.questionEnterTimestamp=Date.now();
@@ -99,11 +99,11 @@ function renderBlock(block,text){
  const fragment=document.createDocumentFragment();
  for(let i=0;i<boundaries.length-1;i++){
   const start=boundaries[i],end=boundaries[i+1];if(end<=start)continue;
-  const h=ranges.findLast(r=>r.start<=start && r.end>=end);
+  const layers=ranges.filter(r=>r.start<=start && r.end>=end),h=layers.at(-1);
   let node=document.createTextNode(text.slice(start,end));
   const styles=formatting.filter(s=>s.start<=start&&s.end>=end).map(s=>'source-'+s.kind);
   if(styles.length){const span=document.createElement('span');span.className=styles.join(' ');span.append(node);node=span;}
-  if(h){const mark=document.createElement('span');mark.className=`text-highlight highlight-${h.color}${h.underline?' underlined':''}${h.id===activeHighlightId?' is-active':''}`;mark.dataset.highlightId=h.id;mark.append(node);fragment.append(mark);}else fragment.append(node);
+  if(h){const mark=document.createElement('span');mark.className='text-highlight';mark.dataset.highlightId=h.id;mark.dataset.highlightIds=layers.map(r=>r.id).join(' ');mark.tabIndex=0;mark.role='button';mark.setAttribute('aria-label',`Edit highlight: ${text.slice(start,end)}`);styleHighlight(mark,layers);mark.append(node);fragment.append(mark);}else fragment.append(node);
  }
  block.replaceChildren(fragment);
  if(block.dataset.block==='passage')SATText.layout(block,examQuestions[state.currentQuestion]);
@@ -121,7 +121,7 @@ function render(){
  $('highlightToggle').setAttribute('aria-pressed',state.highlightMode);$('highlightToggle').classList.toggle('is-enabled',state.highlightMode);
  $('eliminationToggle').setAttribute('aria-pressed',state.eliminationVisible);
  $('backButton').hidden=!review && state.currentQuestion===module.start;
- document.documentElement.style.setProperty('--left',`${state.split}%`);$('divider').setAttribute('aria-valuenow',Math.round(state.split));
+ renderNotes();
  if(review){renderGrid($('reviewGrid'),false);}else{
  $('passagePane').querySelectorAll('.question-visual,.visual-fallback').forEach(e=>e.remove());
  const visualQuestion=examQuestions[state.currentQuestion];$('passagePane').classList.toggle('has-visual',!!visualQuestion.visualStimulus);$('passagePane').classList.add('material-scroll-region');$('passage').insertAdjacentHTML('beforebegin',SATModel.visualHTML(visualQuestion,'before-passage'));$('passage').insertAdjacentHTML('afterend',SATModel.visualHTML(visualQuestion,'after-passage'));
@@ -161,7 +161,7 @@ $('options').addEventListener('click',event=>{
  const elimination=event.target.closest('[data-eliminate]');if(elimination){toggleCross(Number(elimination.dataset.eliminate));return;}
  const option=event.target.closest('[data-option]');if(option)selectOption(Number(option.dataset.option));
 });
-$('options').addEventListener('keydown',event=>{const option=event.target.closest('[data-option]');if(option && (event.key==='Enter'||event.key===' ')){event.preventDefault();selectOption(Number(option.dataset.option));}});
+$('options').addEventListener('keydown',event=>{if(event.target.closest('.text-highlight'))return;const option=event.target.closest('[data-option]');if(option && (event.key==='Enter'||event.key===' ')){event.preventDefault();selectOption(Number(option.dataset.option));}});
 function toggleCross(index){if(state.completed)return;const qs=currentState(),on=!qs.eliminatedOptions.includes(index);qs.eliminatedOptions=on?[...qs.eliminatedOptions,index]:qs.eliminatedOptions.filter(i=>i!==index);if(on&&qs.selectedOption===index)qs.selectedOption=null;updateOptions();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);save();}
 function toggleMarkedForReview(){currentState().markedForReview=!currentState().markedForReview;$('reviewToggle').setAttribute('aria-pressed',currentState().markedForReview);if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);save();}
 $('reviewToggle').onclick=toggleMarkedForReview;
@@ -243,39 +243,145 @@ window.addEventListener('resize',hideTooltips);
 document.querySelectorAll('.pane').forEach(p=>p.addEventListener('scroll',hideTooltips));
 
 function selectionOffset(block,node,offset){const range=document.createRange();range.selectNodeContents(block);range.setEnd(node,offset);return range.toString().length;}
+const highlightColors={yellow:['#FDF4B9','#F8DC4A'],blue:['#D6EAFD','#9ECBF6'],pink:['#F8D7F2','#EA9DDA']};
+function underlineStyle(h){return h.underline===true?'solid':h.underline||'none';}
+function styleHighlight(mark,layers){
+ // Darken each RGB channel: blue + pink becomes #D6D7F2 in the reference.
+ // Recoloring or deleting one annotation must not erase another annotation.
+ const rgb=layers.reduce((base,h)=>{
+  const hex=(highlightColors[h.color]||highlightColors.yellow)[h.id===activeHighlightId||h.id===hoveredHighlightId?1:0];
+  return base.map((v,i)=>Math.min(v,parseInt(hex.slice(1+i*2,3+i*2),16)));
+ },[255,255,255]);
+ mark.style.backgroundColor=`rgb(${rgb.map(Math.round).join(',')})`;
+ const line=layers.findLast(h=>underlineStyle(h)!=='none');
+ mark.style.textDecorationLine=line?'underline':'none';mark.style.textDecorationStyle=line?underlineStyle(line):'solid';mark.style.textUnderlineOffset='3px';
+ mark.classList.toggle('is-active',layers.some(h=>h.id===activeHighlightId));
+}
 function setActiveHighlight(id){
  activeHighlightId=id;
- document.querySelectorAll('.text-highlight').forEach(mark=>mark.classList.toggle('is-active',mark.dataset.highlightId===id));
+ document.querySelectorAll('.text-highlight').forEach(mark=>styleHighlight(mark,currentState().highlights.filter(h=>mark.dataset.highlightIds.split(' ').includes(h.id))));
 }
-function hideToolbar(){$('highlightToolbar').hidden=true;setActiveHighlight(null);}
+function closeUnderlineMenu(){$('underlineMenu').hidden=true;$('underlineHighlight').setAttribute('aria-expanded','false');}
+function hideToolbar(){$('highlightToolbar').hidden=true;closeUnderlineMenu();hoveredHighlightId=null;setActiveHighlight(null);}
 function updateHighlightSwatches(color){
  document.querySelectorAll('#highlightToolbar [data-color]').forEach(button=>{
   const selected=button.dataset.color===color;
   button.classList.toggle('is-selected',selected);
   button.setAttribute('aria-pressed',selected);
  });
+ const palette=highlightColors[color]||highlightColors.yellow;
+ $('addHighlightNote').style.setProperty('--note-color',palette[0]);
 }
-function showToolbar(id,rect){setActiveHighlight(id);const toolbar=$('highlightToolbar');toolbar.hidden=false;const width=toolbar.offsetWidth;toolbar.style.left=`${Math.max(8,Math.min(window.innerWidth-width-8,rect.left))}px`;toolbar.style.top=`${Math.max(8,rect.top-toolbar.offsetHeight-7)}px`;const h=currentState().highlights.find(h=>h.id===id);$('underlineHighlight').setAttribute('aria-pressed',!!h?.underline);updateHighlightSwatches(h?.color || state.highlightColor);}
+function positionHighlightToolbar(rect){
+ const toolbar=$('highlightToolbar'),width=toolbar.offsetWidth;
+ toolbar.style.left=`${Math.max(8,Math.min(innerWidth-width-8,rect.left))}px`;
+ const above=rect.top-toolbar.offsetHeight-8;
+ toolbar.style.top=`${Math.max(8,Math.min(innerHeight-toolbar.offsetHeight-8,above>=120?above:rect.bottom+8))}px`;
+ if(!$('underlineMenu').hidden)positionUnderlineMenu();
+}
+function positionUnderlineMenu(){
+ const rect=$('underlineHighlight').getBoundingClientRect(),menu=$('underlineMenu');
+ menu.style.left=`${Math.max(8,Math.min(innerWidth-menu.offsetWidth-8,rect.left-7))}px`;
+ menu.style.top=`${Math.min(innerHeight-menu.offsetHeight-8,rect.bottom+9)}px`;
+}
+function followHighlightToolbar(){
+ if($('highlightToolbar').hidden||!activeHighlightId)return;
+ const marks=[...document.querySelectorAll('.text-highlight')].filter(m=>m.dataset.highlightIds.split(' ').includes(activeHighlightId));
+ const mark=marks.find(m=>{const r=m.getBoundingClientRect(),p=m.closest('.pane').getBoundingClientRect();return r.bottom>p.top&&r.top<p.bottom;});
+ if(mark)positionHighlightToolbar(mark.getBoundingClientRect());else hideToolbar();
+}
+function showToolbar(id,rect){
+ closeUnderlineMenu();setActiveHighlight(id);$('highlightToolbar').hidden=false;
+ const h=currentState().highlights.find(h=>h.id===id);$('underlineHighlight').setAttribute('aria-pressed',underlineStyle(h)!=='none');
+ document.querySelectorAll('[data-underline]').forEach(b=>b.setAttribute('aria-checked',b.dataset.underline===underlineStyle(h)));
+ updateHighlightSwatches(h.color);positionHighlightToolbar(rect);
+}
 // Range offsets refer to immutable block text. Rebuilding only text spans preserves option controls.
 document.addEventListener('mouseup',event=>{
- if(!running || state.completed || !state.highlightMode || state.view!=='question' || event.target.closest('#highlightToolbar'))return;
+ if(!running || state.completed || !state.highlightMode || state.view!=='question' || event.target.closest('#highlightToolbar,#underlineMenu,#notesPanel'))return;
  const selection=window.getSelection();if(!selection || selection.isCollapsed || !selection.rangeCount)return;
  const range=selection.getRangeAt(0),startElement=range.startContainer.nodeType===3?range.startContainer.parentElement:range.startContainer;
  const block=startElement.closest?.('[data-block]');if(!block || !block.contains(range.endContainer))return;
  const start=selectionOffset(block,range.startContainer,range.startOffset),end=selectionOffset(block,range.endContainer,range.endOffset);if(start===end)return;
  const rect=range.getBoundingClientRect();const h={id:`h-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,block:block.dataset.block,start,end,color:state.highlightColor,underline:false};
- // Split intersecting highlights to avoid nesting and retain unaffected portions.
- currentState().highlights=currentState().highlights.flatMap(old=>{if(old.block!==h.block||old.end<=start||old.start>=end)return[old];const pieces=[];if(old.start<start)pieces.push({...old,end:start});if(old.end>end)pieces.push({...old,id:old.id+'r',start:end});return pieces;});
  currentState().highlights.push(h);selection.removeAllRanges();renderBlock(block,blockText(h.block));suppressClickUntil=Date.now()+200;showToolbar(h.id,rect);save();
 });
-document.addEventListener('click',event=>{if(Date.now()<suppressClickUntil)return;const mark=event.target.closest('.text-highlight');if(mark){showToolbar(mark.dataset.highlightId,mark.getBoundingClientRect());return;}if(!event.target.closest('#highlightToolbar'))hideToolbar();if(!event.target.closest('#navigator')&&!event.target.closest('#navigatorToggle'))closeNavigator();});
+for(const type of ['mouseover','mouseout'])document.addEventListener(type,event=>{
+ if(!running||state.completed)return;const mark=event.target.closest?.('.text-highlight');if(!mark||mark.contains(event.relatedTarget))return;
+ hoveredHighlightId=type==='mouseover'?mark.dataset.highlightId:null;setActiveHighlight(activeHighlightId);
+});
+document.addEventListener('click',event=>{if(Date.now()<suppressClickUntil||!running||state.completed)return;const mark=event.target.closest('.text-highlight');if(mark){showToolbar(mark.dataset.highlightId,mark.getBoundingClientRect());return;}if(!event.target.closest('#highlightToolbar,#underlineMenu,#notesPanel'))hideToolbar();if(!event.target.closest('#navigator')&&!event.target.closest('#navigatorToggle'))closeNavigator();});
 $('highlightToolbar').addEventListener('mousedown',event=>event.preventDefault());
 $('highlightToolbar').addEventListener('click',event=>{event.stopPropagation();const button=event.target.closest('button');if(!button||!activeHighlightId)return;const h=currentState().highlights.find(h=>h.id===activeHighlightId);if(!h)return;
- const block=document.querySelector(`[data-block="${h.block}"]`);if(button.dataset.color){h.color=button.dataset.color;state.highlightColor=button.dataset.color;updateHighlightSwatches(h.color);}else if(button.id==='underlineHighlight')h.underline=!h.underline;else if(button.id==='deleteHighlight'){currentState().highlights=currentState().highlights.filter(item=>item.id!==h.id);hideToolbar();}
- renderBlock(block,blockText(h.block));$('underlineHighlight').setAttribute('aria-pressed',h.underline);save();
+ if(button.id==='underlineHighlight'){
+  const open=$('underlineMenu').hidden;$('underlineMenu').hidden=!open;button.setAttribute('aria-expanded',open);if(open){positionUnderlineMenu();$('underlineMenu').querySelector('button').focus();}return;
+ }
+ if(button.id==='addHighlightNote'){openNote(h);return;}
+ const block=document.querySelector(`[data-block="${h.block}"]`);if(button.dataset.color){h.color=button.dataset.color;state.highlightColor=button.dataset.color;updateHighlightSwatches(h.color);closeUnderlineMenu();}else if(button.id==='deleteHighlight'){currentState().highlights=currentState().highlights.filter(item=>item.id!==h.id);hideToolbar();}
+ renderBlock(block,blockText(h.block));renderNotes();followHighlightToolbar();save();
 });
+$('underlineMenu').addEventListener('click',event=>{
+ const button=event.target.closest('[data-underline]'),h=currentState()?.highlights.find(h=>h.id===activeHighlightId);if(!button||!h)return;
+ h.underline=button.dataset.underline==='none'?false:button.dataset.underline;closeUnderlineMenu();
+ renderBlock(document.querySelector(`[data-block="${h.block}"]`),blockText(h.block));$('underlineHighlight').setAttribute('aria-pressed',underlineStyle(h)!=='none');
+ document.querySelectorAll('[data-underline]').forEach(b=>b.setAttribute('aria-checked',b===button));$('underlineHighlight').focus();save();
+});
+$('underlineMenu').addEventListener('keydown',event=>{
+ if(!['ArrowDown','ArrowUp','Home','End','Escape'].includes(event.key))return;event.preventDefault();event.stopPropagation();
+ if(event.key==='Escape'){closeUnderlineMenu();$('underlineHighlight').focus();return;}
+ const buttons=[...$('underlineMenu').querySelectorAll('button')],i=buttons.indexOf(document.activeElement);
+ buttons[event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length].focus();
+});
+function noteHighlights(){return currentState().highlights.filter(h=>typeof h.note==='string').sort((a,b)=>(a.noteCreatedAt||0)-(b.noteCreatedAt||0));}
+function notesAlongside(){return innerWidth>600&&currentState()?.notesExpanded&&noteHighlights().length>0;}
+function minimumReadingSplit(){return notesAlongside()?Math.min(70,Math.max(30,($('notesPanel').getBoundingClientRect().width+140)/$('questionView').getBoundingClientRect().width*100)):30;}
+function readingSplit(){return notesAlongside()?Math.max(minimumReadingSplit(),state.notesSplit??67):state.split;}
+function syncNotesLayout(){
+ const hasNotes=noteHighlights().length>0,open=hasNotes&&currentState().notesExpanded===true&&state.view==='question';
+ $('notesPanel').hidden=!open;$('expandNotes').hidden=!hasNotes||open||state.view!=='question';
+ $('questionView').classList.toggle('notes-open',open);$('expandNotes').setAttribute('aria-expanded',open);
+ const split=readingSplit();document.documentElement.style.setProperty('--left',`${split}%`);$('divider').setAttribute('aria-valuenow',Math.round(split));$('divider').setAttribute('aria-valuemin',Math.ceil(minimumReadingSplit()));
+}
+let deletingNoteId=null;
+function renderNotes(){
+ const list=$('notesList');list.replaceChildren();deletingNoteId=null;
+ noteHighlights().forEach(h=>{
+  const card=document.createElement('article');card.className='note-card';card.dataset.noteId=h.id;
+  const palette=highlightColors[h.color]||highlightColors.yellow;card.style.setProperty('--note-color',palette[0]);card.style.setProperty('--note-active-color',palette[1]);
+  const header=document.createElement('header');header.className='note-card-heading';
+  const quote=document.createElement('strong');quote.className='note-quote';quote.textContent=blockText(h.block).slice(h.start,h.end);
+  const remove=document.createElement('button');remove.className='note-delete';remove.setAttribute('aria-label','Delete note');remove.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V3h6v4M6 7l1 14h10l1-14M10 10v8m4-8v8"/></svg>';
+  const body=document.createElement('textarea');body.className='note-body';body.setAttribute('aria-label',`Note for ${quote.textContent}`);body.placeholder='Notes are saved automatically.';body.value=h.note;body.rows=1;
+  body.addEventListener('input',()=>{h.note=body.value;sizeNote(body);save();});
+  body.addEventListener('focus',()=>{setActiveHighlight(h.id);$('highlightToolbar').hidden=true;closeUnderlineMenu();});
+  remove.onclick=()=>confirmNoteDelete(h,card,remove);header.append(quote,remove);card.append(header,body);list.append(card);
+ });syncNotesLayout();list.querySelectorAll('textarea').forEach(sizeNote);
+}
+function sizeNote(body){body.style.height='auto';body.style.height=Math.max(32,body.scrollHeight)+'px';}
+function openNote(h){
+ if(typeof h.note!=='string'){h.note='';h.noteCreatedAt=Date.now();}
+ currentState().notesExpanded=true;hideToolbar();renderNotes();save();
+ const body=[...$('notesList').querySelectorAll('.note-card')].find(c=>c.dataset.noteId===h.id)?.querySelector('textarea');
+ body?.focus();body?.scrollIntoView({block:'nearest'});
+}
+function confirmNoteDelete(h,card,trigger){
+ if(deletingNoteId)renderNotes();
+ card=[...$('notesList').children].find(c=>c.dataset.noteId===h.id);deletingNoteId=h.id;card.classList.add('is-deleting');
+ const confirmation=document.createElement('div');confirmation.className='note-delete-confirm';confirmation.role='group';confirmation.setAttribute('aria-label','Delete this note?');
+ const title=document.createElement('strong');title.textContent='Delete This Note?';const actions=document.createElement('div');actions.className='note-confirm-actions';
+ for(const [action,label] of [['cancel','No'],['confirm','Yes']]){const button=document.createElement('button');button.dataset.noteAction=action;button.textContent=label;button.onclick=()=>{
+  if(action==='confirm'){delete h.note;delete h.noteCreatedAt;save();}
+  renderNotes();const next=[...$('notesList').children].find(c=>c.dataset.noteId===h.id)?.querySelector('.note-delete')||$('collapseNotes');
+  if(next.isConnected&&!$('notesPanel').hidden)next.focus();else document.querySelector(`.text-highlight[data-highlight-id="${h.id}"]`)?.focus();
+ };actions.append(button);}
+ card.querySelector('.note-card-heading').inert=true;card.querySelector('textarea').inert=true;
+ confirmation.append(title,actions);card.append(confirmation);confirmation.querySelector('button').focus();
+}
+$('notesPanel').addEventListener('keydown',event=>{if(event.key!=='Escape')return;event.preventDefault();event.stopPropagation();if(deletingNoteId){const card=[...$('notesList').children].find(c=>c.dataset.noteId===deletingNoteId);card?.querySelector('[data-note-action="cancel"]')?.click();}else{$('collapseNotes').click();}});
+$('collapseNotes').onclick=()=>{currentState().notesExpanded=false;hideToolbar();syncNotesLayout();save();$('expandNotes').focus();};
+$('expandNotes').onclick=()=>{currentState().notesExpanded=true;hideToolbar();syncNotesLayout();$('notesList').querySelectorAll('textarea').forEach(sizeNote);save();$('notesList').querySelector('textarea')?.focus();};
 $('passagePane').addEventListener('scroll',()=>{commitMaterialScroll();save();});
-document.querySelectorAll('.pane').forEach(p=>p.addEventListener('scroll',hideToolbar));window.addEventListener('resize',hideToolbar);
+document.querySelectorAll('.pane').forEach(p=>p.addEventListener('scroll',followHighlightToolbar));window.addEventListener('resize',()=>{if(running){syncNotesLayout();followHighlightToolbar();}});
 let modalTrigger=null;
 function openModal(title,body,actions,kind=''){
  modalTrigger=$('modal').open?modalTrigger:document.activeElement;
@@ -314,7 +420,7 @@ $('moreMenu').onclick=e=>{
  const item=e.target.closest('[data-more]');if(!item)return;if(item.dataset.more==='timer'){state.questionTimerPanelState.visible=!state.questionTimerPanelState.visible;closeMore();renderQuestionTimerPanel();updateQuestionTimer();save();if(!$('questionTimerPanel').hidden)$('questionTimerGrip').focus();else $('exitButton').focus();return;}closeMore(true);
  if(item.dataset.more==='reader'){SATLineReader.toggle();return;}
  if(item.dataset.more==='font-size'){showFontSize();return;}
- if(item.dataset.more==='help')openModal('Help','<h3>Answer & review</h3><p>Choose an answer, cross out choices, and mark questions for review. Use the question navigator to jump between questions and check your work.</p><h3>Reading tools</h3><p>Turn on Highlights &amp; Notes, then select text to highlight it. Choose a color or underline in the toolbar. Use Line Reader to follow a line of text, or Font Size to adjust the reading text with a live preview.</p><h3>Time & progress</h3><p>Hide or show the timer. Use keyboard shortcuts from More → Shortcuts. Save and Exit pauses the timer and saves your progress; choose Resume on Dashboard to continue.</p>',[{text:'Close',action:()=>$('modal').close()}]);
+ if(item.dataset.more==='help')openModal('Help','<h3>Answer & review</h3><p>Choose an answer, cross out choices, and mark questions for review. Use the question navigator to jump between questions and check your work.</p><h3>Reading tools</h3><p>Turn on Highlights &amp; Notes, then select text to highlight it. Choose a color, a solid, dashed, or dotted underline, or Add note in the toolbar. Notes save automatically with this practice. Use Line Reader to follow a line of text, or Font Size to adjust the reading text with a live preview.</p><h3>Time & progress</h3><p>Hide or show the timer. Use keyboard shortcuts from More → Shortcuts. Save and Exit pauses the timer and saves your progress; choose Resume on Dashboard to continue.</p>',[{text:'Close',action:()=>$('modal').close()}]);
  if(item.dataset.more==='shortcuts')openModal('Keyboard Shortcuts',`<dl class="shortcuts-list">${SATShortcuts.map(s=>`<dt>${s.description}</dt><dd><kbd>${s.label}</kbd></dd>`).join('')}</dl>`,[{text:'Close',action:()=>$('modal').close()}]);
  if(item.dataset.more==='exit')openModal('Do You Want to Exit this Practice Test?','<p>If you exit now, we’ll save your progress and pause the timer. You can resume this practice test from Dashboard in this browser.</p>',[{text:'Continue Practice Test',action:()=>$('modal').close()},{text:'Save and Exit',action:()=>finishAttempt({status:'incomplete',reason:'exit'})}],'exit-dialog');
 };
@@ -335,6 +441,7 @@ $('modal').addEventListener('click',event=>{
 });
 document.addEventListener('keydown',event=>{
  if(!running||state.completed||state.phase==='module_break')return;
+ const mark=event.target.closest('.text-highlight');if(mark&&['Enter',' '].includes(event.key)){event.preventDefault();showToolbar(mark.dataset.highlightId,mark.getBoundingClientRect());$('highlightToolbar').querySelector('button').focus();return;}
  const shortcut=SATShortcuts.find(s=>s.key.toLowerCase()===event.key.toLowerCase());if(!shortcut)return;
  if(shortcut.action==='close'){closeNavigator();hideToolbar();hideTooltips();if(!$('moreMenu').hidden){event.preventDefault();closeMore(true);}return;}
  if($('modal').open||!$('moreMenu').hidden||event.target.closest('#questionTimerPanel,input,textarea,select,[contenteditable]:not([contenteditable=false])')||window.getSelection()?.toString()||!$('highlightToolbar').hidden||event.ctrlKey||event.metaKey||event.altKey)return;
@@ -342,9 +449,10 @@ document.addEventListener('keydown',event=>{
  ({next,back,select:()=>selectOption(shortcut.index),cross:()=>toggleCross(shortcut.index),mark:toggleMarkedForReview})[shortcut.action]();
 });
 $('divider').addEventListener('pointerdown',event=>{event.preventDefault();$('divider').setPointerCapture(event.pointerId);});
-$('divider').addEventListener('pointermove',event=>{if(!$('divider').hasPointerCapture(event.pointerId))return;const rect=$('questionView').getBoundingClientRect();state.split=Math.max(30,Math.min(70,(event.clientX-rect.left)/rect.width*100));document.documentElement.style.setProperty('--left',`${state.split}%`);$('divider').setAttribute('aria-valuenow',Math.round(state.split));hideToolbar();});
+function setReadingSplit(value){const split=Math.max(minimumReadingSplit(),Math.min(70,value));if(notesAlongside())state.notesSplit=split;else state.split=split;syncNotesLayout();hideToolbar();}
+$('divider').addEventListener('pointermove',event=>{if(!$('divider').hasPointerCapture(event.pointerId))return;const rect=$('questionView').getBoundingClientRect();setReadingSplit((event.clientX-rect.left)/rect.width*100);});
 $('divider').addEventListener('pointerup',save);
-$('divider').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.stopPropagation();event.preventDefault();state.split=Math.max(30,Math.min(70,state.split+(event.key==='ArrowLeft'?-2:2)));document.documentElement.style.setProperty('--left',`${state.split}%`);$('divider').setAttribute('aria-valuenow',Math.round(state.split));save();});
+$('divider').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.stopPropagation();event.preventDefault();setReadingSplit(readingSplit()+(event.key==='ArrowLeft'?-2:2));save();});
 window.addEventListener('pagehide',()=>{if(running){commitQuestionTime();save();}});
 window.ExamEngine={start:startExam,finishAttempt,isRunning:()=>running};
 })();
