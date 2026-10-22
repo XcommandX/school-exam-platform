@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const {targets,summarize}=require('../apps/web/home-model.js');
+assert.deepEqual(targets({toefl:{reading:5,listening:5.5,speaking:5,writing:5.5},sat:{english:700,math:800}}),{toefl:{reading:5,listening:5.5,speaking:5,writing:5.5,total:5.5},sat:{english:700,math:800,total:1500}});
+for(const v of [0,6.5,110,5.1,'5',NaN])assert.equal(targets({toefl:{reading:v,listening:5,speaking:5,writing:5}}).toefl,null);
+for(const v of [190,810,705,'700'])assert.equal(targets({sat:{english:v,math:800}}).sat,null);
+const now=new Date(2026,9,22,12).getTime(),yesterday=new Date(2026,9,21,12).getTime();
+const sat=[{id:'a',status:'completed',completedAt:now,totalQuestions:4,unansweredCount:1,correctCount:2},{id:'a',status:'completed',completedAt:now,totalQuestions:4,unansweredCount:1,correctCount:2},{id:'pending',status:'incomplete',completedAt:now,totalQuestions:10,unansweredCount:0,correctCount:10},{id:'future',status:'completed',completedAt:now+86400000,totalQuestions:10,unansweredCount:0,correctCount:10}];
+const toefl=[{id:'t',finished:yesterday,results:[{id:'reading-t1:x',items:[{id:'1',response:'A',correct:true},{id:'2',response:'',correct:false}]},{id:'speaking-t1:x',automatic:false,items:[{id:'3',correct:null}]}],recorded:{'speaking-t1:x:3':true}},{id:'preview',preview:true,finished:now,results:[{id:'r',items:[{response:'yes',correct:true}]}]}];
+const s=summarize(sat,toefl,[],now);
+assert.equal(s.today,3);assert.equal(s.streak,2);assert.deepEqual(s.all,{answers:5,correct:3,graded:4,attempts:2});
+assert.equal(summarize([],toefl,[],now).streak,1);
+assert.equal(summarize([],[],[],now).streak,0);
+assert.equal(summarize([],[],[{type:'progress',day:'2026-10-22',at:now,words:{test:true}}],now).streak,1);
+console.log('Home model: score scale, partial/invalid targets, completed-only counts, deduplication, recording, streak and empty-state checks passed.');

@@ -43,3 +43,356 @@
 @keyframes completion-fall{from{transform:translate3d(0,-100vh,0) rotate(0);opacity:1}85%{opacity:1}to{transform:translate3d(var(--drift),100vh,0) rotate(var(--turn));opacity:0}}
 @media(max-width:600px){.practice-transition{padding:30px 18px}.practice-transition>h1{font-size:22px;margin-bottom:28px}.transition-card{min-height:390px;padding:38px 24px;gap:24px}.app-shell .transition-art{width:230px}.completion-actions{margin-top:30px;gap:12px}.completion-button{padding-inline:20px}}
 @media(prefers-reduced-motion:reduce){.completion-confetti{display:none}}
+
+/* Study Space management theme. The attribute is removed for every exam stage.
+   Keep the original rules above intact: ready/preparing/moduleOver/saving/congrats
+   and the sibling .exam-shell must continue to use their original appearance. */
+.app-shell[data-sat-management] {
+  --app-bg:#F5F4F0;
+  --app-text:#16181D;
+  --app-muted:#65666F;
+  --app-border:#E4E2DC;
+  --app-green:#C94D2C;
+  --app-green-hover:#AD3B20;
+  --app-green-soft:#FFF0E6;
+  --app-green-pale:#FFFAF6;
+  --sat-blue:#2F5EC7;
+  --sat-radius:24px;
+  background:var(--app-bg);
+  color:var(--app-text);
+  font-family:Inter,"Avenir Next",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.app-shell[data-sat-management] button,
+.app-shell[data-sat-management] a,
+.app-shell[data-sat-management] input,
+.app-shell[data-sat-management] select {transition:background-color .18s,border-color .18s,box-shadow .18s,transform .18s,color .18s}
+.app-shell[data-sat-management] button:focus-visible,
+.app-shell[data-sat-management] a:focus-visible,
+.app-shell[data-sat-management] input:focus-visible,
+.app-shell[data-sat-management] select:focus-visible,
+.app-shell[data-sat-management] [tabindex]:focus-visible {outline:3px solid var(--sat-blue);outline-offset:4px}
+.app-shell[data-sat-management] button:disabled {opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+.app-shell[data-sat-management] .app-header {height:auto;min-height:100px;max-width:1560px;margin:auto;padding:22px 44px;border:0;background:transparent;gap:26px;flex-wrap:wrap}
+.app-shell[data-sat-management] .app-brand {gap:12px;color:var(--app-text);font-size:21px;letter-spacing:-.7px;flex-shrink:0}
+.app-shell[data-sat-management] .app-brand strong {font-weight:500}
+.app-shell[data-sat-management] .app-brand-mark {display:grid;place-items:center;width:44px;height:44px;background:var(--app-text);border-radius:15px;color:white;transform:rotate(-4deg)}
+.app-shell[data-sat-management] .app-brand-mark svg {width:25px;height:25px;color:white;transform:rotate(4deg)}
+.app-shell[data-sat-management] .app-header-tools {display:flex;align-items:center;gap:16px;margin-left:auto}
+.app-shell[data-sat-management] .app-home-link {font-size:13px;text-decoration:none;color:var(--app-muted);white-space:nowrap}
+.app-shell[data-sat-management] .app-home-link:hover {color:var(--app-text)}
+.app-shell[data-sat-management] .app-settings-button {height:40px;padding:0 17px;background:#FFF;border:1px solid var(--app-border);border-radius:99px;font-size:12px;font-weight:650}
+.app-shell[data-sat-management] .app-settings-button:hover,
+.app-shell[data-sat-management] .app-settings-button[aria-current=page] {background:var(--app-text);border-color:var(--app-text);color:white}
+.app-shell[data-sat-management] .app-main {max-width:1392px;padding:24px 44px 72px}
+.app-shell[data-sat-management] .app-back {display:inline-flex;align-items:center;gap:11px;min-height:50px;padding:10px 22px 10px 12px;margin-bottom:26px;border:1px solid var(--app-border);border-radius:99px;background:white;color:var(--app-text);font-size:16px;font-weight:750;line-height:1.2;box-shadow:0 3px 10px -8px #33231D30;transition:background-color .2s,border-color .2s,color .2s,box-shadow .2s,transform .2s}
+.app-shell[data-sat-management] .app-back-icon {display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#FFF0E7;color:#C34C2D;font-size:21px;font-weight:500;transition:transform .2s,background-color .2s}
+.app-shell[data-sat-management] .app-back:hover {background:#FFF8F2;border-color:#E9BAA5;color:#B84226;transform:translateY(-2px);box-shadow:0 10px 22px -16px #8F351C70}
+.app-shell[data-sat-management] .app-back:hover .app-back-icon {transform:translateX(-3px);background:#FFE4D3}
+.app-shell[data-sat-management] .app-back:active {transform:translateY(0) scale(.98);box-shadow:none}
+.app-shell[data-sat-management] .app-heading {align-items:flex-start;margin:6px 0 28px;gap:24px}
+.app-shell[data-sat-management] .app-heading h1 {font-size:clamp(28px,3vw,38px);font-weight:750;letter-spacing:-1.2px;line-height:1.2;margin-bottom:10px}
+.app-shell[data-sat-management] .app-heading p {font-size:14px;line-height:1.65;color:var(--app-muted);max-width:650px}
+.app-shell[data-sat-management] .app-notice {background:var(--app-green-soft);border:1px solid #F0D3C4;padding:15px 20px;border-radius:16px;font-size:13px;line-height:1.6}
+.app-shell[data-sat-management] .sat-hero {display:flex;position:relative;isolation:isolate;overflow:hidden;border-radius:32px;background:linear-gradient(118deg,#EA6A3D,#C3442C);min-height:280px;padding:40px 48px;color:white;box-shadow:0 14px 30px -28px #7E301A}
+.app-shell[data-sat-management] .sat-hero::after {content:'';position:absolute;inset:0;z-index:-1;background-image:radial-gradient(#FFFFFF25 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(90deg,transparent,#000)}
+.app-shell[data-sat-management] .sat-hero-copy {position:relative;z-index:1;max-width:66%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.app-shell[data-sat-management] .sat-hero h1 {font-size:clamp(64px,7vw,94px);letter-spacing:-5px;line-height:.95;margin:0;font-weight:800}
+.app-shell[data-sat-management] .sat-hero-actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.app-shell[data-sat-management] .sat-hero-actions .app-button {min-height:44px;border-radius:99px;padding:11px 21px;letter-spacing:-.2px;font-size:13px}
+.app-shell[data-sat-management] .hero-primary {background:white;color:#9D321E;border-color:white}
+.app-shell[data-sat-management] .hero-primary:hover:not(:disabled) {background:#FFF4ED;border-color:#FFF4ED;transform:translateY(-2px);box-shadow:0 8px 15px -12px #562510}
+.app-shell[data-sat-management] .sat-hero .hero-secondary {background:#FFFFFF10;border-color:#FFFFFF50;color:white}
+.app-shell[data-sat-management] .sat-hero .hero-secondary:hover:not(:disabled) {background:#FFFFFF24;border-color:#FFFFFF80;transform:translateY(-2px)}
+.app-shell[data-sat-management] .sat-hero-art {position:absolute;right:48px;top:30px;width:38%;height:calc(100% - 60px);pointer-events:none}
+.app-shell[data-sat-management] .hero-orbit {position:absolute;width:240px;height:240px;border:22px solid #FFFFFF0D;border-radius:50%;right:0;top:18px;transform:rotate(-20deg)}
+.app-shell[data-sat-management] .hero-book {position:absolute;right:16px;top:0;width:136px;height:159px;display:grid;place-items:center;border-radius:30px;background:#FFFFFF1B;border:1px solid #FFFFFF40;transform:rotate(12deg)}
+.app-shell[data-sat-management] .hero-book svg {width:70px;height:70px;stroke-width:1.3}
+.app-shell[data-sat-management] .hero-letter {position:absolute;right:132px;top:114px;width:125px;height:125px;border-radius:28px;display:grid;place-items:center;background:#FFF6EB;color:#CD4D2C;font-size:49px;font-weight:750;letter-spacing:-3px;box-shadow:0 10px 30px -23px #7E301A;transform:rotate(-12deg)}
+.app-shell[data-sat-management] .hero-spark {position:absolute;right:207px;top:30px;color:#FFDA8A;font-size:55px;font-weight:400}
+.app-shell[data-sat-management] .dashboard-stats {gap:18px;background:transparent;border:0;padding:0;margin:24px 0 38px}
+.app-shell[data-sat-management] .dashboard-stats>div {position:relative;background:white;border:1px solid var(--app-border);border-radius:22px;padding:24px 26px;gap:7px;overflow:hidden}
+.app-shell[data-sat-management] .dashboard-stats>div+div {border-left:1px solid var(--app-border);padding-left:26px}
+.app-shell[data-sat-management] .dashboard-stats>div::after {content:'';width:35px;height:35px;border-radius:12px;position:absolute;right:24px;top:25px;background:#E8EFFD;transform:rotate(-12deg)}
+.app-shell[data-sat-management] .dashboard-stats>div:nth-child(2)::after {background:#FFE8E0}
+.app-shell[data-sat-management] .dashboard-stats>div:nth-child(3)::after {background:#E4F4EC}
+.app-shell[data-sat-management] .app-stats strong {font-size:33px;font-weight:750;line-height:1.05;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.app-shell[data-sat-management] .app-stats span {font-size:12px;color:var(--app-muted)}
+.app-shell[data-sat-management] .section-heading {gap:20px;align-items:flex-end;margin-bottom:18px}
+.app-shell[data-sat-management] .section-heading h2 {font-size:23px;font-weight:750;letter-spacing:-.6px}
+.app-shell[data-sat-management] .section-heading>span {font-size:12px;text-align:right;flex-shrink:0}
+.app-shell[data-sat-management] .dashboard-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.app-shell[data-sat-management] .dashboard-entry {position:relative;display:flex;flex-direction:column;align-items:stretch;gap:25px;min-height:190px;overflow:hidden;padding:24px;border:1px solid var(--app-border);border-radius:24px;background:white;box-shadow:none;text-align:left}
+.app-shell[data-sat-management] .dashboard-entry:hover {transform:translateY(-4px);border-color:#D5C9BE;background:white;box-shadow:0 18px 30px -24px #49352A50}
+.app-shell[data-sat-management] .entry-top {display:flex;align-items:center;justify-content:space-between}
+.app-shell[data-sat-management] .entry-icon {width:49px;height:49px;border-radius:16px;background:#FFE9DE;color:#C94D2C}
+.app-shell[data-sat-management] .entry-library .entry-icon {background:#E7EFFF;color:#315FC9}
+.app-shell[data-sat-management] .entry-wrong .entry-icon {background:#FFE7EB;color:#B93F60}
+.app-shell[data-sat-management] .entry-add .entry-icon {background:#E3F3EA;color:#2C8061}
+.app-shell[data-sat-management] .entry-icon svg {width:25px;height:25px;stroke-width:1.7}
+.app-shell[data-sat-management] .entry-arrow {display:grid;place-items:center;width:29px;height:29px;border:1px solid var(--app-border);border-radius:50%;font-size:17px;color:var(--app-text);transition:transform .18s}
+.app-shell[data-sat-management] .dashboard-entry:hover .entry-arrow {transform:rotate(10deg)}
+.app-shell[data-sat-management] .entry-cn {font-size:11px;color:var(--app-muted);margin-bottom:5px;font-weight:500}
+.app-shell[data-sat-management] .dashboard-entry strong {font-size:20px;line-height:1.2;letter-spacing:-.5px;font-weight:750;margin-bottom:10px}
+.app-shell[data-sat-management] .entry-index {position:absolute;right:17px;bottom:-11px;line-height:1;font-size:59px;letter-spacing:-3px;color:#16181D04;font-weight:800;pointer-events:none}
+.app-shell[data-sat-management] .bank-status {display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:19px 3px;font-size:12px;color:var(--app-muted);line-height:1.6}
+.app-shell[data-sat-management] .bank-status-dot {width:7px;height:7px;border-radius:50%;background:#B7B4AD;flex-shrink:0}
+.app-shell[data-sat-management] .bank-status-dot.connected {background:#388F70;box-shadow:0 0 0 4px #388F7010}
+.app-shell[data-sat-management] .bank-status .app-link:first-of-type {margin-left:auto}
+.app-shell[data-sat-management] .recent-practices {margin-top:22px}
+.app-shell[data-sat-management] .app-table-wrap {border-radius:22px;border-color:var(--app-border);box-shadow:none;scrollbar-width:thin}
+.app-shell[data-sat-management] .app-table {font-size:13px;background:white}
+.app-shell[data-sat-management] .app-table th {font-size:10px;text-transform:uppercase;letter-spacing:.55px;background:#FAF9F6;padding:17px 18px;color:#72716E;border-bottom-color:var(--app-border)}
+.app-shell[data-sat-management] .app-table td {padding:21px 18px;border-bottom-color:#EFEEE9;line-height:1.6}
+.app-shell[data-sat-management] .app-table tbody tr:hover {background:#FFFBF7}
+.app-shell[data-sat-management] .app-table td small {font-size:10px;line-height:1.6}
+.app-shell[data-sat-management] .practice-name {font-weight:650}
+.app-shell[data-sat-management] .record-actions {min-width:108px}
+.app-shell[data-sat-management] .record-actions button {margin:4px 0}
+.app-shell[data-sat-management] .question-preview {line-height:1.65;max-width:390px}
+.app-shell[data-sat-management] .source-text {color:#9D4C33;font-size:12px}
+.app-shell[data-sat-management] .app-badge {border-radius:99px;padding:5px 10px;font-size:10px;font-weight:650}
+.app-shell[data-sat-management] .app-badge.completed {background:#E9F5EE;color:#377B5C}
+.app-shell[data-sat-management] .app-badge.incomplete {background:#FFF1D8;color:#906721}
+.app-shell[data-sat-management] .type-badge {border-radius:99px;background:#EFF2F8;color:#50617B;padding:5px 10px;font-size:10px;white-space:normal;line-height:1.5}
+.app-shell[data-sat-management] .app-button {border-color:var(--app-border);border-radius:99px;min-height:39px;padding:9px 17px;background:white;font-size:12px;font-weight:650;line-height:1.4}
+.app-shell[data-sat-management] .app-button:hover:not(:disabled) {background:#F9F6F1;border-color:#CFC5BA;transform:translateY(-1px)}
+.app-shell[data-sat-management] .app-button.filled {background:var(--app-green);border-color:var(--app-green);color:white}
+.app-shell[data-sat-management] .app-button.filled:hover:not(:disabled) {background:var(--app-green-hover);border-color:var(--app-green-hover)}
+.app-shell[data-sat-management] .app-link {font-size:12px;color:var(--app-green);font-weight:650}
+.app-shell[data-sat-management] .app-link.danger-text {color:#B84351}
+.app-shell[data-sat-management] .app-subject {border-radius:99px;font-size:12px;font-weight:650;padding:9px 20px;background:var(--app-green-soft);color:var(--app-green);white-space:nowrap}
+.app-shell[data-sat-management] .app-empty {border-radius:24px;padding:48px 28px;border-color:var(--app-border);background:#FFFFFFA8}
+.app-shell[data-sat-management] .app-empty h3 {font-size:19px;font-weight:650;letter-spacing:-.3px;margin-bottom:9px}
+.app-shell[data-sat-management] .app-empty p {font-size:13px;line-height:1.6}
+.app-shell[data-sat-management] .app-filters {padding:23px;gap:18px;margin-bottom:24px;border-radius:22px;border-color:var(--app-border);background:#FFFFFFC4;grid-template-columns:1fr 1fr 1.4fr}
+.app-shell[data-sat-management] label {font-size:11px;font-weight:650;color:#5D5D62}
+.app-shell[data-sat-management] input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=range]),
+.app-shell[data-sat-management] select {height:44px;border:1px solid #E1DED7;border-radius:12px;background:#FCFBF8;padding:10px 13px;color:var(--app-text);font:inherit;font-size:13px;line-height:1.4;box-shadow:0 1px 2px #16181D02}
+.app-shell[data-sat-management] input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=range]):hover,
+.app-shell[data-sat-management] select:hover {border-color:#C7BDAF}
+.app-shell[data-sat-management] input::placeholder {color:#9B9894}
+.app-shell[data-sat-management] input[type=range] {accent-color:var(--app-green)}
+.app-shell[data-sat-management] input[type=checkbox],
+.app-shell[data-sat-management] input[type=radio] {accent-color:var(--app-green);width:16px;height:16px}
+.app-shell[data-sat-management] .results-heading {margin-bottom:14px;font-size:12px;gap:15px;flex-wrap:wrap}
+.app-shell[data-sat-management] .app-pagination {padding:22px 2px;font-size:12px;gap:20px;flex-wrap:wrap}
+.app-shell[data-sat-management] .app-pagination>div {gap:12px}
+.app-shell[data-sat-management] .app-pagination .app-button {font-size:11px}
+.app-shell[data-sat-management] .empty-cell {height:160px;font-size:13px}
+.app-shell[data-sat-management] .app-dropzone {border-color:#DDC8B8;border-radius:24px;background:#FFFFFFB8;padding:43px 24px}
+.app-shell[data-sat-management] .app-dropzone:hover,
+.app-shell[data-sat-management] .app-dropzone.drag-over {background:#FFF9F3;border-color:var(--app-green)}
+.app-shell[data-sat-management] .upload-icon {width:58px;height:58px;border-radius:19px;background:#FFEBDD;color:#C94D2C}
+.app-shell[data-sat-management] .app-dropzone h2 {font-size:23px;font-weight:700;letter-spacing:-.6px}
+.app-shell[data-sat-management] .app-dropzone p {font-size:12px}
+.app-shell[data-sat-management] .import-layout {grid-template-columns:1fr;gap:24px}
+.app-shell[data-sat-management] .import-file {padding:20px;border-radius:18px;border-color:var(--app-border);font-size:12px}
+.app-shell[data-sat-management] .import-file>div:first-child {align-items:flex-start;flex-wrap:wrap;gap:8px 16px}
+.app-shell[data-sat-management] .import-file span {font-size:11px;white-space:normal}
+.app-shell[data-sat-management] .import-file.has-error {background:#FFFAFA;border-color:#EBC8CD}
+.app-shell[data-sat-management] .import-actions {gap:12px;flex-wrap:wrap}
+.app-shell[data-sat-management] .folder-panel,
+.app-shell[data-sat-management] .timing-group {padding:28px;border:1px solid var(--app-border);border-radius:24px;margin-bottom:22px;box-shadow:none}
+.app-shell[data-sat-management] .folder-panel h2,
+.app-shell[data-sat-management] .timing-group h2 {font-size:20px;font-weight:700;letter-spacing:-.4px;margin-bottom:12px}
+.app-shell[data-sat-management] .folder-panel p,
+.app-shell[data-sat-management] .timing-group p {font-size:13px;line-height:1.7;color:var(--app-muted);max-width:960px}
+.app-shell[data-sat-management] .folder-panel>div {flex-wrap:wrap}
+.app-shell[data-sat-management] .folder-panel .folder-update {border-top:1px solid var(--app-border);font-size:13px;padding-top:20px;margin-top:20px}
+.app-shell[data-sat-management] .builder-setup {border-color:var(--app-border);border-radius:24px;padding:25px;gap:24px;margin-bottom:24px}
+.app-shell[data-sat-management] .builder-setup label {max-width:none;flex:1}
+.app-shell[data-sat-management] .builder-summary {padding:3px 0;gap:6px;min-width:160px}
+.app-shell[data-sat-management] .builder-summary strong {font-size:17px;letter-spacing:-.3px}
+.app-shell[data-sat-management] .builder-summary span {font-size:11px;max-width:none}
+.app-shell[data-sat-management] .builder-setup>.app-button {height:44px;min-width:133px}
+.app-shell[data-sat-management] .app-tabs {display:inline-flex;gap:4px;padding:5px;margin-bottom:24px;border:1px solid var(--app-border);border-radius:99px;background:#EAE8E2}
+.app-shell[data-sat-management] .app-tabs .app-button {background:transparent;border-color:transparent;padding-inline:21px;color:var(--app-muted)}
+.app-shell[data-sat-management] .app-tabs button[aria-pressed=true] {background:white;color:var(--app-text);border-color:#E8E4DC;box-shadow:0 2px 6px #16181D05}
+.app-shell[data-sat-management] .selection-tools {gap:10px;flex-wrap:wrap;margin-bottom:18px;font-size:12px}
+.app-shell[data-sat-management] .selection-tools strong {font-size:12px;font-weight:650}
+.app-shell[data-sat-management] .source-list {gap:20px}
+.app-shell[data-sat-management] .source-card {border-radius:24px;border-color:var(--app-border);transition:border-color .18s,box-shadow .18s}
+.app-shell[data-sat-management] .source-card:has(input:checked) {border-color:#C95B38;box-shadow:0 0 0 2px #C94D2C12}
+.app-shell[data-sat-management] .source-choice {border-color:var(--app-border);padding:25px;gap:14px}
+.app-shell[data-sat-management] .source-choice.chosen {background:var(--app-green-pale);border-color:var(--app-green)}
+.app-shell[data-sat-management] .source-choice strong {font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.app-shell[data-sat-management] .source-choice small {font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+.app-shell[data-sat-management] .source-choice>span:last-child {font-size:11px}
+.app-shell[data-sat-management] .duration-control {border-color:var(--app-border);border-radius:22px;padding:23px 25px;gap:24px}
+.app-shell[data-sat-management] .duration-control label {font-size:11px;line-height:1.5}
+.app-shell[data-sat-management] .duration-control output {font-weight:650;color:var(--app-text)}
+.app-shell[data-sat-management] .duration-control input[data-duration][type=range] {width:100%;height:20px;padding:0;border:0;background:transparent;accent-color:var(--app-green)}
+.app-shell[data-sat-management] .duration-parts {gap:10px}
+.app-shell[data-sat-management] .duration-parts input[type=number] {width:82px;flex-basis:82px;margin-top:6px}
+.app-shell[data-sat-management] .source-card .duration-control {border:0;border-top:1px solid var(--app-border);border-radius:0;background:#FBFAF7;margin:0}
+.app-shell[data-sat-management] .timing-row {grid-template-columns:minmax(220px,1fr) minmax(180px,1fr) 100px;gap:24px;padding:21px 0;border-top-color:#ECE9E1}
+.app-shell[data-sat-management] .timing-row input[type=range] {width:100%;accent-color:var(--app-green)}
+.app-shell[data-sat-management] .timing-row label strong {font-size:13px;color:var(--app-text)}
+.app-shell[data-sat-management] .timing-row small {font-size:11px;color:var(--app-muted)}
+.app-shell[data-sat-management] .timing-row output {font-size:12px;border-radius:99px;padding:8px 12px;text-align:center;background:#F5F3EE;white-space:nowrap}
+.app-shell[data-sat-management] [data-module-limit] {margin:12px 10px 12px 0;max-width:210px;vertical-align:middle}
+.app-shell[data-sat-management] input[data-module-limit][type=number] {display:inline-block;width:85px}
+.app-shell[data-sat-management] .overview-stats {gap:16px;padding:0;margin:25px 0 28px;background:transparent}
+.app-shell[data-sat-management] .overview-stats>div {background:white;border:1px solid var(--app-border);border-radius:22px;padding:26px 18px;gap:9px}
+.app-shell[data-sat-management] .overview-stats strong {font-size:35px;color:var(--app-text)}
+.app-shell[data-sat-management] .overview-stats>div:nth-child(2) strong {color:#2B8765}
+.app-shell[data-sat-management] .overview-stats>div:nth-child(3) strong {color:#BE4561}
+.app-shell[data-sat-management] .overview-stats span {font-size:12px}
+.app-shell[data-sat-management] .overview-table {padding:0}
+.app-shell[data-sat-management] .overview-table th {background:#FAF9F6;color:var(--app-muted);border-radius:0}
+.app-shell[data-sat-management] .overview-table td {padding-block:19px}
+.app-shell[data-sat-management] .app-wrong-icon {width:28px;height:28px;min-width:28px;border-color:#E5BDAA;border-radius:9px;color:var(--app-green);font-size:19px;line-height:1}
+.app-shell[data-sat-management] .app-wrong-icon[aria-pressed=true] {background:#FFF0E6}
+.app-shell[data-sat-management] .question-detail {border-radius:26px;border-color:var(--app-border);grid-template-columns:1.35fr 1fr;overflow:hidden}
+.app-shell[data-sat-management] .detail-content {padding:32px}
+.app-shell[data-sat-management] .detail-metadata {padding:32px;background:#FCFBF8;border-color:var(--app-border)}
+.app-shell[data-sat-management] .detail-metadata h2 {font-size:19px;letter-spacing:-.4px}
+.app-shell[data-sat-management] .detail-metadata dl {grid-template-columns:105px 1fr;gap:15px;font-size:12px;line-height:1.65;margin:24px 0 30px}
+.app-shell[data-sat-management] .detail-metadata dt {color:var(--app-muted)}
+.app-shell[data-sat-management] .review-passage {background:#F5F4F0;border:1px solid #EFEBE3;border-radius:18px;font-size:16px;line-height:1.7;padding:24px;margin-bottom:26px;font-family:Georgia,"Times New Roman",serif}
+.app-shell[data-sat-management] .review-prompt {gap:12px;margin-bottom:22px}
+.app-shell[data-sat-management] .review-prompt h2 {font-size:16px;line-height:1.65;font-weight:600}
+.app-shell[data-sat-management] .review-number {min-width:29px;height:29px;border-radius:9px;font-size:12px;font-weight:650;background:var(--app-text)}
+.app-shell[data-sat-management] .review-choice {border-color:#E8E5DD;border-radius:15px;padding:15px 17px;font-size:14px;line-height:1.6;margin-bottom:11px;gap:12px}
+.app-shell[data-sat-management] .review-choice>strong {font-weight:650}
+.app-shell[data-sat-management] .review-choice small {font-size:10px;color:inherit}
+.app-shell[data-sat-management] .review-choice.answer-correct {background:#F3FAF5;border-color:#7FBAA0;color:#286E52}
+.app-shell[data-sat-management] .review-choice.answer-incorrect {background:#FFF5F6;border-color:#DAA0AF;color:#A43B57}
+.app-shell[data-sat-management] .explanation-panel {margin:23px 0 30px}
+.app-shell[data-sat-management] .explanation-panel h2 {font-size:18px;margin-bottom:13px;font-weight:700;letter-spacing:-.3px}
+.app-shell[data-sat-management] .explanation-panel p {font-size:13px;line-height:1.85;color:var(--app-muted)}
+.app-shell[data-sat-management] .app-review-main {max-width:1536px;padding-top:16px;padding-bottom:30px}
+.app-shell[data-sat-management] .single-review {border-radius:26px;border-color:var(--app-border);height:calc(100dvh - 202px);min-height:540px}
+.app-shell[data-sat-management] .single-review-header {background:white;border-bottom:1px solid var(--app-border);padding:24px 30px;gap:20px}
+.app-shell[data-sat-management] .single-review-header h1 {font-size:21px;letter-spacing:-.5px;line-height:1.4;max-width:850px}
+.app-shell[data-sat-management] .single-review-header p {font-size:12px}
+.app-shell[data-sat-management] .single-review-header .wrong-toggle {font-size:11px;color:#A44058;margin-right:24px}
+.app-shell[data-sat-management] .wrong-toggle[aria-pressed=true] {background:#FFF0F2;border-color:#EAC3CC}
+.app-shell[data-sat-management] .app-close {right:15px;top:14px;font-size:21px;color:var(--app-muted)}
+.app-shell[data-sat-management] .single-review-columns>section,
+.app-shell[data-sat-management] .single-review-columns>aside {padding:30px}
+.app-shell[data-sat-management] .single-review-columns>aside {background:#FCFBF8;border-color:var(--app-border)}
+.app-shell[data-sat-management] .answer-message {padding:18px 20px;border-radius:16px;font-size:13px;line-height:1.8;margin-bottom:28px}
+.app-shell[data-sat-management] .answer-message.correct {background:#EAF6ED;color:#287252}
+.app-shell[data-sat-management] .answer-message.incorrect {background:#FFF0F2;color:#A13D56}
+.app-shell[data-sat-management] .answer-message.unanswered {background:#F0EEE8;color:#6D6B67}
+.app-shell[data-sat-management] .single-review-footer {padding:18px 28px;border-color:var(--app-border);font-size:12px;gap:16px;background:white}
+.app-shell[data-sat-management] .removed-note {border-radius:12px;background:#FFF1D8;color:#8B682D;font-size:12px}
+.app-shell[data-sat-management] .correct-text {color:#2C805E}
+.app-shell[data-sat-management] .incorrect-text,
+.app-shell[data-sat-management] .danger-text {color:#B3425C}
+@media (max-width:1150px) {
+  .app-shell[data-sat-management] .app-header {padding-inline:28px;gap:18px}
+  .app-shell[data-sat-management] .app-main {padding-inline:28px}
+  .app-shell[data-sat-management] .dashboard-entry {padding:22px;min-height:190px}
+  .app-shell[data-sat-management] .dashboard-entry strong {font-size:18px}
+  .app-shell[data-sat-management] .app-table td,
+  .app-shell[data-sat-management] .app-table th {padding-inline:14px}
+  .app-shell[data-sat-management] .single-review {height:calc(100dvh - 260px)}
+  .app-shell[data-sat-management] .single-review-header {flex-wrap:wrap}
+  .app-shell[data-sat-management] .single-review-header .wrong-toggle {margin-left:0}
+  .app-shell[data-sat-management] .builder-setup {flex-wrap:wrap;gap:18px}
+  .app-shell[data-sat-management] .builder-setup label {flex-basis:100%}
+}
+@media (max-width:900px) {
+  .app-shell[data-sat-management] .dashboard-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .app-shell[data-sat-management] .dashboard-entry {min-height:190px;gap:20px}
+  .app-shell[data-sat-management] .sat-hero {padding:35px 34px}
+  .app-shell[data-sat-management] .sat-hero-art {right:16px;opacity:.8;transform:scale(.85);transform-origin:right center}
+  .app-shell[data-sat-management] .app-filters {grid-template-columns:1fr 1fr}
+  .app-shell[data-sat-management] .app-filters>label:last-child {grid-column:1/-1}
+  .app-shell[data-sat-management] .source-list {grid-template-columns:1fr}
+  .app-shell[data-sat-management] .question-detail {grid-template-columns:1fr}
+  .app-shell[data-sat-management] .detail-metadata {border-left:0;border-top:1px solid var(--app-border)}
+  .app-shell[data-sat-management] .timing-row {grid-template-columns:minmax(180px,1fr) minmax(120px,1fr) 80px;gap:14px}
+  .app-shell[data-sat-management] .overview-stats {grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px) {
+  .app-shell[data-sat-management] .app-header {padding:18px;gap:16px;min-height:0}
+  .app-shell[data-sat-management] .app-brand {font-size:18px;gap:10px}
+  .app-shell[data-sat-management] .app-brand-mark {width:38px;height:38px;border-radius:13px}
+  .app-shell[data-sat-management] .app-header-tools {gap:10px}
+  .app-shell[data-sat-management] .app-home-link {font-size:10px}
+  .app-shell[data-sat-management] .app-settings-button {font-size:10px;padding-inline:12px;height:35px}
+  .app-shell[data-sat-management] .app-main {padding:14px 18px 45px}
+  .app-shell[data-sat-management] .app-heading {gap:15px;margin-bottom:23px}
+  .app-shell[data-sat-management] .app-heading h1 {font-size:29px;letter-spacing:-1px}
+  .app-shell[data-sat-management] .app-heading p {font-size:12px}
+  .app-shell[data-sat-management] .sat-hero {border-radius:25px;min-height:260px;padding:32px 26px}
+  .app-shell[data-sat-management] .sat-hero-copy {max-width:100%}
+  .app-shell[data-sat-management] .sat-hero h1 {font-size:76px}
+  .app-shell[data-sat-management] .sat-hero-art {right:-80px;top:10px;opacity:.22;transform:scale(.8)}
+  .app-shell[data-sat-management] .sat-hero-actions {gap:8px}
+  .app-shell[data-sat-management] .sat-hero-actions .app-button {padding-inline:16px;font-size:11px}
+  .app-shell[data-sat-management] .dashboard-stats {gap:9px;margin:15px 0 30px}
+  .app-shell[data-sat-management] .dashboard-stats>div,
+  .app-shell[data-sat-management] .dashboard-stats>div+div {padding:18px 13px;border-radius:17px}
+  .app-shell[data-sat-management] .dashboard-stats>div::after {width:20px;height:20px;right:9px;top:16px;border-radius:7px;opacity:.6}
+  .app-shell[data-sat-management] .app-stats strong {font-size:27px}
+  .app-shell[data-sat-management] .app-stats span {font-size:10px;line-height:1.5}
+  .app-shell[data-sat-management] .section-heading h2 {font-size:21px}
+  .app-shell[data-sat-management] .section-heading>span {font-size:10px;max-width:80px}
+  .app-shell[data-sat-management] .dashboard-grid {gap:12px}
+  .app-shell[data-sat-management] .dashboard-entry {padding:18px;min-height:190px;border-radius:20px;gap:20px}
+  .app-shell[data-sat-management] .entry-icon {width:43px;height:43px;border-radius:14px}
+  .app-shell[data-sat-management] .entry-arrow {width:24px;height:24px;font-size:14px}
+  .app-shell[data-sat-management] .entry-cn {font-size:10px}
+  .app-shell[data-sat-management] .dashboard-entry strong {font-size:17px}
+  .app-shell[data-sat-management] .bank-status {gap:8px;padding-block:18px;font-size:11px}
+  .app-shell[data-sat-management] .bank-status>span:nth-child(2) {width:calc(100% - 18px)}
+  .app-shell[data-sat-management] .bank-status .app-link:first-of-type {margin-left:15px}
+  .app-shell[data-sat-management] .app-filters {grid-template-columns:1fr;padding:20px;gap:17px;border-radius:20px}
+  .app-shell[data-sat-management] .app-filters>label:last-child {grid-column:auto}
+  .app-shell[data-sat-management] .builder-setup {padding:21px;border-radius:20px}
+  .app-shell[data-sat-management] .builder-summary {min-width:0}
+  .app-shell[data-sat-management] .builder-setup>.app-button {min-width:0;margin-left:auto;padding-inline:18px}
+  .app-shell[data-sat-management] .duration-control {padding:20px;flex-wrap:wrap;gap:18px}
+  .app-shell[data-sat-management] .duration-control>label {flex-basis:100%}
+  .app-shell[data-sat-management] .duration-parts {width:100%}
+  .app-shell[data-sat-management] .duration-parts label {flex:1}
+  .app-shell[data-sat-management] .duration-parts input[type=number] {width:100%}
+  .app-shell[data-sat-management] .source-choice {padding:22px 20px;flex-wrap:wrap}
+  .app-shell[data-sat-management] .source-choice>span:last-child {margin-left:30px}
+  .app-shell[data-sat-management] .timing-group,
+  .app-shell[data-sat-management] .folder-panel {padding:22px;border-radius:21px}
+  .app-shell[data-sat-management] .timing-row {grid-template-columns:1fr;gap:12px}
+  .app-shell[data-sat-management] .timing-row output {justify-self:start;min-width:70px}
+  .app-shell[data-sat-management] .app-pagination {font-size:11px;gap:15px}
+  .app-shell[data-sat-management] .app-pagination>div {width:100%;justify-content:space-between;gap:8px}
+  .app-shell[data-sat-management] .app-tabs {max-width:100%;margin-bottom:22px}
+  .app-shell[data-sat-management] .app-tabs .app-button {font-size:11px;padding-inline:17px}
+  .app-shell[data-sat-management] .selection-tools strong {flex-basis:100%;margin-bottom:2px}
+  .app-shell[data-sat-management] .overview-stats>div {padding:23px 14px;border-radius:19px}
+  .app-shell[data-sat-management] .detail-content,
+  .app-shell[data-sat-management] .detail-metadata {padding:22px}
+  .app-shell[data-sat-management] .review-passage {padding:19px;font-size:15px}
+  .app-shell[data-sat-management] .review-choice {flex-wrap:wrap;gap:8px;font-size:13px}
+  .app-shell[data-sat-management] .review-choice small {display:block;flex-basis:100%;padding-left:25px}
+  .app-shell[data-sat-management] .single-review {height:auto;min-height:0;border-radius:22px;display:block}
+  .app-shell[data-sat-management] .single-review-header {padding:23px;gap:14px}
+  .app-shell[data-sat-management] .single-review-header h1 {font-size:18px}
+  .app-shell[data-sat-management] .single-review-header .wrong-toggle {margin-left:0;margin-right:0}
+  .app-shell[data-sat-management] .single-review-columns {height:auto;display:block}
+  .app-shell[data-sat-management] .single-review-columns>section,
+  .app-shell[data-sat-management] .single-review-columns>aside {padding:22px}
+  .app-shell[data-sat-management] .single-review-columns>aside {border-left:0;border-top:1px solid var(--app-border)}
+  .app-shell[data-sat-management] .single-review-footer {padding:18px 22px;flex-wrap:wrap;font-size:11px}
+  .app-shell[data-sat-management] .single-review-footer>div {width:100%;justify-content:space-between}
+  .app-shell[data-sat-management] .import-file>div:first-child {display:block}
+  .app-shell[data-sat-management] .import-file>div:first-child>span {display:block;margin-top:7px}
+}
+@media (prefers-reduced-motion:reduce) {
+  .app-shell[data-sat-management] button,
+  .app-shell[data-sat-management] a,
+  .app-shell[data-sat-management] input,
+  .app-shell[data-sat-management] select,
+  .app-shell[data-sat-management] .entry-arrow,
+  .app-shell[data-sat-management] .app-back-icon {transition:none}
+  .app-shell[data-sat-management] .dashboard-entry:hover,
+  .app-shell[data-sat-management] .app-button:hover:not(:disabled),
+  .app-shell[data-sat-management] .dashboard-entry:hover .entry-arrow,
+  .app-shell[data-sat-management] .app-back:hover,
+  .app-shell[data-sat-management] .app-back:active,
+  .app-shell[data-sat-management] .app-back:hover .app-back-icon {transform:none}
+}

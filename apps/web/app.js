@@ -1,297 +1,122 @@
 'use strict';
-
 (() => {
-  const icons = {
-    arrow: '<path d="M5 12h14m-5-5 5 5-5 5"/>',
-    chevron: '<path d="m9 5 7 7-7 7"/>',
-    left: '<path d="m15 5-7 7 7 7"/>',
-    book: '<path d="M12 5.5C9.2 3.5 5.5 3.5 3 4.5v15c2.5-1 6.2-1 9 1 2.8-2 6.5-2 9-1v-15c-2.5-1-6.2-1-9 1Zm0 0v15"/>',
-    layers: '<path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/>',
-    check: '<path d="m8 12 3 3 5-6"/><rect x="4" y="3" width="16" height="18" rx="3"/>',
-    pencil: '<path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15 4 20Z"/>',
-    sliders: '<path d="M5 3v5m0 4v9M12 3v9m0 4v5M19 3v2m0 4v12M2 8h6m1 8h6m1-11h6"/>',
-    file: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8m-8 4h5"/>',
-    history: '<path d="M3 11a9 9 0 1 1 2.4 7M3 5v6h6m3-4v5l3 2"/>',
-    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-    search: '<circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.5 4.5"/>',
-    user: '<circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',
-    settings: '<path d="m9 3-.7 2.2-2 .9L4 5.6l-2 3.5L3.6 11v2L2 14.9l2 3.5 2.3-.5 2 .9L9 21h4l.7-2.2 2-.9 2.3.5 2-3.5-1.6-1.9v-2L20 9.1l-2-3.5-2.3.5-2-.9L13 3H9Z"/><circle cx="11" cy="12" r="3"/>',
-    close: '<path d="m6 6 12 12M6 18 18 6"/>',
-    shield: '<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
-    home: '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10Z"/><path d="M9 21v-8h6v8"/>',
-    sparkle: '<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>',
-    flag: '<path d="M5 21V4m0 0c5-4 9 4 14 0v10c-5 4-9-4-14 0"/>',
-    lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/>',
+  const paths = {
+    arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',chevron:'<path d="m9 5 7 7-7 7"/>',chevronDown:'<path d="m6 9 6 6 6-6"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>',
+    book:'<path d="M12 5.5C9.2 3.5 5.5 3.5 3 4.5v15c2.5-1 6.2-1 9 1 2.8-2 6.5-2 9-1v-15c-2.5-1-6.2-1-9 1Zm0 0v15"/>',
+    headphones:'<path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/>',
+    mic:'<rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8"/>',
+    pencil:'<path d="m15 5 4 4M4 20l4.5-1L20 7.5a2.8 2.8 0 0 0-4-4L4.5 15 4 20Z"/>',
+    globe:'<circle cx="12" cy="12" r="9"/><path d="m5 5 3 3-1 4 4 2 1 7m0-18 2 5 5 1 2 4-5 3-2-3 2-4"/>',
+    sigma:'<path d="M19 4H5l7 8-7 8h14"/>',calculator:'<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 10h1m3 0h1m3 0h0M8 14h1m3 0h1m3 0h0M8 18h1m3 0h1m3 0h0"/>',
+    cap:'<path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c4 3 8 3 12 0v-6m4-2v7"/>',plane:'<path d="m21 3-6 18-4-8-8-4 18-6ZM11 13 21 3"/>',landmark:'<path d="m3 9 9-6 9 6H3Zm2 3v6m5-6v6m4-6v6m5-6v6M3 21h18"/>',
+    function:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 9h8m-7 8c4 0 1-10 6-10"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4M17.6 17.6 19 19M5 19l1.4-1.4M17.6 6.4 19 5"/>',
+    flame:'<path d="M12 2c1 6-5 7-5 11 0 2 1 3 2 3-1-3 2-4 3-6 3 3 6 5 5 8a6 6 0 0 1-11-1C3 12 9 8 9 5c2 1 2 2 3 3 1-2 1-4 0-6Z"/>',
+    check:'<path d="m8 12 3 3 7-8"/><path d="M21 11v1a9 9 0 1 1-5-8"/>',trophy:'<path d="M8 3h8v7a4 4 0 0 1-8 0V3Zm0 2H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4m-4 2v7m-4 0h8"/>',
+    user:'<circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+    calendar:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 5 3 3 5-5"/>',chart:'<path d="M4 3v18h17M8 17v-5m5 5V8m5 9V4m-11 5 5-4 5 2 4-5"/>',history:'<path d="M3 11a9 9 0 1 1 2.4 7M3 5v6h6m3-4v5l3 2"/>',
+    star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>',settings:'<path d="m9 3-.7 2.2-2 .9L4 5.6l-2 3.5L3.6 11v2L2 14.9l2 3.5 2.3-.5 2 .9L9 21h4l.7-2.2 2-.9 2.3.5 2-3.5-1.6-1.9v-2L20 9.1l-2-3.5-2.3.5-2-.9L13 3H9Z"/><circle cx="11" cy="12" r="3"/>',
   };
-  const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name] || icons.book}</svg>`;
-  const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[character]));
-  const number = value => new Intl.NumberFormat('zh-CN').format(Number(value) || 0);
-  const examInfo = {
-    sat: {name:'SAT', subtitle:'阅读与文法，从有目标的练习开始。', section:'Reading & Writing', upcoming:'Math', detail:'阅读与文法题库已接入，可按题目来源练习，或建立自己的训练计划。'},
-    ap: {name:'AP', subtitle:'按学科组织题目，建立自己的备考节奏。', section:'学科题库', detail:'这里将提供独立的 AP 学科题库、自定义训练、真题模考与错题复习。'},
-    toefl: {name:'TOEFL', subtitle:'听、说、读、写，在一个空间里练习。', section:'Reading · Listening · Speaking · Writing', detail:'这里将接入 TOEFL 独立题库，提供分项训练、模拟考试与错题复习。'},
-    vocab: {name:'Personal Vocab', subtitle:'让遇到的每一个新词，成为自己的积累。', section:'个人词库', detail:'这里将收集来自不同考试的生词，提供词汇训练与复习。'},
-  };
-  const params = new URLSearchParams(location.search);
-  const firstExam = Object.hasOwn(examInfo, params.get('exam')) ? params.get('exam') : 'sat';
-  const state = {exam:firstExam, catalog:null, error:false, search:'', section:'all', page:1, pageSize:5, learning:{attempts:[], wrongBook:[]}};
-  const content = document.getElementById('page-content');
-  const announcer = document.getElementById('announcer');
-  let catalogRequest = 0;
-
-  function fillIcons(root = document) {
-    root.querySelectorAll('[data-icon]').forEach(element => { element.innerHTML = icon(element.dataset.icon); });
+  const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.book}</svg>`;
+  const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const $ = id => document.getElementById(id);
+  const format = n => new Intl.NumberFormat('zh-CN').format(n);
+  const keys = {plan:'school-exam-platform:home:plan:v1',targets:'school-exam-platform:home:targets:v1',preferences:'school-exam-platform:preferences:v1',history:'school-exam-platform:toefl:history:v1',learning:'school-exam-platform:toefl:learning:v1'};
+  const notes = new Map();
+  let storageUnavailable=false, lastTrigger=null, toastTimer, refreshId=0;
+  function read(key, fallback) {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch {storageUnavailable=true;return fallback;}}
+  const array = v => Array.isArray(v) ? v : [];
+  const savedPlan = read(keys.plan,{});
+  const state = {plan:{dailyGoal:Number.isInteger(savedPlan?.dailyGoal)&&savedPlan.dailyGoal>=1&&savedPlan.dailyGoal<=500?savedPlan.dailyGoal:30,note:typeof savedPlan?.note==='string'?savedPlan.note.slice(0,500):''},targets:HomeModel.targets(read(keys.targets,{})),preferences:read(keys.preferences,{}),summary:HomeModel.summarize()};
+  if (!state.preferences || typeof state.preferences!=='object') state.preferences={};
+  function note(id, text) {if(text)notes.set(id,text);else notes.delete(id);$('service-note').hidden=!notes.size;$('service-note').textContent=[...notes.values()].join(' ');}
+  function toast(message) {clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,2800);}
+  function save(key,value) {try{localStorage.setItem(key,JSON.stringify(value));return true;}catch {note('storage','浏览器无法保存记录；本次调整仅在当前页面有效。');return false;}}
+  function fillIcons(root=document) {root.querySelectorAll('[data-icon]').forEach(el=>{el.innerHTML=icon(el.dataset.icon);});}
+  function renderStats() {
+    const s=state.summary,t=state.targets;
+    $('streak-days').textContent=format(s.streak);$('today-progress').textContent=`${format(s.today)} / ${state.plan.dailyGoal}`;
+    $('menu-streak').textContent=format(s.streak);$('menu-answers').textContent=format(s.all.answers);$('menu-accuracy').textContent=s.all.graded?`${Math.round(s.all.correct/s.all.graded*100)}%`:'—';
+    $('toefl-target').textContent=t.toefl?t.toefl.total.toFixed(1):'—';$('sat-target').textContent=t.sat?format(t.sat.total):'—';
+    $('target-tooltip').innerHTML=`<strong>TOEFL 目标 · ${t.toefl?t.toefl.total.toFixed(1):'未设置'}</strong><p>${t.toefl?`阅读 ${t.toefl.reading.toFixed(1)} · 听力 ${t.toefl.listening.toFixed(1)}<br>口语 ${t.toefl.speaking.toFixed(1)} · 写作 ${t.toefl.writing.toFixed(1)}`:''}</p><hr><strong>SAT 目标 · ${t.sat?format(t.sat.total):'未设置'}</strong><p>${t.sat?`英语 ${t.sat.english} · 数学 ${t.sat.math}`:''}</p>`;
+    const hour=new Date().getHours();$('greeting').textContent=hour<6?'夜深了':hour<12?'上午好':hour<18?'下午好':'晚上好';
+    document.body.classList.toggle('reduced-motion',Boolean(state.preferences.reduceMotion));
   }
-  function selectedCatalog() {
-    return state.catalog?.exams?.find(exam => exam.id === state.exam);
-  }
-  function isAvailable() {
-    return Boolean(selectedCatalog()?.available);
-  }
-  function satLink(view, extra = {}) {
-    return `/sat/?${new URLSearchParams({view, ...extra})}`;
-  }
-  function sectionLabel(section) {
-    const text = String(section || 'Reading & Writing');
-    return /reading\s*(?:and|&)\s*writing/i.test(text) ? 'Reading & Writing' : text;
-  }
-  function sectionsFor(exam) {
-    return [...new Set((exam?.sources || []).map(source => sectionLabel(source.section)))];
-  }
-  function todayAnswers() {
-    const today = new Date().toDateString();
-    return state.learning.attempts.filter(attempt => attempt.status === 'completed' && new Date(attempt.completedAt).toDateString() === today)
-      .reduce((total, attempt) => total + Math.max(0, (Number(attempt.totalQuestions) || 0) - (Number(attempt.unansweredCount) || 0)), 0);
-  }
-  function statCard(label, value, caption, symbol, tone = '', unit = '') {
-    return `<div class="stat-card"><span class="stat-icon ${tone}">${icon(symbol)}</span><div><div class="stat-label">${label}</div><div class="stat-number">${value}${unit ? `<small>${unit}</small>` : ''}</div><div class="stat-caption">${caption}</div></div></div>`;
-  }
-  function feature(title, description, symbol, label, href, action, featured = false, count) {
-    const available = isAvailable();
-    const tag = available ? 'a' : 'div';
-    return `<${tag} ${available ? `href="${escape(href)}"` : ''} class="feature-card ${featured ? 'featured' : ''} ${available ? 'enabled' : 'unavailable'}"><div class="feature-topline"><span class="feature-icon">${icon(symbol)}</span><span class="feature-label">${label}</span></div><h3>${title}</h3><p>${description}</p><span class="feature-action">${count !== undefined && available ? `<span class="wrong-count">${number(count)}</span>` : ''}${available ? action : '待接入'}${icon('arrow')}</span></${tag}>`;
-  }
-  function learningPanel() {
-    const attempts = state.exam === 'sat' ? [...state.learning.attempts].sort((a, b) => (b.savedAt || b.completedAt || 0) - (a.savedAt || a.completedAt || 0)) : [];
-    return `<section class="panel sidebar-panel"><div class="sidebar-heading"><h2 style="font-size:inherit;font-weight:inherit">最近练习</h2>${icon('history')}</div>${attempts.length ? `<div class="records">${attempts.slice(0, 3).map(attempt => `<a class="recent-record" href="${satLink('dashboard')}"><strong>${escape(attempt.practiceName || 'SAT 练习')}</strong><small><span>${attempt.status === 'completed' ? '已完成' : '未完成'} · ${number(attempt.totalQuestions)} 题</span><span>${new Date(attempt.savedAt || attempt.completedAt).toLocaleDateString('zh-CN', {month:'numeric', day:'numeric'})}</span></small></a>`).join('')}</div><a class="link-button" href="${satLink('dashboard')}" style="margin-top:14px">全部练习记录${icon('arrow')}</a>` : `<div class="record-empty"><div class="empty-art">${icon('history')}</div><h3>从第一次练习开始</h3><p>${isAvailable() ? '完成练习后，你的学习足迹<br>会出现在这里。' : '题库接入后，在这里回顾<br>每一次练习与进步。'}</p>${isAvailable() ? `<a class="link-button" href="${satLink('practiceBuilder', {mode:'custom'})}">开始练习${icon('arrow')}</a>` : ''}</div>`}</section>`;
-  }
-  function scopePanel() {
-    const info = examInfo[state.exam];
-    const available = isAvailable();
-    const rows = state.exam === 'sat'
-      ? `<div class="scope-row"><strong>Reading & Writing</strong><span class="small-status ${available ? '' : 'pending'}">${available ? '已接入' : '加载中'}</span></div><div class="scope-row"><strong>Math</strong><span class="small-status pending">待接入</span></div>`
-      : (state.exam === 'toefl' ? ['Reading','Listening','Speaking','Writing'] : state.exam === 'ap' ? ['AP 学科题库'] : ['生词收集','词汇复习']).map(label => `<div class="scope-row"><strong>${label}</strong><span class="small-status pending">待接入</span></div>`).join('');
-    return `<section class="panel scope-panel"><h2 class="scope-title">${icon('book')}当前学习范围</h2>${rows}<div class="scope-divider"></div><p class="scope-hint">${state.exam === 'sat' ? '当前模考使用原有阅读与文法练习引擎，暂不提供 SAT 量尺分。' : `${escape(info.name)} 的题目与练习记录将独立保存。`}</p></section>`;
-  }
-  function resumeBanner() {
-    if (state.exam !== 'sat' || !isAvailable()) return '';
-    const pending = [...state.learning.attempts].filter(attempt => attempt.status === 'incomplete' && attempt.resumable).sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0))[0];
-    if (!pending) return '';
-    return `<aside class="resume-banner">${icon('clock')}<div class="resume-banner-text"><strong>继续上次练习 · ${escape(pending.practiceName || 'SAT')}</strong><span>已作答 ${number(Math.max(0, pending.totalQuestions - pending.unansweredCount))} / ${number(pending.totalQuestions)} 题</span></div><a class="button primary" href="${satLink('dashboard')}">继续练习${icon('arrow')}</a></aside>`;
-  }
-  function render() {
-    const exam = selectedCatalog();
-    const info = examInfo[state.exam];
-    const available = isAvailable();
-    const loading = !state.catalog && !state.error;
-    const sat = state.exam === 'sat';
-    const questionCount = loading ? '—' : number(exam?.questionCount);
-    const sourceCount = loading ? '正在加载题库' : `${number(exam?.sourceCount)} 份题目来源`;
-    document.title = `${info.name} · Study Space`;
-    document.querySelectorAll('[data-exam]').forEach(button => {
-      const selected = button.dataset.exam === state.exam;
-      button.classList.toggle('active', selected);
-      if (selected) button.setAttribute('aria-current', 'page');
-      else button.removeAttribute('aria-current');
-    });
-    content.setAttribute('aria-busy', String(loading));
-    content.innerHTML = `<div class="breadcrumb">${icon('home')}<span>学习空间</span>${icon('chevron')}<span class="current">${escape(info.name)}</span></div>
-      <section class="welcome-row"><div><h1>${escape(info.name)} <span>学习空间</span></h1><p>${escape(info.subtitle)}</p></div><div class="welcome-meta"><strong>${new Date().toLocaleDateString('zh-CN', {year:'numeric', month:'long', day:'numeric', weekday:'long'})}</strong><span>${icon('shield')}你的学习，从这里继续</span></div></section>
-      ${state.error ? '<div class="error-banner" role="alert">题库暂时无法加载，请确认本地服务正在运行。<button type="button" data-retry>重新加载</button></div>' : ''}
-      <section class="overview" aria-label="学习概览">${statCard('题库储备', questionCount, sourceCount, 'layers', '', '题')}${statCard('今日完成', number(sat ? todayAnswers() : 0), '按今日完成的练习统计已答题数', 'check', 'green', '题')}${statCard('待复习错题', number(sat ? state.learning.wrongBook.length : 0), available ? '错题自动收集，巩固薄弱知识点' : '练习完成后，自动整理错题', 'flag', 'amber', '题')}</section>
-      ${!available && !loading && !state.error ? `<aside class="exam-notice">${icon('sparkle')}<div><h2>${escape(info.name)} 学习空间正在准备中</h2><p>${escape(info.detail)}</p></div></aside>` : ''}
-      ${resumeBanner()}
-      <section aria-labelledby="practice-title"><div class="section-heading"><h2 id="practice-title" class="section-eyebrow">选择练习方式</h2><span class="section-aside">按自己的节奏，稳步前进</span></div><div class="feature-grid">${feature('自定义训练', '自由选择题型、数量与练习时长', 'sliders', 'PERSONAL PRACTICE', satLink('practiceBuilder', {mode:'custom'}), '建立训练', true)}${feature('真题模考', '按套题与模块计时，熟悉考试节奏', 'file', 'MOCK EXAM', satLink('practiceBuilder', {mode:'source'}), '选择套题')}${feature('错题本', '回顾练习错题，把薄弱项逐个掌握', 'book', 'REVIEW & IMPROVE', satLink('wrongBook'), '进入复习', false, sat ? state.learning.wrongBook.length : 0)}</div></section>
-      <div class="workspace-grid"><section class="panel library-panel" aria-labelledby="library-title"><div class="section-heading library-heading"><div><h2 id="library-title">${state.exam === 'vocab' ? '我的词库' : '题库与套题'}</h2><p>${available ? '选择一份题目来源，开始专注练习' : '独立题库，统一的学习方式'}</p></div>${available ? `<a class="link-button" href="${satLink('questionLibrary')}">题库管理${icon('arrow')}</a>` : ''}</div><div class="library-toolbar"><label class="search-field">${icon('search')}<span class="sr-only">搜索题目来源</span><input id="source-search" type="search" placeholder="搜索套题或题目来源…" autocomplete="off" value="${escape(state.search)}" ${loading ? 'disabled' : ''}></label><label class="sr-only" for="section-filter">筛选科目</label><select class="filter-select" id="section-filter" ${loading ? 'disabled' : ''}><option value="all">全部科目</option>${sectionsFor(exam).map(section => `<option value="${escape(section)}" ${section === state.section ? 'selected' : ''}>${escape(section)}</option>`).join('')}</select></div><div id="library-results" aria-live="polite"></div></section><aside class="sidebar">${learningPanel()}${scopePanel()}<p class="privacy-note">${icon('shield')}新空间从零记录学习进度，未导入原来的个人作答与错题记录。</p></aside></div>`;
-    renderLibrary();
-  }
-  function renderLibrary() {
-    const results = document.getElementById('library-results');
-    if (!results) return;
-    if (!state.catalog && !state.error) {
-      results.innerHTML = `<div aria-label="正在加载题库">${Array.from({length:3}, () => '<div class="loading-row"><div class="loading-line"></div><div class="loading-line"></div></div>').join('')}</div>`;
-      return;
-    }
-    const exam = selectedCatalog();
-    const all = exam?.sources || [];
-    const query = state.search.trim().toLocaleLowerCase();
-    const filtered = all.filter(source => (!query || `${source.title} ${source.section}`.toLocaleLowerCase().includes(query)) && (state.section === 'all' || sectionLabel(source.section) === state.section));
-    const pages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
-    state.page = Math.min(pages, Math.max(1, state.page));
-    const sources = filtered.slice((state.page - 1) * state.pageSize, state.page * state.pageSize);
-    if (!sources.length) {
-      const searching = Boolean(query || state.section !== 'all');
-      const headline = state.error ? '暂时无法读取题库' : searching ? '没有找到匹配的题目来源' : isAvailable() ? '题库还没有题目' : state.exam === 'vocab' ? '你的个人词库，即将开启' : `${examInfo[state.exam].name} 题库即将接入`;
-      const caption = state.error ? '保持本地服务运行，然后重新加载。' : searching ? '试试其他关键词，或清除筛选条件。' : isAvailable() ? '通过题库管理导入 JSON 题目后，即可开始练习。' : '准备好之后，就能在这里选择并开始练习。';
-      results.innerHTML = `<div class="empty-library"><div class="empty-art">${icon(state.error ? 'history' : 'book')}</div><h3>${escape(headline)}</h3><p>${escape(caption)}</p>${searching ? '<button class="button" type="button" data-reset-search>清除筛选</button>' : isAvailable() ? `<a class="button" href="${satLink('questionLibrary')}">管理题库${icon('arrow')}</a>` : ''}</div>`;
-      return;
-    }
-    results.innerHTML = `<div class="list-columns" aria-hidden="true"><span>题目来源</span><span>题数</span><span>开始练习</span></div><div class="source-list">${sources.map(source => `<div class="source-row"><div class="source-description"><span class="source-icon">${icon('file')}</span><div class="source-text"><strong class="source-name" title="${escape(source.title)}">${escape(source.title)}</strong><div class="source-meta"><span>${escape(sectionLabel(source.section))}</span>${Number(source.moduleCount) > 1 ? `<span class="module-tag">${number(source.moduleCount)} MODULES</span>` : '<span class="module-tag">题目集</span>'}</div></div></div><span class="source-count" aria-label="${number(source.questionCount)} 道题">${number(source.questionCount)}</span><a class="source-start" href="${satLink('practiceBuilder', {mode:'source', source:source.id})}" aria-label="开始练习 ${escape(source.title)}">开始练习</a></div>`).join('')}</div><div class="library-bottom"><span class="list-summary">${query || state.section !== 'all' ? `找到 ${number(filtered.length)} 份来源` : `共 ${number(all.length)} 份来源 · ${number(exam.questionCount)} 道题目`}</span><div class="pagination" aria-label="题库分页"><button type="button" class="page-button" data-page="${state.page - 1}" ${state.page <= 1 ? 'disabled' : ''} aria-label="上一页">${icon('left')}</button><span class="page-label">${state.page} / ${pages}</span><button type="button" class="page-button" data-page="${state.page + 1}" ${state.page >= pages ? 'disabled' : ''} aria-label="下一页">${icon('chevron')}</button></div></div>`;
-  }
-
-  async function loadCatalog() {
-    const request = ++catalogRequest;
-    state.error = false;
+  async function satAttempts() {
+    if(!window.indexedDB)return [];
+    const name='SchoolExamPlatform:sat:v1';
     try {
-      const response = await fetch('/api/platform/catalog', {headers:{Accept:'application/json'}, cache:'no-store'});
-      if (!response.ok) throw new Error('Catalog unavailable');
-      const catalog = await response.json();
-      if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.exams)) throw new Error('Unsupported catalog');
-      catalog.exams.forEach(exam => { if (!Array.isArray(exam.sources)) exam.sources = []; });
-      if (request !== catalogRequest) return;
-      state.catalog = catalog;
-    } catch (_) {
-      if (request !== catalogRequest) return;
-      state.error = true;
-      state.catalog = null;
-    }
-    render();
+      if(indexedDB.databases && !(await indexedDB.databases()).some(d=>d.name===name))return [];
+      const db=await new Promise((resolve,reject)=>{const req=indexedDB.open(name);req.onupgradeneeded=()=>req.transaction.abort();req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);req.onblocked=()=>reject(new Error('Storage busy'));});
+      try {if(!db.objectStoreNames.contains('attempts'))return [];return await new Promise((resolve,reject)=>{const tx=db.transaction('attempts','readonly'),req=tx.objectStore('attempts').getAll();tx.oncomplete=()=>resolve(req.result||[]);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}
+      finally{db.close();}
+    } catch {return [];}
   }
-  // Read only the unified platform's new namespace. Never inspect the original SAT database.
-  async function loadLearning() {
-    if (!window.indexedDB) return;
-    const databaseName = 'SchoolExamPlatform:sat:v1';
-    try {
-      if (indexedDB.databases) {
-        const databases = await indexedDB.databases();
-        if (!databases.some(database => database.name === databaseName)) return;
-      }
-      const db = await new Promise((resolve, reject) => {
-        const request = indexedDB.open(databaseName);
-        request.onupgradeneeded = () => { request.transaction.abort(); };
-        request.onsuccess = () => resolve(request.result);
-        request.onerror = () => reject(request.error);
-        request.onblocked = () => reject(new Error('Database is busy'));
-      });
-      try {
-        if (!db.objectStoreNames.contains('attempts') || !db.objectStoreNames.contains('wrongBook')) return;
-        const learning = await new Promise((resolve, reject) => {
-          const transaction = db.transaction(['attempts', 'wrongBook'], 'readonly');
-          const attempts = transaction.objectStore('attempts').getAll();
-          const wrongBook = transaction.objectStore('wrongBook').getAll();
-          transaction.oncomplete = () => resolve({attempts:attempts.result || [], wrongBook:wrongBook.result || []});
-          transaction.onerror = () => reject(transaction.error);
-          transaction.onabort = () => reject(transaction.error);
-        });
-        state.learning = learning;
-      } finally {
-        db.close();
-      }
-      render();
-    } catch (_) { /* Storage may be unavailable in a private browser; the catalog remains usable. */ }
+  async function refresh() {
+    const id=++refreshId;
+    const attempts=await satAttempts();
+    if(id!==refreshId)return;
+    state.summary=HomeModel.summarize(attempts,array(read(keys.history,[])),array(read(keys.learning,[])));
+    renderStats();
+    if(storageUnavailable)note('storage','浏览器存储暂不可用，学习统计可能无法显示。');
   }
-  function selectExam(id, changeHistory = true) {
-    if (!Object.hasOwn(examInfo, id) || id === state.exam) return;
-    state.exam = id;
-    state.search = '';
-    state.section = 'all';
-    state.page = 1;
-    if (changeHistory) {
-      const url = new URL(location.href);
-      if (id === 'sat') url.searchParams.delete('exam');
-      else url.searchParams.set('exam', id);
-      history.pushState({exam:id}, '', url);
-    }
-    render();
-    announcer.textContent = `已切换到 ${examInfo[id].name} 学习空间`;
+  function destination(href,title) {return `<a href="${href}"><span><strong>${title}</strong></span>${icon('arrow')}</a>`;}
+  function empty(title,symbol='book'){return `<div class="empty-state"><span data-icon="${symbol}"></span><h3>${title}</h3></div>`;}
+  function input(name,label,value,min,max,step,placeholder='') {return `<label class="field">${label}<input type="number" name="${name}" value="${value??''}" min="${min}" max="${max}" step="${step}" placeholder="${placeholder}" inputmode="decimal"></label>`;}
+  function statsTiles(s) {return `<div class="report-grid"><div class="report-stat"><b>${format(s.attempts)}</b><small>已完成练习</small></div><div class="report-stat"><b>${format(s.answers)}</b><small>已答题目</small></div><div class="report-stat"><b>${s.graded?Math.round(s.correct/s.graded*100)+'%':'—'}</b><small>客观题正确率</small></div></div>`;}
+  const dialog=$('home-dialog');
+  function open(name,trigger) {
+    lastTrigger=trigger||document.activeElement;
+    let title='',body='';const t=state.targets,s=state.summary;
+    if(name==='targets') {
+      title='目标分数';body=`<form id="targets-form"><fieldset class="form-section"><legend>TOEFL iBT（1–6 分，0.5 分档）</legend><div class="field-grid">${[['reading','阅读'],['listening','听力'],['speaking','口语'],['writing','写作']].map(([k,v])=>input('toefl-'+k,v,t.toefl?.[k],1,6,.5,'例如 5.0')).join('')}</div></fieldset><fieldset class="form-section"><legend>SAT（每科 200–800 分，10 分档）</legend><div class="field-grid">${input('sat-english','英语',t.sat?.english,200,800,10,'例如 700')}${input('sat-math','数学',t.sat?.math,200,800,10,'例如 800')}</div></fieldset><p class="field-hint" id="target-preview"></p><p class="form-error" id="form-error" role="alert"></p><div class="dialog-actions"><button class="button" type="button" data-close-dialog>取消</button><button class="button primary" type="submit">保存目标</button></div></form>`;
+    } else if(name==='plan') {
+      title='学习计划';body=`${statsTiles({attempts:s.streak,answers:s.today,graded:0,correct:0}).replace('已完成练习','连续坚持天数').replace('已答题目','今日完成').replace('<div class="report-stat"><b>—</b><small>客观题正确率</small></div>',`<div class="report-stat"><b>${state.plan.dailyGoal}</b><small>每日题目目标</small></div>`)}<form id="plan-form"><label class="field">每日学习目标（题）<input type="number" name="dailyGoal" required min="1" max="500" step="1" value="${state.plan.dailyGoal}" inputmode="numeric"></label><label class="field" style="margin-top:14px">给自己的计划<textarea name="note" maxlength="500" placeholder="例如：先练英语，再复习今天的错题。">${esc(state.plan.note)}</textarea></label><p class="form-error" id="form-error" role="alert"></p><div class="dialog-actions"><button type="submit" class="button primary">保存计划</button></div></form><div class="destination-list" style="margin-top:24px">${destination('/toefl/?view=plan','TOEFL 今日学习')}${destination('/sat/?view=practiceBuilder&mode=custom','SAT 自定义训练')}</div>`;
+    } else if(name==='report') {
+      title='成绩报告';body=`${statsTiles(s.all)}<div class="destination-list">${destination('/toefl/?view=progress','TOEFL 学习进度')}${destination('/sat/?view=dashboard','SAT 练习报告')}</div>`;
+    } else if(name==='records') {
+      title='练习记录';body=(s.recent.length?`<ul class="records-list">${s.recent.map(r=>`<li><span><strong>${esc(r.name)}</strong><small>${esc(new Date(r.at).toLocaleString('zh-CN',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}))}</small></span><span>${format(r.answered)} 题</span></li>`).join('')}</ul>`:empty('从第一次练习开始','history'))+`<div class="destination-list">${destination('/toefl/?view=report','TOEFL 考试记录')}${destination('/sat/?view=dashboard','SAT 练习记录')}</div>`;
+    } else if(name==='saved') {
+      title='我的收藏';body=`<div class="destination-list">${destination('/sat/?view=wrongBook','SAT 错题本')}${destination('/toefl/?view=wrongBook','TOEFL 专项复习')}${destination('/toefl/?view=vocab','TOEFL 词汇训练')}</div>`;
+    } else if(name==='account') {
+      title='个人中心';body=`<div class="profile-row"><span class="avatar large">A</span><div><h3>admin</h3></div></div>${statsTiles(s.all)}`;
+    } else if(name==='settings') {
+      title='设置';body=`<label class="setting-row"><span>减少界面动画</span><input type="checkbox" id="reduce-motion" ${state.preferences.reduceMotion?'checked':''}></label><div class="destination-list" style="margin-top:18px">${destination('/sat/?view=timingSettings','SAT 计时设置')}</div><div class="dialog-actions"><button class="button" type="button" data-dialog="plan">每日目标</button><button class="button" type="button" data-dialog="targets">目标分数</button><button class="button primary" type="button" data-close-dialog>完成</button></div>`;
+    } else if(name==='math') {title='SAT 数学';body=empty('SAT 数学尚未接入','function')+`<div class="dialog-actions"><a class="button primary" href="/sat/?view=practiceBuilder&mode=custom">开始英语练习 ${icon('arrow')}</a></div>`;
+    } else if(name==='ap') {title='AP';body=empty('AP 尚未接入');
+    } else if(name==='vocab') {title='Personal Vocab';body=empty('Personal Vocab 尚未接入','book')+`<div class="dialog-actions"><a class="button primary" href="/toefl/?view=vocab">TOEFL 词汇训练 ${icon('arrow')}</a></div>`;
+    } else return;
+    $('dialog-title').textContent=title;$('dialog-content').innerHTML=body;fillIcons(dialog);
+    if(!dialog.open)dialog.showModal();
+    if(name==='targets')updateTargetPreview();
   }
-  function setMenu(open, focusFirst = false) {
-    const menu = document.getElementById('account-menu');
-    menu.hidden = !open;
-    document.getElementById('account-button').setAttribute('aria-expanded', String(open));
-    if (open && focusFirst) menu.querySelector('button').focus();
+  function formTargets() {
+    const f=$('targets-form');if(!f)return {};
+    const group=(exam,fields)=>{const values=fields.map(k=>f.elements[`${exam}-${k}`].value);if(values.every(v=>v===''))return null;if(values.some(v=>v===''))throw new Error(`请填全 ${exam==='toefl'?'TOEFL 四科':'SAT 两科'}目标，或将整组留空。`);return Object.fromEntries(fields.map((k,i)=>[k,Number(values[i])]));};
+    return {toefl:group('toefl',['reading','listening','speaking','writing']),sat:group('sat',['english','math'])};
   }
-  function readPreferences() {
-    try {
-      const preferences = JSON.parse(localStorage.getItem('school-exam-platform:preferences:v1') || '{}');
-      return preferences && typeof preferences === 'object' ? preferences : {};
-    }
-    catch (_) { return {}; }
-  }
-  function applyPreferences(preferences) {
-    document.body.classList.toggle('reduced-motion', Boolean(preferences.reduceMotion));
-    document.body.classList.toggle('compact-list', Boolean(preferences.compactList));
-    document.getElementById('reduce-motion').checked = Boolean(preferences.reduceMotion);
-    document.getElementById('compact-list').checked = Boolean(preferences.compactList);
-  }
-  document.addEventListener('click', event => {
-    const examButton = event.target.closest('[data-exam]');
-    if (examButton) selectExam(examButton.dataset.exam);
-    const accountButton = event.target.closest('#account-button');
-    if (accountButton) setMenu(document.getElementById('account-menu').hidden);
-    else if (!event.target.closest('.account-menu')) setMenu(false);
-    const dialogButton = event.target.closest('[data-dialog]');
-    if (dialogButton) {
-      setMenu(false);
-      document.getElementById(`${dialogButton.dataset.dialog}-dialog`).showModal();
-    }
-    if (event.target.closest('[data-close-dialog]')) event.target.closest('dialog').close();
-    const pageButton = event.target.closest('[data-page]');
-    if (pageButton && !pageButton.disabled) {
-      const direction = Number(pageButton.dataset.page) > state.page ? 1 : -1;
-      state.page = Number(pageButton.dataset.page);
-      renderLibrary();
-      // Re-rendering the list replaces its buttons; keep keyboard users at the pager.
-      const nextButton = document.querySelector(`[data-page="${state.page + direction}"]:not(:disabled)`)
-        || document.querySelector('.pagination button:not(:disabled)');
-      nextButton?.focus();
-    }
-    if (event.target.closest('[data-reset-search]')) {
-      state.search = ''; state.section = 'all'; state.page = 1;
-      document.getElementById('source-search').value = '';
-      document.getElementById('section-filter').value = 'all';
-      renderLibrary();
-    }
-    if (event.target.closest('[data-retry]')) { state.catalog = null; state.error = false; render(); loadCatalog(); }
+  function updateTargetPreview(){try{const t=HomeModel.targets(formTargets());$('target-preview').textContent=`总目标：TOEFL ${t.toefl?t.toefl.total.toFixed(1):'—'} · SAT ${t.sat?format(t.sat.total):'—'}`;}catch{$('target-preview').textContent='填全各科后，将在这里显示总目标。';}}
+  function setMenu(show, focus=false) {$('account-menu').hidden=!show;$('account-button').setAttribute('aria-expanded',String(show));if(show&&focus)$('account-menu').querySelector('button').focus();}
+  document.addEventListener('click',e=>{
+    const account=e.target.closest('#account-button');if(account)setMenu($('account-menu').hidden);else if(!e.target.closest('#account-menu')&&!dialog.contains(e.target)&&!e.target.closest('a,button,input,select,textarea,label,summary'))setMenu(false);
+    const trigger=e.target.closest('[data-dialog]');if(trigger)open(trigger.dataset.dialog,trigger);
+    if(e.target.closest('[data-close-dialog]'))dialog.close();
   });
-  document.addEventListener('input', event => {
-    if (event.target.id === 'source-search') { state.search = event.target.value; state.page = 1; renderLibrary(); }
+  document.addEventListener('submit',e=>{
+    if(e.target.id==='targets-form') {e.preventDefault();try {const raw=formTargets(),next=HomeModel.targets(raw);if((raw.toefl&&!next.toefl)||(raw.sat&&!next.sat))throw new Error('请按各考试的分数范围和分档填写。');state.targets=next;const persisted=save(keys.targets,next);renderStats();dialog.close();toast(persisted?'目标分数已保存':'目标已应用，本次访问有效');}catch(error){$('form-error').textContent=error.message;}}
+    if(e.target.id==='plan-form') {e.preventDefault();const goal=Number(e.target.elements.dailyGoal.value);if(!Number.isInteger(goal)||goal<1||goal>500){$('form-error').textContent='每日目标请输入 1–500 的整数。';return;}state.plan={dailyGoal:goal,note:e.target.elements.note.value.trim().slice(0,500)};const persisted=save(keys.plan,state.plan);renderStats();dialog.close();toast(persisted?'学习计划已保存':'计划已应用，本次访问有效');}
   });
-  document.addEventListener('change', event => {
-    if (event.target.id === 'section-filter') { state.section = event.target.value; state.page = 1; renderLibrary(); }
-    if (event.target.id === 'reduce-motion' || event.target.id === 'compact-list') {
-      const preferences = {reduceMotion:document.getElementById('reduce-motion').checked, compactList:document.getElementById('compact-list').checked};
-      applyPreferences(preferences);
-      try { localStorage.setItem('school-exam-platform:preferences:v1', JSON.stringify(preferences)); } catch (_) { /* Preferences still apply during this visit. */ }
-    }
+  document.addEventListener('input',e=>{if(e.target.closest('#targets-form')){updateTargetPreview();$('form-error').textContent='';}});
+  document.addEventListener('change',e=>{if(e.target.id==='reduce-motion'){state.preferences={...state.preferences,reduceMotion:e.target.checked};save(keys.preferences,state.preferences);renderStats();}});
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&!$('account-menu').hidden){setMenu(false);$('account-button').focus();}
+    if(e.target.id==='account-button'&&e.key==='ArrowDown'){e.preventDefault();setMenu(true,true);}
+    if(!e.target.closest('#account-menu')||!['ArrowUp','ArrowDown','Home','End'].includes(e.key))return;
+    e.preventDefault();const buttons=[...$('account-menu').querySelectorAll('button')],i=buttons.indexOf(document.activeElement);buttons[e.key==='Home'?0:e.key==='End'?buttons.length-1:(i+(e.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length].focus();
   });
-  document.addEventListener('keydown', event => {
-    const menu = document.getElementById('account-menu');
-    if (event.key === 'Escape' && !menu.hidden) { setMenu(false); document.getElementById('account-button').focus(); }
-    if (event.target.id === 'account-button' && event.key === 'ArrowDown') { event.preventDefault(); setMenu(true, true); }
-    if (!menu.hidden && event.target.closest('.account-menu') && ['ArrowDown', 'ArrowUp'].includes(event.key)) {
-      event.preventDefault();
-      const buttons = [...menu.querySelectorAll('button')];
-      const index = buttons.indexOf(document.activeElement);
-      buttons[(index + (event.key === 'ArrowDown' ? 1 : -1) + buttons.length) % buttons.length].focus();
-    }
-  });
-  document.querySelectorAll('dialog').forEach(dialog => {
-    dialog.addEventListener('close', () => document.getElementById('account-button').focus());
-    dialog.addEventListener('click', event => {
-      if (event.target !== dialog) return;
-      const bounds = dialog.getBoundingClientRect();
-      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-    });
-  });
-  window.addEventListener('popstate', () => selectExam(new URLSearchParams(location.search).get('exam') || 'sat', false));
-  window.addEventListener('pageshow', event => { if (event.persisted) { loadCatalog(); loadLearning(); } });
-  window.addEventListener('focus', loadLearning);
-  fillIcons();
-  applyPreferences(readPreferences());
-  render();
-  loadCatalog();
-  loadLearning();
-  // Public shell hook for future exam/account adapters; authentication is intentionally not enabled.
-  window.PlatformHome = Object.freeze({selectExam, refresh:() => Promise.all([loadCatalog(), loadLearning()])});
+  dialog.addEventListener('close',()=>{(lastTrigger?.isConnected?lastTrigger:$('account-button')).focus();});
+  dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
+  window.addEventListener('focus',refresh);window.addEventListener('pageshow',refresh);window.addEventListener('storage',e=>{if([keys.history,keys.learning].includes(e.key))refresh();if([keys.targets,keys.plan].includes(e.key)){if(e.key===keys.targets)state.targets=HomeModel.targets(read(keys.targets,{}));else{const p=read(keys.plan,{});if(Number.isInteger(p?.dailyGoal)&&p.dailyGoal>=1&&p.dailyGoal<=500)state.plan={dailyGoal:p.dailyGoal,note:typeof p.note==='string'?p.note:''};}renderStats();}});
+  fillIcons();renderStats();refresh();
+  fetch('/api/toefl/status',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(info=>note('toefl',info.available?'':'TOEFL 源码已拉取，请先完成本地构建再开始练习。')).catch(()=>note('toefl','请从本机平台服务打开首页，以使用考试应用入口。'));
+  window.PlatformHome=Object.freeze({open,refresh,examRoutes:Object.freeze({sat:'/sat/?view=dashboard',toefl:'/toefl/',ap:()=>open('ap'),vocab:()=>open('vocab')})});
 })();

@@ -11,6 +11,8 @@ import mimetypes
 import os
 from pathlib import Path
 import secrets
+import shutil
+import subprocess
 import sys
 import tempfile
 import threading
@@ -24,6 +26,50 @@ from shared.question_schema import normalize_question_set, to_sat_legacy, valida
 
 MAX_BYTES = 20 * 1024 * 1024
 EXAMS = {'sat': 'SAT', 'ap': 'AP', 'toefl': 'TOEFL', 'vocab': 'Personal Vocab'}
+TOEFL_PUBLIC_FILES = frozenset({
+    'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js',
+    'four-app.js', 'favicon.svg', 'audio/fixture-tone.wav', 'images/fixture-scene.svg',
+})
+
+
+def prepare_toefl_preview(root):
+    """Build only the module's anonymous preview; never start its cloud worker."""
+    root = Path(root).resolve()
+    script = root / 'apps/toefl/scripts/build.mjs'
+    if not script.is_file():
+        return
+    node = shutil.which('node')
+    if not node:
+        print('TOEFL preview needs Node.js 22.13+; install Node and restart, or build apps/toefl first.', flush=True)
+        return
+    try:
+        subprocess.run([node, str(script)], cwd=script.parent.parent, check=True, timeout=60)
+    except (OSError, subprocess.SubprocessError) as error:
+        print(f'TOEFL anonymous preview could not be built: {error}. SAT remains available.', flush=True)
+
+
+def toefl_preview_status(root):
+    """Only explicitly anonymous build output is eligible for public routing."""
+    module = Path(root) / 'apps/toefl'
+    preview = module / 'dist/preview'
+    try:
+        info = json.loads((module / 'dist/build-info.json').read_text(encoding='utf-8'))
+        fixture = json.loads((module / 'fixtures/anonymous-bank.json').read_text(encoding='utf-8'))
+        if (preview.is_symlink() or not preview.resolve().is_relative_to(module.resolve())
+                or info.get('mode') != 'local-anonymous-intake'
+                or info.get('productionCredentials') is not False
+                or info.get('productionData') is not False or info.get('deployable') is not False
+                or fixture.get('fixture') is not True
+                or not fixture.get('records')
+                or any(r.get('source') != 'ANONYMOUS_FIXTURE' for r in fixture['records'])
+                or not all((preview / name).is_file() for name in TOEFL_PUBLIC_FILES)):
+            raise ValueError('Not an anonymous preview.')
+        return {'available': True, 'contentMode': 'anonymous-fixture', 'recordCount': len(fixture['records']),
+                'questionCount': sum(len(r.get('items', [])) for r in fixture['records']),
+                'practiceUrl': '/toefl/'}
+    except (OSError, ValueError, TypeError, KeyError):
+        return {'available': False, 'contentMode': 'not-built', 'recordCount': 0,
+                'questionCount': 0, 'practiceUrl': '/toefl/'}
 
 
 def create_server(root=REPOSITORY, port=8888, private_root=None):
@@ -38,6 +84,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
     token = secrets.token_urlsafe(32)
     project = hashlib.sha256(str(root).encode()).hexdigest()
     lock = threading.Lock()
+    toefl_preview = toefl_preview_status(root)
+    session = {'mode': 'test-admin', 'loginEnabled': False, 'authenticated': False,
+               'user': {'id': 'local-test-admin', 'name': 'admin', 'displayName': 'admin',
+                        'role': 'admin', 'isTest': True}}
 
     def read_sets(exam):
         found, errors = [], []
@@ -100,19 +150,22 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
             if route == '/api/platform/status':
                 return self.reply(200, {'service': 'school-exam-platform-v1', 'project': project})
             if route == '/api/auth/session':
-                return self.reply(200, {'mode': 'guest', 'loginEnabled': False, 'user': None})
+                return self.reply(200, session)
+            if route == '/api/toefl/status':
+                return self.reply(200, toefl_preview)
             if route == '/api/platform/catalog':
                 exams, errors = [], []
                 for exam, name in EXAMS.items():
                     rows, failures = read_sets(exam)
                     sources = [summary(document) for _, document in rows]
-                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat',
+                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'toefl' and toefl_preview['available'],
                                   'questionCount': sum(s['questionCount'] for s in sources),
                                   'sourceCount': len(sources), 'sources': sources,
-                                  'sections': sorted({s['section'] for s in sources if s['section']})})
+                                  'sections': sorted({s['section'] for s in sources if s['section']}),
+                                  **({'preview': toefl_preview} if exam == 'toefl' else {})})
                     errors.extend({'exam': exam, **failure} for failure in failures)
                 return self.reply(200, {'schemaVersion': 1, 'exams': exams, 'errors': errors,
-                                        'auth': {'mode': 'guest', 'loginEnabled': False}})
+                                        'auth': {'mode': 'test-admin', 'loginEnabled': False, 'authenticated': False}})
             if route.startswith('/api/exams/'):
                 parts = route.strip('/').split('/')
                 if len(parts) not in {4, 5} or parts[2] not in EXAMS or parts[3] != 'sources':
@@ -134,6 +187,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                                        'errors': [f"{e['file']}: {e['error']}" for e in failures]})
             if route in {'/sat', '/sat/'}:
                 return self.redirect('/sat/html/index.html' + ('?' + parsed.query if parsed.query else ''))
+            if route == '/toefl':
+                return self.redirect('/toefl/' + ('?' + parsed.query if parsed.query else ''))
             # Explicit application-only routes; repository metadata and private files
             # cannot be fetched as static content.
             if route in {'/', '/index.html'}:
@@ -141,6 +196,13 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
             elif route.startswith('/web/'):
                 base, relative = root / 'apps/web', route[len('/web/'):]
                 if Path(relative).suffix not in {'.html', '.css', '.js', '.svg', '.png', '.ico'}:
+                    return self.reply(404, {'error': 'Not found.'})
+            elif route.startswith('/toefl/'):
+                if not toefl_preview['available']:
+                    return self.reply(503, {'error': 'TOEFL 匿名样例尚未构建，请安装 Node.js 22.13+ 并重新启动平台。'})
+                base = root / 'apps/toefl/dist/preview'
+                relative = route[len('/toefl/'):] or 'index.html'
+                if relative not in TOEFL_PUBLIC_FILES:
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/sat/question-assets/') or route.startswith('/question-assets/'):
                 prefix = '/sat/question-assets/' if route.startswith('/sat/') else '/question-assets/'
@@ -164,6 +226,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                     # Bootstrap only the platform adapter. The SAT source HTML,
                     # scripts and styles remain byte-for-byte unchanged on disk.
                     body = body.replace(b'<head>', b'<head><script src="/web/sat-bridge.js"></script>', 1)
+                elif base == root / 'apps/toefl/dist/preview' and relative == 'index.html':
+                    body = body.replace(b'<head>', b'<head><script src="/web/toefl-bridge.js"></script>', 1)
                 content_type = mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
                 if content_type.startswith('text/') or content_type in {'application/javascript', 'application/json'}:
                     content_type += '; charset=utf-8'
@@ -224,6 +288,7 @@ def main():
     parser.add_argument('--port', type=int, default=8888)
     parser.add_argument('--open', action='store_true')
     args = parser.parse_args()
+    prepare_toefl_preview(args.root)
     try:
         server = create_server(args.root, args.port)
     except OSError as error:
