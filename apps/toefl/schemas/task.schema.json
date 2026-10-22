@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:school-exam:toefl-task:1",
+  "title": "TOEFL task source v1 (private answer-bearing authoring format)",
+  "type": "object",
+  "required": [
+    "formatVersion",
+    "task"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "formatVersion": {
+      "const": "toefl-task/1"
+    },
+    "task": {
+      "$ref": "#/$defs/task"
+    }
+  },
+  "$defs": {
+    "task": {
+      "type": "object",
+      "required": [
+        "id",
+        "module",
+        "source",
+        "title",
+        "date",
+        "group",
+        "duration",
+        "complete",
+        "items"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "audio": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "audioDuration": {
+          "type": "number",
+          "minimum": 0
+        },
+        "audioLocal": {
+          "type": "boolean"
+        },
+        "audioRanges": {
+          "type": "array"
+        },
+        "audioRemote": {
+          "type": "string"
+        },
+        "audioRole": {
+          "type": "string"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "content": {
+          "type": "array"
+        },
+        "date": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "examForm": {
+          "type": "string"
+        },
+        "examPlacement": {
+          "type": "object"
+        },
+        "group": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intro": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/question"
+          }
+        },
+        "module": {
+          "type": "string",
+          "enum": [
+            "reading-t1",
+            "reading-t2",
+            "reading-t3",
+            "listening-t1",
+            "listening-t2",
+            "listening-t3",
+            "listening-t4",
+            "speaking-t1",
+            "speaking-t2",
+            "writing-t1",
+            "writing-t2",
+            "writing-t3"
+          ]
+        },
+        "occurrenceCount": {
+          "type": "integer"
+        },
+        "occurrenceDates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "passage": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "sourceOrder": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array"
+        },
+        "transcript": {
+          "type": "string"
+        },
+        "transcriptSentences": {
+          "type": "array"
+        },
+        "translation": {
+          "type": "string"
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        },
+        "answer_text": {
+          "type": "string"
+        },
+        "answer_time_sec": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "audioDuration": {
+          "type": "number",
+          "minimum": 0
+        },
+        "audioLocal": {
+          "type": "boolean"
+        },
+        "audioRemote": {
+          "type": "string"
+        },
+        "audio_key": {
+          "type": "string"
+        },
+        "audio_url": {
+          "type": "string"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string"
+              },
+              "translation_zh": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "context_text": {
+          "type": "string"
+        },
+        "evidenceSentences": {
+          "type": "array"
+        },
+        "evidenceSource": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "academic_discussion",
+            "build_sentence",
+            "choice_question",
+            "complete_word",
+            "interview",
+            "repeat",
+            "write_email",
+            "email",
+            "discussion"
+          ]
+        },
+        "learning_context": {
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        "mask": {
+          "type": "string"
+        },
+        "meaning": {
+          "type": "string"
+        },
+        "missingLetters": {
+          "type": "string"
+        },
+        "posts": {
+          "type": "array"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "prep_time_sec": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "prompt_text": {
+          "type": "string"
+        },
+        "prompt_translation_zh": {
+          "type": "string"
+        },
+        "question_type": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "sentence_parts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "text",
+                  "blank"
+                ]
+              },
+              "text": {
+                "type": "string"
+              },
+              "leading_text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "skill": {
+          "type": "string"
+        },
+        "subject_line": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array"
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "translation": {
+          "type": "object"
+        },
+        "translations": {
+          "type": "array"
+        },
+        "type": {
+          "type": "integer"
+        },
+        "visual_asset_key": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "visual_asset_remote": {
+          "type": "string"
+        },
+        "visual_asset_url": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}

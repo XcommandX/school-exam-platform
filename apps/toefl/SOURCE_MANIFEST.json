@@ -12,15 +12,19 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "353fd798c55d1d91d1e450be2fafa5681f6423b6e290aafaa7b80bc4247e2e25"
+      "sha256": "fd964fef6529c4ff350525f9e8db93ff26a41e888b7bc9b8def75a9b36fdeaba"
     },
     {
       "path": "AGENTS.md",
       "sha256": "09218f57cd65ac1736139b5e8f1360ec4dab6a5e9aef528b5c14856438eae19e"
     },
     {
+      "path": "QUESTION_FORMAT.md",
+      "sha256": "26144517281971e7b030c525d4034acc37390e5b33d849539e4f728d58863531"
+    },
+    {
       "path": "README.md",
-      "sha256": "41dfb201e7ca1669251abdb7331f25fb958b8eb0f2d36a04e3a9f22a77611880"
+      "sha256": "fc7be4e741185e7e6c2a67e418f89e32f13d8d398155a8b30c9c24549c966b0f"
     },
     {
       "path": "fixtures/anonymous-bank.json",
@@ -39,6 +43,10 @@
       "sha256": "79483c0577abc9c4501f43e28c50ea42abc5c91264ce164ca58f1ea845efe81f"
     },
     {
+      "path": "schemas/task.schema.json",
+      "sha256": "d31aa1ee1c5698482165884da400f77932807e477f1b48178880779fe31883f4"
+    },
+    {
       "path": "scripts/build.mjs",
       "sha256": "2c791aa92d9f40dc67a8474ba72d882ef684936636a67fa593697aea2193484a"
     },
@@ -49,6 +57,10 @@
     {
       "path": "scripts/preview.mjs",
       "sha256": "16c5be303087a5df81a70f53faf838cdce609e939a12d2c3d250333cce4a6d23"
+    },
+    {
+      "path": "scripts/task-files.mjs",
+      "sha256": "43a3d1dc4809e35074d7c5b96f5e33f5bcf9f9f8e447a372dbec286623f3c342"
     },
     {
       "path": "scripts/test.mjs",
@@ -103,16 +115,20 @@
       "sha256": "ff394075238b16f36f6f3dfabbaf399862cd46ff28d3fe1489722b2cc131b9e3"
     },
     {
+      "path": "src/content/task-format.mjs",
+      "sha256": "9d8b22d929bdeeab571cbd74368f1716b53a81f72777cd7d6fd964b523fb133d"
+    },
+    {
       "path": "src/frontend/favicon.svg",
-      "sha256": "bb50b4e8adf1fae1617bb39e5f442b68badb2962d6bb512b9df38d9039179644"
+      "sha256": "1f0523246193e88109cb3e08a738b76c3a3c50b0bc2cd858a56e56dc7714d101"
     },
     {
       "path": "src/frontend/four-app.js",
-      "sha256": "63dc487c42d97174a3961b4fa635b887662fe90cb7723d5b90bdc4fd4693ea3d"
+      "sha256": "098074beb00cf8ebb0964af66d975e1da76f4423c4348ed7e50b45649657eb85"
     },
     {
       "path": "src/frontend/four-learning.js",
-      "sha256": "2c10fa33ea59c2cb21be5e169c74880347a12646f6a2d60461564a7cabab819c"
+      "sha256": "62848698558ccb2d1eb460b3f5e6b9f3e6afb07e65c2b3af6ad12e8f19a482e5"
     },
     {
       "path": "src/frontend/four-logic.js",
@@ -120,11 +136,11 @@
     },
     {
       "path": "src/frontend/four.css",
-      "sha256": "50cf24bb1992956d80359230b7c81bbfc760e1bb7b45013b41c271ba6bf2b919"
+      "sha256": "be9b1e84a08ec9fd465cf2e1523300fa8c40424aa1ba917ab40cf394b90e5622"
     },
     {
       "path": "src/frontend/index.html",
-      "sha256": "62adb53417bd1962e39bff580793293e66aabb86f66041a94aeed791e41c8c14"
+      "sha256": "f2c865dcf3b4469df4ee33ab198b8fb616927f8ea447f7203246f7c7717879d3"
     },
     {
       "path": "src/integration/platform-adapter.mjs",
@@ -212,7 +228,7 @@
     },
     {
       "path": "tests/frontend/test-learning-comfort.cjs",
-      "sha256": "7a562137889c30306959ef3eb92bfa0758e4a2f504201162cf3516195c09d812"
+      "sha256": "1b68315a81adbbe1a9c7f3125f921564d72456a5af480138978ad629084f1b64"
     },
     {
       "path": "tests/frontend/test-learning-dialog-lifecycle.cjs",
@@ -255,6 +271,10 @@
       "sha256": "4e94d8cb32f3ac3d44899d4a11c92e055950106b3165195ab0d17ceae28d73c5"
     },
     {
+      "path": "tests/frontend/test-reference-layout.cjs",
+      "sha256": "97887348f633f985d43b88ed704a1b5e24e292a0645ecf3de081852ffab0ea80"
+    },
+    {
       "path": "tests/frontend/test-review-usability.cjs",
       "sha256": "e70c6ca841924f36b81f8cb09bff2bc69429cacc12fd59d1373e500f0d8544f2"
     },
@@ -281,6 +301,10 @@
     {
       "path": "tests/integration/test-source-publication.mjs",
       "sha256": "9d85bf6c1bedbe0af417a9527a23a63efc7e7f1861fed355ed96ad0b3c5116de"
+    },
+    {
+      "path": "tests/integration/test-task-format.mjs",
+      "sha256": "511c00e68b7d89476d7c86bb20b73529d9338630a471678581490dd5b270cedb"
     }
   ]
 }

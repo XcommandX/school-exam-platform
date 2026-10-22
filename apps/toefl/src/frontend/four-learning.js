@@ -32,6 +32,7 @@ function queue(history,catalog,state=[],now=Date.now()){
   }
  return [...rows.values()].filter(x=>!x.disabled&&catalog.has(x.record)).map(x=>({...x,dueNow:!x.due||x.due<=now})).sort((a,b)=>Number(b.dueNow)-Number(a.dueNow)||(a.due||0)-(b.due||0)||(b.lastMiss||0)-(a.lastMiss||0));
 }
+function inCategory(row,category){return category==='unfamiliar'?row.unfamiliar===true||(row.unfamiliar===undefined&&!row.lastMiss&&!row.misses):!!(row.lastMiss||row.misses)}
 function skill(r,q={}){
  const mod=r.module,type=(q.question_type||q.skill||'').toLowerCase();
  if(mod==='reading-t1')return 'word-forms';
@@ -66,7 +67,7 @@ function diff(before,after){
  for(let i=a.length-1;i>=0;i--)for(let j=b.length-1;j>=0;j--)dp[i][j]=a[i]===b[j]?1+dp[i+1][j+1]:Math.max(dp[i+1][j],dp[i][j+1]);
  let i=0,j=0,left=[],right=[];while(i<a.length||j<b.length){if(i<a.length&&j<b.length&&a[i]===b[j]){left.push({text:a[i++],changed:false});right.push({text:b[j++],changed:false})}else if(j<b.length&&(i===a.length||dp[i][j+1]>=dp[i+1][j]))right.push({text:b[j++],changed:true});else left.push({text:a[i++],changed:true})}return {before:left,after:right};
 }
-root.PracticeLearning={DAY,normalize,identity,ordinal,schedule,queue,skill,cards,segments,wordCloze,diff};
+root.PracticeLearning={DAY,normalize,identity,ordinal,schedule,queue,inCategory,skill,cards,segments,wordCloze,diff};
 })(window);
 
 (function(root){'use strict';
