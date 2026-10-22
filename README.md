@@ -55,6 +55,6 @@ Windows 可按本机 Python 安装方式把 `python3` 换为 `py -3` 或 `python
 
 `main` 保存团队认可的版本。每项任务使用短期分支，具体分支和提交操作见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-macOS 可在完成功能分支的本地提交后，双击仓库根目录的 `push.command` 推送。它只推送已经 commit 的当前功能分支，不会自动提交文件，也不会强制推送；检查方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。本轮 SAT 清理仅准备本地提交，由开发者自行推送。
+macOS 可双击仓库根目录的 `pull.command`，从 `origin` 同名分支快进更新当前分支；未提交改动或分支分叉时会停止。完成功能分支的本地提交后，可双击 `push.command` 推送。两个脚本都支持 `--check` 只读检查，不自动提交文件或强制覆盖；详细用法见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 仓库同步源码、配置样例和数据库结构变更；数据库中的实际答题记录由网站后端保存，不通过 Git 同步。
