@@ -12,11 +12,15 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "fd964fef6529c4ff350525f9e8db93ff26a41e888b7bc9b8def75a9b36fdeaba"
+      "sha256": "d4bdf30ccd9f47d968a9cf8736787b5eecba3533d6b274c5e6d27bb903997bbe"
     },
     {
       "path": "AGENTS.md",
       "sha256": "09218f57cd65ac1736139b5e8f1360ec4dab6a5e9aef528b5c14856438eae19e"
+    },
+    {
+      "path": "ENTRY_INTERFACE.md",
+      "sha256": "6c753e391503bf1ed2de1f3bef1b229efc86ea0ca1e481abccddc44500542ef9"
     },
     {
       "path": "QUESTION_FORMAT.md",
@@ -24,7 +28,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "fc7be4e741185e7e6c2a67e418f89e32f13d8d398155a8b30c9c24549c966b0f"
+      "sha256": "e29f96ce4a2059e00aeb2b3b55b5dd435be1457c72e703aa68c4f3de30c8894c"
     },
     {
       "path": "fixtures/anonymous-bank.json",
@@ -92,7 +96,7 @@
     },
     {
       "path": "src/cloud/cloud-client.js",
-      "sha256": "18e7c370dd39d68c3e0f720a210e8e8e80b9f4516a2fbc3caf05d7365925c498"
+      "sha256": "465d423c9be19dc8287bc2156e216253c449f6b48bfcfed4ac9d24d13d0ae586"
     },
     {
       "path": "src/cloud/examples.mjs",
@@ -124,7 +128,7 @@
     },
     {
       "path": "src/frontend/four-app.js",
-      "sha256": "098074beb00cf8ebb0964af66d975e1da76f4423c4348ed7e50b45649657eb85"
+      "sha256": "9ed4cb17335dda5b8d140d1374d5246e06e2cf45b6ab2a165ed894d1dadd9317"
     },
     {
       "path": "src/frontend/four-learning.js",
@@ -136,11 +140,15 @@
     },
     {
       "path": "src/frontend/four.css",
-      "sha256": "be9b1e84a08ec9fd465cf2e1523300fa8c40424aa1ba917ab40cf394b90e5622"
+      "sha256": "adeef94a3edd6e4290699278e47089363855c6e89983968d06f096c096df32e0"
     },
     {
       "path": "src/frontend/index.html",
       "sha256": "f2c865dcf3b4469df4ee33ab198b8fb616927f8ea447f7203246f7c7717879d3"
+    },
+    {
+      "path": "src/integration/entry-links.mjs",
+      "sha256": "bf311c4d0620ce07405479bf008fddaaf23cb58ae898fe6a33b4e6f97a60e6ec"
     },
     {
       "path": "src/integration/platform-adapter.mjs",
@@ -187,6 +195,10 @@
       "sha256": "29387f7be5e0485960d988cf40529b55ee76a73b710bf383958f8b3eec7ba388"
     },
     {
+      "path": "tests/cloud/test-sync-queue-storage.mjs",
+      "sha256": "b62750540304bbf0f581fff9f1bcd6c814a6dc48f1a21b05582418262d1295ad"
+    },
+    {
       "path": "tests/cloud/test-sync-rebase.mjs",
       "sha256": "a2e604887aa63d38bfa3efdbf038f98562640fd66d3a3620a9c74d1a35a10996"
     },
@@ -212,7 +224,7 @@
     },
     {
       "path": "tests/frontend/test-entry-navigation.cjs",
-      "sha256": "60e67ece5dbf30689a599539d4e37f7f8291e61b4ab99734d5f8c4d7905986aa"
+      "sha256": "a6edc61de19803867f05f148bafc43704e758c2b538aef3804c609882e008705"
     },
     {
       "path": "tests/frontend/test-fill-theme.cjs",
@@ -225,6 +237,10 @@
     {
       "path": "tests/frontend/test-grading-edge-cases.cjs",
       "sha256": "9afdc3c7a98cbb02b4091b2e441ab5239063ad71d8c81c8223a96cccece84680"
+    },
+    {
+      "path": "tests/frontend/test-history-completion.cjs",
+      "sha256": "894fa766b581457575d49ed4429062ca1c6fa43af665c6dd0a7514612bb8f872"
     },
     {
       "path": "tests/frontend/test-learning-comfort.cjs",
@@ -289,6 +305,10 @@
     {
       "path": "tests/frontend/test-vocabulary-one-click.cjs",
       "sha256": "095da0b08d777c26782bd486a73445d9ef406efba01915aedbd64ac7f101568f"
+    },
+    {
+      "path": "tests/integration/test-entry-links.mjs",
+      "sha256": "ce6533d4a9eada3482764176e691fef733241f63ff06b81d6523a3acd6539a5d"
     },
     {
       "path": "tests/integration/test-platform-adapter.mjs",

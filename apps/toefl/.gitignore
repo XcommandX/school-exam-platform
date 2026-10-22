@@ -104,3 +104,9 @@
 !/scripts/task-files.mjs
 !/tests/frontend/test-reference-layout.cjs
 !/tests/integration/test-task-format.mjs
+
+!/ENTRY_INTERFACE.md
+!/src/integration/entry-links.mjs
+!/tests/integration/test-entry-links.mjs
+!/tests/frontend/test-history-completion.cjs
+!/tests/cloud/test-sync-queue-storage.mjs
