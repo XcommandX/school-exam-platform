@@ -7,6 +7,7 @@
 - 三位开发者使用 Windows / macOS，并通过 GitHub 分支与 PR 协作。
 - 统一首页位于 `apps/web/`，采用 Study Space 品牌和已确认的暖白底、TOEFL 蓝卡与 SAT 橙卡模板；主卡连接两个考试应用，AP 与 Personal Vocab 保留接口。Python 3.10+ 标准库服务从 `scripts/serve_platform.py` 启动。详见 `docs/unified-home.md`。
 - SAT Reading & Writing 复用 `apps/sat/` 原生答题引擎；非考试管理页面已做视觉更新，考试阶段继续保持原样。TOEFL 源码已从 `feature/toefl-exam-interface` 分支版本 `72ab41d` 接入 `apps/toefl/`，统一服务只提供其匿名样例构建，不连接私有题库、正式账号、云端记录或外部 AI。AP、Personal Vocab 与 SAT 数学仍待接入。
+- 数学竞赛从首页页脚进入 `/contests/`，源码为 `apps/contests/`，只读接口与数据约定见 `docs/math-contests.md`。AMC10/12、AIME 支持有条件自动检查；USAMO 只保存证明草稿。真实题库与本地 MathJax 均在忽略的 `private-data/`，不能上传；原创示例需显式选择。统计与草稿按模式、试卷版本隔离，不汇入首页 SAT/TOEFL 统计。
 - 测试阶段直接显示 `admin` 本机测试身份，无需密码；这不是正式认证或管理员授权。学习计划、目标分数及练习统计仅保存在当前浏览器的新平台命名空间，目前没有统一登录、按账号隔离或跨设备同步。
 - 读 README.md、CONTRIBUTING.md 和任务相关的 docs/ 文档后再修改。进入子模块时继续读取该目录下的 AGENTS.md（如果存在）。
 

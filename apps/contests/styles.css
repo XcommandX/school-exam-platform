@@ -1,0 +1,114 @@
+/* Scoped addition to the existing Study Space design system. */
+.contest-app .home-link{font-size:14px;font-weight:650;padding:12px 17px;border:1px solid var(--line);border-radius:50px;background:#fff;transition:transform .2s var(--ease)}
+.contest-app .home-link:hover{transform:translateY(-2px)}
+.contest-app .contest-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:14px 0 28px}
+.contest-app h1{font-size:38px;letter-spacing:-1.5px;margin:0;line-height:1.2}
+.contest-app h2{font-size:24px;letter-spacing:-.6px;margin:0}
+.contest-app h3{margin:0}
+.contest-app .mode-control{display:flex;padding:5px;background:#eae8e1;border-radius:50px;gap:2px}
+.contest-app .mode-control button{padding:9px 17px;border-radius:50px;font-size:13px;font-weight:650;white-space:nowrap}
+.contest-app .mode-control [aria-pressed=true]{background:#fff;box-shadow:0 2px 5px #16181d0a}
+.contest-app .workspace-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.contest-app .workspace-tabs{display:flex;gap:26px}
+.contest-app .workspace-tabs button{position:relative;padding:12px 0 17px;color:#6c6d73;font-weight:650;font-size:14px;white-space:nowrap}
+.contest-app .workspace-tabs button[aria-current=page]{color:var(--ink)}
+.contest-app .workspace-tabs button[aria-current=page]::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--orange);border-radius:3px}
+.contest-app .practice-stats{display:flex;gap:22px;font-size:12px;color:#686b73}
+.contest-app .practice-stats b{font-size:17px;color:var(--ink);margin-right:4px}
+.contest-app .contest-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-bottom:28px}
+.contest-app .contest-card{position:relative;isolation:isolate;overflow:hidden;text-align:left;min-height:176px;border-radius:24px;padding:24px;color:#fff;background:linear-gradient(145deg,#f16a3c,#cc442b);border:3px solid transparent;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.contest-app .contest-card:nth-child(2){background:linear-gradient(145deg,#d96b39,#a84121)}
+.contest-app .contest-card:nth-child(3){background:linear-gradient(145deg,#3064d2,#2446a4)}
+.contest-app .contest-card:nth-child(4){background:linear-gradient(145deg,#427a60,#265d47)}
+.contest-app .contest-card:hover{transform:translateY(-3px);box-shadow:0 12px 24px -16px #16181d88}
+.contest-app .contest-card[aria-pressed=true]{outline:2px solid var(--ink);outline-offset:4px}
+.contest-app .contest-card::after{content:attr(data-symbol);position:absolute;right:4px;top:-28px;font-size:153px;line-height:1.3;opacity:.12;z-index:-1;font-family:Georgia,serif;font-style:italic;transform:rotate(-12deg)}
+.contest-app .contest-card strong{display:block;font-size:clamp(28px,3.1vw,46px);font-weight:850;letter-spacing:-2px;margin-top:20px;line-height:1.15}
+.contest-app .card-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;margin-top:18px;color:#fff}
+.contest-app .card-meta .arrow{font-size:20px;line-height:1}
+.contest-app .library-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.contest-app .library-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.contest-app .muted{color:#686b73;font-size:12px;line-height:1.6}
+.contest-app .library-filters{display:flex;align-items:end;gap:16px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #efeee9}
+.contest-app .library-filters label>span{display:block;font-size:12px;font-weight:650;margin-bottom:7px}
+.contest-app .search-field{flex:1;max-width:400px}
+.contest-app input[type=search],.contest-app select,.contest-app input[type=text],.contest-app textarea{border:1px solid var(--line);border-radius:12px;background:#fff;padding:11px 13px;min-height:44px;width:100%}
+.contest-app .year-field{min-width:140px}
+.contest-app .supplemental-field{display:flex;align-items:center;gap:8px;font-size:12px;min-height:44px;margin-left:auto;white-space:nowrap}
+.contest-app input[type=checkbox],.contest-app input[type=radio]{accent-color:#c94d2c}
+.contest-app .exam-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.contest-app .exam-tile{display:flex;flex-direction:column;gap:17px;text-align:left;border:1px solid var(--line);padding:21px;border-radius:18px;background:#fff;transition:border-color .2s,background .2s,transform .2s}
+.contest-app .exam-tile:hover{border-color:#de9a80;background:#fffaf6;transform:translateY(-2px)}
+.contest-app .exam-tile strong{font-size:21px;font-weight:700;letter-spacing:-.5px}
+.contest-app .exam-tile .tile-top,.contest-app .tile-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.contest-app .tile-meta{font-size:12px;color:#666970}
+.contest-app .paper-chip,.contest-app .badge{border:1px solid var(--line);border-radius:50px;padding:4px 9px;font-size:11px;background:#f8f7f3;white-space:nowrap}
+.contest-app .empty-state{padding:48px 16px;text-align:center;grid-column:1/-1}
+.contest-app .empty-state h3{font-size:20px;margin-bottom:12px}
+.contest-app .empty-state p{color:#686b73;font-size:14px;line-height:1.8;max-width:530px;margin:12px auto 22px}
+.contest-app .primary-button{background:#16181d;color:#fff;padding:12px 22px;border-radius:50px;font-size:14px;font-weight:700;transition:background .15s,transform .15s}
+.contest-app .primary-button:hover:not(:disabled){background:#c94d2c;transform:translateY(-1px)}
+.contest-app .quiet-button,.contest-app .back-button{background:#fff;border:1px solid var(--line);border-radius:50px;padding:10px 16px;font-size:13px;font-weight:650;transition:background .15s}
+.contest-app .quiet-button:hover:not(:disabled),.contest-app .back-button:hover{background:#f0eee8}
+.contest-app button:disabled{opacity:.45}
+.contest-app .notice{border:1px solid #dce2df;background:#f2f7f4;border-radius:12px;padding:12px 15px;line-height:1.7;font-size:13px;margin-bottom:18px;overflow-wrap:anywhere}
+.contest-app .warning{background:#fff8ea;border-color:#e9dab5;color:#785016}
+.contest-app .error,.contest-app .incorrect{background:#fff1ed;border-color:#efc7bc;color:#a43220}
+.contest-app .correct{background:#edf8f0;border-color:#c2dfcc;color:#256042}
+.contest-app .practice-top{display:flex;align-items:center;gap:18px;margin:2px 0 22px;flex-wrap:wrap}
+.contest-app .practice-top h2{font-size:21px;flex:1}
+.contest-app .practice-grid{display:grid;grid-template-columns:216px minmax(0,1fr);gap:24px;align-items:start}
+.contest-app .question-sidebar{position:sticky;top:22px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:20px}
+.contest-app .sidebar-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:12px;color:#686b73}
+.contest-app .sidebar-heading h3{font-size:14px;color:var(--ink)}
+.contest-app .question-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
+.contest-app .question-nav button{aspect-ratio:1;border:1px solid var(--line);border-radius:9px;background:#faf9f6;font-size:12px;min-height:29px}
+.contest-app .question-nav button.is-done{background:#f9e5da;border-color:#e8c4b2;color:#843d24}
+.contest-app .question-nav button.is-draft{background:#eaf0fb;border-color:#c5d4f1;color:#2856a6}
+.contest-app .question-nav button[aria-current=true]{background:#16181d;color:#fff;border-color:#16181d}
+.contest-app .nav-legend{display:flex;gap:16px;font-size:11px;color:#686b73;margin:18px 0 0}
+.contest-app .nav-legend>span{display:flex;gap:5px;align-items:center}
+.contest-app .dot{display:inline-block;width:7px;height:7px;border-radius:50%}.contest-app .dot.done{background:#dc855f}.contest-app .dot.draft{background:#729be1}
+.contest-app .question-sidebar .notice{font-size:11px;padding:10px;margin:16px 0 0}
+.contest-app .question-panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 36px}
+.contest-app .question-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:24px;margin-bottom:25px;border-bottom:1px solid #efeee9}
+.contest-app .type-label{display:block;color:#686b73;font-size:11px;font-weight:650;letter-spacing:.5px;margin-bottom:8px}
+.contest-app .question-heading h3{font-size:25px;letter-spacing:-.5px}
+.contest-app .bookmark-button{font-size:13px;border:1px solid var(--line);border-radius:50px;padding:9px 13px;white-space:nowrap}
+.contest-app .bookmark-button[aria-pressed=true]{background:#fff0e6;color:#a64020;border-color:#e8c4b2}
+.contest-app .math-content{font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.85;overflow-wrap:anywhere;min-width:0}
+.contest-app .math-content pre{white-space:pre-wrap;font:13px/1.6 ui-monospace,monospace;padding:12px;background:#f8f7f3}
+.contest-app .math-content img,.contest-app .choice-content img{display:block;max-width:100%;max-height:410px;width:auto;height:auto;margin:16px auto}
+.contest-app .math-content table{display:block;overflow-x:auto;max-width:100%;border-collapse:collapse}
+.contest-app .math-content td{padding:3px 9px}
+.contest-app .math-content p{margin:0 0 1em}
+.contest-app mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:3px 0}
+.contest-app mjx-container svg{display:inline-block;width:auto;height:auto;max-width:none;flex:initial}
+.contest-app .choice-list{display:grid;gap:10px;border:0;padding:0;margin:26px 0;min-width:0}
+.contest-app .choice{position:relative;display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;min-width:0;transition:background .15s,border-color .15s}
+.contest-app .choice:has(input:checked){background:#fff3ea;border-color:#cd7957}
+.contest-app .choice:hover{background:#faf9f5}
+.contest-app .choice input{position:absolute;opacity:0;width:1px;height:1px}
+.contest-app .choice:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:3px}
+.contest-app .choice:has(input:disabled){cursor:default}
+.contest-app .choice-letter{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);font-size:12px;font-weight:700;font-family:inherit}
+.contest-app .choice:has(input:checked) .choice-letter{background:#c94d2c;color:#fff;border-color:#c94d2c}
+.contest-app .choice-content{min-width:0;flex:1;font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.65;overflow-wrap:anywhere}
+.contest-app .integer-area{display:flex;align-items:center;gap:16px;margin:26px 0}.contest-app .integer-area label{font-size:13px;font-weight:650}.contest-app .integer-area input{width:128px;font-size:20px;text-align:center;letter-spacing:2px}
+.contest-app .proof-label{display:block;font-size:14px;font-weight:650;margin:26px 0 12px}.contest-app textarea{resize:vertical;line-height:1.8;font-size:15px}
+.contest-app .draft-status{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#686b73;margin:9px 0 22px}
+.contest-app .answer-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0}
+.contest-app .solution-details,.contest-app .source-details{border-top:1px solid var(--line);margin-top:24px;padding-top:20px}
+.contest-app summary{cursor:pointer;font-weight:650;font-size:14px;line-height:1.8}
+.contest-app summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.contest-app details[open]>summary{margin-bottom:18px}
+.contest-app .solution-entry{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:24px}
+.contest-app .solution-entry h4{font:650 15px/1.6 "Avenir Next","Segoe UI",sans-serif;margin:8px 0 14px}
+.contest-app #source-body{font-size:12px;line-height:1.8;overflow-wrap:anywhere}.contest-app #source-body a{color:#2856a6;text-decoration:underline}.contest-app #source-body ul{padding-left:22px}
+.contest-app .question-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.contest-app .saved-list{display:grid;gap:12px}.contest-app .saved-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px;border:1px solid var(--line);border-radius:15px}.contest-app .saved-row h3{font-size:15px;margin-bottom:7px}.contest-app .saved-row p{margin:0;font-size:12px;color:#686b73}
+.contest-app .local-record-note{font-size:11px;color:#686b73;text-align:center;margin:24px 0 0;line-height:1.7}
+.contest-app .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(max-width:1050px){.contest-app .contest-cards{gap:14px}.contest-app .contest-card{padding:19px;min-height:158px}.contest-app .exam-list{grid-template-columns:repeat(2,minmax(0,1fr))}.contest-app .practice-grid{grid-template-columns:180px minmax(0,1fr);gap:18px}.contest-app .question-sidebar{padding:16px}.contest-app .question-nav{grid-template-columns:repeat(4,minmax(0,1fr))}.contest-app .question-panel{padding:26px}}
+@media(max-width:760px){.contest-app .contest-heading{align-items:flex-start}.contest-app h1{font-size:30px}.contest-app .contest-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.contest-app .contest-card strong{font-size:36px}.contest-app .workspace-bar{align-items:flex-start;flex-direction:column;gap:0}.contest-app .practice-stats{order:-1;align-self:flex-end;margin-bottom:12px}.contest-app .workspace-tabs{width:100%;justify-content:space-between;gap:15px}.contest-app .library-filters{flex-wrap:wrap}.contest-app .search-field{max-width:none}.contest-app .supplemental-field{margin-left:0}.contest-app .library-panel{padding:22px}.contest-app .practice-grid{grid-template-columns:minmax(0,1fr)}.contest-app .question-sidebar{position:static}.contest-app .question-nav{grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}.contest-app .question-nav button{min-height:28px}.contest-app .nav-legend{margin-top:12px}.contest-app .sidebar-heading{margin-bottom:12px}.contest-app .practice-top h2{order:3;flex-basis:100%}.contest-app .practice-top>span{margin-left:auto}.contest-app .question-panel{padding:24px}.contest-app .mode-control button{padding:8px 12px;font-size:12px}}
+@media(max-width:430px){.contest-app .site-header{gap:14px}.contest-app .home-link{font-size:12px;padding:10px 12px}.contest-app .contest-heading{margin-top:6px;gap:12px;align-items:center}.contest-app h1{font-size:27px;white-space:nowrap}.contest-app .mode-control{padding:4px}.contest-app .mode-control button{font-size:11px;padding:8px 9px}.contest-app .contest-card{min-height:146px;padding:16px}.contest-app .contest-card strong{font-size:32px;letter-spacing:-1.5px}.contest-app .card-meta{font-size:10px;gap:4px}.contest-app .library-panel{padding:19px}.contest-app .exam-list{grid-template-columns:minmax(0,1fr)}.contest-app .year-field{min-width:108px}.contest-app .search-field{min-width:130px}.contest-app .library-filters{gap:12px}.contest-app .question-panel{padding:20px}.contest-app .question-nav{grid-template-columns:repeat(7,minmax(0,1fr))}.contest-app .math-content{font-size:17px}.contest-app .integer-area{gap:12px;flex-wrap:wrap}.contest-app .saved-row{padding:16px;align-items:flex-start}.contest-app .saved-row .quiet-button{white-space:nowrap}.contest-app .question-bottom .quiet-button{padding:10px 12px;font-size:12px}}

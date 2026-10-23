@@ -1,0 +1,197 @@
+{
+  "example": true,
+  "notice": "原创合成示例；非官方竞赛题，不代表真实历年覆盖。",
+  "exam": {
+    "id": "example-aime-2026",
+    "contest": "AIME",
+    "year": 2026,
+    "season": "regular",
+    "paper": null,
+    "special_paper": false,
+    "problem_count": 3,
+    "expected_problem_count": 3,
+    "missing_numbers": []
+  },
+  "problems": [
+    {
+      "id": "example-aime-2026-01",
+      "exam_id": "example-aime-2026",
+      "contest": "AIME",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 1,
+      "question_type": "integer",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original example. Find the remainder when $84$ is divided by $7$.",
+        "html": "<p>Original example. Find the remainder when $84$ is divided by $7$.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": {
+        "type": "integer",
+        "value": 0,
+        "display": "000",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "$84=7\\times12$, so the remainder is $0$, displayed as 000.",
+          "html": "<p>$84=7\\times12$, so the remainder is $0$, displayed as 000.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-aime-2026-02",
+      "exam_id": "example-aime-2026",
+      "contest": "AIME",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 2,
+      "question_type": "integer",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original example. Evaluate $1000-1$.",
+        "html": "<p>Original example. Evaluate $1000-1$.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": {
+        "type": "integer",
+        "value": 999,
+        "display": "999",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "$1000-1=999$.",
+          "html": "<p>$1000-1=999$.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-aime-2026-03",
+      "exam_id": "example-aime-2026",
+      "contest": "AIME",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 3,
+      "question_type": "integer",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original example. A tray has $6$ rows of $10$ beads. How many beads are there?",
+        "html": "<p>Original example. A tray has $6$ rows of $10$ beads. How many beads are there?</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": {
+        "type": "integer",
+        "value": 60,
+        "display": "060",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "$6\\times10=60$, displayed as 060.",
+          "html": "<p>$6\\times10=60$, displayed as 060.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    }
+  ]
+}
