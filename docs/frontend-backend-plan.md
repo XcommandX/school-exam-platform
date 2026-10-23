@@ -1,6 +1,6 @@
 # 前后端、统一身份与题目分发方案
 
-日期：2026-10-23。状态：结合当前源码的讨论稿。本轮修复 SAT 模块结束页并包装完整试卷；本文没有实现或启用正式登录、云端同步、加密分发或线上部署。后端目录和接口是建议，不能当作已可用功能。
+日期：2026-10-23。状态：结合当前源码的讨论稿。本轮修复 SAT 模块结束页、包装完整试卷，并按用户确认实际整理为四个主体目录，见 [项目结构](project-structure.md)。本文没有实现或启用正式登录、云端同步、加密分发或线上部署；下文新增公共 API 的目录和接口是建议，不能当作已可用功能。
 
 ## 1. 先理解当前本机程序
 
@@ -24,12 +24,12 @@ flowchart LR
 
 | 当前文件或行为 | 实际状态 | 正式接入所需变化 |
 | --- | --- | --- |
-| `scripts/serve_platform.py` | 本机静态文件、题库和备份 API；只监听回环地址 | 保留为开发工具；不要直接开放成生产登录服务器 |
+| `back-end/server/serve_platform.py` | 本机静态文件、题库和备份 API；只监听回环地址 | 保留为开发工具；不要直接开放成生产登录服务器 |
 | `/api/auth/session` | 固定测试 `admin`，返回 `authenticated: false` | 改为验证真正会话，不能凭前端显示的名字授权 |
 | SAT `/api/sat-packs` | 将题干和 `solutions.json` 一起提供给浏览器 | 增加学生专用响应，考试前不含标准答案/解析 |
 | SAT 判分与计时 | 浏览器判分；本机时间与存储驱动流程 | 正式模式由后端确认截止时间、模块状态及成绩 |
 | IndexedDB/localStorage | 当前浏览器保存题目、作答和记录 | 作为缓存与断网队列，不能承担跨设备数据库或访问控制 |
-| TOEFL `src/cloud/` | 已有账号、会话、同步、媒体、评分源码及替身测试 | 当前匿名服务未启动它；需接公共身份和正式资源，再单独验证 |
+| `back-end/toefl/src/` | 已有账号、会话、同步、媒体、评分源码及替身测试 | 当前匿名服务未启动它；需接公共身份和正式资源，再单独验证 |
 
 当前 Host/Origin 校验和本机写令牌用来限制开发服务的请求来源，不等于学生登录或管理员授权。模块结束页现在表示本机状态已保存，并不证明发生了网络上传。以后应让“提交中、提交成功、离线待同步”对应真实后端状态；网络失败不能显示已经上传成功。
 
@@ -37,14 +37,14 @@ flowchart LR
 
 | 位置 | 建议保留的职责 |
 | --- | --- |
-| `apps/web/index.html`、`styles.css`、`app.js`、`home-model.js` | 公共首页、目标/报告界面、展示统计；统计原始记录改从当前账号的 API 获取 |
-| `apps/web/sat-bridge.js`、`toefl-bridge.js` | 入口与过渡适配；逐渐接公共 API，不成为权限判断器 |
-| `apps/sat/html/`、`css/`、`js/exam.js`、`content-renderer.js`、`math-tools.js`、`line-reader.js` 等 | 保留考试外观、题型交互、Markdown/LaTeX、工具和前端流程显示 |
-| `apps/sat/js/storage.js` | 缓存和断网待同步队列；记录需按已验证账号隔离，退出时锁定私人缓存 |
-| `apps/sat/js/sat-pack.js`、`sat-session.js` | 内容检查与练习辅助可留；正式判分规则要有后端实现，不能信任浏览器提交的分数 |
-| `apps/sat/vendor/` | 可公开的渲染依赖、字体与许可 |
-| `apps/toefl/src/frontend/` | 现有题型、导航、音频、录音和复盘界面 |
-| TOEFL `bootstrap.js`、`cloud-client.js`、`accounts-client.js` | 虽在 `src/cloud/` 目录，实际运行于浏览器，属于前端客户端；需适配统一 API |
+| `front-end/web/index.html`、`styles.css`、`app.js`、`home-model.js` | 公共首页、目标/报告界面、展示统计；统计原始记录改从当前账号的 API 获取 |
+| `front-end/web/sat-bridge.js`、`toefl-bridge.js` | 入口与过渡适配；逐渐接公共 API，不成为权限判断器 |
+| `front-end/sat/html/`、`css/`、`js/exam.js`、`content-renderer.js`、`math-tools.js`、`line-reader.js` 等 | 保留考试外观、题型交互、Markdown/LaTeX、工具和前端流程显示 |
+| `front-end/sat/js/storage.js` | 缓存和断网待同步队列；记录需按已验证账号隔离，退出时锁定私人缓存 |
+| `front-end/sat/js/sat-pack.js`、`sat-session.js` | 内容检查与练习辅助可留；正式判分规则要有后端实现，不能信任浏览器提交的分数 |
+| `front-end/sat/vendor/` | 可公开的渲染依赖、字体与许可 |
+| `front-end/toefl/` | 现有题型、导航、音频、录音和复盘界面 |
+| `front-end/toefl/clients/` 内的 `bootstrap.js`、`cloud-client.js`、`accounts-client.js` | 原先虽放在 `src/cloud/`，实际运行于浏览器，现已归入前端；仍需适配统一 API |
 
 前端可以承担大多数可见业务交互，后端不必决定每个按钮如何绘制。但“谁能看、谁能改、是否过期、是否提交、正式得分是多少”应由后端核实。前端可以做即时输入校验和分数预览以提高体验；客户端预览不应自动成为服务器认可成绩。
 
@@ -55,7 +55,7 @@ flowchart LR
 建议先在同一仓库新增一个公共 API 服务。以下 `.mjs` 是便于复用现有 TOEFL JavaScript 的文件布局示意；具体选 Worker、普通 Node 或其他运行环境仍需另行确定，不同时建设两套认证服务，也不直接承诺任何免费服务足够。
 
 ```text
-apps/api/
+back-end/api/
   src/app.mjs                      HTTP 路由入口、错误响应、请求编号
   src/auth/sessions.mjs            会话验证、过期、退出及撤销
   src/auth/accounts.mjs            邀请、角色、账号管理、登录保护
@@ -70,11 +70,11 @@ apps/api/
   src/media/service.mjs            图片/音频访问与录音上传确认
   src/storage/                    数据库、私有文件与密钥接口
   migrations/                     可重复执行的数据库结构迁移
-shared/contracts/                 身份与记录信封；题目内容仍各考试独立
-tests/integration/                双账号隔离、越权、重试与跨设备检查
+back-end/shared/contracts/                 身份与记录信封；题目内容仍各考试独立
+back-end/tests/integration/       双账号隔离、越权、重试与跨设备检查
 ```
 
-这些目录尚未创建。现有 `shared/question_schema.py` 和导入/打包脚本属于后端或维护工具，可保留；它们处理的完整题目可能含答案，不可直接当作学生响应。数据库迁移、SQL、服务端评分、媒体主密钥和账号管理实现不应作为浏览器静态文件发布。
+这些目录尚未创建。现有 `back-end/shared/question_schema.py` 和导入/打包脚本属于后端或维护工具，可保留；它们处理的完整题目可能含答案，不可直接当作学生响应。数据库迁移、SQL、服务端评分、媒体主密钥和账号管理实现不应作为浏览器静态文件发布。
 
 TOEFL 的 `worker.mjs`、`account-features.mjs`、`draft-cancellation.mjs`、`assessment.mjs`、SQL 和对应测试可复用机制。它依赖 Worker 的 DB/ASSETS/AI bindings，不能直接当普通 Node 服务启动。应逐步提取公共会话与保存协议、保留来源和测试，而不是同时启用一套 TOEFL 登录和另一套学校登录。
 
@@ -125,7 +125,7 @@ GitHub 仓库用于源码版本、分支、PR 与检查；前后端源码可以�
 
 GitHub Pages 发布静态 HTML/CSS/JS，不能替代正在运行的 Python/Node/Worker API、数据库或私有文件服务。前端静态演示可以放 Pages；真实登录和个人记录仍需另外的后端。GitHub 官方还提示 Pages 不适合密码等敏感交易，因此不建议把这套学校账号平台的正式登录站点建立在 Pages 上。私有仓库的 Pages 可用性还与套餐有关；源码私有不自动代表部署网站只有团队能访问。参考 [GitHub Pages 说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) 与 [使用限制](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)。
 
-当前程序也不能把 `apps/web/` 直接上传 Pages 就完整运行：Python 负责 `/sat/`、`/toefl/` 路由、桥接脚本注入、题库 API 和匿名构建检查；这些不会自动出现在静态托管中。项目型 Pages 默认还有仓库子路径，当前 `/sat/` 等根路径需改为正确部署基址。即使只部署公开演示，也需要明确的静态导出流程。
+当前程序也不能把 `front-end/web/` 直接上传 Pages 就完整运行：Python 负责 `/sat/`、`/toefl/` 路由、桥接脚本注入、题库 API 和匿名构建检查；这些不会自动出现在静态托管中。项目型 Pages 默认还有仓库子路径，当前 `/sat/` 等根路径需改为正确部署基址。即使只部署公开演示，也需要明确的静态导出流程。
 
 更适合的正式结构是同一域名提供静态前端与 `/api/`，后面连接公共身份、数据库和私有文件存储。可评估支持静态页面加函数/API 的托管平台，也可使用受管理服务器；若复用 TOEFL Worker，可评估其运行环境与数据库兼容性。这里只提出结构，不选购、不部署、不配置 DNS。旧部署文档的免费额度不作为当前承诺，选型时再核对。
 

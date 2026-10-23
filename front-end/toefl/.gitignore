@@ -1,0 +1,22 @@
+# Review each new source explicitly; runtime and private data stay ignored.
+*
+!/clients/
+!/integration/
+!/templates/
+!/.gitignore
+!/AGENTS.md
+!/clients/accounts-client.js
+!/clients/bootstrap.js
+!/clients/cloud-client.js
+!/favicon.svg
+!/four-app.js
+!/four-learning.js
+!/four-logic.js
+!/four.css
+!/index.html
+!/integration/entry-links.mjs
+!/templates/accounts.html
+!/templates/register.html
+
+# Never include local operating-system metadata.
+.DS_Store

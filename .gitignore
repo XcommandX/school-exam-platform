@@ -41,6 +41,7 @@ supabase/.temp/
 supabase/.branches/
 
 # Local runtime databases and non-versioned data
+local-data/
 *.db
 *.db-shm
 *.db-wal

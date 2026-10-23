@@ -1,0 +1,10 @@
+# Review each new source explicitly; runtime and private data stay ignored.
+*
+!/.gitignore
+!/ENTRY_INTERFACE.md
+!/QUESTION_FORMAT.md
+!/README.md
+!/source-snapshot.json
+
+# Never include local operating-system metadata.
+.DS_Store

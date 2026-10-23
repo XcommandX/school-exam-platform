@@ -6,7 +6,7 @@
 
 统一首页按 `sat`、`ap`、`toefl`、`vocab` 隔离题库。当前已接入的答题引擎只有 SAT Reading and Writing；其他考试使用同一题集外层约定，等待接入自己的题型、模块和判分器。当前 schema v1 支持单选题；听力音频、口语、作文与多选题需要后续扩展格式和引擎，不能仅改变 `exam` 就认为已支持。
 
-格式定义位于 [`shared/question-set.schema.json`](../shared/question-set.schema.json)，标准库校验和 SAT 兼容转换位于 [`shared/question_schema.py`](../shared/question_schema.py)。后端还会检查 JSON Schema 无法独立表达的关系：模块题量之和、模块时长数量、正确选项范围、题目 ID 所属题集、文字格式范围与表格列数。
+格式定义位于 [`back-end/shared/question-set.schema.json`](../back-end/shared/question-set.schema.json)，标准库校验和 SAT 兼容转换位于 [`back-end/shared/question_schema.py`](../back-end/shared/question_schema.py)。后端还会检查 JSON Schema 无法独立表达的关系：模块题量之和、模块时长数量、正确选项范围、题目 ID 所属题集、文字格式范围与表格列数。
 
 ## 题集与题目
 
@@ -67,7 +67,7 @@ legacy = to_sat_legacy(canonical)
 私有内容目录已被根 `.gitignore` 忽略：
 
 ```text
-private-data/
+local-data/
   question-banks/
     sat/*.json
     ap/*.json
@@ -81,7 +81,7 @@ private-data/
 迁移需要明确提供旧应用目录，在仓库根目录运行：
 
 ```sh
-python3 scripts/migrate_sat_bank.py --source-root /path/to/original-sat-app
+python3 back-end/tools/sat/migrate_sat_bank.py --source-root /path/to/original-sat-app
 ```
 
 脚本默认只读取该目录的 `question-bank/*.json` 及题目引用的 `question-assets` 图片，不读取 HAR、浏览器数据库、练习记录、PDF、备份或 OCR 目录。迁移前确认目的地仍被 Git 忽略，拒绝符号链接及越界图片。题库文件名只含稳定 ID，不带原来的个人整理标签；原“错题”集合中的题目保留为中性命名的补充题集。已存在且相同的内容不会重复写入；需要更新内容时先审核，再显式使用 `--replace`。
@@ -89,7 +89,7 @@ python3 scripts/migrate_sat_bank.py --source-root /path/to/original-sat-app
 额外使用 `--include-examples` 会检查 `data/examples/*.json`，只补充题库中尚未包含的题目，按正文、题干、选项和正确答案的内容摘要去重。原 `data/questions.js` 含有个人姓名配置，不能直接复制；此次在隔离的 JavaScript 环境中仅提取了题目字段，生成上述本机忽略目录内的 `sat-original-seed.json`。迁移脚本自身不执行 JavaScript；通过 `--seed-json` 显式读取经过审核的 JSON。保留这份私有导出后，可重复执行完整迁移：
 
 ```sh
-python3 scripts/migrate_sat_bank.py --source-root /path/to/original-sat-app --include-examples --seed-json private-data/migration-input/sat-original-seed.json
+python3 back-end/tools/sat/migrate_sat_bank.py --source-root /path/to/original-sat-app --include-examples --seed-json local-data/migration-input/sat-original-seed.json
 ```
 
 2026-10-22 的本机完整迁移结果：18 个题集、929 道题（原题库 901 道、原型种子 27 道、独立示例 1 道），以及 36 张被引用的题图。另一个示例的 4 道题已在题库中，未重复导入；剔除 15 个原用户选项字段，未迁移个人练习或错题记录。报告只保存在忽略目录，不写入原题目、原文件路径或个人字段。
@@ -99,5 +99,5 @@ python3 scripts/migrate_sat_bank.py --source-root /path/to/original-sat-app --in
 验证转换逻辑：
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_question_schema.py' -v
+python3 -m unittest discover -s back-end/tests -p 'test_question_schema.py' -v
 ```

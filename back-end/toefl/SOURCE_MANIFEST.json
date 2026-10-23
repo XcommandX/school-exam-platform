@@ -1,0 +1,356 @@
+{
+  "schema_version": 2,
+  "hash_algorithm": "sha256",
+  "manifest_file": "back-end/toefl/SOURCE_MANIFEST.json",
+  "manifest_is_not_self_hashed": true,
+  "scope": "source-only; original anonymous fixtures; not a production deployment",
+  "export_baseline": "docs/toefl/source-snapshot.json",
+  "files": [
+    {
+      "path": "back-end/toefl/.env.example",
+      "sha256": "a4e345f8d61ffa0bb28c464fe85a7fe779dbf57fc80e0b6b44d50a099ac1c9a9"
+    },
+    {
+      "path": "back-end/toefl/.gitignore",
+      "sha256": "34d18723493bbb5cb6ca3a0c908dcf299b1e1558c0c52811c940814e2d026baf"
+    },
+    {
+      "path": "back-end/toefl/AGENTS.md",
+      "sha256": "3a8620e69095e51211ac2b447bb82c1400f42437f2ee182c836bdaee5f8776f7"
+    },
+    {
+      "path": "back-end/toefl/content/task-format.mjs",
+      "sha256": "71909712af281479883509ea9d6ca965f8fd3c9afeafe9444b9c6d028710f764"
+    },
+    {
+      "path": "back-end/toefl/fixtures/anonymous-bank.json",
+      "sha256": "a5ce6211985bd8e04b6ea2deeb7eba62e65d5e0d9decf71c8cd72c697686c5f2"
+    },
+    {
+      "path": "back-end/toefl/fixtures/anonymous-scene.svg",
+      "sha256": "9b67c7b2bb4c3a62960f80d5a1ebca4931f15aa48459508755d8de9a5f6615c3"
+    },
+    {
+      "path": "back-end/toefl/integration/platform-adapter.mjs",
+      "sha256": "5ec5233d117c802d1e1ddd75731eb8c06c21c6b591a33571919ccce5834abf00"
+    },
+    {
+      "path": "back-end/toefl/package-lock.json",
+      "sha256": "212efd22f00f68ae1c57115e7c98bc7a89427649029d07054f549560123e9b1c"
+    },
+    {
+      "path": "back-end/toefl/package.json",
+      "sha256": "79483c0577abc9c4501f43e28c50ea42abc5c91264ce164ca58f1ea845efe81f"
+    },
+    {
+      "path": "back-end/toefl/schemas/task.schema.json",
+      "sha256": "d31aa1ee1c5698482165884da400f77932807e477f1b48178880779fe31883f4"
+    },
+    {
+      "path": "back-end/toefl/scripts/build.mjs",
+      "sha256": "5f17da8d29e3235b6d94c51ec7be7c7f1bd877b8b39e35b5f3dcfe7a686b7c60"
+    },
+    {
+      "path": "back-end/toefl/scripts/check-source.mjs",
+      "sha256": "8702cd9731cfb85e6087dc3bb426c0ea175356961de3ecc4db73f61c92553fd8"
+    },
+    {
+      "path": "back-end/toefl/scripts/preview.mjs",
+      "sha256": "a94a8c15367cdbcd73e23f86c1947070dbf8472653a9d15a50fbb8fe81092fb9"
+    },
+    {
+      "path": "back-end/toefl/scripts/task-files.mjs",
+      "sha256": "9179c43327615e6c3797231c6d52fc8f186f3831d29d1af784256aedc4130eed"
+    },
+    {
+      "path": "back-end/toefl/scripts/test.mjs",
+      "sha256": "46ab67fd89a92ec9543a0cfbf6d1b772e179e3397d39472b9231a491f9cd466a"
+    },
+    {
+      "path": "back-end/toefl/src/account-features.mjs",
+      "sha256": "35d1ff6951d3c54e044f8de3a602de55ec304c7412df19636fc74c1063962a52"
+    },
+    {
+      "path": "back-end/toefl/src/assessment.mjs",
+      "sha256": "cb3bf90ac4cd32994ecbc92b9266f2f81df685c31a91b6b8adcbb9f2da4dcd85"
+    },
+    {
+      "path": "back-end/toefl/src/draft-cancellation.mjs",
+      "sha256": "567f66aee6f5d905f897f33263ce877190ad0170c7b6c7c2a9b62527f8d45bde"
+    },
+    {
+      "path": "back-end/toefl/src/examples.mjs",
+      "sha256": "44dd2a412221903f0f78830afb399dfef52cdc37d9d958141aade173cf3c7b78"
+    },
+    {
+      "path": "back-end/toefl/src/migration-invitations.sql",
+      "sha256": "279a967e1866713af3f62782a75c69f1c66c19bf2a15592c1cc24a3f29fd6695"
+    },
+    {
+      "path": "back-end/toefl/src/schema.sql",
+      "sha256": "8a210689bf8ad06dbcf4c814942de7714746061b22733ece0b5765569809080b"
+    },
+    {
+      "path": "back-end/toefl/src/worker.mjs",
+      "sha256": "546d194e538f80b997a7f23fb9935010aa7ad3d8059bdf079736f89061b8b1ca"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-account-features.mjs",
+      "sha256": "08f9ab25e96701aabd58dc091841d0ee27d537450541bff0cff3e177757bf41b"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-accounts-client.mjs",
+      "sha256": "b08f8d68e100407c039242df826c35a744e3995db8d78d4e266ee4b443b9b192"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-assessment-client.mjs",
+      "sha256": "6062c774909b614c03ac6802a2b127b6da219563ade47bfc497ec5ec87a0cc0c"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-assessment.mjs",
+      "sha256": "b2249180d669a0a6dd774031e4dccfe539881b881bce81aca4e0f40c56f14975"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-draft-cancellation.mjs",
+      "sha256": "387002e02533e94bd5e2528a1fcc2a67acb7bb17839b646440497cd26d99df51"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-examples.mjs",
+      "sha256": "99d3a21cd8ef4f96715bade3ba278e864d8b7abae09e8ddfad3f0f0938f752f3"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-groq-adapter.mjs",
+      "sha256": "a7f44c2b827afdef1a33fbb73fdf1a7865499516fc0b67497a555966b7b5d6c1"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-recording-uploads.mjs",
+      "sha256": "7eddcb2dc8d102c93a12cef2f60199df9c6937677179f2b9b8587549222249c0"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-recording-versions.mjs",
+      "sha256": "9f9184be5e59e2770afa4090f680747a1ddf4839b6914126d791589f74912648"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-registration-client.mjs",
+      "sha256": "1af644b3e012f58c4b1976191d32b9a74dfa7c2e4e0a50ba187448fde2df385f"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-sync-devices.mjs",
+      "sha256": "40f9cdb2922fcfa3d8dbfc7487881e8140d09ddf8bd5b87bb3e562f55314e0b0"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-sync-queue-storage.mjs",
+      "sha256": "3b0ab8207866a9ecc91720194f6631800230304848ec4339c057e6e56a7a49c2"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-sync-rebase.mjs",
+      "sha256": "a2e604887aa63d38bfa3efdbf038f98562640fd66d3a3620a9c74d1a35a10996"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-sync.mjs",
+      "sha256": "c67e5ec59e4c13261a35ad7b517289b2144306625a82389ad24900fba3fd6e27"
+    },
+    {
+      "path": "back-end/toefl/tests/cloud/test-worker.mjs",
+      "sha256": "3472cad0efd4006231f7543c892a9580a464cb9b51ebfe059b0291845942d1ff"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-ai-retry-progress.cjs",
+      "sha256": "d177c9836740b7f2eed9218c22a234224607d78d9f5c59e246190e6b9aea4157"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-batch-reliability.cjs",
+      "sha256": "62da5015f0903f7ef3ea3d7896aac0ace50ff9cadc30fa82ce36d3a12f1cae08"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-display-settings.cjs",
+      "sha256": "f47d379b8b95e39a6f9e2b51c26bcc47f9bedffd0263cb4eed1834027350d623"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-entry-navigation.cjs",
+      "sha256": "dba4361fc36ffe4377d2a2d9ae6338aa6585f16fe09ac2d83ff0ffd5464d35fe"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-fill-theme.cjs",
+      "sha256": "8b7fd0bbcf6963e310e6b2829dd5425404cdf1062be5e3f4fa57f747dbccb2b1"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-flow-audio-retry.cjs",
+      "sha256": "15314783fa218944ea279041176c91a35d82c73f95009a95aa39c1ee7d66ea91"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-grading-edge-cases.cjs",
+      "sha256": "035963a4b8455f5001e1b3890dc64f7e5cd5b050726cd3517140c735f27492cd"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-history-completion.cjs",
+      "sha256": "1ccd7cb794a7d44c87d05da867f5751df3c3c2e96a690df15e75fb74ef3c42d7"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-learning-comfort.cjs",
+      "sha256": "61b0ed99fcd88a7071c25ecb33feecd944822c1e9437e9899ce2d28fbe0aa187"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-learning-dialog-lifecycle.cjs",
+      "sha256": "987c67c0352135c87069066fe6d489f0d7ca7eb21bacdd6de19924d5bff70fb8"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-learning-plan.cjs",
+      "sha256": "1b995f04e41851d993c8b0e676d75ecaf649aa555bcbb6a64e6e90e20a15fda6"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-learning.cjs",
+      "sha256": "f00e13dca564dc7819d522a425675f185450a94c902a0a4b92b4901df053ea97"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-long-term-progress.cjs",
+      "sha256": "a1c7348d5b40b070b7ed747a63edff879dc5f4c0e83ba728447c492bfbb1b2c0"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-next-flow.cjs",
+      "sha256": "e66af7edd7a1c084b9ee54a050016aee8dad41571796ad351990e74b415a67ba"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-practice-comfort.cjs",
+      "sha256": "134a1323d3ccef71662c42396d18dfdc66e05934fe1e77b65d9e6d08db7168fc"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-record-progress.cjs",
+      "sha256": "57655d686b31ab4e2e90d6ffed1ce9007e8c9e7037e4901edee7b46f23ee5eae"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-recording-commit.cjs",
+      "sha256": "8a39d3410027e74495535fe0b3546a9141fd7fadfb431acfcbb3c472d8d17210"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-recording-lifecycle.cjs",
+      "sha256": "fdf8f89c81e8617207dd55858a7ed4644f68df960f7ffbd4dad01a78fead2967"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-recording-refresh.cjs",
+      "sha256": "32343b34690ad58c10b4416c14dc51324373edfe5e2834e7984a1ca139fd2c8d"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-reference-layout.cjs",
+      "sha256": "9a8413739830f69244c9fb4b2974ab2f11b68cfed53360215901ed6b9ca0733a"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-review-usability.cjs",
+      "sha256": "c593f7bc43c8ad702b7dc4ffe7d3d92bd90cad9fdf1679d1623d59d3e7377306"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-site-usability.cjs",
+      "sha256": "154b8e3019a9f4b3698922faf751d335e9c8bf4b7fca6d52270ff0dc42090873"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-special-review-sequence.cjs",
+      "sha256": "872840c176a49423bd9e2484fa1a73fbbe2d36f31810dc50a957b13e99049d31"
+    },
+    {
+      "path": "back-end/toefl/tests/frontend/test-vocabulary-one-click.cjs",
+      "sha256": "da2d9488576f3fd6b526ee063ebf6c0697e9583dc0b13b30a51215ab27cbba8c"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-entry-links.mjs",
+      "sha256": "43e5d2ac05d2f083d7f8cc6ba06d81b335be778965abbbcc5433cdcc4d3b63dc"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-platform-adapter.mjs",
+      "sha256": "8537d317a604279150796f4ffde57a7b026d74642ee4b631bbf8c25417f0c278"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-preview-boundary.mjs",
+      "sha256": "291a9cc73b35fd1ec72a0ceec58e5044b823e2ba392d982ce36d450f3507da36"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-source-publication.mjs",
+      "sha256": "9e0c66ee2472b6054ba9d113b065c7412fafc8b142534d72522636989fd88fe4"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-task-format.mjs",
+      "sha256": "6168e87c2af6d3f5370a224fd25ee01c4c200403cb079d9523c8a12e3ad7a759"
+    },
+    {
+      "path": "docs/toefl/.gitignore",
+      "sha256": "6e97a3b72dd286872449765ea5242c171989b836f7858a42b59bb48904780665"
+    },
+    {
+      "path": "docs/toefl/ENTRY_INTERFACE.md",
+      "sha256": "091e484fba2a9317b3a69592b586fc04a48c734c0e64a26143e4766ac51274e5"
+    },
+    {
+      "path": "docs/toefl/QUESTION_FORMAT.md",
+      "sha256": "4d27e1433735db85c34ba67b81eab625bb69f57cd31d92515ed7a3f9508e6359"
+    },
+    {
+      "path": "docs/toefl/README.md",
+      "sha256": "8676c4f7a2c1a2c36e95f872fc942575d913dc90666858a38d130ea7893a3e2c"
+    },
+    {
+      "path": "docs/toefl/source-snapshot.json",
+      "sha256": "73c650325b81aab9ca83609a0ce807a50057ef0e07c2063cd1d233d9042e4d68"
+    },
+    {
+      "path": "front-end/toefl/.gitignore",
+      "sha256": "1e78a70c3e31514ffdee43ee3aa1188222e48c6982ff5933a2ba1ee3ee356a21"
+    },
+    {
+      "path": "front-end/toefl/AGENTS.md",
+      "sha256": "c5504f2249959a70dc7f03ee3e747a6fc70e8be6e118ef6c4280f0d765052beb"
+    },
+    {
+      "path": "front-end/toefl/clients/accounts-client.js",
+      "sha256": "ad6528f17a4e1f8c73348c7d2c63e1efc071dde270c8674cfb41f68c7264e185"
+    },
+    {
+      "path": "front-end/toefl/clients/bootstrap.js",
+      "sha256": "6c5412d1b3da2175268e3ee41d236bacc5cf39daa0d314eb193b6896c9383846"
+    },
+    {
+      "path": "front-end/toefl/clients/cloud-client.js",
+      "sha256": "166477d005121498ea2e72feff82511d35a68ed42b451e52e0d140bb523a60b9"
+    },
+    {
+      "path": "front-end/toefl/favicon.svg",
+      "sha256": "1f0523246193e88109cb3e08a738b76c3a3c50b0bc2cd858a56e56dc7714d101"
+    },
+    {
+      "path": "front-end/toefl/four-app.js",
+      "sha256": "46e2fb5e30f19066c3fb0ab63c751198638962144d2e142d6998a37ca3ad5d08"
+    },
+    {
+      "path": "front-end/toefl/four-learning.js",
+      "sha256": "62848698558ccb2d1eb460b3f5e6b9f3e6afb07e65c2b3af6ad12e8f19a482e5"
+    },
+    {
+      "path": "front-end/toefl/four-logic.js",
+      "sha256": "737de159c963df2cf1df5536b81ef855843efc12ad16119123f38d35ae279ec8"
+    },
+    {
+      "path": "front-end/toefl/four.css",
+      "sha256": "80d32fbcfd2eb23358fcba99c8a36db07965b34b6b5d02a6f8242b1aeb33a853"
+    },
+    {
+      "path": "front-end/toefl/index.html",
+      "sha256": "f2c865dcf3b4469df4ee33ab198b8fb616927f8ea447f7203246f7c7717879d3"
+    },
+    {
+      "path": "front-end/toefl/integration/entry-links.mjs",
+      "sha256": "bf311c4d0620ce07405479bf008fddaaf23cb58ae898fe6a33b4e6f97a60e6ec"
+    },
+    {
+      "path": "front-end/toefl/templates/accounts.html",
+      "sha256": "aeb2d115a4d6448997f64bff7561af809842b1d28903fbe18752854e11d5e85a"
+    },
+    {
+      "path": "front-end/toefl/templates/register.html",
+      "sha256": "c87dc9f29dda13e7ce2fddecea348e4cfe83e4e9b0b9f2a09b3d9fe49b22219f"
+    }
+  ],
+  "path_base": "repository-root",
+  "source_directories": [
+    "front-end/toefl",
+    "back-end/toefl",
+    "docs/toefl"
+  ]
+}

@@ -5,19 +5,18 @@
 需要 Python 3.10+。从源码构建 TOEFL 匿名样例还需要 Node.js 22.13+，不需要安装第三方 Python 或 npm 包。从仓库根目录运行：
 
 ```sh
-python3 scripts/serve_platform.py --port 8888
+python3 back-end/server/serve_platform.py --port 8888
 ```
 
 打开 <http://127.0.0.1:8888/>。macOS 可双击根目录 `Start Study Platform.command`；终端窗口需要保持打开。默认端口 8888 与独立 SAT 原型的 8876 分开。Windows 可使用 `py -3`，本轮未验证 Windows 双击启动。
 
-服务启动时自动查找 `PATH` 中的 Node.js，并调用 `apps/toefl/scripts/build.mjs` 构建匿名预览。也可先手动构建：
+服务启动时自动查找 `PATH` 中的 Node.js，并调用 `back-end/toefl/scripts/build.mjs` 构建匿名预览。也可先手动构建：
 
 ```sh
-cd apps/toefl
-node scripts/build.mjs
+node back-end/toefl/scripts/build.mjs
 ```
 
-构建结果为本机忽略提交的 `apps/toefl/dist/`。没有 Node.js 时，现有且满足匿名构建标记与文件白名单检查的 `dist/preview` 仍可使用；没有可用构建时，`/toefl/` 返回未就绪提示，首页和 SAT 仍可使用。Python 服务不启动托福云端 Worker，不连接真实账号、正式数据库或外部 AI。
+构建结果为本机忽略提交的 `local-data/builds/toefl/`。没有 Node.js 时，现有且满足匿名构建标记与文件白名单检查的 `local-data/builds/toefl/preview/` 仍可使用；没有可用构建时，`/toefl/` 返回未就绪提示，首页和 SAT 仍可使用。Python 服务不启动托福云端 Worker，不连接真实账号、正式数据库或外部 AI。
 
 ## 页面与功能
 
@@ -39,13 +38,13 @@ node scripts/build.mjs
 
 SAT 管理页面不显示重复的顶部 Overview / Questions / Practice / Wrong Book 导航组；入口保留在概览卡片。各管理子页使用醒目的 Overview 回退按钮，保持悬浮、按下与键盘焦点反馈。
 
-SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/sat/`。本轮只更新其非考试管理页面，新增主题限定于 `.app-shell[data-sat-management]`；`apps/sat/js/app.js` 只在相应管理视图设置该标记。因此不能再概括为“SAT 的所有 JS、CSS 完全没改”。
+SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front-end/sat/`。本轮只更新其非考试管理页面，新增主题限定于 `.app-shell[data-sat-management]`；`front-end/sat/js/app.js` 只在相应管理视图设置该标记。因此不能再概括为“SAT 的所有 JS、CSS 完全没改”。
 
-从开始练习后的 `ready`、`preparing`、`exam`、`check`、`moduleOver`、`saving`、`congrats` 阶段不应用管理主题，原有考试实现继续保护；2026-10-23 截图授权的数学与休息流程例外见 [SAT 数学与整套练习](sat-math-exam.md)。独立的 `apps/web/sat-bridge.js` 负责统一入口和存储名称映射。当前 SAT 已支持 Reading & Writing 与 Math，没有自适应分流或官方量尺分。
+从开始练习后的 `ready`、`preparing`、`exam`、`check`、`moduleOver`、`saving`、`congrats` 阶段不应用管理主题，原有考试实现继续保护；2026-10-23 截图授权的数学与休息流程例外见 [SAT 数学与整套练习](sat-math-exam.md)。独立的 `front-end/web/sat-bridge.js` 负责统一入口和存储名称映射。当前 SAT 已支持 Reading & Writing 与 Math，没有自适应分流或官方量尺分。
 
 ### TOEFL 接入边界
 
-本地整合版本使用 `toefl` 分支 `98aa9c7` 的 `apps/toefl/` 源码。原前端与云端源文件保留在模块内；统一平台只服务本地匿名构建，并在入口注入独立的 `apps/web/toefl-bridge.js`，映射存储名称与录音库。URL 路由与账号范围内的页面恢复由模块原生实现负责，桥接层不再抢写导航。链接合同见 [TOEFL 页面入口约定](../apps/toefl/ENTRY_INTERFACE.md)，本轮合并及接口问题见 [本地整合报告](local-integration-2026-10-23.md)。
+本地整合版本使用 `toefl` 分支 `98aa9c7` 的 `back-end/toefl/` 源码。原前端与云端源文件保留在模块内；统一平台只服务本地匿名构建，并在入口注入独立的 `front-end/web/toefl-bridge.js`，映射存储名称与录音库。URL 路由与账号范围内的页面恢复由模块原生实现负责，桥接层不再抢写导航。链接合同见 [TOEFL 页面入口约定](toefl/ENTRY_INTERFACE.md)，本轮合并及接口问题见 [本地整合报告](local-integration-2026-10-23.md)。
 
 匿名构建使用 `fixtures/anonymous-bank.json` 的原创样例；音频为合成测试提示音，场景图为原创 SVG。已提供四科和学习页面入口，不能将这些样例、套题页或已有评分源码描述为真实题库、完整官方模考或已上线的 AI 评分。私有托福题库、原音频、正式云端资源、登录和同步尚未接入统一服务。
 
@@ -69,9 +68,9 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/
 
 2026-10-23 指定测试集合已改为新协议 SAT 包：98 题，原 929 题已备份归档。新包、原图和备份仍只在本机忽略目录。新包协议、转换与恢复说明见 [SAT 数学与整套练习](sat-math-exam.md)，下文首次迁移数量保留历史背景。
 
-源码在 `apps/web/`、`apps/sat/`、`apps/toefl/`、`shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
+源码在 `front-end/web/`、`front-end/sat/`、`back-end/toefl/`、`back-end/shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
 
-真实题库在 `private-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `private-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
+真实题库在 `local-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `local-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
 
 本次本地迁移仅保留原 SAT 题目及其标准答案、解析、格式、模块信息与必要图片。逐字段白名单去除已选答案、学生信息和任意个人元数据；不复制 HAR、PDF、OCR 模型、备份、个人练习或浏览器记录。原始目录不修改。带个人练习含义的来源名称改为中性补充题集名称，题目内容保留。
 
@@ -85,13 +84,13 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/
 
 ## 本地迁移
 
-使用迁移脚本的 `--help` 查看参数，显式提供原 SAT 根目录；迁移是独立操作，服务启动时不会自动读取桌面或原项目。不要复制原项目整目录，也不要 force-add `private-data/`。
+使用迁移脚本的 `--help` 查看参数，显式提供原 SAT 根目录；迁移是独立操作，服务启动时不会自动读取桌面或原项目。不要复制原项目整目录，也不要 force-add `local-data/`。
 
 ```sh
-python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder" --include-examples
+python3 back-end/tools/sat/migrate_sat_bank.py --source-root "/path/to/original-sat-folder" --include-examples
 ```
 
-对没有真实题库的开发副本，可从 SAT 题库页导入 `apps/sat/data/examples/synthetic-practice.json` 做基础验证。
+对没有真实题库的开发副本，可从 SAT 题库页导入 `front-end/sat/data/examples/synthetic-practice.json` 做基础验证。
 
 原型内置 JS 种子需先导出为只含题目的 JSON，再用 `--seed-json <sanitized-seed.json>` 显式导入；不得复制包含姓名配置的完整 JS。迁移输入同样存于被忽略的本地目录。
 
@@ -119,11 +118,11 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 ## 验证
 
 ```sh
-python3 -m unittest discover -s tests -v
-node tests/home-model.test.cjs
+python3 -m unittest discover -s back-end/tests -v
+node back-end/tests/home-model.test.cjs
 ```
 
-TOEFL 模块检查在 `apps/toefl/` 内执行：
+TOEFL 模块检查在 `back-end/toefl/` 内执行：
 
 ```sh
 node scripts/check-source.mjs

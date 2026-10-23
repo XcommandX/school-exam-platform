@@ -36,6 +36,15 @@ Reference 包含圆、矩形、三角形、勾股定理、两类特殊直角三�
 
 完整测试集合首页提供“全套模考”。当前测试配置为英语 27+27 题、数学 22+22 题，模块分别为 32、32、35、35 分钟。普通自定义练习仍显示实际选题数量，不补假题、不宣称小样包是完整官方试卷。
 
+配置显式记录总 `questionCount: 98`，`sections` 中读写为 54 题/2 模块、数学为 44 题/2 模块，每个模块也有独立 `questionCount`。数量需与有序引用一致，不能只依靠题型包中的题量推断模块分界。
+
+| 科目与模块 | 题数 | `durationSeconds` |
+| --- | --- | --- |
+| Reading & Writing 1 | 27 | 1920 |
+| Reading & Writing 2 | 27 | 1920 |
+| Math 1 | 22 | 2100 |
+| Math 2 | 22 | 2100 |
+
 检查页的 `Next` 不再弹出结束确认，但仍先显示 `This Module Is Over` 模块结束页，再进入下一模块或休息；手动提交与自动超时保持一致。模块结束页不计入作答用时，刷新可恢复。数学最后一个模块仍走原来的保存与全套完成流程。当前保存仅在本机，模块结束页不表示已经上传云端。
 
 休息倒计时固定从 600 秒开始；练习中可以随时点击 `Resume Testing` 提前结束休息，到零后按钮文字变为 `Resume Testing Now`。首次点击进入独立黑底等待页，标题为 `Resume Testing Now`，提示 `Your testing timer has not started counting down yet.`；再次点击黄色 `Resume Testing` 才启动数学第一模块及完整计时。休息截止时间和等待阶段 `section_ready` 均随运行状态保存，刷新不重置休息或提前启动数学。休息与等待都不计入作答用时。
@@ -47,7 +56,7 @@ Reference 包含圆、矩形、三角形、勾股定理、两类特殊直角三�
 用户明确指定 `耕读合集/测试/26年3月美国A卷.json` 作为唯一可用测试集合，并要求先备份、清除原有集合。原始 JSON 保持未改，已转换为上面的 SAT 专用新协议，而不是旧 v1 或耕读 HTML 协议。
 
 ```text
-private-data/sat-packs/
+local-data/sat-packs/
   active.json
   gengdu-2026-03-us-a/
     assessment.json
@@ -59,47 +68,55 @@ private-data/sat-packs/
 
 实际转换结果：54 道读写四选一、32 道数学四选一、12 道数学填空，共 98 题；保留 67 个 `latex-data` 公式和 11 处上下标；丢弃 61 个编辑器 textarea。16 份原图按原 SHA256 保存，另两张源 HTML 表格按明确格值排为静态 SVG，未从图像猜测数据或新增图表数据协议。
 
+完整离线包在本机 `local-data/exports/gengdu-2026-03-us-a-sat-full-offline.zip`，附同名 `.sha256`。ZIP 带 `active.json`、有序 assessment、三个题型包、全部 18 份资源、中文说明与逐文件校验清单。打包器严格检查 assessment 的 `schemaVersion: "sat-assessment/0.1-draft"`、显式题量及引用完整性。重复打包命令：
+
+```sh
+python3 back-end/tools/sat/package_sat_bundle.py --replace
+```
+
+离线恢复时将压缩包内容解压为 `local-data/sat-packs/active.json` 与同级集合目录，再启动统一服务并点“全套模考”。浏览器的文件夹导入只导入题型包，不恢复整套 assessment；ZIP 不能直接拖入浏览器恢复完整模考。当前本机已经配置好活动集合，无需重新导入。
+
 来源 98 个答案全部标为 needs-review；98 道题均缺解析，明确保存 missing。4 道数学题存在重复选项或 LaTeX 属性与内部显示 DOM 冲突，保留来源并记录在私有 conversion-report 中，不擅自猜改或升级为已审核。它们在数学第一模块的第 3、14、17、22 题。
 
-原有 18 集、929 题与 36 张图已备份到本机 `private-data/backups/sat-before-math-20261023-152950/`，题库 JSON 从活动旧库目录移出。备份清单保存逐文件摘要；旧图片继续保留以支持既有历史复盘。真实试题、图片、转换结果和备份全部被 Git 忽略。
+原有 18 集、929 题与 36 张图已备份到本机 `local-data/backups/sat-before-math-20261023-152950/`，题库 JSON 从活动旧库目录移出。备份清单保存逐文件摘要；旧图片继续保留以支持既有历史复盘。真实试题、图片、转换结果和备份全部被 Git 忽略。
 
 浏览器遇到新集合时，先经本机服务成功备份旧 sources/questions/attempts/wrongBook 与运行状态，再软归档旧活动题库并导入新集合。历史复盘保留，旧中断练习不再恢复，旧错题不混入新活动题库；同一集合不重复归档。用户主动删除的题集或单题不会被自动同步复活。无法确认备份成功时不清理缓存。
 
 重复转换命令（只写本机忽略目录）：
 
 ```sh
-python3 scripts/convert_gengdu_sat.py --replace --activate
+python3 back-end/tools/sat/convert_gengdu_sat.py --replace --activate
 ```
 
 同一题目修订不可覆盖已导入的不同内容。需要修订题目或转换结果时，应提升修订或使用新的 collection ID，再进行审核导入；不能靠重复执行覆盖已保存历史。
 
-文件备份恢复时先停止本机服务，保留当前新集合，将备份的 `question-banks-sat/` 复制回旧题库位置，并撤销或改指 `active.json`。浏览器快照位于 `private-data/backups/<collectionId>/browser-<sha256>.json`；包含本机历史记录，不应提交或公开。恢复操作应单独执行并核对目标，本文没有自动覆盖恢复按钮。
+文件备份恢复时先停止本机服务，保留当前新集合，将备份的 `question-banks-sat/` 复制回旧题库位置，并撤销或改指 `active.json`。浏览器快照位于 `local-data/backups/<collectionId>/browser-<sha256>.json`；包含本机历史记录，不应提交或公开。恢复操作应单独执行并核对目标，本文没有自动覆盖恢复按钮。
 
 ## 接口与依赖
 
-统一本机服务沿用 `python3 scripts/serve_platform.py --port 8888`。独立 SAT 服务仍可使用 README 命令及包目录手动导入；默认指定测试集合的自动读取由统一服务实现。
+统一本机服务沿用 `python3 back-end/server/serve_platform.py --port 8888`。独立 SAT 服务仍可使用 README 命令及包目录手动导入；默认指定测试集合的自动读取由统一服务实现。
 
 - `GET /api/sat-packs`：只读取 active.json 指向集合的已声明包文件，检查协议、路径、资源摘要、MIME 与静态 SVG。
 - `POST /api/sat-library-backup`：校验回环 Host、同源 Origin 与本机随机 token 后保存快照；返回确认与摘要。备份目录没有静态公开路由。
 - `/api/platform/catalog` 的 SAT 统计包含新包；`/api/question-bank` 保留旧 v1 兼容职责。没有修改 TOEFL 的题目协议。
-- 本地内置 Marked 18.1.1、DOMPurify 3.4.17、KaTeX 0.19.0 与所需字体；版本摘要及完整许可见 `apps/sat/vendor/`。页面运行不依赖远程 CDN 或新增 npm/Python 安装，也不新增付费服务。
+- 本地内置 Marked 18.1.1、DOMPurify 3.4.17、KaTeX 0.19.0 与所需字体；版本摘要及完整许可见 `front-end/sat/vendor/`。页面运行不依赖远程 CDN 或新增 npm/Python 安装，也不新增付费服务。
 
 ## 验证方式与实际结果
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_*.py' -v
-node tests/sat-pack.test.cjs
-node tests/sat-session.test.cjs
-node tests/sat-storage.browser.cjs
-node tests/sat-content.test.cjs
-node tests/math-tools.test.cjs
-node tests/sat-math.browser.cjs
-node tests/sat-annotations.browser.cjs
+python3 -m unittest discover -s back-end/tests -p 'test_*.py' -v
+node back-end/tests/sat-pack.test.cjs
+node back-end/tests/sat-session.test.cjs
+node back-end/tests/sat-storage.browser.cjs
+node back-end/tests/sat-content.test.cjs
+node back-end/tests/math-tools.test.cjs
+node back-end/tests/sat-math.browser.cjs
+node back-end/tests/sat-annotations.browser.cjs
 ```
 
 浏览器脚本需要已有 Playwright 与 Chrome，仅用于开发检查，不是网站运行依赖。无这些工具时，不应声称浏览器检查已执行。
 
-本轮 Python 共 65 项通过，题目包与组卷 Node 检查共 34 项通过。本机源码白名单导出实际生成 103 个文件，102 条文件摘要匹配，60 份字体字节与原依赖一致，脚本、样式及字体引用齐全，且不含真实题库、题图、备份或 `.DS_Store`。
+首次接入时 Python 共 65 项通过，题目包与组卷 Node 检查共 34 项通过；四主体目录迁移后，Python 全量 73 项再次通过，9 份平台/SAT Node 与浏览器检查均通过。本机源码白名单导出在迁移前实际生成 103 个文件，102 条文件摘要匹配，60 份字体字节与原依赖一致；迁移后又验证新布局导出与独立服务的数据隔离。脚本、样式及字体引用齐全，导出不含真实题库、题图、备份或 `.DS_Store`。
 
 本轮在 macOS Chrome 的独立测试上下文实际验证了数学布局和两工具组合、Reference、图片缩放/抓手/pinch/全屏、全屏图进入检查页后的清理、SPR 保存恢复/判分/错题/复盘、完整四模块流程、检查页 Next 无确认弹窗但保留模块结束页、自动超时模块结束页、模拟时钟的十分钟休息、提前继续及刷新恢复、独立数学等待页与第二次 Resume 后才计时、电量已支持/未知状态，以及旧英语高亮与 Notes 回归。英语普通图片在 1440px 和 700px 视口及复盘中均保留原创资源 520×190 的原始尺寸，未挂数学工具。已目检原创样题的数学、Reference 双开、填空、休息、数学等待和英语图片页截图。
 

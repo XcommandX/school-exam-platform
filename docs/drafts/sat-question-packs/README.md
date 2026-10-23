@@ -25,6 +25,10 @@ assets/            实际图片；离线导出必须带齐
 
 不要求每个专题题库附完整 `assessment.json`。正式试卷另保存模块、计时与 `{packId, packRevision, itemId, itemRevision}` 引用；包内数组位置只是默认浏览顺序。自适应路由、官方量尺分、计算器与 Desmos 接入不属于这次格式实现。
 
+完整模考使用独立的 `sat-assessment/0.1-draft` 配置，将不同题型包组合为有序模块。它显式保存总 `questionCount`、各 `sections` 的 `moduleCount/questionCount`，以及每模块的 `section/moduleNumber/questionCount/durationSeconds/items`。这些数量必须与实际引用一致；每个引用绑定包与题目的修订，不能因数组排序改变原卷题号。当前本机指定卷为读写 27+27、数学 22+22，共 98 题；三个题型包仍分别存放。
+
+`back-end/tools/sat/package_sat_bundle.py` 可将完整 assessment、三个题型包、资源和活动配置包装为离线 ZIP，并核对版本、数量、引用与摘要。题型包文件夹导入和完整模考配置恢复是不同操作，具体恢复路径见 [SAT 数学与整套练习](../../sat-math-exam.md)。真实完整卷只在忽略的 `local-data/`，本目录保留原创结构样例。
+
 ## 身份与题目
 
 - `schemaVersion` 是协议版本，`revision` 是从 1 起算的内容修订；修改内容不重新生成 ID，而是增加修订。`id` 不来自数组位置、文件名或题干摘要。
@@ -91,7 +95,7 @@ assets/            实际图片；离线导出必须带齐
 
 ```sh
 python3 docs/drafts/sat-question-packs/validate_examples.py
-python3 -m unittest discover -s tests -p 'test_sat_pack_draft.py' -v
+python3 -m unittest discover -s back-end/tests -p 'test_sat_pack_draft.py' -v
 ```
 
 校验范围是此最小草案的字段、引用与资源完整性，不是生产导入器、Markdown/数学渲染或完整官方考试规则验证。完整比较与耕读资源整理情况见 [SAT 格式比较与新草案](../../sat-question-package-draft.md)。

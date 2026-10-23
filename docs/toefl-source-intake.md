@@ -4,14 +4,14 @@
 
 ## 范围与运行
 
-`apps/toefl/` 保存原托福前端、Worker、录音 / 同步 / 评分逻辑和既有回归。源码原导出基线为 2026-10-21，保留在 `source-snapshot.json`；10-22 的专项复习修复通过 Git 提交追踪。当前交付文件摘要与白名单见 `SOURCE_MANIFEST.json`。这是可在本地继续开发的源码接入，尚未成为统一平台的正式部署包。
+`back-end/toefl/` 保存原托福前端、Worker、录音 / 同步 / 评分逻辑和既有回归。源码原导出基线为 2026-10-21，保留在 `source-snapshot.json`；10-22 的专项复习修复通过 Git 提交追踪。当前交付文件摘要与白名单见 `SOURCE_MANIFEST.json`。这是可在本地继续开发的源码接入，尚未成为统一平台的正式部署包。
 
 Node.js >=22.13，无第三方 npm 依赖。在仓库根目录执行：
 
 ```sh
-node apps/toefl/scripts/check-source.mjs
-node apps/toefl/scripts/test.mjs
-node apps/toefl/scripts/preview.mjs
+node back-end/toefl/scripts/check-source.mjs
+node back-end/toefl/scripts/test.mjs
+node back-end/toefl/scripts/preview.mjs
 ```
 
 预览为 `http://127.0.0.1:8788/`，仅监听本机。构建生成 `dist/preview` 和内存回归所需的 `dist/cloud-test`；二者都忽略提交。配置名称与用途见模块 README / `.env.example`；匿名预览不需要密钥。
@@ -26,7 +26,7 @@ node apps/toefl/scripts/preview.mjs
 
 ## 与 SAT 的合并方式
 
-本次仅对照 `sat` 提交 `4861b7a` 的格式，没有将该分支的文件或历史合入托福分支。托福文件集中在 `apps/toefl/`，SAT 保持独立。共同说明文件保留当前 main 的基础版本，托福的运行方式、配置、适配草案和验证范围集中在本记录及模块 README / AGENTS。
+本次仅对照 `sat` 提交 `4861b7a` 的格式，没有将该分支的文件或历史合入托福分支。托福文件集中在 `back-end/toefl/`，SAT 保持独立。共同说明文件保留当前 main 的基础版本，托福的运行方式、配置、适配草案和验证范围集中在本记录及模块 README / AGENTS。
 
 这样两科可分别提交互不重叠的模块目录。源码合并之后，再由集成任务更新根目录的阶段状态、统一入口和公共契约；main 的初始协作说明不能视为本模块的最新功能清单。本次模块接入没有确定新的公共架构，适配函数仍遵循现有架构草案。
 

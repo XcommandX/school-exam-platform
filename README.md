@@ -1,85 +1,69 @@
 # School Exam Platform
 
-2026-10-23 本地整合：已在 `codex/local-integration` 合并最新 `main` 与 `toefl 98aa9c7`，采用截图确认的绿色 TOEFL 首页，并修复旧桥接路由和 SAT 待审答案的首页统计兼容问题。具体冲突、接口、样式及实际验证见 [本地整合报告](docs/local-integration-2026-10-23.md)；本轮尚未推送或合入 `main`。
+校内 SAT / TOEFL 练习平台。当前是本机测试版本；统一身份、正式云端同步和部署尚未启用。
 
-2026-10-23：SAT 新题目包、Markdown/LaTeX、数学选择/填空、Reference、图片工具、电量和整套练习已接入；计算器只提供入口与布局移动。当前本机仅启用从“26年3月美国A卷”转换的 98 题测试集合，原 929 题已备份归档；真实资源与备份不进 Git。入口、转换、审核限制及验证见 [SAT 数学与整套练习](docs/sat-math-exam.md)。下文 2026-10-22 接入状态保留历史背景，以这份更新为准。
+## 项目结构
 
-面向校内约 150 名学生的标化考试刷题平台。目标是将已有 SAT、托福刷题功能整合到统一网址，提供统一登录和云端答题记录，由约三位开发者使用 Codex 协作维护。
+```text
+front-end/                  浏览器代码：页面、样式、题型交互和渲染
+  web/                      Study Space 统一首页
+  sat/                      SAT 英语、数学、模考与复盘
+  toefl/                    TOEFL 界面、浏览器客户端和页面模板
+back-end/                   本机服务、托福后端源码、维护工具与检查
+  server/                   统一本机 Python 服务
+  toefl/                    Worker 源码、匿名构建、题型协议及模块测试
+  tools/sat/                SAT 导入、转换、打包、源码导出和独立服务
+  shared/                   公共校验与旧题库兼容工具
+  tests/                    平台和 SAT 检查
+docs/                       共享说明、格式合同、样式参考与设计讨论
+local-data/                 仅本机：真实题库、媒体、记录备份、参考资料和产物
+```
 
-## 当前状态
+`local-data/` 被整体忽略，不进入 GitHub。GitHub 的三个主体目录是 `front-end/`、`back-end/`、`docs/`。根目录保留本说明、`AGENTS.md`、启动/同步入口和 Git 必需配置；隐藏的 `.github/` 是 GitHub 模板目录。具体路径和迁移规则见 [项目结构](docs/project-structure.md)。
 
-统一学习首页位于 `apps/web/`，采用已确认的 Study Space 模板：暖白背景、TOEFL 绿色主卡与 SAT 橙色主卡。首页保留四科托福入口，SAT 阅读与文法统一显示为“英语”；原模板的顶部白色导航、搜索、继续上次示例和底部工具栏已移除。学习计划、成绩报告、目标分数和设置从右上头像进入。
+## 启动
 
-SAT Reading & Writing 已接入自定义训练、按套练习、复盘与错题本；非考试管理页面已更新视觉，点击开始后的准备、考试、检查和完成阶段继续保护原有界面与行为。`apps/toefl/` 已在本地整合 `toefl` 分支 `98aa9c7` 的源码，通过 `/toefl/` 运行原创匿名样例，支持四科入口和学习页面导航；完整私有题库、正式账号、云端同步与外部 AI 未接入，不能将匿名样例视为真实完整模考。SAT 数学已按 2026-10-23 授权接入；AP 和跨考试 Personal Vocab 仍保留待接入接口。
+需要 Python 3.10+；构建 TOEFL 匿名样例还需要 Node.js 22.13+，无需安装第三方 Python 或 npm 包。
 
-2026-10-22 用户另通过截图明确授权准备页动画与考试内高亮、下划线和 Notes 的限定更新；实现范围、保存结构及人工验证步骤见 [SAT 准备页与高亮笔记](docs/sat-annotations.md)。
+```sh
+python3 back-end/server/serve_platform.py --port 8888
+```
 
-测试阶段直接使用 `admin` 本机测试身份，无需输入密码，不提供真实认证或管理员权限。每日目标、目标分数和练习统计只使用当前浏览器的新平台存储；支持新 TOEFL 1–6 分、0.5 分档及 SAT 两科目标，尚未实现统一账号与跨设备记录。
+打开 <http://127.0.0.1:8888/>，或在 macOS 双击根目录 `Start Study Platform.command`。服务仅监听本机，不用于校内公开部署。页面 URL 仍为 `/sat/`、`/toefl/`，源码分目录不会改变浏览器存储命名空间或已有作答记录。
 
-Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。OCR 已取消，模型、PDF、HAR 和原浏览器数据均不导入。运行中的兼容格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。最新题目包方向改为按考试与题型分别设计，SAT 专用 Markdown/LaTeX 草案和耕读格式比较见 [SAT 题目包草案](docs/sat-question-package-draft.md)；新格式的读写与数学实现见 [运行说明](docs/sat-math-exam.md)。
+TOEFL 匿名构建命令：
 
-已确认的要求：
+```sh
+node back-end/toefl/scripts/build.mjs
+```
 
-- 约 150 名总用户；同时在线人数尚未确定。
-- 一个统一网址、一套登录身份、云端保存答题记录。
-- 三位开发者分别在 Windows / macOS 上独立开发，任何一人下线不影响其他人工作。
-- 使用功能分支和 Pull Request 审核合并；开发过程以 Codex 为主。
-- GitHub 协作与部署优先采用免费方案，容量和功能以实际服务额度为准。
+产物在 `local-data/builds/toefl/`，只有原创匿名样例，音频是测试提示音。真实托福题库和原音频不在当前 Git 仓库，正式账号、云端记录和外部 AI 没有接入统一服务。
 
-## 从这里开始
+## SAT 完整模考题包
 
-| 任务 | 文档 |
+本机指定卷包含英语 27+27、数学 22+22，共 98 题。完整离线包位于 `local-data/exports/gengdu-2026-03-us-a-sat-full-offline.zip`；它将有序 `assessment.json` 与三个题型包一起包装。服务读取 `local-data/sat-packs/active.json`，SAT 首页可点“全套模考”。来源答案仍待审核、解析缺失，不能声称是已核定官方评分。
+
+检查页 Next 只移除确认弹窗，保留模块结束页、英语后休息及第二次 Resume 才启动数学的流程。当前模块保存为本机状态，不表示已经上传云端。格式、资源、原库备份和使用说明见 [SAT 数学与整套练习](docs/sat-math-exam.md)。
+
+## 文档与检查
+
+| 内容 | 入口 |
 | --- | --- |
-| 让 Codex 理解项目 | [AGENTS.md](AGENTS.md) |
-| 沿用首页与 SAT 管理页样式 | [参考样式](参考样式.md) · [参考 CSS](参考样式.css) |
-| 团队日常协作 | [CONTRIBUTING.md](CONTRIBUTING.md) |
-| 三个人如何使用 Codex | [Codex 工作流程](docs/codex-workflow.md) |
-| 收集已有 SAT、托福代码 | [源码接入清单](docs/source-intake.md) |
-| 运行和继续开发 SAT 原型 | [SAT 接入记录](docs/sat-source-intake.md) |
-| 理解整合边界和数据约定 | [架构与整合计划](docs/architecture.md) |
-| 选择免费部署服务 | [部署评估](docs/deployment.md) |
-
-## 第一阶段完成标准
-
-1. 两套原始源码与资源已收集，并记录来源版本和原有启动方式。
-2. 两套功能分别能在开发电脑运行；Windows 和 macOS 的启动步骤均已验证。
-3. 确定统一网站、登录与答题记录的实现方式，并记录决定。
-4. 提供准确的安装、启动、检查和部署命令，随后补充自动检查。
-
-## 运行统一首页
-
-需要 Python 3.10 或以上版本。要从源码构建 TOEFL 匿名样例，还需 Node.js 22.13 或以上版本；两部分均无需安装第三方包。在仓库根目录运行：
+| 仓库约定 | [AGENTS.md](AGENTS.md) |
+| 三人 Git 协作 | [CONTRIBUTING](docs/CONTRIBUTING.md) |
+| 启动、路由与数据边界 | [统一首页](docs/unified-home.md) |
+| 前后端、登录与加密分发讨论 | [设计说明](docs/frontend-backend-plan.md) |
+| SAT 协议 | [专用题目包](docs/drafts/sat-question-packs/README.md) |
+| TOEFL 源码、构建与测试 | [模块说明](docs/toefl/README.md) |
+| 首页与管理页样式 | [参考样式](docs/design/参考样式.md) |
 
 ```sh
-python3 scripts/serve_platform.py --port 8888
+python3 -B -m unittest discover -s back-end/tests -p 'test_*.py' -q
+node back-end/tests/home-model.test.cjs
+node back-end/toefl/scripts/check-source.mjs
+node back-end/toefl/scripts/test.mjs
 ```
 
-打开 [统一学习首页](http://127.0.0.1:8888/)。macOS 也可双击根目录的 `Start Study Platform.command`。服务启动时会调用 `PATH` 中的 Node.js 构建 TOEFL 匿名样例；也可先进入 `apps/toefl/` 运行 `node scripts/build.mjs`。没有 Node.js 时，已存在且通过匿名构建标记检查的 `dist/preview` 仍可使用；没有构建产物则托福入口提示未就绪，SAT 和首页可继续使用。生成的 `dist/` 不提交。
+浏览器回归还需要开发环境已有 Playwright 与 Chrome，运行方式见相应模块文档。Windows、Safari、真实硬件和正式云端流程没有因这次路径整理自动完成验证。
 
-新平台使用独立的浏览器存储名称，不读取原 SAT 或 TOEFL 应用的个人练习记录。服务仅监听本机，不用于校内公开部署。
-
-其他开发者克隆后 SAT 真实题库初始为空，TOEFL 只有原创匿名样例。使用 SAT 页的 JSON 导入或本地迁移脚本填充本机题库；TOEFL 私有题库尚未接入统一服务。不要通过 Git 共享真实题库或个人数据；所有层级的 `.DS_Store` 也应保持忽略。详见 [本地题库迁移](docs/unified-home.md)。
-
-## 运行独立 SAT 原型
-
-需要 Python 3.10 或以上版本，无需安装第三方依赖。在仓库根目录运行：
-
-```sh
-python3 apps/sat/scripts/question_bank_server.py --root apps/sat --port 8876
-```
-
-打开 [SAT 本机页面](http://127.0.0.1:8876/html/index.html)。初始题库为空，可用 `apps/sat/data/examples/synthetic-practice.json` 导入两道原创合成题，检查基础练习流程。完整操作及验证范围见 [SAT 接入记录](docs/sat-source-intake.md)。
-
-本副本默认使用端口 8876。若该端口用于其他练习环境，请另选空闲端口，避免读到既有浏览器记录；同一端口下换页面路径不能隔离 IndexedDB / localStorage。
-
-Windows 可按本机 Python 安装方式把 `python3` 换为 `py -3` 或 `python`；Windows 启动尚未验证。此命令运行的是独立 SAT 原型，统一平台尚未部署。
-
-## 合作方式
-
-领取任务 → 更新主分支 → 创建功能分支 → 使用 Codex 修改并验证 → 推送分支 → 提交 PR → 另一人检查 → 合并 → 其他人更新代码。
-
-`main` 保存团队认可的版本。每项任务使用短期分支，具体分支和提交操作见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-macOS 可双击仓库根目录的 `pull.command`，从 `origin` 同名分支快进更新当前分支；未提交改动或分支分叉时会停止。完成功能分支的本地提交后，可双击 `push.command` 推送。两个脚本都支持 `--check` 只读检查，不自动提交文件或强制覆盖；详细用法见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-仓库同步源码、配置样例和数据库结构变更；数据库中的实际答题记录由网站后端保存，不通过 Git 同步。
+本轮只在本地提交。`push.command`、`pull.command` 仍位于根目录，只处理当前分支，不自动合入 `main` 或发布网站。真实资源、备份、录音、密钥和 `.DS_Store` 不提交。

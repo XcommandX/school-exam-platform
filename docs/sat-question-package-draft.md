@@ -20,7 +20,7 @@
 
 “之前的格式”分两层，避免只比较已运行的 v1：
 
-1. [当前题目格式](question-format.md)、`shared/question-set.schema.json` 和 `shared/question_schema.py`：正在使用的 v1，SAT 只接入读写四选一。
+1. [当前题目格式](question-format.md)、`back-end/shared/question-set.schema.json` 和 `back-end/shared/question_schema.py`：正在使用的 v1，SAT 只接入读写四选一。
 2. 本地 `docs/exam-pack-strategy` 分支提交 `5315baa` 的 `docs/所有题目包结构策略.md`、`docs/drafts/exam-packs-v2/CONTRACT.md` 及 `sat-math/`：之前跨考试 v2 草案。该分支未合入本轮，只作比较；其中 SAT 数学已有四选一、SPR、静态图与互动图占位设计。
 
 来源的 `schema_version: 2` 与项目的 `schemaVersion: 1`、旧跨考试 `2.0-draft` 是三个不同协议的版本标识，不能按数字大小直接互换。
@@ -82,9 +82,9 @@
 
 原正文有 667 个 img 引用，与包级清单的 620 个唯一来源完全对应：608 个有效网络资源、10 个来源已标失效的网络资源、2 个内联 SVG。清单共有 653 条 base64 嵌入记录，全部与原 SHA256 相符；同一 URL 没有不同嵌入内容。
 
-使用 [资源整理脚本](../scripts/package_sat_images.py) 从原 JSON 扫描、联网下载、验证并去重。实际下载统计以本机生成的报告为准；不能把 base64 恢复计为网络下载成功。来源失效的 10 个链接含作者本机临时文件路径，保留缺失报告，不能用假图替代。
+使用 [资源整理脚本](../back-end/tools/sat/package_sat_images.py) 从原 JSON 扫描、联网下载、验证并去重。实际下载统计以本机生成的报告为准；不能把 base64 恢复计为网络下载成功。来源失效的 10 个链接含作者本机临时文件路径，保留缺失报告，不能用假图替代。
 
-本机原始 `耕读合集/` 和 `耕读合集.zip` 已列入 Git 忽略。用户本轮明确要求在合集目录打包，因此此次资源在该目录整理；不移入网站运行题库，也不提交真实素材。这是对默认 `private-data/` 存放位置的本轮例外，后续导入网站仍应遵循私有资源规则。
+本机原始 `耕读合集/` 和 `耕读合集.zip` 已列入 Git 忽略。用户本轮明确要求在合集目录打包，因此此次资源在该目录整理；不移入网站运行题库，也不提交真实素材。这是对默认 `local-data/` 存放位置的本轮例外，后续导入网站仍应遵循私有资源规则。
 
 下载工具只处理资源归档，离线 JSON 仍为来源协议，不是本页的新 SAT 包格式。离线副本仅改变已成功落盘资源的引用和图片存放方式，原 JSON 不改。缺图文件不得标为全部资源完整；完整结果及启动参数见脚本帮助与本机包内说明。
 
@@ -95,8 +95,8 @@
 复跑默认复用摘要验证通过的资源；`--refresh` 会重新联网：
 
 ```sh
-python3 scripts/package_sat_images.py --source "耕读合集"
-python3 -m unittest discover -s tests -p 'test_package_sat_images.py' -v
+python3 back-end/tools/sat/package_sat_images.py --source "耕读合集"
+python3 -m unittest discover -s back-end/tests -p 'test_package_sat_images.py' -v
 ```
 
 如本机 Python 未配置可信 CA，可用 `--ca-file` 指定已有的可信证书包，TLS 验证保持开启，不修改永久代理或证书设置。

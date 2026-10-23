@@ -11,7 +11,7 @@
 - 系统开启减少动画时，云朵与沙漏静态显示；窄屏下标题可以换行，卡片适应可用宽度。
 - 动画不控制题目加载或考试计时。实际准备页仍在题目读取完成且至少等待 500 ms 后进入考试，因此题目读取很快时只会短暂出现。
 
-对应实现为 `apps/sat/js/app.js` 的 `transitionArt()`、`transitionPage()`，以及 `apps/sat/css/dashboard.css` 的 `.practice-transition--preparing` 专属规则；保存页和完成页不使用这些新规则。
+对应实现为 `front-end/sat/js/app.js` 的 `transitionArt()`、`transitionPage()`，以及 `front-end/sat/css/dashboard.css` 的 `.practice-transition--preparing` 专属规则；保存页和完成页不使用这些新规则。
 
 ## 高亮、下划线与 Notes
 
@@ -27,9 +27,9 @@
 
 删除笔记先显示 `Delete This Note?` 确认：`No` 保留笔记，`Yes` 只删除笔记，高亮与下划线继续保留。删除高亮则同时删除依附该高亮的笔记。切换题目后，侧栏只显示当前题目的笔记。
 
-对应结构与交互位于 `apps/sat/html/index.html`、`apps/sat/js/exam.js` 和 `apps/sat/css/exam.css`。工具栏、下划线菜单及 Notes 侧栏使用独立选择器，不通过全局管理主题改写考试界面。
+对应结构与交互位于 `front-end/sat/html/index.html`、`front-end/sat/js/exam.js` 和 `front-end/sat/css/exam.css`。工具栏、下划线菜单及 Notes 侧栏使用独立选择器，不通过全局管理主题改写考试界面。
 
-`apps/sat/js/material-text.js` 同时修复了材料按段落或列表重新排版时丢失整段高亮的问题：文字切片保留共同祖先的高亮与原文格式外壳，文字内容与范围偏移保持不变。
+`front-end/sat/js/material-text.js` 同时修复了材料按段落或列表重新排版时丢失整段高亮的问题：文字切片保留共同祖先的高亮与原文格式外壳，文字内容与范围偏移保持不变。
 
 ## 保存结构与兼容
 
@@ -54,13 +54,13 @@
 | 独立 SAT | `SATPracticeDB` | `sat-reading-practice-v1` | `sat-ui-preferences-v1` |
 | 统一平台 `/sat/` | `SchoolExamPlatform:sat:v1` | `school-exam-platform:sat:runtime:v1` | `school-exam-platform:sat:ui:v1` |
 
-统一平台的名称映射继续由 `apps/web/sat-bridge.js` 实施。真实题库和学生记录不通过 Git 共享，测试应使用原创合成题和独立浏览器来源。
+统一平台的名称映射继续由 `front-end/web/sat-bridge.js` 实施。真实题库和学生记录不通过 Git 共享，测试应使用原创合成题和独立浏览器来源。
 
 ## 人工验证步骤
 
 以下是可复现步骤与预期结果，不表示这些检查已全部通过。实际执行结果应另在本轮交付说明中记录。
 
-1. 按 README 在空闲端口启动本机服务，在独立浏览器来源导入 `apps/sat/data/examples/synthetic-practice.json`，创建练习并进入 Timing 页面。
+1. 按 README 在空闲端口启动本机服务，在独立浏览器来源导入 `front-end/sat/data/examples/synthetic-practice.json`，创建练习并进入 Timing 页面。
 2. 点击 `Next`，检查准备页标题、提示和卡片。题目读取较快时页面只短暂显示；完整检查动画可在独立调试环境临时延迟题目读取，观察至少 5 秒，确认沙量变化、翻转与云朵移动，再撤销调试延迟。系统开启减少动画后再次检查，应静态显示，不影响进入考试。
 3. 进入考试，开启 `Highlights & Notes`，分别在文章、题干与选项中选择文字，检查三个颜色和当前高亮的加深状态。连续创建两个部分重叠的范围，检查重叠处混色；更换其中一条的颜色、再删除该条，检查另一条的原范围仍完整。
 4. 为高亮依次选择实线、虚线、点线和无下划线，检查线型；用键盘打开菜单、移动选项、选择并按 `Escape` 关闭。若有旧 `underline: true` 的合成练习快照，恢复后检查其按实线显示。
@@ -78,10 +78,10 @@
 
 15 项 Python 平台与题目格式检查、首页数据模型检查、修改过的 JavaScript 语法和差异空白检查通过。准备插画在独立渲染中观察过翻转、移动和系统减少动画状态。测试服务、浏览器上下文和临时题库均独立于真实资源。
 
-可选浏览器回归脚本为 `tests/sat-annotations.browser.cjs`，需要 Node.js、Playwright 及 Chrome；这些仅用于开发检查，不是网站运行依赖。本轮使用现有的 Codex 捆绑运行环境，没有新增或安装项目依赖。环境已具备时，在仓库根目录运行：
+可选浏览器回归脚本为 `back-end/tests/sat-annotations.browser.cjs`，需要 Node.js、Playwright 及 Chrome；这些仅用于开发检查，不是网站运行依赖。本轮使用现有的 Codex 捆绑运行环境，没有新增或安装项目依赖。环境已具备时，在仓库根目录运行：
 
 ```sh
-node tests/sat-annotations.browser.cjs
+node back-end/tests/sat-annotations.browser.cjs
 ```
 
 脚本默认自建只读临时端口并使用独立浏览器上下文，不读取既有浏览器历史。`PLAYWRIGHT_CHROMIUM_EXECUTABLE` 可选择已有的 Chromium 路径；`SAT_BROWSER_TEST_URL` 可指定**隔离、空题库测试服务**的 `/sat/` 入口，不应指向正式或个人题库环境。

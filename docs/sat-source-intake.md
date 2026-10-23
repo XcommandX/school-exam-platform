@@ -1,6 +1,6 @@
 # SAT 源码接入记录
 
-> 后续统一首页已接入此引擎，并在本机将授权题库迁入忽略的 `private-data/`；旧个人记录不迁移。本文保留初次纯代码接入的来源与检查记录，当前入口与数据边界见 [统一首页](unified-home.md)。
+> 后续统一首页已接入此引擎，并在本机将授权题库迁入忽略的 `local-data/`；旧个人记录不迁移。本文保留初次纯代码接入的来源与检查记录，当前入口与数据边界见 [统一首页](unified-home.md)。
 
 后续经截图明确授权的准备页动画与考试内高亮、下划线和 Notes 更新见 [SAT 准备页与高亮笔记](sat-annotations.md)；以下初次接入记录不代表这些新增功能的验证结果。
 
@@ -8,9 +8,9 @@
 
 ## 来源与范围
 
-本次从用户提供的本地工作副本导入 `apps/sat/`，用于保存和继续开发 SAT Reading & Writing 独立练习原型。原始工作副本未提供 Git 历史；`apps/sat/SOURCE_MANIFEST.json` 记录导出文件及摘要，供后续核对。此接入不代表统一校内平台已经实现。
+本次从用户提供的本地工作副本导入 `front-end/sat/`，用于保存和继续开发 SAT Reading & Writing 独立练习原型。原始工作副本未提供 Git 历史；`docs/sat/source-snapshot.json` 记录原始导出文件及摘要，保留当时路径供溯源；当前源码导出由工具生成新的清单。此接入不代表统一校内平台已经实现。
 
-导入以固定代码白名单为边界，可复用 `apps/sat/scripts/prepare_sat_source.py` 准备后续纯代码副本。仓库仅包含空题库种子和两道原创合成示例题；真实题库、题目图片、PDF、个人练习记录、HAR、OCR 模型与运行环境均未导入，分类数据中的 22 个私有来源引用已去除。
+导入以固定代码白名单为边界，可复用 `back-end/tools/sat/prepare_sat_source.py` 准备后续纯代码副本。仓库仅包含空题库种子和两道原创合成示例题；真实题库、题目图片、PDF、个人练习记录、HAR、OCR 模型与运行环境均未导入，分类数据中的 22 个私有来源引用已去除。
 
 同日取消 OCR 功能，删除 PDF 上传界面、OCR 前端模块、任务处理代码和服务 API。当前导出为 23 个交付文件（22 个内容文件与清单本身），题目仅支持 JSON 导入。本轮修改只在本地提交，由开发者通过根目录 `push.command` 自行推送；本记录不表示远端或 `main` 已更新。
 
@@ -19,10 +19,10 @@
 依赖 Python 3.10+ 标准库和浏览器，无需安装第三方依赖。在仓库根目录运行：
 
 ```sh
-python3 apps/sat/scripts/question_bank_server.py --root apps/sat --port 8876
+python3 back-end/tools/sat/question_bank_server.py --root front-end/sat --port 8876
 ```
 
-打开 `http://127.0.0.1:8876/html/index.html`。首次运行题库为空，导入 `apps/sat/data/examples/synthetic-practice.json` 后可用原创合成题检查练习流程。
+打开 `http://127.0.0.1:8876/html/index.html`。首次运行题库为空，导入 `front-end/sat/data/examples/synthetic-practice.json` 后可用原创合成题检查练习流程。
 
 服务和便捷启动器默认使用端口 8876。若该端口已用于其他练习环境，请指定另一个空闲端口并对应修改网址，以使用不同的浏览器来源；同一来源下仅更换页面路径不会隔离 IndexedDB / localStorage。请勿连接既有真实题库文件夹。
 
