@@ -808,7 +808,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             try:
                 body = path.read_bytes()
                 if path.suffix == '.html' and user and relative != 'login.html':
-                    encoded = json.dumps({'authenticated': True, 'loginEnabled': True, 'user': user}, ensure_ascii=True).replace('<', '\u003c')
+                    # HTML parses closing script tags before JavaScript parses JSON.
+                    encoded = json.dumps({'authenticated': True, 'loginEnabled': True, 'user': user}, ensure_ascii=True).replace('<', '\\u003c')
                     bootstrap = ('<head><script>window.PlatformSession=' + encoded + ';</script>'
                                  '<script src="/web/platform-auth.js"></script>').encode()
                     body = body.replace(b'<head>', bootstrap, 1)

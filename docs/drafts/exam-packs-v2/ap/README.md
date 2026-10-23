@@ -1,5 +1,7 @@
 # AP 分科分年套题包结构样例
 
+> 历史状态：2026-10-22 设计草案。当前项目按考试及题目类型分别设计题目包，不要求 AP 与 SAT、TOEFL 共用此公共模型；SAT 以 [专用题目包协议](../../sat-question-packs/README.md) 为准。AP 尚待接入，本目录保留作设计参考，下文“当前”“本次”均指当时快照，不构成现行实现合同。
+
 这是用于讨论数据结构的**原创目录样包**：13 个独立科目/年份 profile、17 个 section、17 个普通题目、5 个项目任务、38 个可评分 Part。它不是把所有科目拼成的一张 AP 试卷，也不是一套已经能运行的完整模考。所有 profile 都标记 `assemblyStatus: incomplete`。
 
 本目录按 [公共草案约定](../CONTRACT.md) 分为 `pack.json`、`assessment.json`、`items.json`、`solutions.json` 和 `assets/`。仅供设计与审核，没有改动、导入或接入现有 SAT 页面、题库与运行时。

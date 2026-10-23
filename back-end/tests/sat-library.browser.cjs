@@ -54,7 +54,6 @@ const server=http.createServer(async(req,res)=>{try{
     const request=route.request(),url=new URL(request.url()),pathname=url.pathname;requests.push(pathname);
     let value;
     if(request.method()!=='GET'){unexpected.push(request.method()+' '+pathname);value={error:'Synthetic regression forbids writes'};}
-    else if(pathname==='/api/sat-library/question-index')value={schemaVersion:1,available:false,sources:[],questions:[],errors:[]};
     else if(pathname==='/api/sat-library')value=catalog;
     else if(pathname==='/api/sat-library/question-index')value={schemaVersion:1,available:true,sources:[],questions:[],errors:[]};
     else if(pathname==='/api/sat-library/collections/synthetic-math'){

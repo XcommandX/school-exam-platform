@@ -29,10 +29,22 @@ const ready=new Promise((resolve,reject)=>{let s='';child.stdout.on('data',x=>{s
  async function openSAT(p){await p.goto(base+'/sat/');await p.waitForFunction(()=>window.SATApp?.ready);await p.evaluate(()=>SATApp.ready);await p.waitForSelector('.sat-hero');}
  async function sync(p){await p.evaluate(()=>SATAccountSync.sync());const status=await p.evaluate(()=>SATAccountSync.getStatus());assert.match(status,/已同步/,status);}
  const p=await pageFor('SyntheticSATOne');await openSAT(p);
+ assert.equal(await p.locator('.sat-account-name').innerText(),'SyntheticSATOne');
+ assert.equal(await p.getByRole('button',{name:/Manage library/i}).count(),0);
+ await p.locator('[data-action=importQuestions]').click();
+ await p.locator('.app-heading h1').waitFor();
+ assert.equal(await p.locator('.app-heading h1').innerText(),'Add Questions');
+ assert.equal(await p.locator('.app-heading').evaluate(el=>el.nextElementSibling),null,'Add Questions keeps an empty content area after its heading');
+ assert.equal(await p.locator('.app-main input,.app-main form,.app-main [data-action^="folder-"],#dropZone').count(),0);
+ await p.locator('.app-brand').click();await p.locator('.sat-hero').waitFor();
+ checks.push('authenticated SAT keeps Add Questions as a blank placeholder without Manage library or import controls');
  const qids=await p.evaluate(async()=>{const questions=await SATStorage.all('questions');return questions.filter(q=>!q.deleted).map(q=>q.id);});assert.equal(qids.length,2);
  await p.evaluate(ids=>SATApp.startPractice(ids,'Original saved SAT practice',600),qids);
  assert.equal(await p.locator('[data-sat-management]').count(),0,'ready screen keeps exam styling');
  await p.locator('[data-action=begin]').click();await p.locator('#modal[open]').waitFor();await p.locator('#modalActions button').first().click();
+ assert.equal(await p.locator('#studentName').innerText(),'SyntheticSATOne','exam footer consumes the actual authenticated account');
+ assert.equal(await p.locator('#studentName').getAttribute('title'),'SyntheticSATOne');
+ checks.push('exam username comes from the real unified login session');
  await p.locator('#options [data-option="0"]').click();
  await p.locator('#exitButton').click();await p.locator('[data-more=exit]').click();await p.locator('#modalActions').getByRole('button',{name:'Save and Exit',exact:true}).click();await p.locator('.sat-hero').waitFor();
  const saved=await p.evaluate(async()=>{const a=(await SATStorage.all('attempts'))[0];await SATStorage.addToWrongBook({questionId:a.questionIds[0],reason:'manual',addedAt:Date.now(),sourceAttemptId:a.id});await SATSettings.setDuration('custom',720);return a;});
@@ -57,6 +69,7 @@ const ready=new Promise((resolve,reject)=>{let s='';child.stdout.on('data',x=>{s
  assert.equal(restored.attempt.status,'incomplete');assert.deepEqual(restored.attempt.questionIds,saved.questionIds);assert.deepEqual(restored.attempt.questionSnapshots,saved.questionSnapshots);assert.equal(restored.wrong.length,1);assert.equal(restored.duration,960);
  await r.locator(`[data-action=resume][data-id="${saved.id}"]`).click();
  await r.waitForFunction(()=>ExamEngine.isRunning());
+ assert.equal(await r.locator('#studentName').innerText(),'SyntheticSATOne','a resumed exam reads the new browser session identity');
  const selected=await r.evaluate(()=>JSON.parse(localStorage.getItem('sat-reading-practice-v1')).questionStates[0].selectedOption);assert.equal(selected,0);
  await r.evaluate(()=>ExamEngine.finishAttempt({status:'completed',reason:'submitted'}));
  await r.waitForFunction(async()=>(await SATStorage.all('attempts')).some(a=>a.status==='completed'));
