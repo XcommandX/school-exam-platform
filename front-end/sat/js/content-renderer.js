@@ -72,9 +72,14 @@
     const html = getParser().parse(String(text ?? ''));
     return root.DOMPurify.sanitize(html, {
       USE_PROFILES:{html:true, mathMl:true},
+      // KaTeX draws radicals, stretchy accents/arrows, and cancellation marks
+      // with these inert SVG shapes. Keep this smaller than the SVG profile:
+      // source HTML is escaped by Marked above, so only trust:false KaTeX output
+      // can produce them. No SVG images, use/href links, or active nodes enter.
+      ADD_TAGS:['svg','path','line'],
       FORBID_TAGS:['img','video','audio','iframe','object','embed','style','script','form','input','button'],
       FORBID_ATTR:['src','srcset','poster'],
-      ADD_ATTR:['target'], ALLOW_DATA_ATTR:true
+      ADD_ATTR:['target','viewBox','preserveAspectRatio','d','x1','x2','y1','y2','stroke-width'], ALLOW_DATA_ATTR:true
     });
   }
 

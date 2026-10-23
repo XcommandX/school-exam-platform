@@ -5,7 +5,7 @@ const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'sat-reading-practice-v1';
 const duration = 32 * 60 * 1000;
 const emptyQuestionState = () => ({selectedOption:null,numericResponse:'',eliminatedOptions:[],markedForReview:false,highlights:[],notesExpanded:false,timeSpentMs:0,materialScrollTop:0});
-const initialState = () => ({currentQuestion:0,view:'question',questionStates:examQuestions.map(emptyQuestionState),endTimestamp:Date.now()+duration,remainingSeconds:1920,highlightMode:false,highlightColor:'yellow',timerHidden:false,eliminationVisible:true,split:50,completed:false,activePractice:null,questionEnterTimestamp:null,phase:'active',elapsedMs:0,segmentStartedAt:null,lineReaderState:{enabled:false,y:0},directionsShown:false});
+const initialState = () => ({currentQuestion:0,view:'question',questionStates:examQuestions.map(emptyQuestionState),endTimestamp:Date.now()+duration,remainingSeconds:1920,highlightMode:false,highlightColor:'yellow',highlightUnderline:'none',timerHidden:false,eliminationVisible:true,split:50,completed:false,activePractice:null,questionEnterTimestamp:null,phase:'active',elapsedMs:0,segmentStartedAt:null,lineReaderState:{enabled:false,y:0},directionsShown:false});
 let state=initialState();
 let activeHighlightId=null, hoveredHighlightId=null, suppressClickUntil=0, readingFontSize=null;
 const currentState=()=>state.questionStates[state.currentQuestion];
@@ -49,7 +49,7 @@ function showModuleBreak(){
  window.dispatchEvent(new CustomEvent('sat-module-over',{detail:{continue:continueModule}}));
 }
 $('modal').addEventListener('cancel',event=>{if(['module_break','section_break','section_ready'].includes(state.phase))event.preventDefault();});
-const save=()=>{if(!running)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));localStorage.setItem('sat-ui-preferences-v1',JSON.stringify({highlightColor:state.highlightColor,fontSize:readingFontSize}));}catch(error){console.warn('Practice storage is unavailable.',error);}};
+const save=()=>{if(!running)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));localStorage.setItem('sat-ui-preferences-v1',JSON.stringify({fontSize:readingFontSize}));}catch(error){console.warn('Practice storage is unavailable.',error);}};
 function commitMaterialScroll(){if(running&&state.view==='question'&&!restoringMaterial)currentState().materialScrollTop=$('passagePane').scrollTop;}
 let restoringMaterial=false,materialRender=0;
 function restoreMaterialScroll(){const generation=++materialRender,pane=$('passagePane'),top=currentState().materialScrollTop||0;restoringMaterial=true;const apply=()=>{if(generation!==materialRender)return;pane.scrollTop=top;requestAnimationFrame(()=>{if(generation===materialRender)restoringMaterial=false;});};const img=pane.querySelector('img');if(img&&!img.complete){img.addEventListener('load',apply,{once:true});img.addEventListener('error',apply,{once:true});}apply();}
@@ -65,7 +65,9 @@ function startExam(loadedQuestions,practice,finishHandler,saved=null){
  let preferences={};try{preferences=JSON.parse(localStorage.getItem('sat-ui-preferences-v1'))||{};}catch{}
  readingFontSize=Number.isInteger(preferences.fontSize)&&preferences.fontSize>=14&&preferences.fontSize<=28?preferences.fontSize:null;
  applyReadingFontSize();
- state={...initialState(),highlightColor:preferences.highlightColor||'yellow',activePractice:practice,...(saved||{})};
+ state={...initialState(),activePractice:practice,...(saved||{})};
+ state.highlightColor=['yellow','blue','pink'].includes(saved?.highlightColor)?saved.highlightColor:'yellow';
+ state.highlightUnderline=['none','solid','dashed','dotted'].includes(saved?.highlightUnderline)?saved.highlightUnderline:'none';
  SATModel.normalizePractice(state.activePractice);
  state.questionTimerPanelState??={visible:SATSettings.timer.enabled,x:null,y:null};
  const now=Date.now();
@@ -399,7 +401,7 @@ document.addEventListener('mouseup',event=>{
  const range=selection.getRangeAt(0),startElement=range.startContainer.nodeType===3?range.startContainer.parentElement:range.startContainer;
  const block=startElement.closest?.('[data-block]');if(!block || !block.contains(range.endContainer))return;
  const start=selectionOffset(block,range.startContainer,range.startOffset),end=selectionOffset(block,range.endContainer,range.endOffset);if(start===end)return;
- const rect=range.getBoundingClientRect();const h={id:`h-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,block:block.dataset.block,start,end,color:state.highlightColor,underline:false};
+ const rect=range.getBoundingClientRect();const h={id:`h-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,block:block.dataset.block,start,end,color:state.highlightColor,underline:state.highlightUnderline==='none'?false:state.highlightUnderline};
  currentState().highlights.push(h);selection.removeAllRanges();renderBlock(block,blockText(h.block));suppressClickUntil=Date.now()+200;showToolbar(h.id,rect);save();
 });
 for(const type of ['mouseover','mouseout'])document.addEventListener(type,event=>{
@@ -410,7 +412,7 @@ document.addEventListener('click',event=>{if(Date.now()<suppressClickUntil||!run
 $('highlightToolbar').addEventListener('mousedown',event=>event.preventDefault());
 $('highlightToolbar').addEventListener('click',event=>{event.stopPropagation();const button=event.target.closest('button');if(!button||!activeHighlightId)return;const h=currentState().highlights.find(h=>h.id===activeHighlightId);if(!h)return;
  if(button.id==='underlineHighlight'){
-  const open=$('underlineMenu').hidden;$('underlineMenu').hidden=!open;button.setAttribute('aria-expanded',open);if(open){positionUnderlineMenu();$('underlineMenu').querySelector('button').focus();}return;
+  const open=$('underlineMenu').hidden;$('underlineMenu').hidden=!open;button.setAttribute('aria-expanded',open);if(open){positionUnderlineMenu();const menu=$('underlineMenu');(event.detail===0?(menu.querySelector('[aria-checked=true]')||menu.querySelector('button')):menu).focus({preventScroll:true});}return;
  }
  if(button.id==='addHighlightNote'){openNote(h);return;}
  const block=document.querySelector(`[data-block="${h.block}"]`);if(button.dataset.color){h.color=button.dataset.color;state.highlightColor=button.dataset.color;updateHighlightSwatches(h.color);closeUnderlineMenu();}else if(button.id==='deleteHighlight'){currentState().highlights=currentState().highlights.filter(item=>item.id!==h.id);hideToolbar();}
@@ -418,7 +420,7 @@ $('highlightToolbar').addEventListener('click',event=>{event.stopPropagation();c
 });
 $('underlineMenu').addEventListener('click',event=>{
  const button=event.target.closest('[data-underline]'),h=currentState()?.highlights.find(h=>h.id===activeHighlightId);if(!button||!h)return;
- h.underline=button.dataset.underline==='none'?false:button.dataset.underline;closeUnderlineMenu();
+ state.highlightUnderline=button.dataset.underline;h.underline=state.highlightUnderline==='none'?false:state.highlightUnderline;closeUnderlineMenu();
  renderBlock(document.querySelector(`[data-block="${h.block}"]`),blockText(h.block));$('underlineHighlight').setAttribute('aria-pressed',underlineStyle(h)!=='none');
  document.querySelectorAll('[data-underline]').forEach(b=>b.setAttribute('aria-checked',b===button));$('underlineHighlight').focus();save();
 });
@@ -426,7 +428,7 @@ $('underlineMenu').addEventListener('keydown',event=>{
  if(!['ArrowDown','ArrowUp','Home','End','Escape'].includes(event.key))return;event.preventDefault();event.stopPropagation();
  if(event.key==='Escape'){closeUnderlineMenu();$('underlineHighlight').focus();return;}
  const buttons=[...$('underlineMenu').querySelectorAll('button')],i=buttons.indexOf(document.activeElement);
- buttons[event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length].focus();
+ buttons[event.key==='Home'?0:event.key==='End'?buttons.length-1:i<0?(event.key==='ArrowDown'?0:buttons.length-1):(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length].focus();
 });
 function noteHighlights(){return currentState().highlights.filter(h=>typeof h.note==='string').sort((a,b)=>(a.noteCreatedAt||0)-(b.noteCreatedAt||0));}
 function notesAlongside(){return innerWidth>600&&currentState()?.notesExpanded&&noteHighlights().length>0;}

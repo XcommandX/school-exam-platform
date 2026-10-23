@@ -25,8 +25,10 @@
 .highlight-toolbar-divider{height:20px;width:1px;background:#ddd;flex-shrink:0}
 .highlight-toolbar #addHighlightNote .note-paper{fill:var(--note-color)}
 .underline-menu{position:fixed;z-index:31;width:52px;padding:0 0 2px;border-radius:0 0 8px 8px;background:white;box-shadow:0 10px 24px #0002;overflow:hidden}
-.highlight-toolbar .underline-menu button{width:52px;height:32px;padding:0;border:0;border-left:2px solid transparent;border-radius:0;font:14px/1 Arial,Helvetica,sans-serif;text-align:center}
-.highlight-toolbar .underline-menu button:hover,.highlight-toolbar .underline-menu button:focus-visible,.highlight-toolbar .underline-menu button[aria-checked=true]{border-left-color:#252525;background:#d9d9d9;outline-offset:-3px}
+.highlight-toolbar .underline-menu button{width:52px;height:32px;padding:0;border:0;border-radius:0;font:14px/1 Arial,Helvetica,sans-serif;text-align:center}
+.underline-menu:focus{outline:0}
+.highlight-toolbar .underline-menu button:hover{background:#d9d9d9}
+.highlight-toolbar .underline-menu button:focus-visible{outline:2px solid #252525;outline-offset:-3px}
 .underline-sample{display:block;width:20px;margin:auto;font-size:16px;font-weight:600;line-height:21px;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .underline-sample.solid{text-decoration-style:solid}
 .underline-sample.dashed{text-decoration-style:dashed}

@@ -50,6 +50,91 @@ test('SAT Markdown and LaTeX render safely using local dependencies', async t =>
       assert.equal(await page.locator('#content .sat-formula-error').count(),0);
     });
 
+    await t.test('radicals retain visible SVG paths, sizing, and long overbars after sanitizing', async () => {
+      await render('Short $7\\sqrt{3}$ and tall $\\sqrt{\\frac{x^2+5}{x+1}}$. Also $\\sqrt{x^2+2x+1+\\frac{2}{7}}$.');
+      await page.evaluate(() => document.fonts.ready);
+      const roots=await page.locator('#content .sat-formula .sqrt').evaluateAll(nodes => nodes.map(node => {
+        const svg=node.querySelector('svg'), path=svg?.querySelector('path'), stem=node.querySelector('.mord');
+        const box=svg?.getBoundingClientRect(), stemBox=stem?.getBoundingClientRect(), pathBox=path?.getBBox();
+        return {namespace:svg?.namespaceURI,viewBox:svg?.getAttribute('viewBox'),aspect:svg?.getAttribute('preserveAspectRatio'),
+          path:path?.getAttribute('d'),width:box?.width,height:box?.height,stemWidth:stemBox?.width,
+          paintedWidth:pathBox?.width,paintedHeight:pathBox?.height};
+      }));
+      assert.equal(roots.length,3);
+      for(const radical of roots) {
+        assert.equal(radical.namespace,'http://www.w3.org/2000/svg');
+        assert.match(radical.viewBox,/^0 0 400000 \d+$/);
+        assert.equal(radical.aspect,'xMinYMin slice');
+        assert.ok(radical.path.length>100 && radical.path.includes('400000'));
+        assert.ok(radical.width>0 && radical.height>0 && radical.paintedWidth>0 && radical.paintedHeight>0);
+        assert.ok(radical.width>=radical.stemWidth,'radical overbar must span its contents');
+      }
+      assert.ok(roots[1].height>roots[0].height,'fraction requires a taller radical');
+      assert.equal(await page.locator('#content .katex .mfrac').count(),2);
+      assert.equal(await page.locator('#content .katex .msupsub').count(),2);
+      assert.equal(await page.locator('#content .sat-formula-error').count(),0);
+    });
+
+    await t.test('only generated safe math shapes survive, source SVG remains inert text', async () => {
+      await render('<svg onload="window.injected=true"><script>window.injected=true</script><foreignObject><img src="https://invalid.example/pixel" onerror="window.injected=true"></foreignObject><use href="https://invalid.example/symbol"></use><path d="M0 0L1 1"></path></svg>\n\n<math href="javascript:alert(1)"><annotation-xml encoding="text/html"><img src="https://invalid.example/math" onerror="window.injected=true"></annotation-xml></math>\n\n$\\sqrt{5}$ $\\xrightarrow{n}$ $\\cancel{x}$');
+      assert.equal(await page.locator('#content svg').count(),3);
+      assert.equal(await page.locator('#content svg:not(.sat-formula svg)').count(),0);
+      assert.equal(await page.locator('#content svg path').count(),2);
+      assert.equal(await page.locator('#content svg line').count(),1);
+      assert.equal(await page.locator('#content svg line').getAttribute('x2'),'100%');
+      assert.equal(await page.locator('#content svg line').getAttribute('stroke-width'),'0.046em');
+      assert.equal(await page.locator('#content img,#content script,#content foreignObject,#content use,#content [onload],#content [onerror],#content svg [href],#content svg [xlink\\:href]').count(),0);
+      assert.equal(await page.locator('#content math:not(.sat-formula math),#content annotation-xml').count(),0);
+      assert.ok((await page.locator('#content').textContent()).includes('<svg onload='));
+      assert.equal(await page.evaluate(() => !!window.injected),false);
+    });
+
+    await t.test('formula families retain KaTeX visible structure and every generated SVG drawing', async () => {
+      const formulas=[
+        String.raw`\frac{a^2+b_1}{\dfrac{c}{d}}`,
+        String.raw`\sqrt[3]{x^2+\sqrt{y}}`,
+        String.raw`\left\lVert\frac{x^2}{y_1}\right\rVert+\left(\frac{1}{2}\right)`,
+        String.raw`\begin{pmatrix}1&2\\3&4\end{pmatrix}`,
+        String.raw`f(x)=\begin{cases}x^2 & x\ge 0\\-x & x<0\end{cases}`,
+        String.raw`\begin{aligned}x+y&=4\\x-y&=2\end{aligned}`,
+        String.raw`\sum_{n=1}^{m}n+\prod_{k=1}^r k+\int_0^1 x^2\,dx`,
+        String.raw`\overline{AB}+\underline{x+y}+\vec{v}+\overrightarrow{PQ}+\widehat{ABC}`,
+        String.raw`\overbrace{a+b+c}^{n}+\underbrace{x+y}_{m}`,
+        String.raw`a\xleftrightarrow[n]{m}b\xrightarrow{p}c`,
+        String.raw`\cancel{x}+\bcancel{y}+\xcancel{z}`,
+        String.raw`\begin{array}{c|c}x&y\\1&2\end{array}`
+      ];
+      await render(formulas.map(tex => '$$'+tex+'$$').join('\n\n'));
+      await page.evaluate(() => document.fonts.ready);
+      const result=await page.evaluate(formulas => {
+        const holder=document.createElement('div');
+        const drawing=node => [...node.querySelectorAll('svg,path,line')].map(shape => ({
+          tag:shape.tagName,namespace:shape.namespaceURI,
+          attrs:[...shape.attributes].map(attr => [attr.name,attr.value]).sort((a,b) => a[0].localeCompare(b[0]))
+        }));
+        return formulas.map((tex,index) => {
+          holder.innerHTML=katex.renderToString(tex,{displayMode:true,throwOnError:true,trust:false,strict:'error',macros:{},globalGroup:false,maxExpand:100,maxSize:20,output:'htmlAndMathml'});
+          const raw=holder.querySelector('.katex-html'), actual=document.querySelectorAll('#content .sat-formula')[index]?.querySelector('.katex-html');
+          const box=actual?.getBoundingClientRect();
+          return {tex,before:drawing(raw),after:actual ? drawing(actual) : null,
+            beforeElements:[...raw.querySelectorAll('*')].map(node => node.tagName),
+            afterElements:actual ? [...actual.querySelectorAll('*')].map(node => node.tagName) : null,
+            width:box?.width,height:box?.height,shapes:actual ? [...actual.querySelectorAll('path,line')].map(node => {const b=node.getBBox();return {width:b.width,height:b.height};}) : []};
+        });
+      },formulas);
+      assert.equal(result.length,formulas.length);
+      let shapes=0;
+      for(const formula of result) {
+        assert.deepEqual(formula.after,formula.before,formula.tex+' SVG geometry and attributes');
+        assert.deepEqual(formula.afterElements,formula.beforeElements,formula.tex+' visible HTML structure');
+        assert.ok(formula.width>0 && formula.height>0,formula.tex+' has visible bounds');
+        for(const shape of formula.shapes) assert.ok(shape.width>0 || shape.height>0,formula.tex+' has painted geometry');
+        shapes+=formula.shapes.length;
+      }
+      assert.ok(shapes>=15,'matrix, radicals, accents, braces, arrows and cancellation draw geometry');
+      assert.equal(await page.locator('#content .sat-formula-error,#content .katex-error').count(),0);
+    });
+
     await t.test('escaped dollars, currency, inline code and fences remain literal', async () => {
       const text = await render('Costs \\$5 and \\$10. Also $5 and $10. `Code $x$`\n\n```text\n$y$\n$$z$$\n```\n\nReal $x+1$');
       assert.ok(text.includes('Costs $5 and $10. Also $5 and $10.'));
