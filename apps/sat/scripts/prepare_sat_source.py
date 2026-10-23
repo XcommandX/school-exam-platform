@@ -18,6 +18,86 @@ COPY_FILES = (
     "css/base.css",
     "css/exam.css",
     "css/dashboard.css",
+    "css/exam-math.css",
+    "css/math-tools.css",
+    "css/content-renderer.css",
+    "js/sat-pack.js",
+    "js/sat-session.js",
+    "js/math-tools.js",
+    "js/content-renderer.js",
+    "vendor/README.md",
+    "vendor/dompurify/LICENSE",
+    "vendor/dompurify/LICENSE-MPL",
+    "vendor/dompurify/purify.min.js",
+    "vendor/dompurify-metadata.json",
+    "vendor/katex/LICENSE",
+    "vendor/katex/README.md",
+    "vendor/katex/fonts/KaTeX_AMS-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_AMS-Regular.woff",
+    "vendor/katex/fonts/KaTeX_AMS-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Bold.ttf",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Fraktur-Bold.ttf",
+    "vendor/katex/fonts/KaTeX_Fraktur-Bold.woff",
+    "vendor/katex/fonts/KaTeX_Fraktur-Bold.woff2",
+    "vendor/katex/fonts/KaTeX_Fraktur-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Fraktur-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Fraktur-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Main-Bold.ttf",
+    "vendor/katex/fonts/KaTeX_Main-Bold.woff",
+    "vendor/katex/fonts/KaTeX_Main-Bold.woff2",
+    "vendor/katex/fonts/KaTeX_Main-BoldItalic.ttf",
+    "vendor/katex/fonts/KaTeX_Main-BoldItalic.woff",
+    "vendor/katex/fonts/KaTeX_Main-BoldItalic.woff2",
+    "vendor/katex/fonts/KaTeX_Main-Italic.ttf",
+    "vendor/katex/fonts/KaTeX_Main-Italic.woff",
+    "vendor/katex/fonts/KaTeX_Main-Italic.woff2",
+    "vendor/katex/fonts/KaTeX_Main-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Main-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Main-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Math-BoldItalic.ttf",
+    "vendor/katex/fonts/KaTeX_Math-BoldItalic.woff",
+    "vendor/katex/fonts/KaTeX_Math-BoldItalic.woff2",
+    "vendor/katex/fonts/KaTeX_Math-Italic.ttf",
+    "vendor/katex/fonts/KaTeX_Math-Italic.woff",
+    "vendor/katex/fonts/KaTeX_Math-Italic.woff2",
+    "vendor/katex/fonts/KaTeX_SansSerif-Bold.ttf",
+    "vendor/katex/fonts/KaTeX_SansSerif-Bold.woff",
+    "vendor/katex/fonts/KaTeX_SansSerif-Bold.woff2",
+    "vendor/katex/fonts/KaTeX_SansSerif-Italic.ttf",
+    "vendor/katex/fonts/KaTeX_SansSerif-Italic.woff",
+    "vendor/katex/fonts/KaTeX_SansSerif-Italic.woff2",
+    "vendor/katex/fonts/KaTeX_SansSerif-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_SansSerif-Regular.woff",
+    "vendor/katex/fonts/KaTeX_SansSerif-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Script-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Script-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Script-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Size1-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Size1-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Size1-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Size2-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Size2-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Size2-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Size3-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Size3-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Size3-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Size4-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Size4-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Size4-Regular.woff2",
+    "vendor/katex/fonts/KaTeX_Typewriter-Regular.ttf",
+    "vendor/katex/fonts/KaTeX_Typewriter-Regular.woff",
+    "vendor/katex/fonts/KaTeX_Typewriter-Regular.woff2",
+    "vendor/katex/katex.min.css",
+    "vendor/katex/katex.min.js",
+    "vendor/katex-metadata.json",
+    "vendor/marked/LICENSE",
+    "vendor/marked/marked.umd.js",
+    "vendor/marked-metadata.json",
     "js/app.js",
     "js/storage.js",
     "js/question-bank.js",
@@ -32,6 +112,13 @@ COPY_FILES = (
     "scripts/question_bank_server.py",
     "Start SAT Practice.command",
     "scripts/prepare_sat_source.py",
+)
+# Only these individually allowlisted KaTeX fonts may contain binary data.
+# Other COPY_FILES must remain UTF-8 source text with no NUL bytes.
+FONT_SIGNATURES = {".ttf": b"\x00\x01\x00\x00", ".woff": b"wOFF", ".woff2": b"wOF2"}
+BINARY_SOURCE_FILES = frozenset(
+    name for name in COPY_FILES
+    if name.startswith("vendor/katex/fonts/") and Path(name).suffix in FONT_SIGNATURES
 )
 GENERATED_FILES = (
     "data/questions.js",
@@ -65,7 +152,7 @@ ISOLATED_SERVER_PORT_ARGUMENT = "parser.add_argument('--port', type=int, default
 
 README = """# SAT 独立练习原型（仅源码）
 
-这是一个 Reading and Writing 独立练习原型，保留源码供继续开发和整合。它尚未接入学校平台的统一登录与云端记录，也不包含正式考试题库。OCR 功能已取消，仅支持 JSON 题目导入。
+这是一个 SAT Reading and Writing 与 Math 独立练习原型，保留源码供继续开发和整合。它尚未接入学校平台的统一登录与云端记录，也不包含正式考试题库。OCR 功能已取消，支持旧 JSON 题目导入及 SAT 专用题目包文件夹导入；新包用 Markdown 与 LaTeX，数学支持四选一、填空、Reference 和图片查看工具。计算器只提供入口与布局位移。
 
 ## 运行与测试
 
@@ -246,6 +333,15 @@ def sanitized_categories(sources):
     }
 
 
+def validate_source_file(name, source):
+    if name in BINARY_SOURCE_FILES:
+        data = source.read_bytes()
+        if len(data) < 12 or not data.startswith(FONT_SIGNATURES[Path(name).suffix]):
+            raise ValueError(f"Required font has an invalid signature: {name}")
+    elif "\x00" in source.read_text(encoding="utf-8"):
+        raise ValueError(f"Required source contains binary data: {name}")
+
+
 def prepare(root, destination):
     reject_symlinks(root)
     sources = {}
@@ -254,9 +350,7 @@ def prepare(root, destination):
         reject_symlinks(source)
         if not source.is_file():
             raise ValueError(f"Required source is missing: {name}")
-        # Reject binary material even if a source path has the expected name.
-        if "\x00" in source.read_text(encoding="utf-8"):
-            raise ValueError(f"Required source contains binary data: {name}")
+        validate_source_file(name, source)
         sources[name] = source
     app = sources["js/app.js"].read_text(encoding="utf-8")
     generated = generated_contents()

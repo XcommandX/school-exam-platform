@@ -1,14 +1,15 @@
 'use strict';
 window.SATBank=(()=>{
  let handle=null,token='',writing=false;
- const state={connected:false,writable:false,mode:'browser',name:'',message:'Connect question-bank to load and save JSON files. Browser-only import is still available.',busy:false,updates:[],errors:[]};
- async function api(path='',options={}){
-  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
-  try{const response=await fetch('/api/question-bank'+path,{...options,signal:controller.signal,cache:'no-store'});const data=await response.json();if(!response.ok)throw new Error(data.error||'Question bank request failed.');return data;}
+ const state={connected:false,writable:false,mode:'browser',name:'',message:'Connect question-bank to load and save JSON files. Browser-only import is still available.',busy:false,updates:[],errors:[],collectionId:null,assessment:null};
+ async function requestJSON(url,options={},timeoutMs=5000){
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),timeoutMs);
+  try{const response=await fetch(url,{...options,signal:controller.signal,cache:'no-store'});const data=await response.json();if(!response.ok){const error=new Error(data.error||'Question bank request failed.');error.status=response.status;throw error;}return data;}
   finally{clearTimeout(timeout);}
  }
+ const api=(path='',options={})=>requestJSON('/api/question-bank'+path,options);
  async function init(){
-  handle=null;token='';Object.assign(state,{connected:false,writable:false,mode:'browser',name:'',updates:[],errors:[]});
+  handle=null;token='';Object.assign(state,{connected:false,writable:false,mode:'browser',name:'',updates:[],errors:[],collectionId:null,assessment:null});
   if(location.protocol==='http:'&&location.hostname==='127.0.0.1'){
    try{const info=await api('/status');if(info.service==='sat-question-bank-v1'){token=info.token;Object.assign(state,{mode:'local',connected:true,writable:true,name:'question-bank',message:'Project question-bank connected. Imports are saved to this folder.'});return;}}catch{}
   }
@@ -22,9 +23,49 @@ window.SATBank=(()=>{
   try{const selected=await window.showDirectoryPicker({id:'sat-question-bank',mode:'readwrite'});await SATStorage.setSetting('questionBankFolder',selected);handle=selected;Object.assign(state,{name:handle.name,mode:'folder',connected:true,writable:true});}
   catch(e){state.message=e.name==='AbortError'?'Folder selection cancelled. No files were written.':'Could not connect: '+e.message;}
  }
+ async function syncPackages(){
+  let collection;
+  try{collection=await requestJSON('/api/sat-packs',{},30000);}catch(error){if(error.status===404)return false;throw error;}
+  if(!collection.collectionId)return false;
+  if(!Array.isArray(collection.packs)||!collection.packs.length)throw new Error('The active SAT collection contains no packages.');
+  const files=[];
+  for(const pack of collection.packs){
+   if(!Array.isArray(pack.files))throw new Error('The local SAT package file list is invalid.');
+   for(const entry of pack.files){
+    if(typeof entry.path!=='string')throw new Error('A SAT package file path is missing.');
+    let content;
+    if(typeof entry.text==='string')content=entry.text;
+    else if(typeof entry.dataBase64==='string')content=Uint8Array.from(atob(entry.dataBase64),letter=>letter.charCodeAt(0));
+    else throw new Error('A SAT package file has no content.');
+    const file=new File([content],entry.path.split('/').pop(),{type:entry.mediaType||''});
+    Object.defineProperty(file,'webkitRelativePath',{value:entry.path});files.push(file);
+   }
+  }
+  // Validate every package before backing up or archiving the existing library.
+  const previews=await SATPack.previewFiles(files,new Set());
+  const failures=previews.flatMap(p=>p.errors.map(error=>p.fileName+': '+error));
+  if(failures.length)throw new Error(failures.join(' '));
+  const archive=await SATStorage.archiveLibraryForCollection(collection.collectionId,snapshot=>requestJSON('/api/sat-library-backup',{
+   method:'POST',headers:{'Content-Type':'application/json','X-SAT-Bank-Token':token},body:JSON.stringify({collectionId:collection.collectionId,snapshot})
+  },60000));
+  // A deleted source with no collection-archive marker was deliberately removed
+  // by the learner. Automatic sync must keep that deletion, including on later
+  // visits to the same collection. Collection archives can be reactivated.
+  const sources=await SATStorage.all('sources'),known=new Set(sources.filter(s=>!s.deleted||(s.collectionId===collection.collectionId&&!s.archivedForCollectionId)).map(s=>s.contentHash));
+  let imported=0,unchanged=0;
+  for(const preview of previews){
+   if(known.has(preview.contentHash)){unchanged++;continue;}
+   preview.collectionId=collection.collectionId;
+   imported+=await SATImporter.commit(preview);known.add(preview.contentHash);
+  }
+  state.collectionId=collection.collectionId;state.assessment=collection.assessment||null;state.connected=true;
+  state.message=`${imported} questions imported · ${unchanged} unchanged packages.${archive.changed?' Previous library backed up and archived.':''}`;
+  return true;
+ }
  async function sync(interactive=false){
   if((state.mode!=='local'&&!handle)||state.busy||writing)return;state.busy=true;state.errors=[];state.updates=[];
   try{
+   if(state.mode==='local'&&await syncPackages())return;
    let files=[];
    if(state.mode==='local'){const data=await api();files=data.files.map(f=>new File([f.text],f.name,{type:'application/json',lastModified:f.lastModified}));state.errors.push(...data.errors);state.connected=true;}
    else{
@@ -45,7 +86,7 @@ window.SATBank=(()=>{
     }catch(e){state.errors.push(`${file.name}: ${e.message}`);}
    }
    state.message=`${imported} questions imported · ${unchanged} unchanged files · ${state.updates.length} updates awaiting review.`;
-  }catch(e){state.connected=false;state.message='Could not read question bank: '+e.message+' Previously imported questions are still available.';}finally{state.busy=false;}
+  }catch(e){state.connected=false;state.errors.push(e.message);state.message='Could not sync question bank: '+e.message+' Saved questions and answer history were retained. Retry Sync Folder after resolving the error.';}finally{state.busy=false;}
  }
  // Called from Import before unrelated async work to retain the user gesture.
  async function prepareWrite(){
@@ -55,6 +96,7 @@ window.SATBank=(()=>{
   state.writable=permission==='granted';if(!state.writable)throw new Error('Write access was not granted. No questions were imported. Allow write access to save into the connected folder.');
  }
  async function saveFile(preview){
+  if(preview.isSATPack)return false;
   if(state.mode==='browser')return false;
   if(typeof preview.rawText!=='string')throw new Error('Select the original JSON file again before saving.');
   if(!/\.json$/i.test(preview.fileName)||/[\\/\x00-\x1f]/.test(preview.fileName))throw new Error('Use a plain JSON filename.');

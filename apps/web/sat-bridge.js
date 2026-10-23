@@ -1,5 +1,5 @@
 'use strict';
-// Integration lives outside apps/sat so the original SAT interface stays intact.
+// Keep platform storage namespaces and routes outside the SAT exam engine.
 (() => {
   if(!location.pathname.startsWith('/sat/'))return;
 
@@ -95,7 +95,7 @@
   };
   async function findSource(sourceId){
     const sources=(await window.SATStorage.all('sources')).filter(source=>!source.deleted).sort((a,b)=>b.importedAt-a.importedAt);
-    const direct=sources.find(source=>source.platformSourceId===sourceId||source.id===sourceId);
+    const direct=sources.find(source=>source.platformSourceId===sourceId||source.id===sourceId||source.packIdentity?.id===sourceId);
     if(direct)return direct;
     const response=await fetch('/api/question-bank',{cache:'no-store'});
     if(!response.ok)throw new Error('Could not load the selected question set.');

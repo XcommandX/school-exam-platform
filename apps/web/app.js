@@ -81,7 +81,7 @@
       title='个人中心';body=`<div class="profile-row"><span class="avatar large">A</span><div><h3>admin</h3></div></div>${statsTiles(s.all)}`;
     } else if(name==='settings') {
       title='设置';body=`<label class="setting-row"><span>减少界面动画</span><input type="checkbox" id="reduce-motion" ${state.preferences.reduceMotion?'checked':''}></label><div class="destination-list" style="margin-top:18px">${destination('/sat/?view=timingSettings','SAT 计时设置')}</div><div class="dialog-actions"><button class="button" type="button" data-dialog="plan">每日目标</button><button class="button" type="button" data-dialog="targets">目标分数</button><button class="button primary" type="button" data-close-dialog>完成</button></div>`;
-    } else if(name==='math') {title='SAT 数学';body=empty('SAT 数学尚未接入','function')+`<div class="dialog-actions"><a class="button primary" href="/sat/?view=practiceBuilder&mode=custom">开始英语练习 ${icon('arrow')}</a></div>`;
+    } else if(name==='math') {title='SAT 数学';body=`<div class="dialog-actions"><a class="button primary" href="/sat/?view=practiceBuilder&mode=custom&section=math">开始数学练习 ${icon('arrow')}</a></div>`;
     } else if(name==='ap') {title='AP';body=empty('AP 尚未接入');
     } else if(name==='vocab') {title='Personal Vocab';body=empty('Personal Vocab 尚未接入','book')+`<div class="dialog-actions"><a class="button primary" href="/toefl/?view=vocab">TOEFL 词汇训练 ${icon('arrow')}</a></div>`;
     } else return;

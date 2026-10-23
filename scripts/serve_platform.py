@@ -5,11 +5,13 @@ Question banks are local private files. No authentication or cloud storage is
 implemented by this development server; it must not be exposed to a network.
 """
 import argparse
+import base64
 import hashlib
 import json
 import mimetypes
 import os
 from pathlib import Path
+import re
 import secrets
 import shutil
 import subprocess
@@ -19,17 +21,168 @@ import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import unquote, urlsplit
 import webbrowser
+import xml.etree.ElementTree as ET
 
 REPOSITORY = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPOSITORY))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
 
 MAX_BYTES = 20 * 1024 * 1024
+MAX_PACK_BYTES = 128 * 1024 * 1024
+MAX_BACKUP_BYTES = 256 * 1024 * 1024
 EXAMS = {'sat': 'SAT', 'ap': 'AP', 'toefl': 'TOEFL', 'vocab': 'Personal Vocab'}
 TOEFL_PUBLIC_FILES = frozenset({
     'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js',
     'four-app.js', 'favicon.svg', 'audio/fixture-tone.wav', 'images/fixture-scene.svg',
 })
+
+
+def _json_object_pairs(pairs):
+    value = {}
+    for key, child in pairs:
+        if key in value:
+            raise ValueError(f'Duplicate JSON key: {key}')
+        value[key] = child
+    return value
+
+
+def _safe_local_path(base, relative):
+    if (not isinstance(relative, str) or not relative or re.search(r'[\\\x00-\x1f:%?#]', relative)
+            or any(part in {'', '.', '..'} for part in relative.split('/'))):
+        raise ValueError('Use a safe package-relative path.')
+    path = base
+    if path.is_symlink():
+        raise ValueError('Symbolic package paths are unsupported.')
+    for part in relative.split('/'):
+        path = path / part
+        if path.is_symlink():
+            raise ValueError('Symbolic package paths are unsupported.')
+    if not path.resolve().is_relative_to(base.resolve()):
+        raise ValueError('Package path escapes its collection.')
+    return path
+
+
+def _read_local_json(path):
+    if not path.is_file() or path.stat().st_size > MAX_BYTES:
+        raise ValueError('Package JSON is missing or exceeds 20 MB.')
+    return json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=_json_object_pairs)
+
+
+def _validate_static_image(data, media_type):
+    if media_type == 'image/svg+xml':
+        raw = data.decode('utf-8')
+        if re.search(r'<!|<\?', raw):
+            raise ValueError('SVG declarations, entities, and processing instructions are unsupported.')
+        tree = ET.fromstring(raw)
+        tags = {'svg', 'g', 'path', 'rect', 'line', 'polyline', 'polygon', 'circle', 'ellipse',
+                'text', 'tspan', 'title', 'desc', 'defs', 'clipPath', 'mask', 'linearGradient', 'radialGradient', 'stop'}
+        attributes = {'viewBox', 'width', 'height', 'x', 'y', 'x1', 'y1', 'x2', 'y2', 'cx', 'cy', 'r',
+                      'rx', 'ry', 'd', 'points', 'fill', 'fill-opacity', 'fill-rule', 'stroke', 'stroke-width',
+                      'stroke-opacity', 'stroke-linecap', 'stroke-linejoin', 'stroke-dasharray', 'stroke-dashoffset',
+                      'opacity', 'transform', 'font-family', 'font-size', 'font-weight', 'font-style', 'text-anchor',
+                      'dominant-baseline', 'dx', 'dy', 'id', 'clip-path', 'clip-rule', 'mask', 'gradientUnits',
+                      'gradientTransform', 'offset', 'stop-color', 'stop-opacity', 'preserveAspectRatio', 'vector-effect'}
+        if tree.tag != '{http://www.w3.org/2000/svg}svg':
+            raise ValueError('Expected a static SVG root.')
+        for element in tree.iter():
+            if not element.tag.startswith('{http://www.w3.org/2000/svg}') or element.tag.split('}', 1)[-1] not in tags:
+                raise ValueError('SVG element is outside the supported static subset.')
+            for key, value in element.attrib.items():
+                if (key not in attributes or re.search(r'\\|(?:javascript|data|https?|file):|@import|expression\s*\(', value, re.I)
+                        or re.search(r'url\s*\(', value, re.I) and not re.fullmatch(r'url\(#[A-Za-z][A-Za-z0-9_.:-]*\)', value)):
+                    raise ValueError('SVG contains an unsafe attribute or external resource.')
+        return
+    valid = (media_type == 'image/png' and data.startswith(b'\x89PNG\r\n\x1a\n')
+             or media_type == 'image/jpeg' and data.startswith(b'\xff\xd8\xff')
+             or media_type == 'image/gif' and data[:6] in {b'GIF87a', b'GIF89a'}
+             or media_type == 'image/webp' and data[:4] == b'RIFF' and data[8:12] == b'WEBP')
+    if not valid:
+        raise ValueError('Image bytes do not match their declared MIME type.')
+
+
+def read_sat_pack_collection(private):
+    """Expose only an explicitly active SAT collection and its declared files."""
+    base = Path(private) / 'sat-packs'
+    active = _safe_local_path(base, 'active.json')
+    if not active.exists():
+        return {'collectionId': None, 'packs': [], 'assessment': None}
+    config = _read_local_json(active)
+    if (not isinstance(config, dict) or set(config) != {'collectionId', 'root'}
+            or not isinstance(config['collectionId'], str)
+            or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,99}', config['collectionId'])):
+        raise ValueError('Invalid active SAT collection identity.')
+    collection = _safe_local_path(base, config['root'])
+    if not collection.is_dir():
+        raise ValueError('The active SAT collection folder is missing.')
+    manifests = sorted(collection.rglob('pack.json'))
+    if not manifests or len(manifests) > 64:
+        raise ValueError('An active SAT collection needs between 1 and 64 packs.')
+    packs, total_bytes, identities = [], 0, set()
+    image_types = {'.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+                   '.gif': 'image/gif', '.webp': 'image/webp'}
+    for manifest_path in manifests:
+        relative = manifest_path.relative_to(collection).as_posix()
+        manifest_path = _safe_local_path(collection, relative)
+        manifest = _read_local_json(manifest_path)
+        if (not isinstance(manifest, dict) or manifest.get('schemaVersion') != 'sat-question-pack/0.1-draft'
+                or manifest.get('documentType') != 'sat-question-pack' or manifest.get('exam') != 'sat'
+                or manifest.get('section') not in {'math', 'reading-writing'}
+                or manifest.get('responseType') not in {'single-choice', 'student-produced-response'}
+                or manifest.get('section') == 'reading-writing' and manifest.get('responseType') != 'single-choice'
+                or not isinstance(manifest.get('files'), dict) or set(manifest['files']) != {'items', 'solutions'}
+                or not isinstance(manifest.get('assets'), list)):
+            raise ValueError('Unsupported SAT package manifest.')
+        identity = (manifest.get('id'), manifest.get('revision'))
+        if (not isinstance(identity[0], str) or not re.fullmatch(r'sat:pack:[A-Za-z0-9][A-Za-z0-9._:-]*', identity[0])
+                or type(identity[1]) is not int or identity[1] < 1 or identity in identities):
+            raise ValueError('Invalid or duplicate SAT package identity.')
+        identities.add(identity)
+        folder = manifest_path.parent
+        files = []
+        declared = [('pack.json', 'application/json'), (manifest['files']['items'], 'application/json'),
+                    (manifest['files']['solutions'], 'application/json')]
+        asset_paths = set()
+        for asset in manifest['assets']:
+            if not isinstance(asset, dict) or not isinstance(asset.get('path'), str) or not asset['path'].startswith('assets/'):
+                raise ValueError('SAT asset paths must be under assets/.')
+            asset_path = _safe_local_path(folder, asset['path'])
+            if asset['path'] in asset_paths or image_types.get(asset_path.suffix.lower()) != asset.get('mediaType'):
+                raise ValueError('Duplicate or unsupported SAT asset MIME type.')
+            asset_paths.add(asset['path'])
+            if not asset_path.is_file() or asset_path.stat().st_size > MAX_BYTES:
+                raise ValueError('SAT asset is missing or exceeds 20 MB.')
+            data = asset_path.read_bytes()
+            if (type(asset.get('byteLength')) is not int or asset['byteLength'] != len(data) or not data
+                    or not isinstance(asset.get('sha256'), str) or hashlib.sha256(data).hexdigest() != asset['sha256']):
+                raise ValueError('SAT asset byteLength or sha256 mismatch.')
+            _validate_static_image(data, asset['mediaType'])
+            declared.append((asset['path'], asset['mediaType']))
+        if len({name for name, _ in declared}) != len(declared):
+            raise ValueError('Package files must have distinct local paths.')
+        for name, media_type in declared:
+            path = _safe_local_path(folder, name)
+            if not path.is_file() or path.stat().st_size > MAX_BYTES:
+                raise ValueError('Declared SAT package file is missing or exceeds 20 MB.')
+            data = path.read_bytes()
+            total_bytes += len(data)
+            if total_bytes > MAX_PACK_BYTES:
+                raise ValueError('SAT collection exceeds the 128 MB transfer limit.')
+            entry = {'path': path.relative_to(collection).as_posix(), 'mediaType': media_type}
+            if media_type == 'application/json':
+                _read_local_json(path)
+                entry['text'] = data.decode('utf-8')
+            else:
+                entry['dataBase64'] = base64.b64encode(data).decode('ascii')
+            files.append(entry)
+        item_document = _read_local_json(_safe_local_path(folder, manifest['files']['items']))
+        if not isinstance(item_document, dict) or not isinstance(item_document.get('items'), list):
+            raise ValueError('SAT items document is invalid.')
+        packs.append({'files': files, 'id': manifest['id'], 'revision': manifest['revision'], 'title': manifest['title'],
+                      'section': manifest['section'], 'responseType': manifest['responseType'],
+                      'questionCount': len(item_document['items'])})
+    assessment_path = _safe_local_path(collection, 'assessment.json')
+    assessment = _read_local_json(assessment_path) if assessment_path.is_file() else None
+    return {'collectionId': config['collectionId'], 'packs': packs, 'assessment': assessment}
 
 
 def prepare_toefl_preview(root):
@@ -153,11 +306,27 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                 return self.reply(200, session)
             if route == '/api/toefl/status':
                 return self.reply(200, toefl_preview)
+            if route == '/api/sat-packs':
+                try:
+                    return self.reply(200, read_sat_pack_collection(private))
+                except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
+                    return self.reply(400, {'error': str(error)})
             if route == '/api/platform/catalog':
                 exams, errors = [], []
                 for exam, name in EXAMS.items():
                     rows, failures = read_sets(exam)
                     sources = [summary(document) for _, document in rows]
+                    if exam == 'sat':
+                        try:
+                            collection = read_sat_pack_collection(private)
+                            if collection['collectionId']:
+                                sources = [{'id': p['id'], 'title': p['title'], 'questionCount': p['questionCount'],
+                                            'section': 'Math' if p['section'] == 'math' else 'Reading and Writing',
+                                            'defaultDurationSeconds': 2100 if p['section'] == 'math' else 1920,
+                                            'moduleCount': 1, 'packRevision': p['revision'],
+                                            'collectionId': collection['collectionId']} for p in collection['packs']]
+                        except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
+                            failures.append({'file': 'active SAT packages', 'error': str(error)})
                     exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'toefl' and toefl_preview['available'],
                                   'questionCount': sum(s['questionCount'] for s in sources),
                                   'sourceCount': len(sources), 'sources': sources,
@@ -211,9 +380,11 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/sat/'):
                 base, relative = root / 'apps/sat', route[len('/sat/'):]
-                if relative != 'html/index.html' and relative.split('/')[0] not in {'js', 'css', 'data'}:
+                namespace = relative.split('/')[0]
+                if relative != 'html/index.html' and namespace not in {'js', 'css', 'data', 'vendor'}:
                     return self.reply(404, {'error': 'Not found.'})
-                if Path(relative).suffix not in {'.html', '.js', '.css', '.json'}:
+                suffixes = {'.js', '.css', '.woff', '.woff2', '.ttf', '.otf'} if namespace == 'vendor' else {'.html', '.js', '.css', '.json'}
+                if Path(relative).suffix.lower() not in suffixes:
                     return self.reply(404, {'error': 'Not found.'})
             else:
                 return self.reply(404, {'error': 'Not found.'})
@@ -240,15 +411,49 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
             if (not self.valid_host() or self.headers.get('Origin') != origin
                     or self.headers.get('X-SAT-Bank-Token') != token):
                 return self.reply(403, {'error': 'Use the local workspace to import question files.'})
-            if urlsplit(self.path).path != '/api/question-bank':
+            route = urlsplit(self.path).path
+            if route not in {'/api/question-bank', '/api/sat-library-backup'}:
                 return self.reply(404, {'error': 'Not found.'})
             if self.headers.get('Content-Type', '').split(';')[0] != 'application/json':
                 return self.reply(400, {'error': 'Expected JSON.'})
             try:
                 length = int(self.headers.get('Content-Length', '0'))
-                if not 0 < length <= MAX_BYTES:
-                    return self.reply(413, {'error': 'Imports must be between 1 byte and 20 MB.'})
+                maximum = MAX_BACKUP_BYTES if route == '/api/sat-library-backup' else MAX_BYTES
+                if not 0 < length <= maximum:
+                    return self.reply(413, {'error': f'Request must be between 1 byte and {maximum // 1024 // 1024} MB.'})
                 request = json.loads(self.rfile.read(length))
+                if route == '/api/sat-library-backup':
+                    if not isinstance(request, dict) or set(request) != {'collectionId', 'snapshot'}:
+                        raise ValueError('A collection ID and browser snapshot are required.')
+                    collection_id, snapshot = request['collectionId'], request['snapshot']
+                    if (not isinstance(collection_id, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,99}', collection_id)
+                            or not isinstance(snapshot, dict) or snapshot.get('schemaVersion') != 'sat-library-backup/1'
+                            or snapshot.get('targetCollectionId') != collection_id
+                            or any(not isinstance(snapshot.get(key), list) for key in ('sources', 'questions', 'attempts', 'wrongBook'))
+                            or 'runtimeSnapshot' not in snapshot):
+                        raise ValueError('Invalid browser library backup.')
+                    active = _read_local_json(_safe_local_path(private / 'sat-packs', 'active.json'))
+                    if active.get('collectionId') != collection_id:
+                        raise ValueError('The active collection changed; retry the library backup.')
+                    payload = (json.dumps(snapshot, ensure_ascii=False, sort_keys=True, separators=(',', ':')) + '\n').encode('utf-8')
+                    digest = hashlib.sha256(payload).hexdigest()
+                    folder = _safe_local_path(private, f'backups/{collection_id}')
+                    folder.mkdir(parents=True, exist_ok=True)
+                    target = _safe_local_path(private, f'backups/{collection_id}/browser-{digest}.json')
+                    with lock:
+                        if not target.exists():
+                            temporary = None
+                            try:
+                                with tempfile.NamedTemporaryFile(dir=folder, prefix='.browser-', suffix='.tmp', delete=False) as stream:
+                                    temporary = stream.name
+                                    stream.write(payload)
+                                    stream.flush()
+                                    os.fsync(stream.fileno())
+                                os.link(temporary, target)
+                            finally:
+                                if temporary:
+                                    os.unlink(temporary)
+                    return self.reply(201, {'saved': True, 'collectionId': collection_id, 'name': target.name, 'sha256': digest})
                 name, text = request['name'], request['text']
                 if not isinstance(name, str) or not name.lower().endswith('.json') or any(c in name for c in '/\\\x00') or any(ord(c) < 32 for c in name):
                     raise ValueError('Use a plain JSON filename.')

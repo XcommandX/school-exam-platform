@@ -39,7 +39,7 @@ window.SATImporter = (() => {
 
     return {errors,warnings,questions:normalized,title:data.title,section:'Reading and Writing',moduleQuestionCounts:data.moduleQuestionCounts,moduleDurationsSeconds:data.moduleDurationsSeconds,defaultDurationSeconds:SATModel.durationSeconds(data)};
   }
-  async function preview(file,knownHashes) {
+  async function preview(file,knownHashes=new Set()) {
     const result={fileName:file.name,count:0,errors:[],questions:[]};
     if(!/\.json$/i.test(file.name)) return {...result,errors:['.json files only.']};
     try {
@@ -56,9 +56,14 @@ window.SATImporter = (() => {
   }
   async function commit(preview) {
     if(preview.errors.length) throw new Error('Fix validation errors before importing.');
-    const id=crypto.randomUUID(),importedAt=Date.now();
-    const source={id,fileName:preview.fileName,displayName:preview.title?.trim()||preview.fileName.replace(/\.json$/i,''),section:'Reading and Writing',importedAt,questionCount:preview.questions.length,defaultDurationSeconds:preview.defaultDurationSeconds||1920,moduleQuestionCounts:preview.moduleQuestionCounts||null,moduleDurationsSeconds:preview.moduleDurationsSeconds||null,bankFile:preview.bankFile||null,previousSourceId:preview.previousSourceId||null,contentHash:preview.contentHash};
-    const normalized=preview.questions.map((q,index)=>({...q,id:`${id}:${index}`,metadata:{sourceId:id,sourceFileName:source.fileName,sourceQuestionIndex:index,importedAt,originalQuestionType:q.originalQuestionType||''}}));
+    const pack=preview.isSATPack?preview.packIdentity:null;
+    if(preview.isSATPack&&(!pack||!preview.sourceId))throw new Error('A validated package identity is required.');
+    const id=pack?preview.sourceId:crypto.randomUUID(),importedAt=Date.now();
+    const source={id,fileName:preview.fileName,displayName:preview.title?.trim()||preview.fileName.replace(/\.json$/i,''),section:pack?preview.section:'Reading and Writing',importedAt,questionCount:preview.questions.length,defaultDurationSeconds:preview.defaultDurationSeconds||1920,moduleQuestionCounts:preview.moduleQuestionCounts||null,moduleDurationsSeconds:preview.moduleDurationsSeconds||null,bankFile:preview.bankFile||null,previousSourceId:preview.previousSourceId||null,contentHash:preview.contentHash,...(pack?{packIdentity:pack,responseType:preview.responseType}: {})};
+    if(pack&&preview.collectionId)source.collectionId=preview.collectionId;
+    // add(), rather than put(), protects attempts tied to a previous revision.
+    // Re-importing changed content with an unchanged revision must fail.
+    const normalized=preview.questions.map((q,index)=>({...q,id:pack?`${id}:${encodeURIComponent(q.itemId)}@${q.itemRevision}`:`${id}:${index}`,metadata:{sourceId:id,sourceFileName:source.fileName,sourceQuestionIndex:index,importedAt,originalQuestionType:q.originalQuestionType||'',...(pack?{itemId:q.itemId,itemRevision:q.itemRevision,packId:q.packId,packRevision:q.packRevision}:{})}}));
     await SATStorage.importSet(source,normalized);
     return normalized.length;
   }

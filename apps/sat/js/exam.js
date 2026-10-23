@@ -4,7 +4,7 @@ let examQuestions=[], running=false, timerHandle=null, finishing=null, onFinish=
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'sat-reading-practice-v1';
 const duration = 32 * 60 * 1000;
-const emptyQuestionState = () => ({selectedOption:null,eliminatedOptions:[],markedForReview:false,highlights:[],notesExpanded:false,timeSpentMs:0,materialScrollTop:0});
+const emptyQuestionState = () => ({selectedOption:null,numericResponse:'',eliminatedOptions:[],markedForReview:false,highlights:[],notesExpanded:false,timeSpentMs:0,materialScrollTop:0});
 const initialState = () => ({currentQuestion:0,view:'question',questionStates:examQuestions.map(emptyQuestionState),endTimestamp:Date.now()+duration,remainingSeconds:1920,highlightMode:false,highlightColor:'yellow',timerHidden:false,eliminationVisible:true,split:50,completed:false,activePractice:null,questionEnterTimestamp:null,phase:'active',elapsedMs:0,segmentStartedAt:null,lineReaderState:{enabled:false,y:0},directionsShown:false});
 let state=initialState();
 let activeHighlightId=null, hoveredHighlightId=null, suppressClickUntil=0, readingFontSize=null;
@@ -13,16 +13,42 @@ const isUntimed=()=>state.activePractice?.untimed===true;
 const allowsOvertime=()=>state.activePractice?.allowOvertime===true;
 const countedNow=(now=Date.now())=>isUntimed()||allowsOvertime()?now:Math.min(now,state.endTimestamp);
 const currentModule=()=>state.activePractice?.modules?.[state.moduleIndex||0]||{start:0,end:examQuestions.length,durationSeconds:SATModel.durationSeconds(state.activePractice)};
-function showModuleBreak(){
- $('modal').close();hideToolbar();hideTooltips();
- window.dispatchEvent(new CustomEvent('sat-module-over',{detail:{continue:()=>{
-  if(state.phase!=='module_break')return;
-  state.moduleIndex++;state.phase='active';state.view='question';state.currentQuestion=currentModule().start;
-  state.endTimestamp=Date.now()+currentModule().durationSeconds*1000;state.segmentStartedAt=Date.now();state.questionEnterTimestamp=Date.now();
-  timerHandle=setInterval(updateTimer,1000);render();save();showDirections();
+const isMath=()=>SATSession.section(examQuestions[state.currentQuestion])==='Math';
+const isSPR=()=>SATSession.isSPR(examQuestions[state.currentQuestion]);
+function activateNextModule(){
+ state.moduleIndex++;state.phase='active';state.view='question';state.currentQuestion=currentModule().start;
+ delete state.breakEndTimestamp;
+ state.endTimestamp=Date.now()+currentModule().durationSeconds*1000;state.segmentStartedAt=Date.now();state.questionEnterTimestamp=Date.now();
+ document.querySelector('.exam-shell').hidden=false;
+ timerHandle=setInterval(updateTimer,1000);render();save();showDirections();
+}
+function showSectionBreak(){
+ clearInterval(timerHandle);$('modal').close();hideToolbar();hideTooltips();closeNavigator();
+ state.phase='section_break';state.breakEndTimestamp??=Date.now()+600000;save();
+ window.dispatchEvent(new CustomEvent('sat-section-break',{detail:{endTimestamp:state.breakEndTimestamp,resume:()=>{
+  if(state.phase!=='section_break')return false;
+  showSectionReady();return true;
  }}}));
 }
-$('modal').addEventListener('cancel',event=>{if(state.phase==='module_break')event.preventDefault();});
+function showSectionReady(){
+ clearInterval(timerHandle);$('modal').close();hideToolbar();hideTooltips();closeNavigator();
+ state.phase='section_ready';save();
+ window.dispatchEvent(new CustomEvent('sat-section-ready',{detail:{begin:()=>{
+  if(state.phase!=='section_ready')return false;
+  activateNextModule();return true;
+ }}}));
+}
+function continueModule(){
+ if(state.phase!=='module_break')return;
+ const next=state.activePractice.modules[(state.moduleIndex||0)+1];
+ if(state.activePractice.fullSAT&&SATSession.section(examQuestions[currentModule().start])!=='Math'&&SATSession.section(examQuestions[next.start])==='Math')showSectionBreak();
+ else activateNextModule();
+}
+function showModuleBreak(){
+ $('modal').close();hideToolbar();hideTooltips();
+ window.dispatchEvent(new CustomEvent('sat-module-over',{detail:{continue:continueModule}}));
+}
+$('modal').addEventListener('cancel',event=>{if(['module_break','section_break','section_ready'].includes(state.phase))event.preventDefault();});
 const save=()=>{if(!running)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));localStorage.setItem('sat-ui-preferences-v1',JSON.stringify({highlightColor:state.highlightColor,fontSize:readingFontSize}));}catch(error){console.warn('Practice storage is unavailable.',error);}};
 function commitMaterialScroll(){if(running&&state.view==='question'&&!restoringMaterial)currentState().materialScrollTop=$('passagePane').scrollTop;}
 let restoringMaterial=false,materialRender=0;
@@ -44,12 +70,14 @@ function startExam(loadedQuestions,practice,finishHandler,saved=null){
  state.questionTimerPanelState??={visible:SATSettings.timer.enabled,x:null,y:null};
  const now=Date.now();
  if(!saved){state.moduleIndex=0;state.endTimestamp=now+currentModule().durationSeconds*1000;state.segmentStartedAt=now;}
+ state.questionStates.forEach((q,index)=>{q.timeSpentMs=q.timeSpentMs||0;q.numericResponse??='';if(SATSession.isSPR(examQuestions[index])&&!SATPack.canEditInput(q.numericResponse,examQuestions[index].inputProfile))q.numericResponse='';q.highlights??=[];q.eliminatedOptions??=[];if(q.eliminatedOptions.includes(q.selectedOption))q.selectedOption=null;});
+ if(saved?.phase==='section_break'){running=true;SATLineReader.bind(state.lineReaderState,save);showSectionBreak();return;}
+ if(saved?.phase==='section_ready'){running=true;SATLineReader.bind(state.lineReaderState,save);showSectionReady();return;}
  if(saved?.phase==='module_break'){running=true;document.querySelector('.exam-shell').hidden=false;SATLineReader.bind(state.lineReaderState,save);showModuleBreak();return;}
  if(saved?.phase==='paused'){
   state.endTimestamp=now+saved.remainingTimeMs;state.completed=false;state.finishPending=null;state.finishedAt=null;state.questionEnterTimestamp=null;state.segmentStartedAt=now;
  }
  state.phase='active';state.segmentStartedAt=state.segmentStartedAt??now;
- state.questionStates.forEach(q=>{q.timeSpentMs=q.timeSpentMs||0;q.highlights??=[];if(q.eliminatedOptions.includes(q.selectedOption))q.selectedOption=null;});
  running=true;document.querySelector('.exam-shell').hidden=false;SATLineReader.bind(state.lineReaderState,save);
  if(saved)commitQuestionTime();
  if(state.view==='question'&&!state.completed)state.questionEnterTimestamp=Date.now();
@@ -59,13 +87,13 @@ function startExam(loadedQuestions,practice,finishHandler,saved=null){
 }
 async function finishAttempt({status,reason}){
  if(finishing)return finishing;if(!running)return;
- if(state.phase==='module_break')return;
+ if(['module_break','section_break','section_ready'].includes(state.phase))return;
  if(status==='completed' && (state.moduleIndex||0)+1<(state.activePractice.modules?.length||1)){
   clearInterval(timerHandle);commitQuestionTime();const now=countedNow();
   if(state.segmentStartedAt!==null)state.elapsedMs+=Math.max(0,now-state.segmentStartedAt);
   state.segmentStartedAt=null;state.phase='module_break';state.moduleResults??=[];
   state.moduleResults.push({moduleIndex:state.moduleIndex||0,reason,finishedAt:now});
-  closeNavigator();save();showModuleBreak();return;
+  closeNavigator();save();if(reason==='submitted')continueModule();else showModuleBreak();return;
  }
  clearInterval(timerHandle);commitQuestionTime();state.completed=true;
  if(status==='completed'){
@@ -91,6 +119,7 @@ async function finishAttempt({status,reason}){
 }
 
 function renderBlock(block,text){
+ const packed=examQuestions[state.currentQuestion];if(packed?.packContent){renderPack(block,packed,block.dataset.block);return;}
  const ranges=currentState().highlights.filter(h=>h.block===block.dataset.block);
  const q=examQuestions[state.currentQuestion];
  const formatting=block.dataset.block==='passage'?(q.passageFormatting||[]):block.dataset.block==='prompt'?(q.promptFormatting||[]):block.dataset.block.startsWith('option-')?(q.optionsFormatting?.[Number(block.dataset.block.split('-')[1])]||[]):[];
@@ -108,36 +137,103 @@ function renderBlock(block,text){
  block.replaceChildren(fragment);
  if(block.dataset.block==='passage')SATText.layout(block,examQuestions[state.currentQuestion]);
 }
-function blockText(key){const q=examQuestions[state.currentQuestion];return key==='passage'?q.passage:key==='prompt'?q.prompt:q.options[Number(key.split('-')[1])];}
+function blockText(key){const q=examQuestions[state.currentQuestion];if(q.packContent)return currentState().blockTexts?.[key]??SATContent.plainText(packBlocks(q,key));return key==='passage'?q.passage:key==='prompt'?q.prompt:q.options[Number(key.split('-')[1])];}
+function packBlocks(q,key){return key==='passage'?q.packContent.content:key==='prompt'?q.packContent.prompt:q.packContent.options?.[Number(key.split('-')[1])]?.content||[];}
+function renderPack(block,q,key){
+ const math=isMath();block.classList.toggle('sat-reading-images',!math);
+ const rendered=SATContent.render(block,packBlocks(q,key),{assets:q.packAssets,imageFactory:math?options=>SATMathTools.createImage({...options,overlayHost:$('examContent')}):undefined,annotations:math?[]:currentState().highlights.filter(h=>h.block===key),styleAnnotation:styleHighlight});
+ currentState().blockTexts??={};currentState().blockTexts[key]=rendered.text;
+}
+function setMathLayout(animated=false){
+ const host=$('examContent'),math=isMath();host.classList.toggle('math-section',math);host.classList.toggle('calculator-open',math&&state.calculatorOpen===true);
+ host.classList.toggle('calculator-motion',animated);
+ $('calculatorToggle').hidden=!math;$('referenceToggle').hidden=!math;$('highlightToggle').hidden=math;
+ $('calculatorToggle').setAttribute('aria-pressed',math&&state.calculatorOpen===true);
+ if(!math&&$('examContent').hasAttribute('data-sat-reference-open'))referenceTools.close();
+ if(math&&Boolean(state.referenceOpen)!==referenceTools.isOpen())referenceTools.setOpen(Boolean(state.referenceOpen));
+}
+const sprDirections = [
+ {type:'markdown',text:'## Student-produced response directions\n\n- If you find **more than one correct answer**, enter only one answer.\n- You can enter up to 5 characters for a **positive** answer and up to 6 characters (including the negative sign) for a **negative** answer.\n- If your answer is a **fraction** that doesn’t fit in the provided space, enter the decimal equivalent.\n- If your answer is a **decimal** that doesn’t fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a **mixed number** (such as $3\\frac{1}{2}$), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).\n- Don’t enter **symbols** such as a percent sign, comma, or dollar sign.'}
+];
+const sprExamples='<table><caption>Examples</caption><thead><tr><th>Answer</th><th>Acceptable ways to enter answer</th><th>Unacceptable: will NOT receive credit</th></tr></thead><tbody><tr><td>3.5</td><td><code>3.5</code><br><code>3.50</code><br><code>7/2</code></td><td><code>31/2</code><br><code>3 1/2</code></td></tr><tr><td>⅔</td><td><code>2/3</code><br><code>.6666</code><br><code>.6667</code><br><code>0.666</code><br><code>0.667</code></td><td><code>0.66</code><br><code>.66</code><br><code>0.67</code><br><code>.67</code></td></tr><tr><td>−⅓</td><td><code>-1/3</code><br><code>-.3333</code><br><code>-.3334</code><br><code>-0.333</code><br><code>-0.334</code></td><td><code>-.33</code><br><code>-0.33</code></td></tr></tbody></table>';
+function renderNumericPreview(){
+ const q=examQuestions[state.currentQuestion],value=currentState().numericResponse||'',valid=!value||SATPack.validInput(value,q.inputProfile);
+ const preview=$('numericPreview');preview.replaceChildren();
+ if(value&&valid){const fraction=value.match(/^(-?)([0-9]+)\/([0-9]+)$/);SATContent.render(preview,[{type:'markdown',text:fraction?'$'+fraction[1]+'\\frac{'+fraction[2]+'}{'+fraction[3]+'}$':'$'+value+'$'}]);}
+}
 function render(){
  closeMore();hideToolbar();hideTooltips();const review=state.view==='review';$('questionView').hidden=review;$('reviewView').hidden=!review;$('navigatorToggle').hidden=review;
- const module=currentModule();
- document.querySelector('.section-info h1').textContent=`Section 1, Module ${(state.moduleIndex||0)+1}: Reading and Writing`;
- document.querySelectorAll('#navigator h3,.review-card-heading h3').forEach(e=>e.textContent=`Section 1, Module ${(state.moduleIndex||0)+1}: Reading and Writing Questions`);
+ const module=currentModule(),q=examQuestions[state.currentQuestion],math=isMath(),spr=isSPR(),label=`Section ${module.sectionNumber||(math?2:1)}, Module ${module.moduleNumber||(state.moduleIndex||0)+1}: ${math?'Math':'Reading and Writing'}`;
+ document.querySelector('.section-info h1').textContent=label;
+ document.querySelectorAll('#navigator h3,.review-card-heading h3').forEach(e=>e.textContent=label+' Questions');
  $('questionNumber').textContent=state.currentQuestion-module.start+1;
  $('navigatorToggle').firstChild.textContent=`Question ${state.currentQuestion-module.start+1} of ${module.end-module.start} `;
  $('studentName').textContent=studentName;
  $('reviewToggle').setAttribute('aria-pressed',currentState().markedForReview);
  $('highlightToggle').setAttribute('aria-pressed',state.highlightMode);$('highlightToggle').classList.toggle('is-enabled',state.highlightMode);
- $('eliminationToggle').setAttribute('aria-pressed',state.eliminationVisible);
+ $('eliminationToggle').setAttribute('aria-pressed',state.eliminationVisible);$('eliminationToggle').hidden=spr;
  $('backButton').hidden=!review && state.currentQuestion===module.start;
- renderNotes();
+ $('questionView').classList.toggle('spr-layout',spr);setMathLayout();
+ if(math){$('notesPanel').hidden=true;$('expandNotes').hidden=true;$('questionView').classList.remove('notes-open');document.documentElement.style.setProperty('--left',`${state.mathSplit??50}%`);$('divider').setAttribute('aria-label','Resize directions and question panes');$('divider').setAttribute('aria-valuenow',Math.round(state.mathSplit??50));$('divider').setAttribute('aria-valuemin','30');}
+ else{renderNotes();$('divider').setAttribute('aria-label','Resize reading panes');}
+ SATMathTools.destroyImages($('questionView'));
  if(review){renderGrid($('reviewGrid'),false);}else{
  $('passagePane').querySelectorAll('.question-visual,.visual-fallback').forEach(e=>e.remove());
- const visualQuestion=examQuestions[state.currentQuestion];$('passagePane').classList.toggle('has-visual',!!visualQuestion.visualStimulus);$('passagePane').classList.add('material-scroll-region');$('passage').insertAdjacentHTML('beforebegin',SATModel.visualHTML(visualQuestion,'before-passage'));$('passage').insertAdjacentHTML('afterend',SATModel.visualHTML(visualQuestion,'after-passage'));
- renderBlock($('passage'),examQuestions[state.currentQuestion].passage);renderBlock($('prompt'),examQuestions[state.currentQuestion].prompt);
- $('options').replaceChildren();
- examQuestions[state.currentQuestion].options.forEach((text,index)=>{
+ $('passagePane').classList.toggle('has-visual',!q.packContent&&!!q.visualStimulus);$('passagePane').classList.add('material-scroll-region');
+ $('passage').classList.toggle('spr-directions',spr);$('passage').classList.remove('source-literary');
+ $('mathContent').hidden=!math;
+ if(q.packContent){
+  if(math){SATContent.render($('mathContent'),q.packContent.content,{assets:q.packAssets,imageFactory:options=>SATMathTools.createImage({...options,overlayHost:$('examContent')})});if(spr){SATContent.render($('passage'),sprDirections);$('passage').insertAdjacentHTML('beforeend',sprExamples);}else $('passage').replaceChildren();}
+  else renderPack($('passage'),q,'passage');
+  renderPack($('prompt'),q,'prompt');
+ }else{
+  $('passage').insertAdjacentHTML('beforebegin',SATModel.visualHTML(q,'before-passage'));$('passage').insertAdjacentHTML('afterend',SATModel.visualHTML(q,'after-passage'));
+  renderBlock($('passage'),q.passage);renderBlock($('prompt'),q.prompt);
+ }
+ $('numericAnswer').hidden=!spr;$('options').hidden=spr;$('options').replaceChildren();
+ if(spr){$('numericResponse').value=currentState().numericResponse||'';renderNumericPreview();}
+ else{
+ q.options.forEach((text,index)=>{
   const row=document.createElement('div');row.className='option-row';
   const option=document.createElement('div');option.className='option';option.tabIndex=0;option.role='radio';option.dataset.option=index;option.setAttribute('aria-label',`${'ABCD'[index]}. ${text}`);
   const letter=document.createElement('span');letter.className='letter';letter.textContent='ABCD'[index];
-  const content=document.createElement('span');content.className='reading';content.dataset.block=`option-${index}`;renderBlock(content,text);option.append(letter,content);
+  const content=document.createElement('span');content.className='reading';content.dataset.block=`option-${index}`;if(q.packContent)renderPack(content,q,content.dataset.block);else renderBlock(content,text);option.append(letter,content);
   const eliminate=document.createElement('button');eliminate.className='eliminate';eliminate.dataset.eliminate=index;
   row.append(option,eliminate);$('options').append(row);
- });restoreMaterialScroll();$('options').role='radiogroup';$('options').setAttribute('aria-label','Answer choices');updateOptions();
+ });$('options').role='radiogroup';$('options').setAttribute('aria-label','Answer choices');updateOptions();}
+ restoreMaterialScroll();
  }
  if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);SATLineReader.render();renderQuestionTimerPanel();updateTimer();save();
 }
+let referenceTools=SATMathTools.mountReference($('examContent'),()=>{
+ $('examContent').classList.remove('calculator-motion');
+ const open=$('examContent').hasAttribute('data-sat-reference-open');$('referenceToggle').setAttribute('aria-pressed',open);if(running){state.referenceOpen=open;save();}
+});
+SATMathTools.mountBattery($('examBattery'));
+$('referenceToggle').onclick=()=>{if(isMath())referenceTools.toggle();};
+$('calculatorToggle').onclick=()=>{if(!isMath())return;state.calculatorOpen=!state.calculatorOpen;setMathLayout(true);save();};
+let numericEditSelection={start:0,end:0};
+function numericCandidate(text){const input=$('numericResponse');return input.value.slice(0,input.selectionStart)+text+input.value.slice(input.selectionEnd);}
+$('numericResponse').addEventListener('beforeinput',event=>{
+ if(!running||!isSPR()||state.completed)return;
+ const input=$('numericResponse');numericEditSelection={start:input.selectionStart,end:input.selectionEnd};
+ const text=event.data??event.dataTransfer?.getData('text/plain');
+ if((event.inputType||'').startsWith('insert')&&text!=null&&!SATPack.canEditInput(numericCandidate(text),examQuestions[state.currentQuestion].inputProfile))event.preventDefault();
+});
+$('numericResponse').addEventListener('paste',event=>{
+ if(!running||!isSPR()||state.completed)return;
+ event.preventDefault();const input=$('numericResponse'),text=event.clipboardData?.getData('text/plain')??'';
+ if(!text||!SATPack.canEditInput(numericCandidate(text),examQuestions[state.currentQuestion].inputProfile))return;
+ input.setRangeText(text,input.selectionStart,input.selectionEnd,'end');input.dispatchEvent(new Event('input',{bubbles:true}));
+});
+$('numericResponse').addEventListener('input',()=>{
+ if(!running||!isSPR()||state.completed)return;
+ const input=$('numericResponse');
+ if(!SATPack.canEditInput(input.value,examQuestions[state.currentQuestion].inputProfile)){
+  input.value=currentState().numericResponse||'';input.setSelectionRange(numericEditSelection.start,numericEditSelection.end);return;
+ }
+ currentState().numericResponse=input.value;renderNumericPreview();save();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);
+});
 function updateOptions(){document.querySelectorAll('.option').forEach(option=>{
  const index=Number(option.dataset.option),selected=currentState().selectedOption===index,eliminated=currentState().eliminatedOptions.includes(index);
  option.classList.toggle('selected',selected);option.classList.toggle('eliminated',eliminated);option.setAttribute('aria-checked',selected);
@@ -146,23 +242,23 @@ function updateOptions(){document.querySelectorAll('.option').forEach(option=>{
 });}
 function renderGrid(container,showCurrent){container.replaceChildren();examQuestions.forEach((q,index)=>{
  if(index<currentModule().start||index>=currentModule().end)return;
- const qs=state.questionStates[index],button=document.createElement('button');button.className=`question-link${qs.selectedOption!==null?' answered':''}${showCurrent&&index===state.currentQuestion?' current':''}`;button.textContent=index-currentModule().start+1;
- button.setAttribute('aria-label',`Question ${index+1}, ${qs.selectedOption===null?'unanswered':'answered'}${qs.markedForReview?', marked for review':''}`);if(showCurrent&&index===state.currentQuestion)button.setAttribute('aria-current','true');
+ const qs=state.questionStates[index],button=document.createElement('button');button.className=`question-link${SATSession.answered(q,qs)?' answered':''}${showCurrent&&index===state.currentQuestion?' current':''}`;button.textContent=index-currentModule().start+1;
+ button.setAttribute('aria-label',`Question ${index+1}, ${SATSession.answered(q,qs)?'answered':'unanswered'}${qs.markedForReview?', marked for review':''}`);if(showCurrent&&index===state.currentQuestion)button.setAttribute('aria-current','true');
  if(qs.markedForReview){const flag=document.createElement('i');flag.className='flag';button.append(flag);}button.addEventListener('click',()=>navigate(index));container.append(button);
 });}
 function closeNavigator(){$('navigator').hidden=true;$('navigatorToggle').setAttribute('aria-expanded','false');}
 function navigate(index){commitQuestionTime();state.questionEnterTimestamp=Date.now();state.currentQuestion=Math.max(currentModule().start,Math.min(currentModule().end-1,index));state.view='question';closeNavigator();render();document.querySelector('.question-pane').scrollTop=0;}
 function showReview(){commitQuestionTime();state.view='review';closeNavigator();render();}
-function next(){if(state.view==='review'){showCompleteConfirmation();return;}if(state.currentQuestion===currentModule().end-1)showReview();else navigate(state.currentQuestion+1);}
+function next(){if(state.view==='review'){finishAttempt({status:'completed',reason:'submitted'});return;}if(state.currentQuestion===currentModule().end-1)showReview();else navigate(state.currentQuestion+1);}
 function back(){if(state.view==='review')navigate(state.currentQuestion);else navigate(state.currentQuestion-1);}
-function selectOption(index){if(state.completed)return;currentState().eliminatedOptions=currentState().eliminatedOptions.filter(i=>i!==index);currentState().selectedOption=index;updateOptions();save();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);}
+function selectOption(index){if(state.completed||isSPR()||index>=examQuestions[state.currentQuestion].options.length)return;currentState().eliminatedOptions=currentState().eliminatedOptions.filter(i=>i!==index);currentState().selectedOption=index;updateOptions();save();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);}
 $('options').addEventListener('click',event=>{
  if(Date.now()<suppressClickUntil || window.getSelection()?.toString() || event.target.closest('.text-highlight'))return;
  const elimination=event.target.closest('[data-eliminate]');if(elimination){toggleCross(Number(elimination.dataset.eliminate));return;}
  const option=event.target.closest('[data-option]');if(option)selectOption(Number(option.dataset.option));
 });
 $('options').addEventListener('keydown',event=>{if(event.target.closest('.text-highlight'))return;const option=event.target.closest('[data-option]');if(option && (event.key==='Enter'||event.key===' ')){event.preventDefault();selectOption(Number(option.dataset.option));}});
-function toggleCross(index){if(state.completed)return;const qs=currentState(),on=!qs.eliminatedOptions.includes(index);qs.eliminatedOptions=on?[...qs.eliminatedOptions,index]:qs.eliminatedOptions.filter(i=>i!==index);if(on&&qs.selectedOption===index)qs.selectedOption=null;updateOptions();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);save();}
+function toggleCross(index){if(state.completed||isSPR())return;const qs=currentState(),on=!qs.eliminatedOptions.includes(index);qs.eliminatedOptions=on?[...qs.eliminatedOptions,index]:qs.eliminatedOptions.filter(i=>i!==index);if(on&&qs.selectedOption===index)qs.selectedOption=null;updateOptions();if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);save();}
 function toggleMarkedForReview(){currentState().markedForReview=!currentState().markedForReview;$('reviewToggle').setAttribute('aria-pressed',currentState().markedForReview);if(!$('navigator').hidden)renderGrid($('navigatorGrid'),true);save();}
 $('reviewToggle').onclick=toggleMarkedForReview;
 $('eliminationToggle').onclick=()=>{state.eliminationVisible=!state.eliminationVisible;$('eliminationToggle').setAttribute('aria-pressed',state.eliminationVisible);updateOptions();save();};
@@ -242,7 +338,7 @@ function hideTooltips(){$('highlightTip').hidden=true;$('crossoutTip').hidden=tr
 window.addEventListener('resize',hideTooltips);
 document.querySelectorAll('.pane').forEach(p=>p.addEventListener('scroll',hideTooltips));
 
-function selectionOffset(block,node,offset){const range=document.createRange();range.selectNodeContents(block);range.setEnd(node,offset);return range.toString().length;}
+function selectionOffset(block,node,offset){if(examQuestions[state.currentQuestion]?.packContent)return SATContent.selectionOffset(block,node,offset);const range=document.createRange();range.selectNodeContents(block);range.setEnd(node,offset);return range.toString().length;}
 const highlightColors={yellow:['#FDF4B9','#F8DC4A'],blue:['#D6EAFD','#9ECBF6'],pink:['#F8D7F2','#EA9DDA']};
 function underlineStyle(h){return h.underline===true?'solid':h.underline||'none';}
 function styleHighlight(mark,layers){
@@ -298,7 +394,7 @@ function showToolbar(id,rect){
 }
 // Range offsets refer to immutable block text. Rebuilding only text spans preserves option controls.
 document.addEventListener('mouseup',event=>{
- if(!running || state.completed || !state.highlightMode || state.view!=='question' || event.target.closest('#highlightToolbar,#underlineMenu,#notesPanel'))return;
+ if(!running || state.completed || isMath() || !state.highlightMode || state.view!=='question' || event.target.closest('#highlightToolbar,#underlineMenu,#notesPanel'))return;
  const selection=window.getSelection();if(!selection || selection.isCollapsed || !selection.rangeCount)return;
  const range=selection.getRangeAt(0),startElement=range.startContainer.nodeType===3?range.startContainer.parentElement:range.startContainer;
  const block=startElement.closest?.('[data-block]');if(!block || !block.contains(range.endContainer))return;
@@ -337,6 +433,7 @@ function notesAlongside(){return innerWidth>600&&currentState()?.notesExpanded&&
 function minimumReadingSplit(){return notesAlongside()?Math.min(70,Math.max(30,($('notesPanel').getBoundingClientRect().width+140)/$('questionView').getBoundingClientRect().width*100)):30;}
 function readingSplit(){return notesAlongside()?Math.max(minimumReadingSplit(),state.notesSplit??67):state.split;}
 function syncNotesLayout(){
+ if(running&&isMath()){$('notesPanel').hidden=true;$('expandNotes').hidden=true;$('questionView').classList.remove('notes-open');if(isSPR()){document.documentElement.style.setProperty('--left',`${state.mathSplit??50}%`);$('divider').setAttribute('aria-valuenow',Math.round(state.mathSplit??50));}return;}
  const hasNotes=noteHighlights().length>0,open=hasNotes&&currentState().notesExpanded===true&&state.view==='question';
  $('notesPanel').hidden=!open;$('expandNotes').hidden=!hasNotes||open||state.view!=='question';
  $('questionView').classList.toggle('notes-open',open);$('expandNotes').setAttribute('aria-expanded',open);
@@ -426,9 +523,9 @@ $('moreMenu').onclick=e=>{
 };
 function resetTest(){if(!running)return;$('modal').close();const practice={...state.activePractice,id:crypto.randomUUID(),createdAt:Date.now()};startExam(examQuestions,practice,onFinish);}
 window.resetTest=resetTest;
-function showCompleteConfirmation(){const unanswered=state.questionStates.slice(currentModule().start,currentModule().end).filter(q=>q.selectedOption===null).length;openModal('Finish this practice module?',`<p>${unanswered?`You have ${unanswered} unanswered question${unanswered===1?'':'s'}. `:''}Your answers will be saved. You will move to the next module, or see your completion page after the final module.</p>`,[{text:'Cancel',action:()=>$('modal').close()},{text:'Finish',action:()=>finishAttempt({status:'completed',reason:'submitted'})}]);}
 function showDirections(){
  if($('modal').open&&$('modal').classList.contains('directions-dialog')){$('modal').close();return;}
+ if(isMath()){openModal('Math — Directions','<p>The questions in this section address a number of important math skills.</p><p>Use of a calculator is permitted. For multiple-choice questions, choose the best answer. For student-produced response questions, enter one answer following the directions next to the question.</p>',[{text:'Close',action:()=>$('modal').close()}],'directions-dialog');modalTrigger=$('directionsButton');$('directionsButton').setAttribute('aria-expanded','true');$('modalActions').querySelector('button').focus();return;}
  openModal('Reading and Writing — Directions','<p>The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).</p><p>All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.</p>',[{text:'Close',action:()=>$('modal').close()}],'directions-dialog');
  modalTrigger=$('directionsButton');$('directionsButton').setAttribute('aria-expanded','true');$('modalActions').querySelector('button').focus();
 }
@@ -440,7 +537,7 @@ $('modal').addEventListener('click',event=>{
  if(event.clientX>=rect.left&&event.clientX<=rect.right&&event.clientY>=rect.top&&event.clientY<=rect.bottom)$('modal').close();
 });
 document.addEventListener('keydown',event=>{
- if(!running||state.completed||state.phase==='module_break')return;
+ if(!running||state.completed||['module_break','section_break','section_ready'].includes(state.phase))return;
  const mark=event.target.closest('.text-highlight');if(mark&&['Enter',' '].includes(event.key)){event.preventDefault();showToolbar(mark.dataset.highlightId,mark.getBoundingClientRect());$('highlightToolbar').querySelector('button').focus();return;}
  const shortcut=SATShortcuts.find(s=>s.key.toLowerCase()===event.key.toLowerCase());if(!shortcut)return;
  if(shortcut.action==='close'){closeNavigator();hideToolbar();hideTooltips();if(!$('moreMenu').hidden){event.preventDefault();closeMore(true);}return;}
@@ -449,10 +546,10 @@ document.addEventListener('keydown',event=>{
  ({next,back,select:()=>selectOption(shortcut.index),cross:()=>toggleCross(shortcut.index),mark:toggleMarkedForReview})[shortcut.action]();
 });
 $('divider').addEventListener('pointerdown',event=>{event.preventDefault();$('divider').setPointerCapture(event.pointerId);});
-function setReadingSplit(value){const split=Math.max(minimumReadingSplit(),Math.min(70,value));if(notesAlongside())state.notesSplit=split;else state.split=split;syncNotesLayout();hideToolbar();}
+function setReadingSplit(value){if(isSPR()){state.mathSplit=Math.max(30,Math.min(70,value));document.documentElement.style.setProperty('--left',`${state.mathSplit}%`);$('divider').setAttribute('aria-valuenow',Math.round(state.mathSplit));hideToolbar();return;}const split=Math.max(minimumReadingSplit(),Math.min(70,value));if(notesAlongside())state.notesSplit=split;else state.split=split;syncNotesLayout();hideToolbar();}
 $('divider').addEventListener('pointermove',event=>{if(!$('divider').hasPointerCapture(event.pointerId))return;const rect=$('questionView').getBoundingClientRect();setReadingSplit((event.clientX-rect.left)/rect.width*100);});
 $('divider').addEventListener('pointerup',save);
-$('divider').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.stopPropagation();event.preventDefault();setReadingSplit(readingSplit()+(event.key==='ArrowLeft'?-2:2));save();});
+$('divider').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.stopPropagation();event.preventDefault();setReadingSplit((isSPR()?(state.mathSplit??50):readingSplit())+(event.key==='ArrowLeft'?-2:2));save();});
 window.addEventListener('pagehide',()=>{if(running){commitQuestionTime();save();}});
 window.ExamEngine={start:startExam,finishAttempt,isRunning:()=>running};
 })();

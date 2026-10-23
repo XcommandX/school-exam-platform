@@ -1,0 +1,94 @@
+/* These selectors belong only to the SAT math tools and shared battery display. */
+.sat-reference-panel,.sat-reference-panel *,.sat-question-figure,.sat-question-figure *,.sat-image-overlay,.sat-image-overlay *,.sat-battery-status,.sat-battery-status *{box-sizing:border-box}
+.sat-reference-panel{position:absolute;inset:0 0 0 auto;width:var(--sat-reference-width,max(230px,33%));min-width:0;z-index:32;background:white;color:#202020;border-left:1px solid #a4a4a4;display:flex;flex-direction:column;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
+.sat-reference-panel[hidden]{display:none!important}
+.sat-reference-panel.sat-reference-fullscreen{left:0;width:100%;min-width:0;z-index:40}
+.sat-reference-header{height:44px;min-height:44px;display:flex;align-items:center;gap:12px;background:#202020;color:white;padding:5px 15px;font-size:16px;line-height:1.2}
+.sat-reference-header strong{margin-right:auto;font-weight:700}
+.sat-math-tool-button{position:relative;border:0;background:transparent;color:inherit;font:inherit;padding:5px;cursor:pointer;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:30px;line-height:1;flex-shrink:0}
+.sat-math-tool-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.sat-math-tool-button:hover{background:#dadada;filter:none}
+.sat-math-tool-button:focus-visible{outline:2px solid #3347c5;outline-offset:1px}
+.sat-math-tool-button:disabled{cursor:default;opacity:.4}
+.sat-reference-header .sat-math-tool-button:hover{background:#505050;box-shadow:0 1px 3px #0002}
+.sat-reference-header .sat-math-tool-button:focus-visible{outline-color:white}
+.sat-reference-body{overflow:auto;overscroll-behavior:contain;min-height:0;flex:1;padding:18px 26px 24px;font:16px/1.45 Georgia,'Times New Roman',serif;scrollbar-width:auto;scrollbar-color:#858585 transparent}
+.sat-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;row-gap:34px;align-items:start}
+.sat-reference-card{margin:0;min-width:0;text-align:center}
+.sat-reference-diagram{display:block;width:100%;height:98px;overflow:visible;color:#202020}
+.sat-reference-diagram text{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:18px;fill:currentColor;stroke:none}
+.sat-reference-diagram .sat-reference-angle{font-style:normal;font-size:14px}
+.sat-reference-formula{font-size:17px;font-style:italic;white-space:nowrap;margin-top:6px;line-height:1.5}
+.sat-reference-formula sup{font-size:.65em}
+.sat-reference-fraction{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.1;font-size:.9em;margin:0 .12em .15em}
+.sat-reference-fraction>span:first-child{border-bottom:1px solid currentColor;padding:0 .15em .06em}
+.sat-reference-fraction>span:last-child{padding-top:.06em}
+.sat-reference-special{grid-column:1/-1}
+.sat-reference-special-diagrams{display:flex;gap:15px;align-items:flex-start}
+.sat-reference-special-diagrams .sat-reference-diagram{width:calc(50% - 8px);height:110px}
+.sat-reference-special-title{font-size:16px;white-space:nowrap;font-weight:bold;margin-top:5px}
+.sat-reference-facts{margin-top:28px}
+.sat-reference-facts p{margin:0 0 22px}
+.sat-reference-fullscreen .sat-reference-grid{display:flex;flex-wrap:wrap;gap:28px 26px;align-items:flex-start}
+.sat-reference-fullscreen .sat-reference-card{flex:0 0 130px}
+.sat-reference-fullscreen .sat-reference-special{flex-basis:270px}
+.sat-reference-fullscreen .sat-reference-diagram{height:96px}
+.sat-reference-fullscreen .sat-reference-special-diagrams .sat-reference-diagram{height:96px}
+.sat-reference-fullscreen .sat-reference-facts{margin-top:28px}
+.sat-question-figure{margin:8px auto 10px;max-width:100%;width:fit-content;color:#202020}
+.sat-question-figure>figcaption{font:14px/1.4 Georgia,'Times New Roman',serif;text-align:center;margin:7px 0}
+.sat-image-viewer{width:var(--sat-figure-width,300px);max-width:100%;border:1px solid #b8b8b8;border-radius:9px 9px 0 0;overflow:visible;background:white;font-family:Arial,Helvetica,sans-serif}
+.sat-image-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:1px;height:33px;padding:0 8px;background:#f0f0f0;border-bottom:1px solid #b8b8b8;border-radius:8px 8px 0 0;color:#202020;font:13px/1 Arial,Helvetica,sans-serif;position:relative;z-index:2;white-space:nowrap}
+.sat-image-toolbar .sat-math-tool-button{height:31px;min-width:30px;padding:5px}
+.sat-image-toolbar .sat-math-tool-button svg{width:20px;height:20px}
+.sat-image-toolbar .sat-math-tool-button[aria-label=Reset]{font-size:14px;padding-inline:7px}
+.sat-image-toolbar-separator{height:16px;width:1px;background:#b6b6b6;margin:0 7px;flex-shrink:0}
+.sat-image-percent{display:block;min-width:43px;text-align:center;font-size:12px;font-variant-numeric:tabular-nums}
+.sat-image-viewport{position:relative;aspect-ratio:var(--sat-image-ratio,1);overflow:hidden;display:flex;align-items:center;justify-content:center;background:white;touch-action:none;outline-offset:-3px}
+.sat-image-bitmap{display:block;width:100%;height:100%;max-width:none!important;max-height:none;object-fit:contain;transform-origin:center;user-select:none;-webkit-user-select:none;pointer-events:none;flex-shrink:0}
+.sat-image-viewport.sat-image-can-pan{cursor:grab;touch-action:none}
+.sat-image-viewport.sat-image-is-panning{cursor:grabbing}
+.sat-math-tool-button[data-sat-tooltip]::after{content:attr(data-sat-tooltip);position:absolute;bottom:calc(100% + 13px);left:50%;transform:translateX(-50%);background:#505050;color:white;font:14px/1.25 Arial,Helvetica,sans-serif;border-radius:9px;padding:4px 8px;white-space:nowrap;box-shadow:0 6px 12px #0002;opacity:0;visibility:hidden;pointer-events:none;z-index:7}
+.sat-math-tool-button[data-sat-tooltip]:hover::after,.sat-math-tool-button[data-sat-tooltip]:focus-visible::after{opacity:1;visibility:visible}
+.sat-image-overlay{position:absolute;inset:0 var(--sat-image-overlay-right,var(--sat-reference-width,0px)) 0 0;z-index:30;overflow:hidden;background:#0008;font-family:Arial,Helvetica,sans-serif}
+.sat-image-overlay .sat-image-toolbar{position:absolute;right:36px;top:8px;background:#505050;color:white;border:0;border-radius:8px;z-index:2;height:33px;width:max-content;padding:0 6px}
+.sat-image-overlay .sat-image-toolbar .sat-math-tool-button:hover{background:#6d6d6d}
+.sat-image-overlay .sat-image-toolbar .sat-math-tool-button:focus-visible{outline-color:white}
+.sat-image-overlay .sat-image-toolbar-separator{background:#bdbdbd}
+.sat-image-overlay .sat-math-tool-button[data-sat-tooltip]::after{bottom:auto;top:calc(100% + 12px);border:1px solid white}
+.sat-image-overlay .sat-image-viewport{position:absolute;inset:0;aspect-ratio:auto;background:transparent}
+.sat-image-overlay .sat-image-bitmap{width:var(--sat-image-base-width,300px);height:var(--sat-image-base-height,300px);background:white}
+.sat-battery-status{display:inline-flex;align-items:center;gap:4px;font:600 10px/1 Arial,Helvetica,sans-serif;color:inherit;white-space:nowrap;vertical-align:middle}
+.sat-battery-status svg{width:18px;height:11px;fill:none;stroke:currentColor;stroke-width:1.2;overflow:visible}
+.sat-battery-fill{fill:currentColor;stroke:none}
+.sat-battery-bolt{display:none;fill:currentColor;stroke:var(--sat-battery-backdrop,#e7edf8);stroke-width:1;stroke-linejoin:round}
+.sat-battery-unknown{font:10px Arial,Helvetica,sans-serif;fill:currentColor;stroke:none}
+.sat-battery-known .sat-battery-unknown{display:none}
+.sat-battery-charging .sat-battery-bolt{display:block}
+@media(max-width:700px){
+  [data-sat-math-tools-host]{--sat-reference-panel-width:44%}
+  .sat-reference-header{padding-inline:10px;gap:6px}
+  .sat-reference-body{padding:15px 14px;font-size:15px}
+  .sat-reference-grid{gap:22px 8px}
+  .sat-reference-diagram{height:80px}
+  .sat-reference-formula{font-size:15px}
+  .sat-reference-special-title{font-size:14px;white-space:normal}
+  .sat-reference-special-diagrams{gap:5px}
+  .sat-reference-special-diagrams .sat-reference-diagram{height:90px}
+  .sat-reference-fullscreen .sat-reference-card{flex-basis:calc(50% - 13px)}
+  .sat-reference-fullscreen .sat-reference-special{flex-basis:100%}
+  .sat-image-overlay .sat-image-toolbar{right:8px}
+  .sat-image-viewer{width:min(var(--sat-figure-width,300px),100%)}
+}
+@media(max-width:430px){
+  [data-sat-math-tools-host]{--sat-reference-panel-width:100%}
+  .sat-reference-body{padding-inline:24px}
+  .sat-image-overlay .sat-image-toolbar{gap:0;padding-inline:2px;max-width:calc(100% - 8px);right:4px}
+  .sat-image-toolbar{padding-inline:3px}
+  .sat-image-toolbar .sat-math-tool-button{min-width:26px;padding:4px}
+  .sat-image-toolbar-separator{margin-inline:4px}
+  .sat-image-percent{min-width:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  .sat-reference-panel,.sat-image-overlay,.sat-image-bitmap,.sat-math-tool-button{transition:none!important;animation:none!important}
+}

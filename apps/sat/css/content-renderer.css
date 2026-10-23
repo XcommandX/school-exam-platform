@@ -1,0 +1,32 @@
+/* These styles apply only to content produced by the new SAT pack renderer. */
+.sat-content { white-space: normal; }
+.sat-content .sat-markdown { overflow-wrap: anywhere; }
+.sat-content .sat-markdown > :first-child { margin-top: 0; }
+.sat-content .sat-markdown > :last-child { margin-bottom: 0; }
+.sat-content .sat-markdown + .sat-markdown { margin-top: 1em; }
+.sat-content .sat-markdown p { margin: 0 0 .85em; }
+.sat-content .sat-markdown ul, .sat-content .sat-markdown ol { padding-left: 1.55em; margin: .75em 0; }
+.sat-content .sat-markdown li { margin: .25em 0; }
+.sat-content .sat-markdown li p { margin: .25em 0; }
+.sat-content .sat-markdown blockquote { margin: .8em 0; padding-left: 1em; border-left: 3px solid #777; }
+.sat-content .sat-markdown h1, .sat-content .sat-markdown h2, .sat-content .sat-markdown h3,
+.sat-content .sat-markdown h4, .sat-content .sat-markdown h5, .sat-content .sat-markdown h6 { line-height: 1.25; margin: 1em 0 .5em; }
+.sat-content .sat-markdown h1 { font-size: 1.45em; }
+.sat-content .sat-markdown h2 { font-size: 1.25em; }
+.sat-content .sat-markdown h3, .sat-content .sat-markdown h4,
+.sat-content .sat-markdown h5, .sat-content .sat-markdown h6 { font-size: 1.1em; }
+.sat-content .sat-markdown u { text-underline-offset: .12em; }
+.sat-content .sat-markdown pre { overflow-x: auto; white-space: pre; }
+.sat-content .sat-markdown code { font-size: .9em; }
+.sat-content .sat-markdown table { border-collapse: collapse; margin: 1em 0; max-width: 100%; font-size: .95em; }
+.sat-content .sat-markdown th, .sat-content .sat-markdown td { border: 1px solid #555; padding: .4em .65em; text-align: left; }
+.sat-content .sat-markdown a { color: inherit; text-underline-offset: .12em; }
+.sat-content .sat-formula { white-space: nowrap; }
+.sat-content .sat-formula-display { display: block; overflow-x: auto; text-align: center; }
+.sat-content .sat-formula .katex { font-size: 1.1em; }
+.sat-content .sat-formula .katex-display { margin: .65em 0; }
+.sat-content .sat-formula-error { white-space: pre-wrap; overflow-wrap: anywhere; }
+.sat-content .sat-content-image { display: block; margin: 1em auto; max-width: 100%; }
+.sat-content .sat-content-image > img { display: block; max-width: 100%; height: auto; margin: auto; }
+.sat-content.sat-reading-images .sat-content-image > img { width: auto; max-width: none; height: auto; }
+.sat-content .sat-content-image figcaption { margin-top: .45em; }

@@ -5,6 +5,8 @@
 !/html/
 !/js/
 !/scripts/
+!/vendor/
+!/vendor/**
 !/data/examples/
 !/.gitignore
 !/README.md
@@ -13,6 +15,9 @@
 !/css/base.css
 !/css/dashboard.css
 !/css/exam.css
+!/css/exam-math.css
+!/css/math-tools.css
+!/css/content-renderer.css
 !/data/examples/synthetic-practice.json
 !/data/question-categories.js
 !/data/question-categories.json
@@ -20,6 +25,10 @@
 !/html/index.html
 !/js/app.js
 !/js/exam.js
+!/js/sat-pack.js
+!/js/sat-session.js
+!/js/math-tools.js
+!/js/content-renderer.js
 !/js/importer.js
 !/js/line-reader.js
 !/js/material-text.js

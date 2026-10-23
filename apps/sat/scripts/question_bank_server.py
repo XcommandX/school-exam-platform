@@ -62,7 +62,7 @@ def create_server(root, port=8876):
             # Serve only application resources, never unrelated project files.
             relative = unquote(route).lstrip('/') or 'html/index.html'
             p = (root / relative).resolve()
-            allowed = relative == 'html/index.html' or relative.split('/')[0] in {'js', 'css', 'data', 'question-assets'}
+            allowed = relative == 'html/index.html' or relative.split('/')[0] in {'js', 'css', 'data', 'vendor', 'question-assets'}
             if not allowed or not p.is_relative_to(root) or not p.is_file():
                 return self.reply(404, {'error': 'Not found.'})
             body = p.read_bytes()

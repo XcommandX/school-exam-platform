@@ -92,7 +92,7 @@ const server=http.createServer(async(req,res)=>{try{
    if(root.textContent!==text||!root.querySelector('.text-highlight .source-underline'))throw Error('Whole-material highlight formatting was lost');
   }
  });
- await page.locator('#options [data-option="1"]').focus();await page.keyboard.press('Space');await page.locator('#nextButton').click();await page.locator('#nextButton').click();await page.getByRole('button',{name:'Finish',exact:true}).click();
+ await page.locator('#options [data-option="1"]').focus();await page.keyboard.press('Space');await page.locator('#nextButton').click();await page.locator('#nextButton').click();
  await page.locator('[data-action=attempt]').waitFor();
  const saved=await page.evaluate(id=>SATStorage.get('attempts',id),attemptId);assert.equal(saved.status,'completed');assert.equal(saved.correctCount,2);
  assert.ok(Object.values(saved.answers).some(a=>a.highlights.some(h=>h.note==='Prompt note')));
