@@ -115,6 +115,17 @@ function harness(options = {}) {
   assert.equal(combined.questions.find(question => question.id === indexed.id).packAssets.diagram.src, complete.packAssets.diagram.src, 'rich locally imported content wins over plain-text index');
   assert.equal(combined.questions.find(question => question.id === indexed.id).libraryCollectionId, 'original-rw');
   assert.equal(library.combine([], [{...custom, deleted: true}]).questions.length, 4);
+  const deletedQuestion = {...structuredClone(complete), deleted: true, deletedAt: 123};
+  const activeSource = {...structuredClone(indexedSource), contentHash: 'stored'};
+  const deletedSnapshot = JSON.stringify({activeSource, deletedQuestion});
+  const individuallyDeleted = library.combine([activeSource], [deletedQuestion]);
+  assert.equal(individuallyDeleted.questions.length, 3);
+  assert.equal(individuallyDeleted.questions.some(question => question.id === indexed.id), false, 'a deleted question from an active source is not offered again by the index');
+  const deletedSource = {...activeSource, deleted: true};
+  const restorableSource = library.combine([deletedSource], [deletedQuestion]);
+  assert.equal(restorableSource.questions.length, 4);
+  assert.equal(restorableSource.questions.find(question => question.id === indexed.id).indexOnly, true, 'a deleted entire source remains explicitly selectable from the library catalog');
+  assert.equal(JSON.stringify({activeSource, deletedQuestion}), deletedSnapshot, 'combining a deletion does not alter the stored source, question or historical content');
   assert.equal(h.requests.length, 1, 'combining metadata never loads packages');
 
   const selected = [library.state.questions[1].id, indexed.id];
@@ -145,12 +156,23 @@ function harness(options = {}) {
   assert.equal(h.requests.at(-1).url, '/api/sat-library/collections/original-math');
   assert.equal(h.sources.size, 3);
 
+  const softDeleted = harness(); await softDeleted.library.refresh();
+  const softIds = softDeleted.library.state.questions.filter(question => question.libraryCollectionId === 'original-rw').map(question => question.id);
+  await softDeleted.library.hydrate([softIds[0]]);
+  softDeleted.questions.set(softIds[0], {...softDeleted.questions.get(softIds[0]), deleted: true, deletedAt: 123});
+  const storedDeleted = JSON.stringify(softDeleted.questions.get(softIds[0]));
+  assert.equal(softDeleted.library.combine([...softDeleted.sources.values()], [...softDeleted.questions.values()]).questions.some(question => question.id === softIds[0]), false);
+  assert.equal((await softDeleted.library.hydrate([softIds[1]]))[0].id, softIds[1], 'other questions in the same active source still start');
+  assert.equal(JSON.stringify(softDeleted.questions.get(softIds[0])), storedDeleted, 'starting another question preserves the single-question deletion and its historical content');
+  assert.equal(softDeleted.commits.length, 1);
+
   const archived = harness(); await archived.library.refresh();
   const archivedId = archived.library.state.questions[0].id;
   await archived.library.hydrate([archivedId]);
   const archivedSource = archived.sources.values().next().value;
   archived.sources.set(archivedSource.id, {...archivedSource, deleted: true});
   for (const [id, question] of archived.questions) archived.questions.set(id, {...question, deleted: true});
+  assert.equal(archived.library.combine([...archived.sources.values()], [...archived.questions.values()]).questions.find(question => question.id === archivedId).indexOnly, true, 'an archived source can still be selected explicitly before hydration');
   await archived.library.hydrate([archivedId]);
   assert.equal(archived.commits.length, 2, 'explicit selection restores an archived identical source');
   assert.ok(!archived.questions.get(archivedId).deleted);

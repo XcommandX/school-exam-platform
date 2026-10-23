@@ -102,13 +102,21 @@ window.SATBuilderLibrary = (() => {
   function combine(localSources = [], localQuestions = []) {
     const sources = new Map(state.sources.map(source => [source.id, source]));
     const questions = new Map(state.questions.map(question => [question.id, question]));
+    const activeLocalSources = new Set(localSources.filter(source => source && !source.deleted).map(source => source.id));
     for (const source of localSources) {
       if (!source || source.deleted) continue;
       const indexed = sources.get(source.id);
       sources.set(source.id, indexed ? {...indexed, ...source, libraryCollectionId: indexed.libraryCollectionId, indexOnly: false} : source);
     }
     for (const question of localQuestions) {
-      if (!question || question.deleted) continue;
+      if (!question) continue;
+      if (question.deleted) {
+        // A single-question deletion remains effective while its source is
+        // active. Deleted whole sources stay in the catalog for explicit
+        // restoration, without mutating their stored questions or history.
+        if (activeLocalSources.has(question.metadata?.sourceId)) questions.delete(question.id);
+        continue;
+      }
       const indexed = questions.get(question.id);
       questions.set(question.id, indexed ? {
         ...indexed, ...question, libraryCollectionId: indexed.libraryCollectionId, indexOnly: false,
