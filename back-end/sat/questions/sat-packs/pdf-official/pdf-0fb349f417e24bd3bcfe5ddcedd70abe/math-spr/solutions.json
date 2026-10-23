@@ -1,0 +1,123 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-0fb349f417e24bd3bcfe5ddcedd70abe-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "48"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数，根据题意可以得到line $l$ 的表达式是$y=6x$。代入（8,$d$）得到$d=6*8=48$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0fb349f417e24bd3bcfe5ddcedd70abe-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "11"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "查立体图形的表面积。正方形的底部面积是100，那边长是10。侧面是2 个相同的等腰三\n角形，总共的面积是$20\\sqrt{146}$，那一个侧面的面积就是$5\\sqrt{146}$；根据侧面面积=（$\\frac{1}{2}$）*底\n部边长*斜高可以计算出斜高是$\\sqrt{146}$；\n斜高$\\sqrt{146}$ 是直角三角形的斜边，底边的一半5 是一条直角边，该图形的高是另外一条高，\n根据勾股定理可以计算出高是11。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0fb349f417e24bd3bcfe5ddcedd70abe-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "22"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "土地分成88 等份，每份面积是A，那总面积是88A。长是$x\\surd$A，那宽就是（$x\\sqrt{A}$）$/5.5$，\n长乘宽可以得到面积是 $(x2A)/5.5$ 。根据 $(x2A)/5.5=88$A 可以计算出$x=22$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0fb349f417e24bd3bcfe5ddcedd70abe-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-3640"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意可以找出$f(x)$的三个点的坐标分别是"
+          },
+          {
+            "type": "image",
+            "assetId": "asset-133fe79456ee7f3c9a1272b72cfabc6512d63b52602dc993ea2d700196256456",
+            "role": "illustration",
+            "alt": "Source question content."
+          },
+          {
+            "type": "markdown",
+            "text": "$f(25)=f(29)$，25 和29 的中点事27，所以（27,5）是该函数的顶点。\n可以设该函数的表达式是 $y=a(x-27)2+5$ ，代入（25，$-15$）得到$a=-5$。那该函数的表达式\n就是 $y=-5(x-27)2+5$ 。代入$x=0$，可以求出$y$-intercept 的$y$-coordinate 是$-3640$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+        "sourceQuestionId": "m2-q19"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-3376e89aaff44783b4efe24db8df9b70-math-spr",
+  "revision": 1,
+  "title": "2025年5月第3套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-8fb7a77fb25c2d354d2c3245c066d2e58deb5677d058818447981da58523cff4",
+      "path": "assets/8fb7a77fb25c2d354d2c3245c066d2e58deb5677d058818447981da58523cff4.png",
+      "mediaType": "image/png",
+      "sha256": "8fb7a77fb25c2d354d2c3245c066d2e58deb5677d058818447981da58523cff4",
+      "byteLength": 16908,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3376e89aaff44783b4efe24db8df9b70",
+        "sourceQuestionId": "m2-q20"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

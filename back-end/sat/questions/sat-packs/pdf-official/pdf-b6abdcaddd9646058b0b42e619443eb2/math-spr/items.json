@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-b6abdcaddd9646058b0b42e619443eb2-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x+40=95$$\nWhat value of $x$ is the solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "sat:item:pdf-b6abdcaddd9646058b0b42e619443eb2-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Out of 300 seeds that were planted, $80\\%$ sprouted. How many of these seeds sprouted?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "id": "sat:item:pdf-b6abdcaddd9646058b0b42e619443eb2-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $6+x=9$, what is the value of $18+3 x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "sat:item:pdf-b6abdcaddd9646058b0b42e619443eb2-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-57c317a644d0759d4db8bbd9ac8722aa0535c9de33115e81951d9a1d81491946",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn the figure, line $j$ is parallel to line $k$. What is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+        "sourceQuestionId": "m1-q13"
+      }
+    }
+  ]
+}

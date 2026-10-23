@@ -1,0 +1,787 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "把 $x=6$ 代入 $f(x)=100x+2$，得 $f(6)=100\\times 6+2=602$。注意乘法先于加法。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线的斜截式为 $y=mx+b$，其中 $x$ 的系数 $m$ 就是斜率。比较 $y=1/8x+15$，可得斜率 $\\frac{1}{8}$；15\n是纵截距。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $2(x-10)=2\\times 60$，两边同时除以 2，得到 $x-10=60$。两边同除一个非零数，不改变方程的\n解。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "横轴截点满足 $y=0$，因此 $x2-169=0$，即 $x2=169$，得到 $x=\\pm 13$。选项中的 $(13,0)$ 是其中一\n个横轴截点。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将 $3/2x-1/7y=29$ 乘以 14，得 $21x-2y=406$。与 $x+2y=-10$ 相加，得 $22x=396$，所以 $x=18$。\n再代入得 $y=-14$，因此 $x+y=4$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似三角形的对应边成比例：$XY/AB=YZ/BC=\\frac{70}{600}$。代入 $AB=120$，得\n到 $XY=120\\times \\frac{70}{600}=14$。要按顶点顺序确定对应边。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "已知 $x/y=52$，把它代入 $cx/4y=52$，得 $c/4\\times 52=52$。两边除以 52，得到 $c/4=1$，因此 $c=4$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从拟合直线上取相隔较远的点，约为 $(0,0)$ 与 $(5,9)$。斜率为纵坐标变化量除以横坐标变化\n量：$\\frac{9}{5}=1.8$。这里估计的是拟合线斜率，不是任意两个散点的斜率。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开 $g(x)=(36-2x)(18+2x)$，得 $g(x)=-4x2+36x+648$。二次项系数为负，顶点给出最大值；\n顶点横坐标 $x=\\frac{-36}{2}\\times (-4)=4.5$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $67v2=2K$，先除以 67，得 $v2=2K/67$。题目中的速度取正值，因此 $v=2K/67$，选 $D$。开\n方时整个商都在根号内。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线截距为 $(7,0)$ 和 $(0,5)$，因此截距式是 $x/7+y/5=1$。两边乘以 35，得到 $5x+7y=35$；也可\n将两个截点分别代入验证。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "分别代入 $y\\lt 0.5x+3.2$。$D$ 中 $x=-1$,0,1 时，右边为 2.7,3.2,3.7，对应 $y=2$,3,3，均严格小于右\n边。其余表至少有一组数不满足不等式。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "总时长为 $x$ 小时，首小时收费 125，其余 $x-1$ 小时每小时 60，再加零件费 $z$。总费用\n$125+60(x-1)+z=60x+z+65$。不能把首小时也按 60 计算。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开 $a-b+c=x(x+66)-x(x+33)+x(x-33)$。合并得 $x2-x2+x2=x2$，且一次项 $66x-33x-33x=0$，\n因此结果为 $x2$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "弧度转角度：$\\pi /10\\times 180/\\pi=18^{\\circ}$。题目又给这个角为 $9n^{\\circ}$，所以 $9n=18$，得到 $n=2$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图中为 $45^{\\circ} - 45^{\\circ} - 90^{\\circ}$ 直角三角形，两条直角边相等。sinA=对边/斜边=$\\frac{1}{2}=\\frac{2}{2}$。这个比值\n不随斜边长度 21 而变化。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "令 $t=x-1$，则两式中的 $y$ 分别为 $t$ 和 $14t2-15$。联立得 $14t2-t-15=0$，即 $(t+1)(14t-15)=0$，\n所以 $y=t=-1$ 或 $\\frac{15}{14}$；选项中为 $-1$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由平行线的角关系，图中 $x$ 与 $y$ 互补，即 $x+y=180^{\\circ}$。已知 $x\\gt 166^{\\circ}$，所以 $y=180 -x\\lt 14$\n$$\\circ$$\n$\\circ$。\n两角之和仍等于 $180^{\\circ}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由表中第一行，单位面积排水量 $\\frac{4896}{2720}=1.8$。另两行 $\\frac{7344}{4080}$、$\\frac{9792}{5440}$ 也都是\n1.8，因此排水量与面积成正比，$f(x)=1.8x$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "A 的数值集中在 0 至 3 之间，$B$ 的数值集中在 3 至 6 之间。A 的所有数据不超过 3，$B$ 的\n所有数据不小于 3，且两组都有离 3 更远的数据，因此平均数 A 严格小于平均数 $B$。柱高\n表示频数，横轴才是数值。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两条直线为 $y=-1/9x$ 与 $y=1/3x$。令两式相等，得 $-x/9=x/3$，整理得 $x=0$，此时 $y=0$。因此\n所求横坐标是 0。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每年增长 $3.5\\%$，即每年乘以 $1+0.035=1.035$。经过 $x$ 年，价值 $f(x)=172000(1.035)x$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开 $(x+n)(x+11)=x2+(n+11)x+11n$。比较常数项得 $11n=77$，所以 $n=7$；再比较一次项，\n$k=n+11=18$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Hannah 每月存工资的 $\\frac{1}{5}$，Wyatt 存工资的 $\\frac{2}{7}$，所以 $h/5+2w/7=3230$。两边乘以 35，得\n$7h+10w=113050$，选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$5xy$、$30x2y$、$35xy2$ 的公因式为 $5xy$。各项分别除以 $5xy$，得到 1、$6x$、$7y$，所以原式\n=$5xy(1+6x+7y)$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $6a+7=-4a$，根号值非负，故 $a\\le 0$。平方得 $6a+7=16$a2，即 $(2a+1)(8a-7)=0$，候选\n为 $\\frac{-1}{2}$、$\\frac{7}{8}$。正根不满足原式符号要求，舍去；代入 $\\frac{-1}{2}$ 时两边都为 2。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "1 平方英里 =(5280 英尺$)2=27,878,400$ 平方英尺。因此面积 $\\frac{379146240}{27878400}=13.6$ 平方\n英里。面积换算要把长度换算因子平方。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "1995 年的初始价值为 54，每年比前一年增加 $14\\%$，故每年乘以 $1+0.14=1.14$。经过 $x$ 年，\n价值 $y=54(1.14)x$；题目允许 $0\\le x\\le 5$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直角三角形中 $r+s=90^{\\circ}$。由 $2r\\gt 11s$ 可知 $r\\gt s$，因此 $r\\gt 45^{\\circ}$、$s\\lt 45^{\\circ}$，$\\sin r\\gt \\sin s\\gt 0$，\n$C$ =sinr/sins$\\gt 1$。A、$B$ 均小于 1；$D$ =sinr/coss=1，因为 $\\cos s=\\sin r$。所以 $C$ 最大。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图上可读点 $(-9,-3)$ 与 $(-7,-9)$。代入 $f(x)=a/x+b$，分别得 $a=27-3b$ 与 $a=63-9b$，解得\n$b=6$、$a=9$。因此 $f(x)=9/x+6$，$g(x)=f(x+6)=9/x+12$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "随机分配（随机分组）使两组除自变量外尽量可比，是得出“补充剂导致睡眠改善”这一因\n果结论的关键特征。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三个连续偶数为 $x$、$x+2$、$x+4$。总和小于 135，故 $3x+6\\lt 135$，得到 $x\\lt 43$。满足条件的最\n大偶数为 42；此时 $42+44+46=132$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "同一点 $H$ 引出的两条切线等长，设 $MH=NH=t$。周长 $2\\times 304+2t=6368$，得 $t=2880$。半径\n$GM$ 垂直切线 $MH$，所以 $GH=3042+28802=2896$ 毫米。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6b0d74156f2847238a2debc54a825fb3-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $h(x)=a(x+34)(x+r)(x+s)$，代入 0 得 $p=34$ars。$34rs$ 为正，但题目只给 $a\\gt 0$，没有说明 a 与\n1 的大小关系。$a\\lt 1$、=1、$\\gt 1$ 分别产生三种比较，因此无法确定 $p$ 与 $34rs$ 的大小。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

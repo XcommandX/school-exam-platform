@@ -1,0 +1,275 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设需要买$x$ 包面包，则 $12x\\ge 65$。因为$x$ 是整数，所以取大于$\\frac{65}{12}$ 的最小的整数，为6。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为两个等式的左边相同，所以 $x2=36$。因此$x=6$ 或$-6$。因为$x$ 是正数，所以$x=6$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "带入$f(5)=4: 4=2*5+b$。计算得$b=-6$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "532"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$b=\\frac{0.1197}{0.0009}=133$, $c=\\frac{133}{0.25}=532$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由二次函数 $y=5(x-n)2$ 知，抛物线的顶点为$(n, 0)$。从图中得出顶点为$(9, 0)$。所以$n=9$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "17/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f$ 是一个二次函数且$a=2\\gt 0$，所以函数图像为开口向上的抛物线，在顶点处取得最小值，\n$$χ=-b/2a=-\\frac{-17}{4}=\\frac{17}{4}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "210"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$x=90$ 带入等式$0.10x+0.20y=0.17(x+y)$，计算得$y=210$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$g(x)=25$ 带入函数$g(x)=15x+22$，计算得$x=\\frac{1}{5}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将圆方程配方成标准形式：$(x-5)2+(y-4)2=14n+41$。因此圆A 的圆心为$(5, 4)$，半径\n为 $14n+41$。所以圆$B$ 的圆心为$(5, 4)$，半径为 $214n+41$。圆$B$ 的方程为 $(x-5)2$+\n$(x-4)2=4(14n+41)$。将点$(11, 8)$带入圆$B$ 的方程，计算得$n=-2$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "16"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "化简题中的等式得 $r2+(q-2)r+55=0$。当 $b2-4ac\\lt 0$ 时，方程没有实数解。所以\n\n$$(q-2)2-4 1 55\\lt 0$$\n∗∗\n，解出 $2-220\\lt q\\lt 2+220$。$q$ 可取到的最大整数为16。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

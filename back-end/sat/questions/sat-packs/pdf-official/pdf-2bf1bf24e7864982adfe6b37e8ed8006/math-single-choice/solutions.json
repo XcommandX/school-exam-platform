@@ -1,0 +1,764 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$x=4$ 带入函数$h(x)=100x-80$，计算得320。选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "珊瑚群得长度每年增加8 厘米，10 年增加$10*8$ 厘米，所以10 年后的长度为$210+10*8=290$\n厘米，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$8p-9p=8$，所以$-p=8$，即$p=-8$，选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$d$ 为平局的数量且每个平局得1 分，所以平局共得分$d$。因为$w$ 为赢局的数量且每个\n赢局得3 分，所以赢局共得$3w$ 分。总分为$d+3w$，因此$d+3w=46$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当$x$ 的值增加时，$f(x)$的值减少，所以是减函数。当$x$ 从1 增加到2 时，$f(x)$减少了1600。\n当$x$ 从2 增加到3 时，$f(x)$的值减少了960。$f(x)$不是匀速递减的，所以不是线性函数，因\n此是递减的指数函数，选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为函数是增函数，排除A 和$C$。将$x=10$ 带入$B$ 和$D$，计算得选项$B$ 的值更接近64.53。\n选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$x$ 表示1982 年之后的年数，所以$f(6)$是1982 年之后6 年的人口数量。选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为三角形$ABC$ 与三角形$XYZ$ 相似，因此 $XY/AB=YZ/BC$，即 $XY/130=\\frac{70}{650}$。\n计算得$XY=14$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对 $2 ( x - \\frac{9}{2} ) ( x+8 )$ 进行乘法运算，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将等式 $48/x=4 x$ 两边同时乘$x$，得到 $4 x 2=48$。选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当样本更大时，随机性变小，所以误差范围变小。平均数不能只根据样本大小来判断，当\n样本更大时，平均数可能变小，也可能变大。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一元二次方程 $ax2+bx+c=0$ 的解为 $X=-b\\pm b2-4ac/2a$，因此题目中方程有两个解 $5\\pm \\frac{105}{8}$，\n其中 $5+\\frac{105}{8}$ 更大。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "斜率公式为 $y2-y1/x2-x1$，用表中任意两点计算出斜率为$\\frac{23}{17}$。设线性函数为 $y=23/17x$+\n$b$，带入表中任意一点，得到线性函数为选项$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从图中得出圆的半径为8，所以圆的方程为 $x2+y2=64$。带入点$(2, k)$，解出 $k=\\pm 60$。因为点\n$(2, k)$在第一象限，所以$k\\gt 0$。因此 $k=60$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $\\sin$⁡$X/\\cos$⁡$Y=1$，所以sinX=cosY。因此$X$ 和$Y$ 互余，即$X+Y=90$ 度，所以$X=66$\n度。选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "长方体底面的宽为$x-10$。长方体的体积公式为长*宽*高，所以此题中长方体的体积为\n$x(x-10)(24)$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "A 组的平均值2.9 在柱形图最中间的柱内，中间三个柱共有$3+2+3=8$ 个物体，两端的两个\n柱有$6+6=12$ 个物体，所以远离平均值的物体比靠近平均值的物体多，标准差较大。\n$B$ 组的平均值7.9 在柱形图最中间的柱内，中间三个柱共有$3+10+3=16$ 个物体，两端的两\n个柱有$2+2=4$ 个物体，所以靠近平均值的物体比远离平均值的物体多，标准差较小。\n因此A 组的标准差大于$B$ 组的标准差，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每块织物增加64 平方英寸，$x$ 块增加$64x$ 平方英寸，总面积为$110+64x$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$y=4x$ 带入第二个方程$5x-3y=-14$，解出$x=2$。因此$y=4x=8$。所以$x+y=10$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将等式两边同时除以2 得$5x=3$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将等式两边平方 $( x - 5 ) 2=8 2$ 得$x-5=64$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将点(a,0)带入函数中算出$a=-2$。将点$(0, b)$带入函数中算出$b=14$。因此$a+b=12$，选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当$t=0$ 时，有40000 个细菌。设有细菌80000 个，带入函数得 $80000=40000 ( 2 )$\n$t/410$ ，所以$t=410$，选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "分子和分母分别提取公因式$x-8$ 和2： $3x(x-8)-9(x-8)/2x-16=(3x-9)(x-8)/2(x-8)$ =\n$$3x-\\frac{9}{2}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "放大或缩小三角形只改变边的长度，角的大小不变，所以角$V$’等于角$V$，即角$V$’等于25\n度。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "如果两条直线互相垂直，那么它们的斜率的乘积为$-1$。将直线$2y+8x=11$ 写成斜截式:\n$y=-4x+5.5$，所以直线$p$ 的斜率为$-4$。因此直线$r$ 的斜率为$\\frac{1}{4}$。选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为1 英尺=12 英寸，所以1 平方英尺= 12 2 平方英寸。因此面积为 $\\frac{3168}{122}$ =\n22 平方英尺，选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$3.49t-t/t=2.49=249 \\%$。选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将点$(0, 43)$带入 $g(x)=x2-x-a/x2-x-b$，计算得 $a/b=43$。将$g(-43)=0$ 带\n入 $g(x)=x2-x-a/x2-x-b$，计算得 $a=432+43$。所以$b=a/43=44$。选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆锥的体积为 $\\frac{1}{3}$ *底面面积*高。所以高为 $4800\\pi \\times \\frac{3}{1600}\\pi=9$。因为底面面积为\n$1600 \\pi$，所以底面半径为40。斜高为 $9 2+40 2=41$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将等式两边同时乘以$12xyz$ 得 $3z+12x2y2z2=4x$，因为$y\\gt 0$，解出 $y=4x-3z/12x2z2$。选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在三角形$XZW$ 中， $\\angle Z+Z X W=90$\n$$\\angle$$\n$$\\circ$$\n。因为 $\\angle Z X W+W X Y$\n$$\\angle$$\n\n= 90\n$$\\circ$$\n，所以 $\\angle Z=W X Y$\n$$\\angle$$\n。因此 $\\tan$ ⁡ $Z=\\tan$ ⁡ $W X Y$ =\n$$\\angle$$\n$$\\angle$$\n\n$\\frac{612}{459}=\\frac{4}{3}$。选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-2bf1bf24e7864982adfe6b37e8ed8006-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "化简方程$38(x-n)=38y+38n$ 得到$y=x-2n$。图像为斜率为1 的直线。如果线性方程系统没有\n解，那么它们的图像应为两条平行的直线，所以第二个线性方程的斜率为1。选项A 和$D$\n的斜率为1。选项A 的方程与题目给出的相同，因此选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

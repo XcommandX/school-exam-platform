@@ -1,0 +1,140 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "85"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "求最小值，图中最左侧点即是，85"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "127"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x+y=180^{\\circ}$，得$2w+24+5w+29=180^{\\circ}$，解得$7w=a=127$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "12"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "关注$x$ 或$x2$ 系数即可，举例$x$ 系数为$x*48+4*(-rx)=(48-4r)x$，则$48-4r=0$，得到$r=12$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-97/3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数$h$ 斜率$\\frac{5}{3}$，$x$-intercep $(17,0)$，代入得到$k$ 为$f(x)=5/3x-\\frac{85}{3}$，下移动4 个单位得\n$f(x)=5/3x-\\frac{97}{3}$，为$\\frac{-97}{3}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "2381"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因式中的$q$、$r$，都是整数，$z7$ 设成$x$ 变成标准二次函数形式$34x2+bx+70$，设两个因式分\n别是$qx+r$ 和$px+t$，则$b=pr+qt$，$b$ 的最大值一定出现在$p$、$r$（或者$q$、$t$）取最大值的时\n候，即$p=34$，$r=70$，因式为（$34x+1$）和（$x+70$）时，所以$b$ 最大值为$34*70+1*1=2381$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q20"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1811 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$13x+50=180$$\nWhich equation has the same solution as the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13x=50$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13x=80$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13x=130$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13x=180$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-445d532c020de4401c3bd059a58c749c1d06604cf2b257850cfabea5dacf4576",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "What is the $y$-intercept of the graph shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(-9,0)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(-6,0)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(0,6)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(0,9)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For a particular tree species, it is recommended to plant a maximum of 102 trees per acre. Based\non this recommendation, what is the maximum number of trees of this species that can be planted\non 3 acres?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$408$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$306$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$105$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$99$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $11 ( x 2 - 100 y 2 )$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11 ( x - 2 y ) ( x - 50 y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11 ( x - 2 y ) ( x+50 y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11 ( x - 10 y ) ( x - 10 y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11 ( x - 10 y ) ( x+10 y )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $( 9 c+8 ) - ( 4 c 3 - 6 )$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4 c 3+9 c+2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4 c 3+9 c+14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 4 c 3+9 c+2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 4 c 3+9 c+14$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In\n$$\\triangle$$\n$J K L$, the measures of both\n$$\\angle$$\n$$J$$\nand\n$$\\angle$$\n$$K$$\nare equal and the measure of\n$$\\angle$$\n$$L$$\nis\n134 . What is the measure of\n$$\\circ$$\n$$\\angle$$\n$J$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$23 ^{\\circ}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$46 ^{\\circ}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$67 ^{\\circ}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$90 ^{\\circ}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A line in the $xy$-plane has a slope of 7 and passes through the point $( 0 , - 5 )$. Which\nequation represents this line?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- 5 x+7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- 5 x - 7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=7 x+5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=7 x - 5$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Line $r$ is defined by the equation $4 x - 3 y=8$. Line $s$ is parallel to line $r$ in the $xy$-plane.\nWhat is the slope of line $s$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{3}{4}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{4}{3}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "At how many points do the graphs of the equations $y=x+24$ and $y=7 x$ intersect in the\n$xy$-plane?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The cost to rent a bus from Company $X$ is \\$850 for the first 2 hours and an additional \\$30\nper hour for each hour after the first 2 hours. If the total cost to rent the bus from Company $X$ for\n$t$ hours, where $t \\gt 2$, is \\$1,030 , which equation represents this situation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$850 ( t - 2 )+30 t=1 , 030$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$850 ( 2 t )+30 t=1 , 030$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$850+30 ( t - 2 )=1 , 030$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$850+30 ( 2 t )=1 , 030$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A machine fills bags with approximately 29 ounces of walnuts. To test the accuracy of the filling\nprocess, 169 bags of walnuts were selected at random and weighed. Based on the sample, it is\nestimated that the average weight of all bags of walnuts filled by the machine in an 8 -hour period\nis 28.88 ounces, with an associated margin of error of 0.13 ounce. Which of the following is the\nbest interpretation of this estimate?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Plausible values for the average weight of all bags of walnuts filled by the machine are\nbetween 28.75 ounces and 29.01 ounces."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Plausible values for the average weight of all bags of walnuts filled by the machine are less\nthan 28.75 ounces or greater than 29.01 ounces."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The average weight of all bags of walnuts filled by the machine is less than 28.99 ounces."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The average weight of all bags of walnuts filled by the machine is greater than 28.99 ounces."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-ee7716b58227e8f1c88c838f5782374452819dde31b4190758cd9cf893ace55d",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale\n\nThe figure shown consists of a rectangle and a semicircle, where the length of $WX$― is 20 units\nand the length of $WZ$― is 5 units. The diameter of the semicircle is $WX$―. Which of the\nfollowing expressions represents the area, in square units, of the figure?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$20+5+10\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$20\\times 5+10\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$20\\times 5+50\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$20\\times 5+100\\pi$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The kinetic energy $K$, in joules, of an object is given by the formula $K=\\frac{1}{2} m v 2$ ,\nwhere $m$ is the mass of the object, in kilograms, and $v$ is the velocity of the object, in meters per\nsecond. If the kinetic energy of a certain object can be found by using the formula $K=32 v$\n2 , what is the mass of the object, in kilograms?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1,024$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$64$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$32$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f(x)=242(1.040)x$ models the value, in dollars, of a certain bank account from 1953\nthrough 1968, where $x$ is the number of years after the end of 1953. Which of the following is the\nbest interpretation of “$f$（5） is approximately equal to 294” in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q16"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The value of the bank account is estimated to be approximately 5 dollars greater at the end of\n1958 than at the end of 1953."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The value of the bank account is estimated to be approximately 294 dollars at the end of 1958."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The value, in dollars, of the bank account is estimated to be approximately 5 times greater at\nthe end of 1958 than at the end of 1953."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The value of the bank account is estimated to increase by approximately 294 dollars every 5\nyears between the end of 1953 and the end of 1968."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, $x$ and $y$."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-d1a8cd5cc450095f858fa58fd179785f54fb05d8f0f2f3e4bc42159004ee92b8",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following equations is the most appropriate model for the data shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-582+1.2x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=582-1.2x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-582(1.2)x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=582(1.2)x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m1-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$(x+3)2+(y-18)2=169$$\nThe graph of the given equation is a circle in the $xy$-plane. The point (a,$b)$ lies on the circle.\nWhich of the following is a possible value for $a$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m1-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-17$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-12$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$18$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=10 x 2 - 38 x - 150$. What is the value of $f$\n( 0 )?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 150$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 38$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A shopper goes to a pet store to buy dog food and treats. The shopper has \\$20 . Each can of\nfood costs \\$1.87 , and each bag of treats costs \\$2.37. . Which inequality represents the\nrelationship between the number of cans of food, $c$, and the number of bags of treats, $t$, the\nshopper can buy?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.87 c+2.37 t \\le 20$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.87 c+2.37 t \\ge 20$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2.37 c+1.87 t \\le 20$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2.37 c+1.87 t \\ge 20$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b281f331fe8a211db444d7a09f0ddacc7ef3aa0e695bee4e1f2bce211bdf32ea",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn the figure, line $q$ is parallel to line $r$, and both lines are intersected by line $s$. If\n\n$y=2x+9$, what is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$26$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$35$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$55$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$65$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $f ( x )=x+2$ and $g ( x )=2 x$, what is the value of $6 f ( 3 ) - g ( 3 )$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$12$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$24$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=5x+7$$\n$$y=-4x-11$$\nThe solution to the given system of equations is $(x,y)$. What is the value of $y$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-18$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-2$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A plumbing company charges its customers \\$112 for the first hour of a plumbing service call\nand \\$40 for each additional hour, plus the cost of plumbing parts. Which equation represents the\ntotal cost $y$, in dollars, for an $x$-hour plumbing service call where the cost of parts\nwas \\$$z$ and $x\\ge 1$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=40x+z$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=40x+z+72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=112x+z$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=112x+40z+72$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Circle A has equation $( x - 7 ) 2+( y+3 ) 2=1$. In the $xy$-plane, circle $B$ is\nobtained by translating circle A to the right 4 units. Which equation represents circle $B$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x - 7 ) 2+( y+7 ) 2=1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x - 3 ) 2+( y+3 ) 2=1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x - 11 ) 2+( y+3 ) 2=1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x - 7 ) 2+( y - 1 ) 2=1$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x$$\n$$y$$\n\n$$75$$\n$$11$$\n$$80$$\n$$19$$\n$$85$$\n$$6$$\n$$90$$\n$$5$$\n$$95$$\n$$10$$\nTotal\n$$51$$\nAri will add a 135-year-old stamp to her original collection, creating a new collection of 52\nstamps. Which statement correctly compares the mean ages and median ages of Ari’$s$ original and\nnew collections?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean age for the new collection is greater than the mean age for the original collection,\nand the median age for the new collection is greater than the median age for the original\ncollection."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean age for the new collection is greater than the mean age for the original collection,\nbut the median age is the same for the original and new collections."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean age for the new collection is less than the mean age for the original collection, and\nthe median age for the new collection is less than the median age for the original collection."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median age for the new collection is greater than the median age for the original\ncollection, but the mean age is the same for the original and new collections."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-66c7539f68774ec484e3bf6c968f5b43c08ad279179a64d04690dc643b4d3995",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "A certain open star cluster contains $M$-type stars and $K$-type stars. The estimated total mass of $M$-\ntype and $K$-type stars in this open star cluster is 129,492 quettagrams. The graph shown models\nthe possible combinations of the number of $M$-type stars, $x$, and $K$-type stars, $y$, that could be in\nthis open star cluster if all the $M$-type stars have the same estimated mass and all the $K$-type stars\nhave the same estimated mass. Based on the graph, which of the following is closest to the\nestimated mass, in quettagrams, of each $M$-type star in this cluster?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$830$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$959$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$55,622$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$73,870$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An object is launched into the air from ground level. According to a quadratic model, 2.1 seconds\nafter the object is launched, it reaches its maximum height of 70.56 feet above ground level.\nWhich equation represents this model, where $f ( t )$ is the object’$s$ height, in feet, above ground\nlevel $t$ seconds after it was launched?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t - 2.1 ) 2+70.56$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=16 ( t+2.1 ) 2+70.56$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t+2.1 ) 2+70.56$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=16 ( t - 2.1 ) 2+70.56$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which equation has no solution?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 ( x - 1 )=- 3 ( - x+1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 ( x - 1 )=- 3 ( - x - 1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 ( x - 1 )=4 ( x - 1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 ( x - 1 )=4 ( - x+1 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The volume of a right rectangular prism with a square base is 539 cubic centimeters. If the area of\neach of the four lateral faces is 77 square centimeters, what is the height, in centimeters, of the\nprism?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$77$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$49$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-d64f61f6ee3f6aace22fb9f413c35b15abd96127224ae6413fdf8d060d3e3d02",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of $y=f(x)+2$ is shown. Which equation defines function $f$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=-2x+1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=-2x+3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=-2x+4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=-2x+5$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$f(x)=5x2+60x+181$$\nThe function $g$ is defined by $g(x)=f(x+8)$. What is the minimum value of $g(x)$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-6$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-29ad1f70200341919cb8048bc1d4055c-m2-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The functions $f$ and $g$ are defined by the equations shown, where $a$ and $b$ are integer constants, $a$\n$\\lt b$ and $b \\lt 0$. If $y=f ( x )$ and $y=g ( x )$ are graphed in the $xy$-plane, which of the\nfollowing equations displays, as a constant or coefficient, the $y$-coordinate of the $y$-intercept of\nthe graph of the corresponding function?\n\nI. $f ( x )=a ( 3.3 ) x+b$\n$II$. $g ( x )=a ( 3.3 ) x+b$"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+        "sourceQuestionId": "m2-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$II$ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and $II$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor $II$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

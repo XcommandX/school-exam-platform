@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-49b72d72832f4bf698adeb216244c7c3-math-spr",
+  "revision": 1,
+  "title": "2024年12月第7套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-9c463dd6ca00000f5c05b7f14154094e75bc154ac3bbe1c3ec4669638d300181",
+      "path": "assets/9c463dd6ca00000f5c05b7f14154094e75bc154ac3bbe1c3ec4669638d300181.png",
+      "mediaType": "image/png",
+      "sha256": "9c463dd6ca00000f5c05b7f14154094e75bc154ac3bbe1c3ec4669638d300181",
+      "byteLength": 35527,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-49b72d72832f4bf698adeb216244c7c3",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-7cc52f8ab57c820145eb77448875383e7345c3d51fdb6a96c620300dda4779b7",
+      "path": "assets/7cc52f8ab57c820145eb77448875383e7345c3d51fdb6a96c620300dda4779b7.png",
+      "mediaType": "image/png",
+      "sha256": "7cc52f8ab57c820145eb77448875383e7345c3d51fdb6a96c620300dda4779b7",
+      "byteLength": 16954,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-49b72d72832f4bf698adeb216244c7c3",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "id": "asset-07d0814a8da81ff68ae7a13be905a0caf2c0e9e2bcb936d95b683b52bfd41aed",
+      "path": "assets/07d0814a8da81ff68ae7a13be905a0caf2c0e9e2bcb936d95b683b52bfd41aed.png",
+      "mediaType": "image/png",
+      "sha256": "07d0814a8da81ff68ae7a13be905a0caf2c0e9e2bcb936d95b683b52bfd41aed",
+      "byteLength": 14672,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-49b72d72832f4bf698adeb216244c7c3",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "id": "asset-9e8751d8bb3f9d1e0f2ada1c8cdf06325d2fc791f6cc6e45ba000bb070b55381",
+      "path": "assets/9e8751d8bb3f9d1e0f2ada1c8cdf06325d2fc791f6cc6e45ba000bb070b55381.png",
+      "mediaType": "image/png",
+      "sha256": "9e8751d8bb3f9d1e0f2ada1c8cdf06325d2fc791f6cc6e45ba000bb070b55381",
+      "byteLength": 6412,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-49b72d72832f4bf698adeb216244c7c3",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

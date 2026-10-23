@@ -1,0 +1,942 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-ecbb6f19bf16db500deea2f8e205d2226d9cb1f2f5174c4ebbb8082b49a2fb8c",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The shaded region shown in the graph represents all the solutions to which inequality?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x\\le 29$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x\\ge 29$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\le 29$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\ge 29$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$3.5c+7d=266$$\nThe given equation describes the relationship between the number of cats, $c$, and the number of\ndogs, $d$, that can be cared for at a pet care business during a week. If the business cares for 38\ndogs during a week, how many cats can it care for during this week?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$133$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$266$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=3(x-1)-6$$\nFor which of the following tables are all the values of $x$ and their corresponding values of $y$\nsolutions to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-83dd876cb09add9483f26d34e453aa371f7337c9fa64de701fb95e0b1cd28a6e",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-6018824ff88a60f708f967c91e6604a48e1386bee203e884d01d71d2ac948504",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-9127ddec330761b78a7d469307f388e44f5a08ee7f157301b7c025f1390966b4",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-dd9c6289f0fb039f3c3e43dba9dba38c77532826ea1f8e191dfae1c0a692e4b1",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For a survey, a sample of 1,018 people was selected at random from all registered voters in a\ncounty. Based on the survey, it is estimated that $66 \\%$ of all registered voters in the county are\nin favor of a new law, with an associated margin of error of $2.91 \\%$ . Which of the following\nbest describes the plausible values for the percent of all registered voters in the county who are in\nfavor of the new law?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Any value greater than $63.09 \\%$ and less than $68.91 \\%$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Any value greater than $63.09 \\%$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Any value less than $63.09 \\%$ or greater than $68.91 \\%$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Any value less than $68.91 \\%$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The gas mileage of a certain car is 35 miles per gallon when driven on the highway. If the car\nbegins with 10 gallons of gas in the tank, which function predicts the amount of gas remaining in\nthe tank, $f ( d )$, after the car is driven $d$ miles on the highway?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( d )=d/35 - 10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( d )=d - 10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( d )=10 - d/35$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( d )=10 - d$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-59545c5be00ceb1e65f2e58dc71a7afeda63e37fa53313fe598ade1495fddef1",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of the linear equation $10x$+By=50 is shown, where $B$ is a constant. What is the value of\n$B$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$25$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-5$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1b6381c82eadba826d5639d29ae9b7657f522034e2ce2f41b305426ba844c103",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following equations is the most appropriate linear model for the data shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=80-x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=80-0.1x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=90-0.1x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=90-10x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$4x2+5x-5=0$$\nWhat is the greatest solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-5}{8}-\\frac{105}{8}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-5}{8}+\\frac{105}{8}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-5}{4}-\\frac{105}{4}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-5}{4}+\\frac{105}{4}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y\\le x+15y\\ge -4x-15$$\nWhich point $(x,y)$ is a solution to the given system of inequalities in the $xy$-plane?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(-7,0)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(0,16)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(0,-16)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(7,0)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An equilateral triangle has a height of 47 3 units. What is the length, in units, of one side of\nthis triangle?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "94 3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$94$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "47 3"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$47$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x17y5/35x2(y88)$$\nFor all positive values of $x$ and $y$, the given expression is equivalent to which of the following?\n/\nI.$(x14/3)(y5/3)/5xy$\n$II$.$x11y2/35$"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$II$ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and $II$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor $II$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$f(x)=2,000(1.005)3x$$\nThe given function $f$ models the balance of a bank account, in dollars, $x$ years after it is opened.\nWhich statement is the best interpretation of $(1.005)3x$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Every 4 months, the balance increases by about \\$5."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "At the end of every 4-month interval, the balance increases by about $0.5\\%$ of the balance at the\nbeginning of the 4-month interval."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Every 3 years, the balance increases by about \\$5."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "At the end of every 3-year interval, the balance increases by about $0.5\\%$ of the balance at the\nbeginning of the 3-year interval."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A square map has a side length of 55 inches, and 1 inch on the map represents an actual distance\nof 13 miles. A larger version of the same map is printed as a square with the side length 90\n% longer than the side length of the previous map. On the larger map, which of the following is\nclosest to the actual distance, in miles, represented by 1 inch?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.30$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6.84$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$24.70$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$49.50$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $10 ( x+3 )$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10 x+3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10 x+13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10 x+7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10 x+30$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In isosceles triangle $ABC$, sides $AB$ and $AC$ are congruent. Point $D$ divides side $BC$ such that the\nlength of $B D$ ¯ is $\\frac{4}{7}$ of the length of $B C$ ¯ . Point $E$ lies on\nside $AB$ and point $F$ lies on side $AC$ such that when segments $DE$ and $DF$ are drawn, angle $BED$ is\ncongruent to angle $CFD$. If the length of $B E$ ¯ is 8, what is the length of\n$C F$ ¯ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$32$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$56$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The area of a rectangular region is increasing at a rate of 270 square feet per hour. Which of the\nfollowing is closest to this rate in square meters per minute? (Use 1 meter = 3.28 feet. )"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.42$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.37$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14.76$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$25.10$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

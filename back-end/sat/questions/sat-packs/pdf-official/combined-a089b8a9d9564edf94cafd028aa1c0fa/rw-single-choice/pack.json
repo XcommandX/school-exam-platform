@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-d4e8464884df41f5ab0750da815b3591-rw-single-choice",
+  "revision": 1,
+  "title": "2024年12月第8套阅读语法（只录M1，M2和第6套重复） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-a0b686d195429aa72f3053dbf391969c51e1c5a0c82077148cabbfd05f763b52",
+      "path": "assets/a0b686d195429aa72f3053dbf391969c51e1c5a0c82077148cabbfd05f763b52.png",
+      "mediaType": "image/png",
+      "sha256": "a0b686d195429aa72f3053dbf391969c51e1c5a0c82077148cabbfd05f763b52",
+      "byteLength": 18733,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-d4e8464884df41f5ab0750da815b3591",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-cf5fdf8d3cbb43e3d487e5347291797eb2d83159311cdc5cabf8dd0bdb2a0f79",
+      "path": "assets/cf5fdf8d3cbb43e3d487e5347291797eb2d83159311cdc5cabf8dd0bdb2a0f79.png",
+      "mediaType": "image/png",
+      "sha256": "cf5fdf8d3cbb43e3d487e5347291797eb2d83159311cdc5cabf8dd0bdb2a0f79",
+      "byteLength": 21383,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-d4e8464884df41f5ab0750da815b3591",
+        "sourceQuestionId": "m1-q13"
+      }
+    }
+  ]
+}

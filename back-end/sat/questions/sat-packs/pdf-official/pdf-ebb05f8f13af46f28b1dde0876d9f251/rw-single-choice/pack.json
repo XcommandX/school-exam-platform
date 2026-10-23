@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-ebb05f8f13af46f28b1dde0876d9f251-rw-single-choice",
+  "revision": 1,
+  "title": "2025年11月亚太第3套阅读语法M2-easy（去重版） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-98f21fc6d7e4c0dc1a61a19fcfe8d8c13ac5fc271f6f556a6b5956f8e47af295",
+      "path": "assets/98f21fc6d7e4c0dc1a61a19fcfe8d8c13ac5fc271f6f556a6b5956f8e47af295.png",
+      "mediaType": "image/png",
+      "sha256": "98f21fc6d7e4c0dc1a61a19fcfe8d8c13ac5fc271f6f556a6b5956f8e47af295",
+      "byteLength": 27691,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ebb05f8f13af46f28b1dde0876d9f251",
+        "sourceQuestionId": "m2-q4"
+      }
+    }
+  ]
+}

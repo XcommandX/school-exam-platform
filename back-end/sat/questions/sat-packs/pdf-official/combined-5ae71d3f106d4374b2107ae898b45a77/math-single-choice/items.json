@@ -1,0 +1,1783 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Antonia purchased a bag of rice and some carrots at the grocery store. Antonia paid \\$2 for the bag\nof rice and \\$1.70 per pound for the carrots. If Antonia paid a total of \\$10.50 for the bag of rice\nand the carrots, which of the following equations can be used to find $p$, the number of pounds of\ncarrots Antonia purchased? (Assume there is no sales tax.)"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.70 p+2=10.50$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.70 p - 2=10.50$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.70+2 p=10.50$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1.70 - 2 p=10.50$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$5x-2y=3$$\n$$x=7$$\nWhat is the solution $(x,y)$ to the given system of equations?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(7,16)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(7,30)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(7,-30)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(7,-16)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $7x=6$, what is the value of $21x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{18}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$18$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$126$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table shows the frequency of values in a data set.\n\nValue\nFrequency\n$$16$$\n$$10$$\n$$25$$\n$$1$$\n$$34$$\n$$10$$\n$$43$$\n$$4$$\nWhat is the minimum value of the data set?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$25$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-229dada0d1e4f6b69852ba27ec8a0bf7fc76c32872e765323e4293420896cedf",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "In the triangle shown, what is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$21$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$212$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$42$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$422$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A teacher is creating an assignment worth 72 points. The assignment will consist of questions\nworth 1 point and questions worth 2 points. Which equation represents this situation, where $x$\nrepresents the number of 1-point questions and $y$ represents the number of 2-point questions?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 x y=72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 ( x+y )=72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2 x+y=72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x+2 y=72$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=(x-7)(x+10)$$\nWhich table gives four values of $x$ and the corresponding values of $y$ for the given quadratic\nequation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x$$\n$$-1$$\n$$0$$\n$$1$$\n$$2$$\n$$y$$\n$$10$$\n$$17$$\n$$24$$\n$$31$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x$$\n$$-1$$\n$$0$$\n$$1$$\n$$2$$\n$$y$$\n$$-72$$\n$$-70$$\n$$-66$$\n$$-60$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x$$\n$$-1$$\n$$0$$\n$$1$$\n$$2$$\n$$y$$\n$$-77$$\n$$-70$$\n$$-63$$\n\n$$-56$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x$$\n$$-1$$\n$$0$$\n$$1$$\n$$2$$\n$$y$$\n$$18$$\n$$10$$\n$$4$$\n$$0$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x/\\frac{15}{13}$$\nWhich expression is equivalent to the given expression, where $x\\gt 0$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$195/x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x/195$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$15x/13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13x/15$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$b2+5c=6d$$\nThe given equation relates the real numbers $b$, $c$, and $d$, where $\\gt 5/6c$. Which equation correctly\n𝑑\nexpresses $b$ in terms of $c$ and $d$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b=6d+5c/2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b=6d-5c/2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b=\\pm 6d+5c$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b=\\pm 6d-5c$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x$$\n$$g (x)$$\n$$1$$\n$$58$$\n$$2$$\n$$54$$\n$$3$$\n$$50$$\n$$4$$\n$$46$$\nFor the linear function $g$, the table shows four values of $x$ and their corresponding values of $g(x)$.\nThe function can be written as $g(x)=mx+b$, where $m$ and $b$ are constants. What is the value of $b$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$29$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$58$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$62$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A piece of string with a length of 73 inches is cut into two parts. One part has a length of $x$ inches,\nand the other part has a length of $y$ inches. The value of $x$ is 3 more than 4 times the value of $y$.\nWhat is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$18$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$19$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$38$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$59$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The difference between the measure of angle $A$ and the measure of angle $B$ is $\\frac{-11}{12}\\pi$ radians.\nWhich expression shows the difference between the measure of angle $A$ and the measure of angle\n$B$, in degrees?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12} 180 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi \\pi /180$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi 180 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi 360 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$m(t)=-0.0274(t/7)2+7.3873(t/7)+75.032$$\nThe function $m$ gives the predicted body mass $m(t)$, in kilograms $(\\mathrm{kg})$, of a male giraffe $t$ days\nafter it was born in a wildlife reserve, where𝑡$\\le 390$. Which of the following is the best\ninterpretation of the statement “$m(190)$ is approximately equal to 255” in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $190 \\mathrm{kg} 255$ days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $255 \\mathrm{kg} 190$ days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $255 \\mathrm{kg}190/7$days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately$190/7\\mathrm{kg} 255$ days after it was\nborn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table summarizes the distribution of age and assigned group for 105 participants in a study.\n\n$0-9$ years\n$10-19$ years\n20+ years\nTotal\nGroup A\n$$5$$\n$$18$$\n$$12$$\n$$35$$\nGroup $B$\n$$8$$\n$$6$$\n$$21$$\n$$35$$\nGroup $C$\n\n$$22$$\n$$11$$\n$$2$$\n$$35$$\nTotal\n$$35$$\n$$35$$\n$$35$$\n$$105$$\nOne of these participants will be selected at random. What is the probability of selecting a\nparticipant from group A, given that the participant is at least 10 years of age?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{2}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{3}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{18}{35}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{6}{7}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m1-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A quadratic function models the height, in feet, of an object above the ground in terms of the\ntime, in seconds, after the object is launched off an elevated surface. The model indicates the\nobject has an initial height of 3 feet above the ground and reaches its maximum height of 403 feet\nabove the ground 5 seconds after being launched. Based on the model, what is the height, in feet,\nof the object above the ground 6 seconds after being launched?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m1-q22"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$103$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$323$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$387$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$397$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $17(x2-9)$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17x2-153$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17x2-26$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17x2-9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17x2+8$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A scientist analyzed a soil sample with a mass of 800 grams and determined that it contained 184\ngrams of water. What is the percentage of water, by mass, in this soil sample?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$23 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$18.4 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10.4 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8 \\%$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What value of $p$ satisfies the equation $2p+100=450$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$35$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$175$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$275$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$348$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Circle $N$ has a radius of 6 millimeters $(\\mathrm{mm})$. Circle $M$ has an area of $81\\pi \\mathrm{mm}2$. What is the total\narea, in $\\mathrm{mm}2$, of circles $N$ and $M$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$15\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$93\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$105\\pi$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$117\\pi$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the slope of the graph of $y=\\frac{1}{2}(5x+19)+8x$ in the $xy$-plane?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{5}{2}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{21}{2}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f(x)=x+\\frac{18}{5}$, and $f(a)=-19$, where $a$ is a constant. What is the value\nof $a$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-113$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-77$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-77}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-1}{5}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-9518297b7ecde82c352466eac4959eb2dfac67df84e72257c93cce7b19559b36",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Orbital period (days)\n\nA data set of the orbital periods, rounded to the nearest whole number of Earth days, for 13 of\nJupiter'$s$ moons is represented in the dot plot. An additional moon with an orbital period of 632\ndays is added to the original data set to create a new data set of 14 orbital periods. Which\nstatement best compares the mean and median of the new data set to the mean and median of the\noriginal data set?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of the new data set is equal to the mean of the original data set, and the median of\nthe new data set is equal to the median of the original data set."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of the new data set is equal to the mean of the original data set, and the median of\nthe new data set is less than the median of the original data set."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of the new data set is less than the mean of the original data set, and the median of\nthe new data set is less than the median of the original data set."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of the new data set is less than the mean of the original date set, and the median of\nthe new data set is equal to the median of the original data set."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the linear function $p$, $p(c)=-3$, where $c$ is a constant, $p(3)=17$, and the slope of the graph\nof $y=p(x)$in the $xy$-plane is 5. For the linear function $t$, $t(c)=-6$ and $t(4)=34$. What is the slope of\nthe graph of $y=t(x)$ in the $xy$-plane ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An object is kicked from a platform. The equation $h=-4.9t2+8t+14$ represents this situation,\nwhere $h$ is the height of the object above the ground, in meters, $t$ seconds after it is kicked. Which\nnumber represents the height, in meters, from which the object was kicked?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4.9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A conservation specialist hung artificial nesting structures each in the shape of a right rectangular\nprism for a species of native duck. Each structure has a height of 24 inches. The length of each\nstructure'$s$ base is $x$ inches, which is 1 inch more than the width of the structure'$s$ base. Which\nfunction $V$ gives the volume of each structure, in cubic inches, in terms of the length of the\nstructure'$s$ base ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$V ( x )=24 x ( x - 1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$V ( x )=24 x ( x+1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$V ( x )=x ( x+24 ) ( x - 1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$V ( x )=x ( x+24 ) ( x+1 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$w+34=44$$\nWhat is the solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$20$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$100$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f(x)=-23x$. The function $g$ is a decreasing linear function. In the $xy$-\nplane, the graphs of $y=f(x)$ and 𝑦=$g(x)$ intersect at two points, $(h, j)$ and $(k, m)$, where $j\\gt m$.\nWhen $g(x)\\lt f(x)$, which of the following must also be true?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x\\gt k$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x\\lt h$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x\\gt k$ or $\\lt h$\n𝑥"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$h\\lt x\\lt k$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "One gallon of sealant costs \\$43 and will cover 350 square feet of a surface. A deck has a total\nsurface area of $d$ square feet. Which equation represents the cost $c$, in dollars, of the sealant\nneeded to cover the deck twice?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q16"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=350d/43$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=700d/43$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=43 ( d/175 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=43 ( d/350 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The difference between the measure of angle $A$ and the measure of angle $B$ is\n\n−\n\n$$11$$\n\n/\n\n$$12$$\n\n$$\\pi$$\n\nradians. Which expression shows the difference between the measure of angle $A$ and the\nmeasure of angle $B$, in degrees?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12} 180 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi \\pi /180$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi 180 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-11}{12}\\pi 360 /\\pi$$\n⋅\n$$\\circ$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$m(t)=-0.0274(t/7)2+7.3873(t/7)+75.032$$\nThe function $m$ gives the predicted body mass $m(t)$, in kilograms $(\\mathrm{kg})$, of a male giraffe $t$ days\nafter it was born in a wildlife reserve, where $t\\le 390$. Which of the following is the best\ninterpretation of the statement “$m(190)$ is approximately equal to 255” in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $190 \\mathrm{kg} 255$ days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $255 \\mathrm{kg} 190$ days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately $255 \\mathrm{kg}190/7$days after it was\nborn."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The predicted body mass of a male giraffe was approximately$190/7\\mathrm{kg} 255$ days after it was\nborn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-25e21d56d2d24b16b70a16a8dc1d21c3-m2-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$7x+4y=3$$\n$$21x+12y=9$$\nFor each real number $r$, which of the following points lies on the graph of each equation in the $xy$-\nplane for the given system?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+        "sourceQuestionId": "m2-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(r,-4r/7+\\frac{3}{7})$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(r,7r/4+\\frac{3}{4})$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(-4r/7+\\frac{3}{7},r)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$(r/3+3,-r/3+9)$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

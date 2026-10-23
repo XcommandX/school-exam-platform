@@ -1,0 +1,361 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "118"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，代入 $p ( x )=400$ 计算$x=118$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "15"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x=0$ 时函数值为$y$-intercept 为15"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "19/500"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数顶点式 $y=a ( x - b ) 2+c$ ,代入顶点（7000,0.2）得 $y$ =\na $( x - 7000 ) 2+0.2$,，再代入另外一点 $(0,0)$得到 $0=a ( 0 - 7000 ) 2$\n$+0.2$ 得到$a=\\frac{-0.2}{49000000}$，代入计算$f(700)=0.038$，"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4",
+          "5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设$3x-8$ 为$t$，后因式分解得（$t-4$）（$t-7$）=0，则$t=4$ or 7，$x$ 值为4 或5"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-49"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入$x=\\frac{2}{5}$ 到函数中，$-53=-10$（$\\frac{2}{5}$）$+b$，解得$b=-49$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-314"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "up 6 units 表示加6，$f(x)+6=(x-10)(x-8)(x-4)+6$，代入$x=0$ 得到$-314$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "433/500",
+          "8661/10000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直角三角形直角边与斜边比为$\\frac{1}{2}$，故为$30^{\\circ}$直角三角形，角A 为$60^{\\circ}$，$\\sin 60^{\\circ}=0.866$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "14",
+          "15",
+          "16"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，得不等式$8850\\lt 5600+250n\\lt 9850$， $13 \\lt n \\lt 17$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f ( 7 )=f ( 5 ) 3 2=c 7=c 5 3 2$ ,\n∗\n∗\n故$c=3$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "28/3",
+          "9333/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据已知两点坐标可求得一次函数为$y=-3x/7+4$，再将$y=0$ 代入求得$x$ 值为$\\frac{28}{3}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "14100"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，under=$6950\\%$post，graduate=$35\\%$under=4865。故under=13900，代入得\npost=200，under+post=14100"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "630"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "639 和$-621$ 代入到绝对值式子$|x-9|$中数值相同，故$k=h$，$h-k$ 或者$k-h$ 都是0，故答案等于\n$$9+621=630$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ec0faf92672c4bbda34ea3b4e8578235-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "113/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "角$ABC$ 为直角，所以$AC$ 为圆直径115，$BE$ 垂直于直径$AC$，故$BD=DE=226$，同时\n$AD*DC=BD*DE=226$,设$AD=x$，得$x*(115-x)=226$,解此二次方程得$x=2$ 或113，如图$AB$ 小\n于$BC$ 所以$AD$ 取2，$CD$ 为$115-2=113$，$r=\\frac{113}{2}$\n（或根据相似三角形$ABD$ 和$BCD$ 相似得$AD/BD=BD/CD$ 得到$AD*DC=BD*BD=226$）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

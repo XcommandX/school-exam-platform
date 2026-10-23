@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-dbb52b580b4a456585088c7028d53b9e-rw-single-choice",
+  "revision": 1,
+  "title": "2024年6月第2套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-7621a7a7040da2a77d4b1a1ec23856a5760518a29ce7d63b91d08f736db59e7c",
+      "path": "assets/7621a7a7040da2a77d4b1a1ec23856a5760518a29ce7d63b91d08f736db59e7c.png",
+      "mediaType": "image/png",
+      "sha256": "7621a7a7040da2a77d4b1a1ec23856a5760518a29ce7d63b91d08f736db59e7c",
+      "byteLength": 28591,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dbb52b580b4a456585088c7028d53b9e",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-dba79c71da2d46cb0974892d701da0769f0c8c5b1b7463e10f189e7d00b3a5c6",
+      "path": "assets/dba79c71da2d46cb0974892d701da0769f0c8c5b1b7463e10f189e7d00b3a5c6.png",
+      "mediaType": "image/png",
+      "sha256": "dba79c71da2d46cb0974892d701da0769f0c8c5b1b7463e10f189e7d00b3a5c6",
+      "byteLength": 31146,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dbb52b580b4a456585088c7028d53b9e",
+        "sourceQuestionId": "m2-q6"
+      }
+    }
+  ]
+}

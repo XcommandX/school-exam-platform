@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-9fc11f13c28049358f25188370d4b1cb-rw-single-choice",
+  "revision": 1,
+  "title": "2024年8月第2&7套阅读语法（只有44道题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1e699fe9203a1308381ece904f3b458914a750457bd2b7e8337e016e69788478",
+      "path": "assets/1e699fe9203a1308381ece904f3b458914a750457bd2b7e8337e016e69788478.png",
+      "mediaType": "image/png",
+      "sha256": "1e699fe9203a1308381ece904f3b458914a750457bd2b7e8337e016e69788478",
+      "byteLength": 55471,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9fc11f13c28049358f25188370d4b1cb",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-a2131cbf06e47d0417d51c36b0e7699fb5d21794d07f49d1b03e60d1ec08d644",
+      "path": "assets/a2131cbf06e47d0417d51c36b0e7699fb5d21794d07f49d1b03e60d1ec08d644.png",
+      "mediaType": "image/png",
+      "sha256": "a2131cbf06e47d0417d51c36b0e7699fb5d21794d07f49d1b03e60d1ec08d644",
+      "byteLength": 37040,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9fc11f13c28049358f25188370d4b1cb",
+        "sourceQuestionId": "m2-q7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-e8453963e73e4ccaaba4124fbb975b29-rw-single-choice",
+  "revision": 1,
+  "title": "2024年11月第6套阅读语法（只保留M1，M2和第5套重复） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d2bda1beb60d1485c21019eaf4c03189a54d7c0e16d4c119701c3d419d948a95",
+      "path": "assets/d2bda1beb60d1485c21019eaf4c03189a54d7c0e16d4c119701c3d419d948a95.png",
+      "mediaType": "image/png",
+      "sha256": "d2bda1beb60d1485c21019eaf4c03189a54d7c0e16d4c119701c3d419d948a95",
+      "byteLength": 18678,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-e8453963e73e4ccaaba4124fbb975b29",
+        "sourceQuestionId": "m1-q6"
+      }
+    }
+  ]
+}

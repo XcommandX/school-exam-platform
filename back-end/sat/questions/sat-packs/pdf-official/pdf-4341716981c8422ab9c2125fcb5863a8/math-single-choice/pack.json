@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-4341716981c8422ab9c2125fcb5863a8-math-single-choice",
+  "revision": 1,
+  "title": "Bluebook  Practice 9 数学(Routing+Hard) · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-0764187cacd89456fcc92a37e9aae350c66ab1297b4129807bf97ed157446633",
+      "path": "assets/0764187cacd89456fcc92a37e9aae350c66ab1297b4129807bf97ed157446633.png",
+      "mediaType": "image/png",
+      "sha256": "0764187cacd89456fcc92a37e9aae350c66ab1297b4129807bf97ed157446633",
+      "byteLength": 13158,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-4341716981c8422ab9c2125fcb5863a8",
+        "sourceQuestionId": "m1-q7"
+      }
+    }
+  ]
+}

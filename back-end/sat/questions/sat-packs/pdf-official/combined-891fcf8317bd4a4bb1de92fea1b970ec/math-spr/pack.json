@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-85505b5ef7c04c7d9d46496a92b71605-math-spr",
+  "revision": 1,
+  "title": "2026年5月第1套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-15af7619ef352263792482d83d9d090aa2de631c24e7a2a754c1a25a2ff2876f",
+      "path": "assets/15af7619ef352263792482d83d9d090aa2de631c24e7a2a754c1a25a2ff2876f.png",
+      "mediaType": "image/png",
+      "sha256": "15af7619ef352263792482d83d9d090aa2de631c24e7a2a754c1a25a2ff2876f",
+      "byteLength": 7910,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "id": "asset-8d37bd85dd600f0a2cfdcfc5864b2c03113936f22034039a2ee01fe5295f8c2f",
+      "path": "assets/8d37bd85dd600f0a2cfdcfc5864b2c03113936f22034039a2ee01fe5295f8c2f.png",
+      "mediaType": "image/png",
+      "sha256": "8d37bd85dd600f0a2cfdcfc5864b2c03113936f22034039a2ee01fe5295f8c2f",
+      "byteLength": 55250,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

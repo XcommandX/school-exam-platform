@@ -1,0 +1,787 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数 $w(x)$ 表示蜡烛燃烧 $x$ 小时后的剩余固体蜡重量（盎司）。\n图像中找 $x=12$ 对应的 $y$ 值。对应10"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形内角和 $180^{\\circ}$\n\n$$\\angle$$\n$A$ +\n$$\\angle$$\n$$B=159.5^{\\circ}$$\n$$\\angle$$\n$$C=180 - 159.5=20.5^{\\circ}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "原价 288 美元，折扣 $25\\%$\n折扣金额 = $288 \\times 0.25=72$ 美元"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察图表，线性关系，每次 $x$ 增加 1，$y$ 增加 1，对应$y=x+8$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "分别带入13 和$-24$，使方程等于0，对应$(x - 13)(x+24)=0$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$y=0$$\n$y=4$（$x^{2} - 36$）\n$$4x^{2} - 144=0 \\to x^{2}=36 \\to x=\\pm 6$$\n有序对：$(6, 0)$ 和 $(-6, 0)$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "初始质量 $530000 \\mathrm{mg}$，每 5 天减半\n35 天 = 7 个 5 天\n质量 = $530000 \\times (\\frac{1}{2})^7=\\frac{530000}{128} \\approx 4141$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "侧面面积为(31)(310)。底面半径为 $\\frac{310}{2}\\pi$。底面面积为$\\pi (\\frac{310}{2}\\pi )2$。总面积为 (31)\n$(310)+2\\pi (\\frac{310}{2}\\pi )2$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$f(w)=6w^{2}$$\n$$f(13)=1014$$\n宽 $13 \\mathrm{ft}$ 时，面积 $1014 \\mathrm{ft}^{2}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "初始 170 美元\n每月存 30 到 60 美元，共 10 个月\n最少：$170+10\\times 30=470$\n最多：$170+10\\times 60=770$\n$$470 \\le x \\le 770$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$f(x)=x^{3} - 2x^{2} - 8x+48$$\n\n向上平移 6 单位：$h(x)=f(x)+6$\n$y$ 截距：$x=0 \\to f(0)=48\\to h(0)=48+6=54$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$35x-25=35x-25$，式子相同无限个解"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$10x+26257=26858$$\n$$10x=601$$\n$$x=60.1$$\n$x$ 是平均每年增加的人数"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(-5)=-7$，斜率 3\n$$f(x)=3x+b$$\n$$f(-5)=-15+b=-7 \\to b=8$$\n$$f(x)=3x+8$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆 A: $(x - 2)^{2}+(y - 7)^{2}=25$，半径 5\n圆 $B$ 半径 $10 \\to$ 半径平方 100\n$$(x - 2)^{2}+(y - 7)^{2}=100$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在直角三角形中，$\\cos$⁡$F=\\cos$⁡$30=\\frac{3}{2}$\n$$\\circ$$\n\n因此，$\\cos F$ 的值与边长 68 无关，只由角度决定。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "第 1 天质量 253 克，每天减少 4 克\n第 $x$ 天：$m=253 - 4(x - 1)=-4x+257$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程 $y=50x+120$。当 $x=0$ 时，$y=120$，对应一次性安装费。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据 $X$：13, 16, 19, 21, 24, 25, 25, 26, 38\n数据 $Y$：13, 16, 19, 21, 24, 25, 25, 26, 33\n将 38 换成 33，总和减少 → 均值 $X$ &gt; 均值 $Y$\n中位数都是第 5 个数 $24 \\to$ 相等"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "原方程 $y=4x+36$ 无限多解 → 第二个方程和它是同一条线"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$R=0.36l / A$ 解出 $l$：$l=(R \\times A) / 0.36$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "过点 $(-5, 0)$、$(3, 0)$、$(7, 0)$ ；对应因式 $(x+5)$、$(x - 3)$、$(x - 7)$ ；其中一个是 $x - 3$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "不等式 $4x+5y \\lt 9$ 边界线 $4x+5y=9$，斜率为负，$y$ 截距 1.8 小于号 → 取线下区域"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$(8\\pi /11)\\times (180/\\pi )\\times 2=(\\frac{8}{11})(180)(2)$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y=(45 - x)/(ax+b) x$ 截距：令 $y=0 \\to 45 - x=0 \\to x=45$ ，对应$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ : $y=4$ : 7，$x=11t$\n$$y=(\\frac{7}{4})x=(\\frac{7}{4}) \\times 11t=77t/4$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "第一样本误差 1 分钟，第二样本误差 2.2 分钟 误差大小与样本量成反比 第一样本误差更\n小 → 样本量更大 所以 第一样本包含更多烤箱"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 $f(x)=231(1.20)^(x/4)$\n$x$ 增加 8，指数增加 2，值变为 $1.20^{2}=1.44$ 倍 → 增加 $44\\%$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "“减少 $21\\%$” 意味着每增加 1 英寸，树木数量变为原来的 $79\\%$，即乘以 0.79。\n因此指数函数的底数 $b=0.79$，函数形式为 $f(x)=a \\cdot (0.79)^x$。\n已知当 $x=13$ 时，$f(13)=3100$，代入得 $3100=a \\cdot (0.79)^13$ 所以 $a=3100 / (0.79)^13$。\n计算 $(0.79)^13 \\approx 0.04667$，a $\\approx \\frac{3100}{0.04667} \\approx 66400 \\approx 66000$。\n因此函数为 $f(x)=66000 \\cdot (0.79)^x$。在选项中，底数为 0.79 且 a $\\approx 66000$ 对应选项 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因选项中斜率相同，可带一个点验证选项，如$t=250$ 时，$d \\approx 440$。(A$) d=-60.1+2.02 \\times$\n$250=-60.1+505=444.9$A 选项符合"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=a^x - b$，过 $(c, 11)$ 和 $(2c, 221)$\n$a^c - b=11$，$a^(2c) - b=221$\n相减：$a^(2c) - a^c=210$\n设 $u=a^c$，则 $u^{2} - u - 210=0 \\to u=15$ 或 $-14$（舍）\n$a^c=15$，则 $b=15 - 11=4$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "已知一角相等，一边成比例\n还需另一角相等可证相似\n$C$ 选项给出 $B=48^{\\circ}$，$R=76^{\\circ} \\to$ 可推出角$C=180-56-48=76$，故另一角相等"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将原方程化为标准形式：\n$$4x^{2} - px+(w+86)=0$$\n方程有一个实数解 ⇔ 判别式 $\\Delta=0$：\n$$\\Delta=p^{2} - 4 \\times 4 \\times (w+86)=p^{2} - 16(w+86)=0$$\n所以 $p^{2}=16(w+86)$\n$p$ 是整数 ⇒ $p^{2}$ 是完全平方数 ⇒ $16(w+86)$ 必须是完全平方数\n即 $w+86$ 必须是一个完全平方数（因为 16 已经是平方数）。\n检查每个选项：\n(A$) w=-22$\n⇒\n$$w+86=64=8^{2}$$\n✓\n$$(B) w=14$$\n⇒\n$$w+86=100=10^{2}$$\n✓\n\n$$(C) w=25$$\n⇒\n$$w+86=111$$\n，不是完全平方数 ✗\n\n$$(D) w=314$$\n⇒\n$$w+86=400=20^{2}$$\n✓\n因此 $w=25$ 时 $p^{2}$ 不是完全平方数，$p$ 无法取整数，不可能满足题意"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-4024e931e99441f2a7f01cdcf26f1a5c-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$(x+6)/5=(x+6)/13$$\n只有 $x+6=0$ 成立\n$x+6=0$ 介于 $-2$ 和 2 之间\n答案：$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

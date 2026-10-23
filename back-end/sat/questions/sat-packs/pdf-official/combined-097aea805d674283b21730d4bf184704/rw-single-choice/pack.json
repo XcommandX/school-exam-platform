@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-dc93a31f6a2443c292b415b25212826c-rw-single-choice",
+  "revision": 1,
+  "title": "2025年3月第4套阅读语法（只录新题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f42250c731afb7d2550a7b2e1db180c8724505232f3608eeef2ce29f4cd40a41",
+      "path": "assets/f42250c731afb7d2550a7b2e1db180c8724505232f3608eeef2ce29f4cd40a41.png",
+      "mediaType": "image/png",
+      "sha256": "f42250c731afb7d2550a7b2e1db180c8724505232f3608eeef2ce29f4cd40a41",
+      "byteLength": 38073,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dc93a31f6a2443c292b415b25212826c",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-3ec491f1ba7dd57fe8415fd5129ca6a2061eab9e6f179b8e180ef942c9c4d6d4",
+      "path": "assets/3ec491f1ba7dd57fe8415fd5129ca6a2061eab9e6f179b8e180ef942c9c4d6d4.png",
+      "mediaType": "image/png",
+      "sha256": "3ec491f1ba7dd57fe8415fd5129ca6a2061eab9e6f179b8e180ef942c9c4d6d4",
+      "byteLength": 14175,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dc93a31f6a2443c292b415b25212826c",
+        "sourceQuestionId": "m2-q3"
+      }
+    }
+  ]
+}

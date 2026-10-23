@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-576c166eef1d4a159208504ec619c342-math-single-choice",
+  "revision": 1,
+  "title": "2025年3月第3套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-b30f4da436f5c03e38ec9b0ec515707dd6d67b267ee1fe8e2b4bb152b4fe5b13",
+      "path": "assets/b30f4da436f5c03e38ec9b0ec515707dd6d67b267ee1fe8e2b4bb152b4fe5b13.png",
+      "mediaType": "image/png",
+      "sha256": "b30f4da436f5c03e38ec9b0ec515707dd6d67b267ee1fe8e2b4bb152b4fe5b13",
+      "byteLength": 40479,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-b4115800e7107d9c3cebc4fa61fa5e58626a441f1b375ef0c1814e9f9dc9fc67",
+      "path": "assets/b4115800e7107d9c3cebc4fa61fa5e58626a441f1b375ef0c1814e9f9dc9fc67.png",
+      "mediaType": "image/png",
+      "sha256": "b4115800e7107d9c3cebc4fa61fa5e58626a441f1b375ef0c1814e9f9dc9fc67",
+      "byteLength": 53894,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "asset-e6ae082e2b9f367b8cddaf42f661b0d8d46ec127215ae51187b28ce2bfe6c551",
+      "path": "assets/e6ae082e2b9f367b8cddaf42f661b0d8d46ec127215ae51187b28ce2bfe6c551.png",
+      "mediaType": "image/png",
+      "sha256": "e6ae082e2b9f367b8cddaf42f661b0d8d46ec127215ae51187b28ce2bfe6c551",
+      "byteLength": 5560,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-3a2ea804ac9e8672be18b0602df5dc6084af3e59418299a1a61f5767010c1fef",
+      "path": "assets/3a2ea804ac9e8672be18b0602df5dc6084af3e59418299a1a61f5767010c1fef.png",
+      "mediaType": "image/png",
+      "sha256": "3a2ea804ac9e8672be18b0602df5dc6084af3e59418299a1a61f5767010c1fef",
+      "byteLength": 6003,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-660ee55d883a67625a913e336439b2665076b2d954891cb585a2ac0b5cc300a0",
+      "path": "assets/660ee55d883a67625a913e336439b2665076b2d954891cb585a2ac0b5cc300a0.png",
+      "mediaType": "image/png",
+      "sha256": "660ee55d883a67625a913e336439b2665076b2d954891cb585a2ac0b5cc300a0",
+      "byteLength": 5695,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-df02ad7f0ea03db1acd9f915ae465f8414e1c7eeeb44997916a04628ca471f2b",
+      "path": "assets/df02ad7f0ea03db1acd9f915ae465f8414e1c7eeeb44997916a04628ca471f2b.png",
+      "mediaType": "image/png",
+      "sha256": "df02ad7f0ea03db1acd9f915ae465f8414e1c7eeeb44997916a04628ca471f2b",
+      "byteLength": 5934,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-faeff8838ba8f674f5f99dce3b00c761244277767487e0901afc94460ec08857",
+      "path": "assets/faeff8838ba8f674f5f99dce3b00c761244277767487e0901afc94460ec08857.png",
+      "mediaType": "image/png",
+      "sha256": "faeff8838ba8f674f5f99dce3b00c761244277767487e0901afc94460ec08857",
+      "byteLength": 37000,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "id": "asset-e39884f2b378dafb6ba5835c9a3ad23f0692326426ca05f819f8ef8f0415ff23",
+      "path": "assets/e39884f2b378dafb6ba5835c9a3ad23f0692326426ca05f819f8ef8f0415ff23.png",
+      "mediaType": "image/png",
+      "sha256": "e39884f2b378dafb6ba5835c9a3ad23f0692326426ca05f819f8ef8f0415ff23",
+      "byteLength": 6939,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-1cac2a1048a6c5ff4778cadc9073551e9e87982fd77751d4483adfcd504e7fc2",
+      "path": "assets/1cac2a1048a6c5ff4778cadc9073551e9e87982fd77751d4483adfcd504e7fc2.png",
+      "mediaType": "image/png",
+      "sha256": "1cac2a1048a6c5ff4778cadc9073551e9e87982fd77751d4483adfcd504e7fc2",
+      "byteLength": 6611,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-26c1b63fe26a67db8f05056bcc772faa115056ae9b2dda4431d6fa88d645042a",
+      "path": "assets/26c1b63fe26a67db8f05056bcc772faa115056ae9b2dda4431d6fa88d645042a.png",
+      "mediaType": "image/png",
+      "sha256": "26c1b63fe26a67db8f05056bcc772faa115056ae9b2dda4431d6fa88d645042a",
+      "byteLength": 6623,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-ede77ffb00b9559bc9298d74f5fc7966e070ae76fff1c80daf0984b2ad5b80b6",
+      "path": "assets/ede77ffb00b9559bc9298d74f5fc7966e070ae76fff1c80daf0984b2ad5b80b6.png",
+      "mediaType": "image/png",
+      "sha256": "ede77ffb00b9559bc9298d74f5fc7966e070ae76fff1c80daf0984b2ad5b80b6",
+      "byteLength": 6403,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-b353ec0ea581889982e62b14b5f6b6d883cb6d43b17ee239ca1b7c6917a4a05e",
+      "path": "assets/b353ec0ea581889982e62b14b5f6b6d883cb6d43b17ee239ca1b7c6917a4a05e.png",
+      "mediaType": "image/png",
+      "sha256": "b353ec0ea581889982e62b14b5f6b6d883cb6d43b17ee239ca1b7c6917a4a05e",
+      "byteLength": 51822,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "id": "asset-d7dda7ff8bd11305eeccea3908ab5f2e340a1d94c8faeec93cdc86a65b45c74b",
+      "path": "assets/d7dda7ff8bd11305eeccea3908ab5f2e340a1d94c8faeec93cdc86a65b45c74b.png",
+      "mediaType": "image/png",
+      "sha256": "d7dda7ff8bd11305eeccea3908ab5f2e340a1d94c8faeec93cdc86a65b45c74b",
+      "byteLength": 70503,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "id": "asset-385759d4754a2fab3d62bb40d576f4e4e8f2c098f96c4b985e6128b52c86a952",
+      "path": "assets/385759d4754a2fab3d62bb40d576f4e4e8f2c098f96c4b985e6128b52c86a952.png",
+      "mediaType": "image/png",
+      "sha256": "385759d4754a2fab3d62bb40d576f4e4e8f2c098f96c4b985e6128b52c86a952",
+      "byteLength": 79188,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "id": "asset-11b1a8877512330eca33c9ad8a496df7c538ce0c6f46816fe246ae7203bc0b4f",
+      "path": "assets/11b1a8877512330eca33c9ad8a496df7c538ce0c6f46816fe246ae7203bc0b4f.png",
+      "mediaType": "image/png",
+      "sha256": "11b1a8877512330eca33c9ad8a496df7c538ce0c6f46816fe246ae7203bc0b4f",
+      "byteLength": 29359,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-576c166eef1d4a159208504ec619c342",
+        "sourceQuestionId": "m2-q16"
+      }
+    }
+  ]
+}

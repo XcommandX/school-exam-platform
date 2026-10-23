@@ -1,0 +1,32 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-fffbdc6d52e749ca8d63a2f6e858f868-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$g(x)=16x+25=29$，求解可得$x=\\frac{1}{4}$，所以答案为$\\frac{1}{4}$ 或者0.25。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+        "sourceQuestionId": "m1-q2"
+      }
+    }
+  ]
+}

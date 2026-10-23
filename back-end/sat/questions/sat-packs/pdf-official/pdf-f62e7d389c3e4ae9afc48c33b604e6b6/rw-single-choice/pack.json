@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-f62e7d389c3e4ae9afc48c33b604e6b6-rw-single-choice",
+  "revision": 1,
+  "title": "2025年8月第5套阅读语法M2 （1-23题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-030f2101dea6ba61012c5ebf3cc7f3d9e88e5735b08bcc00509d92efd1b534b3",
+      "path": "assets/030f2101dea6ba61012c5ebf3cc7f3d9e88e5735b08bcc00509d92efd1b534b3.png",
+      "mediaType": "image/png",
+      "sha256": "030f2101dea6ba61012c5ebf3cc7f3d9e88e5735b08bcc00509d92efd1b534b3",
+      "byteLength": 30417,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f62e7d389c3e4ae9afc48c33b604e6b6",
+        "sourceQuestionId": "m2-q6"
+      }
+    }
+  ]
+}

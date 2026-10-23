@@ -197,6 +197,27 @@ def _read_sat_collection(collection, collection_id):
 
 def _sat_library_index(library_root):
     """Match stable catalog identities to real folders, including renamed folders."""
+    if isinstance(library_root, (tuple, list)):
+        # Default libraries remain independently authored catalogs. Merge only
+        # their checked metadata; never rewrite either catalog or its IDs.
+        available, indexed, errors, duplicates = False, {}, [], set()
+        for root in library_root:
+            try:
+                found, entries, failures = _sat_library_index(root)
+            except (OSError, ValueError, TypeError, KeyError):
+                errors.append({'collectionId': None, 'error': 'A configured SAT library catalog could not be read safely.'})
+                continue
+            available = available or found
+            errors.extend(failures)
+            for identity, entry in entries.items():
+                if identity in indexed or identity in duplicates:
+                    duplicates.add(identity)
+                    indexed.pop(identity, None)
+                else:
+                    indexed[identity] = entry
+        errors.extend({'collectionId': identity, 'error': 'Multiple SAT libraries claim this collection identity.'}
+                      for identity in sorted(duplicates))
+        return available, indexed, errors
     library_root = Path(library_root)
     catalog_path = _safe_local_path(library_root, 'catalog.json')
     if not catalog_path.exists():
@@ -575,9 +596,13 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     root = Path(root).resolve()
     private = Path(private_root).resolve() if private_root else root / 'local-data'
     configured_library = sat_library_root or os.environ.get('SAT_LIBRARY_ROOT')
-    library = Path(configured_library).expanduser() if configured_library else root / 'back-end/sat/questions/sat-packs/gengdu-offline'
-    if not library.is_absolute():
-        library = root / library
+    if configured_library:
+        library = Path(configured_library).expanduser()
+        if not library.is_absolute():
+            library = root / library
+    else:
+        library_base = root / 'back-end/sat/questions/sat-packs'
+        library = (library_base / 'gengdu-offline', library_base / 'pdf-official')
     banks = private / 'question-banks'
     for exam in EXAMS:
         folder = banks / exam
@@ -860,7 +885,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=REPOSITORY)
     parser.add_argument('--port', type=int, default=8888)
-    parser.add_argument('--sat-library-root', type=Path, help='SAT catalog folder; defaults to SAT_LIBRARY_ROOT or back-end/sat/questions/sat-packs/gengdu-offline.')
+    parser.add_argument('--sat-library-root', type=Path, help='Use only this SAT catalog folder; otherwise SAT_LIBRARY_ROOT or both repository gengdu-offline and pdf-official catalogs.')
     parser.add_argument('--open', action='store_true')
     args = parser.parse_args()
     prepare_toefl_preview(args.root)

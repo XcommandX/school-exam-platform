@@ -21,7 +21,8 @@
 - 安装依赖前检查现有配置和锁文件；使用项目实际选定的包管理器和运行时版本。
 - 使用跨平台命令或脚本，避免只在某一开发者电脑上有效的绝对路径。
 - 数据库结构变更应形成可重复执行或可按顺序应用的迁移，并配套匿名测试数据。
-- Git 默认只保存源码、配置样例和原创合成测试题；2026-10-23 用户另明确授权已复制到 `back-end/sat/questions/sat-packs/gengdu-offline/` 的 SAT 题库与必要图片作为可提交 GitHub 的共享副本，并让 Start Practice 与 Practice Builder 全库接口默认读取它。此例外只覆盖指定题库目录，不包括密钥、数据库导出、学生信息、答题数据、备份或其他真实来源资料；其余仍存于被忽略的 `local-data/`，不得 force-add 绕过忽略规则。目录中的 ZIP 及其校验文件作为重复打包产物仍忽略，`.DS_Store` 所有层级继续忽略。本次准备可提交文件不等于已经 commit、push 或部署。
+- Git 默认只保存源码、配置样例和原创合成测试题；2026-10-23 用户另明确授权已复制到 `back-end/sat/questions/sat-packs/gengdu-offline/` 的 SAT 题库与必要图片作为可提交 GitHub 的共享副本。Start Practice 与 Practice Builder 全库接口现默认合并该目录与并列的 `pdf-official/`；显式 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 仍只读取指定目录。耕读共享例外只覆盖指定题库目录，不包括密钥、数据库导出、学生信息、答题数据、备份或其他真实来源资料；其余仍存于被忽略的 `local-data/`，不得 force-add 绕过忽略规则。目录中的 ZIP 及其校验文件作为重复打包产物仍忽略，`.DS_Store` 所有层级继续忽略。准备可提交文件不等于已经 commit、push 或部署。
+- 2026-10-24 本轮用户授权将 `local-data/references/Reference Folders/真题库/更新到26年10月SAT最新真题题库+答案/` 中的 PDF 转换为 SAT 题包，并将 `back-end/sat/questions/sat-packs/pdf-official/` 中的题包与必要图片纳入本地 Git commit。该新增例外仅覆盖指定转换输出；原 PDF、抽取文本、截图、审阅产物、备份及个人数据仍留在忽略的 `local-data/`。本次没有授权 push、合入 `main` 或部署；转换、合并上架与验证规则见 `docs/sat-pdf-conversion.md`。
 - 每次提交均忽略所有层级的 `.DS_Store`；根目录 `.gitignore` 的 `.DS_Store` 规则递归生效，不得强制加入或上传这类本机文件。
 - 不把前端隐藏菜单当作访问控制。学生只能访问自己的答题记录，管理员权限由后端或数据库策略实施。
 - 当前候选免费服务还未选定或部署；新增持续产生费用的依赖时明确说明费用来源。

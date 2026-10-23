@@ -1,0 +1,86 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，总数44，去掉Pitcher(22 个)后，$\\frac{1}{11}$ 比例是infielder，所以infielder 有(44-\n$22)*(\\frac{1}{11})=2$，所以outfielder 有$20-2=18$ 个"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x(x+5)=36$，得到$x2+5x-36=0$，$(x+9)(x-4)=0$，正数解为$x=4$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-7/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次方程组无解，则slope 相等，$y$-intercept 不等（本题不需要确认这一步），\n$\\frac{5}{14}=5/-4p$，所以$p=\\frac{-7}{2}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q6"
+      }
+    }
+  ]
+}

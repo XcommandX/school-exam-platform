@@ -1,0 +1,330 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "28"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "infinitely many solutions 意味着等式两次完全相等，$6x+28=6x+k$，$k$ 取28"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "54/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "1mile=1,760 yards,19008yards 转换成mile，$\\frac{19008}{1760}=10.8$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "54/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数问题计算斜率，只需整理公式为标准形式$f(x)=(\\frac{19}{5})x+7x+\\frac{19}{5}=10.8x+\\frac{19}{5}$，斜率\n为10.8 or $\\frac{54}{5}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "248"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数应用问题，用文字和数字表述坐标，可知坐标为（61，1992）（217，2012）和\n（下，2016）通过前两个数据计算斜率为7.8，2016 的数据通过$217+4*7.8$ 获得248.2，然\n后取整数"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数方程组system of equations，将$y$ 消去得到$x2+4x+1.5+a=0$，system has no real\nsolutions 意味着$b2-4ac\\lt 0$,代入$42-4 1 (1.5+a)\\lt 0$\n∗∗\n，整理结果为$a\\gt 2.5$，$a$ is a positive integer\n所以least possible value of $a$ is 3"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "66/67",
+          "197/200"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Sin $R=TS/TR$，$TS$ 根据勾股定理计算得66，sinR=$\\frac{66}{67}($本题不要在意图片的实际尺寸，\nFigure not drawn to scale)"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "729"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意3,750 people attended the first webinar，其中$54\\%$ attended the second webinar，再\n其中$36\\%$ attended the third webinar，数学关系都是乘法，$3,750*54\\%*36\\%=729$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "22"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$13-5x$ 看作一个整体$t$，得到$-7t+3=-8t+25$，直接得到$t=22$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数问题，原式提取$5x$ 后得， $5 x ( x 2+21 x 2+108$\n) ，分解因式得$(x+9)(x+12)$,smallest possible value of $b$ 为9"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "32/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "solutions 方程解（三个解）为$\\frac{-8}{5}$，$\\pm 5k+8$，相乘得$\\frac{-8}{5}(-(5k+8))=40k+\\frac{64}{5}=64$,解此方程\n得$k=6.4$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "990"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，相似的两个cylinder 有对应成比例的半径和高，$VB/VA=64$，因为是三维图形\n所以体积比开三次方，$643=4$，说明$B$ 的半径和高都是A 的4 倍，根据A 半径=3，$V=72\\pi$\n得A 的高为8，所以$B$ 的半径和高分别为12 和32，代入表面积公式$2\\pi r^{2}+2\\pi rh$ 计算得，\n$$1056\\pi -66\\pi=990\\pi$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6c44658b4d8746ed94c1094d70bb3afa-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "290"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数，给出了顶点和另外一个点，利用二次函数顶点式并代入计算，顶点式为\n$f(x)=a(x+5)2-8$，再代入（$-6$，$-10$）得到$a$，$-10=a(-6+5)2-8$,得到$a=-2$，函数为\n$f(x)=-2(x+5)2-8$，最后再代入$x=0$ 得到$f(0)=-58$,也就是$a=-58$， $y=6\\cdot f(x)$的$y$-intercept 就是\n$b=6(-58)=-348$,positive difference between a and $b$ 为$348-58=290$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

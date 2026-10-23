@@ -1,0 +1,741 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$15 ( x 2 - 9 )=15 x 2 - 15 9=15 x 2 - 135$$\n∗\n，选\nA"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入$x=100$，计算得$f(100)=1200$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$\\{-10x+y=1310x+y=13$ ，可得$-10x+y=10x+y$，两边同时消去$y$，得到$-10x=10x$，即$20x=0$，\n解得$x=0$，将$x=0$ 带入$-10x+y=13$ 或$10x+y=13$，解出$y=13$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数图像向上平移3 个单位，那么$f(x)$变成$f(x)+3$，即 $( \\frac{1}{9} ) x+1+3$\n= $( \\frac{1}{9} ) x+4$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 是播种的番茄种子数量，$y$ 是发芽的种子数量。从图中看出$x$ 每增加100，$y$ 增加70，所\n以播种的种子每增加100，发芽的种子增加70，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)+8$ 的图像是将$f(x)$的图像向上平移8 个单位，所以斜率不变，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以$y$，得到 $x+11/y=z+6$。等式两边同时减去6，得到 $z=x+11/y-6$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(15)=0$ 意味着当$x=15$ 时，$f(x)=0$。$x$ 表示天数，$f(x)$表示剩余书的数量，所以15 天后，剩\n余0 本书，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "6a$-3+1=5a$，解出$a=2$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$360*40=14400$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由$x-38y=38$，解出 $y=\\frac{1}{38} x - 1$。所以直线$p$ 的斜率是$\\frac{1}{38}$。平行的直线有相同的斜\n率，选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以5 得到$|x-5|=2$，那么$x-5=2$ 或$x-5=-2$。因此$x=7$ 或3。解的和为10，选\n$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆$M$ 的圆心为$(5, 6)$，半径为2。因此圆$P$ 的圆心为$(5, 6)$，半径为4，选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察得四个选项的$x$ 值相同，所以带入选项中的$x$ 计算$y$ 的范围。因为$-4x-12\\lt y\\lt -6x-16$，\n所以当$x=-5$ 时，$8\\lt y\\lt 14$。选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$f(1.8)=0.65$，分别带入四个选项，只有A 成立。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由于三角形内角和为180 度，且三角形$ABC$ 为等腰三角形，所以$\\angle BAC=BCA=72$\n$$\\angle$$\n度。因\n为$AD$ 平分脚$BAC$，所以$\\angle BAD=DAC=36$\n$$\\angle$$\n度。因此三角形$BAD$ 是等腰三角形，即\n$BD=AD$。根据三角形$ADC$，得到$\\angle ADC=72$ 度。因此三角形$ADC$ 为等腰三角形，所以\n$AD=AC$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 表示1957 年之后的年数，所以$x=5$ 是1962 年。因此1962 年的人口是617，选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "令$x=0$，计算得$y=\\frac{1}{2}$。选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$BC$ 平行于$DE$，所以角$E$ 为$x$ 度。因为 $AD2+DE2=AE2$ ，解出$AD=172$。$\\tan x$=对\n边/邻边=$\\frac{172}{129}$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$(-3+18p)x=36$，当$-3+18p=0$ 时，无解，所以$p=\\frac{1}{6}$，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$z=114$，所以$\\angle EDC=66$ 度。因为$AB$ 平行于$CD$，所以$\\angle BAE=EDC=66$\n$$\\angle$$\n度。因为\n$y=118$，所以$\\angle ABE=62$ 度。因此$x=66+62=128$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$3x2+22=px+19$ 只有一个解，化简得 $3x2-px+3=0$ 只有一个解，所以 $\\Delta=(-p)2-4 3 3=0$\n⋅⋅\n。因\n为$p$ 是正数，所以$p=6$，带入得$3x2-6x+3=0$ 解出$x=1$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图中$JK$ 的长度为 $(7-(-2))2+(9-3)2=313$。设$JL$ 的长度为$x$，则$KL$ 的长度也为$x$，因此\n$2x+313=1113$，解出 $x=413$.选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图中的两个点$(0, 9)$和$(3, 0)$得斜率为$(0-9)/(3-0)=-3$. 因此$y=-3x+9$,即$y+3x=9$。等式两边同\n时乘以7 得到$7y+21x=63$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图中的两个点$(200, 10)$和$(700, 40)$得斜率为$(40-10)/(700-200)=0.06$。因此当$x$ 每增加\n100，$y$ 增加6，选$B$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "样本越大，误差越小，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数 $f(x)=(2x - 7)(2x+11)$ 是一个二次函数，图像开口向上，最小值在顶点处取得。将函\n数展开：$f(x)=4x^2+8x - 77$。顶点横坐标：$x=-b/(2$a$)=-8/(2\\times 4)=-1$。代入求最小值：\n$f(-1)=(2\\times (-1) - 7)(2\\times (-1)+11)=(-9)\\times 9=-81$ 因此，函数的最小值为 $-81$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "3 盎司芝士提供1 毫克维他命$B12$，所以$x$ 盎司芝士提供$x/3$ 毫克维他命。1.2 盎司金枪鱼\n提供1 毫克维他命，所以$y$ 盎司金枪鱼提供$y/1.2$ 毫克维他命。因此$x/3+y/1.2=2.1$，选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$5670x4-1120=5670(x4-\\frac{16}{81})=5670(x2-\\frac{4}{9})(x2+\\frac{4}{9})=70(9x2-4)(9x2+4)=70(3x-2)(3x+2)$$\n$(9x2+4)$,选 $B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据越集中，标准差越小；数据越分散，标准差越大。选项A 和$B$ 中数据分布范围是7 至\n11，且不同数据出现频率几乎相同。选项$C$ 数据分布范围是7 至11，但是7 和11 出现的\n频率较小，数据更集中于8，9，和10，因此标准差比选项A 和$B$ 小。选项$D$ 数据分布范\n围是8 至10，且9 出现的频率是25，因此数据最集中，标准差最小。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "1 米=3.28 英尺，1 平方米=10.7548 平方英尺。因此增长率为20.456 平方米每小时，等于\n0.34 平方米每分钟。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-85505b5ef7c04c7d9d46496a92b71605-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为抛物线的顶点为$(1, 3)$,设 $f ( x )=a ( x - 1 ) 2+3$。带入点$(2, 29)$，\n$29=a ( 2 - 1 ) 2+3$ ，解出$a=26$。因此 $f ( x )=26 ( x - 1 ) 2+3$。\n因此计算的$f(-2)-f(0)=208$,选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

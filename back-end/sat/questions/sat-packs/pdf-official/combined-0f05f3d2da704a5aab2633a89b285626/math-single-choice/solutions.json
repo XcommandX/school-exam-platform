@@ -1,0 +1,741 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：直接读图可发现，斜率为正，$y$-intercept 也为正，结合选项只有A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：简单的一次函数方程组system of equations，直接代入$x=8$ 得到$16-3y=4$，解得$y=4$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：直接完成方程计算即可，$28x=56$，$x=2$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：$x+3$ 看作整体设为$t$，原式写成$4t=3t+56$，$t=56$（注意问的不是$x$）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n$f(100)$就是$x=100$ 时的函数值，直接代入$x=100$ 得$f(100)=2+100=2+10=12$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：概率问题，总共三种结果，三个概率之和为1，所以概率$P(C)$等于$1-0.44$-\n$0.32=0.24$，总数为250，所以room $C$ 有$250*0.24=60$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：一次函数应用题，根据题意，12.4 为初始gasoline 的量，$-0.05$ 为斜率，在应用题中\n表示$m$ 每增加1 函数$g(m)$的变化值，本题问的是each mile 消耗的gasoline 就是斜率（不需\n要加负号，因为语言表达了消耗的意思 are used）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：题目中方程为标准圆方程，圆心在（4，$-3$）半径为4（16 开根号），问题只问了圆\n心故为（4，$-3$）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：指数函数中，3000 的意义一般在应用题中都是初始值initial 或初始状态值，所以为\n2008 年得初始值$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n转换成一次函数标准形式求slope，$y=4/9x-\\frac{5}{9}$,根据平行斜率相等得$r$ 斜率也为$\\frac{4}{9}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：根据题意，前三小时租金950 是固定不变的费用，之后每小时50，函数斜率50，\n意味着超过3 小时部分按50/小时计费，所以为$950+50(t-3)=1,100$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：二次函数应用问题，$y$-intercept 指的是$x=0$ 的函数值29，意义为初始值，题目的初\n始时间为the end of April 2013，故选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n球的体积公式可查得 $\\frac{4}{3} \\pi r 3$ ，半球hemisphere 体积 $\\frac{2}{3} \\pi r 3$ ，\n代入计算得到答案$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：二次函数应用问题，is kicked 表示刚踢走的时候就是$t=0$，代入$t=0$ 得到答案12"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n三角函数$\\cos$⁡$A=AB/AC$，根据$\\cos$⁡$A=\\frac{3}{5}$，及勾股定理得到三个边比例为3：4：5（经典三\n边组合）$AB$:$BC$:$AC=3$:4:5,结合$BC=260$ 计算得到$AB=195$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：decreased by $3.5\\%$表示的是每个周期变化率为（$1-3.5\\%$），故只有$D$ 正确（初始值\n6.29，时间段$2015-2005=10$ 也都符合）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：线性函数no solution 意味着斜率相等且$y$-intercept 不等，$AC$ 选项是干扰项因为两个\n式子$y$-intercept 也相等为重合无限个解，正确答案$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：直接计算合并同类相得$7x^{2}+9$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：可分别观察线性函数和二次函数图像，得到线性函数斜率3，二次函数$y$-intercept\n为$-6$，可得到正确答案$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：三角形内角和$180^{\\circ}$得到角$C=180-90-31=59^{\\circ}$，$59=k/2$ 得$k=118$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：一次函数应用问题，根据题目展示信息，可计算斜率为35，截距为6，函数为\n$p=35c+6$，整理式子于A 一致"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：整理式子可得$g(x)=80x-85$，$y=g(x)-5=80x-90$，$y$-intercept 为$x=0$ 的值为$-90$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：doubled every 29 minutes 表示的是每个周期$29\\min$ 变化率为2 倍，故只有A 正确\n（初始值18，时间周期$x/29$ 也符合题目信息）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：$y$-intercept 为$x=0$ 的值，代入得$y=-1-38=-39$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：统计，新数据621 明显小于图表中给出的所有数据，所以新加入数据和mean 平均\n值回下降，而median 的值，原始数据为第七个值724，加入621 后为第七八个数据平均值\n（都是724），所以median 不变"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：连续4 个奇数，第一个为$x$，后三个分别是$x+2$，$x+4$，$x+6$，代入题目表述的计算\n规则，14*（$x+6$）不大于第一第三个的和减23，故为$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n$7-x$ 看作一个整体$t$，得到$10+6t/5=4t/3$，直接得到$t=75$，$7-x=75$ 相当于$x-7=-75$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n二次函数顶点式$y=a(x-b)^{2}+c$,代入顶点（1,6）$y=a(x-1)^{2}+6$，再代入另外一点 $(2,34)$得到\n$34=a(2-1)^{2}+6$ 得到$a=28$，分别计算$f(-2)=258$，$f(0)=34$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：根据题意移除$60\\%$后剩余300，可设初始值$x$ 得到方程$x$（$1-60\\%$）=300 解得\n$x=750$，注意问题问的是移除了多少，所以是$750*60\\%=450$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n经典的二次函数方程组system of equations，将$y$ 消去得到$-2(x-12)^{2}=x-c$ 整理得标准形式，\n$2x2-47x+288-c=0$，system two distinct real solutions 意味着$b2-4ac\\gt 0$,整理结果为$c\\gt \\frac{95}{8}$ 故\n只有$D$（技巧解：若时间不够，计算来不及，观察二次函数开口向下，若想有两个交点，\n一次函数图像也要尽量靠下，也就是$c$ 越大越靠下，因为是$-c$，只有一个答案正确只能是\n$C$ 最大的17）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n等腰三角形三个边分别是2:1:1，所以$26+262$ 拆成26:132:132，斜边为26"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n注意数字、单位及数字关系（square 在单位转换时需要用平方，1 分钟=60 秒）， 10.7\n$m / s 2=10.7 60\\sec \\frac{2}{1}\\min 2 1$mile$/1609$meter = 23.9 miles per\n∗\n∗\nminute squared \\_"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

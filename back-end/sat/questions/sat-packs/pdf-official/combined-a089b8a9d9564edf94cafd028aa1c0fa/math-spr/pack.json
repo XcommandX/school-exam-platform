@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-8c9afef67de048b8bb7736c40ce69427-math-spr",
+  "revision": 1,
+  "title": "2024年12月第8套数学（只录M2，M1和第7套变体重复） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-2c3d0f6dd64400ef84441932c58c218266e669bcbd519a346a10381dae3a07ca",
+      "path": "assets/2c3d0f6dd64400ef84441932c58c218266e669bcbd519a346a10381dae3a07ca.png",
+      "mediaType": "image/png",
+      "sha256": "2c3d0f6dd64400ef84441932c58c218266e669bcbd519a346a10381dae3a07ca",
+      "byteLength": 38674,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q7"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

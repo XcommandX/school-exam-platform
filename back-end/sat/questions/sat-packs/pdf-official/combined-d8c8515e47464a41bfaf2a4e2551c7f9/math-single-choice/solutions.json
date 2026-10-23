@@ -1,0 +1,741 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直接去掉括号运算即可： $6 x y ( 2 x 2+5 y )=12 x 3 y$ +\n$$30 x y 2$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "提取式中三部分的公因式 $x 4$ 即可得 $x 4 ( 7 x 2 - 2 x$ +\n9 ) ，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，$y$ 是高度61，$x$ 是长度，为高度的三倍，$x=3y$，故选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "斜率为$-54$，得函数为$f(x)=-54x+b$，代入（0, 0）得到$b=0$，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直接代入$x=18$ 计算即可得， $g ( x )=\\frac{5}{9} 18 - \\frac{7}{9}=\\frac{83}{9}$\n∗\n，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "7 是$y$-intercept，$f(0)=7$，意思是0 年时（first measured），$f(x)$的值为7，注意这里first 不\n是指的first year，$f(1)$ 选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似三角形周长比就是边长比，故$TU$¯与$XY$¯的比例也是1: 3，所以长度为18,选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$7-8x$ 看作整体，整理式子可得$7-8x=17-2=15$，故选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$(x+33)2=x+33$，设$x+33$ 为$t$，$t2=t$ 解得$t=0$ or $t=1$，即$x=-33$ or $x=-32$，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据圆标准方程可得，圆心为（14, $k$），半径为6，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "该二次函数顶点vertex 为$(6.8, 740)$ 根据题意可知，$x$ 为时间，$y$ 为高度，故为6.8 秒时的高\n度为最大值740，故选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=0$ 即为与$x$ 轴交点，从图中可看出来有两个，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据圆标准方程可得，半径为2，圆$P$ 半径为4，写出标准圆方程式为： $( x - 3 ) 2$\n$+( y - 6 ) 2=4 2$ ，故选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据图像可知，$\\sin 58^{\\circ}=AB/14$,故$AB=14\\sin 58^{\\circ}$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察数据可发现，横坐标为等差数列，分布对称，所以mean 为8，setB 每个数字加17，\n所以mean 变为17，range 为最大值减最小值所以是12uF 不变，故选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据总数为700，其中$\\frac{2}{5}$ 是280，Orchid（100） 和 lily（180）累计正好是280，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Best fit line 为一条直线，根据图像观察，与$y$ 轴相交与约55 位置，set $B$ 数据为set A 减去\n11，故$y$-intercept 位置约为44 左右，故选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "去掉括号展开原式得：$8x+44-4x+10=-9+13x$，整理得到$9x=63$，$x=7$,$12x$=\n84 选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "注意单位，质量$308g$，体积28 立方厘米，密度=质量/体积=$\\frac{308}{28}=11$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "整理不等式得 $y \\lt \\frac{3}{7} x - 3$，满足不等式条件的区域是一次函数 $y=\\frac{3}{7} x - 3$ 下方，\n不包含第二象限，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察图中方格可知函数斜率为$-5$，$y$-intercept 为$-1$，图中函数式为$g(x)=-5x-1$，题中说此函\n数是$f(x)-9$ 得来得，在此基础上$+9$ 可得答案$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两个三角形，对应的一组角相等，一组角的临边 $G H$ ¯ 和 $L M$\n¯ 也相等，同时根据 $GH/GF=LM/LK$，得到 $G F$ ¯ 和 $L K$ ¯\n也相等，这一组边也是角$G$，$L$ 临边，属于全等三角形中$SAS$ 条件，故选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将第一个式子代入第二个式子解方程，可得$9x+27=8x-6$，解得$x=-33$，$y=-90$，$x-y=57$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "sinx=对/斜=$\\frac{63}{73}$ 选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f$（1）是常数，说明变化率的指数部分代入$x=1$ 后结果为1，即为$cx-1$ 的形式$c0=1$，代入\n后可得到常数，故选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$a\\gt 6$，所以$a/6\\gt 1$，该指数函数单调增加，其水平渐近线为$y=-b$，因为$b$ 大于0 所以渐近线\n在$x$ 轴下方，故与$x$ 轴有且只有一个交点（指数函数单调增加）选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "过 $( - 6 , 0 ) , ( 7 , 0 ) , ( 0 , 0 )$ 和 $( 4 , 0 )$这四个点，说明函数解为$-6$、7、0、\n4，也就是说（$x+6$）、（$x-7$）、$x$ 和（$x-4$）都是该函数的因式factor，其中只有$D$ 选项是\n$x$（$x-7$）与题目吻合，故选$D$（A 是（$x-6$）（$x+4$）不正确）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将原式通分（两侧乘以$20xyz$）得到$4z+20x2y2z2=5x$，整理得到$y2=5x-4z/20x2z2$，故选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程只有1 个解，意味着$k=0(K\\gt 0$ 有2 个解，$k\\lt 0$ 无解)，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，袋鼠从80 天长到160 天，增长了$676\\%$，80 天时重量$k$，所以160 天时重量为\n$(1+676\\%)k$，即为$7.76k$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数$f(x)=g(x)(x+3)$，先通过表格数据计算$f(-21)=2(-21+3)=-36$，$f(-9)=0$，通过这两个\n点可得$f(x)$斜率3，再代入点（$-9$, 0）得到函数标准形式$f(x)=3x+27$，故选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数应用题，注意语言表述\\$28 per person for the first 25 people ，即为前25 个人每人\n\\$28，超出25 人的部分按每人\\$17 计算，故得到 $f ( n )=17 ( n - 25 )+28 25$ =\n∗\n$$17 ( n - 25 )+28 25=17 n+275$$\n∗"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

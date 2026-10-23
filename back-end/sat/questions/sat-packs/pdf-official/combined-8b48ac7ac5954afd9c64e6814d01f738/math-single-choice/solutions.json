@@ -1,0 +1,787 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程两边同时加 9 得 $p/2=20$，两边再乘以 2 得 $p=40$，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "公平的 16 面骰子各面等可能，数字 2 只占 1 面，所以掷出 2 的概率为 $\\frac{1}{16}$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "表格中 $x$ 每增加 1，$f(x)$ 依次为 2000、400、80、16，即每次都除以 5，属于递减指数函数\n（如 $f(x)=2000\\times (\\frac{1}{5})^(x-1)$），故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数 $y=mx+b$ 中 $m$ 即斜率，$y=-(\\frac{4}{13})x+13$ 的斜率为 $\\frac{-4}{13}$，故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两条直线垂直时斜率互为负倒数，直线 $k$ 的斜率为 3，其负倒数为 $\\frac{-1}{3}$，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(15)=600$ 表示 $x=15$（即材料表面下 15 毫米）时，光束的预测强度为 600 个光子，故选\n$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形内角和为 $180^{\\circ}$：$36+90+k/2=180$，得 $k/2=54$，$k=108$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $g(0)=1$ 可排除 A、$B$；$g(1)=\\frac{1}{42}$ 排除 $C$（$42^{1}=42$）；$g(x)=(\\frac{1}{42})^x$ 满足全部数据（$x=-1$\n时为 42，$x=2$ 时为 $\\frac{1}{1764}$），故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "正方形面积等于边长的平方：$A=(8.89w)(8.89w)$，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$G$ 组 5 个数的中位数为第 3 个数 18；$H$ 组 4 个数的中位数为中间两数 18 与 18 的平均数\n18。两者相等，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两边平方得 $28=1/x$，所以 $x=\\frac{1}{28}$，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "移项得 $x^{2}-2x-10=0$，由求根公式 $x=[2\\pm \\sqrt{4+40}]/2=1\\pm \\sqrt{11}$，其中一个解为 $1+\\sqrt{11}$，故选\n$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "点 $(7,9)$ 在 $y=f(x)$ 的图像上，即 $x=7$ 时 $y=9$，所以 $f(7)=9$，故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "其余 4 个电阻的总阻值为 $80-60=20$ 欧姆，且每个电阻阻值为正，故任一电阻 $x$ 满足 0 故\n任一电阻 $x$ 满足 $0\\lt x\\lt 20$，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$B=47\\times (\\pi /282)=\\pi /6$ 弧度，$\\cos (\\pi /6)=\\sqrt{3}/2$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在直角三角形 $QRS$ 中，sinQ=对边/斜边=$RS/QS=49/QS$，解得 $QS=49$/sinQ，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "第 1 小时费用为 165 美元，之后 $(x-1)$ 小时每小时 95 美元，再加燃气费 $w$，总费用\n$y=165+95(x-1)+w$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "面积 $A=20,\\frac{640}{120}=172$ 平方英里，面积 $B=3,\\frac{870}{90}=43$ 平方英里，$\\frac{172}{43}=4$，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将两式相加：$(x+3y)+(5x+y)=18+3$，得 $6x+4y=21$，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "满足 $y\\ge (\\frac{3}{2})x$ 的区域在过 $(0,0)$、$(4,6)$ 的上升边界上方及左侧，满足 $y\\le 10-x$ 的区域在过\n$(0,10)$、$(10,0)$ 的下降边界下方及左侧，两者交集对应选项 $D$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入 $f(a)=3a-7$，由 $3a-7+1=2a$ 得 $3a-6=2a$，解得 $a=6$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由两点求斜率：$(\\frac{-1}{3}-\\frac{17}{3})/(6+12)=\\frac{-6}{18}=\\frac{-1}{3}$，代入 $f(6)=\\frac{-1}{3}$ 得截距 $\\frac{5}{3}$，故\n$f(x)=-(\\frac{1}{3})x+\\frac{5}{3}$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $a=b-33c$ 移项得 $33c=b-a$，故 $c=(b-a)/33=(-a+b)/33$，故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据点呈二次函数模式，用 $y=0.7x^{2}$ 拟合最合适（如 $x=38.2$ 时 $0.7\\times 38.2^{2}\\approx 1022$，接近\n1002）；加常数项 100 或系数为 7 的选项均明显偏大，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "马克笔占 $70\\%$ 且为 280 支，总数为 $\\frac{280}{0.7}=400$ 支；彩铅笔占 $30\\%$，即 $400\\times 0.3=120$ 支，\n故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$F$ 是 $x$ 的线性函数，斜率 $\\frac{9}{5}$，温度升高 $\\Delta F=(\\frac{9}{5})\\times 6.80=12.24$ 华氏度，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 截距即 $y=0$ 时的 $x$ 值，令 $(33-x)/(ax+b)=0$ 得 $33-x=0$，$x=33$，截距为 $(33,0)$，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两方程无解当且仅当对应直线平行且不重合。$D$ 中 $6x-10y=14$ 与 $-3x+5y=7$ 左边成比例\n（$\\times -2$）而右边不成比例（$-14\\ne 14$），两线平行无交点，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当 $-5\\le s\\le 5$ 时 $x^{2}-25\\le 0$ 且 $x+18\\gt 0$，故 $y=-(\\frac{1}{9})(x+18)(x^{2}-25)\\ge 0$，$t$ 不可能是负数，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "配方得 $(x-7)^{2}+(y+11)^{2}=196$，半径 $r=\\sqrt{196}=14$，直径=$2r=28$，故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=5(x+9)^{2}+1$，最小值为 1；$g(x)=f(x+8)=5(x+17)^{2}+1$，最小值仍为 1，故选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(14)/f(10)=20.52^(\\frac{14}{4}-\\frac{10}{4})=20.52$，即位置 14 的值是位置 10 的 20.52 倍，多出\n$(20.52-1)\\times 100\\%=1952\\%$，故选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由 $AB=AC$ 知 $\\angle B=C$\n$\\angle$，又 $\\angle BED=CFD$\n$$\\angle$$\n，故 $\\triangle BED$ 与 $\\triangle CDF$ 相似，$BE/CF=BD/DC$。\n$BD=(\\frac{3}{4})BC$，则 $DC=(\\frac{1}{4})BC$，$BD/DC=3$，所以 $CF=BE/3=\\frac{12}{3}=4$，故选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1aff2c9ac6b64e88b666705aca4ec9a7-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "提取公因式 $(x-8)$ 得 $(x-8)[y^{2}-9(x-8)^{2}]$，再用平方差公式分解为 $(x-8)(y-3x+24)$\n$(y+3x-24)$，其中 $y+3x-24$ 是其中一个因子，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

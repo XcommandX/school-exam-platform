@@ -1,0 +1,329 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "67"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直接代入$x=2$ 得$f$（2）=$4+2+61=67$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "斜率为5，过(0，$-35)$，可得到一次函数为$y=5x-35$，$x$-intercept 是$f(x)=0$，解得$x=7$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$K\\ne -6$，故可以约掉$k+6$，式子直接等于9，即为$c$ 的值。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "26"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意得方程为$x$（$x-15$）=286，解此二次方程得$x=26$ or $x=-11$，由于$x$ 为正数故只能\n为26"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "65"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$AC=CD$,且$\\angle ACD=108^{\\circ}$，等腰三角形两腰的角相等，所以$\\angle D=A=36^{\\circ}$\n$$\\angle$$\n，同时$\\angle x=D+B$\n$$\\angle$$\n$\\angle$，\n故$x=29+36=65$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "24"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "通过文字表述可得等式：$a=2800\\%c=28c$，且$c=0.25b$（即$b=4c$），a$-b=28c-4c=24c=wc$，故\n$$w=24$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "线$j$ 与$k$ 平行，故斜率相等，$j$、$k$ 的斜率为$\\frac{-4}{5}$，且$k$ 函数为 $24 x+r y=15$，即 $y$ = −\n$24/r x+15/r$，故 $- 24/r=- \\frac{4}{5}$，所以$r=30$，再代入（0, $b$）到$k$ 函数中，得到\n$$b=\\frac{1}{2}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入 $f ( 6 )=9 f ( 4 )$\n∗\n，得 $c 6=9 c 4$\n∗\n得到 $c 2=9$，由于$c$ 大\n于1 所以$c=3$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "11"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两个式子相减得$3x=384$，$x=128$，方程组的解为$(q, 19)$,所以$q=128$，代入（128, 19）到任\n意式子中计算$w$ 的值$(2 128-19w=47)$\n∗\n得到$w=11$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7/10"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，从red maple 中找siteA，red maple 总数50，其中的site A 为35，概率为\n$$\\frac{35}{50}=\\frac{7}{10}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "361"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意when the beaker was placed on the table 意味着$t=0$，代入$t=0$ 即可， $g ( t )$ =\n$$295+( 361 - 295 ) ( 2.72 ) 0=295+( 361 - 295 ) 1=361$$\n∗"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-c9db9162fc01417dbb8cc0e3ade1a397-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-1534"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$P$ 是$NQ$ 中点且$PQ=52$，所以直径$NP=52$，半径为26，$NQ=104$ 整个图形面积为长方形+一\n个半圆，总面积为$\\frac{1}{2}\\pi r2+NQ NS=338\\pi+1872$\n∗\n，所以$a=338$，$b=1872$，故a$-b=-1196$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q17"
+      }
+    }
+  ]
+}

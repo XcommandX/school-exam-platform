@@ -1,0 +1,718 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数 $f(x)=(\\frac{7}{15})x$ 的斜率即为 $x$ 的系数，因此斜率为 $\\frac{7}{15}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两边平方得 $(x - 6)=7^2=49$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "初始值为 190，每增加 1 个 $x$ 单位增长 $20\\%$，即乘以 $(1+20\\%)=1.20$，符合指数增长形式\n$y=190(1.20)^x$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "总频数为 25，中位数是第 13 个数据（$(25+1)/2=13$）。前两组频数合计 $8+6=14$，因此第\n13 个数据落在 $101-200$ 区间，选项中只有 158 在该区间内。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "抛物线顶点为 $(1.3, 27.04)$，标准顶点式 $h=a(t - 1.3)^2+27.04$，且落地时间为 2.6 秒（对\n称性），代入 $t=2.6$, $h=0$ 可得 $a=-16$，故 $h=-16(t - 1.3)^2+27.04$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "散点图中 $y$ 随 $x$ 增大而增大，斜率为正，排除 A、$C$。取两点估算：$x\\approx 2$ 时 $y\\approx -13$，$x\\approx 12$\n时 $y\\approx -3.5$，斜率约为 1，代入得截距约为 $-15$，因此 $y=x-15.4$ 最符合。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "逐项代入验证，只有 $(-3, 10)$ 同时满足 $y \\ge x+9$（$10 \\ge 6$）和 $y \\le -8x - 9$（$10 \\le 15$）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两图像交点需同时满足 $y=9$ 和 $y=-2x+7$，将 $y=9$ 代入得 $9=-2x+7$，解得 $-2x=2$，$x$ =\n$-1$，因此交点为 $(-1, 9)$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "提取公因式 10，得 $210x^2+80=10(21x^2+8)$，与选项 $B$ 一致。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 轴截距即 $y=0$ 时的 $x$ 值。令 $(28-x)/(ax+b)=0$，分子为零得 $28-x=0$，解得 $x=28$，因此截\n距为 $(28,0)$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图中虚线与 $y$ 轴交于正半轴（约 $y=6$），与 $x$ 轴交于正半轴（约 $x=1.5$），斜率为负，对\n应直线 $y=-4x+6$；阴影区域在直线上方，且为虚线表示严格不等式，因此为 $y\\gt -4x+6$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "棱锥体积公式为 $V=(\\frac{1}{3}) \\times$ 底面积 × 高，正方形底面积 = $3 \\times 3=9$，高为 12，所以 $V$ =\n$(\\frac{1}{3}) \\times 9 \\times 12=36$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "移项得 $x^{2}+22x+121=0$，因式分解为 $(x+11)^{2}=0$，因此 $x=-11$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆A 圆心为$(-2, 0)$，半径$r=3$。向下平移4 个单位后圆心为$(-2, -4)$，新半径变为$5\\times 3=15$，平\n方后为$225=(25)(9)$，因此方程为$(x+2)^2+(y+4)^2=225$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设反对人数为 $x$，则赞成人数为 $3x$。由题意得 $3x - x=12000$，解得 $x=6000$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形面积公式为 $(\\frac{1}{2}) \\times XY \\times XZ \\times \\sin X=(\\frac{1}{2}) \\times 28 \\times 19 \\times \\sin 55^{\\circ}=266 \\sin 55^{\\circ}$\n$$\\angle$$\n。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "线性函数 $f(0)=6$ 且 $f(7)=6$，说明函数值恒为6，斜率为0，故为常数函数 $f(x)=6$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入 $x=-12$ 到 $y \\lt -4x$ 得 $y \\lt 48$，结合 $y \\ge 45$，整数 $y$ 可取 45、46、47，共三个点，对应\n$C$ 表。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开得 $10x^{2}+25x+10 - 3x+18=10x^{2}+22x+28$，故 I 正确；$II$ 是展开的中间步骤（未合\n并同类项），也算等价表达式，所以 I 和 $II$ 都正确。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "弧$PQ$ 是半圆（因为$PQ$ 是直径），半圆弧长为52，则整圆周长 = $52 \\times 2=104$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "总人口为 30000，$70\\%$ 的估计值为 21000，但选项中没有 21000。有 $1.6\\%$ 的误差，即真实\n比例可能在 $70\\% - 1.6\\%=68.4\\%$ 到 $70\\%+1.6\\%=71.6\\%$ 之间，对应人数在 $30000 \\times 68.4\\%$\n= 20520 到 $30000 \\times 71.6\\%=21480$ 之间，只有 20760 落在这个区间内。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对于一元二次方程 $ax^{2}+bx+c=0$，两根之和为 $-b/a$。这里 $a=4$，$b=-6$，所以两根之和 =\n$-(-6)/4=\\frac{6}{4}=\\frac{3}{2}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "初始 $X$ 为 300，$Y$ 为 20。每增加 8 克 $X$ 就增加 16 克 $Y$，即 $Y$ 的增加量是 $X$ 增加量的 2\n倍。设增加量为 $t$，则 $x=300+8t$，$y=20+16t$。由 $x$ 得 $t=(x - 300)/8$，代入 $y$ 得 $y=20$ +\n$16\\cdot (x - 300)/8=20+2(x - 300)=2x - 580$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每年增长 $3.4\\%$，即乘以 $(1+3.4\\%)=1.034$，从 1990 到 2005 共 15 年，所以 2005 年数量 =\n$3.22 \\times (1.034)^15$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将 $w=19$ 代入第二个方程得 $1=(19 - 19)^\\frac{2}{25}+(p - 9)^\\frac{2}{49}$，即 $1=0+(p - 9)^\\frac{2}{49}$，所以\n$(p - 9)^2=49$，$p - 9=\\pm 7$，解得 $p=16$ 或 $p=2$。选项中只有 2 符合。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆柱半径 $r=22$，高 $h=2r=44$（内切球直径等于圆柱高）。圆柱表面积 = $2\\pi r^{2}+2\\pi rh$ =\n$2\\pi (22)^{2}+2\\pi (22)(44)=968\\pi+1936\\pi=2904\\pi$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(t)$ 表示 $t$ 分钟后的泡沫高度，因此 $f(0.40) \\approx 3.7$ 表示在 0.40 分钟时，预测泡沫高度约为\n3.7 厘米。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开得 $9x^{2}+63x - r=0$，判别式 $\\Delta=63^{2} - 4 \\times 9 \\times (-r)=3969+36r$。因为 $r \\gt 0$，所以 $\\Delta \\gt 0$\n恒成立，因此方程必有两个不相等的实数解"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形 $RST$ 中，$RS=280$，$ST=96$，$TR=296$，且 $280^{2}+96^{2}=78400+9216=87616$ =\n$296^{2}$，所以斜边为 $TR=296$。角 $T$ 的对边为 $RS=280$，邻边为 $ST=96$，所以 $\\tan T$ = 对\n边/邻边 = $\\frac{280}{96}=\\frac{35}{12}$。由于三角形 $RST$ 相似于 $UVW$，且 $T$ 对应 $W$，所以 $\\tan W=\\tan$\n$T=\\frac{35}{12}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由零点 $x=9$ 和 $x=-5$，可设 $f(x)=a(x - 9)(x+5)=ax^{2} - 4ax - 45$a，所以 $b=-4$a，$c=-45$a。\n$a+b=a - 4a=-3$a。a 为大于1 的整数，所以 $-3$a 为小于 $-3$ 的3 的倍数，选项中只有 $-6$ 符\n合（当 $a=2$ 时，$a+b=-6$）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设初始质量均为 $m$。化学A 增加$2200\\%$后变为 $m \\times (1+2200\\%)=m \\times 23=23m$。化学$B$ 增\n加$330\\%$后变为 $m \\times (1+330\\%)=m \\times 4.3=4.3m$。A 是$B$ 的倍数 = $23m / 4.3m \\approx 5.35$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

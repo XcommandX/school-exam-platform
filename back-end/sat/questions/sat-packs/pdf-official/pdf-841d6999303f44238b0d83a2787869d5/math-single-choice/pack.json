@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-841d6999303f44238b0d83a2787869d5-math-single-choice",
+  "revision": 1,
+  "title": "2025年9月第5套数学去重版（M1全+M2部分题） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-17cc9dd4c744a4626517a7a23d3afdde813ad1b10366401bc3a8c621e8f9963c",
+      "path": "assets/17cc9dd4c744a4626517a7a23d3afdde813ad1b10366401bc3a8c621e8f9963c.png",
+      "mediaType": "image/png",
+      "sha256": "17cc9dd4c744a4626517a7a23d3afdde813ad1b10366401bc3a8c621e8f9963c",
+      "byteLength": 12319,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-1cef9e84dd1b20f33b7950dab607ef669b5f966fe10de7f991a24359a7ffdfa0",
+      "path": "assets/1cef9e84dd1b20f33b7950dab607ef669b5f966fe10de7f991a24359a7ffdfa0.png",
+      "mediaType": "image/png",
+      "sha256": "1cef9e84dd1b20f33b7950dab607ef669b5f966fe10de7f991a24359a7ffdfa0",
+      "byteLength": 19535,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q13"
+      }
+    }
+  ]
+}

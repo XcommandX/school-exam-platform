@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c076afb088c845b7b36d566593580694-rw-single-choice",
+  "revision": 1,
+  "title": "2025年9月第2套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-9e0586faaae5d7d90c5dd5192b465067cf1351db4a6f9d1e7cca534af8758798",
+      "path": "assets/9e0586faaae5d7d90c5dd5192b465067cf1351db4a6f9d1e7cca534af8758798.png",
+      "mediaType": "image/png",
+      "sha256": "9e0586faaae5d7d90c5dd5192b465067cf1351db4a6f9d1e7cca534af8758798",
+      "byteLength": 27281,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c076afb088c845b7b36d566593580694",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-766776a139514f084bf208c00cf78ae5b371545265d294262cc1c84726944424",
+      "path": "assets/766776a139514f084bf208c00cf78ae5b371545265d294262cc1c84726944424.png",
+      "mediaType": "image/png",
+      "sha256": "766776a139514f084bf208c00cf78ae5b371545265d294262cc1c84726944424",
+      "byteLength": 27965,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c076afb088c845b7b36d566593580694",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "id": "asset-d70993f2c3cab6d8ed2e1c6a0ccbfbaffc1cb74483639dd54ad5884a44e78a46",
+      "path": "assets/d70993f2c3cab6d8ed2e1c6a0ccbfbaffc1cb74483639dd54ad5884a44e78a46.png",
+      "mediaType": "image/png",
+      "sha256": "d70993f2c3cab6d8ed2e1c6a0ccbfbaffc1cb74483639dd54ad5884a44e78a46",
+      "byteLength": 27354,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c076afb088c845b7b36d566593580694",
+        "sourceQuestionId": "m2-q1"
+      }
+    }
+  ]
+}

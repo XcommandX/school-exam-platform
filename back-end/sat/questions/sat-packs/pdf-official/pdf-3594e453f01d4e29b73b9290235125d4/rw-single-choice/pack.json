@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-3594e453f01d4e29b73b9290235125d4-rw-single-choice",
+  "revision": 1,
+  "title": "2025年8月第4套阅读语法（M1和M2合并版，重题较多） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-5285c74f7b4b8cc14b38fe6bff7241f9e52d9071526d44c3120701fa5eebc933",
+      "path": "assets/5285c74f7b4b8cc14b38fe6bff7241f9e52d9071526d44c3120701fa5eebc933.png",
+      "mediaType": "image/png",
+      "sha256": "5285c74f7b4b8cc14b38fe6bff7241f9e52d9071526d44c3120701fa5eebc933",
+      "byteLength": 22643,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3594e453f01d4e29b73b9290235125d4",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-bddaaf411da296a9c14a6260b71c60b472101fce7f35daeb9a569e6888ea41e9",
+      "path": "assets/bddaaf411da296a9c14a6260b71c60b472101fce7f35daeb9a569e6888ea41e9.png",
+      "mediaType": "image/png",
+      "sha256": "bddaaf411da296a9c14a6260b71c60b472101fce7f35daeb9a569e6888ea41e9",
+      "byteLength": 41000,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3594e453f01d4e29b73b9290235125d4",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "id": "asset-7ff4ed91f6228c976e752766c2021178a36f0fb7ce163151226941f93756c5a4",
+      "path": "assets/7ff4ed91f6228c976e752766c2021178a36f0fb7ce163151226941f93756c5a4.png",
+      "mediaType": "image/png",
+      "sha256": "7ff4ed91f6228c976e752766c2021178a36f0fb7ce163151226941f93756c5a4",
+      "byteLength": 41615,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3594e453f01d4e29b73b9290235125d4",
+        "sourceQuestionId": "m2-q9"
+      }
+    }
+  ]
+}

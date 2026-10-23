@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-2f88ecf50fcb4001b4736803ad6ac70e-math-spr",
+  "revision": 1,
+  "title": "Bluebook  Practice 7 数学(Routing+Hard) · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f9250d963984cd20b6e7ff3711e7451cc8d34e68dfce8011399004f31a9e0ff1",
+      "path": "assets/f9250d963984cd20b6e7ff3711e7451cc8d34e68dfce8011399004f31a9e0ff1.png",
+      "mediaType": "image/png",
+      "sha256": "f9250d963984cd20b6e7ff3711e7451cc8d34e68dfce8011399004f31a9e0ff1",
+      "byteLength": 32014,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2f88ecf50fcb4001b4736803ad6ac70e",
+        "sourceQuestionId": "m1-q15"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

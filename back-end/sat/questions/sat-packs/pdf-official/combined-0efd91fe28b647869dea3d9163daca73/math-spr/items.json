@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-8fa4fe80c3a5fc5f9e38337d2a5109614d098cb5f33722f623468792abe3469d",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "A store owner recorded the number of units of a certain product that were sold per day for 28\ndays. What is the minimum number of units of this product sold per day for these 28 days?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-3e09ee6a0f43d3e2006816d6422b9490e03eb0806d2a8e9f9b824cfe98a9da77",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn the figure shown, line $r$ is parallel to line $s$, and both lines are intersected by line $t$.\nIf $x=2w+24$, $y=5w+29$, and $7w=a$, where $a$ is a constant, what is the value of $a$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$f(x)=x+4$$\n$$g(x)=3x2-rx+48$$\nThe functions $f$ and $g$ are given. In function $g$, $r$ is a constant. If $f(x) g(x)=3x3+192$, what is the\n⋅\nvalue of $r$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Lines $h$ and $k$ are graphed in the $xy$-plane. The graph of line $h$ has a slope of $\\frac{5}{3}$ and an $x$-intercept\nat $(17, 0)$. Line $k$ is the result of translating the graph of line $h$ down 4 units. What is the $y$-\ncoordinate of the $y$-intercept of the graph of line $k$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "sat:item:pdf-cfc4aa764ac342108a676897b653c484-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$34Z14+bz7+70$$\nIn the given expression, $b$ is a positive integer. If $qz7+r$ is a factor of the expression, where $q$ and\n$r$ are positive integers, what is the greatest possible value of $b$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q20"
+      }
+    }
+  ]
+}

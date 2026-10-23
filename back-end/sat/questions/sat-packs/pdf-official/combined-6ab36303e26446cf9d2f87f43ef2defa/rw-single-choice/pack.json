@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-3196fb60f9504d74bef4f33328df9dd6-rw-single-choice",
+  "revision": 1,
+  "title": "2024年5月第3套阅读语法（Only 21 questions） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-59ab842b15e4283f347db1660454be9fcc7d405a7e219cd75e12bec6196aa1ee",
+      "path": "assets/59ab842b15e4283f347db1660454be9fcc7d405a7e219cd75e12bec6196aa1ee.png",
+      "mediaType": "image/png",
+      "sha256": "59ab842b15e4283f347db1660454be9fcc7d405a7e219cd75e12bec6196aa1ee",
+      "byteLength": 25166,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3196fb60f9504d74bef4f33328df9dd6",
+        "sourceQuestionId": "m1-q2"
+      }
+    }
+  ]
+}

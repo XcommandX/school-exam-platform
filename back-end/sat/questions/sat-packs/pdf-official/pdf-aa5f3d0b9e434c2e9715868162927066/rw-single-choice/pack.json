@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-aa5f3d0b9e434c2e9715868162927066-rw-single-choice",
+  "revision": 1,
+  "title": "2024年3月第3套阅读语法 Module 1-版本2 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-73ffb738090fab4665ea301d9e48741a27f3026e71ee41f5d6cca2dbe1f27385",
+      "path": "assets/73ffb738090fab4665ea301d9e48741a27f3026e71ee41f5d6cca2dbe1f27385.png",
+      "mediaType": "image/png",
+      "sha256": "73ffb738090fab4665ea301d9e48741a27f3026e71ee41f5d6cca2dbe1f27385",
+      "byteLength": 55261,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-aa5f3d0b9e434c2e9715868162927066",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-5bd736fe9fe9057fb0d1dd19c2c8ff47552774d9f1de7fc4d7b2fb11a1bc77e3",
+      "path": "assets/5bd736fe9fe9057fb0d1dd19c2c8ff47552774d9f1de7fc4d7b2fb11a1bc77e3.png",
+      "mediaType": "image/png",
+      "sha256": "5bd736fe9fe9057fb0d1dd19c2c8ff47552774d9f1de7fc4d7b2fb11a1bc77e3",
+      "byteLength": 20238,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-aa5f3d0b9e434c2e9715868162927066",
+        "sourceQuestionId": "m1-q10"
+      }
+    }
+  ]
+}

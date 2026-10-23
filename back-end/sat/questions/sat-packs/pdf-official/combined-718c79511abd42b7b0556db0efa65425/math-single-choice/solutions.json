@@ -1,0 +1,764 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$50x+20=10(5x+2)=10*32=320$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查标准差，一组数据越集中（即组内数据越接近），标准差越小；一组数据越分散（即\n组内数据相差较大），标准差越大；根据这组概念，$D$ 选项的标准差最大，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$430*20\\%=86$，故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将选项代入检验可知答案为A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据散点图可以找到the line of best fit，根据这条线，当$x=4$ 时，$y$ 在6 和8 之间，选项中\n在这个范围内的是$C$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y$-intercept 表示$x=0$，把$x=0$ 代入函数求解可得答案为A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$l$ 平行于$k$，故$x+y=180$ 度，即$x=180-y$。因为$x\\gt 116$，所以$180-y\\gt 116$，求解可得$y\\lt 64$。\n所以答案为A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查韦达定理。两个图像相交，可以把图像表达式联立为方程组，消掉$y$ 可得\n$2x=x2-35$,，整理成标准一元二次方程为$x2-2x-35=0$，根据韦达定理$X1+X2=-b/a$ 可得该\n方程的两根之和为$-\\frac{-2}{1}=2$。故选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查box-plot，最左边代表minimum，即34，最右边代表maximum，即49；\nrange=maximum- minimum=$49-34=15$。故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角形的面积，（$\\frac{1}{2}$）$*10*h=150$，计算可得$h=30$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程$ax2+bx+c=0$ 的求根公式$x=-b\\pm b2-4ac/2a$，将该题的方程整理成标准式\n为$x2-2x-29=0$，把对应的数字代入求根公式计算可得$B$ 为正确答案。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=0$ 表示与$x$ 轴的交点，图像中曲线与$x$ 轴的交点为$x=4$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查绝对值，整理方程可得$|3x-30|=27$，约分得$|x-10|=9$，即$x-10=9$ 或者$x-10=-9$，求解可\n得两个解分别是19 和1，两根之和就是$19+1=20$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将line $h$ 的表达式整理成直线的标准式为 $y=- \\frac{5}{2} x+200$。垂直的两条直线的斜率相\n乘得$-1$，所以与line $h$ 垂直的line $j$ 的斜率是 $- 1 / ( - \\frac{5}{2} )=\\frac{2}{5}$，故选\n$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设长方形的长为$x$，那宽就是$2x-16$，面积就是$x(2x-16)=130$，求解该方程可得$x=13$，那宽\n度就是$2x-16=2*13-16=10$，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "9-inch 的数量为$n$，8-inch 的数量为$5n$，3-inch 的数量为4，总数量为100，即\n$n+5n+4=100$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每次比之前增长$120\\%$，所以底数是$1+120\\%=2.2$，所以答案是A 或者$D$。如果是每年增长\n$120\\%$的话，那表达式应该是$N=200(2.20)t$，但是现在是每四年增长$120\\%$，相对于每年增\n长$120\\%$来说，增长的速度减慢了，符合减慢的是$D$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查平行线中同位角相等，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "长方形的对角线（我们可以记作$c$）与长方形相邻的两条边（我们可以记作a 和$b$）形成了\n直角三角形，所以 a $2+b 2=c 2$ ，代入数字可得 a $2+9$\n$2=( 106 ) 2$ ,，求解可得$a=5$。那周长就是2*（$9+5$）=28，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "让每个括号内的式子等于0 可得方程的两个解为$\\frac{-6}{5}$ 和$\\frac{8}{5}$，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据第二个式子可得$y=8x$，代入第一个式子可得$65x2=3185$，又因为$x$ 小于0，所以求解\n可得$x=-7$，那$y=8x=-56$，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f ($ a $)=( a+11 ) / 5=- 15$，求解可得$a=-86$，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查二次函数顶点的解释，该函数的顶点是（8.9，12400），即8.9 秒时的高速是12400\n米。符合该描述的是$B$，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查两条直线的交点问题，当两条直线的slope 不同时，两条直线只有1 个交点。将等号\n左右两边的式子整理成直线的标准式可得$-ax+4a=-7x+28$，斜率不同的话就是-a 不等\n于$-7$，即a 不等于7，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据选项中用到的$\\angle Q$，待求的$QS$，还有已知的边长23 可知$\\sin$⁡$Q=23/QS$，求解可得\n$QS=23/\\sin$⁡$Q$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据图像，当$x=0$ 时，$y=-7$，即$50+k=-7$，求解可得$k=-8$，故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "需要找的是$w\\gt 2$，即2 周以后的表达式，故前两周的增长已经完成，那2 周以后还需要增\n长的数量是$3300-1800-120*2=1260$。后续每周增长180，那就是$y=1260-180$*（$w-2$）\n=$1620-180w$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意可得 $f ( n )=f ( n - 1 ) ( 1 - p \\% )$\n∗\n，代入函数表达式可得 56 ( 0.19\n∗\n\n$$) n=56 ( 0.19 ) n - 1 ( 1 - p \\% )$$\n∗\n∗\n，\n求解可得$p=81$，故答案为$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角形的三条边的边长的关系：两边之和大于第三边，两边之差小于第三边，故选\n$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 表示A 电阻的个数，那每个A 电阻的大小为$\\frac{1}{7}$，同理每个$B$ 电阻的大小为$\\frac{1}{9}$，两种电\n阻的的大小之差为$\\frac{1}{7} - \\frac{1}{9}=\\frac{2}{63}$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "如果两个相似图形的边长之比为1：a，那周长之比为1:a，面积之比为1:a2。代入题目中\n的数字可得$a2=\\frac{2640}{660}=4$，故$a=2$；故$n=220*2=440$，所以答案为$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设2004 年对应的数额为$x$，那2005 年就是$(1+12\\%)x=1.12x$，2006 年就是\n\n$$(1+6\\%) 1.12x=1.1872x$$\n∗\n。题目问的是2004 年是2006 年的多少倍，那就是$x/(1.1872x)$，计\n算可得答案为$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-fab4be97bd7a4c9090dfc10cc5890cb7-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查 a $2 - b 2=($ a\n$+b ) ( a - b ) , y 2 ( x$ −\n$9 ) - 36 ( x - 9 ) 3=( x$ −\n$$9 ) [ y 2 - 36 ( x - 9$$\n$$) 2 ]=( x - 9 ) [ y+6 ($$\n$x - 9 ) ] [ y - 6 ( x - 9 ) ]$ =\n$$( x - 3 ) ( y+6 x - 54 )$$\n$( y - 6 x+54 )$ ，故答案为$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

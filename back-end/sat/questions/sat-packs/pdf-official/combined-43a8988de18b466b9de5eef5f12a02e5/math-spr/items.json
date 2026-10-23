@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $h$ is defined by $h ( x )=a x+b$, where $a$ and $b$ are constants. If $h ( 3 )$ =\n21 and $h ( 5 )=25$, what is the value of $b$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An ice cube is floating in water. The portion of the ice cube below the water’$s$ surface has a\nvolume of 12.28 cubic centimeters and makes up $91.67 \\%$ of the total volume of the ice cube.\nWhat is the volume, in cubic centimeters, of the portion of the ice cube above the water’$s$\nsurface?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-97e412053d7fc71110f63524ae4d44f84ba0ee0a73de08d905ed6eaad30d4d6b",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The equation of the graph shown is $y=ax+b$, where $a$ and $b$ are constants. What is the value\nof $a-b$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "id": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m2-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A line intersects two parallel lines, forming four acute angles and four obtuse angles. The\nmeasure of one of the acute angles is $9 x - 650$ . The sum of the measures of one\n$$\\circ$$\nof the acute angles and three of the obtuse angles is $- 18 x+w$ . What is the\n$$\\circ$$\nvalue of $w$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m2-q20"
+      }
+    }
+  ]
+}
