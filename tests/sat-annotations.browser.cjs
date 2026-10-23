@@ -93,6 +93,7 @@ const server=http.createServer(async(req,res)=>{try{
   }
  });
  await page.locator('#options [data-option="1"]').focus();await page.keyboard.press('Space');await page.locator('#nextButton').click();await page.locator('#nextButton').click();
+ assert.equal(await page.getByRole('heading',{name:'Finish this practice module?',exact:true}).isVisible(),false);
  await page.locator('[data-action=attempt]').waitFor();
  const saved=await page.evaluate(id=>SATStorage.get('attempts',id),attemptId);assert.equal(saved.status,'completed');assert.equal(saved.correctCount,2);
  assert.ok(Object.values(saved.answers).some(a=>a.highlights.some(h=>h.note==='Prompt note')));

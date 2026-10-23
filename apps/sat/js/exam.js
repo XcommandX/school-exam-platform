@@ -93,7 +93,7 @@ async function finishAttempt({status,reason}){
   if(state.segmentStartedAt!==null)state.elapsedMs+=Math.max(0,now-state.segmentStartedAt);
   state.segmentStartedAt=null;state.phase='module_break';state.moduleResults??=[];
   state.moduleResults.push({moduleIndex:state.moduleIndex||0,reason,finishedAt:now});
-  closeNavigator();save();if(reason==='submitted')continueModule();else showModuleBreak();return;
+  closeNavigator();save();showModuleBreak();return;
  }
  clearInterval(timerHandle);commitQuestionTime();state.completed=true;
  if(status==='completed'){

@@ -484,8 +484,11 @@ def convert_document(document, output, *, collection_id=COLLECTION_ID, archive=N
             expected = 27 if section == "reading-writing" else 22
             require([number for number, ref in entries] == list(range(1, expected + 1)), "Missing/duplicate original module positions")
             modules.append({"section": section, "moduleNumber": module, "durationSeconds": 1920 if section == "reading-writing" else 2100,
-                            "items": [ref for number, ref in entries]})
-    assessment = {"title": title, "fullSAT": True, "breakDurationSeconds": 600, "modules": modules}
+                            "questionCount": len(entries), "items": [ref for number, ref in entries]})
+    assessment = {"title": title, "fullSAT": True, "breakDurationSeconds": 600, "questionCount": len(questions),
+                  "sections": [{"section": section, "moduleCount": 2,
+                                "questionCount": sum(len(module["items"]) for module in modules if module["section"] == section)}
+                               for section in ("reading-writing", "math")], "modules": modules}
     report["modules"] = [{"section": module["section"], "moduleNumber": module["moduleNumber"], "questionCount": len(module["items"]),
                             "durationSeconds": module["durationSeconds"]} for module in modules]
     report["packs"] = {name: {"questionCount": len(builder.items), "assetCount": len(builder.pack["assets"])} for name, builder in builders.items()}

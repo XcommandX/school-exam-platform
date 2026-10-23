@@ -29,6 +29,7 @@ async function fixtureFiles(){
   const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{channel:'chrome'})});
   const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),errors=[];
   const screenshotPaths=[];
+  let moduleOverCaptured=false;
   page.on('pageerror',error=>errors.push(error.message));
   const runtime=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('sat-reading-practice-v1')));
   const screenshot=async name=>{const file=path.join(os.tmpdir(),'sat-math-'+name+'.png');await page.screenshot({path:file});screenshotPaths.push(file);};
@@ -40,10 +41,23 @@ async function fixtureFiles(){
     await directionClose();
   };
   const finishModule=async()=>{
+    const before=await runtime(),hasNext=before.moduleIndex+1<before.activePractice.modules.length;
     if(await page.locator('#questionView').isVisible()){await page.locator('#navigatorToggle').click();await page.locator('#goReview').click();}
     await page.locator('#nextButton').click();
     assert.equal(await page.getByRole('heading',{name:'Finish this practice module?',exact:true}).isVisible(),false,'Check Your Work Next must not ask for another confirmation');
-    assert.equal(await page.locator('.module-over').count(),0,'manual Next moves directly to the next module or section break');
+    if(hasNext){
+      await page.locator('.module-over').waitFor();
+      assert.equal(await page.locator('.module-over h1').innerText(),'This Module Is Over');
+      const completed=await runtime();assert.equal(completed.phase,'module_break');assert.equal(completed.moduleIndex,before.moduleIndex);assert.equal(completed.segmentStartedAt,null);assert.equal(completed.questionEnterTimestamp,null);
+      if(!moduleOverCaptured){
+        await screenshot('module-over');moduleOverCaptured=true;
+        await page.reload();await page.evaluate(()=>SATApp.ready);await page.locator('.module-over').waitFor();
+        const restored=await runtime();assert.equal(restored.phase,'module_break');assert.equal(restored.moduleIndex,completed.moduleIndex);assert.equal(restored.elapsedMs,completed.elapsedMs);assert.equal(restored.moduleResults.length,completed.moduleResults.length,'reloading the module-end page must not settle a module twice');
+      }
+      await page.clock.fastForward(1900);
+      const continued=await runtime();assert.equal(continued.elapsedMs,completed.elapsedMs,'the module-end transition is excluded from answering time');assert.ok(['active','section_break'].includes(continued.phase));
+      assert.equal(await page.locator('.module-over').isVisible(),false);
+    }else assert.equal(await page.locator('.module-over').isVisible(),false,'the final module keeps the existing saving/completion flow');
   };
   const startMathAfterReady=async(capture=false)=>{
     await page.locator('.sat-math-ready').waitFor();
@@ -244,14 +258,14 @@ async function fixtureFiles(){
     await page.locator('#exitButton').click();await page.getByRole('menuitem',{name:'Save and Exit'}).click();await page.getByRole('button',{name:'Save and Exit',exact:true}).click();await page.locator(`[data-action=resume][data-id="${earlyAttempt}"]`).waitFor();
     const earlySaved=await page.evaluate(id=>SATStorage.get('attempts',id),earlyAttempt);assert.equal(earlySaved.status,'incomplete');assert.ok(earlySaved.elapsedMs-elapsedBeforeBreak>=5000&&earlySaved.elapsedMs-elapsedBeforeBreak<15000,'only the five active Math seconds are added, excluding the two-minute break');
 
-    // An automatic timeout retains the module-over transition, unlike manual Next.
+    // Automatic timeout and manual Next both retain the module-over transition.
     await begin([questionId('sat:item:synthetic-rw-purpose'),questionId('sat:item:synthetic-rw-table'),mc,roots,fraction],'Synthetic automatic module timeout',true);
     const timeoutDuration=(await runtime()).activePractice.modules[0].durationSeconds*1000;
-    await page.clock.fastForward(timeoutDuration+1);await page.locator('.module-over').waitFor();assert.match(await page.locator('.module-over h1').innerText(),/This Module Is Over/);assert.equal((await runtime()).phase,'module_break');
-    await page.clock.fastForward(1900);await directionClose();assert.equal((await runtime()).moduleIndex,1);assert.match(await page.locator('.section-info h1').innerText(),/Section 1, Module 2: Reading and Writing/);
+    await page.clock.fastForward(timeoutDuration+1);await page.locator('.module-over').waitFor();assert.match(await page.locator('.module-over h1').innerText(),/This Module Is Over/);assert.equal((await runtime()).phase,'module_break');const timeoutElapsed=(await runtime()).elapsedMs;
+    await page.clock.fastForward(1900);await directionClose();assert.equal((await runtime()).moduleIndex,1);assert.equal((await runtime()).elapsedMs,timeoutElapsed);assert.match(await page.locator('.section-info h1').innerText(),/Section 1, Module 2: Reading and Writing/);
 
     const unsupported=await browser.newContext();await unsupported.addInitScript(()=>Object.defineProperty(navigator,'getBattery',{configurable:true,value:undefined}));const unsupportedPage=await unsupported.newPage();await unsupportedPage.goto(url);await unsupportedPage.evaluate(()=>SATApp.ready);assert.equal(await unsupportedPage.locator('#examBattery .sat-battery-status').getAttribute('aria-label'),'Battery status unavailable');assert.equal(await unsupportedPage.locator('#examBattery .sat-battery-percent').innerText(),'');await unsupported.close();
     assert.deepEqual(errors,[]);
-    process.stdout.write('SAT math browser regression passed: package import, Math layout/tools, SPR save/resume/grading/wrong book/review, original-size plain Reading images in exam/narrow screen/review, Full SAT module flow, fixed 10-minute break with reload/zero/early resume and separate answering time, battery states.\n'+screenshotPaths.join('\n')+'\n');
+    process.stdout.write('SAT math browser regression passed: package import, Math layout/tools, SPR save/resume/grading/wrong book/review, original-size plain Reading images in exam/narrow screen/review, manual Next without confirmation plus recoverable module-end transitions, Full SAT fixed 10-minute break with reload/zero/early resume and separate answering time, battery states.\n'+screenshotPaths.join('\n')+'\n');
   }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});
