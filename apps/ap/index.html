@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>AP Language and Composition · Study Space</title>
+  <link rel="stylesheet" href="/web/styles.css">
+  <link rel="stylesheet" href="/ap/styles.css">
+  <script src="/ap/ap-model.js" defer></script>
+  <script src="/ap/app.js" defer></script>
+</head>
+<body class="ap-app">
+  <a class="skip-link" href="#ap-main">跳转到内容</a>
+  <header class="site-header ap-header">
+    <a class="brand" href="/" aria-label="Study Space 首页">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 10v17M9.5 12h3M9.5 16h3M20 16l1.8 1.8L25 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-type">Study Space</span>
+    </a>
+    <a class="ap-button ap-home-link" href="/">← Study Space</a>
+  </header>
+  <main id="ap-main" class="ap-shell" tabindex="-1">
+    <div class="ap-heading"><h1>AP Language and Composition</h1></div>
+    <div id="ap-storage-notice" class="ap-notice ap-notice--warning" role="alert" hidden></div>
+    <div id="ap-notice" class="ap-notice" role="status" hidden></div>
+    <nav id="ap-nav" class="ap-nav" aria-label="AP 功能">
+      <button type="button" class="ap-nav-button" data-view="catalog" aria-current="page">题库</button>
+      <button type="button" class="ap-nav-button" data-view="drafts">草稿</button>
+      <button type="button" class="ap-nav-button" data-view="wrong">错题本</button>
+      <button type="button" class="ap-nav-button" data-view="history">练习记录</button>
+    </nav>
+    <div id="ap-content" aria-busy="true"><section class="ap-panel ap-empty" role="status">正在载入题库…</section></div>
+    <noscript><p class="ap-notice ap-notice--warning">AP 练习需要启用 JavaScript。<a href="/">返回 Study Space</a></p></noscript>
+  </main>
+  <dialog id="ap-dialog" class="ap-dialog" aria-labelledby="ap-dialog-title">
+    <h2 id="ap-dialog-title"></h2>
+    <div id="ap-dialog-content"></div>
+    <div id="ap-dialog-actions" class="ap-actions"></div>
+  </dialog>
+</body>
+</html>

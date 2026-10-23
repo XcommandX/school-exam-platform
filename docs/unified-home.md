@@ -27,7 +27,7 @@ node scripts/build.mjs
 - 右上头像显示 `admin` 本机测试身份，无需输入密码。这不是正式登录或管理员授权；`/api/auth/session` 明确返回 `authenticated: false`、`loginEnabled: false`。
 - 学习计划可保存每日题目目标及个人计划；今日摘要显示新平台已完成题目数与每日目标。目标设置支持新 TOEFL 四科 1–6 分、每 0.5 分一档，目标总分为四科均值取最近的 0.5 分；SAT 两科各 200–800 分、每 10 分一档。目标提示支持鼠标悬浮和键盘聚焦，可查看具体分科目标。
 - 成绩报告和练习记录读取当前浏览器的新平台记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率。
-- AP 与跨考试 Personal Vocab 通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
+- AP 页脚入口进入 `/ap/` 的 Language and Composition 本机练习，支持私有 PDF 题库与独立原创示例，详见 [AP 接入](ap-language.md)。跨考试 Personal Vocab 仍通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
 
 ### 文案与后续交接约定
 
@@ -67,17 +67,17 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/
 
 ## 数据边界
 
-源码在 `apps/web/`、`apps/sat/`、`apps/toefl/`、`shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
+源码在 `apps/web/`、`apps/sat/`、`apps/toefl/`、`apps/ap/`、`shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；AP 使用独立的 [v2 Language 扩展](ap-language.md)，并非把所有考试升级为 v2。TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或 AP v2 文档。
 
-真实题库在 `private-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `private-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
+真实题库在 `private-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `private-data/question-assets/<exam>/`。AP 原卷 PDF 同样在 `private-data/question-assets/ap/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅通过明确的题库接口、图片路由和 AP PDF 引用白名单读取它们，不将仓库根目录作为静态网站公开。
 
-本次本地迁移仅保留原 SAT 题目及其标准答案、解析、格式、模块信息与必要图片。逐字段白名单去除已选答案、学生信息和任意个人元数据；不复制 HAR、PDF、OCR 模型、备份、个人练习或浏览器记录。原始目录不修改。带个人练习含义的来源名称改为中性补充题集名称，题目内容保留。
+SAT 的本地迁移仅保留原 SAT 题目及其标准答案、解析、格式、模块信息与必要图片。逐字段白名单去除已选答案、学生信息和任意个人元数据；不复制 HAR、PDF、OCR 模型、备份、个人练习或浏览器记录。原始目录不修改。带个人练习含义的来源名称改为中性补充题集名称，题目内容保留。
 
 此前在维护者本机完成的 SAT 迁移为 18 个题集、929 道题和 36 张必要图片：原题库目录 901 道、原型内置种子 27 道、独立示例 1 道。与题库重复的 4 道示例不再次导入。这是本机迁移记录，不是克隆仓库即包含的题库；服务启动不会重新迁移原项目。
 
 统一 SAT 使用 IndexedDB `SchoolExamPlatform:sat:v1`，考试运行状态使用 localStorage `school-exam-platform:sat:runtime:v1`；独立 SAT 页面保留旧存储名。统一 TOEFL 将原应用的历史、草稿、词汇、学习记录和界面设置映射至 `school-exam-platform:toefl:*`，录音库映射至 `SchoolExamPlatform:toefl:recordings:v1`。
 
-首页计划与目标分别保存在 `school-exam-platform:home:plan:v1`、`school-exam-platform:home:targets:v1`。首页只读取上述新 SAT、TOEFL 空间来统计练习，不读取、复制或清理原应用的旧记录；不迁移原模板硬编码的统计数字。同一浏览器里的 `admin` 仍共享本地存储，不能当作账号隔离或云端同步。
+首页计划与目标分别保存在 `school-exam-platform:home:plan:v1`、`school-exam-platform:home:targets:v1`。首页只读取上述新 SAT、TOEFL 空间及 `school-exam-platform:ap:history:v1` 的私有完成记录来统计练习（AP 原创示例不计入），不读取、复制或清理原应用的旧记录；不迁移原模板硬编码的统计数字。同一浏览器里的 `admin` 仍共享本地存储，不能当作账号隔离或云端同步。
 
 `.DS_Store` 由根目录忽略规则覆盖所有层级；生成的 `dist/`、真实题库与个人数据均不应提交。
 
@@ -107,8 +107,11 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 | `POST /api/question-bank` | 校验、过滤个人字段并保存 SAT JSON |
 | `/sat/` | 进入旧 SAT 引擎，支持首页功能入口参数 |
 | `/toefl/` | 仅服务通过匿名标记检查的预览文件及资源白名单 |
+| `/ap/` | AP Language 题库与练习；`?view=history` / `wrong` / `drafts` |
+| `GET /api/ap/example` | 原创合成 AP v2 示例，不计入真实题库 |
+| `GET/HEAD /question-assets/ap/<sha256>.pdf` | 仅有效 AP v2 题组引用的本机 PDF，支持单段 Range |
 
-`exam` 为 `sat`、`ap`、`toefl` 或 `vocab`。公共 v1 题库格式当前仅支持选择题；TOEFL 原模块虽有媒体和开放式题型源码，其匿名应用并未使公共格式自动具备这些能力。正式账号、权限与记录接口仍待实现。
+`exam` 为 `sat`、`ap`、`toefl` 或 `vocab`。SAT 等的公共 v1 题库格式当前仅支持选择题；AP 独立 v2 支持选择题、FRQ 和文档参考，AP 列表/题组接口返回 v2，不改变 SAT API；TOEFL 原模块虽有媒体和开放式题型源码，其匿名应用并未使公共格式自动具备这些能力。正式账号、权限与记录接口仍待实现。
 
 本机服务仅绑定 `127.0.0.1`。写入需匹配 Host、Origin 和随机令牌；这不是正式身份验证。未来公开部署需要替换认证、授权、资源和记录服务。
 
@@ -117,6 +120,7 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 ```sh
 python3 -m unittest discover -s tests -v
 node tests/home-model.test.cjs
+node tests/ap-model.test.cjs
 ```
 
 TOEFL 模块检查在 `apps/toefl/` 内执行：

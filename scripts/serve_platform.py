@@ -10,6 +10,7 @@ import json
 import mimetypes
 import os
 from pathlib import Path
+import re
 import secrets
 import shutil
 import subprocess
@@ -23,8 +24,10 @@ import webbrowser
 REPOSITORY = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPOSITORY))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
+from shared.ap_schema import AP_ASSET_RE, summarize_ap_set, validate_ap_set
 
 MAX_BYTES = 20 * 1024 * 1024
+AP_PUBLIC_FILES = frozenset({'index.html', 'styles.css', 'ap-model.js', 'app.js'})
 EXAMS = {'sat': 'SAT', 'ap': 'AP', 'toefl': 'TOEFL', 'vocab': 'Personal Vocab'}
 TOEFL_PUBLIC_FILES = frozenset({
     'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js',
@@ -89,24 +92,49 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                'user': {'id': 'local-test-admin', 'name': 'admin', 'displayName': 'admin',
                         'role': 'admin', 'isTest': True}}
 
+    # Parse large AP text sets once per changed bank, not for every PDF request.
+    bank_cache = {}
+    bank_lock = threading.Lock()
+
     def read_sets(exam):
-        found, errors = [], []
-        for path in sorted((banks / exam).glob('*.json')):
-            if path.is_symlink() or not path.is_file():
-                continue
-            try:
-                if path.stat().st_size > MAX_BYTES:
-                    raise ValueError('Question set exceeds 20 MB.')
-                document = json.loads(path.read_text(encoding='utf-8'))
-                validate_question_set(document)
-                if document['exam'] != exam:
-                    raise ValueError('Question set belongs to a different exam.')
-                found.append((path, document))
-            except (OSError, ValueError, KeyError, TypeError) as error:
-                errors.append({'file': path.name, 'error': str(error)})
-        return found, errors
+        folder = banks / exam
+        if folder.is_symlink() or not folder.resolve().is_relative_to(private):
+            return [], [{'file': exam, 'error': 'Invalid private bank directory.'}]
+        paths = sorted(folder.glob('*.json'))
+        try:
+            signature = tuple((p.name, p.stat().st_mtime_ns, p.stat().st_size, p.is_symlink()) for p in paths)
+        except OSError:
+            signature = None
+        with bank_lock:
+            if signature is not None and bank_cache.get(exam, (None,))[0] == signature:
+                return bank_cache[exam][1]
+            found, errors, seen = [], [], set()
+            for path in paths:
+                if path.is_symlink() or not path.is_file():
+                    continue
+                try:
+                    if path.stat().st_size > MAX_BYTES:
+                        raise ValueError('Question set exceeds 20 MB.')
+                    document = json.loads(path.read_text(encoding='utf-8'))
+                    (validate_ap_set if exam == 'ap' else validate_question_set)(document)
+                    if document['exam'] != exam:
+                        raise ValueError('Question set belongs to a different exam.')
+                    # AP sources are revision-addressed and must be unambiguous.
+                    # Keep v1/SAT's existing multi-file import semantics unchanged.
+                    if exam == 'ap':
+                        if document['id'] in seen:
+                            raise ValueError('Duplicate question set id.')
+                        seen.add(document['id'])
+                    found.append((path, document))
+                except (OSError, ValueError, KeyError, TypeError) as error:
+                    errors.append({'file': path.name, 'error': str(error)})
+            if signature is not None:
+                bank_cache[exam] = (signature, (found, errors))
+            return found, errors
 
     def summary(document):
+        if document.get('exam') == 'ap':
+            return summarize_ap_set(document)
         return {'id': document['id'], 'title': document['title'],
                 'questionCount': len(document['questions']),
                 'section': document.get('section', ''),
@@ -129,7 +157,79 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Referrer-Policy', 'same-origin')
             self.end_headers()
-            self.wfile.write(body)
+            if self.command != 'HEAD':
+                self.wfile.write(body)
+
+        def send_ap_pdf(self, asset, *, head=False):
+            # Only PDFs referenced by a valid AP manifest are public on loopback.
+            rows, _ = read_sets('ap')
+            if not AP_ASSET_RE.fullmatch(asset) or not any(
+                    source['asset'] == asset for _, doc in rows for source in doc['documents']):
+                return self.reply(404, {'error': 'Document not found.'})
+            path = private / asset
+            if (not path.is_file() or path.is_symlink()
+                    or any(p.is_symlink() for p in path.parents if p != private.parent)
+                    or not path.resolve().is_relative_to(private.resolve())):
+                return self.reply(404, {'error': 'Document not found.'})
+            try:
+                with path.open('rb') as stream:
+                    if stream.read(5) != b'%PDF-':
+                        return self.reply(404, {'error': 'Invalid PDF document.'})
+                    size = os.fstat(stream.fileno()).st_size
+                    start, end, status = 0, size - 1, 200
+                    value = self.headers.get('Range')
+                    if value and not head:
+                        match = re.fullmatch(r'bytes=(\d{0,20})-(\d{0,20})', value)
+                        valid = bool(match and any(match.groups()))
+                        if valid:
+                            left, right = match.groups()
+                            if left:
+                                start, end = int(left), min(int(right), size - 1) if right else size - 1
+                            else:
+                                length = int(right)
+                                start = max(0, size - length)
+                                valid = length > 0
+                            valid = valid and 0 <= start <= end < size
+                        if not valid:
+                            self.send_response(416)
+                            self.send_header('Content-Range', f'bytes */{size}')
+                            self.send_header('Content-Length', '0')
+                            self.end_headers()
+                            return
+                        status = 206
+                    self.send_response(status)
+                    self.send_header('Content-Type', 'application/pdf')
+                    self.send_header('Content-Length', str(end - start + 1))
+                    self.send_header('Accept-Ranges', 'bytes')
+                    self.send_header('Content-Disposition', 'inline; filename="ap-source.pdf"')
+                    self.send_header('Cache-Control', 'private, no-store')
+                    self.send_header('X-Content-Type-Options', 'nosniff')
+                    self.send_header('Referrer-Policy', 'same-origin')
+                    if status == 206:
+                        self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+                    self.end_headers()
+                    if not head:
+                        stream.seek(start)
+                        remaining = end - start + 1
+                        while remaining:
+                            chunk = stream.read(min(65536, remaining))
+                            if not chunk:
+                                break
+                            self.wfile.write(chunk)
+                            remaining -= len(chunk)
+            except (BrokenPipeError, ConnectionResetError):
+                pass
+            except OSError:
+                # A resource removed during access must not expose a filesystem path.
+                self.close_connection = True
+
+        def do_HEAD(self):
+            route = unquote(urlsplit(self.path).path)
+            if self.valid_host() and route.startswith('/question-assets/ap/'):
+                return self.send_ap_pdf(route[1:], head=True)
+            self.send_response(404)
+            self.send_header('Content-Length', '0')
+            self.end_headers()
 
         def valid_host(self):
             return self.headers.get('Host') == f'127.0.0.1:{self.server.server_port}'
@@ -153,12 +253,26 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                 return self.reply(200, session)
             if route == '/api/toefl/status':
                 return self.reply(200, toefl_preview)
+            if route.startswith('/question-assets/ap/'):
+                return self.send_ap_pdf(route[1:])
+            if route == '/api/ap/example':
+                try:
+                    example = root / 'apps/ap/examples/synthetic-practice.json'
+                    if example.is_symlink() or not example.resolve().is_relative_to((root / 'apps/ap').resolve()):
+                        raise ValueError('Invalid example path.')
+                    document = json.loads(example.read_text(encoding='utf-8'))
+                    validate_ap_set(document)
+                    if document['contentMode'] != 'synthetic' or document['documents']:
+                        raise ValueError('Only original self-contained examples may be served here.')
+                    return self.reply(200, document)
+                except (OSError, ValueError, TypeError, KeyError):
+                    return self.reply(503, {'error': 'AP 原创示例尚未就绪。'})
             if route == '/api/platform/catalog':
                 exams, errors = [], []
                 for exam, name in EXAMS.items():
                     rows, failures = read_sets(exam)
                     sources = [summary(document) for _, document in rows]
-                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'toefl' and toefl_preview['available'],
+                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'ap' and (root / 'apps/ap/index.html').is_file() or exam == 'toefl' and toefl_preview['available'],
                                   'questionCount': sum(s['questionCount'] for s in sources),
                                   'sourceCount': len(sources), 'sources': sources,
                                   'sections': sorted({s['section'] for s in sources if s['section']}),
@@ -172,7 +286,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                     return self.reply(404, {'error': 'Unknown exam interface.'})
                 rows, errors = read_sets(parts[2])
                 if len(parts) == 4:
-                    return self.reply(200, {'schemaVersion': 1, 'exam': parts[2],
+                    return self.reply(200, {'schemaVersion': 2 if parts[2] == 'ap' else 1, 'exam': parts[2],
                                            'sources': [summary(d) for _, d in rows], 'errors': errors})
                 document = next((d for _, d in rows if d['id'] == parts[4]), None)
                 return self.reply(200, document) if document else self.reply(404, {'error': 'Source not found.'})
@@ -187,8 +301,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                                        'errors': [f"{e['file']}: {e['error']}" for e in failures]})
             if route in {'/sat', '/sat/'}:
                 return self.redirect('/sat/html/index.html' + ('?' + parsed.query if parsed.query else ''))
-            if route == '/toefl':
-                return self.redirect('/toefl/' + ('?' + parsed.query if parsed.query else ''))
+            if route in {'/toefl', '/ap'}:
+                return self.redirect(route + '/' + ('?' + parsed.query if parsed.query else ''))
             # Explicit application-only routes; repository metadata and private files
             # cannot be fetched as static content.
             if route in {'/', '/index.html'}:
@@ -196,6 +310,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
             elif route.startswith('/web/'):
                 base, relative = root / 'apps/web', route[len('/web/'):]
                 if Path(relative).suffix not in {'.html', '.css', '.js', '.svg', '.png', '.ico'}:
+                    return self.reply(404, {'error': 'Not found.'})
+            elif route.startswith('/ap/'):
+                base, relative = root / 'apps/ap', route[len('/ap/'):] or 'index.html'
+                if relative not in AP_PUBLIC_FILES:
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/toefl/'):
                 if not toefl_preview['available']:

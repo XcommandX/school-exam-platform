@@ -128,6 +128,32 @@ class PlatformServerTests(unittest.TestCase):
         finally:
             target.unlink(missing_ok=True)
 
+    def test_sat_revisions_with_same_source_id_remain_in_legacy_sync(self):
+        # AP duplicate-ID protection must not silently drop existing SAT revisions.
+        info = json.loads(self.request('/api/question-bank/status')[1])
+        headers = {'Content-Type': 'application/json', 'Origin': f'http://127.0.0.1:{self.port}',
+                   'X-SAT-Bank-Token': info['token']}
+        targets = []
+        try:
+            for answer in (0, 1):
+                raw = {'sourceId': 'sat:revision-fixture', 'title': 'Original revision test',
+                       'questions': [{'prompt': 'Choose an original fixture option.',
+                                      'options': ['First', 'Second', 'Third', 'Fourth'], 'answer': answer}]}
+                payload = json.dumps({'name': 'revision.json', 'text': json.dumps(raw)})
+                status, body, _ = self.request('/api/question-bank', 'POST', payload, headers)
+                self.assertEqual(status, 201)
+                targets.append(self.root / 'private-data/question-banks/sat' / json.loads(body)['name'])
+            self.assertNotEqual(targets[0], targets[1])
+            result = json.loads(self.request('/api/question-bank')[1])
+            self.assertEqual(len(result['files']), 2)
+            self.assertEqual({json.loads(row['text'])['questions'][0]['answer'] for row in result['files']}, {0, 1})
+            listing = json.loads(self.request('/api/exams/sat/sources')[1])
+            self.assertEqual(len(listing['sources']), 2)
+            self.assertEqual(listing['errors'], [])
+        finally:
+            for target in targets:
+                target.unlink(missing_ok=True)
+
     def test_sat_redirect_preserves_deep_link(self):
         status, _, headers = self.request('/sat/?view=practiceBuilder&mode=source')
         self.assertEqual(status, 302)

@@ -11,4 +11,9 @@ assert.equal(s.today,3);assert.equal(s.streak,2);assert.deepEqual(s.all,{answers
 assert.equal(summarize([],toefl,[],now).streak,1);
 assert.equal(summarize([],[],[],now).streak,0);
 assert.equal(summarize([],[],[{type:'progress',day:'2026-10-22',at:now,words:{test:true}}],now).streak,1);
-console.log('Home model: score scale, partial/invalid targets, completed-only counts, deduplication, recording, streak and empty-state checks passed.');
+const apRecord={id:'ap-attempt',status:'completed',contentMode:'private',finished:now,title:'Original test history',sourceId:'ap:original',revision:'a'.repeat(64),questionCount:5,answeredCount:3,correctCount:1,gradedCount:2};
+const ap=summarize([],[],[],now,[apRecord,apRecord,{...apRecord,id:'sample',contentMode:'synthetic'},{...apRecord,id:'invalid',gradedCount:4},{...apRecord,id:'future',finished:now+1},{...apRecord,id:'draft',status:'in-progress'},{...apRecord,id:'unknown',contentMode:undefined},{...apRecord,id:'wrong-source',sourceId:'sat:original'},{...apRecord,id:'bad-revision',revision:'no'},{...apRecord,id:'bad-count',answeredCount:6},{...apRecord,id:'oversized',questionCount:1001}]);
+assert.deepEqual(ap.all,{answers:3,correct:1,graded:2,attempts:1});
+assert.deepEqual(ap.ap,ap.all);assert.equal(ap.recent[0].exam,'ap');assert.equal(ap.today,3);
+assert.deepEqual(summarize([],[],[],now,[{...apRecord,gradedCount:0,correctCount:0}]).ap,{answers:3,correct:0,graded:0,attempts:1});
+console.log('Home model: targets, completed-only counts, AP private-only aggregation, ungraded essays, deduplication, recording, streak and empty-state checks passed.');

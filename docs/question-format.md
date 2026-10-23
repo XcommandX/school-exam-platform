@@ -1,6 +1,6 @@
 # 统一题目格式与本机题库
 
-统一首页按 `sat`、`ap`、`toefl`、`vocab` 隔离题库。当前已接入的答题引擎只有 SAT Reading and Writing；其他考试使用同一题集外层约定，等待接入自己的题型、模块和判分器。当前 schema v1 支持单选题；听力音频、口语、作文与多选题需要后续扩展格式和引擎，不能仅改变 `exam` 就认为已支持。
+统一首页按 `sat`、`ap`、`toefl`、`vocab` 隔离题库。SAT Reading and Writing 继续使用本文的 schema v1 单选契约。AP English Language and Composition 已使用独立的 [AP v2 扩展](ap-language.md#ap-v2-数据契约) 支持 MCQ、FRQ 与来源 PDF，由 `shared/ap_schema.py` 校验，不改变 SAT 的 v1 适配器。TOEFL 当前提供模块内匿名样例，不等于接入此公共格式。听力音频、口语与多选题仍需相应格式和引擎，不能仅改变 `exam` 就认为已支持。
 
 格式定义位于 [`shared/question-set.schema.json`](../shared/question-set.schema.json)，标准库校验和 SAT 兼容转换位于 [`shared/question_schema.py`](../shared/question_schema.py)。后端还会检查 JSON Schema 无法独立表达的关系：模块题量之和、模块时长数量、正确选项范围、题目 ID 所属题集、文字格式范围与表格列数。
 

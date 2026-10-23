@@ -20,7 +20,7 @@
   const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const $ = id => document.getElementById(id);
   const format = n => new Intl.NumberFormat('zh-CN').format(n);
-  const keys = {plan:'school-exam-platform:home:plan:v1',targets:'school-exam-platform:home:targets:v1',preferences:'school-exam-platform:preferences:v1',history:'school-exam-platform:toefl:history:v1',learning:'school-exam-platform:toefl:learning:v1'};
+  const keys = {plan:'school-exam-platform:home:plan:v1',targets:'school-exam-platform:home:targets:v1',preferences:'school-exam-platform:preferences:v1',history:'school-exam-platform:toefl:history:v1',learning:'school-exam-platform:toefl:learning:v1',apHistory:'school-exam-platform:ap:history:v1'};
   const notes = new Map();
   let storageUnavailable=false, lastTrigger=null, toastTimer, refreshId=0;
   function read(key, fallback) {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch {storageUnavailable=true;return fallback;}}
@@ -55,7 +55,7 @@
     const id=++refreshId;
     const attempts=await satAttempts();
     if(id!==refreshId)return;
-    state.summary=HomeModel.summarize(attempts,array(read(keys.history,[])),array(read(keys.learning,[])));
+    state.summary=HomeModel.summarize(attempts,array(read(keys.history,[])),array(read(keys.learning,[])),Date.now(),array(read(keys.apHistory,[])));
     renderStats();
     if(storageUnavailable)note('storage','浏览器存储暂不可用，学习统计可能无法显示。');
   }
@@ -72,17 +72,17 @@
     } else if(name==='plan') {
       title='学习计划';body=`${statsTiles({attempts:s.streak,answers:s.today,graded:0,correct:0}).replace('已完成练习','连续坚持天数').replace('已答题目','今日完成').replace('<div class="report-stat"><b>—</b><small>客观题正确率</small></div>',`<div class="report-stat"><b>${state.plan.dailyGoal}</b><small>每日题目目标</small></div>`)}<form id="plan-form"><label class="field">每日学习目标（题）<input type="number" name="dailyGoal" required min="1" max="500" step="1" value="${state.plan.dailyGoal}" inputmode="numeric"></label><label class="field" style="margin-top:14px">给自己的计划<textarea name="note" maxlength="500" placeholder="例如：先练英语，再复习今天的错题。">${esc(state.plan.note)}</textarea></label><p class="form-error" id="form-error" role="alert"></p><div class="dialog-actions"><button type="submit" class="button primary">保存计划</button></div></form><div class="destination-list" style="margin-top:24px">${destination('/toefl/?view=plan','TOEFL 今日学习')}${destination('/sat/?view=practiceBuilder&mode=custom','SAT 自定义训练')}</div>`;
     } else if(name==='report') {
-      title='成绩报告';body=`${statsTiles(s.all)}<div class="destination-list">${destination('/toefl/?view=progress','TOEFL 学习进度')}${destination('/sat/?view=dashboard','SAT 练习报告')}</div>`;
+      title='成绩报告';body=`${statsTiles(s.all)}<div class="destination-list">${destination('/toefl/?view=progress','TOEFL 学习进度')}${destination('/sat/?view=dashboard','SAT 练习报告')}${destination('/ap/?view=history','AP 练习记录')}</div>`;
     } else if(name==='records') {
-      title='练习记录';body=(s.recent.length?`<ul class="records-list">${s.recent.map(r=>`<li><span><strong>${esc(r.name)}</strong><small>${esc(new Date(r.at).toLocaleString('zh-CN',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}))}</small></span><span>${format(r.answered)} 题</span></li>`).join('')}</ul>`:empty('从第一次练习开始','history'))+`<div class="destination-list">${destination('/toefl/?view=report','TOEFL 考试记录')}${destination('/sat/?view=dashboard','SAT 练习记录')}</div>`;
+      title='练习记录';body=(s.recent.length?`<ul class="records-list">${s.recent.map(r=>`<li><span><strong>${esc(r.name)}</strong><small>${esc(new Date(r.at).toLocaleString('zh-CN',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}))}</small></span><span>${format(r.answered)} 题</span></li>`).join('')}</ul>`:empty('从第一次练习开始','history'))+`<div class="destination-list">${destination('/toefl/?view=report','TOEFL 考试记录')}${destination('/sat/?view=dashboard','SAT 练习记录')}${destination('/ap/?view=history','AP 练习记录')}</div>`;
     } else if(name==='saved') {
-      title='我的收藏';body=`<div class="destination-list">${destination('/sat/?view=wrongBook','SAT 错题本')}${destination('/toefl/?view=wrongBook','TOEFL 专项复习')}${destination('/toefl/?view=vocab','TOEFL 词汇训练')}</div>`;
+      title='我的收藏';body=`<div class="destination-list">${destination('/sat/?view=wrongBook','SAT 错题本')}${destination('/toefl/?view=wrongBook','TOEFL 专项复习')}${destination('/toefl/?view=vocab','TOEFL 词汇训练')}${destination('/ap/?view=wrong','AP 错题本')}</div>`;
     } else if(name==='account') {
       title='个人中心';body=`<div class="profile-row"><span class="avatar large">A</span><div><h3>admin</h3></div></div>${statsTiles(s.all)}`;
     } else if(name==='settings') {
       title='设置';body=`<label class="setting-row"><span>减少界面动画</span><input type="checkbox" id="reduce-motion" ${state.preferences.reduceMotion?'checked':''}></label><div class="destination-list" style="margin-top:18px">${destination('/sat/?view=timingSettings','SAT 计时设置')}</div><div class="dialog-actions"><button class="button" type="button" data-dialog="plan">每日目标</button><button class="button" type="button" data-dialog="targets">目标分数</button><button class="button primary" type="button" data-close-dialog>完成</button></div>`;
     } else if(name==='math') {title='SAT 数学';body=empty('SAT 数学尚未接入','function')+`<div class="dialog-actions"><a class="button primary" href="/sat/?view=practiceBuilder&mode=custom">开始英语练习 ${icon('arrow')}</a></div>`;
-    } else if(name==='ap') {title='AP';body=empty('AP 尚未接入');
+    } else if(name==='ap') {title='AP';body=`<div class="destination-list">${destination('/ap/','Language and Composition')}</div>`;
     } else if(name==='vocab') {title='Personal Vocab';body=empty('Personal Vocab 尚未接入','book')+`<div class="dialog-actions"><a class="button primary" href="/toefl/?view=vocab">TOEFL 词汇训练 ${icon('arrow')}</a></div>`;
     } else return;
     $('dialog-title').textContent=title;$('dialog-content').innerHTML=body;fillIcons(dialog);
@@ -115,8 +115,8 @@
   });
   dialog.addEventListener('close',()=>{(lastTrigger?.isConnected?lastTrigger:$('account-button')).focus();});
   dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
-  window.addEventListener('focus',refresh);window.addEventListener('pageshow',refresh);window.addEventListener('storage',e=>{if([keys.history,keys.learning].includes(e.key))refresh();if([keys.targets,keys.plan].includes(e.key)){if(e.key===keys.targets)state.targets=HomeModel.targets(read(keys.targets,{}));else{const p=read(keys.plan,{});if(Number.isInteger(p?.dailyGoal)&&p.dailyGoal>=1&&p.dailyGoal<=500)state.plan={dailyGoal:p.dailyGoal,note:typeof p.note==='string'?p.note:''};}renderStats();}});
+  window.addEventListener('focus',refresh);window.addEventListener('pageshow',refresh);window.addEventListener('storage',e=>{if([keys.history,keys.learning,keys.apHistory].includes(e.key))refresh();if([keys.targets,keys.plan].includes(e.key)){if(e.key===keys.targets)state.targets=HomeModel.targets(read(keys.targets,{}));else{const p=read(keys.plan,{});if(Number.isInteger(p?.dailyGoal)&&p.dailyGoal>=1&&p.dailyGoal<=500)state.plan={dailyGoal:p.dailyGoal,note:typeof p.note==='string'?p.note:''};}renderStats();}});
   fillIcons();renderStats();refresh();
   fetch('/api/toefl/status',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(info=>note('toefl',info.available?'':'TOEFL 源码已拉取，请先完成本地构建再开始练习。')).catch(()=>note('toefl','请从本机平台服务打开首页，以使用考试应用入口。'));
-  window.PlatformHome=Object.freeze({open,refresh,examRoutes:Object.freeze({sat:'/sat/?view=dashboard',toefl:'/toefl/',ap:()=>open('ap'),vocab:()=>open('vocab')})});
+  window.PlatformHome=Object.freeze({open,refresh,examRoutes:Object.freeze({sat:'/sat/?view=dashboard',toefl:'/toefl/',ap:'/ap/',vocab:()=>open('vocab')})});
 })();

@@ -6,11 +6,11 @@
 
 统一学习首页位于 `apps/web/`，采用已确认的 Study Space 模板：暖白背景、TOEFL 蓝色主卡与 SAT 橙色主卡。首页保留四科托福入口，SAT 阅读与文法统一显示为“英语”；原模板的顶部白色导航、搜索、继续上次示例和底部工具栏已移除。学习计划、成绩报告、目标分数和设置从右上头像进入。
 
-SAT Reading & Writing 已接入自定义训练、按套练习、复盘与错题本；非考试管理页面已更新视觉，点击开始后的准备、考试、检查和完成阶段继续保护原有界面与行为。`apps/toefl/` 已接入 `feature/toefl-exam-interface` 分支 `72ab41d` 的源码，通过 `/toefl/` 运行原创匿名样例，支持四科入口和学习页面导航；完整私有题库、正式账号、云端同步与外部 AI 未接入，不能将匿名样例视为真实完整模考。AP、SAT 数学和跨考试 Personal Vocab 仍保留待接入接口。
+SAT Reading & Writing 已接入自定义训练、按套练习、复盘与错题本；非考试管理页面已更新视觉，点击开始后的准备、考试、检查和完成阶段继续保护原有界面与行为。`apps/toefl/` 已接入 `feature/toefl-exam-interface` 分支 `72ab41d` 的源码，通过 `/toefl/` 运行原创匿名样例，支持四科入口和学习页面导航；完整私有题库、正式账号、云端同步与外部 AI 未接入，不能将匿名样例视为真实完整模考。AP English Language and Composition 已通过 `/ap/` 接入本机私有 PDF 题库、选择题练习、FRQ 草稿与评分资料复盘，详见 [AP 接入与导入](docs/ap-language.md)。SAT 数学和跨考试 Personal Vocab 仍保留待接入接口。
 
 测试阶段直接使用 `admin` 本机测试身份，无需输入密码，不提供真实认证或管理员权限。每日目标、目标分数和练习统计只使用当前浏览器的新平台存储；支持新 TOEFL 1–6 分、0.5 分档及 SAT 两科目标，尚未实现统一账号与跨设备记录。
 
-Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。OCR 已取消，模型、PDF、HAR 和原浏览器数据均不导入。统一格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。
+Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。SAT 的 OCR 已取消，模型、HAR 和原浏览器数据均不导入。AP 使用独立的本机 PDF 导入器与 v2 题型契约：原卷保存在忽略目录，扫描材料不做 OCR；不会将 PDF 上传 Git。统一格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。
 
 已确认的要求：
 
@@ -52,7 +52,7 @@ python3 scripts/serve_platform.py --port 8888
 
 新平台使用独立的浏览器存储名称，不读取原 SAT 或 TOEFL 应用的个人练习记录。服务仅监听本机，不用于校内公开部署。
 
-其他开发者克隆后 SAT 真实题库初始为空，TOEFL 只有原创匿名样例。使用 SAT 页的 JSON 导入或本地迁移脚本填充本机题库；TOEFL 私有题库尚未接入统一服务。不要通过 Git 共享真实题库或个人数据；所有层级的 `.DS_Store` 也应保持忽略。详见 [本地题库迁移](docs/unified-home.md)。
+其他开发者克隆后 SAT 与 AP 真实题库初始为空，AP 可主动打开原创示例，TOEFL 只有原创匿名样例。AP 本机 PDF 导入、依赖和检查命令见 [AP Language](docs/ap-language.md)。使用 SAT 页的 JSON 导入或本地迁移脚本填充本机题库；TOEFL 私有题库尚未接入统一服务。不要通过 Git 共享真实题库或个人数据；所有层级的 `.DS_Store` 也应保持忽略。详见 [本地题库迁移](docs/unified-home.md)。
 
 ## 运行独立 SAT 原型
 

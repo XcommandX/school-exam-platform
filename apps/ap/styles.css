@@ -1,0 +1,142 @@
+/* Shared tokens and typography come from /web/styles.css. All additions are AP-scoped. */
+.ap-app { background: var(--bg, #f5f4f0); color: var(--ink, #16181d); }
+.ap-app .ap-header { max-width: 1500px; }
+.ap-app .ap-shell { max-width: 1392px; margin: 24px auto 0; padding: 0 48px 64px; }
+.ap-app .ap-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.ap-app .ap-heading h1 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.18; font-weight: 750; letter-spacing: -1.5px; margin: 0; }
+.ap-app .ap-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
+.ap-app .ap-nav-button { min-height: 44px; padding: 10px 20px; border: 1px solid transparent; border-radius: 50px; font-weight: 650; font-size: 14px; transition: background .18s var(--ease), color .18s var(--ease); }
+.ap-app .ap-nav-button:hover { background: #eae9e3; }
+.ap-app .ap-nav-button[aria-current="page"] { background: var(--ink); color: #fff; }
+.ap-app .ap-panel { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 28px; min-width: 0; }
+.ap-app .ap-panel h2, .ap-app .ap-section-heading h2 { margin: 0; font-size: 24px; font-weight: 750; letter-spacing: -.6px; line-height: 1.3; }
+.ap-app .ap-section-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin: 0 0 22px; }
+.ap-app .ap-section-heading h2 { overflow-wrap: anywhere; }
+.ap-app .ap-actions, .ap-app .ap-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.ap-app .ap-actions { margin-top: 20px; }
+.ap-app .ap-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 50px; background: #fff; font-weight: 650; font-size: 13px; line-height: 1.5; transition: background .18s var(--ease), transform .18s var(--ease), border-color .18s var(--ease); }
+.ap-app .ap-button:hover:not(:disabled) { background: #f7f7f3; border-color: #cacbc9; transform: translateY(-1px); }
+.ap-app .ap-button:active:not(:disabled) { transform: none; }
+.ap-app .ap-button--primary { color: #fff; background: var(--blue); border-color: var(--blue); }
+.ap-app .ap-button--primary:hover:not(:disabled) { background: #244ca4; border-color: #244ca4; }
+.ap-app .ap-button--danger { color: #a63c26; }
+.ap-app .ap-button:disabled { opacity: .45; }
+.ap-app .ap-back { margin-bottom: 22px; padding: 12px 22px; font-size: 15px; }
+.ap-app .ap-filters { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 16px; padding: 22px; margin-bottom: 24px; border-radius: 22px; }
+.ap-app .ap-field { display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 650; min-width: 0; }
+.ap-app .ap-field input, .ap-app .ap-field select, .ap-app .ap-field textarea { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 12px; background: #fafaf8; padding: 11px 13px; font-size: 15px; font-weight: 400; }
+.ap-app .ap-field textarea { min-height: 370px; resize: vertical; line-height: 1.8; background: #fff; }
+.ap-app .ap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.ap-app .ap-source { display: flex; flex-direction: column; padding: 26px; }
+.ap-app .ap-source h3 { font-size: 20px; font-weight: 750; letter-spacing: -.4px; margin: 16px 0 12px; line-height: 1.4; overflow-wrap: anywhere; }
+.ap-app .ap-source .ap-actions { margin-top: auto; padding-top: 22px; }
+.ap-app .ap-meta { font-size: 12px; color: #62656e; line-height: 1.7; gap: 8px 16px; }
+.ap-app .ap-badge { display: inline-flex; padding: 4px 10px; border-radius: 30px; color: #264f9b; background: #eaf0fc; font-size: 11px; line-height: 1.7; font-weight: 650; }
+.ap-app .ap-badge--synthetic { background: #fff0e6; color: #a44124; }
+.ap-app .ap-badge--neutral { background: #f2f2ed; color: #62656e; }
+.ap-app .ap-notice { padding: 14px 18px; margin: 0 0 20px; border: 1px solid #cdd9ee; border-radius: 16px; background: #f3f7ff; color: #274d8b; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.ap-app .ap-notice--warning { border-color: #efd6ba; background: #fff8ed; color: #8b4b16; }
+.ap-app .ap-notice a { text-decoration: underline; text-underline-offset: 3px; }
+.ap-app .ap-empty { padding: 48px 30px; text-align: center; line-height: 1.8; }
+.ap-app .ap-empty h2 { font-size: 23px; }
+.ap-app .ap-empty p { font-size: 14px; color: #62656e; max-width: 600px; margin: 16px auto 0; }
+.ap-app .ap-empty .ap-actions { justify-content: center; }
+.ap-app .ap-count { color: #62656e; font-size: 13px; }
+.ap-app .ap-document-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+.ap-app .ap-document-list li { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.ap-app .ap-document-list li:last-child { border-bottom: 0; }
+.ap-app .ap-document-label { flex: 1; min-width: 160px; overflow-wrap: anywhere; font-size: 15px; }
+.ap-app .ap-document-label small { display: block; margin-top: 5px; font-size: 12px; color: #62656e; }
+.ap-app .ap-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.9; font-size: 16px; margin: 16px 0; }
+.ap-app .ap-muted { color: #62656e; font-size: 13px; line-height: 1.8; }
+.ap-app .ap-warnings { margin: 20px 0; font-size: 13px; line-height: 1.8; color: #8b4b16; }
+.ap-app .ap-warnings summary { cursor: pointer; font-weight: 650; min-height: 36px; }
+.ap-app .ap-warnings ul { padding-left: 22px; }
+.ap-app .ap-practice-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin: 0 0 20px; }
+.ap-app .ap-practice-toolbar .ap-actions { margin: 0; }
+.ap-app .ap-check { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; min-height: 44px; }
+.ap-app .ap-check input { width: 18px; height: 18px; accent-color: var(--blue); }
+.ap-app .ap-timer { font-variant-numeric: tabular-nums; font-weight: 750; font-size: 16px; }
+.ap-app .ap-save-state { min-width: 80px; font-size: 12px; color: #62656e; }
+.ap-app .ap-question-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ap-app .ap-question-nav button { width: 42px; min-height: 42px; border-radius: 12px; background: #fff; border: 1px solid var(--line); font-size: 12px; font-weight: 650; }
+.ap-app .ap-question-nav button[data-answered="true"] { background: #eaf0fc; border-color: #bdd0f2; color: #244ca4; }
+.ap-app .ap-question-nav button[aria-current="step"] { background: var(--blue); color: white; border-color: var(--blue); }
+.ap-app .ap-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.ap-app .ap-workspace--single { grid-template-columns: minmax(0, 1fr); }
+.ap-app .ap-reading { max-height: calc(100dvh - 145px); overflow: auto; scrollbar-gutter: stable; }
+.ap-app .ap-reading h3, .ap-app .ap-question h3 { margin: 0; font-size: 16px; }
+.ap-app .ap-reading .ap-text, .ap-app .ap-prompt { font-family: inherit; line-height: 1.85; font-size: 17px; }
+.ap-app .ap-prompt { margin: 20px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ap-app .ap-options { display: flex; flex-direction: column; border: 0; padding: 0; margin: 22px 0; gap: 11px; min-width: 0; }
+.ap-app .ap-options legend { font-size: 13px; font-weight: 650; padding: 0 0 12px; }
+.ap-app .ap-option { display: flex; align-items: flex-start; gap: 11px; border: 1px solid var(--line); padding: 15px; border-radius: 15px; cursor: pointer; line-height: 1.7; font-size: 15px; transition: background .18s, border-color .18s; }
+.ap-app .ap-option:hover { background: #fafaf7; }
+.ap-app .ap-option:has(input:checked) { background: #f0f5ff; border-color: #8aa7e3; }
+.ap-app .ap-option input { flex: none; margin-top: 6px; width: 17px; height: 17px; accent-color: var(--blue); }
+.ap-app .ap-option-letter { font-weight: 750; }
+.ap-app .ap-option-copy { white-space: pre-wrap; overflow-wrap: anywhere; min-width: 0; }
+.ap-app .ap-option--correct { border-color: #86b6a2; background: #f0f8f3; }
+.ap-app .ap-option--incorrect { border-color: #dbb0a6; background: #fff4f0; }
+.ap-app .ap-word-row { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 0; font-size: 12px; color: #62656e; }
+.ap-app .ap-pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.ap-app .ap-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 22px 0; }
+.ap-app .ap-stat { padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: 20px; }
+.ap-app .ap-stat b { display: block; font-size: 28px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.ap-app .ap-stat span { font-size: 12px; color: #62656e; }
+.ap-app .ap-list { display: grid; gap: 14px; }
+.ap-app .ap-record { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; padding: 23px 26px; }
+.ap-app .ap-record h3 { margin: 0 0 10px; font-size: 17px; overflow-wrap: anywhere; }
+.ap-app .ap-record > div:first-child { flex: 1; min-width: 180px; }
+.ap-app .ap-record .ap-actions { margin: 0; }
+.ap-app .ap-review { margin-top: 22px; }
+.ap-app .ap-review > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 15px; font-weight: 650; cursor: pointer; min-height: 44px; }
+.ap-app .ap-result-label { font-size: 12px; color: #62656e; }
+.ap-app .ap-result-label--correct { color: #256349; }
+.ap-app .ap-result-label--incorrect { color: #a63c26; }
+.ap-app .ap-answer { padding: 18px; border-radius: 14px; background: #f7f7f3; }
+.ap-app .ap-answer h4 { font-size: 14px; margin: 0; }
+.ap-app .ap-answer .ap-text { font-size: 15px; }
+.ap-app .ap-dialog { width: 540px; max-width: calc(100vw - 28px); max-height: calc(100dvh - 48px); overflow: auto; border: 1px solid var(--line); border-radius: 26px; padding: 28px; color: var(--ink); background: #fff; box-shadow: 0 32px 100px -36px #171a234d; }
+.ap-app .ap-dialog::backdrop { background: #20242b48; backdrop-filter: blur(5px); }
+.ap-app .ap-dialog h2 { font-size: 23px; margin: 0 0 18px; }
+.ap-app .ap-dialog p { line-height: 1.8; font-size: 14px; }
+.ap-app .ap-dialog .ap-actions { justify-content: flex-end; }
+.ap-app .ap-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) {
+  .ap-app .ap-shell { padding-left: 28px; padding-right: 28px; }
+  .ap-app .ap-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ap-app .ap-filters .ap-field:first-child { grid-column: 1 / -1; }
+  .ap-app .ap-panel { padding: 23px; }
+}
+@media (max-width: 760px) {
+  .ap-app .ap-shell { padding: 0 20px 40px; margin-top: 16px; }
+  .ap-app .ap-heading { margin-bottom: 24px; }
+  .ap-app .ap-heading h1 { font-size: 29px; letter-spacing: -.9px; }
+  .ap-app .ap-grid, .ap-app .ap-workspace { grid-template-columns: minmax(0, 1fr); }
+  .ap-app .ap-reading { max-height: none; overflow: visible; }
+  .ap-app .ap-panel { border-radius: 22px; padding: 22px; }
+  .ap-app .ap-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .ap-app .ap-filters .ap-field:last-child { grid-column: 1 / -1; }
+  .ap-app .ap-home-link { font-size: 12px; padding: 9px 13px; }
+  .ap-app .ap-stats { gap: 8px; }
+  .ap-app .ap-stat { padding: 16px 12px; border-radius: 16px; }
+  .ap-app .ap-stat b { font-size: 24px; }
+  .ap-app .ap-nav { gap: 4px; }
+  .ap-app .ap-nav-button { padding: 10px 16px; }
+  .ap-app .ap-field input, .ap-app .ap-field select, .ap-app .ap-field textarea { font-size: 16px; }
+}
+@media (max-width: 410px) {
+  .ap-app .ap-shell { padding-left: 16px; padding-right: 16px; }
+  .ap-app .ap-header { gap: 10px; }
+  .ap-app .ap-header .brand { gap: 8px; }
+  .ap-app .ap-header .brand-type { font-size: 18px; }
+  .ap-app .ap-header .brand-mark { width: 34px; height: 34px; border-radius: 11px; }
+  .ap-app .ap-home-link { font-size: 11px; padding-left: 10px; padding-right: 10px; }
+  .ap-app .ap-panel { padding: 18px; }
+  .ap-app .ap-nav-button { padding: 10px 13px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ap-app *, .ap-app *::before, .ap-app *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .ap-app .ap-button:hover:not(:disabled) { transform: none; }
+}
