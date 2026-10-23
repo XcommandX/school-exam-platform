@@ -1,0 +1,61 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:synthetic-math-roots",
+      "itemRevision": 1,
+      "answer": {
+        "status": "verified",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3",
+          "-3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "provided",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Either $3$ or $-3$ satisfies the equation; the learner enters one value."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "original-synthetic"
+      }
+    },
+    {
+      "itemId": "sat:item:synthetic-math-fraction",
+      "itemRevision": 1,
+      "answer": {
+        "status": "verified",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "2/3"
+        ],
+        "acceptedDecimalSpellings": [
+          ".6666",
+          ".6667",
+          "0.666",
+          "0.667"
+        ]
+      },
+      "explanation": {
+        "status": "provided",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Dividing both sides by $3$ gives $x=\\frac{2}{3}$. Decimal spellings are an explicit reviewed list, not a general floating-point tolerance."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}

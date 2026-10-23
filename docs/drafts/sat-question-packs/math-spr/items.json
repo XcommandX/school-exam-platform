@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "sat:item:synthetic-math-roots",
+      "revision": 1,
+      "classification": {
+        "skill": "Nonlinear equations"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "$$x^2=9$$"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is one possible value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic"
+      }
+    },
+    {
+      "id": "sat:item:synthetic-math-fraction",
+      "revision": 1,
+      "classification": {
+        "skill": "Linear equations"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "$$3x=2$$"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}

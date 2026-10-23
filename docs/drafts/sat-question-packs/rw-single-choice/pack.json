@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:synthetic-rw-single-choice",
+  "revision": 1,
+  "title": "SAT rw-single-choice 原创格式样包",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "garden-table",
+      "path": "assets/garden-table.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "1236929b204448ed695ef33773de52f7c2f2bf1de78a10711b89034e3ecaa54f",
+      "byteLength": 484,
+      "source": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}

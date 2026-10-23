@@ -1,0 +1,47 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:synthetic-rw-purpose",
+      "itemRevision": 1,
+      "answer": {
+        "status": "verified",
+        "type": "single-choice",
+        "optionId": "choice-1"
+      },
+      "explanation": {
+        "status": "provided",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Using the same observation period makes the weekly observations more comparable."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "original-synthetic"
+      }
+    },
+    {
+      "itemId": "sat:item:synthetic-rw-table",
+      "itemRevision": 1,
+      "answer": {
+        "status": "verified",
+        "type": "single-choice",
+        "optionId": "choice-2"
+      },
+      "explanation": {
+        "status": "provided",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "The difference is $18-12=6$. The observations do not establish that the same birds returned."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}

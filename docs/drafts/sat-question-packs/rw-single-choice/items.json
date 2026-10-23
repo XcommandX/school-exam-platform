@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": "sat:item:synthetic-rw-purpose",
+      "revision": 1,
+      "classification": {
+        "skill": "Text Structure and Purpose"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "A community garden began recording bird visits every Friday. The volunteers used the same observation period each week. The phrase <u>the same observation period</u> describes their method."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the main purpose of the underlined phrase?"
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic"
+      },
+      "options": [
+        {
+          "id": "choice-1",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "To describe a consistent part of the method"
+            }
+          ]
+        },
+        {
+          "id": "choice-2",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "To report the total number of volunteers"
+            }
+          ]
+        },
+        {
+          "id": "choice-3",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "To explain why the garden closed"
+            }
+          ]
+        },
+        {
+          "id": "choice-4",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "To identify a bird species"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:synthetic-rw-table",
+      "revision": 1,
+      "classification": {
+        "skill": "Command of Evidence: Quantitative"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Volunteers counted birds during equal observation periods."
+        },
+        {
+          "type": "image",
+          "assetId": "garden-table",
+          "role": "table",
+          "alt": "Garden observations: week 1, 12 birds; week 2, 18 birds."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which statement is supported by the table?"
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic"
+      },
+      "options": [
+        {
+          "id": "choice-1",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Fewer birds were observed in week 2."
+            }
+          ]
+        },
+        {
+          "id": "choice-2",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Six more birds were observed in week 2."
+            }
+          ]
+        },
+        {
+          "id": "choice-3",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Every bird visited both weeks."
+            }
+          ]
+        },
+        {
+          "id": "choice-4",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The garden had no birds before week 1."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

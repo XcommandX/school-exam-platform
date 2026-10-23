@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "id": "sat:item:synthetic-math-line",
+      "revision": 1,
+      "classification": {
+        "skill": "Linear functions"
+      },
+      "content": [
+        {
+          "type": "image",
+          "assetId": "line-graph",
+          "role": "coordinate-plane",
+          "alt": "A straight line on x and y axes passes through the labeled points (0, 1) and (2, 3)."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which equation represents the line?"
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic"
+      },
+      "options": [
+        {
+          "id": "choice-1",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=x+1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-2",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=x-1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-3",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=2x+1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-4",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=-x+1$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

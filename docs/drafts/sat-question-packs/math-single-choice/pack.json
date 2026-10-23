@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:synthetic-math-single-choice",
+  "revision": 1,
+  "title": "SAT math-single-choice 原创格式样包",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "line-graph",
+      "path": "assets/line-graph.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "d7f902ee688949ff6bbf338686971bd1ca128505761b07883e50bbdffdaf922f",
+      "byteLength": 624,
+      "source": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}

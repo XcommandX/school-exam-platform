@@ -1,5 +1,7 @@
 # 统一题目格式与本机题库
 
+> 2026-10-23：本文描述仍在运行的 v1 兼容格式。团队最新方向是按考试与题目类型分别设计题目包，不再扩展本格式为跨考试统一题目模型。SAT 新版仅为草案，见 [SAT 格式比较与新草案](sat-question-package-draft.md) 和 [原创样包合同](drafts/sat-question-packs/README.md)；尚未替换本页接口或现有引擎。
+
 统一首页按 `sat`、`ap`、`toefl`、`vocab` 隔离题库。当前已接入的答题引擎只有 SAT Reading and Writing；其他考试使用同一题集外层约定，等待接入自己的题型、模块和判分器。当前 schema v1 支持单选题；听力音频、口语、作文与多选题需要后续扩展格式和引擎，不能仅改变 `exam` 就认为已支持。
 
 格式定义位于 [`shared/question-set.schema.json`](../shared/question-set.schema.json)，标准库校验和 SAT 兼容转换位于 [`shared/question_schema.py`](../shared/question_schema.py)。后端还会检查 JSON Schema 无法独立表达的关系：模块题量之和、模块时长数量、正确选项范围、题目 ID 所属题集、文字格式范围与表格列数。

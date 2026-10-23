@@ -12,7 +12,7 @@ SAT Reading & Writing 已接入自定义训练、按套练习、复盘与错题�
 
 测试阶段直接使用 `admin` 本机测试身份，无需输入密码，不提供真实认证或管理员权限。每日目标、目标分数和练习统计只使用当前浏览器的新平台存储；支持新 TOEFL 1–6 分、0.5 分档及 SAT 两科目标，尚未实现统一账号与跨设备记录。
 
-Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。OCR 已取消，模型、PDF、HAR 和原浏览器数据均不导入。统一格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。
+Git 仅包含源码、空题库种子和原创合成示例。授权迁移的真实 SAT 题库和必要图片保存在被 Git 忽略的 `private-data/`，不随推送上传；个人已选答案、旧练习记录和错题记录不迁移。OCR 已取消，模型、PDF、HAR 和原浏览器数据均不导入。运行中的兼容格式见 [题库格式](docs/question-format.md)，本地运行见 [统一首页](docs/unified-home.md)。最新题目包方向改为按考试与题型分别设计，SAT 专用 Markdown/LaTeX 草案和耕读格式比较见 [SAT 题目包草案](docs/sat-question-package-draft.md)；新格式尚未接入网站。
 
 已确认的要求：
 

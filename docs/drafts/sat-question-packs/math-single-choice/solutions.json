@@ -1,0 +1,26 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:synthetic-math-line",
+      "itemRevision": 1,
+      "answer": {
+        "status": "verified",
+        "type": "single-choice",
+        "optionId": "choice-1"
+      },
+      "explanation": {
+        "status": "provided",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "The slope is $\\frac{3-1}{2-0}=1$ and the $y$-intercept is $1$, so $y=x+1$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "original-synthetic"
+      }
+    }
+  ]
+}
