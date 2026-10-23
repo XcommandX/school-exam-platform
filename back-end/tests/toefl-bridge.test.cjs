@@ -15,7 +15,7 @@ assert.ok(entryParser && startupStart >= 0 && startupEnd > startupStart,
 const startup = app.slice(startupStart, startupEnd);
 const plain = value => JSON.parse(JSON.stringify(value));
 
-function setup(search = '', state = null, pathname = '/toefl/') {
+function setup(search = '', state = null, pathname = '/toefl/', userId = 'synthetic-owner') {
   const context = vm.createContext({URLSearchParams});
   vm.runInContext(`
     class Storage {
@@ -25,9 +25,18 @@ function setup(search = '', state = null, pathname = '/toefl/') {
       removeItem(key) { this.data.delete(String(key)); }
     }
     const localStorage = new Storage(), sessionStorage = new Storage();
-    const recordingCalls = [], historyWrites = [];
+    const recordingCalls = [], historyWrites = [], moduleLoads = [], invalidations = [];
     const window = {localStorage, sessionStorage,
       indexedDB: {open(name, version) { recordingCalls.push({name, version, owner: this === window.indexedDB}); return name; }}};
+    window.PlatformAuth = {user: ${JSON.stringify(userId ? {id:userId} : null)}, active: true,
+      invalidate(reason) { invalidations.push(reason); }, logout() {}};
+    let cloudInitialized = false;
+    async function importPlatformModule(url) {
+      moduleLoads.push(url);
+      if (url === '/web/toefl-cloud.js') return {initializeCloud: async () => { cloudInitialized = true; }};
+      if (!cloudInitialized) throw new Error('Practice scripts loaded before account initialization');
+      return {};
+    }
     const location = window.location = ${JSON.stringify({pathname, search})};
     const history = window.history = {state: ${JSON.stringify(state)},
       replaceState(...args) { historyWrites.push(args); this.state = args[0]; }};
@@ -40,7 +49,10 @@ function setup(search = '', state = null, pathname = '/toefl/') {
     function returnToEntry(entry) { selected = {kind: 'entry', entry}; }
     function renderHome() { selected = {kind: 'home'}; }
   `, context);
-  vm.runInContext(bridge, context);
+  // Replace only dynamic module loading with the fixture, retaining the real
+  // authenticated bootstrap and its asynchronous initialization sequence.
+  vm.runInContext(bridge.replace(/\bimport\(/g, 'importPlatformModule(')
+    .replace('initialize().catch(', 'window.bridgeReady = initialize().catch('), context);
   return {context, run: code => vm.runInContext(code, context)};
 }
 
@@ -96,24 +108,42 @@ assert.deepEqual(navigate('?view=practice&section=listening&username=ignored&tok
   {owner: 'different-account', toeflRoute: {state: {view: 'history'}}}),
   {kind: 'entry', entry: {view: 'bank', state: {subject: 'listening', module: 'listening-t1', page: 0, query: ''}, y: 0}});
 
+(async () => {
 const storage = setup();
-assert.equal(storage.run("localStorage.getItem('four.history.v1')"), null, 'Old personal history is not read.');
-assert.equal(storage.run("localStorage.getItem('four.drafts.v2')"), null, 'Old personal drafts are not read.');
+await storage.run('window.bridgeReady');
+assert.equal(storage.run("localStorage.getItem(window.TOEFLPlatformBridge.storageKeys['four.history.v1'])"), null, 'The current account does not read old personal history.');
+assert.equal(storage.run("localStorage.getItem(window.TOEFLPlatformBridge.storageKeys['four.drafts.v2'])"), null, 'The current account does not read old personal drafts.');
 for (const [oldKey, newKey] of Object.entries(plain(storage.run('window.TOEFLPlatformBridge.storageKeys')))) {
-  storage.run(`localStorage.setItem(${JSON.stringify(oldKey)}, 'new-platform-value')`);
+  assert.equal(storage.run(`window.TOEFLCloudConfig.storageKey('synthetic-owner', ${JSON.stringify(oldKey)})`), newKey);
+  assert.equal(newKey, 'school-exam-platform:account:synthetic-owner:toefl:' + oldKey);
+  storage.run(`localStorage.setItem(${JSON.stringify(newKey)}, 'new-platform-value')`);
   assert.equal(storage.run(`localStorage.data.get(${JSON.stringify(newKey)})`), 'new-platform-value');
-  storage.run(`sessionStorage.setItem(${JSON.stringify(oldKey)}, 'session-value')`);
-  assert.equal(storage.run(`sessionStorage.data.get(${JSON.stringify(oldKey)})`), 'session-value');
-  storage.run(`localStorage.removeItem(${JSON.stringify(oldKey)})`);
+  storage.run(`sessionStorage.setItem(${JSON.stringify(newKey)}, 'session-value')`);
+  assert.equal(storage.run(`sessionStorage.data.get(${JSON.stringify(newKey)})`), 'session-value');
+  storage.run(`localStorage.removeItem(${JSON.stringify(newKey)})`);
   assert.equal(storage.run(`localStorage.data.has(${JSON.stringify(newKey)})`), false);
 }
 assert.equal(storage.run("localStorage.data.get('four.history.v1')"), 'old-private-history');
 assert.equal(storage.run("localStorage.data.get('four.drafts.v2')"), 'old-private-drafts');
-storage.run("window.indexedDB.open('toefl-recordings-v1', 3); window.indexedDB.open('other-db', 1)");
+storage.run("window.indexedDB.open(window.TOEFLCloudConfig.recordingDatabase, 3); window.indexedDB.open('other-db', 1)");
 assert.deepEqual(plain(storage.run('recordingCalls')), [
-  {name: 'SchoolExamPlatform:toefl:recordings:v1', version: 3, owner: true},
+  {name: 'SchoolExamPlatform:account:synthetic-owner:toefl:recordings:v1', version: 3, owner: true},
   {name: 'other-db', version: 1, owner: true},
 ]);
-assert.equal(storage.run('window.TOEFLPlatformBridge.recordingDatabase'), 'SchoolExamPlatform:toefl:recordings:v1');
+assert.equal(storage.run('window.TOEFLPlatformBridge.recordingDatabase'), 'SchoolExamPlatform:account:synthetic-owner:toefl:recordings:v1');
+assert.equal(storage.run('window.TOEFLCloudConfig.preserveLegacyStorage'), true);
+assert.equal(storage.run('window.TOEFLCloudConfig.recordingsReady'), false);
+assert.equal(storage.run("window.TOEFLCloudConfig.apiPath('/api/bootstrap')"), '/api/toefl/bootstrap');
+assert.equal(storage.run("window.TOEFLCloudConfig.apiPath('/api/me')"), '/api/me');
+assert.deepEqual(plain(storage.run('window.TOEFLCloudConfig.headers()')), {'X-Account-ID':'synthetic-owner'});
+assert.throws(() => storage.run("window.TOEFLCloudConfig.storageKey('different-owner', 'four.history.v1')"), /账号已变更/);
+assert.throws(() => storage.run("window.TOEFLCloudConfig.validateUser({id:'different-owner'})"), /账号已变更/);
+assert.deepEqual(plain(storage.run('invalidations')), ['expired']);
+assert.deepEqual(plain(storage.run('moduleLoads')), ['/web/toefl-cloud.js', '/toefl/four-data.js', '/toefl/four-logic.js', '/toefl/four-learning.js', '/toefl/four-app.js']);
+const anonymous = setup('', null, '/toefl/', null);
+await anonymous.run('window.bridgeReady');
+assert.deepEqual(plain(anonymous.run('moduleLoads')), [], 'No practice code loads without an authenticated account.');
+assert.deepEqual(plain(anonymous.run('invalidations')), ['expired']);
 assert.equal(setup('', null, '/').run('window.TOEFLPlatformBridge'), undefined);
 console.log('PASS: platform TOEFL bootstrap preserves native entry mapping and page restoration, account boundaries, isolated storage and recording database.');
+})().catch(error => {console.error(error);process.exitCode = 1;});
