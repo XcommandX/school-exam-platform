@@ -8,6 +8,8 @@ python3 back-end/server/serve_platform.py --port 8888
 
 打开 <http://127.0.0.1:8888/sat/>。统一平台使用独立的浏览器存储命名空间；目录调整不修改已有本机历史记录。
 
+SAT 概览中的 `Practice Builder`（原 `Question Library` 卡片）集中提供练习名称、自定义选题、按来源组题、时长设置和开始练习。`Start Practice` 入口进入同名页面，按 2026-10-23 截图要求只保留标题与 Overview 返回，不重复展示组题内容。`Explore Questions`、导入后的 `Practice Builder` 按钮以及首页英语/数学入口均进入组题页；旧 `view=questionLibrary` 链接兼容转到 `Practice Builder`，`view=practiceBuilder&mode=source` 继续支持按来源组题。整套模考入口与开始后的考试流程保持原有行为。
+
 独立 SAT 服务使用不同端口与运行数据目录：
 
 ```sh

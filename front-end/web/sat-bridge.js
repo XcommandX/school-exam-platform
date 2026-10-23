@@ -9,8 +9,9 @@
     ['sat-ui-preferences-v1','school-exam-platform:sat:ui:v1']
   ]);
   const params=new URLSearchParams(location.search);
-  const view=params.get('view');
-  const linked=['dashboard','practiceBuilder','questionLibrary','wrongBook','timingSettings'].includes(view);
+  const requestedView=params.get('view');
+  const view=requestedView==='questionLibrary'?'practiceBuilder':requestedView;
+  const linked=['dashboard','startPractice','practiceBuilder','wrongBook','timingSettings'].includes(view);
   let skipInitialRuntime=linked;
 
   // Rewrite names before the unmodified engine opens storage. Never inspect or
@@ -111,7 +112,7 @@
     if(view!=='dashboard')click(view);
     if(view==='practiceBuilder'&&params.get('mode')==='source')click('builder-source');
     const sourceId=params.get('source');
-    if(sourceId&&['practiceBuilder','questionLibrary','wrongBook'].includes(view)){
+    if(sourceId&&['practiceBuilder','wrongBook'].includes(view)){
       const source=await findSource(sourceId);
       if(source){
         const input=view==='practiceBuilder'&&params.get('mode')==='source'

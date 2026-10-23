@@ -14,11 +14,25 @@
   function mathHTML(text, displayMode) {
     if (forbiddenMath.test(text)) return `<span class="sat-formula-error">${escapeHTML(text)}</span>`;
     try {
+      const warnings = new Set();
       const html = root.katex.renderToString(text, {
-        displayMode, throwOnError:true, trust:false, strict:'error',
+        displayMode, throwOnError:true, trust:false,
+        strict(code) {
+          // Imported formulas sometimes contain Unicode text or an unrecognized
+          // Unicode glyph. Keep that exact character visible with KaTeX's text
+          // fallback, while exposing the diagnostic for source-content review.
+          // All other strict checks, parse errors, and resource/macro restrictions
+          // remain enabled; this does not infer a replacement mathematical symbol.
+          if (code === 'unicodeTextInMathMode' || code === 'unknownSymbol') {
+            warnings.add(code);
+            return 'ignore';
+          }
+          return 'error';
+        },
         macros:{}, globalGroup:false, maxExpand:100, maxSize:20, output:'htmlAndMathml'
       });
-      return `<span class="sat-formula${displayMode ? ' sat-formula-display' : ''}" data-latex="${escapeHTML(text)}">${html}</span>`;
+      const diagnostic = warnings.size ? ` data-latex-warnings="${escapeHTML([...warnings].join(' '))}"` : '';
+      return `<span class="sat-formula${displayMode ? ' sat-formula-display' : ''}" data-latex="${escapeHTML(text)}"${diagnostic}>${html}</span>`;
     } catch {
       return `<span class="sat-formula-error" role="status">${escapeHTML(text)}</span>`;
     }
@@ -37,7 +51,13 @@
       if (!display && source[end] === '`') return;
       if (source[end] === '\\') { end++; continue; }
       if (!source.startsWith(display ? '$$' : '$', end)) continue;
-      if (!display && (source[end-1] === '$' || /\s/.test(source[end-1]) || /[\d$]/.test(source[end+1] || ''))) return;
+      // In "$x$$y$", the first dollar closes x and the second opens y.
+      // Rejecting a following dollar would instead swallow the next formula
+      // (or prose) into this token. A leading "$$" still opens display math.
+      // Formulas can abut plain digits, as in "x$\\ge$2". The whitespace
+      // before the closer still keeps ordinary "$5 and $10" literal;
+      // authored currency is escaped by the pack contract.
+      if (!display && /\s/.test(source[end-1])) return;
       const text = source.slice(size, end);
       if (!text.trim()) return;
       return {type:displayOnly ? 'satBlockMath' : 'satInlineMath', raw:source.slice(0,end+size), text, display};
@@ -50,7 +70,10 @@
     parser = new root.marked.Marked({gfm:true, breaks:false, async:false});
     parser.use({
       extensions:[
-        {name:'satBlockMath', level:'block', start:src => src.indexOf('$$'),
+        // A "$$" pair in the middle of a paragraph can be two adjacent
+        // inline delimiters. Only a new line can start a display block;
+        // display formulas embedded in prose are handled by the inline rule.
+        {name:'satBlockMath', level:'block', start:src => { const match = /(?:^|\n)\$\$/.exec(src); return match ? match.index + (match[0][0] === '\n' ? 1 : 0) : undefined; },
           tokenizer:src => mathToken(src,true), renderer:token => mathHTML(token.text,true)},
         {name:'satInlineMath', level:'inline', start:src => src.indexOf('$'),
           tokenizer:src => mathToken(src), renderer:token => mathHTML(token.text,token.display)}

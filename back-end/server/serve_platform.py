@@ -31,6 +31,11 @@ MAX_BYTES = 20 * 1024 * 1024
 MAX_PACK_BYTES = 128 * 1024 * 1024
 MAX_BACKUP_BYTES = 256 * 1024 * 1024
 EXAMS = {'sat': 'SAT', 'ap': 'AP', 'toefl': 'TOEFL', 'vocab': 'Personal Vocab'}
+SAT_LIBRARY_CATEGORIES = (
+    ('full-length', 'Full-Length Tests', {'测试', '全真模考'}),
+    ('reading-writing', 'Reading & Writing', {'英语', '英语真题'}),
+    ('math', 'Math', {'数学', '数学真题'}),
+)
 TOEFL_PUBLIC_FILES = frozenset({
     'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js',
     'four-app.js', 'favicon.svg', 'audio/fixture-tone.wav', 'images/fixture-scene.svg',
@@ -114,6 +119,11 @@ def read_sat_pack_collection(private):
     collection = _safe_local_path(base, config['root'])
     if not collection.is_dir():
         raise ValueError('The active SAT collection folder is missing.')
+    return _read_sat_collection(collection, config['collectionId'])
+
+
+def _read_sat_collection(collection, collection_id):
+    """Read one local collection through the same declared-file boundary."""
     manifests = sorted(collection.rglob('pack.json'))
     if not manifests or len(manifests) > 64:
         raise ValueError('An active SAT collection needs between 1 and 64 packs.')
@@ -182,7 +192,164 @@ def read_sat_pack_collection(private):
                       'questionCount': len(item_document['items'])})
     assessment_path = _safe_local_path(collection, 'assessment.json')
     assessment = _read_local_json(assessment_path) if assessment_path.is_file() else None
-    return {'collectionId': config['collectionId'], 'packs': packs, 'assessment': assessment}
+    return {'collectionId': collection_id, 'packs': packs, 'assessment': assessment}
+
+
+def _sat_library_index(library_root):
+    """Match stable catalog identities to real folders, including renamed folders."""
+    library_root = Path(library_root)
+    catalog_path = _safe_local_path(library_root, 'catalog.json')
+    if not catalog_path.exists():
+        return False, {}, []
+    catalog = _read_local_json(catalog_path)
+    if (not isinstance(catalog, dict) or catalog.get('schemaVersion') != 'sat-offline-conversion-catalog/1'
+            or not isinstance(catalog.get('collections'), list)):
+        raise ValueError('Unsupported SAT library catalog.')
+    rows = {}
+    for row in catalog['collections']:
+        if not isinstance(row, dict) or row.get('status') != 'converted':
+            continue
+        identity = row.get('collectionId')
+        if (not isinstance(identity, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,99}', identity)
+                or identity in rows):
+            raise ValueError('Invalid or duplicate SAT library collection identity.')
+        if not isinstance(row.get('title'), str) or not row['title'].strip():
+            raise ValueError('SAT library collection title is missing.')
+        rows[identity] = row
+    reports, errors, duplicates = {}, [], set()
+    # Catalog directory strings are historical hints. Never use them as an
+    # authorization path: the user may rename or move category folders.
+    for folder, directories, files in os.walk(library_root, followlinks=False):
+        directories[:] = [name for name in directories if not (Path(folder) / name).is_symlink()]
+        if 'conversion-report.json' not in files:
+            continue
+        try:
+            path = _safe_local_path(library_root, (Path(folder) / 'conversion-report.json').relative_to(library_root).as_posix())
+            report = _read_local_json(path)
+        except (OSError, ValueError, TypeError):
+            # One damaged or unlisted report must not hide every usable set.
+            # Do not expose the configured private filesystem path in errors.
+            errors.append({'collectionId': None, 'error': 'A local conversion report could not be read safely.'})
+            continue
+        identity = report.get('collectionId') if isinstance(report, dict) else None
+        if not isinstance(identity, str) or identity not in rows:
+            continue
+        if identity in reports:
+            duplicates.add(identity)
+        reports[identity] = (path.parent, report)
+    indexed = {}
+    for identity, row in rows.items():
+        try:
+            if identity in duplicates:
+                raise ValueError('Multiple local folders claim this collection identity.')
+            if identity not in reports:
+                raise ValueError('The local collection folder is missing.')
+            folder, report = reports[identity]
+            category = next((key for key, _, names in SAT_LIBRARY_CATEGORIES if row.get('category') in names), None)
+            if category is None:
+                raise ValueError('Unsupported SAT library category.')
+            if (type(report.get('questionCount')) is not int or report['questionCount'] < 1
+                    or type(row.get('questionCount')) is not int or row['questionCount'] != report['questionCount']
+                    or not isinstance(report.get('modules'), list) or type(report.get('fullSAT')) is not bool
+                    or type(row.get('fullSAT')) is not bool or row['fullSAT'] != report['fullSAT']):
+                raise ValueError('SAT library counts or assessment metadata disagree.')
+            modules, section_counts, module_keys = [], {}, set()
+            for module in report['modules']:
+                if (not isinstance(module, dict) or module.get('section') not in {'math', 'reading-writing'}
+                        or type(module.get('moduleNumber')) is not int or module['moduleNumber'] < 1
+                        or type(module.get('questionCount')) is not int or module['questionCount'] < 1
+                        or 'durationSeconds' in module and (type(module['durationSeconds']) is not int or module['durationSeconds'] < 1)):
+                    raise ValueError('Invalid SAT library module metadata.')
+                module_key = module['section'], module['moduleNumber']
+                if module_key in module_keys:
+                    raise ValueError('Duplicate SAT library module metadata.')
+                module_keys.add(module_key)
+                modules.append({key: module[key] for key in ('section', 'moduleNumber', 'questionCount', 'durationSeconds') if key in module})
+                section_counts[module['section']] = section_counts.get(module['section'], 0) + module['questionCount']
+            if sum(section_counts.values()) != report['questionCount']:
+                raise ValueError('SAT library module counts disagree.')
+            if report['fullSAT'] and [(module['section'], module['moduleNumber'], module['questionCount'],
+                                       module.get('durationSeconds')) for module in modules] != [
+                    ('reading-writing', 1, 27, 1920), ('reading-writing', 2, 27, 1920),
+                    ('math', 1, 22, 2100), ('math', 2, 22, 2100)]:
+                raise ValueError('A full SAT assessment needs its four complete timed modules.')
+            source_parts = row.get('sourceFile', '').split('/') if isinstance(row.get('sourceFile'), str) else []
+            metadata = {'collectionId': identity, 'title': row['title'], 'category': category,
+                        'questionCount': report['questionCount'], 'fullSAT': report['fullSAT'],
+                        'sectionCounts': section_counts, 'modules': modules,
+                        'sourceCategory': row['category'], 'subgroup': source_parts[1] if len(source_parts) > 2 else ''}
+            indexed[identity] = (folder, report, metadata)
+        except (ValueError, TypeError, KeyError) as error:
+            errors.append({'collectionId': identity, 'error': str(error)})
+    return True, indexed, errors
+
+
+def read_sat_library(library_root, collection_id=None):
+    """List metadata, or lazily load one explicitly cataloged collection."""
+    if collection_id is not None and (not isinstance(collection_id, str)
+            or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,99}', collection_id)):
+        raise ValueError('Invalid SAT library collection identity.')
+    available, indexed, errors = _sat_library_index(library_root)
+    if collection_id is None:
+        categories = [{'id': key, 'title': title,
+                       'collections': sorted((entry[2] for entry in indexed.values() if entry[2]['category'] == key),
+                                             key=lambda entry: (entry['title'].casefold(), entry['collectionId']))}
+                      for key, title, _ in SAT_LIBRARY_CATEGORIES]
+        return {'schemaVersion': 1, 'available': available, 'categories': categories, 'errors': errors}
+    if collection_id not in indexed:
+        if any(error['collectionId'] == collection_id for error in errors):
+            raise ValueError('The selected SAT collection is unavailable; check the library catalog.')
+        raise FileNotFoundError('SAT library collection not found.')
+    folder, report, metadata = indexed[collection_id]
+    result = _read_sat_collection(folder, collection_id)
+    references = {}
+    for pack in result['packs']:
+        manifest_file = next(entry for entry in pack['files'] if entry['path'].endswith('/pack.json') or entry['path'] == 'pack.json')
+        manifest = json.loads(manifest_file['text'])
+        prefix = manifest_file['path'][:-len('pack.json')]
+        items_file = next(entry for entry in pack['files'] if entry['path'] == prefix + manifest['files']['items'])
+        for item in json.loads(items_file['text'])['items']:
+            identity = (pack['id'], pack['revision'], item['id'], item['revision'])
+            if identity in references:
+                raise ValueError('Duplicate SAT library item reference.')
+            references[identity] = pack['section']
+    if not isinstance(report.get('sourceOrder'), list) or len(report['sourceOrder']) != metadata['questionCount']:
+        raise ValueError('SAT library source order is missing or incomplete.')
+    groups, seen = {}, set()
+    for reference in report['sourceOrder']:
+        if (not isinstance(reference, dict) or reference.get('section') not in {'reading-writing', 'math'}
+                or type(reference.get('moduleNumber')) is not int or reference['moduleNumber'] < 1
+                or type(reference.get('number')) is not int or reference['number'] < 1):
+            raise ValueError('Invalid SAT library source position.')
+        identity = tuple(reference.get(key) for key in ('packId', 'packRevision', 'itemId', 'itemRevision'))
+        if (not isinstance(identity[0], str) or type(identity[1]) is not int
+                or not isinstance(identity[2], str) or type(identity[3]) is not int
+                or identity in seen or references.get(identity) != reference['section']):
+            raise ValueError('SAT library source reference does not match its package revision.')
+        seen.add(identity)
+        groups.setdefault((reference['section'], reference['moduleNumber']), []).append(reference)
+    if len(references) != len(seen):
+        raise ValueError('SAT library source order does not include every item.')
+    modules, canonical_modules = [], []
+    for module in metadata['modules']:
+        source = groups.pop((module['section'], module['moduleNumber']), [])
+        if len(source) != module['questionCount']:
+            raise ValueError('SAT library module source count disagrees.')
+        items = [{key: reference[key] for key in ('packId', 'packRevision', 'itemId', 'itemRevision')}
+                 for reference in source]
+        modules.append({**module, 'items': items})
+        canonical_modules.append({**module, 'items': [
+            {key: reference[key] for key in ('packId', 'packRevision', 'itemId', 'itemRevision')}
+            for reference in sorted(source, key=lambda entry: entry['number'])]})
+    if groups or (result['assessment'] is not None) != metadata['fullSAT']:
+        raise ValueError('SAT library assessment availability disagrees.')
+    assessment = result['assessment']
+    if assessment is not None and (not isinstance(assessment, dict)
+            or assessment.get('schemaVersion') != 'sat-assessment/0.1-draft'
+            or assessment.get('fullSAT') is not True or assessment.get('questionCount') != metadata['questionCount']
+            or assessment.get('breakDurationSeconds') != 600 or assessment.get('modules') != canonical_modules):
+        raise ValueError('SAT library assessment does not match its source modules or package revisions.')
+    return {**result, **metadata, 'modules': modules}
 
 
 def prepare_toefl_preview(root):
@@ -226,9 +393,13 @@ def toefl_preview_status(root):
                 'questionCount': 0, 'practiceUrl': '/toefl/'}
 
 
-def create_server(root=REPOSITORY, port=8888, private_root=None):
+def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_root=None):
     root = Path(root).resolve()
     private = Path(private_root).resolve() if private_root else root / 'local-data'
+    configured_library = sat_library_root or os.environ.get('SAT_LIBRARY_ROOT')
+    library = Path(configured_library).expanduser() if configured_library else private / 'sat-packs/gengdu-offline'
+    if not library.is_absolute():
+        library = root / library
     banks = private / 'question-banks'
     for exam in EXAMS:
         folder = banks / exam
@@ -311,6 +482,16 @@ def create_server(root=REPOSITORY, port=8888, private_root=None):
                 try:
                     return self.reply(200, read_sat_pack_collection(private))
                 except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
+                    return self.reply(400, {'error': str(error)})
+            if route == '/api/sat-library' or route.startswith('/api/sat-library/collections/'):
+                identity = None if route == '/api/sat-library' else route[len('/api/sat-library/collections/'):]
+                try:
+                    return self.reply(200, read_sat_library(library, identity))
+                except FileNotFoundError:
+                    return self.reply(404, {'error': 'SAT library collection not found.'})
+                except OSError:
+                    return self.reply(400, {'error': 'The local SAT library could not be read.'})
+                except (ValueError, TypeError, KeyError, StopIteration, ET.ParseError) as error:
                     return self.reply(400, {'error': str(error)})
             if route == '/api/platform/catalog':
                 exams, errors = [], []
@@ -492,11 +673,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=REPOSITORY)
     parser.add_argument('--port', type=int, default=8888)
+    parser.add_argument('--sat-library-root', type=Path, help='Local SAT catalog folder; defaults to SAT_LIBRARY_ROOT or local-data/sat-packs/gengdu-offline.')
     parser.add_argument('--open', action='store_true')
     args = parser.parse_args()
     prepare_toefl_preview(args.root)
     try:
-        server = create_server(args.root, args.port)
+        server = create_server(args.root, args.port, sat_library_root=args.sat_library_root)
     except OSError as error:
         # Double-clicking the launcher again opens only this same project.
         from urllib.request import urlopen

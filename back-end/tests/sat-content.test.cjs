@@ -143,6 +143,45 @@ test('SAT Markdown and LaTeX render safely using local dependencies', async t =>
       assert.equal(await page.locator('#content code').first().textContent(),'Code $x$');
     });
 
+    await t.test('adjacent inline formulas close independently without swallowing following prose', async () => {
+      const formulas=[String.raw`x^2`,String.raw`\frac{a}{b}`,String.raw`^{87}`,String.raw`^{86}`,String.raw`\sqrt{3}`,String.raw`y+2`];
+      await render('$'+formulas[0]+'$$'+formulas[1]+'$; $'+formulas[2]+'$Sr/$'+formulas[3]+'$Sr. After that $'+formulas[4]+'$$'+formulas[5]+'$.');
+      assert.deepEqual(await page.locator('#content .sat-formula').evaluateAll(nodes => nodes.map(node => node.dataset.latex)),formulas);
+      assert.equal(await page.locator('#content .sat-formula-display').count(),0);
+      assert.equal(await page.locator('#content .sat-formula-error').count(),0);
+      assert.match(await page.locator('#content').textContent(),/Sr\/[^]*Sr\. After that/);
+      await render('Adjacent $a$$b$.\n\n$$c+d$$\n\nLiteral $5 and $10. Escaped \\$7.');
+      assert.equal(await page.locator('#content .sat-formula').count(),3);
+      assert.equal(await page.locator('#content .sat-formula-display').count(),1);
+      assert.match(await page.locator('#content').textContent(),/Literal \$5 and \$10\. Escaped \$7\./);
+      await render(String.raw`Bounds x$\ge$2 and $-$17; currency $5 and $10 remains literal.`);
+      assert.deepEqual(await page.locator('#content .sat-formula').evaluateAll(nodes => nodes.map(node => node.dataset.latex)),[String.raw`\ge`,'-']);
+      assert.match(await page.locator('#content').textContent(),/currency \$5 and \$10 remains literal\./);
+    });
+
+    await t.test('Unicode text diagnostics preserve the exact source glyph and remain auditable', async () => {
+      const formulas=[String.raw`z=4（x＋1）`,String.raw`\left(\frac{r}{3}+3，-\frac{r}{3}+9\right)`,String.raw`\frac{？？}{11}`,String.raw`5丨x-3丨`,String.raw`B(æ)=2^x`];
+      await render(formulas.map(tex => '$$'+tex+'$$').join('\n\n'));
+      await page.evaluate(() => document.fonts.ready);
+      const actual=await page.locator('#content .sat-formula').evaluateAll(nodes => nodes.map(node => ({
+        latex:node.dataset.latex,warnings:node.dataset.latexWarnings,text:node.querySelector('.katex-html').textContent,
+        width:node.getBoundingClientRect().width,height:node.getBoundingClientRect().height
+      })));
+      assert.deepEqual(actual.map(node => node.latex),formulas);
+      for(const [index,node] of actual.entries()) {
+        assert.equal(node.warnings,index===4 ? 'unknownSymbol' : 'unicodeTextInMathMode');
+        assert.ok(node.width>0 && node.height>0);
+      }
+      for(const [index,glyphs] of [[0,'（＋）'],[1,'，'],[2,'？？'],[3,'丨丨'],[4,'æ']]) {
+        for(const glyph of glyphs) assert.ok(actual[index].text.includes(glyph),'original '+glyph+' remains visible');
+      }
+      assert.equal(await page.locator('#content .sat-formula-error').count(),0);
+      // A Unicode warning never excuses broken delimiters, units, syntax, or
+      // the existing forbidden resources/macros/HTML boundary.
+      await render(String.raw`$\left（x\right）$ $\kern1mu$ $\frac{1}{$ $\notARealMacro{x}$`);
+      assert.equal(await page.locator('#content .sat-formula-error').count(),4);
+    });
+
     await t.test('HTML, links, Markdown images, LaTeX resources and macros cannot execute', async () => {
       await render('<img src="https://invalid.example/image" onerror="window.injected=true">\n\n<u onclick="window.injected=true">bad</u> and <u>good</u>\n\n<script>window.injected=true</script>\n\n[bad](javascript:alert(1)) ![remote](https://invalid.example/pixel) [safe](https://example.com/)\n\n$\\includegraphics{https://invalid.example/pixel}$ $\\href{javascript:alert(1)}{x}$ $\\def\\x{hi}\\x$');
       assert.equal(await page.locator('#content img,#content script,#content [onclick],#content [onerror]').count(),0);
