@@ -4,7 +4,7 @@ window.SATStorage = (() => {
   function open() {
     if (dbPromise) return dbPromise;
     dbPromise = new Promise((resolve, reject) => {
-      const request = indexedDB.open('SATPracticeDB', 2);
+      const request = indexedDB.open('SATPracticeDB', 3);
       request.onupgradeneeded = event => {
         const db = request.result;
         if(event.oldVersion<1){
@@ -16,6 +16,8 @@ window.SATStorage = (() => {
         db.createObjectStore('wrongBook', {keyPath: 'questionId'});
         }
         if(!db.objectStoreNames.contains('settings'))db.createObjectStore('settings',{keyPath:'id'});
+        if(!db.objectStoreNames.contains('accountSync'))db.createObjectStore('accountSync',{keyPath:'id'});
+        if(!db.objectStoreNames.contains('accountSyncConflicts'))db.createObjectStore('accountSyncConflicts',{keyPath:'id'});
       };
       request.onsuccess = () => {request.result.onversionchange = () => request.result.close(); resolve(request.result);};
       request.onerror = () => reject(request.error);
@@ -36,11 +38,47 @@ window.SATStorage = (() => {
     const db = await open();
     return new Promise((resolve, reject) => {
       const tx = db.transaction(stores, 'readwrite');
-      tx.oncomplete = () => resolve();
+      tx.oncomplete = () => {resolve();if(tx.accountSyncChanged)window.dispatchEvent(new CustomEvent('sat-account-local-change'));};
       tx.onabort = () => reject(tx.error || new Error('The database update could not be saved.'));
       tx.onerror = () => {};
       try {work(tx);} catch (error) {tx.abort(); reject(error);}
     });
+  }
+  const syncSettings=new Set(['appConfig','practiceDurationPreferences','customPracticeDurationSeconds','timingTargets','questionTimer']);
+  const accountSyncEnabled=()=>Boolean(window.PlatformSession?.user?.id&&window.SATAccountSync);
+  const personalStores=names=>accountSyncEnabled()?[...new Set([...names,'accountSync','accountSyncConflicts'])]:names;
+  function journal(tx,kind,entityId,value,deleted=false){
+    if(!accountSyncEnabled()||kind==='settings'&&!syncSettings.has(entityId))return;
+    const store=tx.objectStore('accountSync'),id=kind+':'+entityId;
+    store.get(id).onsuccess=event=>{
+      const previous=event.target.result||{id,kind,entityId,revision:0,deleted:false};
+      const pending={mutationId:crypto.randomUUID(),revision:previous.revision||0,value:deleted?null:structuredClone(value),deleted,updatedAt:Date.now()};
+      if(kind==='wrongBook'&&!deleted&&previous.deleted)pending.restore=true;
+      if(kind==='settings')pending.baseValue=previous.pending?.baseValue??previous.baseline;
+      store.put({...previous,pending});tx.accountSyncChanged=true;
+    };
+  }
+  function storeWrong(tx,record,knownQuestion){
+    const store=tx.objectStore('wrongBook');
+    store.get(record.questionId).onsuccess=event=>{
+      if(event.target.result)return;
+      const save=question=>{
+        const finish=source=>{
+          if(question?.metadata?.sourceId&&!source){source={id:question.metadata.sourceId,fileName:question.metadata.sourceFileName||'Saved practice',displayName:question.metadata.sourceFileName||'Saved practice',importedAt:question.metadata.importedAt||Date.now(),contentHash:'account-snapshot:'+question.metadata.sourceId,questionCount:1,accountSnapshot:true};tx.objectStore('sources').put(source);}
+          if(question){const questions=tx.objectStore('questions');questions.get(question.id).onsuccess=e=>{if(!e.target.result)questions.put({...structuredClone(question),accountSnapshot:true});};}
+          const value={...record,...(question?{questionSnapshot:structuredClone(question)}:{}),...(source?{sourceSnapshot:structuredClone(source)}:{})};store.add(value);journal(tx,'wrongBook',record.questionId,value);
+        };
+        if(question?.metadata?.sourceId)tx.objectStore('sources').get(question.metadata.sourceId).onsuccess=e=>finish(e.target.result);
+        else finish();
+      };
+      if(knownQuestion){save(knownQuestion);return;}
+      tx.objectStore('questions').get(record.questionId).onsuccess=e=>{
+        if(e.target.result){save(e.target.result);return;}
+        const attempts=tx.objectStore('attempts');
+        if(record.sourceAttemptId)attempts.get(record.sourceAttemptId).onsuccess=a=>save(a.target.result?.questionSnapshots?.find(q=>q.id===record.questionId));
+        else attempts.getAll().onsuccess=a=>save(a.target.result.flatMap(row=>row.questionSnapshots||[]).find(q=>q.id===record.questionId));
+      };
+    };
   }
   const all = store => read(store, 'getAll');
   const get = (store,id) => read(store,'get',id);
@@ -56,7 +94,7 @@ window.SATStorage = (() => {
       };
     });
   }
-  const setSetting=(id,value)=>write(['settings'],tx=>tx.objectStore('settings').put({id,value}));
+  const setSetting=(id,value)=>write(personalStores(['settings']),tx=>{tx.objectStore('settings').put({id,value});journal(tx,'settings',id,value);});
   async function migrateModel(){
     await write(['sources','questions','attempts'],tx=>{
       for(const name of ['sources','questions','attempts']){
@@ -76,6 +114,10 @@ window.SATStorage = (() => {
       const sources=tx.objectStore('sources'),store=tx.objectStore('questions');
       sources.get(source.id).onsuccess=event=>{
         const previous=event.target.result;
+        // A downloaded wrong-book snapshot contains only selected questions.
+        // Loading the actual source must replace that placeholder and fill in
+        // the remaining questions; attempt snapshots keep their own versions.
+        if(previous?.accountSnapshot){if(source.packIdentity&&previous.originalContentHash&&previous.originalContentHash!==source.contentHash){conflict=new Error('This package revision already exists with different content. Increase its revision.');tx.abort();return;}sources.put({...source,accountSnapshot:false});questions.forEach(q=>store.put(q));return;}
         // Revisiting an archived collection reactivates the identical revision;
         // a changed package must declare a new revision to preserve old reviews.
         if(previous?.deleted&&source.packIdentity){
@@ -130,24 +172,24 @@ window.SATStorage = (() => {
   }
   async function saveAttempt(attempt) {
     // Attempt and automatic wrong-book updates either all commit or all roll back.
-    await write(['attempts','wrongBook'],tx=>{
+    await write(personalStores(['attempts','wrongBook','questions','sources']),tx=>{
       const attempts=tx.objectStore('attempts'), wrong=tx.objectStore('wrongBook');
       attempts.get(attempt.id).onsuccess=event=>{
         if(event.target.result?.status==='completed') return; // Completed settlement is idempotent.
-        attempts.put(attempt);
+        attempts.put(attempt);journal(tx,'attempts',attempt.id,attempt);
         if(attempt.status!=='completed')return;
         Object.entries(attempt.answers).forEach(([questionId,answer])=>{
           if(answer.correctness!==false) return;
-          wrong.get(questionId).onsuccess=e=>{if(!e.target.result) wrong.add({questionId,addedAt:attempt.completedAt,reason:'incorrect',sourceAttemptId:attempt.id});};
+          storeWrong(tx,{questionId,addedAt:attempt.completedAt,reason:'incorrect',sourceAttemptId:attempt.id},attempt.questionSnapshots?.find(q=>q.id===questionId));
         });
       };
     });
   }
   async function addToWrongBook(record) {
-    await write(['wrongBook'],tx=>{const store=tx.objectStore('wrongBook');store.get(record.questionId).onsuccess=e=>{if(!e.target.result)store.add(record);};});
+    await write(personalStores(['wrongBook','questions','sources','attempts']),tx=>storeWrong(tx,record));
   }
-  const removeFromWrongBook=id=>write(['wrongBook'],tx=>tx.objectStore('wrongBook').delete(id));
-  const deleteAttempt=id=>write(['attempts'],tx=>tx.objectStore('attempts').delete(id));
+  const removeFromWrongBook=id=>write(personalStores(['wrongBook']),tx=>{tx.objectStore('wrongBook').delete(id);journal(tx,'wrongBook',id,null,true);});
+  const deleteAttempt=id=>write(personalStores(['attempts']),tx=>{tx.objectStore('attempts').delete(id);journal(tx,'attempts',id,null,true);});
   async function removeLibrary(kind,id){
     let blocked;
     try{await write(['attempts','questions','sources'],tx=>{

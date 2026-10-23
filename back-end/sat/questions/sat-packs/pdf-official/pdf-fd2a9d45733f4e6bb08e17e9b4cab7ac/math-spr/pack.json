@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac-math-spr",
+  "revision": 1,
+  "title": "Bluebook Pracitce 11数学 Easy · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f4560b0db419da9b39803e23219b7cad4980c9385446b31e89e5b695a6208283",
+      "path": "assets/f4560b0db419da9b39803e23219b7cad4980c9385446b31e89e5b695a6208283.png",
+      "mediaType": "image/png",
+      "sha256": "f4560b0db419da9b39803e23219b7cad4980c9385446b31e89e5b695a6208283",
+      "byteLength": 12560,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "id": "asset-6209f206d30bce1a65072e0237b6c21fe93910bfcdfefea552fbcad945941cf1",
+      "path": "assets/6209f206d30bce1a65072e0237b6c21fe93910bfcdfefea552fbcad945941cf1.png",
+      "mediaType": "image/png",
+      "sha256": "6209f206d30bce1a65072e0237b6c21fe93910bfcdfefea552fbcad945941cf1",
+      "byteLength": 8425,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q17"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

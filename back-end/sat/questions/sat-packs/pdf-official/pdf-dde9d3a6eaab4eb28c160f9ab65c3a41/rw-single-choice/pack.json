@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-dde9d3a6eaab4eb28c160f9ab65c3a41-rw-single-choice",
+  "revision": 1,
+  "title": "2025年12月亚太阅读语法第1套M2-Easy（去重版） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f1e9daa944b1f22e4fe9a8d625492d930f1436776b54debf859d43674628f55d",
+      "path": "assets/f1e9daa944b1f22e4fe9a8d625492d930f1436776b54debf859d43674628f55d.png",
+      "mediaType": "image/png",
+      "sha256": "f1e9daa944b1f22e4fe9a8d625492d930f1436776b54debf859d43674628f55d",
+      "byteLength": 12411,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dde9d3a6eaab4eb28c160f9ab65c3a41",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "id": "asset-a0724ab17e00a5de918273463fff064f74790cee8b338e7b31dfb2ad9af9adb7",
+      "path": "assets/a0724ab17e00a5de918273463fff064f74790cee8b338e7b31dfb2ad9af9adb7.png",
+      "mediaType": "image/png",
+      "sha256": "a0724ab17e00a5de918273463fff064f74790cee8b338e7b31dfb2ad9af9adb7",
+      "byteLength": 13419,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-dde9d3a6eaab4eb28c160f9ab65c3a41",
+        "sourceQuestionId": "m2-q9"
+      }
+    }
+  ]
+}

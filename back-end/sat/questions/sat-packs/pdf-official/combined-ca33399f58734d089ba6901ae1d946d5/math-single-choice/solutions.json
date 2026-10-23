@@ -1,0 +1,764 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "题目指出是从整个组织中随机选取，因此总样本量是135 人，题目要求的条件是这名成\n员“至少45 岁”满足条件的人数是110 人。因此概率为$\\frac{110}{135}$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形内角和为180 度，所以角$Z$ 的度数为$180-58-87=35$ 度，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$r+g\\lt 39$，所以当$r=0$ 时，$g\\lt 39$。当$r=2$ 时，$g\\lt 37$。当$r=4$ 时，$g\\lt 36$。选项$d$ 满足条件"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由$8x-10=6$ 解出$8x=16$，因此$8x+10=16+10=26$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时乘以$-172x$ 得到$-172xv=w$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以2 得到 $6x=2$，两边同时取平方得到$6x=4$，所以$x=\\frac{2}{3}$。最后\n$30x=30(\\frac{2}{3})=20$，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由$p(5)=105$ 得出$x=5$，即天数为5。$p(x)=105$ 意味着剩余105 张纸。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x-6=0$ 或$x+4=0$，解出$x=6$ 或$-4$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由直角三角形得到$x^{2}=4.5^{2}+2.4^{2}$，解出$x^{2}=26.01$。已知5 的平方是 25 且6 的平方是 36，\n因为26.01 在25 和36 之间，所以$x$ 在5 和6 之间"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从函数图像看出渐近线为$y=7$，所以函数的常数项为7，排除选项$C$ 和$D$。因为函数是递\n增的，且指数部分是3 大于1，所以指数部分的系数必须大于0，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将角度转换为弧度需要将角度乘以 $Π/180$，所以 $30=30\\times \\pi /180=\\pi /6$\n$$\\circ$$\n。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由点$(60, 4.58)$得到$x=60$, $C(x)=4.58$。$x$ 表示平均速度，所以平均速度为60 千米每小时。\n$C(x)$表示燃油费用，所以燃油费用为4.58 美元。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "任取表中的两个点，比如$(-5, n+53)$ 和$(0, n)$。斜率为 $y2-y1/x2-x1=n-(n+53)/0-(-5)=\\frac{-53}{5}$\n选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一元二次方程的解为 $χ=-b\\pm b2-4ac/2a=-5\\pm 52-4(3)(-6)/2(3)=-5\\pm \\frac{97}{6}$ 较大的解为\n$\\frac{-5}{6}+\\frac{97}{6}$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从图中取两个点$(0, 7)$和$(5, 0)$，则斜率为 $0-\\frac{7}{5}-0=\\frac{-7}{5}$。设直线ℓ的斜率为$m$\n,因为两条直线互相垂直，则 $m (\\frac{-7}{5})=-1$\n⋅\n，解出$m=\\frac{5}{7}$。因为直线ℓ经过点$(0,4)$，所以方程\n为 $y-4=\\frac{5}{7}(x-0)$，化简得$-5x+7y=28$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$g(c+1)$比$m$ 多$62\\%$，所以$g(c+1)=(1+62\\%)m=1.62m$。因为 $g ( x )=a b x$ 所以\n$g ( c )=a b c=m$ 且 $g ( c+1 )=a b c+1=a b c$\n\n⋅\n$$b$$\n。因此$g(c+1)=mb$。结合$g(c+1)=1.62m$，得到$b=1.62$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "取直线上两个点$(4, 5)$和$(7, 3)$，斜率为 $3-\\frac{5}{7}-4=\\frac{-2}{3}$ 约等于$-0.7$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为等式两边相同，所以等式对所有$x$ 都成立，因此有无穷多个解，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "厨房地板的面积为 $13 2=169$ 平方英尺，所以费用为$8.75(169)+100=1578.75$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当$x$ 每增加1 时，$y$ 减少$\\frac{7}{2}$。所以斜率为 $\\frac{-7}{2}/1=- \\frac{7}{2}$。因此直线方程为 $y - 5$ = −\n$\\frac{7}{2} ( x - ( - 2 ) )$。化简得 $y=- \\frac{7}{2} x - 2$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设半径为$r$。底边周长为 $2 \\pi r=210$，解出 $r=105/Π$。底面和顶面的面积和为 $2 Π$\n$( 105/Π ) 2$ 。侧面面积为(21)(210)。所以总表面积为 $(21) ( 210 )+2 Π$\n$( 105/Π ) 2$ ，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当$x\\gt -8$ 时，$x+8$ 不等于0，可以将分子分母同除$x+8$ 得到 $5/x+8$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数图像经过点$(20, 0)$，表示0 盒马克杯，20 盒纸杯。因此如果640 美元全用来买纸杯，\n可以买20 盒。所以没盒纸杯的价钱是$\\frac{640}{20}=32$ 美元，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为其中3 个电阻的总电阻是70 欧姆，另外5 个电阻每个最大是40 欧姆，所以总电阻最\n大是$70+5(40)=270$ 欧姆，即$x\\le 270$。因为每个电阻的阻值都是正的，所以$70+5(0)\\lt x$。综\n上$70\\lt x\\le 270$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $(\\frac{1}{6})x$ 的底数为正数，所以 $(\\frac{1}{6})x\\gt 0$。因此 $f(x)=7((\\frac{1}{6})x+8)\\gt 7(0+8)=56$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "任取两个点$(-5, 91+4k)$和$(5, 91)$，斜率为 $91+4k-91/-5-5=-2k/5$。因此直线方程\n为 $y-91=-2k/5(x-5)$。化简得$2kx+5y=455+10k$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "如果 $x-a\\ne 0$，将等式两边同时除以$x$-a 得到$1=x-31$，解出$x=32$。如果$x-a=0$，即$x=a$，方程\n变为$0=0$，恒成立。因此$x=32$ 或a。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(a)=4a-6$。所以4a$-6+1=3a$，解出$a=5$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "指数模型的一般公式为 $y=a b t$ ，其中a 是初始值，$b$ 是增长因子，$t$ 是增长周期的\n数量。由题中知，初始值$a=8$。因为经过一个周期后新的数量是原来的$1+150\\%=2.5$，所以\n$b=2.5$。因为这种增长每19 天发生一次，所以$x$ 天是$x/19$ 个增长周期。因次 $y=8 ( 2.5$\n$) x / 19$ ，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为除了77.8 外的所有数据都小于65，所以原始数据的平均值小于77.8。因此移除一个\n大于平均数的数值后，平均值会变小，I 正确。\n图中一共有11 个值，中位数在第，6 个数值。移除77.8 后，中位数在第5，6 个数值。因\n为77.8 是最大的数值，移除之后第5，6 个数值不变，所以中位数不变.\n选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由题中得$b=0.89c$，即$c=b/0.89$。由题中得$a=23.14(b+c)=23.14(b+(b$/\n$0.89))=23.14b+26b=49.14b=4914\\%b$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$a/c=k$ 且$b/d=k$，所以$a/c=b/d$。因此$VW$ 平行于$XZ$。进一步三角形$YVW$ 和三角形\n$YXZ$ 相似，有$VW/XZ=YV/YX$，即$\\frac{35}{55}=a/(a+c)$，交叉相乘得到$55a=35(a+c)$，化简得到\n$20a=35c$，即$a/c=\\frac{35}{20}=\\frac{7}{4}$。因此$k=\\frac{7}{4}$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d8d3d2334d584b579b648e9c1e6a8385-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在直角三角形$XYZ$ 中$\\tan Z=YX/XZ=\\cot Y$。在直角三角形$YXW$ 中$\\cot$\n$Y=YW/XW=\\frac{588}{441}$。因此$\\tan Z=\\frac{588}{441}=\\frac{196}{147}=\\frac{4}{3}$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

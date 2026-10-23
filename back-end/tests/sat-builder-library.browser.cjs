@@ -171,6 +171,81 @@ async function runMain(page,trace,control,url){
   await page.locator('[data-action=start]').click();await page.locator('.practice-ready').waitFor();assert.equal(await page.evaluate(()=>SATApp.appState.activePractice.questionIds.length),10);
   await page.locator('[data-action=ready-back]').click();
   assert.ok(!trace.requests.includes('/api/sat-library-backup'),'Builder never activates or archives a collection');await assertHistory(page,before);
+  return page.evaluate(async sourceId=>({source:await SATStorage.get('sources',sourceId),questions:(await SATStorage.all('questions')).filter(question=>question.metadata.sourceId===sourceId).sort((a,b)=>a.metadata.sourceQuestionIndex-b.metadata.sourceQuestionIndex)}),rw.source.id);
+}
+
+async function seedAccountSnapshot(page,fixture,{conflictingHash=false}={}){
+  return page.evaluate(async({fixture,conflictingHash})=>{
+    const source={...fixture.source,accountSnapshot:true,contentHash:'account-snapshot:'+fixture.source.id,originalContentHash:conflictingHash?'conflicting-original-content-hash':fixture.source.contentHash};
+    const question={...fixture.questions[0],accountSnapshot:true};
+    await SATStorage.importSet(source,[question]);
+    const historyQuestion={...structuredClone(question),prompt:'Historical snapshot must remain unchanged.'};
+    const history={id:'snapshot-history-sentinel',practiceName:'Original snapshot history',status:'completed',questionIds:[question.id],sourceIds:[source.id],questionSnapshots:[historyQuestion],totalQuestions:1,correctCount:1,incorrectCount:0,unansweredCount:0,ungradedCount:0,elapsedMs:10,durationSeconds:1920,startedAt:1,completedAt:2,savedAt:2,answers:{[question.id]:{selectedOption:0,answered:true,correctness:true}}};
+    await SATStorage.saveAttempt(history);
+    await SATStorage.addToWrongBook({questionId:question.id,addedAt:3,reason:'manual',sourceAttemptId:history.id});
+    return {history:await SATStorage.get('attempts',history.id),wrong:await SATStorage.get('wrongBook',question.id)};
+  },{fixture,conflictingHash});
+}
+
+async function inspectSnapshotSource(page,fixture,before,{complete}={}){
+  const after=await page.evaluate(async sourceId=>({source:await SATStorage.get('sources',sourceId),questions:(await SATStorage.all('questions')).filter(question=>question.metadata.sourceId===sourceId),history:await SATStorage.get('attempts','snapshot-history-sentinel'),wrong:(await SATStorage.all('wrongBook'))[0]}),fixture.source.id);
+  assert.deepEqual(after.history.questionSnapshots,before.history.questionSnapshots,'filling a source must not rewrite historical attempt snapshots');
+  assert.deepEqual(after.wrong,before.wrong,'filling a source must not rewrite the saved wrong-book snapshot');
+  assert.equal(after.questions.length,complete?fixture.questions.length:1);
+  if(complete){
+    assert.equal(after.source.accountSnapshot,false,'a complete imported source replaces the partial account placeholder');
+    assert.equal(after.source.contentHash,fixture.source.contentHash);
+    assert.ok(after.questions.every(question=>question.packContent&&question.answerRule&&!question.indexOnly),'every question gains its complete answerable content');
+  }else assert.equal(after.source.accountSnapshot,true,'a rejected hash must not replace the partial source');
+}
+
+async function selectSecondSnapshotQuestion(page,fixture){
+  await openBuilder(page);await filter(page,'sourceId',fixture.source.id);
+  await page.locator('[data-filter=search]').fill(fixture.questions[1].prompt);
+  assert.equal(await page.locator('[data-select-question]').count(),1,'the second question is selectable through the index before its content is local');
+  await page.locator('[data-select-question]').check();
+  assert.equal(await selected(page),'1 Questions');
+  await page.locator('[data-action=start]').click();
+}
+
+async function selectSnapshotCollection(page){
+  await page.locator('[data-action=dashboard]').first().click();
+  await page.locator('[data-action=startPractice]').first().click();
+  await page.waitForFunction(()=>SATLibrary.state.status==='ready');
+  await page.locator('[data-action=library-category][data-category="英语"]').click();
+  await page.locator('[data-action=library-start][data-id="'+rw.metadata.collectionId+'"]').click();
+}
+
+async function runAccountSnapshotHydration(browser,url,fixture){
+  assert.equal(fixture.questions.length,rw.questions.length,'the snapshot fixture comes from the fully loaded original source');
+  for(const flow of ['builder','start-practice','hash-conflict']){
+    const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),trace=await intercept(page);
+    try{
+      await page.goto(url);await page.evaluate(()=>SATApp.ready);await waitIndex(page);
+      const before=await seedAccountSnapshot(page,fixture,{conflictingHash:flow==='hash-conflict'});
+      await page.reload();await page.evaluate(()=>SATApp.ready);await waitIndex(page);
+      await inspectSnapshotSource(page,fixture,before,{complete:false});
+      assert.equal(selectedRequests(trace.requests).length,0,'restoring one account snapshot must not download its collection eagerly');
+      if(flow==='start-practice')await selectSnapshotCollection(page);
+      else await selectSecondSnapshotQuestion(page,fixture);
+      if(flow==='hash-conflict'){
+        await page.locator('#appNotice:not([hidden])').waitFor();await page.waitForFunction(()=>!SATApp.appState.busy);
+        assert.match(await page.locator('#appNotice').innerText(),/different content/i,'Builder must reject a conflicting original snapshot hash');
+        assert.equal(await page.locator('.practice-ready').count(),0);await inspectSnapshotSource(page,fixture,before,{complete:false});
+        await selectSnapshotCollection(page);
+        await page.locator('#appNotice:not([hidden])').waitFor();await page.waitForFunction(()=>!SATApp.appState.busy);
+        assert.match(await page.locator('#appNotice').innerText(),/different content/i,'Start Practice must reject the same conflicting hash');
+        assert.equal(await page.locator('.practice-ready').count(),0);await inspectSnapshotSource(page,fixture,before,{complete:false});
+      }else{
+        await page.locator('.practice-ready').waitFor();
+        const plan=await page.evaluate(()=>structuredClone(SATApp.appState.activePractice));
+        assert.deepEqual(plan.questionIds,flow==='builder'?[fixture.questions[1].id]:fixture.questions.map(question=>question.id));
+        await inspectSnapshotSource(page,fixture,before,{complete:true});
+        assert.deepEqual([...new Set(selectedRequests(trace.requests))],['/api/sat-library/collections/'+rw.metadata.collectionId],'each flow loads only the selected source collection');
+      }
+      assert.deepEqual(trace.unexpected,[]);assert.deepEqual(trace.errors,[]);
+    }finally{await context.close();}
+  }
 }
 
 async function runIndexRetry(page,trace,control,url){
@@ -189,9 +264,10 @@ async function runIndexRetry(page,trace,control,url){
   try{
     browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{channel:'chrome'})});
     const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),control={},trace=await intercept(page,control),url='http://127.0.0.1:'+server.address().port+'/sat/html/index.html';
-    await runMain(page,trace,control,url);assert.deepEqual(trace.unexpected,[]);assert.deepEqual(trace.errors,[]);
+    const snapshotFixture=await runMain(page,trace,control,url);assert.deepEqual(trace.unexpected,[]);assert.deepEqual(trace.errors,[]);
+    await runAccountSnapshotHydration(browser,url,snapshotFixture);
     const retryContext=await browser.newContext({viewport:{width:1440,height:1000}}),retryPage=await retryContext.newPage(),retryControl={},retryTrace=await intercept(retryPage,retryControl);
     await runIndexRetry(retryPage,retryTrace,retryControl,url);assert.deepEqual(retryTrace.unexpected,[]);assert.deepEqual(retryTrace.errors,[]);
-    console.log(JSON.stringify({ok:true,syntheticOnly:true,indexedQuestions:indexed.length,localQuestions:2,selectedCollectionRequests:selectedRequests(trace.requests).length,indexRetry:true}));
+    console.log(JSON.stringify({ok:true,syntheticOnly:true,indexedQuestions:indexed.length,localQuestions:2,selectedCollectionRequests:selectedRequests(trace.requests).length,indexRetry:true,accountSnapshotBuilder:true,accountSnapshotStartPractice:true,snapshotHistoryPreserved:true,snapshotHashConflictRejected:true}));
   }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});

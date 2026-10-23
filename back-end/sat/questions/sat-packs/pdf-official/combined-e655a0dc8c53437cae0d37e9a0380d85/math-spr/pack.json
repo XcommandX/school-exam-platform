@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-d8bfb013c9bc423f83d9dd6df637eb49-math-spr",
+  "revision": 1,
+  "title": "2026年8月北美第1套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-e9789530b8fc7ce7b71bdfa92f729f33727145af22225b17fc6a4886ccc2fb38",
+      "path": "assets/e9789530b8fc7ce7b71bdfa92f729f33727145af22225b17fc6a4886ccc2fb38.png",
+      "mediaType": "image/png",
+      "sha256": "e9789530b8fc7ce7b71bdfa92f729f33727145af22225b17fc6a4886ccc2fb38",
+      "byteLength": 8512,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-d8bfb013c9bc423f83d9dd6df637eb49",
+        "sourceQuestionId": "m1-q22"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -28,7 +28,7 @@ local-data/sat-packs/gengdu-offline/
     <实际题型包>/{pack.json,items.json,solutions.json,assets/}
 ```
 
-每个分类 ZIP 包含该分类的全部转换结果、资源、目录索引、使用说明与逐文件 SHA 清单。可解压后在 SAT Add Questions → Choose SAT Pack Folder 选择单个题集或分类目录。此入口只导入题型包；它不安装完整 assessment，也不自动切换 `active.json`。
+每个分类 ZIP 包含该分类的全部转换结果、资源、目录索引、使用说明与逐文件 SHA 清单。2026-10-24 已移除 Add Questions 的旧手动导入界面；现有题集由 Start Practice / Practice Builder 读取配置的题库目录（见 [SAT 模块](sat/README.md)），解压 ZIP 本身不会切换 `active.json`。
 
 目录名称按用户后续整理统一为“全真模考”“数学真题”“英语真题”。`catalog.json` 的 `category`、`categories` 及身份表键仍保留来源“测试”“数学”“英语”，用 `categoryDirectories` 显式映射显示目录；每条 `directory`、`reportFile`、身份表目录和 ZIP 内路径同步到新名称。“全真模考”是来源分类名，不把其中非完整的题集标成完整 SAT。
 

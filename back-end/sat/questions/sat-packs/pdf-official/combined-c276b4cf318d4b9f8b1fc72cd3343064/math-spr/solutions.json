@@ -1,0 +1,359 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "36"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意列方程 $45=(p/100) \\times 125$，解得 $p=(45 \\times 100) / 125=36$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "17"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆的标准方程为 $(x - h)^2+(y - k)^2=r^2$，对比可知 $r^2=289$，且半径 $r$ 为正数，所以 $r$ =\n$sqrt(289)=17$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18750"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "1 leuga = 7500 pedes，因此 2.5 leugas = $2.5 \\times 7500=18750$ pedes。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "150"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "距离 = 速度 × 时间 = $15 \\times 10=150$ 米。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "5 批香蕉煎饼用面粉 $5 \\times 1.5=7.5$ 杯，剩余面粉 $11 - 7.5=3.5$ 杯，苹果煎饼每批需 0.75\n杯，最多可做 $\\frac{3.5}{0.75} \\approx 4.67$，取整为 4 批。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "342"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设球$B$ 的半径为 $r_B$，由球$B$ 体积公式 $\\frac{4}{3} \\pi (r_B)^3=972\\pi$，两边除以$\\pi$ 得 $\\frac{4}{3} (r_B)^3$ =\n972，再乘以 $\\frac{3}{4}$ 得 $(r_B)^3=729$，因为 $9^3=729$，所以 $r_B=9$ 英寸；又因球A 半径是\n球$B$ 的18 倍，故球A 半径 $r_A=18 \\times 9=162$ 英寸；由于 $MP$ 为球A 直径、$NP$ 为球$B$ 直\n径，且 $P$ 在线段 $MN$ 上，所以 $MN=MP+NP=2r_A+2r_B=2 \\times 162+2 \\times 9=324+18$ =\n342 英寸，最终答案 342。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "50/3",
+          "1667/100"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "价格增加了 $21 - 18=3$ 美元，相对于原价 18 美元的百分比为 $(\\frac{3}{18}) \\times 100\\%=16.666...\\%$，\n所以 $p=\\frac{50}{3} \\approx 16.67$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "333/1000",
+          "3333/10000",
+          "1/3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将两点代入 $ax$ + by = 1，得 $b=\\frac{1}{6}$，$3a+0=1$，故 $a=\\frac{1}{3}$（与选项核对：标准答案应为 a\n= $\\frac{1}{6}$ 或 $a=\\frac{1}{3}$，需核实）。实际计算：点$(3,0)$代入得$3a=1$，$a=\\frac{1}{3}$；点$(0,6)$代入得$6b$ =\n1，$b=\\frac{1}{6}$。因此 $a=\\frac{1}{3}$。若题目答案为$\\frac{1}{6}$，可能为题干有误，按计算应为 $a=\\frac{1}{3}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "17/3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $DE // BC$，所以三角形 $ADE$ 相似于三角形 $ABC$。$CE=2AE$，则 $AC=AE+CE=AE$\n$+2AE=3AE$，所以 $AE/AC=\\frac{1}{3}$。根据相似比，$DE/BC=AE/AC=\\frac{1}{3}$，因此 $DE=BC/3$ =\n$\\frac{17}{3}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-45"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "原方程移项得 $x+45=\\sqrt{x+45}$，两边平方得 $(x+45)^{2}=x+45$，移项因式分解得 $(x+45)$\n$(x+44)=0$，解得 $x=-45$ 或 $x=-44$。代入原方程均成立，因 $s \\lt t$，所以较小的解 $s$ =\n$-45$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-196"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开得 $f(x)=4x^{2}+8x - 192=4(x^{2}+2x) - 192=4(x+1)^{2} - 196$，因此最小值为 $-196$（顶点处\n取得）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1949/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "底面面积 = $14 \\times 7=98$。长边侧面（以14 为底）的斜高 = $\\sqrt{13^{2}+(\\frac{7}{2})^{2}}=\\sqrt{169+12.25}$ =\n$\\sqrt{181.25} \\approx 13.462$，两个长边侧面积 = $2 \\times \\frac{1}{2} \\times 14 \\times 13.462 \\approx 188.47$。短边侧面（以7 为\n底）的斜高 = $\\sqrt{13^{2}+7^{2}}=\\sqrt{218} \\approx 14.765$，两个短边侧面积 = $2 \\times \\frac{1}{2} \\times 7 \\times 14.765 \\approx$\n103.36。总表面积 = $98+188.47+103.36 \\approx 389.83$，取一位小数为 389.8。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-11be491de3c34b30bc472a5a813f3e69-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "854"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察 $p(x)$ 的形式，它关于 $x=-6$ 对称（因为每个因式都含 $(x+6)^{2}$）。因此 $p(-12)=p(0)$，\n$p(-5)=p(-7)$。已知 $p(0)=812$，$p(-7)=42$，所以 $p(-12)+p(-5)=812+42=854$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

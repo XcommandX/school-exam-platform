@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-33e014ed082a41bdab5da7b8a3dcaecf-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 5 阅读语法（Routing+Hard） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-a987f458a245f6f35325befe7ffde913bdf877f54202680b0058796c2f2b6a84",
+      "path": "assets/a987f458a245f6f35325befe7ffde913bdf877f54202680b0058796c2f2b6a84.png",
+      "mediaType": "image/png",
+      "sha256": "a987f458a245f6f35325befe7ffde913bdf877f54202680b0058796c2f2b6a84",
+      "byteLength": 63189,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "asset-3690b9f446960158da27e9d3610eda5184a5e0715fbc9f22ffd2391841a51688",
+      "path": "assets/3690b9f446960158da27e9d3610eda5184a5e0715fbc9f22ffd2391841a51688.png",
+      "mediaType": "image/png",
+      "sha256": "3690b9f446960158da27e9d3610eda5184a5e0715fbc9f22ffd2391841a51688",
+      "byteLength": 42191,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "id": "asset-3f339384da95c5a59a489b18959a5b21812175fed0d2585d19a6f61f1ef74d3e",
+      "path": "assets/3f339384da95c5a59a489b18959a5b21812175fed0d2585d19a6f61f1ef74d3e.png",
+      "mediaType": "image/png",
+      "sha256": "3f339384da95c5a59a489b18959a5b21812175fed0d2585d19a6f61f1ef74d3e",
+      "byteLength": 35226,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "id": "asset-1f41e56597fd119a670b41e669a9dfa71c3b43ba446039a90dd28b7aadde75d3",
+      "path": "assets/1f41e56597fd119a670b41e669a9dfa71c3b43ba446039a90dd28b7aadde75d3.png",
+      "mediaType": "image/png",
+      "sha256": "1f41e56597fd119a670b41e669a9dfa71c3b43ba446039a90dd28b7aadde75d3",
+      "byteLength": 19095,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "id": "asset-70fa190041825dea614c9529ead670451b69880e3bd9b43f5f0342d71def48c5",
+      "path": "assets/70fa190041825dea614c9529ead670451b69880e3bd9b43f5f0342d71def48c5.png",
+      "mediaType": "image/png",
+      "sha256": "70fa190041825dea614c9529ead670451b69880e3bd9b43f5f0342d71def48c5",
+      "byteLength": 22858,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "id": "asset-b73f6c18b58466b4574a8c39c9201447b36dc060b5d1715800f46617760b2f75",
+      "path": "assets/b73f6c18b58466b4574a8c39c9201447b36dc060b5d1715800f46617760b2f75.png",
+      "mediaType": "image/png",
+      "sha256": "b73f6c18b58466b4574a8c39c9201447b36dc060b5d1715800f46617760b2f75",
+      "byteLength": 37160,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "id": "asset-36c4c10fc751773947a2f6877d1009532bc4f4213cb5cd48b37bc8fa446a9037",
+      "path": "assets/36c4c10fc751773947a2f6877d1009532bc4f4213cb5cd48b37bc8fa446a9037.png",
+      "mediaType": "image/png",
+      "sha256": "36c4c10fc751773947a2f6877d1009532bc4f4213cb5cd48b37bc8fa446a9037",
+      "byteLength": 40321,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+        "sourceQuestionId": "m2-q12"
+      }
+    }
+  ]
+}

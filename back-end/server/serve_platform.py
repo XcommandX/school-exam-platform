@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Local, loopback-only entry point for the unified study workspace.
 
-Question banks are local private files. No authentication or cloud storage is
-implemented by this development server; it must not be exposed to a network.
+Unified accounts and per-user records use a private SQLite database.
+This development server remains loopback-only; public deployment requires HTTPS
+and a production serving and backup configuration.
 """
 import argparse
 import base64
@@ -26,6 +27,7 @@ import xml.etree.ElementTree as ET
 REPOSITORY = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY / 'back-end'))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
+from server.platform_auth import make_auth_handler
 
 MAX_BYTES = 20 * 1024 * 1024
 MAX_PACK_BYTES = 128 * 1024 * 1024
@@ -197,6 +199,27 @@ def _read_sat_collection(collection, collection_id):
 
 def _sat_library_index(library_root):
     """Match stable catalog identities to real folders, including renamed folders."""
+    if isinstance(library_root, (tuple, list)):
+        # Default libraries remain independently authored catalogs. Merge only
+        # their checked metadata; never rewrite either catalog or its IDs.
+        available, indexed, errors, duplicates = False, {}, [], set()
+        for root in library_root:
+            try:
+                found, entries, failures = _sat_library_index(root)
+            except (OSError, ValueError, TypeError, KeyError):
+                errors.append({'collectionId': None, 'error': 'A configured SAT library catalog could not be read safely.'})
+                continue
+            available = available or found
+            errors.extend(failures)
+            for identity, entry in entries.items():
+                if identity in indexed or identity in duplicates:
+                    duplicates.add(identity)
+                    indexed.pop(identity, None)
+                else:
+                    indexed[identity] = entry
+        errors.extend({'collectionId': identity, 'error': 'Multiple SAT libraries claim this collection identity.'}
+                      for identity in sorted(duplicates))
+        return available, indexed, errors
     library_root = Path(library_root)
     catalog_path = _safe_local_path(library_root, 'catalog.json')
     if not catalog_path.exists():
@@ -575,9 +598,13 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     root = Path(root).resolve()
     private = Path(private_root).resolve() if private_root else root / 'local-data'
     configured_library = sat_library_root or os.environ.get('SAT_LIBRARY_ROOT')
-    library = Path(configured_library).expanduser() if configured_library else root / 'back-end/sat/questions/sat-packs/gengdu-offline'
-    if not library.is_absolute():
-        library = root / library
+    if configured_library:
+        library = Path(configured_library).expanduser()
+        if not library.is_absolute():
+            library = root / library
+    else:
+        library_base = root / 'back-end/sat/questions/sat-packs'
+        library = (library_base / 'gengdu-offline', library_base / 'pdf-official')
     banks = private / 'question-banks'
     for exam in EXAMS:
         folder = banks / exam
@@ -589,9 +616,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     lock = threading.Lock()
     question_index_lock, question_index_cache = threading.Lock(), {}
     toefl_preview = toefl_preview_status(root)
-    session = {'mode': 'test-admin', 'loginEnabled': False, 'authenticated': False,
-               'user': {'id': 'local-test-admin', 'name': 'admin', 'displayName': 'admin',
-                        'role': 'admin', 'isTest': True}}
+    auth = make_auth_handler(private)
 
     def read_sets(exam):
         found, errors = [], []
@@ -632,6 +657,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             self.send_header('Cache-Control', cache)
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Referrer-Policy', 'same-origin')
+            self.send_header('X-Frame-Options', 'DENY')
             self.end_headers()
             self.wfile.write(body)
 
@@ -641,6 +667,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
         def redirect(self, location):
             self.send_response(302)
             self.send_header('Location', location)
+            self.send_header('Cache-Control', 'no-store')
             self.send_header('Content-Length', '0')
             self.end_headers()
 
@@ -653,8 +680,20 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                 return self.reply(404, {'error': 'Not found.'})
             if route == '/api/platform/status':
                 return self.reply(200, {'service': 'school-exam-platform-v1', 'project': project})
-            if route == '/api/auth/session':
-                return self.reply(200, session)
+            if auth.handle(self, route):
+                return
+            session = auth.authenticate(self.headers.get('Cookie', ''))
+            user = session['user'] if session else None
+            public = (route in {'/login', '/login/', '/web/login.html'}
+                      or route.startswith('/web/') and Path(route).suffix in {'.css', '.js', '.svg', '.png', '.ico'})
+            if not user and not public:
+                if route.startswith('/api/'):
+                    return self.reply(401, {'error': '请先登录。'})
+                if route in {'/', '/index.html', '/account', '/accounts', '/sat', '/sat/', '/toefl', '/toefl/'} or route.endswith('.html'):
+                    return self.redirect('/login?next=' + quote(self.path, safe=''))
+                return self.reply(404, {'error': 'Not found.'})
+            if route in {'/login', '/login/'} and user:
+                return self.redirect('/')
             if route == '/api/toefl/status':
                 return self.reply(200, toefl_preview)
             if route == '/api/sat-packs':
@@ -703,7 +742,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                                   **({'preview': toefl_preview} if exam == 'toefl' else {})})
                     errors.extend({'exam': exam, **failure} for failure in failures)
                 return self.reply(200, {'schemaVersion': 1, 'exams': exams, 'errors': errors,
-                                        'auth': {'mode': 'test-admin', 'loginEnabled': False, 'authenticated': False}})
+                                        'auth': {'mode': 'session', 'loginEnabled': True, 'authenticated': True}})
             if route.startswith('/api/exams/'):
                 parts = route.strip('/').split('/')
                 if len(parts) not in {4, 5} or parts[2] not in EXAMS or parts[3] != 'sources':
@@ -716,7 +755,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                 return self.reply(200, document) if document else self.reply(404, {'error': 'Source not found.'})
             if route == '/api/question-bank/status':
                 return self.reply(200, {'service': 'sat-question-bank-v1', 'project': project,
-                                       'name': 'SAT local question bank', 'token': token, 'writable': True})
+                                       'name': 'SAT local question bank', 'token': token, 'writable': user['role'] == 'admin'})
             if route == '/api/question-bank':
                 rows, failures = read_sets('sat')
                 files = [{'name': p.name, 'text': json.dumps(to_sat_legacy(d), ensure_ascii=False),
@@ -731,6 +770,12 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             # cannot be fetched as static content.
             if route in {'/', '/index.html'}:
                 base, relative = root / 'front-end/web', 'index.html'
+            elif route in {'/login', '/login/'}:
+                base, relative = root / 'front-end/web', 'login.html'
+            elif route in {'/account', '/accounts'}:
+                base, relative = root / 'front-end/web', 'account.html'
+            elif route == '/web/toefl-cloud.js':
+                base, relative = root / 'front-end/toefl/clients', 'cloud-client.js'
             elif route.startswith('/web/'):
                 base, relative = root / 'front-end/web', route[len('/web/'):]
                 if Path(relative).suffix not in {'.html', '.css', '.js', '.svg', '.png', '.ico'}:
@@ -762,20 +807,49 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                 return self.reply(404, {'error': 'Not found.'})
             try:
                 body = path.read_bytes()
+                if path.suffix == '.html' and user and relative != 'login.html':
+                    encoded = json.dumps({'authenticated': True, 'loginEnabled': True, 'user': user}, ensure_ascii=True).replace('<', '\u003c')
+                    bootstrap = ('<head><script>window.PlatformSession=' + encoded + ';</script>'
+                                 '<script src="/web/platform-auth.js"></script>').encode()
+                    body = body.replace(b'<head>', bootstrap, 1)
                 if base == root / 'front-end/sat' and relative == 'html/index.html':
                     # Bootstrap only the platform adapter. The SAT source HTML,
                     # scripts and styles remain byte-for-byte unchanged on disk.
-                    body = body.replace(b'<head>', b'<head><script src="/web/sat-bridge.js"></script>', 1)
+                    body = body.replace(b'</head>', b'<script src="/web/sat-bridge.js"></script><script src="/web/sat-account-sync.js"></script></head>', 1)
                 elif base == root / 'local-data/builds/toefl/preview' and relative == 'index.html':
-                    body = body.replace(b'<head>', b'<head><script src="/web/toefl-bridge.js"></script>', 1)
+                    body = re.sub(rb'<script\b[^>]*\bsrc=[\"\'](?:\./)?four-(?:data|logic|learning|app)\.js(?:\?[^\"\']*)?[\"\'][^>]*>\s*</script>', b'', body)
+                    body = body.replace(b'</head>', b'<script type="module" src="/web/toefl-bridge.js"></script></head>', 1)
                 content_type = mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
                 if content_type.startswith('text/') or content_type in {'application/javascript', 'application/json'}:
                     content_type += '; charset=utf-8'
-                return self.send_bytes(200, body, content_type)
+                return self.send_bytes(200, body, content_type, cache='no-store' if path.suffix == '.html' else 'no-cache')
             except OSError:
                 return self.reply(404, {'error': 'Not found.'})
 
+        def do_PUT(self):
+            self.auth_mutation()
+
+        def do_PATCH(self):
+            self.auth_mutation()
+
+        def auth_mutation(self):
+            if not self.valid_host():
+                return self.reply(403, {'error': 'Use the local workspace URL.'})
+            if not auth.handle(self, urlsplit(self.path).path):
+                self.reply(404, {'error': 'Not found.'})
+
         def do_POST(self):
+            if not self.valid_host():
+                return self.reply(403, {'error': 'Use the local workspace URL.'})
+            if auth.handle(self, urlsplit(self.path).path):
+                return
+            session = auth.authenticate(self.headers.get('Cookie', ''))
+            if not session:
+                return self.reply(401, {'error': '请先登录。'})
+            if urlsplit(self.path).path == '/api/question-bank' and session['user']['role'] != 'admin':
+                return self.reply(403, {'error': '只有管理员可以修改共享题库。'})
+            if self.headers.get('X-Account-ID') != session['user']['id']:
+                return self.reply(409, {'error': '登录账号已变化，请重新打开页面。'})
             origin = f'http://127.0.0.1:{self.server.server_port}'
             if (not self.valid_host() or self.headers.get('Origin') != origin
                     or self.headers.get('X-SAT-Bank-Token') != token):
@@ -806,9 +880,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                         raise ValueError('The active collection changed; retry the library backup.')
                     payload = (json.dumps(snapshot, ensure_ascii=False, sort_keys=True, separators=(',', ':')) + '\n').encode('utf-8')
                     digest = hashlib.sha256(payload).hexdigest()
-                    folder = _safe_local_path(private, f'backups/{collection_id}')
+                    owner = session['user']['id']
+                    folder = _safe_local_path(private, f'backups/accounts/{owner}/{collection_id}')
                     folder.mkdir(parents=True, exist_ok=True)
-                    target = _safe_local_path(private, f'backups/{collection_id}/browser-{digest}.json')
+                    target = _safe_local_path(private, f'backups/accounts/{owner}/{collection_id}/browser-{digest}.json')
                     with lock:
                         if not target.exists():
                             temporary = None
@@ -853,14 +928,16 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             except (ValueError, KeyError, TypeError, OSError) as error:
                 return self.reply(400, {'error': str(error)})
 
-    return ThreadingHTTPServer(('127.0.0.1', port), Handler)
+    server = ThreadingHTTPServer(('127.0.0.1', port), Handler)
+    server.auth = auth
+    return server
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=REPOSITORY)
     parser.add_argument('--port', type=int, default=8888)
-    parser.add_argument('--sat-library-root', type=Path, help='SAT catalog folder; defaults to SAT_LIBRARY_ROOT or back-end/sat/questions/sat-packs/gengdu-offline.')
+    parser.add_argument('--sat-library-root', type=Path, help='Use only this SAT catalog folder; otherwise SAT_LIBRARY_ROOT or both repository gengdu-offline and pdf-official catalogs.')
     parser.add_argument('--open', action='store_true')
     args = parser.parse_args()
     prepare_toefl_preview(args.root)

@@ -8,7 +8,22 @@ python3 back-end/server/serve_platform.py --port 8888
 
 打开 <http://127.0.0.1:8888/sat/>。统一平台使用独立的浏览器存储命名空间；目录调整不修改已有本机历史记录。
 
-SAT 概览中的 `Practice Builder`（原 `Question Library` 卡片）集中提供练习名称、自定义选题、按来源组题、时长设置和开始练习。`Start Practice` 按 2026-10-23 后续截图接入 Full-Length Tests、Reading and Writing、Math 三分类目录，默认第一类；题集按开始、继续、重新开始和复盘分别显示入口。全真模考来源按官方考试日期时间线排列，School Day 保留月精度，Bluebook、拼卷及无日期来源单独归组，日期依据见 [考试日期](../sat-exam-dates.md)。`Explore Questions`、导入后的 `Practice Builder` 按钮以及首页英语/数学入口均进入组题页；旧 `view=questionLibrary` 链接兼容转到 `Practice Builder`，`view=practiceBuilder&mode=source` 继续支持按来源组题。整套模考入口与开始后的考试流程保持原有行为。
+2026-10-24 已接入 SAT 账号菜单和服务端记录。右上账号胶囊沿用首页与 TOEFL 的风格，原 Settings 收进菜单的“练习设置”；菜单还可进入完整练习记录、错题本、账号管理或个人中心、同步冲突和退出登录。练习记录支持名称搜索、状态与科目筛选、分页、复盘、继续及删除。考试阶段保持原界面。
+
+练习记录、当场题目快照、错题本与练习设置按当前账号保存在统一服务的私有 SQLite，浏览器保留缓存和断网待同步队列。Save and Exit 会保存答案、计时及恢复快照，登录同一服务后可从另一浏览器继续；下载记录不会自动开启倒计时。考试中的高频本机状态、公共题库和文件夹句柄不加入同步队列。菜单显示真实同步状态，冲突可保留本机或服务器版本并下载本机副本；已完成记录不可降级，已删除练习不能由旧设备复活。接口、容量、迁移与网络边界详见 [统一账号](../unified-auth.md)。这不代表已发布公网网站。
+
+以下检查仅使用临时账号、临时数据库和原创合成题，不操作已有用户记录：
+
+```sh
+python3 -B -m unittest discover -s back-end/tests -p 'test_sat_account_sync.py' -q
+node back-end/tests/sat-account-menu.browser.cjs
+node back-end/tests/sat-account-conflicts.browser.cjs
+node back-end/tests/sat-account-flow.browser.cjs
+```
+
+SAT 概览中的 `Practice Builder`（原 `Question Library` 卡片）集中提供练习名称、自定义选题、按来源组题、时长设置和开始练习。`Start Practice` 按 2026-10-23 后续截图接入 Full-Length Tests、Reading and Writing、Math 三分类目录，默认第一类；题集按开始、继续、重新开始和复盘分别显示入口。全真模考来源按官方考试日期时间线排列，School Day 保留月精度，Bluebook、拼卷及无日期来源单独归组，日期依据见 [考试日期](../sat-exam-dates.md)。`Explore Questions` 以及首页英语/数学入口均进入组题页；旧 `view=questionLibrary` 链接兼容转到 `Practice Builder`，`view=practiceBuilder&mode=source` 继续支持按来源组题。整套模考入口与开始后的考试流程保持原有行为。
+
+2026-10-24 已移除概览的 `Manage library` 入口及整个旧导入界面实现，包括文件夹管理、选择文件/题包、拖放、预览与导入按钮。首页 `Add Questions` 卡片继续保留，进入后仅显示 `Add Questions` 标题，下方留空，等待后续功能接入。后台既有题库加载、Start Practice、Practice Builder 和答题记录继续保留，不删除题库或历史。删除前源码与恢复补丁只保存在忽略的 `local-data/localfiles/sat-manage-library-<时间>/`，不进入 Git。
 
 独立 SAT 服务使用不同端口与运行数据目录：
 
@@ -28,9 +43,11 @@ python3 back-end/tools/sat/question_bank_server.py --port 8876
 
 - `GET /api/sat-library` 返回三分类元数据、题数、原模块信息及不可用题集错误；目录只保存元数据，不预取全部题目。
 - `GET /api/sat-library/collections/{collectionId}` 只在 Start Exam / Restart Exam 时加载所选题集，返回 `packs`、可选 `assessment` 与带精确版本引用的来源 `modules`。切换分类、选中卡片、Open Review 和 Resume Exam 不重新下载题包。
-- 服务根目录可由 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 配置，默认 `back-end/sat/questions/sat-packs/gengdu-offline`；显式参数优先于环境变量，相对路径以仓库根目录为基准。Start Practice 与 Practice Builder 全库索引共用该根目录，目录迁移后仍用稳定 `collectionId` 关联练习记录。
+- 服务默认合并 `back-end/sat/questions/sat-packs/gengdu-offline/` 与并列的 `pdf-official/` 两份独立目录索引；缺少某份目录时仍可使用另一份。Start Practice 与 Practice Builder 全库索引读取相同的来源。`SAT_LIBRARY_ROOT` 或 `--sat-library-root` 可指定只读取一份目录，显式参数优先于环境变量，相对路径以仓库根目录为基准，不额外混入默认两库。目录迁移后仍用稳定 `collectionId` 关联练习记录。
 
 上述共享题库由用户从原 `local-data/sat-packs/gengdu-offline/` 完整复制，迁移只调整服务端默认读取位置，不改题包内容、版本、活动卷或浏览器记录。旧 `/api/sat-packs` 活动卷和可写旧格式题库仍归 `local-data/`。转换工具仍默认输出到 `local-data/`，不会自动覆盖共享副本；更新共享副本时应保留稳定身份及版本引用。服务启动时确定题库路径，修改后需重启服务；已有 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 会继续覆盖默认值。
+
+PDF 题库使用独立的 `pdf-official/catalog.json` 与每卷 `conversion-report.json`，不会修改耕读目录、题包 ID 或修订。两库合并只涉及目录元数据，选择一卷时才加载正文与资源；跨库重复的 `collectionId` 会显示错误并拒绝加载，不能用后一库覆盖前一库。损坏的一份目录索引不影响另一份可用目录。来源分类 `测试` 进入 Full-Length Tests，但是否为完整 SAT 仍由四模块、题数与原题序校验决定；单科或缺题 PDF 保持 Partial Test。标题保留可核对的年月，由已有时间线规则排序；未核实具体日期只保留月精度，无日期、Bluebook 或拼卷不伪造官方开考日。`pdf-official` 是来源目录名，不表示官方认证或答案已经复核。纯题目与答案版先精确配对去重，再将明确同年月、套号、地区和版本的英语与数学组合；详细来源、异常和可重复命令见 [PDF 转换与合并](../sat-pdf-conversion.md)。
 
 示例（替换为自己的题集目录）：
 

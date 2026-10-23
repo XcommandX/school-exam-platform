@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-eccbb99513b14508af222ccea27fc199-rw-single-choice",
+  "revision": 1,
+  "title": "2025年12月北美第2套阅读语法（只有M1-剩17题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f551d72820e1292bda34dccc5609651eac17f66f50832768a7416ce91b2354b9",
+      "path": "assets/f551d72820e1292bda34dccc5609651eac17f66f50832768a7416ce91b2354b9.png",
+      "mediaType": "image/png",
+      "sha256": "f551d72820e1292bda34dccc5609651eac17f66f50832768a7416ce91b2354b9",
+      "byteLength": 21386,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-eccbb99513b14508af222ccea27fc199",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-c39a2912280a657c76d7271b7e4db3ed507ff159afd249c53712cc30981c6350",
+      "path": "assets/c39a2912280a657c76d7271b7e4db3ed507ff159afd249c53712cc30981c6350.png",
+      "mediaType": "image/png",
+      "sha256": "c39a2912280a657c76d7271b7e4db3ed507ff159afd249c53712cc30981c6350",
+      "byteLength": 15595,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-eccbb99513b14508af222ccea27fc199",
+        "sourceQuestionId": "m1-q10"
+      }
+    }
+  ]
+}

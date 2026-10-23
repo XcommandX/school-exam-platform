@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-150a814b931345c1bb68972d94c53129-math-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 9数学（Easy） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-a384fac5900a1a9d1b5a2eff8a45a99b670463aa3968bf2b1acd90116f8bb52a",
+      "path": "assets/a384fac5900a1a9d1b5a2eff8a45a99b670463aa3968bf2b1acd90116f8bb52a.png",
+      "mediaType": "image/png",
+      "sha256": "a384fac5900a1a9d1b5a2eff8a45a99b670463aa3968bf2b1acd90116f8bb52a",
+      "byteLength": 53668,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "id": "asset-da5bad373911f181a853f7260674ad5f83f0ece8c7db31809b8bf83089f09b81",
+      "path": "assets/da5bad373911f181a853f7260674ad5f83f0ece8c7db31809b8bf83089f09b81.png",
+      "mediaType": "image/png",
+      "sha256": "da5bad373911f181a853f7260674ad5f83f0ece8c7db31809b8bf83089f09b81",
+      "byteLength": 17979,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-7776ca9bf3953c86503f2850749f3126eacd36c022a42a31ef211f12b099bd7a",
+      "path": "assets/7776ca9bf3953c86503f2850749f3126eacd36c022a42a31ef211f12b099bd7a.png",
+      "mediaType": "image/png",
+      "sha256": "7776ca9bf3953c86503f2850749f3126eacd36c022a42a31ef211f12b099bd7a",
+      "byteLength": 9412,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "id": "asset-0ce7746d7f79d6717073e653bc2e5a99a9c3356e2407f81d5a86a1765b29d496",
+      "path": "assets/0ce7746d7f79d6717073e653bc2e5a99a9c3356e2407f81d5a86a1765b29d496.png",
+      "mediaType": "image/png",
+      "sha256": "0ce7746d7f79d6717073e653bc2e5a99a9c3356e2407f81d5a86a1765b29d496",
+      "byteLength": 28380,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q16"
+      }
+    }
+  ]
+}

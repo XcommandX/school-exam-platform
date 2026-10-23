@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac-math-single-choice",
+  "revision": 1,
+  "title": "Bluebook Pracitce 11数学 Easy · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-2e04491ebdcfec804a359c8c2dbc4be333717d86dfcfde4eb81affb9fa835bb3",
+      "path": "assets/2e04491ebdcfec804a359c8c2dbc4be333717d86dfcfde4eb81affb9fa835bb3.png",
+      "mediaType": "image/png",
+      "sha256": "2e04491ebdcfec804a359c8c2dbc4be333717d86dfcfde4eb81affb9fa835bb3",
+      "byteLength": 21605,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "id": "asset-d8320bb43986ac1f57c286cacc48883093f72c9484f7bea4f45c8007b2b211d0",
+      "path": "assets/d8320bb43986ac1f57c286cacc48883093f72c9484f7bea4f45c8007b2b211d0.png",
+      "mediaType": "image/png",
+      "sha256": "d8320bb43986ac1f57c286cacc48883093f72c9484f7bea4f45c8007b2b211d0",
+      "byteLength": 8452,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "id": "asset-8d16b10f90625374c73f05d646404c4652f93df8ac58784a447eaf519ef135b9",
+      "path": "assets/8d16b10f90625374c73f05d646404c4652f93df8ac58784a447eaf519ef135b9.png",
+      "mediaType": "image/png",
+      "sha256": "8d16b10f90625374c73f05d646404c4652f93df8ac58784a447eaf519ef135b9",
+      "byteLength": 10373,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "id": "asset-d67f5915407129832bf45677ad19220be416bba21cdd8fafac6f8308256ff0ff",
+      "path": "assets/d67f5915407129832bf45677ad19220be416bba21cdd8fafac6f8308256ff0ff.png",
+      "mediaType": "image/png",
+      "sha256": "d67f5915407129832bf45677ad19220be416bba21cdd8fafac6f8308256ff0ff",
+      "byteLength": 10744,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "id": "asset-61abfae724373bf9595340d26b780621bf905c5e8ca325bfb6ca4414bb3a9b8c",
+      "path": "assets/61abfae724373bf9595340d26b780621bf905c5e8ca325bfb6ca4414bb3a9b8c.png",
+      "mediaType": "image/png",
+      "sha256": "61abfae724373bf9595340d26b780621bf905c5e8ca325bfb6ca4414bb3a9b8c",
+      "byteLength": 32220,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "id": "asset-3ecffb9c52bca28d743240f6f28c7f3922280b7b65bcf3818a0020b6806a9f77",
+      "path": "assets/3ecffb9c52bca28d743240f6f28c7f3922280b7b65bcf3818a0020b6806a9f77.png",
+      "mediaType": "image/png",
+      "sha256": "3ecffb9c52bca28d743240f6f28c7f3922280b7b65bcf3818a0020b6806a9f77",
+      "byteLength": 32283,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "id": "asset-3c11909c2bc8a1cee76a3f98fdcc52334d6ce90d008e42596a018ed451dc0a13",
+      "path": "assets/3c11909c2bc8a1cee76a3f98fdcc52334d6ce90d008e42596a018ed451dc0a13.png",
+      "mediaType": "image/png",
+      "sha256": "3c11909c2bc8a1cee76a3f98fdcc52334d6ce90d008e42596a018ed451dc0a13",
+      "byteLength": 29957,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "id": "asset-4af53e2d5d0e7dcbc2d7e3c9aaf02daadaef6e8b1ec873021d81d903973f01f1",
+      "path": "assets/4af53e2d5d0e7dcbc2d7e3c9aaf02daadaef6e8b1ec873021d81d903973f01f1.png",
+      "mediaType": "image/png",
+      "sha256": "4af53e2d5d0e7dcbc2d7e3c9aaf02daadaef6e8b1ec873021d81d903973f01f1",
+      "byteLength": 32276,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

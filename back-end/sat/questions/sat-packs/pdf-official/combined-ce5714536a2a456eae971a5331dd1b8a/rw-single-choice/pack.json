@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-cc9f56676464443381b49ac69001bc9a-rw-single-choice",
+  "revision": 1,
+  "title": "2024年12月第6套阅读语法（注：第5套均为旧题，不录入第5套） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-e2eed004152c65ceb16b4a4276de4386eb3c291eb99b37a76cde0ac27061a125",
+      "path": "assets/e2eed004152c65ceb16b4a4276de4386eb3c291eb99b37a76cde0ac27061a125.png",
+      "mediaType": "image/png",
+      "sha256": "e2eed004152c65ceb16b4a4276de4386eb3c291eb99b37a76cde0ac27061a125",
+      "byteLength": 33164,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-cc9f56676464443381b49ac69001bc9a",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-047f9c6c75d99fa0c7ddba457ca3a2d247e1016d71545ef10455e76b1cc8bf25",
+      "path": "assets/047f9c6c75d99fa0c7ddba457ca3a2d247e1016d71545ef10455e76b1cc8bf25.png",
+      "mediaType": "image/png",
+      "sha256": "047f9c6c75d99fa0c7ddba457ca3a2d247e1016d71545ef10455e76b1cc8bf25",
+      "byteLength": 38594,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-cc9f56676464443381b49ac69001bc9a",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "id": "asset-e9a5807176494e6b250c7a7547df48964f50607d53790e60a21f06c619350e82",
+      "path": "assets/e9a5807176494e6b250c7a7547df48964f50607d53790e60a21f06c619350e82.png",
+      "mediaType": "image/png",
+      "sha256": "e9a5807176494e6b250c7a7547df48964f50607d53790e60a21f06c619350e82",
+      "byteLength": 49852,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-cc9f56676464443381b49ac69001bc9a",
+        "sourceQuestionId": "m2-q10"
+      }
+    }
+  ]
+}

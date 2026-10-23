@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-8c09424241764144bf6ee48f29357978-rw-single-choice",
+  "revision": 1,
+  "title": "2024年6月第3套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d62a34c89032b3deb09e8b73bbc82cc68bfe0488e1267130cd0bde42015cbb62",
+      "path": "assets/d62a34c89032b3deb09e8b73bbc82cc68bfe0488e1267130cd0bde42015cbb62.png",
+      "mediaType": "image/png",
+      "sha256": "d62a34c89032b3deb09e8b73bbc82cc68bfe0488e1267130cd0bde42015cbb62",
+      "byteLength": 31448,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8c09424241764144bf6ee48f29357978",
+        "sourceQuestionId": "m2-q6"
+      }
+    }
+  ]
+}

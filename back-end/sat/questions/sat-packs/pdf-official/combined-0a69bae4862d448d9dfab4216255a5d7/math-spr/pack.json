@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c84fd52c36814c548a81284ff3468a92-math-spr",
+  "revision": 1,
+  "title": "2025年10月亚太第2套数学（简单） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-eab7c5a7a213c10c8eec0b191f31954ed564e7b1ccdee9de6ed43b5291356c1c",
+      "path": "assets/eab7c5a7a213c10c8eec0b191f31954ed564e7b1ccdee9de6ed43b5291356c1c.png",
+      "mediaType": "image/png",
+      "sha256": "eab7c5a7a213c10c8eec0b191f31954ed564e7b1ccdee9de6ed43b5291356c1c",
+      "byteLength": 26978,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c84fd52c36814c548a81284ff3468a92",
+        "sourceQuestionId": "m1-q18"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

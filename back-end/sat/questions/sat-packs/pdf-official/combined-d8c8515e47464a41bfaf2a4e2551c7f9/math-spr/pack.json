@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c9db9162fc01417dbb8cc0e3ade1a397-math-spr",
+  "revision": 1,
+  "title": "2024年6月第5套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-6233d3291fec08667f73a0826df554e270b07c5cab6fea82864bdd681681a8f9",
+      "path": "assets/6233d3291fec08667f73a0826df554e270b07c5cab6fea82864bdd681681a8f9.png",
+      "mediaType": "image/png",
+      "sha256": "6233d3291fec08667f73a0826df554e270b07c5cab6fea82864bdd681681a8f9",
+      "byteLength": 11834,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "id": "asset-985c9431831fa706f5dae6ac836c3423596fc64a6b3130400fe4541717e16eac",
+      "path": "assets/985c9431831fa706f5dae6ac836c3423596fc64a6b3130400fe4541717e16eac.png",
+      "mediaType": "image/png",
+      "sha256": "985c9431831fa706f5dae6ac836c3423596fc64a6b3130400fe4541717e16eac",
+      "byteLength": 6857,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+        "sourceQuestionId": "m2-q17"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-6ac1e9d9a0b74860be28da68301fc4a3-math-single-choice",
+  "revision": 1,
+  "title": "2026年8月亚太第1套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-93f91d76778b5e8a493949782f4f2908839d6b3583e6228a23f87d77b1f57c90",
+      "path": "assets/93f91d76778b5e8a493949782f4f2908839d6b3583e6228a23f87d77b1f57c90.png",
+      "mediaType": "image/png",
+      "sha256": "93f91d76778b5e8a493949782f4f2908839d6b3583e6228a23f87d77b1f57c90",
+      "byteLength": 18137,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-ab954d6c59fb5ab2d2688ac7fd7b501591be77d76fb653ef755296387ac389c5",
+      "path": "assets/ab954d6c59fb5ab2d2688ac7fd7b501591be77d76fb653ef755296387ac389c5.png",
+      "mediaType": "image/png",
+      "sha256": "ab954d6c59fb5ab2d2688ac7fd7b501591be77d76fb653ef755296387ac389c5",
+      "byteLength": 25030,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "id": "asset-b709dd81ab3fbc25a5c3ff65d9ca3f3b34f68e9416b7839fa532506d388d6790",
+      "path": "assets/b709dd81ab3fbc25a5c3ff65d9ca3f3b34f68e9416b7839fa532506d388d6790.png",
+      "mediaType": "image/png",
+      "sha256": "b709dd81ab3fbc25a5c3ff65d9ca3f3b34f68e9416b7839fa532506d388d6790",
+      "byteLength": 11686,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "id": "asset-94cd0ae6e108418fde234e2b60a6df2c2d8ca55fe2ef61e7a8866b054d5ff86f",
+      "path": "assets/94cd0ae6e108418fde234e2b60a6df2c2d8ca55fe2ef61e7a8866b054d5ff86f.png",
+      "mediaType": "image/png",
+      "sha256": "94cd0ae6e108418fde234e2b60a6df2c2d8ca55fe2ef61e7a8866b054d5ff86f",
+      "byteLength": 18911,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "id": "asset-189f5e06e1bb66b3cc065fc41e47d32d3aad6720d29e098cf19552213d1dc97d",
+      "path": "assets/189f5e06e1bb66b3cc065fc41e47d32d3aad6720d29e098cf19552213d1dc97d.png",
+      "mediaType": "image/png",
+      "sha256": "189f5e06e1bb66b3cc065fc41e47d32d3aad6720d29e098cf19552213d1dc97d",
+      "byteLength": 34268,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q22"
+      }
+    },
+    {
+      "id": "asset-43563530730f618bc1627fb14f7dfb16768914171600cefaa1d88d2f7f3f6551",
+      "path": "assets/43563530730f618bc1627fb14f7dfb16768914171600cefaa1d88d2f7f3f6551.png",
+      "mediaType": "image/png",
+      "sha256": "43563530730f618bc1627fb14f7dfb16768914171600cefaa1d88d2f7f3f6551",
+      "byteLength": 34418,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import unittest
 from unittest.mock import patch
 from urllib.parse import quote
 import _paths
+from _auth_fixture import authenticated_headers
 
 from server.serve_platform import create_server, read_sat_library, read_sat_library_question_index
 
@@ -70,7 +71,7 @@ class SatLibraryServerTests(unittest.TestCase):
 
     def request(self, route, headers=None):
         connection = http.client.HTTPConnection('127.0.0.1', self.server.server_port, timeout=5)
-        connection.request('GET', route, headers=headers or {})
+        connection.request('GET', route, headers={**authenticated_headers(self.server), **(headers or {})})
         response = connection.getresponse()
         status, raw = response.status, response.read()
         connection.close()
@@ -153,7 +154,7 @@ class SatLibraryServerTests(unittest.TestCase):
             worker.start()
             try:
                 connection = http.client.HTTPConnection('127.0.0.1', server.server_port, timeout=5)
-                connection.request('GET', '/api/sat-library')
+                connection.request('GET', '/api/sat-library', headers=authenticated_headers(server))
                 response = connection.getresponse()
                 self.assertTrue(json.loads(response.read())['available'])
                 connection.close()

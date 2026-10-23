@@ -7,6 +7,7 @@
   <meta name="description" content="TOEFL 与 SAT 的统一学习空间。">
   <title>Study Space · 学习空间</title>
   <link rel="stylesheet" href="/web/styles.css">
+  <script src="/web/platform-auth.js" defer></script>
   <script src="/web/home-model.js" defer></script>
   <script src="/web/app.js" defer></script>
 </head>
@@ -18,9 +19,9 @@
       <span class="brand-type">Study Space</span>
     </a>
     <div class="account-wrap">
-      <button type="button" class="account-trigger" id="account-button" aria-label="admin 的个人账号与设置" aria-expanded="false" aria-controls="account-menu"><span class="avatar">A</span><span>admin</span><span data-icon="chevronDown"></span></button>
+      <button type="button" class="account-trigger" id="account-button" aria-label="个人账号与设置" aria-expanded="false" aria-controls="account-menu"><span class="avatar" data-user-initial></span><span data-user-name></span><span data-icon="chevronDown"></span></button>
       <div class="account-menu" id="account-menu" hidden>
-        <div class="menu-user"><span class="avatar large">A</span><span><strong>admin</strong></span></div>
+        <div class="menu-user"><span class="avatar large" data-user-initial></span><span><strong data-user-name></strong><span class="account-role" id="account-role"></span></span></div>
         <div class="menu-stats"><div><b id="menu-streak">0</b><small>连续天数</small></div><div><b id="menu-answers">0</b><small>已练题目</small></div><div><b id="menu-accuracy">—</b><small>客观题正确率</small></div></div>
         <div class="menu-links">
           <button type="button" data-dialog="account"><span data-icon="user"></span><span>个人中心</span><span data-icon="chevron"></span></button>
@@ -29,7 +30,10 @@
           <button type="button" data-dialog="report"><span data-icon="chart"></span><span>成绩报告</span><span data-icon="chevron"></span></button>
           <button type="button" data-dialog="records"><span data-icon="history"></span><span>练习记录</span><span data-icon="chevron"></span></button>
           <button type="button" data-dialog="saved"><span data-icon="star"></span><span>我的收藏</span><span data-icon="chevron"></span></button>
+          <button type="button" id="manage-accounts" hidden><span data-icon="user"></span><span>账号管理</span><span data-icon="chevron"></span></button>
+          <button type="button" data-dialog="password"><span data-icon="settings"></span><span>修改密码</span><span data-icon="chevron"></span></button>
           <button type="button" data-dialog="settings"><span data-icon="settings"></span><span>设置</span><span data-icon="chevron"></span></button>
+          <button type="button" id="logout-button" class="logout-button"><span data-icon="arrow"></span><span>退出登录</span></button>
         </div>
       </div>
     </div>
@@ -37,7 +41,7 @@
 
   <main id="main-content" class="page-shell">
     <section class="welcome-row" aria-label="学习概览">
-      <h1><span id="greeting">你好</span>，admin<span class="sun-badge" data-icon="sun"></span></h1>
+      <h1><span id="greeting">你好</span>，<span data-user-name class="welcome-name"></span><span class="sun-badge" data-icon="sun"></span></h1>
       <div class="summary-chips">
         <div class="summary-chip" aria-label="连续坚持天数"><span class="chip-icon orange" data-icon="flame"></span><b id="streak-days">0</b><small>连续天数</small></div>
         <button type="button" class="summary-chip" data-dialog="plan" aria-label="查看今日完成与每日学习目标"><span class="chip-icon mint" data-icon="check"></span><b id="today-progress">0 / 30</b><small>今日完成 / 目标</small></button>

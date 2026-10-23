@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-841d6999303f44238b0d83a2787869d5-math-spr",
+  "revision": 1,
+  "title": "2025年9月第5套数学去重版（M1全+M2部分题） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-09906737b7cbf4879acbe564f2c7bcc4bf514d5fd2ded4a5a11f747f20023a4d",
+      "path": "assets/09906737b7cbf4879acbe564f2c7bcc4bf514d5fd2ded4a5a11f747f20023a4d.png",
+      "mediaType": "image/png",
+      "sha256": "09906737b7cbf4879acbe564f2c7bcc4bf514d5fd2ded4a5a11f747f20023a4d",
+      "byteLength": 40295,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q3"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

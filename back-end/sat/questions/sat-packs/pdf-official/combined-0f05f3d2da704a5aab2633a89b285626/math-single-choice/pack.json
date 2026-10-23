@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-74f2164cd24e4475954042048aafaf0d-math-single-choice",
+  "revision": 1,
+  "title": "2024年3月第2套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-17e6093eac196e6fb1578be5244dd05c47d099c4a28db52bb4eaa8b522a6b227",
+      "path": "assets/17e6093eac196e6fb1578be5244dd05c47d099c4a28db52bb4eaa8b522a6b227.png",
+      "mediaType": "image/png",
+      "sha256": "17e6093eac196e6fb1578be5244dd05c47d099c4a28db52bb4eaa8b522a6b227",
+      "byteLength": 51976,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "id": "asset-d939e84015f4971034f6cd01fecca6387211caf66dbb5a7f9295b2d80fc63c45",
+      "path": "assets/d939e84015f4971034f6cd01fecca6387211caf66dbb5a7f9295b2d80fc63c45.png",
+      "mediaType": "image/png",
+      "sha256": "d939e84015f4971034f6cd01fecca6387211caf66dbb5a7f9295b2d80fc63c45",
+      "byteLength": 47495,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-0d94968c721bebf976afbd7855eab29d6f95042353c70b964c3546893e941f64",
+      "path": "assets/0d94968c721bebf976afbd7855eab29d6f95042353c70b964c3546893e941f64.png",
+      "mediaType": "image/png",
+      "sha256": "0d94968c721bebf976afbd7855eab29d6f95042353c70b964c3546893e941f64",
+      "byteLength": 7104,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q10"
+      }
+    }
+  ]
+}

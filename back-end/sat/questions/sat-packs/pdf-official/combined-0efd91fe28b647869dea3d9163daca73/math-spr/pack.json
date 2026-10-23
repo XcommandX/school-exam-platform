@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-cfc4aa764ac342108a676897b653c484-math-spr",
+  "revision": 1,
+  "title": "2024年5月第2套数学（只有1个Module） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-8fa4fe80c3a5fc5f9e38337d2a5109614d098cb5f33722f623468792abe3469d",
+      "path": "assets/8fa4fe80c3a5fc5f9e38337d2a5109614d098cb5f33722f623468792abe3469d.png",
+      "mediaType": "image/png",
+      "sha256": "8fa4fe80c3a5fc5f9e38337d2a5109614d098cb5f33722f623468792abe3469d",
+      "byteLength": 13352,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-3e09ee6a0f43d3e2006816d6422b9490e03eb0806d2a8e9f9b824cfe98a9da77",
+      "path": "assets/3e09ee6a0f43d3e2006816d6422b9490e03eb0806d2a8e9f9b824cfe98a9da77.png",
+      "mediaType": "image/png",
+      "sha256": "3e09ee6a0f43d3e2006816d6422b9490e03eb0806d2a8e9f9b824cfe98a9da77",
+      "byteLength": 15511,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-cfc4aa764ac342108a676897b653c484",
+        "sourceQuestionId": "m1-q9"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

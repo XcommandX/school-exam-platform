@@ -1,0 +1,741 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "确定总样本数（分母）： 题目明确指出是从“该组织”中随机抽取，因此总人数需要看表格\n右下角的总计，即 135 人。\n确定目标事件数（分子）： 条件是抽中“至少45 岁”的成员。总数为 102 人 概率=符合条件\n人数/总人数=$\\frac{102}{135}$ ，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形三个内角之和是180 度，第三个角为$180-55-81=44$ 度"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "机构照顾的动物总数是$c+d$，由最多31 只得到$c+d$ 小于等于31。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "平行的直线有相同的斜率，直线$c$ 的斜率是2，所以直线$d$ 的斜率是2，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由$5x-9=6$ 得到$5x=15$，所以$5x+9=24$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 表示天数，$p(x)$表示剩余纸的张数，所以$p(3)=110$ 表示3 天后剩余纸的张数为110。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从图中可以看出，随着横坐标$x$ 值的增加，纵坐标$y$ 的值也在增加，所以数据呈正相关，\n斜率为正数，排除A 和$B$ 选项。在横坐标$x=10$ 附近，对应的数据点$y$ 值大约在10 左右。\n在横坐标$x=12$ 附近，对应的数据点$y$ 值大约在12 左右。如果是选项$C y=x$, 直线会穿过\n(10, 10), (12, 12)这些点。观察图形，这条线完美地从数据点的正中间穿过，非常贴合。如\n果是选项$D y=2x$，这意味着当$x=6$ 时，$y$ 是12，但在图中$x-6$ 附近没有这么高的点。所以\n不符合图中的数据分布。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "孤度=角度$\\times Π/180$ 。所以弧度为 $240\\times Π/180=4/3Π$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似的三角形对应角相等，所以角$F$ 等于角$J$，因此 $\\sin$ ⁡ $( J )=\\sin$ ⁡ $( F )$ =\n$\\frac{144}{145}$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$\\Delta=(-7)2-4(1)(12)=1\\gt 0$ 。所以由两个实数解。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 表示速度，$C(x)$表示燃油费用，$(60, 4.58)$表示当速度为60 千米每小时是，燃油费用为\n4.58。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设另一条边的长度为$x$， $x 2+5 2=( 34 ) 2$ 。解出$x=3$ 或$-3$。因为\n边长为正数，所以是3。周长为$2(5+3)=16$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "取两个点$(-5, n+64),(0, n)$ 斜率=$y2-y1/x2-x1=n+64-n/-5-0=64/-5$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在城市道路上：汽车行驶29 英里每加仑，汽车行驶$c$ 英里，所以消耗$c/29$ 加仑汽油。在\n高速上：汽车行驶35 英里每加仑，汽车行驶$h$ 英里，所以消耗$h/35$ 加仑汽油。因为汽车\n一共行驶510 英里，所以$c+h=510$。一共消耗17 加仑汽油，所以$(c/29)+(h/35)=17$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$g(c+1)$的值比$m$ 多$82\\%$，所以$g(c+1)=m(1+0.82)=1.82m$。因为 $g ( x )=a b x$ 。所\n以 $g ( c )=a b c=m$ ， $g ( c+1 )=a b c+1=a b$\n\n$$c b$$\n⋅\n。因为 a $b c=m$，所以$g(c+1)=mb$。结合第一步中得到的$g(c+1)=1.82m$，\n得到$mb=1.82m$。解出$b=1.82$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 7 英寸零件数量为 $n$，则2 英寸零件数量为$5n$，11 英寸零件数量为4.根据总零件数为\n100，得方程$5n+n+4=100$，即$6n+4=100$。故正确选项为$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时乘以$119x$ 得到$119xv=-w$。因此$w=-119xv$。选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "抛物线与$x$ 轴交于$x=-1$ 和$x=4$。所以二次函数的解为$x=-1$ 和$x=4$。因此$f(x)=(x-(-1))$\n$(x-4)$。化简后得到$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 增加1，$y$ 减少$\\frac{7}{2}$，所以斜率为 $\\frac{-7}{2}/1=- \\frac{7}{2}$。设函数为 $y=- \\frac{7}{2} x+b$。带入\n$x=-2$ 和$y=5$，解出$b=-2$。所以 $y=- \\frac{7}{2} x - 2$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "带入$f(a)=7$ 得到：(a$-3)+2=7$，解出$a=8$。所以$a+3=11$.选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $(\\frac{1}{8})x\\gt 0$，所以 $(\\frac{1}{8})x+7\\gt 7$，不等式两边同时乘以9 得到$f(x)\\gt 63$。因此$k$ 的最大值为\n63。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线与$x$ 轴的交点为$x=20$。所以当把钱全用来买纸杯，一个马克杯都不买的时候，880 美\n元预算可以买20 盒纸杯。因此每盒纸杯的价钱为$\\frac{880}{20}=44$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为两个方程的右边相同，所以左边也相同，得到$12x+11y=11x-12y$。化简得$x=-23y$。只\n有选项$D$ 满足要求。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "联立两个不等式得到$2x+k\\lt y\\lt 9-x$。因此$2x+k\\lt 9-x$。两边同时加$x$ 得到$3x+k\\lt 9$。等式两边\n同时减去$k$ 得到$3x\\lt 9-k$。因此$x\\lt (9-k)/3$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "单件毛衣的价钱是44，打完批量折扣之后的单价为 $44 ( 1 - n/100 )$ ，使用优惠\n券后的单价为 $44 ( 1 - n/100 ) - 3$。总价为 $n ( 44 ( 1$ −\n$n/100 ) - 3 )=834$。化简得到$n(44-0.44n-3)=834$,进一步化简得到$n(41$-\n$0.44n)=834$。带入选项得到$C$ 满足条件"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "指数函数的一般形式为 $y=a b t$ 。这里的初始数量$a=8$。所以方程开头应该是8。\n四个选项都符合条件\n增加$160\\%$意味着 新的数量=原数量$(1+160\\%)$。因此增长乘数为$1+160\\%=2.6$。所以指数的\n底必须是2.6，排除A 和$C$\n这种增长是每24 天发生一次，如果已经过去了$x$ 天，那么一共经历了$x/24$ 个完整的24 天\n周期，所以指数部分应该是$x/24$.选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$LM$ 平行于$PQ$，所以角$L$ 等于角$Q$，角$M$ 等于角$P$，所以三角形$LMR$ 和三角形$QPR$\n相似。因此$LR/QR=MR/PR$。带入$LR=10$，$MR=9$，和$PR=13$，得到$10/QR=\\frac{9}{13}$，解出\n$QR=\\frac{130}{9}$。因此$LQ=LR+QR=10+(\\frac{130}{9})=\\frac{220}{9}$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图得到，指数函数的渐近线为$y=0$。所以数据A 的模型为$y=ab^x$。数据$B$ 的模型为\n$y=30ab^x$。排除$C$ 和$D$ 选项。对于数据A，从图中可以看出，$x=0$ 是，$y$ 大约是5。因此对\n于数据$B$，当$x=0$ 时，$y$ 大约是150，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对于数据集A，中位数的位置在$\\frac{41}{2}=20.5$，即第20，21 个数。因为数值0 有1 个（排第\n1），数值1 有7 个（排到8）， 数值2 有8 个（排到16），数值3 有9 个（排到25），\n所以第20，21 个数为3\n对于数据集$B$，中位数的位置在$\\frac{40}{2}=20$，即第20 个数。因为删掉的是最大的数。所以第\n20 个数不变，还是3.\n因此两个数据集的中位数相同，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "给定一元二次方程Ax$^2$+Bx$+C=0$，两根之积为$C/A$。因此$ab/51$=kab，两边同时除以$ab$ 得\n到$k=\\frac{1}{51}$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "四个选项的二次项都是$3x^2$，因为一个因式为$x+2b$, 设另一个因式为$3x+k$。将两个因式相\n乘展开得到$(x+2b)(3x+k)=3x^2+(k+6b)x+2bk$。因为四个选项的常数项都是$18b$，所以\n$2bk=18b$，解出$k=9$。\n因此$x$ 项的系数$k+6b=9+6b$。选项A：$9+6b=9$，解出$b=0$，不是正整数。选项$B$：\n$9+6b=30$，解出$b=3.5$，不是整数。选项$C$：$9+6b=42$，解出$b=5.5$，不是整数。选项$D$：\n$9+6b=51$，解出$b=7$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在直角三角形$XYZ$ 中，$WX$ 为斜边$YZ$ 上的高。由射影定理$WX^{2}=WY \\times WZ$，代入\n$WX=441$、$WY=588$ 得$441^{2}=588 \\times WZ$，解得$WZ=330.75$。在直角三角形$XWZ$ 中，$\\tan Z$\n= $WX / WZ=\\frac{441}{330.75}=\\frac{4}{3}$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

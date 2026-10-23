@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-f8f0ec9575e14f01805caefdbb869568-rw-single-choice",
+  "revision": 1,
+  "title": "2026年3月第3套亚太阅读语法（只有19题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-7b4e71011246ee4c030730ae131abdfd556ef60ec126267871eccfa49cc4378e",
+      "path": "assets/7b4e71011246ee4c030730ae131abdfd556ef60ec126267871eccfa49cc4378e.png",
+      "mediaType": "image/png",
+      "sha256": "7b4e71011246ee4c030730ae131abdfd556ef60ec126267871eccfa49cc4378e",
+      "byteLength": 31740,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f8f0ec9575e14f01805caefdbb869568",
+        "sourceQuestionId": "m1-q13"
+      }
+    }
+  ]
+}

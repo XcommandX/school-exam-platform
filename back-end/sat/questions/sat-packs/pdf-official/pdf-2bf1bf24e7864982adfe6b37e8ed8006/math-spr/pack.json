@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-2bf1bf24e7864982adfe6b37e8ed8006-math-spr",
+  "revision": 1,
+  "title": "2025年12月亚太第3套数学（M1少1题） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-cd66929f4dff7f38f92d73da45dbae336165d31a660b7ee41623a0b09dec42df",
+      "path": "assets/cd66929f4dff7f38f92d73da45dbae336165d31a660b7ee41623a0b09dec42df.png",
+      "mediaType": "image/png",
+      "sha256": "cd66929f4dff7f38f92d73da45dbae336165d31a660b7ee41623a0b09dec42df",
+      "byteLength": 52877,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+        "sourceQuestionId": "m2-q2"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

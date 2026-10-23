@@ -1,4 +1,5 @@
 /* Screenshot-authorized SAT math additions. Existing reading styles stay scoped separately. */
+.exam-shell #studentName{max-width:30%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .exam-shell .battery-position{position:absolute;top:4px;right:16px;font-size:10px}
 .exam-shell .sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .exam-shell .math-tool-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
@@ -37,7 +38,7 @@
 .numeric-response{display:block;width:96px;height:53px;padding:6px 10px 12px;border:1px solid #222;border-radius:8px;background:linear-gradient(#222,#222) center calc(100% - 10px)/calc(100% - 18px) 1px no-repeat;font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#222}
 .numeric-preview-heading{font:700 20px Georgia,'Times New Roman',serif;margin:24px 0 12px}
 .numeric-preview{font:24px Georgia,'Times New Roman',serif;min-height:40px}
-.sat-break{min-height:100vh;min-height:100dvh;background:#1e1e1e;color:white;padding:100px 7% 55px;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8%;font-family:Arial,Helvetica,sans-serif}
+.sat-break{min-height:100vh;min-height:100dvh;background:#1e1e1e;color:white;padding:100px 7% 100px;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8%;font-family:Arial,Helvetica,sans-serif}
 .sat-break .break-battery{position:absolute;right:28px;top:24px;padding:7px 10px;background:#4d4d4d;border-radius:3px}
 .sat-break .break-time-column{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px}
 .sat-break .break-countdown{border:1px solid #fff;border-radius:8px;text-align:center;padding:12px 32px;min-width:260px}
@@ -59,11 +60,10 @@
 .sat-math-ready .resume-testing:hover{background:#fff04d;box-shadow:0 0 0 4px #fff2;filter:none}
 .sat-math-ready .resume-testing:focus-visible{outline:3px solid #fff;outline-offset:5px}
 .sat-math-ready .ready-battery{position:absolute;right:28px;top:24px;padding:7px 10px;background:#4d4d4d;border-radius:3px}
-.sat-math-ready footer{position:absolute;bottom:32px;left:3%;font-size:22px;font-weight:bold}
+.sat-break footer,.sat-math-ready footer{position:absolute;bottom:32px;left:3%;max-width:94%;font-size:22px;font-weight:bold;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .app-shell[data-sat-management] .sat-session-controls{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin:0 0 20px}
 .app-shell[data-sat-management] .sat-session-controls label{display:flex;align-items:center;gap:12px}
 .app-shell[data-sat-management] .app-filters:has([data-filter=section]){grid-template-columns:repeat(3,minmax(0,1fr)) 1.4fr}
-.app-shell[data-sat-management] .pack-import-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-@media(max-width:900px){.math-section .math-question-inner{width:78%}.math-section.calculator-open{--calculator-offset:10vw}.math-section.calculator-open[data-sat-reference-open]:not([data-sat-reference-fullscreen]){--calculator-offset:0px}.math-section.calculator-open[data-sat-reference-open]:not([data-sat-reference-fullscreen]) .math-question-inner{max-width:90%}.sat-break{padding:90px 6% 35px;gap:5%}.sat-break .break-information h1,.sat-break .break-information h2{font-size:28px}.app-shell[data-sat-management] .app-filters:has([data-filter=section]){grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.math-section .math-question-inner{width:90%}.math-section.calculator-open{--calculator-offset:0px}.math-section #questionView.spr-layout #passagePane{padding:20px 14px;font-size:14px}.math-section #questionView.spr-layout .question-pane{padding:20px 14px}.math-section .spr-directions{font-size:14px}.math-section .spr-directions h2{font-size:17px}.math-section .spr-directions th,.math-section .spr-directions td{padding:8px 4px;font-size:12px}.sat-break{grid-template-columns:1fr;padding-top:80px}.sat-break .break-time-column{padding:15px 0 40px}.sat-break .break-information{max-width:none}.app-shell[data-sat-management] .app-filters:has([data-filter=section]){grid-template-columns:1fr}}
+@media(max-width:900px){.math-section .math-question-inner{width:78%}.math-section.calculator-open{--calculator-offset:10vw}.math-section.calculator-open[data-sat-reference-open]:not([data-sat-reference-fullscreen]){--calculator-offset:0px}.math-section.calculator-open[data-sat-reference-open]:not([data-sat-reference-fullscreen]) .math-question-inner{max-width:90%}.sat-break{padding:90px 6% 100px;gap:5%}.sat-break .break-information h1,.sat-break .break-information h2{font-size:28px}.app-shell[data-sat-management] .app-filters:has([data-filter=section]){grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.math-section .math-question-inner{width:90%}.math-section.calculator-open{--calculator-offset:0px}.math-section #questionView.spr-layout #passagePane{padding:20px 14px;font-size:14px}.math-section #questionView.spr-layout .question-pane{padding:20px 14px}.math-section .spr-directions{font-size:14px}.math-section .spr-directions h2{font-size:17px}.math-section .spr-directions th,.math-section .spr-directions td{padding:8px 4px;font-size:12px}.sat-break{grid-template-columns:1fr;padding-top:80px;row-gap:32px}.sat-break .break-time-column{padding:15px 0 40px}.sat-break .break-information{max-width:none}.app-shell[data-sat-management] .app-filters:has([data-filter=section]){grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.math-section.calculator-motion .math-question-inner,.sat-break .resume-testing,.sat-math-ready .resume-testing{transition:none}}

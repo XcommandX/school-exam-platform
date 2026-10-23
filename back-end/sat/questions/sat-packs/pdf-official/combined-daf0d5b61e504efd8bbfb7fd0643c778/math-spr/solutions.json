@@ -1,0 +1,331 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "44"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "把$x=10$ 代入函数式$f(x)=5x-6$ 计算可得结果为44。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查多边形的周长等于所有边长的和，其中一条边长是5，那剩余21 条边的长度之和就是\n周长131 减去5，即126；剩下所有的边长一致，所以每条边的长度就是$\\frac{126}{21}=6$，故答\n案为6。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$7x-8y=7x-8y$，所以 $x2=36$，求解可得$x$ 为6 或者$-6$，因为题目中说了$x$ 是正数，所以\n$x$ 只能是6。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "455"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "参加第一次会议的有3125 人，参加第二次会议的有$3125*56\\%=1750$ 人，参加第三次会议\n的有$1750*26=455$ 人，这455 人三次会议都参加了，故答案为455。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "0"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$15 x ( x 2+9 )$ 计算出来只有3 次项和一次项，没有二次项，所以\n$b=0$，故abc=0，即答案为0。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆$R$ 的圆心为（$-8$，$-19$），向右平移3 个单位，那就变成了（$-5$，$-19$），所以圆$S$ 的方程\n就是 $( x+5 ) 2+( y+19 ) 2=100$，也就是$h=5$，故答案为5。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "78"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角形的内角和是180 度，$180-51*2=78$，故答案为78。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "32"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "整理方程可得 $16=\\frac{1}{2} ( 7 x - 6 )$，故$7x-6=32$，所以答案为32。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "35/12",
+          "729/250",
+          "2917/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "求解该方程组可得$x=\\frac{61}{36}$,$y=\\frac{11}{9}$，故$x+y=\\frac{35}{12}$，所以答案是$\\frac{35}{12}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "175"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据$0.10x+0.20y=0.17(x+y)$计算可得$7x=3y$；将$x=75$ 代入该式可得$y=175$，故答案为\n175。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "312"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据给出的最大值可列出该二次函数的顶点式 $g ( t )=a ( t - 7 ) 2+382.2$，将\n（14,0）代入该函数求解可得$a=- 7.8$，故函数表达式为 $g ( t )=- 7.8 ( t - 7 ) 2$\n$+382.2$；将$t=10$ 代入计算可得答案为312。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6fe105fb1ac64abfb655248d18aaff21-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "26"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程 $ax2+bx+c=0$ 根的个数，当 $b2-4ac\\lt 0$ 时，方程无解；将题目中的方程整\n理成标准的一元二次方程为 $r2+(q-8)r+87=0$，代入 $b2-4ac\\lt 0$ 计算可得 $-287+8\\lt q\\lt 287+8$，\n因为$q$ 是整数，所以$q$ 最大是26，故答案为26。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

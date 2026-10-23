@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c3a85451b62b4e738a0636b67042348f-rw-single-choice",
+  "revision": 1,
+  "title": "2025年5月第2&3套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-97a4093f5a3bd054b7176305fd4ca95c3f08d2ccc7175db2a7abac7b33bb026a",
+      "path": "assets/97a4093f5a3bd054b7176305fd4ca95c3f08d2ccc7175db2a7abac7b33bb026a.png",
+      "mediaType": "image/png",
+      "sha256": "97a4093f5a3bd054b7176305fd4ca95c3f08d2ccc7175db2a7abac7b33bb026a",
+      "byteLength": 35240,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c3a85451b62b4e738a0636b67042348f",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-2a53238bb325128d0830dcf39ba83f40899ffa38ecc02aedb91274a20378b1bf",
+      "path": "assets/2a53238bb325128d0830dcf39ba83f40899ffa38ecc02aedb91274a20378b1bf.png",
+      "mediaType": "image/png",
+      "sha256": "2a53238bb325128d0830dcf39ba83f40899ffa38ecc02aedb91274a20378b1bf",
+      "byteLength": 36102,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c3a85451b62b4e738a0636b67042348f",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "id": "asset-437788f356fd6cea0966f05b07213c09f2390ea7f17eabd7bdd6a15976d5621e",
+      "path": "assets/437788f356fd6cea0966f05b07213c09f2390ea7f17eabd7bdd6a15976d5621e.png",
+      "mediaType": "image/png",
+      "sha256": "437788f356fd6cea0966f05b07213c09f2390ea7f17eabd7bdd6a15976d5621e",
+      "byteLength": 31987,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c3a85451b62b4e738a0636b67042348f",
+        "sourceQuestionId": "m2-q5"
+      }
+    }
+  ]
+}

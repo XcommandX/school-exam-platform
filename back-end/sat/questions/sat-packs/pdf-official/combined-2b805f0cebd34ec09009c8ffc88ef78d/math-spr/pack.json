@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-ef9b5ef2a1d74b5582c7e2d457f1c890-math-spr",
+  "revision": 1,
+  "title": "2024年10月第2套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-15bab66169551d7dae7e172c332556396a3a9143a3d2f28eb6f15fc228207c98",
+      "path": "assets/15bab66169551d7dae7e172c332556396a3a9143a3d2f28eb6f15fc228207c98.png",
+      "mediaType": "image/png",
+      "sha256": "15bab66169551d7dae7e172c332556396a3a9143a3d2f28eb6f15fc228207c98",
+      "byteLength": 14542,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ef9b5ef2a1d74b5582c7e2d457f1c890",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "id": "asset-da1934b9f816a52251d72484b7cf9e1091b22639205ad526ad389cac64bb2fc6",
+      "path": "assets/da1934b9f816a52251d72484b7cf9e1091b22639205ad526ad389cac64bb2fc6.png",
+      "mediaType": "image/png",
+      "sha256": "da1934b9f816a52251d72484b7cf9e1091b22639205ad526ad389cac64bb2fc6",
+      "byteLength": 9885,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ef9b5ef2a1d74b5582c7e2d457f1c890",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "id": "asset-27cf09225ad824564f05bf3a88d36a34106420d0a3367d264f49e66f646dbbbc",
+      "path": "assets/27cf09225ad824564f05bf3a88d36a34106420d0a3367d264f49e66f646dbbbc.png",
+      "mediaType": "image/png",
+      "sha256": "27cf09225ad824564f05bf3a88d36a34106420d0a3367d264f49e66f646dbbbc",
+      "byteLength": 48637,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ef9b5ef2a1d74b5582c7e2d457f1c890",
+        "sourceQuestionId": "m2-q17"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

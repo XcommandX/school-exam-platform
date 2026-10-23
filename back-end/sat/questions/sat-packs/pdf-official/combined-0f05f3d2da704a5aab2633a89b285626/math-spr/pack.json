@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-74f2164cd24e4475954042048aafaf0d-math-spr",
+  "revision": 1,
+  "title": "2024年3月第2套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-4d1274fd7f4c6f2206baf698313bb816c45052d952828cf595d331254c3a85fb",
+      "path": "assets/4d1274fd7f4c6f2206baf698313bb816c45052d952828cf595d331254c3a85fb.png",
+      "mediaType": "image/png",
+      "sha256": "4d1274fd7f4c6f2206baf698313bb816c45052d952828cf595d331254c3a85fb",
+      "byteLength": 9252,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "id": "asset-623669b2e1ac0ff57f331072dfb58cc6d433bd9944edb2262876b0a96f43d332",
+      "path": "assets/623669b2e1ac0ff57f331072dfb58cc6d433bd9944edb2262876b0a96f43d332.png",
+      "mediaType": "image/png",
+      "sha256": "623669b2e1ac0ff57f331072dfb58cc6d433bd9944edb2262876b0a96f43d332",
+      "byteLength": 53861,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q15"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

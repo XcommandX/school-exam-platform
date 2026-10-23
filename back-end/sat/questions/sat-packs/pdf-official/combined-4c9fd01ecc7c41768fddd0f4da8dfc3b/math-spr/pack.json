@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-94fd4f9af6134e4abe9adbc7f23c827d-math-spr",
+  "revision": 1,
+  "title": "2025年3月第2套数学（缺1题） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-e05eed101c23a66a9a3a93e0291c054a4cbb9595a2b85ccfeca1ddbab7114d34",
+      "path": "assets/e05eed101c23a66a9a3a93e0291c054a4cbb9595a2b85ccfeca1ddbab7114d34.png",
+      "mediaType": "image/png",
+      "sha256": "e05eed101c23a66a9a3a93e0291c054a4cbb9595a2b85ccfeca1ddbab7114d34",
+      "byteLength": 23260,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-94fd4f9af6134e4abe9adbc7f23c827d",
+        "sourceQuestionId": "m1-q20"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

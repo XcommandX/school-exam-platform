@@ -1,0 +1,167 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "8"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "分解因式得$(3x+4)(x-8)=0$。因此$x=\\frac{-4}{3}$ 或8，正数解为8"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$10x+4=y$，则$10x=y-4$，带入等式$10x+7=4y$ 得到$y-4+7=4y$，解出$y=1$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两个等式图像的交点一定满足第一个等式，将第一个等式的两边同时除以4，得到\n$$x+y=\\frac{6}{4}=1.5$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "38"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "带入点$(9, 0)$，得到 $0=6(9)2-b(9)-144$，解出$b=38$。也可带入点（$\\frac{-8}{3}$, 0）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "2170"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设$X$ 的长宽高分别为 ℓ, $w$，和$h$。因为$X$ 和$Y$ 相似，则存在一个数$k$ 使得$Y$ 的长宽高分\n别为 $k$ ℓ, $kw$，和$kh$。$X$ 的表面积为58，所以 2 ( ℓ $w$ + ℓ $h+w h )=58$。$Y$ 的表\n\n面积为2088，所以 $2 ( k 2$ ℓ $w+k 2$ ℓ $h+k 2$\n$w h )=2088$。解出 $k 2=36$。因为长度都是正数，所以解出$k=6$。$Y$ 的体积\n为 $k$ ℓ $k w k h=k 3$ ℓ $w h$\n⋅\n⋅\n。因此 6 3 ℓ $w h=2160$，解出$X$ 的体积\nℓ$wh$ 为10。因此体积和为$10+2160=2170$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-33/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$(x-k)2-(k-4a)(x-k)=0(x-k)(x-k-(k-4a))=0(x-k)(x-2k+4a)=0$$\n因此方程的两个解为$k$ 和$2k-4$a。所以解的和为$3k-4a=3k+33$。解出$a=-8.25$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q16"
+      }
+    }
+  ]
+}

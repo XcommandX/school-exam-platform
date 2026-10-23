@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-24fbe6598b2445378d321e49dff815c7-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice3 阅读语法（Easy Module） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fd1dc03c5120b444737079d2a42a2120d263db6dbd291724cc844e83e298ff54",
+      "path": "assets/fd1dc03c5120b444737079d2a42a2120d263db6dbd291724cc844e83e298ff54.png",
+      "mediaType": "image/png",
+      "sha256": "fd1dc03c5120b444737079d2a42a2120d263db6dbd291724cc844e83e298ff54",
+      "byteLength": 21405,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-24fbe6598b2445378d321e49dff815c7",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-a9fe63ebd3f45862652f44b38c9edfd663b3618a029400a44432a241a8aa1314",
+      "path": "assets/a9fe63ebd3f45862652f44b38c9edfd663b3618a029400a44432a241a8aa1314.png",
+      "mediaType": "image/png",
+      "sha256": "a9fe63ebd3f45862652f44b38c9edfd663b3618a029400a44432a241a8aa1314",
+      "byteLength": 81284,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-24fbe6598b2445378d321e49dff815c7",
+        "sourceQuestionId": "m1-q15"
+      }
+    }
+  ]
+}

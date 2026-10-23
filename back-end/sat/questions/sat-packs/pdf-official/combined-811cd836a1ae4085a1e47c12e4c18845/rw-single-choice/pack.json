@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-9c3d076675ad40289a542a6772240c81-rw-single-choice",
+  "revision": 1,
+  "title": "2025年3月第6套阅读语法（缺4题） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-bf346db844892f1240419fe43f9fef06abae328fc5300008ee7fb5c3c2a7a0d2",
+      "path": "assets/bf346db844892f1240419fe43f9fef06abae328fc5300008ee7fb5c3c2a7a0d2.png",
+      "mediaType": "image/png",
+      "sha256": "bf346db844892f1240419fe43f9fef06abae328fc5300008ee7fb5c3c2a7a0d2",
+      "byteLength": 43075,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9c3d076675ad40289a542a6772240c81",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "id": "asset-15c35409359d2e85e380b4567cda93cbe225b68672854a0b3699e96aecf9f5aa",
+      "path": "assets/15c35409359d2e85e380b4567cda93cbe225b68672854a0b3699e96aecf9f5aa.png",
+      "mediaType": "image/png",
+      "sha256": "15c35409359d2e85e380b4567cda93cbe225b68672854a0b3699e96aecf9f5aa",
+      "byteLength": 42785,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9c3d076675ad40289a542a6772240c81",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-0178f3ff48bf1d44f80bf5bcf1f6e37d6259003badfeb346466bdb8ed66a551f",
+      "path": "assets/0178f3ff48bf1d44f80bf5bcf1f6e37d6259003badfeb346466bdb8ed66a551f.png",
+      "mediaType": "image/png",
+      "sha256": "0178f3ff48bf1d44f80bf5bcf1f6e37d6259003badfeb346466bdb8ed66a551f",
+      "byteLength": 54668,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9c3d076675ad40289a542a6772240c81",
+        "sourceQuestionId": "m2-q11"
+      }
+    }
+  ]
+}

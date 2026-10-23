@@ -1,0 +1,120 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，$a=2.8b$，$a=0.9c$，可得$c=10a/9$=（$\\frac{10}{9}$）$*2.8b=140b/45=311\\%b$，$t=2$ 代入即可得\n$$s=58$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，increases by a factor of $c$，$c$ 是变化率，变化周期$\\frac{1}{2}$（$x$ 每增加$\\frac{1}{2}$，比率变化\n$c$），所以可以写成标准形式 $f ( x )=a \\times c x/\\frac{1}{2}=a \\times$\n$c 2 x$ ，对比选项只有$B$ 符合（本题$c$ 取值没有限制）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数应用题，根据题意，65 为斜率，注意注意语言表述 \\$156 for the first 2 hours，即\n为$f(2)=156$,所以只有$D$ 正确"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "注意文字表述中的数值以及单位，（合理的式子是每项的单位都匹配，本题单位是\npounds）8 单位是pounds，$\\frac{8}{2.25}$ 是pouund/can，$c$、$d$ 是can 的数量，所以$8/2.25c$ 是\nchicken-favored 的ponud 值，同理$9/1.75d$ 是duck-flavored 的pound 值，故选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "顶点坐标（4，258）且过点（0，2）（ initial height of 2 feet 意味着$x=0$），利用顶点式解\n出$a=-16$，再代入$x=5$ 求的$f(5)=242$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对任意实数 $x$，都有 $x2\\ge 0$，不可能等于 $-729$。因此该方程在实数范围内没有解，实数解\n个数为 0，选 $D$。注意不要把 $729=27$ 直接写成 $\\pm 27$——那是 $x2=729$ 的情形；本题右侧是\n负数，平方不可能为负。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$g(m)=-0.05m+12.9$ 是斜率截距式：初始满箱油量 $g(0)=12.9$ 加仑，每行驶 1 英里剩余油量\n下降 $|-0.05|=0.05$ 加仑，也就是每英里耗油 0.05 加仑，选 A。$B$ 是满箱油量；$C$、$D$ 是把\n斜率取倒数或用初始油量除以斜率得到的错误量。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "先孤立绝对值：$|x|=38$，所以 $x=\\pm 38$。题目只问下列哪个值是解，在选项中 $-38$ 是解，选\n$D$。注意绝对值方程通常有正负两个解，本题四个选项里只有 $-38$ 出现；$\\pm \\frac{1}{38}$ 是把 38 取\n倒数的错误干扰项。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直角三角形两锐角之和等于 $90^{\\circ}$（因为三角形内角和 $180^{\\circ}$，减去直角 $90^{\\circ}$）。另一锐角为\n\n$$90 -56=34$$\n$$\\circ$$\n$$\\circ$$\n$\\circ$，选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "指数底数为 2，每当指数 $t/480$ 增加 1，函数值就乘以 2，即翻倍。令 $t/480=1$，得 $t=480$ 分\n钟，选 $B$。30,000 是初始数量，2 是底数，960 是翻倍两次的时间，均不是一次翻倍所需\n时间。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "实际 $y$ 大于预测 $y$，等价于数据点落在拟合直线上方。在同一 $x$ 处比较竖直位置：(6.0,\n8.0) 在该 $x$ 对应的直线点上方，残差为正，选 $B$。$(5.0, 5.7)$、$(9.0, 8.7)$ 大致在直线上或略\n低；$(7.0, 7.3)$ 在直线下方。注意比较的是与同一 $x$ 处直线的竖直差，而不是谁的 $y$ 值最\n大。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "半球体积是整球体积的一半：$V=\\frac{1}{2}\\cdot \\frac{4}{3}\\pi r3=\\frac{2}{3}\\pi r3$。代入 $r=83$：$r3=833=571,787$，\n$V=\\frac{2}{3}\\pi \\cdot 571,787\\approx 1,197,548$ 立方英寸，最接近 1,197,500，选 $D$。A、$B$ 数量级过小，$C$ 接近\n整球体积但仍小于 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "这是顶点式 $f(x)=(x-h)2+k$。平方项 $(x-3)2\\ge 0$，当 $x=3$ 时取到 0，此时 $f(3)=5$，即函数最小\n值为 5，选 $C$。注意题目问的是 minimum value（$y$ 的最小取值），不是取最小值时的\n$x=3$，也不是 $3+5=8$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "配方：$y=x2-18x+47=(x-9)2-81+47=(x-9)2-34$。开口向上，在顶点 $x=9$ 处取到最小值，选\n$B$。也可用顶点公式 $x=-b/2a=-\\frac{-18}{2}=9$。题目问的是使 $y$ 最小的 $x$，不是最小 $y$ 值 $-34$，\n也不是一次项系数 $-18$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "散点呈指数上升：$x\\approx 0$ 时 $y\\approx 5$，$x\\approx 4$ 时 $y\\approx 80$。检验初值与底数：$C$ 中 $y=5(2)x$，$x=0$ 时为\n5，$x=4$ 时为 $5\\times 16=80$，与图像吻合，选 $C$。$B$ 的指数为 $-x$ 表示递减；A 初值 2 且底数 5\n增长过快；$D$ 初值 82 与图不符。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "用分配律逐项相乘：$3x3\\cdot 6x2=18x5$，$3x3\\cdot 5x=15x4$，$-x2\\cdot 6x2=-6x4$，$-x2\\cdot 5x=-5x3$，\n$2\\cdot 6x2=12x2$，$2\\cdot 5x=10x$。合并 $x4$ 项：$15x4-6x4=9x4$，结果为 $18x5+9x4-5x3+12x2+10x$，\n选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在置信水平不变的情况下，样本量增大会减小抽样变异，margin of error 大致按 $1/n$ 缩小。\n新样本量是原来的 2 倍，新的 margin of error 约为原来的 $\\frac{1}{2}\\approx 0.707$ 倍，即小于 1.2 小时，\n选 A。$B$、$C$、$D$ 都认为误差不变或变大，与样本量增大提高精度的方向相反。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "平移规则：右移 5 把 $x$ 替换成 $x-5$；下移 3 在函数整体后减 3。所\n以 $g(x)=f(x-5)-3=a-13/x-5+7-3=a-13/x-5+4$，选 $B$。易错点是水平平移方向：右移应写成\n$x-5$ 而不是 $x+5$；垂直方向下移只影响常数项，不应把分子里的 13 改成 16。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "套数关系：住宅套数加商业套数共 175，即 $r+c=175$；面积关系：$1,200r+2,400c=300,000$。\n二者对应 $C$。A、$B$ 把等式两边的数字对调；$B$、$D$ 错把套数写成 $r-c$（应为相加）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "原分组在研究前饮食就已不同，先前差异会与新饮食效应混杂，无法归因。必须把每只熊\n随机分配到两组，使两组在先前饮食等变量上统计上可比，选 A。$B$ 只是把两种新饮食随\n\n机贴到既有组上，没有解决原分组的混杂；$C$ 是双盲改进，但不解决根本的分组偏倚；$D$\n显然不行。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "vX=$9b/c$ 厘米/秒。由 vX=1/avY，得 vY=$a\\cdot$vX=$9ab/c$。$Y$ 在 $6c$ 秒内的路程\n为 vY$\\cdot 6c=9ab/c\\cdot 6c=54ab$，选 $D$。注意时间 $c$ 最后约掉；“$X$ 的速度是 $Y$ 的 $1/a$ 倍”意味着 $Y$\n比 $X$ 快 a 倍，不要写反。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "散点在 $x\\approx 4$ 附近最低，之后缓慢上升，到 $x\\approx 27$ 时 $y\\approx 3$。顶点式 $y=a(x-h)2+k$ 中 $h\\approx 4.46$\n（顶点在正 $x$），排除 $D$（$h=-4.46$ 顶点在负 $x$）。再用远处散点检验系数：A 在 $x=27$\n时 $y=0.005(22.54)2+0.24\\approx 2.78$，符合图像；$B$ 在 $x=27$ 时约 25.6，$C$ 约 254，都过大。选\nA。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "把 $7x$、$9y$ 分别看作整体。两式相加：$12(7x)=-252$，所以 $7x=-21$。两式相减（第一式减第\n二式）：$10(9y)=720$，所以 $9y=72$。于是 $7x+9y=-21+72=51$，选 $C$。这种整体线性组合比\n直接解 $x$、$y$ 更快捷；$A=-93$、$B=-21$、$D=72$ 都是只算对其中一部分的中间量。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从图中读出直线 $k$ 过 $(0,-4)$ 和 $(4,-1)$ 等点，斜率 $mk=-1-(-4)/4-0=\\frac{3}{4}$。与之垂直的直线斜\n率为负倒数 $mn=\\frac{-4}{3}$。再由 $n$ 过 $(3,7)$：$7=\\frac{-4}{3}\\cdot 3+b=-4+b$，得 $b=11$。所以 $n$ 的方程\n为 $y=-4/3x+11$，选 $B$。易错点是垂直斜率要取负倒数（既变号又取倒数），不能只变号；\n截距要用给定的 $(3,7)$ 重新算，不能直接套图上的 $-4$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(5)$ 表示当输入 $t=5$（即存款 5 年后）时函数的输出值，也就是账户中的总余额约为\n6,627.73 美元，故选 A。$B$ 错在把 $f(5)$ 理解成“每 5 年增加额”，函数描述的是余额而非增\n量；$C$ 错在把总余额 6,627.73 误当成“增加了”的金额（实际增加额为\n$6,627.73-6,000=627.73$）；$D$ 错在方向，$1.01\\gt 1$，余额随时间递增而非递减。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "题目求 8 个季度的累计总产量，应把 8 个散点的纵坐标全部相加。读图约为\n0,10,17,20,34,40,52,59，合计约 $0+10+17+20+34+40+52+59=232$ 夸脱，最接近 232，故选\n$D$。易错点：A、$B$ 只是某一个（或最后一个）散点的值；$C$ 是漏加或误读部分点的结果。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对每个 $x$ 先算出上界 $16x+13$：$x=2$ 时为 45，$x=4$ 时为 77，$x=6$ 时为 109，要求每行 $y$ 都严\n格小于对应上界。$B$ 的 $31\\lt 45$、$63\\lt 77$、$95\\lt 109$ 全部成立，故选 $B$。A 第二行 $91\\gt 77$ 不成\n立；$C$ 的 $y$ 恰好等于上界（45,77,109），但不等式是严格小于 &lt;，在边界上不算解；$D$ 各\n行均超限。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "先从总钙量中扣除 6 杯牛奶的钙，剩余再平均分给 3 根香蕉。牛奶钙总量 $6\\times 276=1,656$\n$\\mathrm{mg}$，剩余 $1,680-1,656=24 \\mathrm{mg}$，每根香蕉 $24\\div 3=8 \\mathrm{mg}$，故选 $D$。A 只是牛奶的钙总量；$C$\n是 3 根香蕉的总钙量（忘了除以 3）；$B$ 是错误除法。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "先把绝对值单独留在一边：$-5|5x+4|=-20$，即 $|5x+4|=4$。于是 $5x+4=4$\n⇒\n$$x=0$$\n，\n或 $5x+4=-4$\n⇒\n$$x=\\frac{-8}{5}$$\n，选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "长方体表面积公式为 $2\\times ($底面积$)+2\\times ($侧面积)。本题底面为 $19\\times 6$，高为 $x$，所以表面积\n=$2(19)(6)+2(19)x+2(6)x$。其中 2(19)(6) 对应上下两个底面，因此 (19)(6) 就是一个底面的面\n积（$19\\times 6$ 平方英寸），故选 $C$。A 错：高是变量 $x$，不是乘积；$B$ 错：底面边长是 19 或 6\n本身，不是乘积；$D$ 错：侧面对应的是 $2(19)x$、$2(6)x$ 这些含 $x$ 的项。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "逐个代入：$f(-4)=22\\cdot 2-1=11$；$f(0)=22\\cdot 20=22$；$f(4)=22\\cdot 21=44$；$f(8)=22\\cdot 22=88$。只有 $B$ 表完\n全吻合，故选 $B$。A 错在 $f(0)$ 写成 0（指数函数不可能为 0）；$C$ 错在出现 $f(x)=-11$（指\n数函数恒正）且 $x$ 重复为 0；$D$ 错在 $f(8)=66$，实际应为 88。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆心是直径端点的中点：$(3+\\frac{15}{2},6+\\frac{16}{2})=(9,11)$，故圆方程形式为 $(x-9)2+(y-11)2=r2$，排\n除 A、$C$（圆心符号错误）。半径平方 $r2=(15-3)2+(16-6)\\frac{2}{4}=122+\\frac{102}{4}=\\frac{244}{4}=61$，故选\n$D$。$B$ 错在把直径长度平方 244 直接当作 $r2$，忘记除以 4。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当前分组是按“研究前饮食习惯不同”来分的，两组在研究前的条件本身就有系统性差异\n（混杂），因此无法把冬眠差异归因于新饮食。要做因果推断，应把熊个体随机分配到两\n个新饮食组，再比较两组，选 A。$B$ 只是给既有组随机分派饮食，不能消除个体基线混\n杂；$C$ 指盲法，不是本研究的关键缺陷；$D$ 错误，现有设计无法得出结论。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设售出 $n$ 张票。每张票净赚 $50-18=32$ 美元，扣除固定租金 600 美元后净利润为\n$32n-600$。要求 $32n-600\\ge 1,400$，即 $32n\\ge 2,000$，$n\\ge 62.5$。票数必须为整数，向上取整得\n$n=63$，故选 $D$。A、$B$、$C$ 均小于 62.5，代入后净利润达不到 1400（例如 $n=44$ 时利润仅\n$32\\times 44-600=808$）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图中直线过 $(0,2)$ 与 $(1,7)$，斜率为 $7-\\frac{2}{1}-0=5$，纵截距为 2，故所示直线方程为 $y=5x+2$，\n即 $h(x-26)=5x+2$。令 $u=x-26$，则 $x=u+26$，代入得 $h(u)=5(u+26)+2=5u+132$，所以\n$h(x)=5x+132$，故选 $D$。A、$B$、$C$ 都是没有把水平右移 26 正确还原（直接在 $5x+2$ 上乱加\n乱减常数）的错误结果。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "把 $p$ 化为斜截式：$2y=-14x+5$，$y=-7x+\\frac{5}{2}$，故 $p$ 的斜率为 $-7$。两条垂直直线斜率之积为\n$-1$，所以 $r$ 的斜率为 $-1/-7=\\frac{1}{7}$，故选 $B$。A 7 漏掉了负倒数中的负号；$C \\frac{-1}{7}$ 把 $p$ 的斜率\n误当 $\\frac{1}{7}$ 再取负；$D -7$ 是 $p$ 自己的斜率，不是其垂直直线的斜率。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "交点的横坐标同时满足两式，令 $-8x+23=2x2+13$，整理得 $2x2+8x-10=0$，即 $x2+4x-5=0=($\n$x+5)(x-1)$，故 $x=-5$ 或 $x=1$。选项中只有 $-5$，故选 A。$B$、$C$、$D$ 代入均不能使两式相等：\n例如 $x=-1$ 时直线给 $y=31$，抛物线给 $y=15$，不相等。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "管壁体积 = 外圆柱体积 − 内圆柱体积。外半径 $R=30$，内半径 $r=30-\\frac{3}{8}=29.625$。\n$V=\\pi (R2-r2)\\cdot h=\\pi (302-29.6252)\\cdot 132=\\pi (900-877.640625)\\cdot 132\\approx \\pi \\cdot 22.359\\cdot 132\\approx 9,272$ 立方英寸，\n\n故选 $D$。A、$B$ 量级过小；$C 1,485$ 是只算了侧面积一类的错误；错因多为把壁厚直接当半\n径差算错，或漏乘高度 132。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一元二次方程恰有一个实数解等价于判别式 $\\Delta=0$。对 $x2+(k-3)x+33=0$，\n$\\Delta=(k-3)2-4\\cdot 1\\cdot 33=(k-3)-132=k-135=0$，故 $k=135$。同时 $k=135$ 满足根式定义域 $k\\ge 3$，成\n立，故选 A。$B 132$ 是漏掉了 $-3$（把 $(k-3)2$ 当成 $k$）；$C 129$ 是错用 $4\\cdot 33=132$ 再乱减；$D$\n36 与判别式思路无关。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$r$,$s$ 是直角三角形的两个锐角，$r+s=90^{\\circ}$。由 $4r\\gt 17s$ 得 $r\\gt 17/4s$，结合 $r+s=90$ 可知 $r\\gt s$（$r$ 为\n较大锐角）。在 0 ~90\n$$\\circ$$\n$\\circ$间正弦递增，故 $\\sin r\\gt \\sin s$，于是 sinr/sins$\\gt 1$。而 $\\sin r$、$\\cos r=\\sin s$\n都在 $(0,1)$ 内；又由互余 $\\cos s=\\sin r$，所以 $D$ =sinr/coss=1。因此 $C$ 必为最大，选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "不必全部展开。注意 $a/8x2+b/8x+c/8$ 在 $x=1$ 时的值等于 $a+b+c/8$。直接把 $x=1$ 代入原式：\n$-16(5-2)2+6(5-3)2=-16\\times 9+6\\times 4=-144+24=-120$，即 $a+b+c/8=-120$，所以 $a+b+c=-960$，选\nA。易错点：$C$ 的 $-120$ 是 $x=1$ 时的多项式值，不是 $a+b+c$；$D$ 漏乘了 8 倍关系。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设两根为整数 $r1$,$r2$，由韦达定理 $r1+r2=-10$、$r1r2=k$。逐项检验能否拆成和为 $-10$ 的两个\n不同整数：A $k=24=(x+6)(x+4)$，根 $-6$,$-4$，和 $-10$；$B k=21=(x+7)(x+3)$，根 $-7$,$-3$，和\n$-10$；$C k=-39=(x+13)(x-3)$，根 $-13$,3，和 $-10$；$D k=-21$，需 $x2+10x-21=0$，判别式\n$100+84=184$ 不是完全平方数，没有整数根，故选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

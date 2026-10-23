@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table shows the distribution of 44 baseball niayers and their positions in a baseball club. Each\nplayer is categorized in one position.\n\nPosition\nFrequency\nPitcher\n$$22$$\n\nCatcher\n$$2$$\nInfielder or outfielder\n$$20$$\n\nIf one of the 44 players is selected at random, the probability of selecting a player who is\ncategorized as an infielder, given that the player is not categorized as a pitcher, is $\\frac{1}{11}$. How\nmany of these players are categorized as an outfielder?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "id": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$36/x+5=x$$\nWhat is the positive solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "sat:item:pdf-9ef2dff5413d4ce48eb510443ead13e6-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$5/8x+7/8y=\\frac{4}{7}-7/8y$$\n\n$$5/4x+\\frac{7}{4}=py+\\frac{3}{2}$$\nIn the given system of equations, $p$ is a constant. If the system has no solution, what is the value\nof $p$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+        "sourceQuestionId": "m1-q6"
+      }
+    }
+  ]
+}

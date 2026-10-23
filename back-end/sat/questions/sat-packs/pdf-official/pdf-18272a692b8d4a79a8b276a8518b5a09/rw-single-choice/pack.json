@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-18272a692b8d4a79a8b276a8518b5a09-rw-single-choice",
+  "revision": 1,
+  "title": "2024年11月第3套阅读语法（此套重题较多） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d73e48e5b7c41c579d8b7780430a7bdf251ba52fbcf452ab1255adc99fdf2342",
+      "path": "assets/d73e48e5b7c41c579d8b7780430a7bdf251ba52fbcf452ab1255adc99fdf2342.png",
+      "mediaType": "image/png",
+      "sha256": "d73e48e5b7c41c579d8b7780430a7bdf251ba52fbcf452ab1255adc99fdf2342",
+      "byteLength": 18397,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-18272a692b8d4a79a8b276a8518b5a09",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-2b22df96999e26acdc4182d165b92556de3e732a9a60a10cc3507e30091be418",
+      "path": "assets/2b22df96999e26acdc4182d165b92556de3e732a9a60a10cc3507e30091be418.png",
+      "mediaType": "image/png",
+      "sha256": "2b22df96999e26acdc4182d165b92556de3e732a9a60a10cc3507e30091be418",
+      "byteLength": 36264,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-18272a692b8d4a79a8b276a8518b5a09",
+        "sourceQuestionId": "m1-q6"
+      }
+    }
+  ]
+}

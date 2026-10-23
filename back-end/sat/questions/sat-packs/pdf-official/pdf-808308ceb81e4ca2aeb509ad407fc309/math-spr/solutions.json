@@ -1,0 +1,361 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "was thrown 表示刚开始扔，即时间$t=0$，代入计算的函数值为18"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "四分位图quartile 题目，range 是$\\max -\\min$ 的值，图中两端数据分别为$\\min$ 和$\\max$，A 的\nrange 是5，$B$ 的range 是9，差为4（需学习quartile 相关知识，该类题目为往年sat 纸考常\n见题目）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "491/1250",
+          "3929/10000",
+          "11/28",
+          "0",
+          "392",
+          "393/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据三角函数定义$\\cos$⁡$x=\\frac{11}{28}$\n$$\\circ$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "54"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据两个角a，和$Q$ 对顶角想等可得两个三角形相似，对应边成比例，$WQ/YQ=WX/YZ$,即\n$\\frac{70}{63}=60/YZ$ 可得到$YZ=54$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "336"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "过点$(24, 0)$，直接代入$x=24$，得到$0=38$（$t-24$），$t=24$，再代入$x=0$ 求 $g(0)=14*24=336$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "79"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意$f(2018)=1.27f(2014)$得到$f(2014)=f(2018)/1.27=f(2018)*p\\%$，所以\n$p\\%=\\frac{1}{1.27}=0.79$，取$p$ 值为79"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "基础的一次函数，直接代入 $f ( x )=5$ 到函数中 $\\frac{9}{7} x+\\frac{8}{7}=5$，解出$x=3$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "189/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y$-coordinate 为$x=0$，代入函数中可得 $0=- 5y/9+21$ 可得$5y=189$，$y=\\frac{189}{5}$ or 37.5"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1677"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "善于观察等式和问题，问的是$x$ 相关数值，两个式子相加恰好消掉$y$，可得到\n$2(x-2)=559$，问题$6(x-2)$正好是$2(x-2)$的三倍可得1677"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1728"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数方程求最值，即顶点坐标$y$ 值，可通过顶点坐标$x$ 值$-b/2a=24$ 代入函数中可以的\n得到$f(24)=1728$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "25"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$g(x)$函数的解为0, 2 和 $- 6$，结合$g(7-w)=0$ 可知$(7-w)$的值也可为0, 2 和 $- 6$，计算三个等\n式$7-w=0$; $7-w=2$; $7-w=- 6$，解得$w$ 的值分别为7、5 和13，和为25"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "66"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆里内切一个长方形，长方形对角线长度就是直径，且是长方形短边的2 倍，设长方形短\n边$x$，对角线$2x$，根据勾股定理得到长方形的长为 $3 x$，再根据长方形面积 1089 3\n推算出$x$ 为 $1089=33$，直径直接就是长方形对角线$2x=66$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-808308ceb81e4ca2aeb509ad407fc309-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "no solution 意味着两个一次函数斜率相等，且$y$-intercept 不等（本题$p$ 值只影响slope，可\n以不考虑$y$-intercep），两个式子分别整理化简，得$14/8y-5/8x=\\frac{4}{7}-py+5/4x=\\frac{8}{4}$，\n$14/-5=-p/1.25$ 得到$p=3.5$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m2-q19"
+      }
+    }
+  ]
+}

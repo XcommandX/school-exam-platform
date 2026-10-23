@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-f7dd178416a6451a944c9b1c8f141998-math-spr",
+  "revision": 1,
+  "title": "2024年6月第2套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-084b446f7be4985ffdbc6351639fa2058406198769a561433146862dcc532405",
+      "path": "assets/084b446f7be4985ffdbc6351639fa2058406198769a561433146862dcc532405.png",
+      "mediaType": "image/png",
+      "sha256": "084b446f7be4985ffdbc6351639fa2058406198769a561433146862dcc532405",
+      "byteLength": 12145,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+        "sourceQuestionId": "m1-q1"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

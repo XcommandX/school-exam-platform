@@ -1,0 +1,823 @@
+{
+  "collectionId": "combined-39f1e11c6a4541e2848662854b5ae602",
+  "title": "2025年3月第8套SAT",
+  "conversionMode": "pdf-assembled",
+  "sourceUnmodified": true,
+  "questionCount": 57,
+  "fullSAT": false,
+  "assessmentFile": null,
+  "sourceCollections": [
+    {
+      "collectionId": "pdf-8a4aa5e698e543cabd751842bac04b71",
+      "sourceFile": "阅读文法/2025年3月第8套阅读语法（只保留新题）.pdf",
+      "sourceSha256": "152032b54d86535c49f56db1d201f7c991d7d6d3ccfd9ecd96aadfb49b5d4d69",
+      "questionCount": 18,
+      "section": "reading-writing"
+    },
+    {
+      "collectionId": "pdf-641aa91d10014685b82e54f57bfd9acf",
+      "sourceFile": "数学/2025年3月第8套数学（缺5题）.pdf",
+      "sourceSha256": "3486bdc45f90344253e1e838ff4d11793fb04395d7b8ea03132b2dd6671e012b",
+      "questionCount": 39,
+      "section": "math"
+    }
+  ],
+  "sourceOrder": [
+    {
+      "sourceQuestionId": "m1-q1",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 1,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m1-q1",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 2,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m1-q2",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q1",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 1,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q1",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q2",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 2,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q2",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q3",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 3,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q3",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q4",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 4,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q4",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q5",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 5,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q5",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q6",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 6,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q6",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q7",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 7,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q7",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q8",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 8,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q8",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q9",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 9,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q9",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q10",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 10,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q10",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q11",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 11,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q11",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q12",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 12,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q12",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q13",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 13,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q13",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q14",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 14,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q14",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q15",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 15,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q15",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q16",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 16,
+      "packId": "sat:pack:pdf-8a4aa5e698e543cabd751842bac04b71-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-8a4aa5e698e543cabd751842bac04b71-m2-q16",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q1",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 1,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q1",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 2,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q2",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q3",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 3,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q3",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q4",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 4,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q4",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q5",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 5,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q5",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q6",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 6,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q6",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q7",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 7,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q7",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q8",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 8,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q8",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 9,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q9",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q10",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 10,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q10",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q11",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 11,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q11",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q12",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 12,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q12",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q13",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 13,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q13",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q14",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 14,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q14",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q15",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 15,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q15",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q16",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 16,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q16",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q17",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 17,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q17",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q18",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 18,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q18",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q19",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 19,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q19",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q20",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 20,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q20",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m1-q21",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 21,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m1-q21",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q1",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 1,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q1",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q2",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 2,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q2",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q3",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 3,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q3",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q4",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 4,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q4",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q5",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 5,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q5",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q6",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 6,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q6",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q7",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 7,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q7",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q8",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 8,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q8",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q9",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 9,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q9",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q10",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 10,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q10",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q11",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 11,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q11",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q12",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 12,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q12",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q13",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 13,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q13",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q14",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 14,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q14",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q15",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 15,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q15",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q16",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 16,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q16",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q17",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 17,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q17",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "m2-q18",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 18,
+      "packId": "sat:pack:pdf-641aa91d10014685b82e54f57bfd9acf-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:pdf-641aa91d10014685b82e54f57bfd9acf-m2-q18",
+      "itemRevision": 1
+    }
+  ],
+  "modules": [
+    {
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "questionCount": 2
+    },
+    {
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "questionCount": 16
+    },
+    {
+      "section": "math",
+      "moduleNumber": 1,
+      "questionCount": 21
+    },
+    {
+      "section": "math",
+      "moduleNumber": 2,
+      "questionCount": 18
+    }
+  ],
+  "packs": {
+    "rw-single-choice": {
+      "questionCount": 18,
+      "assetCount": 0
+    },
+    "math-single-choice": {
+      "questionCount": 30,
+      "assetCount": 9
+    },
+    "math-spr": {
+      "questionCount": 9,
+      "assetCount": 0
+    }
+  },
+  "answerStatus": {
+    "needs-review": 57
+  },
+  "explanationsMissing": 0,
+  "reviewNotes": [
+    {
+      "sourceQuestionId": "m2-q4",
+      "issue": "source_formula_ambiguous:unbalanced_group",
+      "pageNumber": 5,
+      "sourceCollectionId": "pdf-8a4aa5e698e543cabd751842bac04b71"
+    },
+    {
+      "sourceQuestionId": "m2-q9",
+      "issue": "source_formula_ambiguous:unbalanced_group",
+      "pageNumber": 10,
+      "sourceCollectionId": "pdf-8a4aa5e698e543cabd751842bac04b71"
+    },
+    {
+      "sourceQuestionId": "m2-q13",
+      "issue": "source_formula_ambiguous:unbalanced_group",
+      "pageNumber": 11,
+      "sourceCollectionId": "pdf-8a4aa5e698e543cabd751842bac04b71"
+    },
+    {
+      "issue": "source-content-and-answers-not-independently-verified",
+      "policy": "preserve-source-pdf-formulas-and-original-numbering-no-invented-corrections",
+      "sourceCollectionId": "pdf-8a4aa5e698e543cabd751842bac04b71"
+    },
+    {
+      "sourceQuestionId": "m1-q13",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q16",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q20",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q9",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q12",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q18",
+      "issue": "empty-source-option-placeholders-omitted",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 1,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 1,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 1,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 1,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q2",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 1,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q5",
+      "issue": "source_formula_ambiguous:unbalanced_group",
+      "pageNumber": 2,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q9",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q10",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 3,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q21",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 8,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m1-q21",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 8,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q7",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 12,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q7",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 12,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q17",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 16,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q17",
+      "issue": "source_formula_ambiguous:unbalanced_group",
+      "pageNumber": 16,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q18",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 16,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "sourceQuestionId": "m2-q18",
+      "issue": "source_formula_ambiguous:baseline_variable_digit",
+      "pageNumber": 16,
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    },
+    {
+      "issue": "source-content-and-answers-not-independently-verified",
+      "policy": "preserve-source-pdf-formulas-and-original-numbering-no-invented-corrections",
+      "sourceCollectionId": "pdf-641aa91d10014685b82e54f57bfd9acf"
+    }
+  ]
+}

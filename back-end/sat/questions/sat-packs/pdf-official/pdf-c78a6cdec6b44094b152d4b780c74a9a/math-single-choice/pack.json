@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c78a6cdec6b44094b152d4b780c74a9a-math-single-choice",
+  "revision": 1,
+  "title": "2025年12月亚太第2套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-474197895cb528deeefa79322eb298631f81df3448c08dfba62ea8317ffea7de",
+      "path": "assets/474197895cb528deeefa79322eb298631f81df3448c08dfba62ea8317ffea7de.png",
+      "mediaType": "image/png",
+      "sha256": "474197895cb528deeefa79322eb298631f81df3448c08dfba62ea8317ffea7de",
+      "byteLength": 14258,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c78a6cdec6b44094b152d4b780c74a9a",
+        "sourceQuestionId": "m1-q5"
+      }
+    }
+  ]
+}

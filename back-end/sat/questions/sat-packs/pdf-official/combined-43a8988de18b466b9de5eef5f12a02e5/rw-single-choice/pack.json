@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-76ddc1a05f554cfe8e80edfb314fc181-rw-single-choice",
+  "revision": 1,
+  "title": "2025年8月第3套阅读语法【M2缺两道题】 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-9c2464a80308d8623ba60d702faf18b9eae8324ba822d6661e8f189f470f5a71",
+      "path": "assets/9c2464a80308d8623ba60d702faf18b9eae8324ba822d6661e8f189f470f5a71.png",
+      "mediaType": "image/png",
+      "sha256": "9c2464a80308d8623ba60d702faf18b9eae8324ba822d6661e8f189f470f5a71",
+      "byteLength": 35626,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-76ddc1a05f554cfe8e80edfb314fc181",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-163e91eb18327043fd802cfd7d62c5db6b9e19231e6db935c1845b6957bcc2b4",
+      "path": "assets/163e91eb18327043fd802cfd7d62c5db6b9e19231e6db935c1845b6957bcc2b4.png",
+      "mediaType": "image/png",
+      "sha256": "163e91eb18327043fd802cfd7d62c5db6b9e19231e6db935c1845b6957bcc2b4",
+      "byteLength": 22655,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-76ddc1a05f554cfe8e80edfb314fc181",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "id": "asset-1fa540240669fc0ab536cc013f3aaedabdd739e5ee927707886db0ebc134b396",
+      "path": "assets/1fa540240669fc0ab536cc013f3aaedabdd739e5ee927707886db0ebc134b396.png",
+      "mediaType": "image/png",
+      "sha256": "1fa540240669fc0ab536cc013f3aaedabdd739e5ee927707886db0ebc134b396",
+      "byteLength": 88025,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-76ddc1a05f554cfe8e80edfb314fc181",
+        "sourceQuestionId": "m2-q10"
+      }
+    }
+  ]
+}

@@ -78,5 +78,8 @@
 !/tests/integration/test-source-publication.mjs
 !/tests/integration/test-task-format.mjs
 
+!/tests/cloud/test-platform-session.mjs
+!/tests/frontend/test-platform-recordings.cjs
+
 # Never include local operating-system metadata.
 .DS_Store

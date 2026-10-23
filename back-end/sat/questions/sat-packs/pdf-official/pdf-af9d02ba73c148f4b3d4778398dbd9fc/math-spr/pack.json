@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-af9d02ba73c148f4b3d4778398dbd9fc-math-spr",
+  "revision": 1,
+  "title": "2025年5月第2套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-5bbee9e6d3cfc958c0bfadc30fdf72ce95e2238e14443f6b6574523f3ff3d1cd",
+      "path": "assets/5bbee9e6d3cfc958c0bfadc30fdf72ce95e2238e14443f6b6574523f3ff3d1cd.png",
+      "mediaType": "image/png",
+      "sha256": "5bbee9e6d3cfc958c0bfadc30fdf72ce95e2238e14443f6b6574523f3ff3d1cd",
+      "byteLength": 68300,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af9d02ba73c148f4b3d4778398dbd9fc",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "id": "asset-eb6956bfe7abc4be4f02c89938168d23a9b9552a3f924d5963efdfa6953cb3df",
+      "path": "assets/eb6956bfe7abc4be4f02c89938168d23a9b9552a3f924d5963efdfa6953cb3df.png",
+      "mediaType": "image/png",
+      "sha256": "eb6956bfe7abc4be4f02c89938168d23a9b9552a3f924d5963efdfa6953cb3df",
+      "byteLength": 46602,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af9d02ba73c148f4b3d4778398dbd9fc",
+        "sourceQuestionId": "m2-q10"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

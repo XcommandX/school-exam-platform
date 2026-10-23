@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-f2a60aa6c908499695007353dd5c2992-rw-single-choice",
+  "revision": 1,
+  "title": "2025年8月第6套阅读语法M2-Easy · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-bca706f175ab810520dd2d0d45f518a2dc2b67ed53d12cfc0b4aa0bec65142fb",
+      "path": "assets/bca706f175ab810520dd2d0d45f518a2dc2b67ed53d12cfc0b4aa0bec65142fb.png",
+      "mediaType": "image/png",
+      "sha256": "bca706f175ab810520dd2d0d45f518a2dc2b67ed53d12cfc0b4aa0bec65142fb",
+      "byteLength": 28286,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f2a60aa6c908499695007353dd5c2992",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "id": "asset-bd2e599b6a6909e0d8ad445b598a338413182244cc160efd81b8b9939b03ce51",
+      "path": "assets/bd2e599b6a6909e0d8ad445b598a338413182244cc160efd81b8b9939b03ce51.png",
+      "mediaType": "image/png",
+      "sha256": "bd2e599b6a6909e0d8ad445b598a338413182244cc160efd81b8b9939b03ce51",
+      "byteLength": 43926,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f2a60aa6c908499695007353dd5c2992",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "id": "asset-8c392162dcb850b0226ab4ce3451e034e9f5661f5229a5aeb0139429e06d1831",
+      "path": "assets/8c392162dcb850b0226ab4ce3451e034e9f5661f5229a5aeb0139429e06d1831.png",
+      "mediaType": "image/png",
+      "sha256": "8c392162dcb850b0226ab4ce3451e034e9f5661f5229a5aeb0139429e06d1831",
+      "byteLength": 67872,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f2a60aa6c908499695007353dd5c2992",
+        "sourceQuestionId": "m2-q11"
+      }
+    }
+  ]
+}

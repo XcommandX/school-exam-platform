@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-f7dd178416a6451a944c9b1c8f141998-math-single-choice",
+  "revision": 1,
+  "title": "2024年6月第2套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d71cc51507a6b6d1161707ebf1cfaa15baf3bdd2439ebb54949db991c08f635e",
+      "path": "assets/d71cc51507a6b6d1161707ebf1cfaa15baf3bdd2439ebb54949db991c08f635e.png",
+      "mediaType": "image/png",
+      "sha256": "d71cc51507a6b6d1161707ebf1cfaa15baf3bdd2439ebb54949db991c08f635e",
+      "byteLength": 45121,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "id": "asset-1da382d0aa0f488f3d15effd410294731010fc04d5e996cbcd6ed1d3f7542289",
+      "path": "assets/1da382d0aa0f488f3d15effd410294731010fc04d5e996cbcd6ed1d3f7542289.png",
+      "mediaType": "image/png",
+      "sha256": "1da382d0aa0f488f3d15effd410294731010fc04d5e996cbcd6ed1d3f7542289",
+      "byteLength": 65012,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "id": "asset-63c8b7336d252c2359cd0c3136d86a2b4d5735a8ebbb11f6ec6cb5c46569ee8e",
+      "path": "assets/63c8b7336d252c2359cd0c3136d86a2b4d5735a8ebbb11f6ec6cb5c46569ee8e.png",
+      "mediaType": "image/png",
+      "sha256": "63c8b7336d252c2359cd0c3136d86a2b4d5735a8ebbb11f6ec6cb5c46569ee8e",
+      "byteLength": 30798,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "id": "asset-bebe302184d75bf0c6f5fdfcea84e6882c3849e2c29e478cc578927c3ff3ab20",
+      "path": "assets/bebe302184d75bf0c6f5fdfcea84e6882c3849e2c29e478cc578927c3ff3ab20.png",
+      "mediaType": "image/png",
+      "sha256": "bebe302184d75bf0c6f5fdfcea84e6882c3849e2c29e478cc578927c3ff3ab20",
+      "byteLength": 13013,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+        "sourceQuestionId": "m2-q8"
+      }
+    }
+  ]
+}

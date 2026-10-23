@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-98ab9fd1c3274aa4b3669c900f2beb27-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Rectangles $S$ and $R$ are similar. The ratio of each side length of rectangle $S$ to the corresponding\nside length of rectangle $R$ is 25 to 49. The ratio of the area of rectangle $S$ to the area of rectangle\n$R$ is 625 to $r$. What is the value of $r$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "sat:item:pdf-98ab9fd1c3274aa4b3669c900f2beb27-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$5(9x+7+c/5)=45x$$\nIn the given equation, $c$ is a constant. The equation has infinitely many solutions. What is the\nvalue of $c$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+        "sourceQuestionId": "m2-q4"
+      }
+    }
+  ]
+}

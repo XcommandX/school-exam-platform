@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-91204dc74b1a4f58a12daa53f54e0323-math-single-choice",
+  "revision": 1,
+  "title": "2024年5月第1套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-65a7e8fa4ee1ed92e876843421c76fafb448ad121e5e313a11d999e1a2ac3b84",
+      "path": "assets/65a7e8fa4ee1ed92e876843421c76fafb448ad121e5e313a11d999e1a2ac3b84.png",
+      "mediaType": "image/png",
+      "sha256": "65a7e8fa4ee1ed92e876843421c76fafb448ad121e5e313a11d999e1a2ac3b84",
+      "byteLength": 47369,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-91204dc74b1a4f58a12daa53f54e0323",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-225234b7dc8f1029773e0bd34056efa8b773baafb36ae2684eaac3e323a4f700",
+      "path": "assets/225234b7dc8f1029773e0bd34056efa8b773baafb36ae2684eaac3e323a4f700.png",
+      "mediaType": "image/png",
+      "sha256": "225234b7dc8f1029773e0bd34056efa8b773baafb36ae2684eaac3e323a4f700",
+      "byteLength": 53137,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-91204dc74b1a4f58a12daa53f54e0323",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-ed544e00a9e37c5b3906ee8d3110b435b9a74f29a74f8a83f15b9488e0c34e37",
+      "path": "assets/ed544e00a9e37c5b3906ee8d3110b435b9a74f29a74f8a83f15b9488e0c34e37.png",
+      "mediaType": "image/png",
+      "sha256": "ed544e00a9e37c5b3906ee8d3110b435b9a74f29a74f8a83f15b9488e0c34e37",
+      "byteLength": 15850,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-91204dc74b1a4f58a12daa53f54e0323",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "id": "asset-49c56bf2498129cd64bcd416fd45dfcbd19434992ea3da512439829c9b340c33",
+      "path": "assets/49c56bf2498129cd64bcd416fd45dfcbd19434992ea3da512439829c9b340c33.png",
+      "mediaType": "image/png",
+      "sha256": "49c56bf2498129cd64bcd416fd45dfcbd19434992ea3da512439829c9b340c33",
+      "byteLength": 62862,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-91204dc74b1a4f58a12daa53f54e0323",
+        "sourceQuestionId": "m2-q12"
+      }
+    }
+  ]
+}
