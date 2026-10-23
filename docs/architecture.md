@@ -4,6 +4,8 @@
 
 2026-10-23 后续实现：SAT 专用题目包已在浏览器和统一本机服务接入，读写与数学分别判分，试卷配置按版本引用同类型包；英语到数学间的 600 秒休息属于运行状态，不写入题目内容。旧 v1 仅保留兼容；新增包目录/浏览器备份接口及迁移影响见 [SAT 数学与整套练习](sat-math-exam.md)。统一身份、权限与云端记录仍未实现。
 
+2026-10-23 Start Practice 接入：管理页先通过 `/api/sat-library` 取目录元数据，仅开始所选题集时请求 `/api/sat-library/collections/{collectionId}`。题集根目录可配置，前端按稳定身份关联记录；完整卷遵循 assessment，部分卷遵循来源模块顺序，不改当前活动卷或归档历史。新答题记录将所选题目版本快照存入 IndexedDB，复盘和显式恢复不依赖后续题库内容。完整快照不进入频繁写入的 localStorage。接口、运行及合成检查见 [SAT 模块](sat/README.md)。
+
 ## 已确认需求
 
 2026-10-23 更新：题目包按考试与题目类型分别设计与存放，不再追求 SAT、TOEFL、AP 的统一题目结构。SAT 专用题目包及 Markdown/LaTeX 约定见 [新草案](sat-question-package-draft.md)；复杂表格、图表与坐标系的结构化渲染仍待定，目前支持静态图片。当前 `back-end/shared/question_schema.py` 的 v1 只保留既有兼容职责，新协议由 SAT 专属服务接口和引擎处理；统一入口、身份与云端记录的目标不变。

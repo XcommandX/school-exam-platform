@@ -1,0 +1,37 @@
+/* The custom timing preference is separate from the native exam controls. */
+.practice-ready footer .practice-timing-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  margin-right: 12px;
+  border: 1px solid #E4E2DC;
+  border-radius: 99px;
+  background: #F5F4F0;
+  font-family: Inter, "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.practice-ready .practice-timing-button {
+  min-height: 38px;
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 99px;
+  background: transparent;
+  color: #65666F;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background .18s, color .18s, box-shadow .18s;
+}
+.practice-ready .practice-timing-button[aria-pressed="true"] { background: #C94D2C; color: white; box-shadow: 0 2px 5px #C94D2C22; }
+.practice-ready .practice-timing-button:hover { background: #FFF0E6; color: #AD3B20; }
+.practice-ready .practice-timing-button[aria-pressed="true"]:hover { background: #AD3B20; color: white; }
+.practice-ready .practice-timing-button:focus-visible { outline: 3px solid #2F5EC7; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .practice-ready footer { padding-right: 16px; padding-left: 16px; gap: 8px; }
+  .practice-ready footer .practice-timing-toggle { margin-right: 0; gap: 0; padding: 3px; }
+  .practice-ready .practice-timing-button { padding: 8px 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .practice-ready .practice-timing-button { transition: none; }
+}
