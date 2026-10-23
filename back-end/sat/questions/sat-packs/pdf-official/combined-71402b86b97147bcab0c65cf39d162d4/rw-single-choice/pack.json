@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-82d5b9373ab04099ab7c58ba3a6e2020-rw-single-choice",
+  "revision": 1,
+  "title": "2024年6月第1套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-c8a17cc1735cec9faf7ed825fa46012b56014585148bf89a3df104fc5bddd77b",
+      "path": "assets/c8a17cc1735cec9faf7ed825fa46012b56014585148bf89a3df104fc5bddd77b.png",
+      "mediaType": "image/png",
+      "sha256": "c8a17cc1735cec9faf7ed825fa46012b56014585148bf89a3df104fc5bddd77b",
+      "byteLength": 18038,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "id": "asset-b2917cfcaffe6d916b6db0c52049334a91eb06156132c2dde6eae622cbe35dda",
+      "path": "assets/b2917cfcaffe6d916b6db0c52049334a91eb06156132c2dde6eae622cbe35dda.png",
+      "mediaType": "image/png",
+      "sha256": "b2917cfcaffe6d916b6db0c52049334a91eb06156132c2dde6eae622cbe35dda",
+      "byteLength": 29992,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-29a76db3e24c64655fe5c958aa8c6235b756c1d8328d9b1de79084a7635d2b4f",
+      "path": "assets/29a76db3e24c64655fe5c958aa8c6235b756c1d8328d9b1de79084a7635d2b4f.png",
+      "mediaType": "image/png",
+      "sha256": "29a76db3e24c64655fe5c958aa8c6235b756c1d8328d9b1de79084a7635d2b4f",
+      "byteLength": 54349,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-4d73488ad0560304a65df0e005b9f2f2079c0af9d7c0e0751f7f3ae3d2bee53c",
+      "path": "assets/4d73488ad0560304a65df0e005b9f2f2079c0af9d7c0e0751f7f3ae3d2bee53c.png",
+      "mediaType": "image/png",
+      "sha256": "4d73488ad0560304a65df0e005b9f2f2079c0af9d7c0e0751f7f3ae3d2bee53c",
+      "byteLength": 43475,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-9cbd94affd6c821e0d2f412193ed5c4ce608e25d04c34906f6fada9724fa0c1b",
+      "path": "assets/9cbd94affd6c821e0d2f412193ed5c4ce608e25d04c34906f6fada9724fa0c1b.png",
+      "mediaType": "image/png",
+      "sha256": "9cbd94affd6c821e0d2f412193ed5c4ce608e25d04c34906f6fada9724fa0c1b",
+      "byteLength": 22143,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "id": "asset-38666992b822dae0b530c5a15def269d7fc177b77461f6eac6bd24ef933fccb4",
+      "path": "assets/38666992b822dae0b530c5a15def269d7fc177b77461f6eac6bd24ef933fccb4.png",
+      "mediaType": "image/png",
+      "sha256": "38666992b822dae0b530c5a15def269d7fc177b77461f6eac6bd24ef933fccb4",
+      "byteLength": 36754,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "id": "asset-560f461d1ce97405d8dacab1ca0b43554c243a1a25169dd48c6bd6bcb7b0aa1a",
+      "path": "assets/560f461d1ce97405d8dacab1ca0b43554c243a1a25169dd48c6bd6bcb7b0aa1a.png",
+      "mediaType": "image/png",
+      "sha256": "560f461d1ce97405d8dacab1ca0b43554c243a1a25169dd48c6bd6bcb7b0aa1a",
+      "byteLength": 17303,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "id": "asset-e1d479e4ec1246f6d313acdf6e2bba2e5aedc5b015e8bfa186361f72c78049f0",
+      "path": "assets/e1d479e4ec1246f6d313acdf6e2bba2e5aedc5b015e8bfa186361f72c78049f0.png",
+      "mediaType": "image/png",
+      "sha256": "e1d479e4ec1246f6d313acdf6e2bba2e5aedc5b015e8bfa186361f72c78049f0",
+      "byteLength": 20024,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+        "sourceQuestionId": "m2-q12"
+      }
+    }
+  ]
+}

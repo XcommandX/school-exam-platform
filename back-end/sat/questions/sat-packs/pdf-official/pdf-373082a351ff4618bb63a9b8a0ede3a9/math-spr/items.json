@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-373082a351ff4618bb63a9b8a0ede3a9-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-f8f97b5ea399c4785a0a5b0b82eda2a550b58eae066ff40bdee53e78e0bf1313",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "In the figure, line $n$ intersects lines $r$ and $s$. Line $r$ is parallel to line $s$. What is the value of $x$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "sat:item:pdf-373082a351ff4618bb63a9b8a0ede3a9-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$f(x)=45x+600$$\n\nThe function $f$ gives the monthly fee $f(x)$ , in dollars, a facility charges to keep $x$ crates in storage.\nWhat is the monthly fee, in dollars, the facility charges to keep 50 crates in storage？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "id": "sat:item:pdf-373082a351ff4618bb63a9b8a0ede3a9-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "There are 450 tiles in a box. Of these tiles, $6\\%$ are black. How many black tiles are in the box？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "sat:item:pdf-373082a351ff4618bb63a9b8a0ede3a9-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A line in the $xy$-plane has a slope of 9 and passes through the point $( 0 , - 5 )$ . The equation\n$y=p x+r$ defines the line, where $p$ and $r$ are constants. What is the value of $p$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "id": "sat:item:pdf-373082a351ff4618bb63a9b8a0ede3a9-m1-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In August, a car dealer completed 15 more than 3 times the number of sales the car dealer\ncompleted in September. In August and September, the car dealer completed 363 sales. How\nmany sales did the car dealer complete in September"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+        "sourceQuestionId": "m1-q22"
+      }
+    }
+  ]
+}

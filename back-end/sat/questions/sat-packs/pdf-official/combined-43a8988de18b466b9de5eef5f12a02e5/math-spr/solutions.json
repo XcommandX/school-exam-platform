@@ -1,0 +1,113 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "15"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入（3，21）（5，25）得 $h ( x )=2 x+15,b=15$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "223/200"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$\\frac{12.28}{91.67}\\%=x/8.33\\%$，解得$x=1.115$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "12"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "过（0，$-2$）（1，6）两个点，代入（0，$-2$）得$-2=1+b$，得$b=-3$，代入（1，6）得$6=a-3$，\n$a=9$，a$-b=12$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-20eee207e6724de383a9f22758f79a40-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1840"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线相交产生4 个角，相邻角之和$180^{\\circ}$，对顶角相等，其中一个锐角为$(9x-650)^{\\circ}$，相邻钝\n角为$180-(9x-650)=(-9x+830)^{\\circ}$,一个锐角$+3$ 个钝角（1 锐角$+1$ 钝角为180）为$180+2$*\n（$-9x+830$）=$1840-18x$，所以$w$ 为1840"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-20eee207e6724de383a9f22758f79a40",
+        "sourceQuestionId": "m2-q20"
+      }
+    }
+  ]
+}

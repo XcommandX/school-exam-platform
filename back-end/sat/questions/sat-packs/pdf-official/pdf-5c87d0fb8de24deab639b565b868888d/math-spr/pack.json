@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-5c87d0fb8de24deab639b565b868888d-math-spr",
+  "revision": 1,
+  "title": "Bluebook Practice 8 数学 （Easy） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f51d738408f4a3e055806918f27f2bcc716210476fa73780a9aba245c17d0459",
+      "path": "assets/f51d738408f4a3e055806918f27f2bcc716210476fa73780a9aba245c17d0459.png",
+      "mediaType": "image/png",
+      "sha256": "f51d738408f4a3e055806918f27f2bcc716210476fa73780a9aba245c17d0459",
+      "byteLength": 10289,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q10"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

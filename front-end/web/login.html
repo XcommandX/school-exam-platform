@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f4f0">
+  <title>登录 · Study Space</title>
+  <link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/login.css">
+  <script src="/web/platform-auth.js" defer></script><script src="/web/login.js" defer></script>
+</head>
+<body class="login-page">
+  <a class="skip-link" href="#login-form">跳转到登录</a>
+  <header class="site-header"><a class="brand" href="/" aria-label="Study Space 首页"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6zM16 10v17" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="brand-type">Study Space</span></a></header>
+  <main class="login-shell">
+    <section class="login-art" aria-label="TOEFL 与 SAT">
+      <div class="login-art-grid" aria-hidden="true"></div>
+      <div class="login-exam login-toefl"><span class="exam-label">iBT</span><strong>TOEFL</strong><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="50" r="34"/><ellipse cx="50" cy="50" rx="17" ry="34"/><path d="M17 41h66M17 59h66"/></svg></div>
+      <div class="login-exam login-sat"><span class="exam-label">Digital SAT</span><strong>SAT</strong><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M72 22H28l25 28-25 28h44"/></svg></div>
+      <span class="orbit-dot dot-one" aria-hidden="true"></span><span class="orbit-dot dot-two" aria-hidden="true"></span>
+    </section>
+    <section class="login-panel" aria-labelledby="login-title">
+      <span class="login-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10V7a4 4 0 0 1 8 0v3"/><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M12 14v3"/></svg></span>
+      <h1 id="login-title">登录</h1>
+      <form id="login-form">
+        <label class="field" for="username">账号<input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="40" required autofocus></label>
+        <label class="field" for="password">密码<span class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" maxlength="256" required><button id="password-toggle" class="password-toggle" type="button" aria-label="显示密码" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18"/></svg></button></span></label>
+        <p class="login-status" id="login-status" role="status" aria-live="polite"></p>
+        <button type="submit" class="login-submit" id="login-submit"><span>进入学习空间</span><span class="submit-arrow" aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

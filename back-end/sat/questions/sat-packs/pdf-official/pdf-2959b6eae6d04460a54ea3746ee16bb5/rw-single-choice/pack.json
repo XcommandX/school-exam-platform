@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-2959b6eae6d04460a54ea3746ee16bb5-rw-single-choice",
+  "revision": 1,
+  "title": "2025年10月亚太第3套阅读语法（去重版） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-b9fb50d6e160cdc30d744222763348c413e65d441cf4f6787e5caff623fdfa15",
+      "path": "assets/b9fb50d6e160cdc30d744222763348c413e65d441cf4f6787e5caff623fdfa15.png",
+      "mediaType": "image/png",
+      "sha256": "b9fb50d6e160cdc30d744222763348c413e65d441cf4f6787e5caff623fdfa15",
+      "byteLength": 24757,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2959b6eae6d04460a54ea3746ee16bb5",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "id": "asset-3ee4be416ec4652f3f1f67bad0e1dbaa47e5cbab29806a86c8474d68b117c1a4",
+      "path": "assets/3ee4be416ec4652f3f1f67bad0e1dbaa47e5cbab29806a86c8474d68b117c1a4.png",
+      "mediaType": "image/png",
+      "sha256": "3ee4be416ec4652f3f1f67bad0e1dbaa47e5cbab29806a86c8474d68b117c1a4",
+      "byteLength": 48061,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2959b6eae6d04460a54ea3746ee16bb5",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "id": "asset-94bf18d0e63265cb622aec8c70823d95aa9adb18fd4f66b2d91b03bfff08ed27",
+      "path": "assets/94bf18d0e63265cb622aec8c70823d95aa9adb18fd4f66b2d91b03bfff08ed27.png",
+      "mediaType": "image/png",
+      "sha256": "94bf18d0e63265cb622aec8c70823d95aa9adb18fd4f66b2d91b03bfff08ed27",
+      "byteLength": 34959,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2959b6eae6d04460a54ea3746ee16bb5",
+        "sourceQuestionId": "m2-q1"
+      }
+    }
+  ]
+}

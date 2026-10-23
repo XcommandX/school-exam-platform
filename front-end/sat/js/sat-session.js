@@ -1,6 +1,14 @@
 'use strict';
 // SAT-only session planning. Question content and personal responses stay separate.
 window.SATSession = (() => {
+ // Read the current account each time; names do not belong in saved attempts.
+ function getStudentName() {
+  const user=window.PlatformAuth?.user;
+  for(const value of [user?.username,user?.displayName,user?.name]) {
+   if(typeof value==='string'&&value.trim())return value.trim();
+  }
+  return typeof studentName==='string'&&studentName.trim()?studentName:'Student';
+ }
  const section = q => q?.section === 'Math' || q?.section === 'math' ? 'Math' : 'Reading and Writing';
  const isSPR = q => q?.responseType === 'student-produced-response';
  const answered = (q, response) => isSPR(q) ? !!response?.numericResponse?.trim() : Number.isInteger(response?.selectedOption);
@@ -32,5 +40,5 @@ window.SATSession = (() => {
   const value=correct?q.correctOption:response?.selectedOption;
   return Number.isInteger(value)?'ABCD'[value]:'—';
  }
- return {section,isSPR,answered,grade,plan,answerLabel};
+ return {getStudentName,section,isSPR,answered,grade,plan,answerLabel};
 })();

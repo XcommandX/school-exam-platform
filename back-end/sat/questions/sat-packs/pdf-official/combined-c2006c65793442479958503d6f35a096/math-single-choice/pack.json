@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-69f83993653749e2b6a4941ab7d00b50-math-single-choice",
+  "revision": 1,
+  "title": "2025年9月第1套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fd73bdfec7973a50f9433d5b0b929d2b6e65fee1de77c167d3849fb653d5e569",
+      "path": "assets/fd73bdfec7973a50f9433d5b0b929d2b6e65fee1de77c167d3849fb653d5e569.png",
+      "mediaType": "image/png",
+      "sha256": "fd73bdfec7973a50f9433d5b0b929d2b6e65fee1de77c167d3849fb653d5e569",
+      "byteLength": 16736,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-79cbce2054846db9f20354d6703e232c11d4ef006de146b42f57a0936ed613ca",
+      "path": "assets/79cbce2054846db9f20354d6703e232c11d4ef006de146b42f57a0936ed613ca.png",
+      "mediaType": "image/png",
+      "sha256": "79cbce2054846db9f20354d6703e232c11d4ef006de146b42f57a0936ed613ca",
+      "byteLength": 24600,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "id": "asset-d7eddb304cea04d5ca240cfc9dfc6b130ec5343ae748bec1205316096aa232b2",
+      "path": "assets/d7eddb304cea04d5ca240cfc9dfc6b130ec5343ae748bec1205316096aa232b2.png",
+      "mediaType": "image/png",
+      "sha256": "d7eddb304cea04d5ca240cfc9dfc6b130ec5343ae748bec1205316096aa232b2",
+      "byteLength": 15906,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "id": "asset-bdcb2364d9f299b82306b3a6ca94ba11d3805b854ab44705c0e1b9434ed59e08",
+      "path": "assets/bdcb2364d9f299b82306b3a6ca94ba11d3805b854ab44705c0e1b9434ed59e08.png",
+      "mediaType": "image/png",
+      "sha256": "bdcb2364d9f299b82306b3a6ca94ba11d3805b854ab44705c0e1b9434ed59e08",
+      "byteLength": 19265,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,764 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "代入$x=100$，计算得$f(100)=4*100+900=1300$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由题中给出的方程得到$-9x+y=9x+y$，两边同时减去$y$ 得到$-9x=9x$，即$18x=0$，解出$x=0$。\n将$x=0$ 带入$-9x+y=20$ 或$9x+y=20$，解出$y=20$。所以交点为$(0, 20)$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "正方形面积=边长的平方，所以面积为$47*47=2209$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当$x=0$，$I=600$。当$x=13$，$I=600(1-50\\%)=600(0.5)$。将点$(0, 600)$和(13, 600(0.5)) 带入四个选\n项，选项A 成立"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 前的数字为斜率，所以斜率是$\\frac{6}{7}$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图中看出$x$ 每增加100，$y$ 增加70。$x$ 表示播种的种子数量，$y$ 表示发芽的种子数量。所\n以播种的种子数量每增加100，发芽的种子数量就增加70.选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$(7x4+x2)+(x4+3x2)=7x4+x4+x2+3x2=8x4+4x2$ 。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x(x+9)=52$。化简得$x2+9x-52=0$，分解因式得$(x+13)(x-4)=0$。因此$x=-13$ 或4。因为$x$ 是正\n数，所以$x=4$，选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以$y$ 得到$x+12/v=z+6$。两边同时减去6 得到$z=x+12/y-6$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "令$x=0$，计算的得$y=\\frac{1}{7}(3)0=\\frac{1}{7}$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以4 得到$|x-4|=24$，所以$x-4=24$ 或$x-4=-24$。因此$x=28$ 或$-20$。两个解的和\n为8。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆$M$ 的圆心为$(2, 6)$，半径为3。所以圆$P$ 的圆心为$(2, 6)$，半径为6。圆$P$ 为$(x-2)2$+\n$(y-6)2=62$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y$ 表示大罐子的数量，所以$5y$ 是大罐子中酱汁的数量，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$k(9)=j(9) p/9+1$$\n⋅\n。首先计算$j(9)$，$j(9)=16(9)+8/5p=152/5p$。带入$k(9)$得到$k(9)=152/5pp$/\n$9+1=\\frac{152}{5}/10=\\frac{152}{50}=\\frac{76}{25}$。选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$XY$ 平行于$TS$，所以$\\angle X=S$\n$\\angle$。因此$\\sin X=\\sin S=RT/RS$。因为$\\tan R=\\frac{120}{209}=TS/TR$，\n假设$TS=120$ 和$TR=209$，由勾股定理，解出$RS=241$。因此$\\sin X=RT/RS=\\frac{209}{241}$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$(x2-7)(x2-4)=x4-4x2-7x2+28=x4-11x2+28$。因此$b=-11$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似的三角形对应的角相等，所以角$Z$ 为58 度。$BC$ 边的长度是$n$ 乘以$YZ$ 边的长度，为\n$71n$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x=155.21$ 且$x$ 表示一种直链烷烃的分子质量，$y=196.74$ 且$y$ 表示沸点。因此分子质量为\n155.21 克每摩尔的直链烷烃的沸点为196.74。选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y-(-9)=\\frac{1}{8}(x-40)$。化简得$y=1/8x-14$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$g(a)=18$，所以$2a+8=18$，解出$a=5$。因为$g(4)=b$，所以$2(4)+8=b$，解出$b=16$。因此\n$a+b=21$，选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "棱柱的体积为底面积乘高，所以9*底面积=324，解出底面积为36。因为底面为正方形，\n所以底边长为6，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$(-3+15p)x=60$。当$-3+15p=0$ 时，方程没有解。因此$p=\\frac{1}{5}$，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$4x2+47=px+43$ 只有一个解，化简得$4x2-px+4=0$ 只有一个解，因此$\\Delta=(-p)2-4(4)(4)=0$，解\n出$p=8$ 或$-8$.因为$p$ 是正数，所以$p=8$。将$p=8$ 带入等式得到$4x2-8x+4=0$，即$x2-2x+1=0$。\n配方得$(x-1)2=0$,解出$x=1$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为四个选项的$x$ 值都是$-5$，$-6$，和$-8$，将它们带入不等式验证。将$x=-5$ 带入$y\\lt -6x-18$\n得到$y\\lt 12$，将$x=-5$ 带入$y\\gt -4x-11$ 得到$y\\gt 9$。选$C$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(n-1)-f(n)/f(n-1)=41(0.26)n-1-41(0.26)n/41(0.26)n-1$。分子分母同时除以$41(0.26)n-1$ 得到\n$1-0.26=0.74=74\\%$.选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "样本越大，误差越小。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数图像经过点（4， 0），带入方程得到$4a=48$，解得$a=12\\gt 0$。函数图像经过点（0，\n$-3$），带入方程得到$-3b=48$，解得$b=-16\\lt 0$。选$c$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为每3 盎司芝士提供1 毫克维他命$B12$，所以$x$ 盎司芝士提供$x/3$ 毫克维他命。因为1.2\n盎司金枪鱼提供1 毫克维他命，所以$y$ 盎司金枪鱼提供$y/1.2$ 毫克维他命。因此$x/3+y$/\n$1.2=1.8$，约等于$0.33x+0.83y=1.8$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$p/x-3-1/2x-5=p(2x-5)-(x-3)/(x-3)(2x-5)=(2p-1)x-5p+3/2x2-11x+15$。因此$-5p+3=-42$，解\n出$p=9$，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "选项A 和$B$ 中数据分布范围从7 至11，且每个数据出现的频率几乎相同，所以标准差较\n大，选项$C$ 中数据分布范围从7 至11，但是7 和11 出现的频率小，数据集中在8 至10，\n所以标准差较小。选项$D$ 数据分布从8 至10，且9 出现30 此，数据集中，所以标准差最\n小，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "左边 = $\\sqrt{(4y)^3}=(4y)^(\\frac{3}{2})=4^(\\frac{3}{2}) \\cdot y^(\\frac{3}{2})=8 \\cdot y^(\\frac{3}{2})$；右边 = $8 \\cdot (y^(\\frac{1}{9}))^k=8 \\cdot$\n$y^(k/9)$，两边约去8 得：$y^(\\frac{3}{2})=y^(k/9)$，所以 $\\frac{3}{2}=k/9$，解得 $k=\\frac{27}{2}$ ，答案：$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为1 米=3.28 英尺，所以1 平方米=10.7584 平方英尺。因此140 平方英尺每小时=13.013\n平方米每小时=0.217 平方米每分钟，约等于0.22，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-7a526cc861424c46ac55d6032fe95322-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为顶点为$(1, 9)$。设方程为$f(x)=a(x-1)2+9$。带入点$(2, 37)$得到$37=a+9$，解出$a=28$。因此\n$f(x)=28(x-1)2+9$。计算得$f(-2)=261$ 和$f(0)=37$。因此$f(-2)-f(0)=224$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

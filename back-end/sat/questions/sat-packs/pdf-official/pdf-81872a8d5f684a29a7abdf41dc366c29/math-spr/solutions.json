@@ -1,0 +1,305 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3/10"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "概率问题红色共有30 块，总共100 块，概率就是$\\frac{30}{100}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次方程整理后得$x2+6x-55=0$ 即（$x-5$）（$x+11$）=0，其中的正数解为5（排除掉$-11$）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "40"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据方程和题意可知，每个$G$ 是5 分，每个$R$ 是45 分，问的是$R$ 得分值比$G$ 多多少就是\n$$45-5=40$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "15/17",
+          "441/500",
+          "8823/10000",
+          "1103/1250"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据$\\cos (K)=\\frac{24}{51}$，利用勾股定理得第三边为45，$\\cos (L)=\\frac{45}{51}=\\frac{15}{17}$（注意约分）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "25/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数的顶点公式，最值$x$ 坐标为$-b/2a$，所以$x$=-（$-50$）/（$4*2$）=6.25"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "24"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据平行，斜率8，且过（0, 0），得$l=8x$，$x=3$ 带入，得$d=24$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "81/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "合并方程得 = $2 x 2+9 x=c / 2$，有一个解即 $b 2 - 4$ a $c=0$（这里\n公式中$c$ 数值为$c/2$）可以得到，$c=\\frac{81}{4}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "60"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$2(3t-10)+t=40+4t$ 解出$t=20$，注意问题问的是$3t=60$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "16"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Circle A 的$r=2$，所以Circle $B$ 的$r=4$，所以$k$=半径的平方，就是16"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "8"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程无解即斜率相同（此题不需要考虑截距，因为未知数$t$ 只改变了斜率），计算两个式\n子斜率且相等可得$t=8$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-81872a8d5f684a29a7abdf41dc366c29-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "52"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设第10 个数是$x$，根据题意，平均数变大且为整数，所以$x$ 增加10 可以 使平均数增加\n1，所以不大于60 的只有$42+10=52$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m2-q20"
+      }
+    }
+  ]
+}

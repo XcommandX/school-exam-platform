@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-11be491de3c34b30bc472a5a813f3e69-math-single-choice",
+  "revision": 1,
+  "title": "2026年8月亚太第2套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-48fe2316dd55daf7ca207744d1ddd5644a089a06bce3f79b341cde95d5022265",
+      "path": "assets/48fe2316dd55daf7ca207744d1ddd5644a089a06bce3f79b341cde95d5022265.png",
+      "mediaType": "image/png",
+      "sha256": "48fe2316dd55daf7ca207744d1ddd5644a089a06bce3f79b341cde95d5022265",
+      "byteLength": 4219,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-d1ffb2fc761352338bf6a238eee826788b33465bf4e6021269ae6aedda2d5a82",
+      "path": "assets/d1ffb2fc761352338bf6a238eee826788b33465bf4e6021269ae6aedda2d5a82.png",
+      "mediaType": "image/png",
+      "sha256": "d1ffb2fc761352338bf6a238eee826788b33465bf4e6021269ae6aedda2d5a82",
+      "byteLength": 94314,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-9584f8df191b6a9792bc2de462ec132e9c58e3a513a8509e5273ed716b690c1f",
+      "path": "assets/9584f8df191b6a9792bc2de462ec132e9c58e3a513a8509e5273ed716b690c1f.png",
+      "mediaType": "image/png",
+      "sha256": "9584f8df191b6a9792bc2de462ec132e9c58e3a513a8509e5273ed716b690c1f",
+      "byteLength": 19293,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+        "sourceQuestionId": "m1-q22"
+      }
+    }
+  ]
+}

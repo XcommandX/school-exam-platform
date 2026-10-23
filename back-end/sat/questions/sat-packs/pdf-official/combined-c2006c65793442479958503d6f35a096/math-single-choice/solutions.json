@@ -1,0 +1,718 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的平均值计算，用总数量除以总面积即可。$\\frac{2070}{115}=18$，故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的三角形的周长等于三条边的和，即：$x+2y=63$，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的ratio 比例关系。1 千克样本包含700 毫克磷元素，$x$ 千克样本包含3500 毫克磷元\n素，对应的比例关系应该是$1/x=\\frac{700}{3500}$，十字交叉相乘，得到$700x=3500$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的基础运算，把$x=3$ 代入函数表达式即可。$f(3)=(\\frac{1}{2})*(3+11)=7$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的基础运算，整体代入会更加简单。$7x+5=22$，那么2（$7x+5$）=$2*22=44$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的指数函数的解释。$f(9)=12854.22$，表示$t=9$ 的时候，函数值是12854.22。其中$t$ 表示\n钱存入了账户多少年，函数值表示账户的金额，故$f(9)=12854.22$ 表示钱存入账户9 年，账\n户金额是12854.22 美元。符合该描述的是$B$ 选项，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的基础函数，把对应的$x$ 值代入函数式，求解对应的$y$ 值，然后看哪个选项符合要求\n即可。$F(-1)=(-8)*(2)=-16$，符合该组数据的只有$C$，其他的无需检验，选$C$ 即可。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数，把给出的函数值代入选项，选出两组数值都符合的即可。$F(0)=9,F(7)=9$，\n这两组数据代入都成立的是A 选项，故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查不等式。At least 表示大于等于，no more than 表示小于等于，根据题目，1 acre 土地\n包含的数的数量是大于等于40，小于等于70，那么7 acre 土地中树的数量就是大于等于\n（$40*7=280$），小于等于（$70*7=490$），故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数的斜率。从所给的点中挑选两组，用两点的$y$ 坐标之差除以这两点的$x$ 左边\n之差即可。（$22.30-21.30$）/（$15-22$）=$-0.14$，和该数据最接近的是$B$ 选项，故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一次方程的求解，把$b$ 当做未知量求解出来即可。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查角度与弧度的转换。$Π=180$ 度。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程解的个数。$ax2+bx+c=0$，当$b2-4ac$ 等于0 时，该方程有一个实数解。把\n题目中对应的数据代入，得到（$k-3$）$-4*26=0$，求解该方程得到$k=107$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角函数。根据tanR= $\\frac{180}{299}$，我们设$ST=180$，$RT=299$，根据勾股定理可以计算出\n$RS=349$，那么$\\sin S=\\frac{299}{349}$。\n因为$XY$ 平行于$TS$，所以角$X$ 和角$S$ 大小相等，那么$\\sin X=\\sin S=\\frac{299}{349}$。故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程解的个数。$ax2+bx+c=0$，当$b2-4ac$ 大于0 时，该方程有2 个实数解；当\n$b2-4ac$ 等于0 时，该方程有一个实数解；当$b2-4ac$ 小于0 时，该方程没有实数解。本题\n\n中，把第二个式子转换为$y=-2$，代入第一个式子整理得到$3x2-12x+20=0$，该式的$b2-4ac$\n等于（$-12$）*（$-12$）$-4*3*20=-96$ 小于0.所以该方程没有实数解，故选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角形的内角和是180 度，$E$ 和$F$ 的和是22 度，那第三个角$G$ 就是$180-22=158$ 度，\n故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查标准差，一组数据越集中，也就是有更多的数据距离平均值比较近，那这这组数据的\n标准差就越小。故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程的求解，因为$y=y$，所以（$x-25$）（$x-75$）=0，故方程的两个解分别是\n25 和75。所以答案是A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数，把给出的两组数据代入选项即可。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查二次函数的顶点。$g(x)$=（$38-2x$）（$32+2x$），该函数的和$x$ 轴的两个交点分别是19\n和$-16$，它们的中点就是顶点的横坐标，即1.5，故选$C$。\n该题也可以把$g$（$x$）的表达式整理成顶点式的样子，即$g(x)=(38-2x)$\n\n$(32+2x)=2(19-x) 2(16+x)=4(-x2+3x+19 16)$,\n∗\n∗\n这里$-x2+3x$ 整理成完全平方的的应该是−\n$(x-1.5)2+1.52$，故$x=1.5$ 时，函数值最大。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查图形的面积。长方形的面积=3*三角形的面积，也就是\nlength*width=$3*(\\frac{1}{2})$*base*height，代入数字就是$24*7.5=3$*（$\\frac{1}{2}$）$*60$*height，计算得到\nheight 是2 。故答案是$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数的斜率。从所给的点中挑选两组，用两点的$y$ 坐标之差除以这两点的$x$ 左边\n之差即可。（$n+21-n$）/（$4-0$）=$\\frac{21}{4}$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查基础运算，a$-b$=（$5k+6r$）-（$8k-11r+3$）=$-3k+17r-3$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一元二次方程解的个数。$ax2+bx+c=0$，当$b2-4ac$ 等于0 时，该方程有一个实数解。\n把题目中对应的数据代入，得到$3900-100p=0$，求解该方程得到$p=39$，故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的指数函数，$x$ 表示有几个月，$x/12$ 就表示有year。那base0.28 就是每年减完$p\\%$后的\n结果，那$p\\%=1-0.28=0.72$，$p$ 就是72。故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角函数，从$S$ 向$RT$ 做垂直线$SA$；因为$RS=ST$，所以A 是$RT$ 的中点，即$RA=RT$/\n$2=24$。因为tanR=$SA/RA=\\frac{7}{24}$，所以$SA=7$。那么三角形的面积就是（$\\frac{1}{2}$）$*48*7=168$。\n故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查特殊直角三角形。30 度、60 度、90 度三角形的三条边的关系是短直角边：长直角\n边：斜边=1：根号3:2。现在已知的高度是长直角边，长度是21 倍的根号3，那根据边长\n比例，我们可以知道斜边对应的长度是42。故选A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查因式分解，根据 a $2 - b 2=( a+b ) ( a - b )$， $1440 x 4$ −\n$$56250=90 ( 16 x 4 - 625 )=90 ( 4 x 2+25 )$$\n$$( 4 x 2 - 25 )=90 ( 4 x 2+25 ) ( 2 x+5 ) ( 2 x$$\n$- 5 )$，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查两根直线的交点。当两根直线的slope 不同时，那么两根直线有一个交点。\n也可以直接求解方程，把式子变形成$5940x-2970x=0$，即$2970x=0$，可以计算出$x=0$，只有\n这一个解。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的百分比。设2017 年的数量是$x$，那2018 年的数量就是$x$（$1+179\\%$）=$2.79x$，2019\n年的数量就是$2.79x$（$1-27\\%$）=$2.0367x$。2017 年到2019 年的增长百分比就是（$2.0367x$-\n$x$）（$x$）=$103.67\\%$。故选$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查两根直线的交点问题。（1）如果两根直线的slope 不同，那么它们有一个交点；\n（2）如果两根直线的slope、$y$-intercept 都相同，那它们有无数个交点。根据这个基本知\n识点，题目中的式子和I 组合到一块有无穷多个交点，和$II$ 组合到一块有1 个交点。题目\n中要求的是at least one，所以包含了上面两种情况，那就是I 和$II$ 都符合要求，故选$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

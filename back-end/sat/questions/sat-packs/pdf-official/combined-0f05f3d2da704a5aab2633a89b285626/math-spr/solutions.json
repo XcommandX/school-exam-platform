@@ -1,0 +1,331 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "77"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：$f(20)$就是$x=20$ 时的函数值，直接代入$x=20$ 得$f(20)=77$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "73"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：全等congruent 三角形，对应边角都相等，同时三角形内角和$180^{\\circ}$，角$F$ 为$180-90$-\n$$17=73^{\\circ}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "17/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：准确提取题目中出现的数字、单位及程度表述，总价\\$242，$x$、$y$ 分别定义的是数量\nnumber，所以式中22.5 和26.75 分别是单价。问题问的是单价的差，所以答案是26.75-\n$$22.5=4.25$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "14/25"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n根据题意，cube 边长2.00 centimeters，质量4.48 grams，根据密度单位grams per cubic\ncentimeter 推测出计算规则为mass/volume（即使没有任何物理知识也可以），答案为\n$$\\frac{4.48}{23}=0.56$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "76/3",
+          "2533/100"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n根据两点坐标信息求函数表达式，斜率=$48-(-28)/6-(-13)=\\frac{76}{19}=4,y=4x+b$,代入（6，48）\n得到$b=24$，再代入$x=\\frac{1}{3}$ 得到$a=\\frac{76}{3}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "16"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：$|x-8|=16$ 得$x-8=16$，分别解正负号的方程的$x=-8$ or 24，两个数字和为16"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "57"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n二次函数求根公式$x=-b\\pm b2-4ac/2a$，得到$x=-9+81-\\frac{24}{2}$,所以$k=81-24=57$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：简单的一次函数逆运算，$9x=63$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "360"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\ninfinitely many solutions 表示两个式子完全相同，跟据图像两个黑点计算斜率\n$14-1/-12-0=\\frac{-13}{12}$，$y$-intercept 为1，函数为$y=-13/12x+1$，与$195x+py=w$ 相同，\n$195x+py=w$ 整理成$y=-195/px+w/p$，所以$p=180$，$w=180$，$p+w=360$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "170/9",
+          "472/25"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：相似三角形问题，边长比例3：1，面积比例就是平方关系9：1，所以$DEF$ 面积为\n$$\\frac{170}{9}$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：median 中位数就是中间的18"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-74f2164cd24e4475954042048aafaf0d-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/16"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解析：\n由$n52=k42$，得到$n5=k4$，$n=k4/5$，$n4a+1=(k4/5)4a+1=k4/5 (4a+1)=k$\n∗\n，所以$\\frac{4}{5} (4a+1)=1$\n∗\n\n解得$a=\\frac{1}{16}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-74f2164cd24e4475954042048aafaf0d",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

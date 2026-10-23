@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-bc2aae59ab234a35abfc061b8c6f365d-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 8 阅读语法(Routing+Hard) · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-0277ebf447618ea32449e6345db99df8ebb6f8b116b4d6188c6d8137817e34ef",
+      "path": "assets/0277ebf447618ea32449e6345db99df8ebb6f8b116b4d6188c6d8137817e34ef.png",
+      "mediaType": "image/png",
+      "sha256": "0277ebf447618ea32449e6345db99df8ebb6f8b116b4d6188c6d8137817e34ef",
+      "byteLength": 41534,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "id": "asset-20b688644e1c4c8bac74ce290efeddceaba95a1882afd66a8725dda6b048b20c",
+      "path": "assets/20b688644e1c4c8bac74ce290efeddceaba95a1882afd66a8725dda6b048b20c.png",
+      "mediaType": "image/png",
+      "sha256": "20b688644e1c4c8bac74ce290efeddceaba95a1882afd66a8725dda6b048b20c",
+      "byteLength": 76263,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "id": "asset-96a07922dcbf153bd6acce329de716a25073c8777da9e7c1d5928d3f83a2e4d4",
+      "path": "assets/96a07922dcbf153bd6acce329de716a25073c8777da9e7c1d5928d3f83a2e4d4.png",
+      "mediaType": "image/png",
+      "sha256": "96a07922dcbf153bd6acce329de716a25073c8777da9e7c1d5928d3f83a2e4d4",
+      "byteLength": 30135,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "id": "asset-56095ad2203934e05e8322839bb85cc085e5446b2442e8d7ddeaabc15c161680",
+      "path": "assets/56095ad2203934e05e8322839bb85cc085e5446b2442e8d7ddeaabc15c161680.png",
+      "mediaType": "image/png",
+      "sha256": "56095ad2203934e05e8322839bb85cc085e5446b2442e8d7ddeaabc15c161680",
+      "byteLength": 61524,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+        "sourceQuestionId": "m2-q12"
+      }
+    }
+  ]
+}

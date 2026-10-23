@@ -1,0 +1,167 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "容易算出$n=2$，注意问题问的是$n+4=6$，小心马虎"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "29"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "统计考点中的range，range=$\\max -\\min$，题中$\\max$ 为52，$\\min$ 为23，range=$52-23=29$（注意\nrange 在数学中不是范围，是一个数值）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次方程组交点问题，直接图中读取交点坐标即可，坐标为$(4, 1)$，value of $x$ is 4"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考察函数的本质，就是$x$ 与$y$ 的对应关系，将$x=2$ 代入函数计算即可， $h ( 2 )$ =\n$$\\frac{8}{5} 2+6=\\frac{1}{2}$$\n∗"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "15/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "简单的三角形面积计算，该题为直角三角形所以相对简单：$\\frac{1}{2}*3*5=7.5$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数方程组system of equations，将$y$ 消去得到$x2-12=4x$，整理得到$x2-4x-12=0$，无\n论利用转换成因式$(x-6)(x+2)=0$,还是求根公式$x=-b\\pm b2-4ac/2a$ 都可以得到解$x=6$ or $-2$，题\n目说是$x\\gt 0$ 所以答案为6"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q18"
+      }
+    }
+  ]
+}

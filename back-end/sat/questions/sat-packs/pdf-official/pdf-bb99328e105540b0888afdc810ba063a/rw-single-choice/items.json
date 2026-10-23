@@ -1,0 +1,2178 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$The$ following text is from Rachel Heng’s 2023 novel $The$ Great Reclamation. Ah Boon is fishing\noff the coast of Singapore.\n\nWhen he pulled up the nets, they contained only one kind of fish—black pomfrets, the flat\ndiamonds of their bodies slick in the morning light. This uniformity did not surprise him; over the\nyears, he’d learned that the waters here were temperamental. They could be relied upon for a\ngood catch, but from time to time threw up only prawns or squid, and other times colorful\nvarieties of fish that weren’t even supposed to be found in this region. He’d grown to accept the\nunpredictability, embracing it as a game to be played, like the reading of tea leaves or the grooves\nof a palm.\nTaken together, the three underlined portions most clearly serve which function in the text as a\nwhole?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They illustrate the changeable nature of the fishing grounds where Ah Boon is."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They underscore Ah Boon’s lack of surprise at seeing sea creatures that aren’t usually found in\nthe region."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They provide examples of what Ah Boon most frequently catches in the area."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They emphasize the wide variety of sea creatures that Ah Boon has caught on this particular\nfishing trip."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "image",
+          "assetId": "asset-27e9c3f1fee55d9ea51350fdff3f5b357263ab447f589d8902d9234447601736",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-6c2f8e6b8ad4a355cea84892bb766c6d50ac4734102551857708062eb37bf906",
+          "role": "illustration",
+          "alt": "Source question content."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice best states the function of the underlined portion in the text as a whole?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It outlines the reasoning behind the claim about a benefit that is presented in the previous\nsentence."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It presents an insight suggesting that a concern acknowledged as sensible earlier in the text is\nunsubstantiated."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It explains why data do not show the expected pattern described at the beginning of the text."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It identifies an inconclusive finding that motivated a shift in the focus of an analysis discussed\nin the text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Quality assessments of concrete typically focus almost exclusively on compressive strength as a\nmeasure of durability, overlooking other potentially relevant factors. Lisa Ptacek et al. therefore\ninvestigated the potential of gas permeability (vulnerability to incursion by gases), which is\ncaused in part by excessive porosity, as a durability indicator. Their measurements and\nobservations revealed that quality of conditions during the concrete curing phase negatively\ncorrelates with gas permeability and that high gas permeability values are associated with\nincreased deterioration as concrete surfaces age."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Information in the text best supports which statement about Ptacek et al.’s findings?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They suggest that gas permeability testing presents a more reliable indication of concrete\ndurability than compressive strength testing does."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They bolster the claim that concrete’s susceptibility to damage decreases as its gas\npermeability increases."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They call into question the idea that quality of curing conditions directly affects concrete gas\npermeability but is unrelated to compressive strength."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "They indicate that evaluation of gas permeability is an appropriate addition to concrete quality\nassessment procedures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "What is a city? The answer depends on where you live! Many countries define an area as a city\nbased on how many people live there. However, not every country uses the same numbers.\nAlbania defines a city as an area with a population of at least 400, while Greece defines a city as\nhaving a minimum population of 10,000. Some countries even define cities using other factors,\nlike the number of buildings in the area."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice best states the main topic of the text?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "What some people enjoy about cities"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The number of small towns in Aibania"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "How different countries define what a city is"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The country of Greece"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Stores often play background music to create a pleasant shopping experience. Based on a survey,\nAmir Manzoor found that such music was linked to reduced enjoyment among customers.\nManzoor thinks that one explanation for this result is that the surveyed customers may have\nwanted to finish their shopping as quickly as possible. They therefore weren’t focused on\nenjoying the experience. It’s possible that background music could improve the experience of\nother customers whose main goal is to have a good time while they shop."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Based on the text, which research question was Manzoor’s study most likely intended to answer?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "What genres of music do customers prefer to listen to while they are shopping?"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Does the volume of a store’s background music affect how much time customers spend in the\nstore?"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Do customers spend more money when shopping for music in stores or online?"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "How does the use of background music in stores affect customers’ shopping experience?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "$Cane$ is a 1923 novel by Jean Toomer. In the novel, Toomer mentions a road in rural Georgia\ncalled Dixie Pike and describes it as having a deep connection to a faraway place, writing,\n\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which quotation from *Cane*most effectively illustrates the claim?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“And when the wind is from the South, soil of my homeland falls like a fertile shower upon\nthe lean streets of \\[Washington, DC\\].”"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“The Dixie Pike has grown from a goat path in Africa.”"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“From down the railroad track. the chug-chug of a gas engine announces that the repair gang is\ncoming home.”"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“One evening I walked up the \\[Dixie\\] Pike on purpose, and stopped to say hello \\[to Fern\\].”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Monthly Temperatures and WingCentroid Sizes of Fruit FlySpecimens\nMonth\nAverage high $(^{\\circ}F)$\nAverage low $(^{\\circ}F)$\nAverage malewing centroidsize$(\\mathrm{mm})$\nAverage femalewing centroidsize$(\\mathrm{mm})$\nOctober\n$$67$$\n$$44$$\n$$1.98$$\n$$2.29$$\nMay\n$$73$$\n$$50$$\n$$1.98$$\n$$2.27$$\nJuly\n$$87$$\n$$62$$\n$$2.02$$\n$$2.31$$\nSeptember\n$$80$$\n$$54$$\n$$1.98$$\n$$2.27$$\n\nDrosophila (fruit flies) have generation times of $10-12$ days, so seasonal changes in humidity and\nother environmental conditions can drive seasonal fluctuations in chromosome rearrangements in\nspecies such as $D$.persimilis and $D$. subobscura. Drosophila body size (for which wing centroid\nsize serves as a proxy measure) correlates with life span. Banu Sebnem Önder and Cansu Fidan\nAksoy measured the wing sizes of members of a $D$. melanogaster population in Yesilöz, Turkey,\nthat were collected monthly between May and October over three years. Their research suggests\nthat *Drosophila* collected in relatively warmer months should tend to have a longer life span, as is\nillustrated by the finding that \\_\\_\\_\\_"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most effectively uses data from the table to complete the assertion?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "the average female wing centroid size was consistently larger than the average male wing\ncentroid size in all four months in the table."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "the average male wing centroid size was larger in July than in October."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "the average female wing centroid size was $2.02 \\mathrm{mm}$ in July but was $2.27 \\mathrm{mm}$ in September."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "the average monthly low temperature was higher in September than in May."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Minimum and Maximum Depths of Stony Coral Species in Caribbean and Indo-Pacific Waters\nSpecies\nLocation\nMinimum\ndepth(meters)\nMaximum\n\ndepth (meters)\nAcropora $awi$\nIndo-\nPacific\n$$0$$\n$$5$$\n*Indophyllia macassarensis*\nIndo-\nPacific\n$$20$$\n$$25$$\n*Isophylliarigida*\nCaribbean\n$$3$$\n$$20$$\n*Scolymia cubensis*\nCaribbean\n$$10$$\n$$92$$\nA marine biologist is researching four story coral species in Caribbean and Indo-Pacific waters,\nfocusing on sightings of these species in the shallow zone (less than 30 meters below the surface)\nand the mesophotic zone (30 to 150 meters below the surface). Consulting the table, she notes\nthat the smallest maximum depth is located in \\_\\_\\_\\_\\_\\_\\_\\_\\_"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most effectively uses data from the table to complete the statement?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Indo-Pacific waters in the mesophotic zone"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Caribbean waters in the shallow zone."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Caribbean waters in the mesophotic zone."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Indo-Pacific waters in the shallow zone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Rafael Núñez and colleagues studied how members of the Yupno, an Indigenous group in Papua\nNew Guinea, conceptualize time in both spoken language and gestures. The researchers recorded\nYupno speakers explaining certain temporal words and phrases, such as *kalip bishap*, a past\noriented expression that translates to “past times,” and coded each speaker’s manual gestures.\nPrevious research has found a tendency in many cultures to make temporal distinctions along\nimagined linear axes: for instance, Spanish speakers often refer to the left/right axis to describe\nevents in time. Some researchers believe this tendency is universal, but Núñez and colleagues\nclaim this is not the case."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which finding, if true, would most directly support N úñez and colleagues’ claim?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Yupno speakers typically use their left hand to make temporal gestures regardless of whether\nthe gestures are east oriented or future oriented."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Some Yupno grammatical structures used when talking about time are also used in Spanish."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Future-oriented gestures used by Yupno speakers do not, on average, point in the opposite\nlinear direction of past-oriented gestures."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Yupno speakers were observed making temporal gestures both indoors and outdoors, though\nwith greater frequency when indoors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Coffee farming around the world has changed greatly over time. Originally, coffee plants grew in\nthe shade of tropical forests. Today coffee is often grown without shade cover. This is because\nfull-sun coffee farms can produce more coffee beans. But the lack of trees on such farms means a\nlack of spaces for many species of birds to roost. Therefore, compared with full-sun coffee farms,\nshaded farms tend to \\_\\_\\_\\_\\_."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most logically completes the text?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "be home to a more diverse range of birds."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "have better soil quality."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "have fewer problems with insects and other pests."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "experience generally milder weather conditions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Studies have shown that when we listen to high-tempo music (songs with a high number of beats\nper minute, or bpm) during endurance exercise, we perceive our effort as lower than it actually is,\nwhich leads to an increased pace and a higher heart rate. Researchers recently designed a follow-\nup study in which participants jogged outdoors for 30 minutes while listening to Aerosmith's\n“Livin’ on the Edge” (169 bpm) continuously. The next day, participants performed the same\nactivity while listening to Ella Fitzgerald’s “From This Moment On” (93 bpm). As expected,\nlistening to that song resulted in participants \\_\\_\\_\\_\\_\\_\\_\\_"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most logically completes the text?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "perceiving their effort as lower while jogging than they had the previous day."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "varying their jogging pace more than they had the previous day."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "exhibiting a higher average heart rate while jogging than they had the previous day."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "jogging a shorter distance in the 30 minutes than they had the previous day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Cycads are palm-like plants with cones. \\_\\_\\_\\_\\_\\_\\_\\_ plants were abundant throughout the Mesozoic\nEra (66 to 252 million years ago)."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text so that it conforms to the conventions of Standard English?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "This"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Each"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "That"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "These"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "The theory of plate tectonics explains how large pieces of Earth’s crust, called tectonic plates,\nmove and interact. According to the theory, the movement of tectonic plates forms \\_\\_\\_\\_\\_\\_\\_\ncreates volcanoes, and causes earthquakes."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text so that it conforms to the conventions of Standard English?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "mountains;"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "mountains,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "mountains:"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "mountains"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Many folktales that originate in the Hindi language start with a phrase that roughly translates to\n“in one era.” Many tales that originate in English use “once upon a time.” Such phrases, known as\nstory starters,\\_\\_\\_\\_\\_\\_\\_ from language to language."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text so that it conforms to the conventions of Standard English?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "has varied"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "is varying"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "varies"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "vary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "As jazz singer Sarah Vaughan honed her vocal abilities—acquiring a sophisticated timbre and\nprecise control over pitch, dynamics, and \\_\\_\\_\\_\\_ she earned comparisons to opera icon Leontyne\nPrice, one of her personal heroes. The comparisons highlight how Vaughan, a jazz star, had\ntranscended genre boundaries with her singing prowess."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text so that it conforms to the conventions of Standard English?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "vibrato:"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "vibrato—"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "vibrato,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "vibrato"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Dating to around 1500, the Unicorn Tapestries are seven large tapestries depicting a unicorn hunt\nthat hang in The Cloisters, a museum of medieval art in New York City. Attempting to explain\nthe tapestries’ symbolism, art historian and former Cloisters head curator Margaret $B$.\\_\\_\\_\\_\\_ that\nwhile some have interpreted the tapestries as a Christian allegory, unicorns in that era were\ntypically featured in secular rather than religious contexts."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text so that it conforms to the conventions of Standard English?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q16"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Freeman, who noted"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Freeman, noted"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Freeman, noting"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Freeman noted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Because of its bulky body, the world’s first airplane, the 1903 Wright Flyer, was not very\naerodynamic. Modern planes, like the Northrop F$-5$ jet, have much sleeker, more streamlined\nbodies.\\_\\_\\_\\_\\_\\_ they are much more aerodynamic."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "However,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Lastly,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Nevertheless,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "For this reason,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "KCUW-LP is a Native-run radio station broadcasting from the Umatilla Indian Reservation in\nOregon. In 2004, Loris Taylor wanted to make sure that stations like KCUW-LP continued to\nthrive.\\_\\_\\_\\_\\_ she founded Native Public Media, a support system for Native radio stations that\nnow includes around sixty stations."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Nevertheless,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "In reality,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Thus,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Conversely,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "In 1845, the United States District Court for the state of Iowa was established. Initially, the\ncourt’s jurisdiction was a single district that encompassed the entire state, but as Iowa’s\npopulation grew, this single district began to struggle to serve the needs of everyone in the state.\n\\_\\_\\_\\_\\_\\_ the court’s jurisdiction was subdivided into two districts, each with its own district court."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ultimately,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "For example,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Nevertheless,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Additionally,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "On a chilly spring morning in a Virginia park, as sunlight crested the treetops, Kathrin Swoboda\nraised her Nikon D500 camera and captured an image that would win the Grand Prize in the 2019\nAudubon Photography Awards: a red-winged blackbird, exhaling what appeared to be rings of\nsmoke. \\_\\_\\_\\_\\_\\_\\_\\_ the “smoke” was actually the blackbird’s breath hitting the cold morning air as\nthe bird sang."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Therefore,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "For example,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Furthermore,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Of course,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Vanadium is one of a variety of potentially useful trace elements contained in the chemical-rich\nbrine that remains after seawater is purified through desalination. However, routine extraction of\nvanadium and other such elements from brine is not yet technologically or economically feasible.\n\\_\\_\\_\\_\\_\\_\\_\\_ most trace elements have only been extracted from seawater on an experimental basis."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "To date,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "In doing so,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Finally,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Similarly,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "●The Highpointers Club is a hiking club.\n●One of the main goals among club members is to reach the highest points in all fifty US states.\n●Those who achieve this are called 50 Completers.\n●In Suk Han became a 50 Completer on November 15, 2013.\n●The highest point in Wisconsin is Timms Hill, at $1,951 \\mathrm{ft}$.\n●The highest point in Wyoming is Gannett Peak, at $13,809 \\mathrm{ft}$."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most effectively uses information from the given sentences to explain the 50\nCompleters hiking challenge to a new audience?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q22"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "If you are looking for a new hiking challenge, consider joining the Highpointers Club, as did\nIn Suk Han, a hiker who successfully reached the highest point in every US state."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Not until after you have reached the highest points in all fifty US states—including Timms\nHill in Wisconsin and Gannett Peak in Wyoming—can you include yourself among the 50\nCompleters of the Highpointers Club."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "On November 15, 2013, In Suk Han finally completed the feat of reaching the highest point in\nall fifty US states, including Timms Hill in Wisconsin and Gannett Peak in Wyoming."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Hikers aiming to count themselves among the 50 Completers must reach not only West\nVirginia’s Spruce Knob but also the even higher peak of Mount Elbert in Colorado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q23",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "While researching a topic, a student has taken the following notes:\n\n●$The$ Incarnations (2015) is an epistolary novel by English author Susan Barker.\n●Epistolary novels are novels written primarily as a series of fictional documents.\n●These documents can be letters, journal entries, newspaper clippings, and more.\n\n●$The$ Incarnations consists primarily of letters.\n●The letters are sent between a taxi driver named Wang Jun and a mysterious woman."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The student wants to provide an example of an epistolary novel. Which choice most effectively\nuses relevant information from the notes to accomplish this goal?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q23"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "In 2015, English author Susan Barker published a novel of letters sent between a taxi driver\nnamed Wang Jun and a mysterious woman."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Consisting primarily of letters sent between a taxi driver named Wang Jun and a mysterious\nwoman, Susan Barker’s $The$ Incarnations is an epistolary novel."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It was Susan Barker who published the novel $The$ Incarnations in 2015."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "An epistolary novel is a novel written primarily as a series of fictional documents, such as\nletters, journal entries, or newspaper clippings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q24",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "While researching a topic, a student has taken the following notes:\n\n●A synthesis reaction is a type of chemical reaction.\n●In a synthesis reaction, two or more substances combine to form a new substance.\n●When sodium and chloride combine, they form a substance called sodium chloride.\n\n●This substance is more commonly known as table salt."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The student wants to define the term “synthesis reaction.” Which choice most effectively uses\nrelevant information from the notes to accomplish this goal?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q24"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "A synthesis reaction is a chemical reaction in which two or more substances combine to form a\nnew substance."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "A new substance is formed when a chemical reaction combines sodium and chloride."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The substance sodium chloride, also known as table salt, is formed by a chemical reaction."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "When sodium and chloride combine, they form a substance commonly known as table salt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m1-q25",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "While researching a topic, a student has taken the following notes:\n\n●Documentary TV programs in the slow TV genre consist of uninterrupted broadcasts of\nordinary events in real time.\n●$MORA$: Zeichner is a German slow TV program.\n●The 45-minute-long program documented an artist making a pencil drawing during a train\njourney.\n●It first aired in 2016.\n●Slow TV has been called “the world’s most boring television.”\n●American journalist Nathan Heller praises it, writing that “it affords a visceral kind of armchair\ntourism.”"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The student wants to use a quotation to refute the claim that slow TV programs are boring. Which\nchoice most effectively uses relevant information from the notes to accomplish this goal?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m1-q25"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "With broadcasts of ordinary events, like artists at work, occurring in real time, slow TV just\nmight be “the world’s most boring television.”"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Far from boring, slow TV programs can provide a “visceral kind of armchair tourism,” as\nHeller puts it, whereby viewers can watch artists at work in real time."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$MORA$: Zeichner can afford a “visceral kind of armchair tourism,” as Heller puts it."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "While some have praised slow TV for affording “a visceral kind of armchair tourism,” others\nhave called it “the world’s most boring television”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "In the Metropolitan Museum of Art’s Costume Institute’s innovative multisensory exhibit of\ngarments and accessories spanning four centuries, an emphasis on the \\_\\_\\_\\_\\_\\_ of fashion was\nconveyed both by the exhibit’s theme of perpetual renewal in nature and, more, subtly, by its\nscientific re-creations of ephemeral elements (like a fragrance worn with a dress more than a\ncentury ago)."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical and precise word or phrase?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "transience"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "definitiveness"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "superficiality"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "partiality"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "As a defense mechanism, the monarch butterfly \\_\\_\\_\\_\\_\\_\\_ toxic compounds from milkweed plants.\nOn ingesting a piece of milkweed, the monarch selectively absorbs toxic cardenolides from the\nplant in its gut and stores them in the tissues throughout its body, rendering the butterfly\nunpalatable to predators."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical and precise word or phrase?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "neutralizes"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "exploits"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "impedes"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "secretes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "image",
+          "assetId": "asset-995b5238801231bbf440401f18d0d80dba6fbf0ed3d3d712241ccced280d8b59",
+          "role": "illustration",
+          "alt": "Source question content."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice best describes the function of the underlined portion in the text as a whole?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It makes a comparison between the past and current rates at which new chemical compounds\nhave entered the scientific literature."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It emphasizes the point implicitly made earlier in the text that human inefficiency is the\nprimary constraint on the expansion of the chemical space."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It provides details about the qualification later in the sentence regarding the prospect of\ncataloging the full range of possible chemical compounds."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It introduces information that helps explain why the synthesis of superheavy elements has\nrapidly expanded the chemical space."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "image",
+          "assetId": "asset-8f33f9f83d927ce8bb9b9287900d0ed421acccb3c46acab5e452b7c6f6995631",
+          "role": "illustration",
+          "alt": "Source question content."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice best describes the function of the underlined portion in the text as a whole?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It emphasizes the historical conditions that explain why production of the painted motif\ndescribed in the text abruptly ceased after 3,000 years of continue use."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It provides context that informs the text’s claim about why the peoples of Patagonia chose\nCueva Huenul 1 as a culturally significant site."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It explains the environmental circumstances that account for the rarity of rock art dating to the\nsame period as the most discussed in the text."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It identifies a consideration that factored into an interpretation of the rock art at Cueva Huenul\n1 that is presented in the text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "The following text is from Yung Wing’s 1909 memoir $My Life in$ China $and$ America. Yung\nWing was the first person from China to graduate from a US university.\n\nLittle did I realize when in 1845 I wrote, while in the Morrison School, a composition on “An\nImaginary Voyage to New York and up the Hudson,” that I was to see New York in reality. This\nincident leads me to the reflection that sometimes our imagination foreshadows what lies\nuppermost in our minds and brings possibilities within the sphere of realities."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice best describes the function of the underlined sentence in the text as a whole?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It explains the origin of Yung’s interest in writing."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It indicates Yung’s unwillingness to distinguish between reality and fantasy as a child"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It illustrates the sense of adventure that Yung developed as a child."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It describes an event in Yung’s life that exemplifies a phenomenon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "One notable feature of Southern US literature is its adaptation of established fiction genres to\nSouthern contexts. Mark Twain derived his episodic narrative structures and roguish heroes from\nthe picaresque novel, and William Faulkner realized the decadent aristocrat, the imperiled\nheroine, and other character types of the Gothic novel as rural Southerners who were more\ncontingent, more caught in the net of societal relations and history than the fantastical figures of\nthe Gothic had been. Some of the region’s poets, such as James Dickey, have shown even greater\ndexterity by adapting these sources in an altogether different literary form.\nThe text suggests that some Southern poets have adapted established fiction genres in different\nliterary forms with Southern contexts. Which quotation would best serve as an example of this\nadaptation in the work of James Dickey?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“With its rural settings and rustic characters, Dickey’s poems suggest the influence of the\ngenre of pastoral action, yet Dickey may have instead obtained these elements from pastoral\npoetry, which preceded its namesake in fiction.”"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“The Gothic genre emerged in England and Ireland in the 1700s and was later naturalized to\nthe cultural landscape of the Northeastern US, as in the novels of Nathaniel Hawthorne, which\nDickey had almost certainly read.”"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“When Dickey invokes one genre of poetry and, within the space of a few lines, abandons it\nfor another genre of poetry, what can we infer from this gesture if not the poet’s fascination with\ngenre per se, as well as his discomfort with it?”"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "“What is the disturbed, and disturbing, speaker of Dickey’s best poems if not a stock character\nof the Gothic novel, refracted through the speech and ethos of the South and conditioned by the\nstructures of lyric poetry?”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "image",
+          "assetId": "asset-99939d311443abe8fb7524c928b930127f9681bb206e92162faf5d18401a3af8",
+          "role": "illustration",
+          "alt": "Source question content."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which statement, if true, would most directly support the claim in the underlined sentence?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Shoshone, a language in the Uto-Aztecan family, was originally spoken in a vast expanse of\nIdaho, Nevada, Oregon, and Wyoming—a region whose mountainousness rivals that of the\nhomeland of the Yana people."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "In mountainous regions of the western US, isolate-speaking peoples historically met most of\ntheir food needs through foraging, hunting, and fishing rather than intensive farming."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Although Native languages in non-mountainous areas of California tend to belong to language\nfamilies, those families do not necessarily share common linguistic ancestry."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Yana and other isolates spoken in mountainous regions of California tend to contain many\nmore terms describing features of mountainous terrain than nonisolate languages from relatively\nflat regions of California do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Studying animals in a laboratory allows variables to be systematically controlled, but removing\nanimals from their wild habitats can affect their behavior and biology in unforeseen ways. Given\nthis, biologists Rebecca M. Calisi-Rodríguez and George E. Bentley examined research on\nbrown-throated three-toed sloths and white-throated sparrows to see whether results from studies\nin the wild were consistent with the results of studies in the laboratory. Therefore, data showing\nthat brown-throated three-toed sloths tend to sleep fewer than 10 hours per day in the wild would\nbe irrelevant to Calisi-Rodríguez and Bentley’s investigation if \\_\\_\\_\\_\\_\\_\\_"
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice most logically completes the text?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "they tend to sleep more than 15 hours per day in the lab."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "white-throated sparrows have low levels of corticosterone hormones outside of the breading\nseason in the wild."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "this behavior pattern has not been studied in the lab."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "such data have been collected for white-throated sparrows in laboratory settings but not in the\nwild."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "Born in Lyon, Mississippi, in 1902, musician Edward James “Son” House is best known as a key\nfigure in the development of the Delta blues, a variant of blues that originated in the Mississippi\nDelta region. \\_\\_\\_\\_\\_\\_ steeped in the fertile music scene that sprung up in the alluvial delta\nbetween the Mississippi and Yazoo Rivers, House and his peers developed their distinctive\nstripped-down, guitar-driven style."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which choice completes the text with the most logical transition?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There,"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Thus,"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Nevertheless,"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Moreover,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb99328e105540b0888afdc810ba063a-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [
+        {
+          "type": "markdown",
+          "text": "While researching a topic, a student has taken the following notes:\n\n●Atsuto Suzuki is a Japanese particle physicist.\n●Particle physicists study subatomic particles.\n●Neutrinos are some of the least understood subatomic particles.\n●Neutrinos were first discovered in the mid-twentieth century.\n●Suzuki is known for his discovery of geoantineutrinos."
+        }
+      ],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The student wants to provide an example of a particle physicist whose research focuses on\nneutrinos. Which choice most effectively uses relevant information from the notes to accomplish\nthis goal?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb99328e105540b0888afdc810ba063a",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The research done on geoantineutrinos exemplifies the work particle physicists do to advance\nour understanding of subatomic particles."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neutrinos are a type of subatomic particle that particle physicists are still trying to understand."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Particle physicist Atsuto Suzuki is known for his discovery of geoantineutrinos."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "By studying geoantineutrinos—to name just one example—particle physicists can learn more\nabout neutrinos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

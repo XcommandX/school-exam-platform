@@ -171,7 +171,8 @@ window.SATBuilderLibrary = (() => {
     const prior = new Map();
     for (const preview of previews) {
       const previous = await SATStorage.get('sources', preview.sourceId);
-      assert(!previous || previous.contentHash === preview.contentHash, 'This package revision already exists with different content. Increase its revision.');
+      const priorHash = previous?.accountSnapshot ? previous.originalContentHash : previous?.contentHash;
+      assert(!priorHash || priorHash === preview.contentHash, 'This package revision already exists with different content. Increase its revision.');
       prior.set(preview.sourceId, previous);
     }
     return {collectionId, previews, prior};
@@ -192,7 +193,7 @@ window.SATBuilderLibrary = (() => {
     for (const {collectionId, previews, prior} of prepared) {
       for (const preview of previews) {
         const previous = prior.get(preview.sourceId);
-        if (!previous || previous.deleted) {
+        if (!previous || previous.deleted || previous.accountSnapshot) {
           preview.collectionId = collectionId;
           await SATImporter.commit(preview);
         }

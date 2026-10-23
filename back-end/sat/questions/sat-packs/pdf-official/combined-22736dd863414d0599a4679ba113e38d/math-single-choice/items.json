@@ -1,0 +1,1945 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $6 x=60$, what is the value of $7 x+3$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$73$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$63$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$55$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$45$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table summarizes the distribution of average pitching speed, in miles per hour mph, for a\nsample of 21 pitchers in a youth softball league."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-8603ff8bd7836ab30b1c1226ccd9108027d0c3dbe6bc238fa160aeaf39b1255d",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "According to the table, how many pitchers in the sample have an average pitching speed of at\nleast 30 mph but less than 35 mph?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=5 3 x$ . What is the value of\n⋅\n$f ( x )$ when $x$ =\n4?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$64$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$81$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$170$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$405$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In the $xy$-plane, line $p$ is parallel to line $s$. Line $s$ has a slope of 8 and line $p$ passes through the\npoint $( 0 , 7 )$. Which equation defines line $p$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=8 x - 7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=8 x - \\frac{1}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=8 x+7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=8 x+\\frac{1}{7}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A chemist mixed $x$ liters of a $4\\%$ saline solution with $y$ liters of a $7\\%$ saline solution to produce a\n$6\\%$ saline solution. Which equation best represents this situation? (Assume the volumes of the\nsolutions are additive.)"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.4 x+0.7 y=0.6 ( x+y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.4 x+0.7 y=6 ( x+y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.04 x+0.07 y=0.06 ( x+y )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.04 x+0.07 y=6 ( x+y )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The length of a rectangle’$s$ diagonal is 145 , and the length of one of the rectangle’$s$ sides is\n8. What is the perimeter of the rectangle?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$145$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$34$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x2-8x=0$$\nWhich of the following is a solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In each of the following data sets of 5 values, $p$ is a constant. Which of these data sets has the\nlargest standard deviation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 4$ , $p$ , $p$ , $p$ , $p+4$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 1$ , $p - 1$ , $p$ , $p+1$ , $p+1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p$ , $p$ , $p$ , $p$ , $p$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 5$ , $p - 4$ , $p$ , $p+4$ , $p+5$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-7a2c96df340aba51a969cabee331a3a062714eb885e99f05fdb9cb7a27f4471b",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\n\nIn the right triangle shown, what is the value of $\\cos$⁡A?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{41}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{22}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{22}{41}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{41}{22}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An object is launched from a height of 132 feet above the ground. A quadratic function $f$ models\nthe height above the ground, in feet, of the object $t$ seconds after it is launched. According to the\nmodel, 3 seconds after the object is launched, it reaches a maximum height of 276 feet above the\nground. Which equation defines $f$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t+276 ) 2 - 3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t - 276 ) 2+3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t+3 ) 2 - 276$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( t )=- 16 ( t - 3 ) 2+276$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=( x - 2 ) ( x - 9 ) ( x+4 )$. In the $xy$-plane, the\ngraph of $y=h ( x )$ is the result of translating the graph of $y=f ( x )$ up 7 units. What is\nthe $y$-coordinate of the $y$-intercept of the graph of $y=h ( x )$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$79$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The ratio $x$ to $y$ is equivalent to the ratio 5 to 6. If $x=7 t$, what is the value of $y$ in terms of $t$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{5}{42} t$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{6}{35} t$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{35}{6} t$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{42}{5} t$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$P(t)=67(\\frac{5}{4})t$$\nA reindeer population was introduced into an area and researched for 19 years. Function $P$\nmodels this reindeer population $t$ years after the population was introduced into the area. Which\nstatement is the best interpretation of $\\frac{5}{4}$ in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "For every 4 reindeer there were in this population in a certain year, it is predicted that there\nwere 5 reindeer the next year."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "For every 5 reindeer there were in this population in a certain year, it is predicted that there\nwere 4 reindeer the next year."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It is predicted that this reindeer population grew by 4 reindeer every 5 years."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It is predicted that this reindeer population grew by 5 reindeer every 4 years."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b5543690f534e3b7c29409e32be5bcd528ff82e52ab34c997e8a07e792616e06",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\n\nIn the figure, line $m$ is parallel to line $n$, and lines $AE$ and $CD$ intersect at point $B$. Which\nadditional piece of information is sufficient to prove that triangle $ABC$ is congruent to triangle\n$EBD$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$AB=15$ and $DB=15$."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$AB=15$ and $EB=15$."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Triangles $ABC$ and $EBD$ are isosceles."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "No additional information is necessary to determine that the two triangles are congruent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What value of $n$ is the solution to the equation $11 n - 8=5 n+16$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=30x+200$$\nThe equation gives the total cost $y$, in dollars, for a small business to produce $x$ shirts. How many\nshirts can the business produce for a total cost of \\$ 650?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$15$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$21$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$28$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m1-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit is also\nshown."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-02ead020c3bcbf7108102a0f626e7c0a282e3d4f80ed6842be71d9e90d0e82af",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following equations best represents the line of best fit shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m1-q22"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=13.3+0.8x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=13.3-0.8x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-13.3+0.8x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-13.3-0.8x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The graph of the polynomial function $f$ in the $xy$-plane, where $y=f ( x )$, passes through the\npoint $( 9 , 8 )$. Which of the following must be true?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( 0 )=8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( 8 )=9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( 9 )=0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( 9 )=8$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Sunspots are temporary dark spots on the surface of the Sun. The monthly mean number of\nsunspots for one calendar month is the average of the number of sunspots observed each day\nduring the month. The linear function $s$ models the monthly mean number of sunspots as a\nfunction of the number of months, $x$, since December 2013, where $0\\le x\\le 30$. The graph\nof $y=s(x)$ is shown."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-5ea88dce343f1374c873e522175c1c7d5e66d26e11d73deda9146e15e156f3b7",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following is the best estimate for the monthly mean number of sunspots in\nDecember 2014?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$61$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$71$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$81$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$91$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the $x$-intercept of a line in the $xy$-plane that has a slope of $- \\frac{4}{7}$ and passes through the\npoint $( 0 , 12 )$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( - 21 , 0 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( - 4 , 0 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( 7 , 0 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( 21 , 0 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-fcac8f327d3895f6a491009f94b86159895f71bdb6a45ab6e6ab976631ee5541",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The shaded region shown represents the solutions to which inequality?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\lt 1/4x+1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\lt 4x+1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\gt 1/4x+1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y\\gt 4x+1$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=5x+18y=5x-18$$\nHow many solutions does the given system of equations have?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Zero"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly one"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly two"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Infinitely many"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-a11b849ce6bee8b45b640f1a38c1fa8eb994b29335ccbc8c11783fd19e81afe4",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\n\nIf $\\cos$⁡$A=0.65$, what is the value of $\\sin$⁡$C$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.87$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.65$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.35$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.13$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$97-|x-5|=95$$\nWhat is the sum of the solutions to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-14$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$f(x)=x2-4x-780$$\nThe function $f$ is defined by the given equation. Which of the following equivalent forms of the\nequation displays the minimum value of the function as a constant or coefficient?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=x2-4x+195$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=(x-2)2+(-784)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=x(x-4)+(-780)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=(x+26)(x-30)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "One gallon of sealant costs \\$19 and will cover 350 square feet of a surface. A deck has a total\nsurface area of $d$ square feet. Which equation represents the cost $c$, in dollars, of the sealant\nneeded to cover the deck twice?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=350d/19$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=700d/19$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=19 d/175$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c=19 d/350$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A rectangle has a length of $x$ units and a width of $x - 3$ units. If the rectangle has an area of 28\nsquare units, what is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$28$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An inspector checked a sample of 370 scales selected at random from a population of 8,000\nscales to estimate what percentage of the 8,000 scales were inaccurate. From this sample, the\ninspector estimated that $9\\%$ of the 8,000 scales were inaccurate, with an associated margin of\nerror of $2.9\\%$. Which of the following is the most appropriate conclusion?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q16"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It is plausible that between 488 and 952 of the scales in the population are inaccurate."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It is plausible that fewer than 488 of the scales in the population are inaccurate."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly 720 of the scales in the population are inaccurate."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It is plausible that more than 952 of the scales in the population are inaccurate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$1/x-3=x-1/-x+1.75$$\nWhich of the following is a solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.75$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2.5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-ebd3c7db3a7646df92c4910f4a5f24f54dfcfa0923c1edcdb161e04c3500cc83",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The table shows the linear relationship between the number of cars, $c$, on a commuter train and\nthe maximum number of passengers and crew, $p$, that the train can carry. Which equation\nrepresents the linear relationship between $c$ and $p$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36c-p=-9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36c-p=9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36p-c=-9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36p-c=9$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "On January 1, 2000, the population of a town was 26,253 and on January 1, 2010, the population\nwas 26,854. The equation $10 x+26$ , $253=26$ , 854 describes this situation. Which of the\nfollowing is the best interpretation of $x$ in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The total increase in population between 2000 and 2010"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The projected population of the town 10 years after 2010"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The average increase per year of the population between 2000 and 2010"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The percentage by which the population of the town increased each year between 2000 and\n$$2010$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The value of a painting increased by $166\\%$ from the end of 2011 to the end of 2012 and then\ndecreased by $14\\%$ from the end of 2012 to the end of 2013. What was the net percentage increase\nin the value of the painting from the end of 2011 to the end of 2013?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$128.76 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$142.76 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$152.00 \\%$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$203.24 \\%$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-66c9044a75564f7fa324480141943a3b-m2-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$4x2-px+w=-83$$\nIn the given equation, $p$ and $w$ are integer constants. The equation has exactly one real solution.\nWhich is $NOT$ a possible value of $w$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-66c9044a75564f7fa324480141943a3b",
+        "sourceQuestionId": "m2-q22"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-19$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$17$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$317$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

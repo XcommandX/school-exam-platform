@@ -1,0 +1,330 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "20"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数直接代入$x=5$，计算即可， $f ( 5 )=2 5 2 - 6 5=20$\n∗\n∗"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "152"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，500 为$p$ 的值，代入$500=5x-260$ 计算求得$x=152$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-8"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数标准形式$y=5x+b$，代入点 $(0, 40)$得到$b=40$，$x$-coordinate 为$y=0$ 时$x$ 的值，代入\n$y=5x+40=0$ 得 $x=- 8$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "76"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据reference 中特殊三角形得知，等边三角形的高是边长的 $\\frac{3}{2}$ 倍，边长为 $38 \\frac{2}{3}$\n∗\n，\n根据题目可以建立等式 $3 38 \\frac{2}{3}=a 3$\n∗\n∗\n得到$a=76$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "28"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y$-coordinate 直接代入$x=0$ 得$y=28$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1242/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数应用问题，相当于三个坐标（1994, 60）（2014, 217）（2018, $x$）根据前二数据找到\n函数式（或斜率）再代入第三数据求的$x$，难度体现只是数字不算简单"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3/1250"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$0.001\\%$是质量比，$240g$ 是质量mass，用乘法计算得结果"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6500"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，支持是反对的6 倍，支持比反对的多32500，可设反对者为$x$，支持者$6x$，$6x$-\n$x=32500$，注意问题是求$x$ 反对者against"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-121"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将 $t ( 2 , 0 )$ 、 $( 0 , - 120 )$代入函数得到两个方程， a $2+b=0$ 和 $1+b$ =\n$- 120$，第二个式子直接得到 $b=- 121$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "21"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题目表述：三角形面积 $x 2$ ，长是$2x+7$，高是$x-3$，得到面积 = $( 2 x+7 )$\n$( x - 3 ) / 2=x 2$ ，整理式子得到$x-21=0$，$x=21$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-1"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "合并两式得二次函数标准形式，$4x2+qx+4=0$，exactly one point，意味着$b2-4ac=0$，解得\n$q=8$（positive），注意问题问的是$x$，将$q$ 代入解二次方程得$x=-1$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f795d739e2b54a2cb3e7d97d2e735117-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/27",
+          "37/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数中product of the solutions=$c/a=rs/27$=krs，计算得$k=\\frac{1}{27}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+        "sourceQuestionId": "m2-q19"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-e7804a0601d646b58639c49d0d0b88a7-math-spr",
+  "revision": 1,
+  "title": "Bluebook Practice 6 数学（Easy Module） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-8ad63f9ebf47d88ded1d9ee74dd4166b57d98c51ecce18976a4e6d48dfd9d7db",
+      "path": "assets/8ad63f9ebf47d88ded1d9ee74dd4166b57d98c51ecce18976a4e6d48dfd9d7db.png",
+      "mediaType": "image/png",
+      "sha256": "8ad63f9ebf47d88ded1d9ee74dd4166b57d98c51ecce18976a4e6d48dfd9d7db",
+      "byteLength": 33134,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-4ce707c74400783077cf5f62449d47207505fdc28b93e24b6ae1ec7fd05f1091",
+      "path": "assets/4ce707c74400783077cf5f62449d47207505fdc28b93e24b6ae1ec7fd05f1091.png",
+      "mediaType": "image/png",
+      "sha256": "4ce707c74400783077cf5f62449d47207505fdc28b93e24b6ae1ec7fd05f1091",
+      "byteLength": 26125,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q14"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

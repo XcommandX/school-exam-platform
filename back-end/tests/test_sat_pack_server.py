@@ -1,4 +1,5 @@
 import _paths
+from _auth_fixture import authenticated_headers
 """Local SAT package/backup routes, using only the committed synthetic packs."""
 import base64
 import hashlib
@@ -39,7 +40,7 @@ class SatPackServerTests(unittest.TestCase):
 
     def request(self, route, method='GET', body=None, headers=None):
         connection = http.client.HTTPConnection('127.0.0.1', self.port, timeout=5)
-        connection.request(method, route, body=body, headers=headers or {})
+        connection.request(method, route, body=body, headers={**authenticated_headers(self.server), **(headers or {})})
         response = connection.getresponse()
         result = response.status, response.read(), dict(response.getheaders())
         connection.close()
@@ -157,7 +158,7 @@ class SatPackServerTests(unittest.TestCase):
         self.assertEqual(status, 201)
         result = json.loads(body)
         self.assertTrue(result['saved'])
-        target = self.private / 'backups/synthetic-test' / result['name']
+        target = self.private / 'backups/accounts' / authenticated_headers(self.server)['X-Account-ID'] / 'synthetic-test' / result['name']
         self.assertEqual(json.loads(target.read_text()), snapshot)
         repeated = json.loads(self.request('/api/sat-library-backup', 'POST', payload, headers)[1])
         self.assertEqual(repeated['sha256'], result['sha256'])
@@ -168,6 +169,29 @@ class SatPackServerTests(unittest.TestCase):
         (self.packs / 'active.json').write_text(json.dumps({'collectionId': 'another', 'root': 'synthetic-test'}))
         self.assertEqual(self.request('/api/sat-library-backup', 'POST', payload, headers)[0], 400)
 
+
+    def test_student_backups_are_account_scoped_without_shared_bank_write_access(self):
+        self.activate()
+        user = self.server.auth.store.create_user('SyntheticStudent', 'Synthetic-pass-94')
+        origin = f'http://127.0.0.1:{self.port}'
+        status, raw, response = self.request('/api/auth/login', 'POST', json.dumps({
+            'username': user['username'], 'password': 'Synthetic-pass-94'}),
+            {'Origin': origin, 'Content-Type': 'application/json'})
+        self.assertEqual(status, 200)
+        headers = {'Cookie': response['Set-Cookie'].split(';')[0], 'X-Account-ID': user['id'],
+                   'Origin': origin, 'Content-Type': 'application/json'}
+        info = json.loads(self.request('/api/question-bank/status', headers=headers)[1])
+        self.assertFalse(info['writable'])
+        headers['X-SAT-Bank-Token'] = info['token']
+        snapshot = {'schemaVersion': 'sat-library-backup/1', 'targetCollectionId': 'synthetic-test',
+                    'sources': [], 'questions': [], 'attempts': [], 'wrongBook': [], 'runtimeSnapshot': None}
+        status, raw, _ = self.request('/api/sat-library-backup', 'POST', json.dumps({
+            'collectionId': 'synthetic-test', 'snapshot': snapshot}), headers)
+        self.assertEqual(status, 201)
+        saved = json.loads(raw)
+        target = self.private / 'backups/accounts' / user['id'] / 'synthetic-test' / saved['name']
+        self.assertTrue(target.exists())
+        self.assertEqual(self.request('/api/question-bank', 'POST', '{}', headers)[0], 403)
 
 if __name__ == '__main__':
     unittest.main()

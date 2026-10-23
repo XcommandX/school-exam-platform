@@ -1,0 +1,333 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "21"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "混合物的总体积为31 毫升，异丙醇的体积为10 毫升，所以水的体积为$31-10=21$ 毫升"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "130"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "正方形 A 的边长 / 正方形 $B$ 的边长 = $\\frac{4}{20}$ , 正方形A 的边长为26，所以 26/ 正方形 $B$\n的边长 = $\\frac{4}{20}$ , 解出正方形$B$ 的边长为130"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "43/3",
+          "1433/100"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为12 英寸=1 英尺，172 英寸每秒=$\\frac{172}{12}$ 英尺每秒。$\\frac{172}{12}=\\frac{43}{3}$ 或14.33"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "11/2",
+          "3/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "交叉相乘得到$1(-x-1.25)=(x-1)(x-7)$。左边展开得到：$-x-1.25$。\n右边展开得到 $x2-7x-x+7=x2-8x+7$。将两边写在一起得到 $-x-1.25=x2-8x+7$。移项转化为\n标准的一元二次方程得到 $x2-7x+8.25=0$。因此 $x=-b\\pm b2-4ac/2a=-(-7)\\pm (-7)2-4(1)(8.25)$/\n$2(1)=7\\pm \\frac{4}{2}=5.5$ 或1.5"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "27",
+          "28",
+          "29"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "函数 $f(x)=(x-a)(x-b)=x2-(a+b)+ab$ 的图像是一个开口向上的抛物线，且与$x$ 轴的交点为\n$x=a$ 和$x=b$。\n因为$f(11)\\gt 0$（在$x$ 轴上方）且$f(14)\\lt 0$（在$x$ 轴下方），所以函数在$x=11$ 和$x=14$ 之间一定\n穿过了$x$ 轴。因此其中一个根在11 和14 之间。同样因为$f(14)\\lt 0$ 且$f(17)\\gt 0$，另一个根一\n定在14 和17 之间。\n设a 为较小的根，$b$ 是较大的根。所以$11\\lt a\\lt 14$，$14\\lt b\\lt 17$。因为a 和$b$ 是整数，所以a 是\n12 或13，$b$ 是15 或16。$a+b$ 是$12+15=27$，$12+16=28$，$13+15=28$，或$13+16=29$。\n因此可能的$a+b$ 的值为27， 28， 或29."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "62951"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设蜂群中除蜂王外的蜜蜂总数为$x$。则工蜂占$85\\%$，雄峰占$15\\%$，已知雄峰有11,109 只，\n所以$0.15x=11109$，解得$x=74060$。工蜂数量为$0.85\\times 74060=62951$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "10"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将点$(4, c)$带入圆方程得到： $( 4 - 2 ) 2+( c - 10 ) 2=4$。解出$c=10$."
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "48"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当一个方程有无数个解时，等式两边化简后必须完全相同。这样无论$x$ 取什么值，等式都\n永远成立。分配等式左边的括号外的3 得到：$3x+b-48=3x$。想要等式两边完全相同，必须\n有$b-48=0$，即$b=48$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "170"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "化简第一个方程：等式两边同时除以40 得到：$0.6r-0.8s=-108$。等式两边同时乘以10 得\n到：$6r-8s=-1080$\n化简第二个方程：等式两边同时除以70 得到：$0.8r+0.6s=106$。等式两边同时乘以10 得\n到：$8r+6s=1060$\n将第一个方程乘以6，第二个方程乘以8，相加得：$(36r-48s)+(64r-48s)=-6480+8480$。因此\n$100r=2000$，解出$r=20$。将$r=20$ 带入第二个方程得到$s=150$。因此$r+s=170$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "17"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "正四棱锥的底面是一个正方形。因为底面积为16，所以底面边长为4.\n总表面积=侧面积+底面积，所以侧面积为 $16+8 293 - 16=8 293$ 。因为正四\n棱锥的侧面是4 个全等的等腰三角形，这些三角形的底边长为4，设三角形的高为$x$，则\n三角形的面积为$\\frac{1}{2}*4*x=2x$。因此 $4 ( 2 x )=8 293$ 。因此斜高 $x=293$ 在正\n四棱锥的内部，四棱锥的高$(h)$，底面边长的一半(2)，和斜高 293 构成了一个直角三\n角形。因此 $h 2+2 2=( 293 ) 2$ ，解出$h=17$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "60000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设物体A，$B$。$C$ 的体积分别为a，$b$，和$c$。得到$a=4.92b$, $a=0.0082c$。因此 $0.0082c/4.92b$\n= $a/a=1$ 解出$c/b=600=60000\\%$。因此$p=60000$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-d3c7a34699d047ea8060775dea4d6b63-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "36"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由顶点坐标公式得顶点横坐标 $1=b/(2$a)，即 $b=2$a。代入纵坐标 $19=-a+b+c$，得 19 =\n$-a+2a+c=a+c$，故 $c=19$ - a。要求 a、$b$、$c$ 均为正整数，则 a 可取 1 到 18，$b=2$a 最\n大为 36。因此 $b$ 的最大可能值为 36。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

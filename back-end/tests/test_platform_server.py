@@ -1,4 +1,5 @@
 import _paths
+from _auth_fixture import authenticated_headers
 """Integration checks use only generated questions and temporary private data."""
 import http.client
 import json
@@ -50,22 +51,21 @@ class PlatformServerTests(unittest.TestCase):
 
     def request(self, route, method='GET', body=None, headers=None):
         connection = http.client.HTTPConnection('127.0.0.1', self.port, timeout=5)
-        connection.request(method, route, body=body, headers=headers or {})
+        connection.request(method, route, body=body, headers={**authenticated_headers(self.server), **(headers or {})})
         response = connection.getresponse()
         status, data, metadata = response.status, response.read(), dict(response.getheaders())
         connection.close()
         return status, data, metadata
 
-    def test_homepage_and_explicit_local_test_admin(self):
+    def test_homepage_and_authenticated_session(self):
         self.assertEqual(self.request('/')[0], 200)
         status, body, _ = self.request('/api/auth/session')
         self.assertEqual(status, 200)
         session = json.loads(body)
-        self.assertEqual(session['mode'], 'test-admin')
-        self.assertFalse(session['loginEnabled'])
-        self.assertFalse(session['authenticated'])
-        self.assertEqual(session['user']['name'], 'admin')
-        self.assertTrue(session['user']['isTest'])
+        self.assertTrue(session['loginEnabled'])
+        self.assertTrue(session['authenticated'])
+        self.assertEqual(session['user']['role'], 'admin')
+        self.assertTrue(session['user']['username'].startswith('Synthetic-'))
 
     def test_exam_namespaces_and_source_roundtrip(self):
         raw = {'title': 'Synthetic set', 'questions': [{'prompt': 'Choose a test option.',
@@ -149,7 +149,7 @@ class PlatformServerTests(unittest.TestCase):
         before = path.read_bytes()
         status, body, _ = self.request('/toefl/?section=reading')
         self.assertEqual(status, 200)
-        self.assertIn(b'<script src="/web/toefl-bridge.js"></script>', body)
+        self.assertIn(b'<script type="module" src="/web/toefl-bridge.js"></script>', body)
         self.assertEqual(path.read_bytes(), before)
         self.assertEqual(self.request('/toefl/audio/fixture-tone.wav')[0], 200)
         status, _, headers = self.request('/toefl?view=plan')
@@ -169,7 +169,7 @@ class PlatformServerTests(unittest.TestCase):
             worker.start()
             try:
                 connection = http.client.HTTPConnection('127.0.0.1', server.server_port, timeout=5)
-                connection.request('GET', '/toefl/')
+                connection.request('GET', '/toefl/', headers=authenticated_headers(server))
                 response = connection.getresponse()
                 self.assertEqual(response.status, 503)
                 response.read()

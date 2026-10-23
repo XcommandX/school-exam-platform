@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-5a66bef72c2749e686130df05a64ce4b-rw-single-choice",
+  "revision": 1,
+  "title": "2025年9月第4套阅读语法（北美B-F去重合并版） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1127f316f8f092aacd9171728f10d369f8175bae0f0d2525976640045c3373c9",
+      "path": "assets/1127f316f8f092aacd9171728f10d369f8175bae0f0d2525976640045c3373c9.png",
+      "mediaType": "image/png",
+      "sha256": "1127f316f8f092aacd9171728f10d369f8175bae0f0d2525976640045c3373c9",
+      "byteLength": 25889,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-5a66bef72c2749e686130df05a64ce4b",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-b707ca5a63fcf49569e526bf2b6a7be83856d8f56881a7e2f487ce1f850b4b56",
+      "path": "assets/b707ca5a63fcf49569e526bf2b6a7be83856d8f56881a7e2f487ce1f850b4b56.png",
+      "mediaType": "image/png",
+      "sha256": "b707ca5a63fcf49569e526bf2b6a7be83856d8f56881a7e2f487ce1f850b4b56",
+      "byteLength": 31998,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-5a66bef72c2749e686130df05a64ce4b",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-adc031b5126f15b1961bb49bbc188401244f085e48e423dcd52bf91fc6a22397",
+      "path": "assets/adc031b5126f15b1961bb49bbc188401244f085e48e423dcd52bf91fc6a22397.png",
+      "mediaType": "image/png",
+      "sha256": "adc031b5126f15b1961bb49bbc188401244f085e48e423dcd52bf91fc6a22397",
+      "byteLength": 44463,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-5a66bef72c2749e686130df05a64ce4b",
+        "sourceQuestionId": "m2-q8"
+      }
+    }
+  ]
+}

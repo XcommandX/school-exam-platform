@@ -1,0 +1,1178 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x+5=2(5)$$\nWhat value of $x$ is the solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The length of a rectangle'$s$ diagonal is 65 , and the length of one of the rectangle'$s$ sides is 4.\nWhat is the perimeter of the rectangle?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$11$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$22$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$28$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$65$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A rectangle has a length that is 60 times its width. The function $y=( 60 w ) ( w )$ represents\nthis situation, where $y$ is the area, in square feet, of the rectangle and $y \\gt 0$. Which of the\nfollowing is the best interpretation of $60w$ in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The length of the rectangle, in feet"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The area of the rectangle, in square feet"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The difference between the length and the width of the rectangle, in feet"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The width of the rectangle, in feet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A study established that in a certain park, there are at least 141 squirrels, consisting of red\nsquirrels and gray squirrels. The study also established that there are at least 4 times as many gray\nsquirrels as red squirrels in this park. Which of the following systems of inequalities best\nrepresents this situation, where $g$ is the number of gray squirrels in this park and $r$ is the number\nof red squirrels in this park?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$g+r \\le 141$ , $g \\ge 4 r$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$g+r \\le 141$ , $g \\le 4 r$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$g+r \\ge 141$ , $g \\ge 4 r$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$g+r \\ge 141$ , $g \\le 4 r$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In each of the following data sets of 5 values, $p$ is a constant. Which of these data sets has the\nlargest standard deviation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 4$ , $p$ , $p$ , $p$ , $p+4$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 1$ , $p - 1$ , $p$ , $p+1$ , $p+1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p$ , $p$ , $p$ , $p$ , $p$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p - 5$ , $p - 4$ , $p$ , $p+4$ , $p+5$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Triangle $ABC$ is similar to triangle $XYZ$ such that $A$, $B$, and $C$ correspond to $X$, $Y$, and $Z$,\nrespectively. The length of each side of triangle $ABC$ is $n$ times the length of its corresponding\nside in triangle $XYZ$, where $n$ is an integer greater than 1 . The measure of angle $C$ is 52 degrees,\nand $YZ=71$. Which of the following must be true?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$BC=71/n$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$BC=71n$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measure of angle $Z$ is $52/n$ degrees."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measure of angle $Z$ is $52n$ degrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In the relationship between variables $x$ and $y$, each increase of 1 in the value of $x$ decreases the\nvalue of $y$ by 3 . When $x=0$ , $y=2$. Which equation represents this relationship?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- \\frac{1}{3} x+2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- \\frac{1}{3} x - 2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- 3 x+2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- 3 x - 2$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A right square prism has a height of 16 units. The volume of the prism is 144 cubic units. What is\nthe length, in units, of an edge of the base?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$12$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x-22=x-22$$\nWhat is the sum of the solutions to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$23$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$43$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$45$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The product of a number and $- \\frac{3}{16}$ is 1 . What is the number?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{16}{3}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{3}{16}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- \\frac{3}{16}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- \\frac{16}{3}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table gives the distribution of flavor and type of topping for customer orders at an ice cream\nshop."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-3ed935ce937ef224312274393afbd802fa01e2ebc4614d774e4cd360ec651c15",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "If a customer order is selected at random, what is the probability of selecting an order with\nsprinkles, given the flavor of ice cream is vanilla?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.17$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.33$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0.75$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f(z)=6z$. Which of the following is equivalent to $f(z-5)$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-6z$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6z-5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6z-30$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-6z+30$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$12x+9=k(6x+9)+6x$$\nIn the given equation, $k$ is a constant. The equation has exactly one solution. Which value\nCANNOT be the value of $k$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-1$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "At each of four wildlife preserves, an ornithologist found a sample of 48 nests and recorded the\nnumber of eggs in each nest. The following frequency tables represent the data set recorded at\neach wildlife preserve. Which frequency table represents the data set with the greatest mean?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-76ad99bd6c13288fc04ba6b613849df2b058d4e89c24fb08cc190c37c1277020",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-3a53aa26926b0d2e9ecb790344b59fc481a168f8514e9b31639f69aa51e28be0",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-cc715fd66d3596632e69cf0bd2697ba1f5667f03f8cc80d4c4d35f9c77bb212f",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-ac9fc9077ffdb01ee47d29800bc1b040414396379efd61c9efe931132c8aa14b",
+              "role": "illustration",
+              "alt": "Source question content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In triangle $EFG$, $EF=8$ and $EG=10$. Which of the following could $NOT$ be the length of $F$\n$G$ ― ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$\\frac{1}{41}=1/R1+1/R2$$\nThe given equation relates the resistances, $R1$ and $R2$, in ohms, of two resistors arranged in\nparallel in a circuit with a total resistance of 41 ohms, where $R1$ and $R2$ are positive. Which\nequation correctly expresses $R1$ in terms of $R2$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$R1=41+R2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$R1=41-R2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$R1=41R2/R2+41$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$R1=41R2/R2-41$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between $x$ and $y$ for the 9 data points in data set A."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-4bce5a6779145cc5b059d610d48dd98e5198e1c50a6221524ba935defc82a304",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "A quadratic model for the data in data set A can be written as $y=0.07x2-0.06x+6.32$. The graph\nof this model is shown in the $xy$-plane. The data point at $x=0$ was found to be the result of a\nrecording error and was removed from data set A to create data set $B$ , consisting of the remaining\n8 data points. A quadratic model for the data in data set $B$ can be written as $y=ax2+bx+c$. , where\n$a$ ,$b$, and $c$ are constants. If the quadratic models for data sets A and $B$ are calculated in the same\nway, which of the following statements must be true?\nI.$a\\gt 0.07$\n\n$II$.$c\\lt 6.32$"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$II$ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and $II$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor $II$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is a quadratic function. In the $xy$-plane, the graph of $y=f(x)$ has a vertex at $(1, 9)$\nand passes through the points $(2, 30)$ and $(-1,93)$. What is the value of $f(-2)-f(0)$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$72$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$114$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$168$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$198$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-759f8d2c177df0242b6c5f036df9bf6fe84a6c6c0130bd9c62760ea84e003544",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The table shows three values of $x$ and their corresponding values of $y$, where $s$ is a constant. There\nis a linear relationship between $x$ and $y$. Which of the following equations represents this\nrelationship?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$sx+3y=12s$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3x+sy=12s$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3x+sy=12$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$sx+3y=12$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A circle in the $xy$-plane has its center at $( - 3 , - 4 )$. Line $k$ is tangent to this circle at the\npoint $( - 8 , - 5 )$. What is the slope of line $k$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- 5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$- \\frac{1}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

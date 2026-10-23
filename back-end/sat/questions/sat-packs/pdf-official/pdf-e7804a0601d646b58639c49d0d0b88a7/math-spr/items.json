@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-8ad63f9ebf47d88ded1d9ee74dd4166b57d98c51ecce18976a4e6d48dfd9d7db",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "What is the $y$-coordinate of the $y$-intercept of the graph shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x=8$$\n$$x+3y=26$$\nThe solution to the given system of equations is $(x, y)$. What is the value of $y$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-4ce707c74400783077cf5f62449d47207505fdc28b93e24b6ae1ec7fd05f1091",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "A bank account was opened with an initial deposit. Over the next several months, regular deposits\nwere made into this account, and there were no withdrawals made during this time. The graph of\nthe function $f$ shown, where $y=f(x)$, estimates the account balance, in dollars, in this bank account\n$x$ months since the initial deposit. To the nearest whole dollar, what is the amount of the initial\ndeposit estimated by the graph?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Brian saves $\\frac{2}{5}$ of the \\$215 he earns each week from his job. If Brian continues to save at this\nrate, how much money, in dollars, will Brian save in 9 weeks?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the slope of the graph of $y=\\frac{1}{3} ( 29 x+10 )+5 x$ in the $xy$-plane?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "id": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A rectangle is inscribed in a circle, such that each vertex of the rectangle lies on the\ncircumference of the circle. The diagonal of the rectangle is twice the length of the shortest side\nof the rectangle. The area of the rectangle is 1 , 089 3 square units. What is the length, in\nunits, of the diameter of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q20"
+      }
+    }
+  ]
+}

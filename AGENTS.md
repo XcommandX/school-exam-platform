@@ -6,8 +6,8 @@
 - 已确认需要统一登录、统一网址和云端答题记录。
 - 三位开发者使用 Windows / macOS，并通过 GitHub 分支与 PR 协作。
 - 统一首页位于 `front-end/web/`，采用 Study Space 品牌和已确认的暖白底、TOEFL 绿卡与 SAT 橙卡模板；主卡连接两个考试应用，AP 与 Personal Vocab 保留接口。Python 3.10+ 标准库服务从 `back-end/server/serve_platform.py` 启动。详见 `docs/unified-home.md`。
-- SAT Reading & Writing 复用 `front-end/sat/` 原生答题引擎；非考试管理页面已做视觉更新。2026-10-23 已按截图限定接入 SAT 数学、新题包和整套练习，范围见 `docs/sat-math-exam.md`。TOEFL 源码来自 `toefl 98aa9c7`，目录整理后浏览器代码在 `front-end/toefl/`，服务端、构建与模块测试在 `back-end/toefl/`；统一服务只提供其匿名样例构建，不连接私有题库、正式账号、云端记录或外部 AI。AP、Personal Vocab 仍待接入。
-- 测试阶段直接显示 `admin` 本机测试身份，无需密码；这不是正式认证或管理员授权。学习计划、目标分数及练习统计仅保存在当前浏览器的新平台命名空间，目前没有统一登录、按账号隔离或跨设备同步。
+- SAT Reading & Writing 复用 `front-end/sat/` 原生答题引擎；非考试管理页面已做视觉更新。2026-10-23 已按截图限定接入 SAT 数学、新题包和整套练习，范围见 `docs/sat-math-exam.md`。TOEFL 源码来自 `toefl 98aa9c7`，目录整理后浏览器代码在 `front-end/toefl/`，服务端、构建与模块测试在 `back-end/toefl/`；统一服务提供其匿名样例题库构建，并接公共账号与 TOEFL 文字状态保存；不连接私有题库、原云站、录音云存储或外部 AI。AP、Personal Vocab 仍待接入。
+- 已接入统一账号：`/login`、首页、TOEFL 和 SAT 共用服务端会话，SQLite 位于忽略的 `local-data/auth/`。首页设置、TOEFL 文字状态及 SAT 练习记录、错题本、练习设置按账号保存在服务端；TOEFL 录音仍仅在当前账号的浏览器空间。SAT 运行中的逐题计时保留本机，保存退出或完成练习时同步持久记录及恢复快照。旧固定 `admin` 不再作为登录身份，旧匿名数据保留但不自动迁移。账号管理由后端检查管理员角色，具体接口与边界见 `docs/unified-auth.md`。本机实现不等于已部署公网云服务。
 - 读 README.md、docs/CONTRIBUTING.md 和任务相关的 docs/ 文档后再修改。进入子模块时继续读取该目录下的 AGENTS.md（如果存在）。
 - 项目固定四个主体目录：`front-end/`（浏览器代码）、`back-end/`（服务、维护工具与检查）、`docs/`（共享说明）、`local-data/`（本机数据与产物，整体忽略）。截图、临时报告、参考目录和构建结果写入 `local-data/` 对应子目录，不再散落根目录。根目录仅保留 README、AGENTS、启动/同步入口与必要 Git 配置；布局、运行命令和迁移说明见 `docs/project-structure.md`。已有源码搬家不等于实现了正式认证。
 
@@ -34,6 +34,7 @@
 - 2026-10-23 用户通过截图授权 SAT 数学选择/填空布局、Reference、图片缩放与全屏、英语及数学电量、整套英语到数学间固定 10 分钟休息，以及 SAT 新题包 Markdown/LaTeX 接入，详见 `docs/sat-math-exam.md`。休息可提前继续，但先进入独立黑底等待页，第二次 Resume 才启动数学计时；检查页 Next 只移除结束确认弹窗，手动与超时均保留模块结束页后再推进或休息。Calculator 只保留入口与题目位移；仅该按钮引起的移动有减速动画，Reference 移动立即完成。数学不显示 Highlights。未提及的英语布局和 More 菜单继续保留。此授权不是全面重写考试界面的许可。
 - 2026-10-23 后续截图授权 Start Practice 三分类、真题时间线和题集卡片，准备页右下 Timed / Untimed 使用管理橙色并与原蓝色按钮区分；全真模考分类锁标准模块时长，部分来源保留原模块与题序且不冒充完整 SAT。目录只取元数据，开始时加载单个题集，不归档旧历史或切换 active.json；接口、历史快照和验证见 `docs/sat/README.md`，官方日期与精度见 `docs/sat-exam-dates.md`。
 - 统一首页与原 SAT 之间的入口、题库适配和存储名称映射放在独立集成层；当前为 `front-end/web/sat-bridge.js`、`back-end/shared/` 与统一本机服务。对接不等于重做考试界面。
+- 2026-10-24 用户授权 SAT 管理页面右上账号胶囊，原 Settings 收进其菜单；练习记录、错题本、练习设置按账号同步。同步层在 `front-end/web/sat-account-sync.js`，记录接口在 `back-end/server/sat_account_state.py`；不向考试阶段增加账号控件，不上传整套公共题库，不自动迁移匿名历史。同步失败或冲突保留本机副本并显示真实状态；删除记录保留服务端删除标记，不能被旧设备自动恢复。具体合同见 `docs/unified-auth.md`。
 - 新增公共页面沿用已确认的首页风格：暖白背景、白色弹层、TOEFL 绿色与 SAT 橙色主卡、较大的考试名称、清晰的文字层级和对齐间距。优先复用 `front-end/web/styles.css` 的变量与组件，不恢复旧淡紫主题或自行引入无关视觉风格。
 - 首页不再显示顶部白色导航条、无功能搜索、继续上次示例或底部工具栏。TOEFL 四科与 SAT 英语入口清晰可见；AP 和 Personal Vocab 通过页脚保留入口。个人中心、目标分数、学习计划、成绩报告、练习记录和设置从右上圆形头像进入；没有会员体系，不添加会员文案。
 - 用户已明确要求功能名直接单行展示：未经新的明确要求，不添加装饰性副标题、卡片说明、菜单描述、标题下解释小字或底部口号；“学习计划”“成绩报告”菜单也不附说明。此约定应由后续聊天和接手的 agent 继续继承，不因重构或统一风格而重新添加。必要的分值、计时、统计标签、错误提示和完成操作必需的说明应保留，不能按“小字”或 HTML 标签名机械删除；本约定不改变受保护的 SAT 考试界面。

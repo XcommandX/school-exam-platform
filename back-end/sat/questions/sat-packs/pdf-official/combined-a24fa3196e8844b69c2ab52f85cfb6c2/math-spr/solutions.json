@@ -1,0 +1,278 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "24/5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由第二个方程得 $y=7 - 2x$，代入第一个方程得 $7x - 4(7 - 2x)=5$，即 $7x - 28+8x=5$，合并\n得 $15x=33$，所以 $x=2.2$。将 $x$ 代回 $y=7 - 2x$ 得 $y=2.6$，因此 $x+y=4.8$（即 $\\frac{24}{5}$）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线斜率为 4，$y$ 截距为 $-28$，所以方程为 $y=4x - 28$。令 $y=0$ 求 $x$ 截距：$0=4x - 28$，解\n得 $x=7$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "该函数为顶点式 $y=\\frac{-3}{8}(x - p)^{2}+6$，顶点坐标为 $(p, 6)$。由图像可知，抛物线的顶点在 $x$ =\n9 处（即图像最高点对应的 $x$ 坐标），所以 $p=9$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "64"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$\\sin Q$ = 对边/斜边 = $PR/PQ=\\frac{1}{2}$。已知 $PR=32$，所以 $32/PQ=\\frac{1}{2}$，交叉相乘得 $PQ=64$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "408"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "过点 $(24, 0) \\to (24+17)(t - 24)=0 \\to 41(t - 24)=0 \\to t=24$，代入$g(0)=17 \\times 24=408$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "192"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "速度 × 时间 = 路程，即 $16 \\times 12=192$ 米。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "120"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "总概率为 1，所以 room $C$ 的概率 = $1 - 0.42 - 0.18=0.40$。总人数 300，因此 room $C$ 人数 =\n$300 \\times 0.40=120$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "右四棱柱（直棱柱）体积 = 底面积 × 高 = 边长$^{2} \\times 5=405$，所以边长$^{2}=81$，边长 = 9。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "112/65",
+          "1723/1000",
+          "43/25",
+          "17/10"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由点 $(7,0)$ 和 $(0,4)$ 得直线 $j$ 的斜率 = $(4-0)/(0-7)=\\frac{-4}{7}$，所以 $k$ 的斜率（垂直）为 $\\frac{7}{4}$，且\n过原点，故 $k$ 的方程为 $y=(\\frac{7}{4})x$。直线 $j$ 的方程为 $y=\\frac{-4}{7}(x - 7)=-4x/7+4$。联立：$7x/4$\n= $-4x/7+4$，解得 $x=\\frac{112}{65}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-6ac1e9d9a0b74860be28da68301fc4a3-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "52"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=g(x)(x+6)$。代入三组值得 $f(-20)=-28$，$f(-10)=12$，$f(1)=56$。由前两点求斜率：\n$(12+28)/(-10+20)=4$，所以 $f(x)=4x+52$，$y$ 截距为 52。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

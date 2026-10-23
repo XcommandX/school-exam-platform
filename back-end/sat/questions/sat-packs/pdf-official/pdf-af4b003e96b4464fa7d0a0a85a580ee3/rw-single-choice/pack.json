@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-af4b003e96b4464fa7d0a0a85a580ee3-rw-single-choice",
+  "revision": 1,
+  "title": "2025年10月北美第1套阅读语法（M2简单，和北美第2套阅读语法重复不录入） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-b490d796bcf44de52366c5987164193c4d202a540102ebf46c90916828921849",
+      "path": "assets/b490d796bcf44de52366c5987164193c4d202a540102ebf46c90916828921849.png",
+      "mediaType": "image/png",
+      "sha256": "b490d796bcf44de52366c5987164193c4d202a540102ebf46c90916828921849",
+      "byteLength": 34512,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-be6c1721b5a34353a48c9f1140680e21c8956c16938702bbf82e0163b5cc2a6a",
+      "path": "assets/be6c1721b5a34353a48c9f1140680e21c8956c16938702bbf82e0163b5cc2a6a.png",
+      "mediaType": "image/png",
+      "sha256": "be6c1721b5a34353a48c9f1140680e21c8956c16938702bbf82e0163b5cc2a6a",
+      "byteLength": 38273,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "id": "asset-2deef443d8e5743095c9b2cc20dfc78fba0a1655aef13e596c9d4eb87dde6803",
+      "path": "assets/2deef443d8e5743095c9b2cc20dfc78fba0a1655aef13e596c9d4eb87dde6803.png",
+      "mediaType": "image/png",
+      "sha256": "2deef443d8e5743095c9b2cc20dfc78fba0a1655aef13e596c9d4eb87dde6803",
+      "byteLength": 14282,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "id": "asset-173e3586f29506104d6a132e4f694310beabcdd96c46f947bc94770055628861",
+      "path": "assets/173e3586f29506104d6a132e4f694310beabcdd96c46f947bc94770055628861.png",
+      "mediaType": "image/png",
+      "sha256": "173e3586f29506104d6a132e4f694310beabcdd96c46f947bc94770055628861",
+      "byteLength": 27654,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-11d2b6b75d0c70f75ee5d7bfe06e055da73f170c7bac4c3c25f4780e868f2fec",
+      "path": "assets/11d2b6b75d0c70f75ee5d7bfe06e055da73f170c7bac4c3c25f4780e868f2fec.png",
+      "mediaType": "image/png",
+      "sha256": "11d2b6b75d0c70f75ee5d7bfe06e055da73f170c7bac4c3c25f4780e868f2fec",
+      "byteLength": 3115,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-65b1c4bec35134db00aa3839c56113a7fe62bbbe50d8ff5fa3bafa8f2fd1fcb0",
+      "path": "assets/65b1c4bec35134db00aa3839c56113a7fe62bbbe50d8ff5fa3bafa8f2fd1fcb0.png",
+      "mediaType": "image/png",
+      "sha256": "65b1c4bec35134db00aa3839c56113a7fe62bbbe50d8ff5fa3bafa8f2fd1fcb0",
+      "byteLength": 10417,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "id": "asset-0b26b34bb4a65079ea49e205e43d0b9008e0281b22bdb0dc6993f7882b103648",
+      "path": "assets/0b26b34bb4a65079ea49e205e43d0b9008e0281b22bdb0dc6993f7882b103648.png",
+      "mediaType": "image/png",
+      "sha256": "0b26b34bb4a65079ea49e205e43d0b9008e0281b22bdb0dc6993f7882b103648",
+      "byteLength": 3717,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+        "sourceQuestionId": "m2-q11"
+      }
+    }
+  ]
+}

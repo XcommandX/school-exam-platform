@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-ddfa93d3e8944ec6a63da93952fac245-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 9 阅读语法（Easy） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-61aa62c76c66af3d24ce2fe8a4a2682bfb42fa5c39a50acb3ee777af9348d5d5",
+      "path": "assets/61aa62c76c66af3d24ce2fe8a4a2682bfb42fa5c39a50acb3ee777af9348d5d5.png",
+      "mediaType": "image/png",
+      "sha256": "61aa62c76c66af3d24ce2fe8a4a2682bfb42fa5c39a50acb3ee777af9348d5d5",
+      "byteLength": 27506,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-7621dd78310bf17e0ad63262945ea0f245b46af68a1e66e6094be00427c48cfd",
+      "path": "assets/7621dd78310bf17e0ad63262945ea0f245b46af68a1e66e6094be00427c48cfd.png",
+      "mediaType": "image/png",
+      "sha256": "7621dd78310bf17e0ad63262945ea0f245b46af68a1e66e6094be00427c48cfd",
+      "byteLength": 8926,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "id": "asset-0e8592d7377fe67afe8e10511075be247fd5ddbd1228b3d867e5f5410a08cc22",
+      "path": "assets/0e8592d7377fe67afe8e10511075be247fd5ddbd1228b3d867e5f5410a08cc22.png",
+      "mediaType": "image/png",
+      "sha256": "0e8592d7377fe67afe8e10511075be247fd5ddbd1228b3d867e5f5410a08cc22",
+      "byteLength": 68345,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-abfdf2eef891b5efc754d8585386149022b8ff9c79207f905d726e58c0dfda27",
+      "path": "assets/abfdf2eef891b5efc754d8585386149022b8ff9c79207f905d726e58c0dfda27.png",
+      "mediaType": "image/png",
+      "sha256": "abfdf2eef891b5efc754d8585386149022b8ff9c79207f905d726e58c0dfda27",
+      "byteLength": 22877,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+        "sourceQuestionId": "m1-q13"
+      }
+    }
+  ]
+}

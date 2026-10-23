@@ -1,0 +1,169 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$y$-intercept 就是$x=0$ 时的函数值，图中黑点即是3"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "6"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x=8$ 代入第二个式子得到$8+3y=26$，$y=6$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "20"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据分析应用题，initial 表示初始值即是$x=0$ 的值（$y$-intercept）读取图像即可"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "774"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "Brian 每周收入215，存其中$\\frac{2}{5}$，即为每周存$215 \\frac{2}{5}=86$\n∗\n，存9 周为$86*9=774$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "733/50",
+          "1467/100",
+          "44/3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "斜率为标准形式$x$ 的系数，整理原式关注$x$ 系数得$(\\frac{29}{3}+5)=\\frac{44}{3}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-e7804a0601d646b58639c49d0d0b88a7-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "66"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆里内切一个长方形，长方形对角线长度就是直径，且是长方形短边的2 倍，设长方形短\n边$x$，对角线$2x$，根据勾股定理得到长方形的长为 $3 x$，再根据长方形面积 1089 3\n推算出$x$ 为 $1089=33$，直径直接就是$2x=66$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+        "sourceQuestionId": "m1-q20"
+      }
+    }
+  ]
+}

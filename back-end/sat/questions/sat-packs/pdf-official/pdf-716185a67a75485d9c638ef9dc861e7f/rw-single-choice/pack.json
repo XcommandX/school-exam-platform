@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-716185a67a75485d9c638ef9dc861e7f-rw-single-choice",
+  "revision": 1,
+  "title": "2025年5月第4套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d52ecd498f99309caea27e04d3425f474d886c5c1144fd610ec8c3adc09f4620",
+      "path": "assets/d52ecd498f99309caea27e04d3425f474d886c5c1144fd610ec8c3adc09f4620.png",
+      "mediaType": "image/png",
+      "sha256": "d52ecd498f99309caea27e04d3425f474d886c5c1144fd610ec8c3adc09f4620",
+      "byteLength": 26896,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-716185a67a75485d9c638ef9dc861e7f",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "id": "asset-50e32bba55c0e491688b3c4dcfc4d85995ded8b2209de1a15f3ca486d2b6a691",
+      "path": "assets/50e32bba55c0e491688b3c4dcfc4d85995ded8b2209de1a15f3ca486d2b6a691.png",
+      "mediaType": "image/png",
+      "sha256": "50e32bba55c0e491688b3c4dcfc4d85995ded8b2209de1a15f3ca486d2b6a691",
+      "byteLength": 55301,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-716185a67a75485d9c638ef9dc861e7f",
+        "sourceQuestionId": "m2-q12"
+      }
+    }
+  ]
+}

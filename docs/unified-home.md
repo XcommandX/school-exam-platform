@@ -1,5 +1,7 @@
 # 统一学习首页
 
+> 2026-10-24 统一账号更新：首页、TOEFL 与 SAT 共用登录会话；首页设置、TOEFL 文字状态及 SAT 练习记录、错题本、练习设置按账号保存在本机 SQLite，TOEFL 录音仍在按账号隔离的浏览器空间。当前账号事实、接口、迁移边界以 [统一账号](unified-auth.md) 为准；下文未认证 admin 与待接身份的描述保留为此前阶段背景，不再是当前登录行为。
+
 ## 启动
 
 需要 Python 3.10+。从源码构建 TOEFL 匿名样例还需要 Node.js 22.13+，不需要安装第三方 Python 或 npm 包。从仓库根目录运行：
@@ -16,16 +18,16 @@ python3 back-end/server/serve_platform.py --port 8888
 node back-end/toefl/scripts/build.mjs
 ```
 
-构建结果为本机忽略提交的 `local-data/builds/toefl/`。没有 Node.js 时，现有且满足匿名构建标记与文件白名单检查的 `local-data/builds/toefl/preview/` 仍可使用；没有可用构建时，`/toefl/` 返回未就绪提示，首页和 SAT 仍可使用。Python 服务不启动托福云端 Worker，不连接真实账号、正式数据库或外部 AI。
+构建结果为本机忽略提交的 `local-data/builds/toefl/`。没有 Node.js 时，现有且满足匿名构建标记与文件白名单检查的 `local-data/builds/toefl/preview/` 仍可使用；没有可用构建时，`/toefl/` 返回未就绪提示，首页和 SAT 仍可使用。Python 服务不启动原托福云端 Worker；账号与 TOEFL 文字状态由公共 SQLite 服务提供，不连接原云站、正式题库或外部 AI。
 
 ## 页面与功能
 
 - 首页采用用户确认的模板：暖白底、TOEFL 绿色主卡、SAT 橙色主卡与 Study Space 品牌；两个考试名称使用同一字号与对齐规则，悬浮、聚焦和减少动画偏好均有对应样式。图标直接随源码提供，主页不依赖外链字体或图标脚本。
 - 删除原模板顶部的白色导航、搜索、继续上次示例和底部工具栏；“学习计划”“成绩报告”迁入右上头像菜单，仅显示功能名，不附描述。没有会员体系，不显示会员标识；页脚不显示口号。
 - TOEFL 阅读、听力、口语、写作保留独立跳转，开始练习进入 `/toefl/`；SAT 阅读与文法合并显示为“英语”，使用书本图标，数学入口也已接入，分别传入 `section=reading-writing` 与 `section=math`，开始练习进入 SAT 管理首页。
-- 右上头像显示 `admin` 本机测试身份，无需输入密码。这不是正式登录或管理员授权；`/api/auth/session` 明确返回 `authenticated: false`、`loginEnabled: false`。
+- 初始进入 `/login`，右上头像显示已验证账号的显示名。首页与 TOEFL 共用 Cookie 会话；管理员可从头像进入账号管理，所有用户可编辑自己的显示名、修改密码和退出登录。
 - 学习计划可保存每日题目目标及个人计划；今日摘要显示新平台已完成题目数与每日目标。目标设置支持新 TOEFL 四科 1–6 分、每 0.5 分一档，目标总分为四科均值取最近的 0.5 分；SAT 两科各 200–800 分、每 10 分一档。目标提示支持鼠标悬浮和键盘聚焦，可查看具体分科目标。
-- 成绩报告和练习记录读取当前浏览器的新平台记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率；SAT 的 `ungradedCount` 从正确率分母扣除，但仍计入已答题目与学习活动。
+- 成绩报告和练习记录读取当前账号的服务端记录，SAT 合并无冲突的本机待同步记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率；SAT 的 `ungradedCount` 从正确率分母扣除，但仍计入已答题目与学习活动。
 - AP 与跨考试 Personal Vocab 通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
 
 ### 文案与后续交接约定
@@ -46,7 +48,7 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front
 
 本地整合版本使用 `toefl` 分支 `98aa9c7` 的 `back-end/toefl/` 源码。原前端与云端源文件保留在模块内；统一平台只服务本地匿名构建，并在入口注入独立的 `front-end/web/toefl-bridge.js`，映射存储名称与录音库。URL 路由与账号范围内的页面恢复由模块原生实现负责，桥接层不再抢写导航。链接合同见 [TOEFL 页面入口约定](toefl/ENTRY_INTERFACE.md)，本轮合并及接口问题见 [本地整合报告](local-integration-2026-10-23.md)。
 
-匿名构建使用 `fixtures/anonymous-bank.json` 的原创样例；音频为合成测试提示音，场景图为原创 SVG。已提供四科和学习页面入口，不能将这些样例、套题页或已有评分源码描述为真实题库、完整官方模考或已上线的 AI 评分。私有托福题库、原音频、正式云端资源、登录和同步尚未接入统一服务。
+匿名构建使用 `fixtures/anonymous-bank.json` 的原创样例；音频为合成测试提示音，场景图为原创 SVG。已提供四科和学习页面入口，不能将这些样例、套题页或已有评分源码描述为真实题库、完整官方模考或已上线的 AI 评分。私有托福题库、原音频、正式云端资源和外部 AI 尚未接入统一服务；统一登录和 TOEFL 文字状态保存现由公共账号层提供。
 
 | 入口 | 目标 |
 | --- | --- |
@@ -70,15 +72,15 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front
 
 源码在 `front-end/web/`、`front-end/sat/`、`back-end/toefl/`、`back-end/shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
 
-真实题库在 `local-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `local-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
+真实题库在 `local-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `local-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅在登录后通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
 
 本次本地迁移仅保留原 SAT 题目及其标准答案、解析、格式、模块信息与必要图片。逐字段白名单去除已选答案、学生信息和任意个人元数据；不复制 HAR、PDF、OCR 模型、备份、个人练习或浏览器记录。原始目录不修改。带个人练习含义的来源名称改为中性补充题集名称，题目内容保留。
 
 此前在维护者本机完成的 SAT 迁移为 18 个题集、929 道题和 36 张必要图片：原题库目录 901 道、原型内置种子 27 道、独立示例 1 道。与题库重复的 4 道示例不再次导入。这是本机迁移记录，不是克隆仓库即包含的题库；服务启动不会重新迁移原项目。
 
-统一 SAT 使用 IndexedDB `SchoolExamPlatform:sat:v1`，考试运行状态使用 localStorage `school-exam-platform:sat:runtime:v1`；独立 SAT 页面保留旧存储名。统一 TOEFL 将原应用的历史、草稿、词汇、学习记录和界面设置映射至 `school-exam-platform:toefl:*`，录音库映射至 `SchoolExamPlatform:toefl:recordings:v1`。
+统一 SAT 使用 IndexedDB `SchoolExamPlatform:account:<id>:sat:v1`，运行状态使用 `school-exam-platform:account:<id>:sat:runtime:v1`。TOEFL 状态缓存使用 `school-exam-platform:account:<id>:toefl:<原key>`，录音库为 `SchoolExamPlatform:account:<id>:toefl:recordings:v1`。用户 ID 来自服务端会话；旧匿名空间保留，不自动迁移。
 
-首页计划与目标分别保存在 `school-exam-platform:home:plan:v1`、`school-exam-platform:home:targets:v1`。首页只读取上述新 SAT、TOEFL 空间来统计练习，不读取、复制或清理原应用的旧记录；不迁移原模板硬编码的统计数字。同一浏览器里的 `admin` 仍共享本地存储，不能当作账号隔离或云端同步。
+首页计划、目标与减少动画偏好通过 `/api/me/home` 按账号保存到服务端，并缓存于账号空间；统计读取该账号 TOEFL 服务端状态与 SAT 服务端摘要，并合并无冲突的 SAT 本机待同步记录。旧匿名及独立应用的数据保留，不自动分配给任何新账号，不迁移原模板硬编码数字。
 
 `.DS_Store` 由根目录忽略规则覆盖所有层级；生成的 `dist/`、真实题库与个人数据均不应提交。
 
@@ -101,19 +103,19 @@ python3 back-end/tools/sat/migrate_sat_bank.py --source-root "/path/to/original-
 | `GET /api/platform/catalog` | 四个考试的题库统计、来源及接入状态 |
 | `GET /api/exams/{exam}/sources` | 单个考试的独立题集目录 |
 | `GET /api/exams/{exam}/sources/{id}` | 统一格式的单套题集 |
-| `GET /api/auth/session` | `admin` 本机测试身份，明确未认证；为未来认证服务保留边界 |
+| `GET /api/auth/session` | 真实当前会话；未登录返回 `authenticated: false`，完整接口见 [统一账号](unified-auth.md) |
 | `GET /api/toefl/status` | 匿名构建可用性、样例数量与入口 |
 | `GET /api/question-bank/status` | SAT 兼容接口状态与同源写入令牌 |
 | `GET /api/question-bank` | 将统一题库转换为旧 SAT 引擎可导入格式 |
 | `GET /api/sat-packs` | 读取活动 SAT 新包及有序试卷配置 |
-| `POST /api/sat-library-backup` | 校验同源与令牌后备份本机旧库，成功后才允许浏览器归档 |
-| `POST /api/question-bank` | 校验、过滤个人字段并保存 SAT JSON |
+| `POST /api/sat-library-backup` | 校验当前账号、同源与令牌后备份自己的本机旧库，成功后才允许浏览器归档 |
+| `POST /api/question-bank` | 管理员校验、过滤个人字段并保存 SAT JSON |
 | `/sat/` | 进入旧 SAT 引擎，支持首页功能入口参数 |
 | `/toefl/` | 仅服务通过匿名标记检查的预览文件及资源白名单 |
 
-`exam` 为 `sat`、`ap`、`toefl` 或 `vocab`。公共 v1 题库格式当前仅支持选择题；TOEFL 原模块虽有媒体和开放式题型源码，其匿名应用并未使公共格式自动具备这些能力。正式账号、权限与记录接口仍待实现。
+`exam` 为 `sat`、`ap`、`toefl` 或 `vocab`。公共 v1 题库格式当前仅支持选择题；TOEFL 原模块虽有媒体和开放式题型源码，其匿名应用并未使公共格式自动具备这些能力。统一账号、角色权限与 SAT/TOEFL 文字记录接口见 [统一账号](unified-auth.md)。
 
-本机服务仅绑定 `127.0.0.1`。写入需匹配 Host、Origin 和随机令牌；这不是正式身份验证。未来公开部署需要替换认证、授权、资源和记录服务。
+本机服务仅绑定 `127.0.0.1`。写入需通过服务端会话和账号权限校验；题库兼容接口额外匹配 Host、Origin 和随机令牌。公开部署仍需 HTTPS、生产 HTTP 服务、备份及容量验收。
 
 ## 验证
 

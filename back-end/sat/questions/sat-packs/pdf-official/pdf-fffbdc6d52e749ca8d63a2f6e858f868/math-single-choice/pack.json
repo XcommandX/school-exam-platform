@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-fffbdc6d52e749ca8d63a2f6e858f868-math-single-choice",
+  "revision": 1,
+  "title": "2025年10月亚太数学去重版（仅8道） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-cb10e225dc005095970a03fc2fd47bf342a946d444a3d67aedf5786296f55219",
+      "path": "assets/cb10e225dc005095970a03fc2fd47bf342a946d444a3d67aedf5786296f55219.png",
+      "mediaType": "image/png",
+      "sha256": "cb10e225dc005095970a03fc2fd47bf342a946d444a3d67aedf5786296f55219",
+      "byteLength": 21114,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-c0a7825676596df3a405d9ccfaa338b36dfba6b594485f40a2f25a2047259274",
+      "path": "assets/c0a7825676596df3a405d9ccfaa338b36dfba6b594485f40a2f25a2047259274.png",
+      "mediaType": "image/png",
+      "sha256": "c0a7825676596df3a405d9ccfaa338b36dfba6b594485f40a2f25a2047259274",
+      "byteLength": 36948,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "id": "asset-0863329fa75fe79c5bc897bcb8f51749ed9c0d75308925e52163292cd5249402",
+      "path": "assets/0863329fa75fe79c5bc897bcb8f51749ed9c0d75308925e52163292cd5249402.png",
+      "mediaType": "image/png",
+      "sha256": "0863329fa75fe79c5bc897bcb8f51749ed9c0d75308925e52163292cd5249402",
+      "byteLength": 27383,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+        "sourceQuestionId": "m1-q8"
+      }
+    }
+  ]
+}

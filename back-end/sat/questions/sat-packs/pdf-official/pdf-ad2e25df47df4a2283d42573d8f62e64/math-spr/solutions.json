@@ -1,0 +1,176 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$50x=150$，$x=3$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "31 个数据的中位数为第16 个数值，根据表格可得第16 个数值在$25-34$ 之间"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "11"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "线$s$ 斜率为$-4$，与之垂直的线$t$ 斜率为$\\frac{1}{4}$，故两点（6，0）（$k$，$\\frac{5}{4}$）连线斜率为$\\frac{1}{4}$，\n$\\frac{5}{4}/k-6=\\frac{1}{4}$，解得$k=11$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "144/125"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$48\\mathrm{cm}=0.48m$ 根据题意，不加盖子does not have a lid，不算盖子的正方体有5 个表面， 5\n∗\n$$0.48 2=1.152$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "27/4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "solutions 方程解（三个解）为$\\frac{-9}{4}$，$\\pm 4k+9$，相乘得$\\frac{-9}{4}(-(4k+9))=36k+\\frac{81}{4}=81$ ,解此方程\n得$k=6.75$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-ad2e25df47df4a2283d42573d8f62e64-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "195"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$kx2-112x+16=0$,两个根意味着$b2-4ac\\gt 0$ ，解得$x\\lt 196$，取最大整数195"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

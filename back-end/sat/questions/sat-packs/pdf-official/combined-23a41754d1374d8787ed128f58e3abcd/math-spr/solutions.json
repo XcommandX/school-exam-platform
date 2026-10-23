@@ -1,0 +1,331 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "520"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直接代入$x=4$ 计算结果即可"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "25"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次方程组无解，意味着$b2-4ac\\lt 0$，$x2+10x+a=0.5$ 整理得$x2+10x+a-0.5=0$ 代入$b2-4ac\\lt 0$\n得到$a\\gt 24.5$，取最小的整数为25"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$( 6 x 2 ) ( 3 x 7 )=18 x 9$ ，所以$b=18$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-5/9",
+          "-111/200",
+          "-1111/2000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$y=0$ 代入得到$a=\\frac{-5}{9}$，将$x=0$ 代入得$b=\\frac{5}{9}$，问的是a 的值为$\\frac{-5}{9}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "2209"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "圆的面积比是半径的平方，两个圆半径比为47，所以面积比为47 的平方为2209"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "391"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数过点（23, 0）代入$x=23$，$g(23)=0$ 得到$0=40*(t-23)$，所以$t=23$，再代入$x=0$ 计算\n$$g(0)=(0+17)(23-0)=391$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "24"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$-coordinate 即当$y=0$ 时$x$ 的值，代入得 $0=\\frac{3}{4} x - 18$，解得$x=24$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "3/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数应用问题，$x=2$ 和$x=6$ 读取坐标为（2, 2）和（6, 8），计算斜率即为average rate\nof change=（$8-6$）/（$6-2$）=1.5"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "18"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，九件衣服减价54 后花了108，设每件shirt 价值$x$，$9x-54=108$，解得$x=18$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "15"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意$94\\%h=47\\%j$，即$2h=j$，同时$j=30\\%k$ 即$0.3k=j$，可得$2h=0.3k$ 即$0.15k=h$ 或\n$15\\%k=h$，故答案为15"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "39"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形内角和$180^{\\circ}$，故（$3x+5$）+（$2x+9$）+（$4y+5$）=180，同时角$PRS$ 是角$R$ 的补角，\n即（$4y+5$）+（$x+y$）=180，方程组整理得$5x+4y=161$ 和$x+5y=175$，解得$x=5$，$y=34$，答\n案为39"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bce147a157cf469f96853e8c2d44e147-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1200"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二次函数，给出了顶点和另外一个点，利用二次函数顶点式并代入计算，顶点式为 $f$\n$( x )=a ( x - 10 ) 2+1600$，再代入（0, 0）得到a， $0=a ( - 10 ) 2$ +\n1600，得到$a=-16$，函数为 $f ( x )=- 16 ( x - 10 ) 2+1600$，最后再代入$x=15$\n得到$f(15)=1200$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bce147a157cf469f96853e8c2d44e147",
+        "sourceQuestionId": "m2-q20"
+      }
+    }
+  ]
+}

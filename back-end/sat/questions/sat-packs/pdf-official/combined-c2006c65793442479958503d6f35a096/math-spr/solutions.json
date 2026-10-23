@@ -1,0 +1,363 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "34"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的百分比。总数量乘以百分比等于对应的数量，即：$170*20\\%=34$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "27"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的全等三角形：两个全等的三角形，对应的角大小相等，对应的边长度相等。角$B$ 是\n直角，那角$A$+角$C$ 就是90 度；已知角A 是63 度，那么角$C$ 就是$90-63=27$ 度。三角形\n$ABC$ 和三角形$DEF$ 全等，角$F$ 和角$C$ 是对应的角，那角$F$ 等于角$C$，也就是27 度。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "5500"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的单位换算，1 meter=10 decimeters, 那么550 meters= $50 * 10$ decimeters= 5500\ndecimeters。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "12"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查多项式函数。因为$y=p(x)$通过（0,12）这个点，所以$p$（0）=12。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-15125"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查线性函数，$-11a+0=-605$, $0+2.2b=-605$，求解两式可以分别得到$a=55$，$b=-275$。那么\n$ab=55$*（$-275$）=$-15125$ 。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "5/3",
+          "833/500",
+          "1667/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查二元一次方程组的求解。利用消元法消掉$x$ 求解$y$ 即可。$x+21y=38---\\gt 4x+84y=152$，\n将该式与$4x+3y=17$ 相减，得到$81y=135$，故$y=\\frac{5}{3}$ 或1.666 或1.667"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "7/3",
+          "2333/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查绝对值方程（转换为二次方程）的求解。等号两边都有4，减去它得到$|x+4|=|2x-11|$，\n两边平方得到$x2+8x+16=4x2-44x+121$，整理得到$3x2-52x+105=0$，因式分解为（$x-15$）\n（$3x-7$）=0，得到方程的两个解分别是15 和$\\frac{7}{3}$，故最小的解应该时候$\\frac{7}{3}$ 或2.333。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "5"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查指数函数的性质，把函数式代入等式，得到 $c 6=25 c 4$\n∗\n，求解得到\n$C=5$ 。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "1/6",
+          "83/500",
+          "167/1000"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一次方程的求解。$18x+31=34$，求解得到$x=\\frac{1}{6}$ 或0.166 或0.167。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "725"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查一次方程的求解，根据题意判断，该题已知$h=845.33$，求$v$。代入式子计算得到得到\n$v=725$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "42"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查两根直线slope 的求解，以及两根直线的垂直。Line $r$ 的斜率是（$13-12$）/（$7-3$）\n=$\\frac{1}{4}$；line $s$ 的斜率是$-a/7$；因为两根直线垂直，所以（$\\frac{1}{4}$）*（$-a/7$）=$-1$，计算得出\n\n$a=28$。那line $s$ 的表达式就是$28x+7y=c$。因为line $s$ 穿过（1,2），所以可以把该点的坐标\n代入line $s$ 的表达式，也就是$28*1+7*2=C$，计算可得$C=42$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "61/65",
+          "1877/2000",
+          "469/500"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的条件概率。先看given that 后面给到的限定条件，not classified as a motor neuron，所\n以待选的总数就是$12+7+4+10+32+0=65$。我们需要计算的概率是less than or equal to 30，\n也就是$12+7+10+32=61$。所以概率就是$\\frac{61}{65}$ 或0.9385。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-69f83993653749e2b6a4941ab7d00b50-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "195/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查圆的相关知识点。因为$\\angle ABC=90^{\\circ}$，所以$AC$ 是直径，即$AD+CD=197$。三角形$CDB$\n相似于三角形$BDA$，所以对应的边成比例，即$CD/BD=BD/AD$，整理以下就是\n$AD*CD=BD2=390$。因为$AB$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

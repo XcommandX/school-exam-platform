@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f4f0"><title>账号 · Study Space</title><link rel="stylesheet" href="/web/styles.css"><link rel="stylesheet" href="/web/account.css"><script src="/web/platform-auth.js" defer></script><script src="/web/account.js" defer></script></head>
+<body class="accounts-page">
+<a class="skip-link" href="#account-content">跳转到内容</a>
+<header class="site-header"><a class="brand" href="/" aria-label="Study Space 首页"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M6 7.5h7.5L16 10l2.5-2.5H26v17h-7.5L16 27l-2.5-2.5H6zM16 10v17" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span class="brand-type">Study Space</span></a><a class="button back-home" href="/">← 返回首页</a></header>
+<main id="account-content" class="account-shell">
+  <div class="account-page-heading"><h1 id="page-title">个人中心</h1><button class="button" type="button" id="logout">退出登录</button></div>
+  <section class="identity-card" aria-labelledby="identity-name"><div class="identity-avatar" id="identity-avatar" aria-hidden="true"></div><div class="identity-copy"><h2 id="identity-name"></h2><span id="identity-username"></span><span id="identity-role" class="role-pill"></span></div><div class="identity-actions"><button class="button" type="button" id="edit-profile">编辑资料</button><button class="button" type="button" id="change-password">修改密码</button></div></section>
+  <section class="users-section" id="users-section" hidden aria-labelledby="users-title">
+    <div class="users-heading"><div><h2 id="users-title">全部账号 <span id="user-count" class="count-badge">—</span></h2></div><button class="button primary" id="create-user" type="button"><span aria-hidden="true">＋</span>创建账号</button></div>
+    <div class="users-panel"><div class="users-filters"><label class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="user-search" placeholder="搜索账号或显示名称" aria-label="搜索账号或显示名称" autocomplete="off"></label><select id="role-filter" aria-label="筛选角色"><option value="">全部角色</option><option value="admin">管理员</option><option value="student">学生</option></select><select id="status-filter" aria-label="筛选状态"><option value="">全部状态</option><option value="active">已启用</option><option value="inactive">已停用</option></select><button class="button" id="reload-users" type="button" aria-label="刷新账号列表">刷新</button></div>
+    <p class="account-message" id="users-status" role="status" aria-live="polite">正在读取账号…</p>
+    <div class="users-table-wrap"><table class="users-table"><thead><tr><th scope="col">账号</th><th scope="col">角色</th><th scope="col">状态</th><th scope="col" class="action-column">操作</th></tr></thead><tbody id="user-list"></tbody></table></div></div>
+  </section>
+</main>
+<dialog class="home-dialog" id="account-dialog" aria-labelledby="account-dialog-title"><div class="dialog-heading"><h2 id="account-dialog-title"></h2><button type="button" class="icon-button" data-close aria-label="关闭">×</button></div><div id="account-dialog-content"></div></dialog>
+<dialog class="home-dialog confirm-dialog" id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-heading"><h2 id="confirm-title"></h2></div><p id="confirm-message"></p><div class="dialog-actions"><button class="button" type="button" id="confirm-cancel">取消</button><button class="button primary" type="button" id="confirm-ok">确认</button></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body></html>

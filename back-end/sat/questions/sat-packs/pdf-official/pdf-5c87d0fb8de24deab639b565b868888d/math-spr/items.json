@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-f51d738408f4a3e055806918f27f2bcc716210476fa73780a9aba245c17d0459",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "In the figure shown, line $c$ intersects parallel lines $s$ and $t$. What is the value of $x$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each value in the data set shown represents the height, in centimeters, of a plant.\n6,10,13,2,15,22,10,4,4,4\nWhat is the mean height, in centimeters, of these plants？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An event planner is planning a party. It costs the event planner a onetime fee of \\$35 to rent the\nvenue and \\$10.25 per attendee. The event planner has a budget of \\$300. What is the greatest\nnumber of attendees possible without exceeding the budget？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$z2+10z-24=0$$\nWhat is one of the solutions to the given equation？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The perimeter of an equilateral triangle is 624 centimeters. The height of this triangle is $k3$\ncentimeters, where $k$ is a constant. What is the value of $k$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "id": "sat:item:pdf-5c87d0fb8de24deab639b565b868888d-m1-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The expression $90y5-54y4$ is equivalent to $ry4(15y-9)$ , where $r$ is a constant. What is the\nvalue of $r$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-5c87d0fb8de24deab639b565b868888d",
+        "sourceQuestionId": "m1-q21"
+      }
+    }
+  ]
+}

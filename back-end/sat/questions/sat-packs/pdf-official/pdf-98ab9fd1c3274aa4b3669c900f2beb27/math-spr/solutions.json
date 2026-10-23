@@ -1,0 +1,59 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-98ab9fd1c3274aa4b3669c900f2beb27-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "2401"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查的相似图形。相似图形的边长之比是$\\frac{25}{49}$，面积之比就是 $25 \\frac{2}{49} 2$\n，也就是$\\frac{625}{2401}$。故$r=2401$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-98ab9fd1c3274aa4b3669c900f2beb27-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "-35"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查两条直线的交点问题。因为方程有无数解，所以等号左右两边的表达式相同，故\n$7+c/5=0$，求解得$c=-35$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+        "sourceQuestionId": "m2-q4"
+      }
+    }
+  ]
+}

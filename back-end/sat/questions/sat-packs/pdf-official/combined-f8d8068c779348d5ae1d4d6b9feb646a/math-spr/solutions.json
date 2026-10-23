@@ -1,0 +1,194 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "4"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "把 $(x+8)$ 看作公因子直接合并：$3(x+8)-2(x+8)=(3-2)(x+8)=x+8$。原方程化为 $x+8=12$，解\n得 $x=4$。也可以先展开 $3x+24-2x-16=x+8=12$，结果一致。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "33"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似三角形对应角相等，对应关系为 A$\\leftrightarrow D$、$B\\leftrightarrow E$、$C\\leftrightarrow F$，故 $\\angle E=B=33$\n$$\\angle$$\n$\\circ$。条\n件 $AB/4=DE$ 只说明边长按比例缩放，不改变角度，切勿用 $33\\div 4$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "13"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程有无穷多解，意味着左右两边展开后对应系数完全相同（恒等式）。展开右边\n$ax+27$a。对比一次项系数：$a=13$。再核对常数项：$27a=27\\times 13=351$，与左边常数项一致。\n所以 $a=13$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "355"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$\\angle$与 $\\angle 6$ 互为邻补角：$\\angle 2=180-122=58$。左三角形第三个内角 =$180-69-58=53$，故\n$$2$$\n\n$\\angle 1=180-53=127$。右三角形以 58 和 66 为两底角，$\\angle 3=180-58-66=56$；$\\angle 4$ 与 $\\angle 7$ 互补：\n$\\angle 4=180-66=114$。求和 $127+58+56+114=355$，grid-in 填 355。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "9"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "若 $x+b$ 是因式，则 $x=-b$ 是多项式的根。先提取公因式：\n$2x3+42x2+216x=2x(x2+21x+108)$。再分解二次式，找两数乘积为 108、和为 21：\n$9\\times 12=108$，$9+12=21$，所以 $x2+21x+108=(x+9)(x+12)$。于是正系数 $b$ 可取 9 或 12，最小为\n9。grid-in 填 9。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "265"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "展开左边：$8x-2.4+x=9x-2.4$。方程化为 $9x-2.4=0.25+0.3x$，移项得 $8.7x=2.65$，所\n以 $x=\\frac{2.65}{8.7}=\\frac{265}{870}$。因此 $870x=265$。grid-in 直接填 265。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-aa5bffac741243aab2bf4b9ddbe1b44b-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "student-produced-response",
+        "comparison": "exact-rational-or-listed-decimal",
+        "acceptedRationals": [
+          "27/2"
+        ],
+        "acceptedDecimalSpellings": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "角 $B$ 为直角，故 $AC$ 为斜边，$BC$ 是角 A 的对边。由 $\\sin 2A+\\cos 2A=1$，\n得 $\\sin 2A=1-\\frac{77}{81}=\\frac{4}{81}$。A 为锐角，sinA=$\\frac{2}{9}$。又 sinA=对边/斜边=$BC/AC=3/AC$，所\n以 $3/AC=\\frac{2}{9}$，$AC=\\frac{27}{2}=13.5$。grid-in 填 13.5（也可写 $\\frac{27}{2}$）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

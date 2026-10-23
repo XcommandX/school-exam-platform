@@ -1,0 +1,465 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x=2(5)-5=5$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设长方形另一条边的长度为$x$，由勾股定理， $x 2+4 2=( 65 ) 2$ ，\n解出$x=7$。所以长方形周长为$2(7+4)=22$，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "长方形的长是宽的60 倍，所以长=60*宽。$60w$ 表示长方形的长。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为灰松鼠至少是红松鼠的4 倍，所以$g\\ge 4r$。松鼠总数至少是141，所以$g+r\\ge 141$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "选项A 的数据分布从$p-4$ 到$p+4$，数据更集中于$p$。选项$B$ 的数据分布从$p-1$ 到$p+1$。选项\n$C$ 数据集中在$C$。选项$D$ 数据分布从$p-5$ 到$p+5$，且没有集中于某一个数据。所以选项$D$\n的数据最分散，标准差最大。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似的三角形对应的角相等，因为角$C$ 对应角$Z$，所以角$Z$ 为52 度。边$YZ$ 对应于边\n$BC$，且$BC$ 的长度是$n$ 乘以$YZ$ 的长度，所以$BC=71n$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$x$ 每增加1，$y$ 减少3，所以斜率为$\\frac{-3}{1}=-3$。因为当$x=0$ 时，$y=2$,所以$y-2=-3(x-0)$，化\n简得$y=-3x+2$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "棱柱的体积为底面积乘以高，所以底面积$*16=144$，解出底面积为9.因为地面为正方形，\n所以底面边长为3，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 $u=x-22$，则 $u=u2$。即 $u2-u=0$，分解因式得$u(u-1)=0$，因此$u=0$ 或$u=1$，即 $x-22=0$ 或 $x$\n$-22=1$。因此$x-22=0$ 或$x-22=1$，解出$x=22$ 或23。解的和为45。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由题可知，这个数为$\\frac{-3}{16}$ 的倒数，即$\\frac{-16}{3}$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "选择香草口味的顾客总数为$30+10=40$，其中选择有糖粒的冰淇淋的人数为30，所以概率\n为$\\frac{30}{40}=0.75$.选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(z-5)=6(z-5)=6z-30$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "化简等式得$(6-6k)x+9-9k=0$。当$6-6k=0$ 时，等式有无穷多解或无解，因此当$k=1$ 时，等式\n不满足只有一个解。即等式只有一个解意味着$k$ 不等于1。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当数据集中于较大的数据时，平均值较大。选项$B$ 的数据集中于4 和5，所以平均值最大"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形两边长度之差小于第三边，所以$FG\\gt 10-8$。因此$FG$ 不能等于2，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时减去 $1/R2$ 得到 $1/R1=\\frac{1}{41}-1/R2=R2-41/41R2$。将等式两边取倒数得到 $R1=4$\n$1R2/R2-41$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图中可以看出，在$x=0$ 出的点为$(0, 11)$，$y$ 值较大，所以会将函数图像向上提，所以移走\n该点会减小函数在$x=0$ 时的值，即$c$ 小于6.32. $II$ 正确。\na 的值决定了图像的弯曲程度。点$(0, 11)$靠近数据的中心。当中心的点比较高时，图像会\n因为要匹配中心的高度而变得更平缓。当移走$(0, 11)$后，曲线会更贴近$x=-2$, $-1$, 1, 2 附近的\n点，所以会更弯曲，即a 的值会更大。I 正确。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为顶点为$(1, 9)$，可设函数方程为 $y=a(x-1)2+9$。带入点$(2, 30)$得到 $30=a(2-1)2+9$，解出\n$a=21$。因此函数为 $y=21(x-1)2+9$。计算$f(-2)=198$，和$f(0)=30$。因此$f(-2)-f(0)=168$，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线的斜率为 $18-15/-2s-(-s)=3/-s$。因此直线方程为 $y-18=-3/s(x-(-2s))$，化简得 $y=-3$/\n$sx+12$。等式两边同时乘以$s$ 得到$sy=-3x+12s$，即$3x+sy=12s$。选$B$。此题可用三个点中的\n任意两个点。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb67b9ec4d634df59ab5855ac17fb387-m2-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为直线$k$ 与圆相切，因此直线$k$ 垂直于经过点$(-8, -5)$半径，即直线$k$ 垂直于经过$(-3, -4)$\n和$(-8, -5)$两点的直线。经过$(-3, -4)$和$(-8, -5)$直线的斜率为 $-5-(-4)/-8-(-3)=\\frac{1}{5}$。\n因为互相垂直的两条直线斜率乘积为$-1$，所以直线$k$ 的斜率为$-5$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+        "sourceQuestionId": "m2-q14"
+      }
+    }
+  ]
+}

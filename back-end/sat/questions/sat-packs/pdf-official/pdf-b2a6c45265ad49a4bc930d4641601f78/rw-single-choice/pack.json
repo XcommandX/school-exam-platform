@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-b2a6c45265ad49a4bc930d4641601f78-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 10 阅读语法（Easy） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-9dfe0c1e9988e915aef2ab8ed8d3de0ca83d2d32dfddaf99b4be81e936e2d5f6",
+      "path": "assets/9dfe0c1e9988e915aef2ab8ed8d3de0ca83d2d32dfddaf99b4be81e936e2d5f6.png",
+      "mediaType": "image/png",
+      "sha256": "9dfe0c1e9988e915aef2ab8ed8d3de0ca83d2d32dfddaf99b4be81e936e2d5f6",
+      "byteLength": 27198,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-b2a6c45265ad49a4bc930d4641601f78",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "asset-0afabeaad8739475e01ee1c9d9e8b76d5a332e0a77aa0e941a712e3272d75a50",
+      "path": "assets/0afabeaad8739475e01ee1c9d9e8b76d5a332e0a77aa0e941a712e3272d75a50.png",
+      "mediaType": "image/png",
+      "sha256": "0afabeaad8739475e01ee1c9d9e8b76d5a332e0a77aa0e941a712e3272d75a50",
+      "byteLength": 93230,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-b2a6c45265ad49a4bc930d4641601f78",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-344d652dfec352b3016eee9550b060e36eb621260a19b715824e65390c240a0f",
+      "path": "assets/344d652dfec352b3016eee9550b060e36eb621260a19b715824e65390c240a0f.png",
+      "mediaType": "image/png",
+      "sha256": "344d652dfec352b3016eee9550b060e36eb621260a19b715824e65390c240a0f",
+      "byteLength": 19608,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-b2a6c45265ad49a4bc930d4641601f78",
+        "sourceQuestionId": "m1-q12"
+      }
+    }
+  ]
+}

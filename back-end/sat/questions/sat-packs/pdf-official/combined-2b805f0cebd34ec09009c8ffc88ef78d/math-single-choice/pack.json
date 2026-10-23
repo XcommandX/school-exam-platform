@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-ef9b5ef2a1d74b5582c7e2d457f1c890-math-single-choice",
+  "revision": 1,
+  "title": "2024年10月第2套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-b7e0186afba9bc1e1cd5dfc8e2b38921cc147351e82eb48c37a06f9e9ef247aa",
+      "path": "assets/b7e0186afba9bc1e1cd5dfc8e2b38921cc147351e82eb48c37a06f9e9ef247aa.png",
+      "mediaType": "image/png",
+      "sha256": "b7e0186afba9bc1e1cd5dfc8e2b38921cc147351e82eb48c37a06f9e9ef247aa",
+      "byteLength": 25351,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-ef9b5ef2a1d74b5582c7e2d457f1c890",
+        "sourceQuestionId": "m1-q8"
+      }
+    }
+  ]
+}

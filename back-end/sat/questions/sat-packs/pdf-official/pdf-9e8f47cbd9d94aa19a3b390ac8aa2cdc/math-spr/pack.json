@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-9e8f47cbd9d94aa19a3b390ac8aa2cdc-math-spr",
+  "revision": 1,
+  "title": "Bluebook Practice 5 数学（Routing+Hard） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-7ee9fa74602b98e43903be2e81337d46f857ef211881e4a3c71d785d1626f49b",
+      "path": "assets/7ee9fa74602b98e43903be2e81337d46f857ef211881e4a3c71d785d1626f49b.png",
+      "mediaType": "image/png",
+      "sha256": "7ee9fa74602b98e43903be2e81337d46f857ef211881e4a3c71d785d1626f49b",
+      "byteLength": 29397,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9e8f47cbd9d94aa19a3b390ac8aa2cdc",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "id": "asset-5684783acbdcef740cf0dcb68258539569e4bc92112df58340c5872808a4d809",
+      "path": "assets/5684783acbdcef740cf0dcb68258539569e4bc92112df58340c5872808a4d809.png",
+      "mediaType": "image/png",
+      "sha256": "5684783acbdcef740cf0dcb68258539569e4bc92112df58340c5872808a4d809",
+      "byteLength": 15148,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-9e8f47cbd9d94aa19a3b390ac8aa2cdc",
+        "sourceQuestionId": "m2-q18"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

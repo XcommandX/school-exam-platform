@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-7a526cc861424c46ac55d6032fe95322-math-spr",
+  "revision": 1,
+  "title": "2026年5月第2套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1eaed42def6bacf5a09011fbb4cdb70b77f8b04880d449766ae6dd2f892b715e",
+      "path": "assets/1eaed42def6bacf5a09011fbb4cdb70b77f8b04880d449766ae6dd2f892b715e.png",
+      "mediaType": "image/png",
+      "sha256": "1eaed42def6bacf5a09011fbb4cdb70b77f8b04880d449766ae6dd2f892b715e",
+      "byteLength": 5296,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-7a526cc861424c46ac55d6032fe95322",
+        "sourceQuestionId": "m2-q14"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

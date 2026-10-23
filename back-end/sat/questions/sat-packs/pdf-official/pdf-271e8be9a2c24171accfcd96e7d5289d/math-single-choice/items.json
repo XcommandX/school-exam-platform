@@ -1,0 +1,1007 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $7 x=28$, what is the value of $8x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$21$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$32$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$168$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$224$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Isabel grows potatoes in her garden. This year, she harvested 760 potatoes and saved $10\\%$ of\nthem to plant next year. How many of the harvested potatoes did Isabel save to plant next year?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$66$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$76$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$84$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$86$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-9a259e89581119055d88a01151b26dd62c8252689095c812cd66c67c5493950c",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The point with coordinates $(d, 4)$ lies on the line shown. What is the value of $d$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{7}{2}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{26}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{24}{7}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{27}{8}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $5 x 2 - 50 x y 2$ ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5 x ( x - 10 y 2 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5 x ( x - 50 y 2 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5 x 2 ( 10 x y 2 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5 x 2 ( 50 x y 2 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=5 x 2$ . What is the value of $f ( 8 )$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$40$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$50$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$80$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$320$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-3cff8c2708ea1ecfd71d318f7641e0a22aa91a87ac866a786a20ba1ae2af2cb2",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn the figure shown, line $m$ is parallel to line $n$. What is the value of $x$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$26$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$52$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$154$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each face of a fair 14-sided die is labeled with a number from 1 through 14, with a different\nnumber appearing on each face. If the die is rolled one time, what is the probability of rolling a 2?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{14}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{2}{14}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{12}{14}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{13}{14}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit is also\nshown."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-b4e4f653896882554322848270d9770b8abe863b70fe274200217eaade164931",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following equations best represents the line of best fit shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=2.8+1.7x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=2.8-1.7x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-2.8+1.7x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=-2.8-1.7x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-02adc4cc7a1af28c38f858f2ef6c8d9cf6209f7181f53425c364e9ffdb948c19",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The dot plot represents the 15 values in data set $A$. Data set $B$ is created by adding 56 to each of\nthe values in data set $A$. Which of the following correctly compares the medians and the ranges of\ndata sets $A$ and $B$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set $B$ is equal to the median of data set $A$, and the range of data set $B$ is\nequal to the range of data set $A$."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set $B$ is equal to the median of data set $A$, and the range of data set $B$ is\ngreater than the range of data set $A$."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set $B$ is greater than the median of data set $A$, and the range of data set $B$ is\nequal to the range of data set $A$."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set $B$ is greater than the median of data set $A$, and the range of data set $B$ is\ngreater than the range of data set $A$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Last week, an interior designer earned a total of \\$1,258 from consulting for $x$ hours and drawing\nup plans for $y$ hours. The equation $68 x+85 y=1$ , 258 represents this situation. Which of\nthe following is the best interpretation of 68 in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The interior designer earned \\$68 per hour consulting last week."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The interior designer worked 68 hours drawing up plans last week."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The interior designer earned \\$68 per hour drawing up plans last week."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The interior designer worked 68 hours consulting last week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q16",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x=8$$\n$$y=x2+8$$\nThe graphs of the equations in the given system of equations intersect at the point $(x, y)$ in the $xy$-\nplane. What is the value of $y$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q16"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$24$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$64$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$72$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b2a419f576e4027a467d86ab3b55520f58358403e35158206bb9e40dd7831a19",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of $y=f(x)$ is shown in the $xy$-plane. What is the value of $f(0)$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$-3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{3}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=8 x$ . For what value of $x$ does $f ( x )=48$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$64$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q19",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Line $t$ in the $xy$-plane has a slope of $- \\frac{1}{3}$ and passes through the point $(9, 10)$. Which equation\ndefines line $t$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q19"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=13 x - \\frac{1}{3}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=9 x+10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- x/3+10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=- x/3+13$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A company that provides whale-watching tours takes groups of 21 people at a time. The\ncompany'$s$ revenue is 80 dollars per adult and 60 dollars per child. If the company'$s$ revenue for\none group consisting of adults and children was 1,440 dollars, how many people in the group\nwere children?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$12$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$18$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$5x2+10x+16=0$$\nHow many distinct real solutions does the given equation have?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly one"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly two"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Infinitely many"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Zero"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-271e8be9a2c24171accfcd96e7d5289d-m1-q22",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $x 2+( y - 2 ) 2=36$ represents circle $A$. Circle $B$ is obtained by\nshifting circle $A$ down 4 units in the $xy$-plane. Which of the following equations represents circle\n$B$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+        "sourceQuestionId": "m1-q22"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x 2+( y+2 ) 2=36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x 2+( y - 6 ) 2=36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x - 4 ) 2+( y - 2 ) 2=36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$( x+4 ) 2+( y - 2 ) 2=36$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

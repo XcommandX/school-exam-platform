@@ -1,39 +1,73 @@
 'use strict';
-// Platform-only adapter. The imported TOEFL source and its cloud client stay untouched.
-(() => {
-  if (!location.pathname.startsWith('/toefl/')) return;
-  const namespace = 'school-exam-platform:toefl:';
-  const names = new Map([
-    ['four.history.v1', namespace + 'history:v1'],
-    ['four.drafts.v2', namespace + 'drafts:v2'],
-    ['four.draft.v1', namespace + 'draft:v1'],
-    ['four.words.v1', namespace + 'words:v1'],
-    ['four.learning.v1', namespace + 'learning:v1'],
-    ['t1lab.history.v1', namespace + 'legacy-history:v1'],
-    ['practice.ui.v1', namespace + 'ui:v1'],
-  ]);
-  let local;
-  try { local = window.localStorage; } catch (_) { /* Private browsing may disable storage. */ }
-  for (const method of ['getItem', 'setItem', 'removeItem']) {
-    const nativeMethod = Storage.prototype[method];
-    Storage.prototype[method] = function (key, ...args) {
-      if (this === local) key = names.get(String(key)) || key;
-      return Reflect.apply(nativeMethod, this, [key, ...args]);
-    };
-  }
-  if (window.indexedDB) {
-    const factory = window.indexedDB;
-    const nativeOpen = factory.open;
-    factory.open = function (name, ...args) {
-      return Reflect.apply(nativeOpen, this, [name === 'toefl-recordings-v1'
-        ? 'SchoolExamPlatform:toefl:recordings:v1' : name, ...args]);
-    };
-  }
+// This module is the platform-only TOEFL entry point. The anonymous preview
+// keeps its original scripts and never loads this authenticated adapter.
+const auth = window.PlatformAuth;
+const user = auth?.user || window.PlatformSession?.user;
+const namespace = user?.id ? 'school-exam-platform:account:' + user.id + ':toefl:' : null;
+const keys = ['four.history.v1', 'four.drafts.v2', 'four.draft.v1', 'four.words.v1',
+  'four.learning.v1', 't1lab.history.v1', 'practice.ui.v1'];
 
-  // The TOEFL module owns URL entry mapping and account-scoped route recovery.
-  // Do not seed history here: it would override its published entry interface.
+function lock() {
+  if (auth?.invalidate) auth.invalidate('expired');
+  else location.replace('/login?next=' + encodeURIComponent(location.pathname + location.search));
+}
+
+async function initialize() {
+  if (!location.pathname.startsWith('/toefl/') || !user?.id || !namespace) {
+    lock();
+    return;
+  }
+  const recordingDatabase = 'SchoolExamPlatform:account:' + user.id + ':toefl:recordings:v1';
   window.TOEFLPlatformBridge = Object.freeze({
-    storageKeys: Object.freeze(Object.fromEntries(names)),
-    recordingDatabase: 'SchoolExamPlatform:toefl:recordings:v1',
+    userId: user.id,
+    storageKeys: Object.freeze(Object.fromEntries(keys.map(key => [key, namespace + key]))),
+    recordingDatabase,
   });
-})();
+  window.TOEFLCloudConfig = Object.freeze({
+    apiPath(path) {
+      if (path === '/api/me') return '/api/me';
+      if (!path.startsWith('/api/')) throw new Error('无效的同步地址。');
+      return '/api/toefl/' + path.slice('/api/'.length);
+    },
+    headers: () => ({ 'X-Account-ID': user.id }),
+    storageKey: (id, key) => {
+      if (id !== user.id) throw new Error('账号已变更，请重新登录。');
+      return namespace + key;
+    },
+    validateUser(me) {
+      if (!me?.id || me.id !== user.id) {
+        lock();
+        throw new Error('账号已变更，请重新登录。');
+      }
+    },
+    preserveLegacyStorage: true,
+    recordingsReady: false,
+    recordingDatabase,
+    accountsUrl: '/account',
+    lockChannel: 'school-exam-platform:toefl:lock',
+    syncChannel: 'school-exam-platform:toefl:sync',
+    lock,
+    logout: () => auth.logout(),
+  });
+  const { initializeCloud } = await import('/web/toefl-cloud.js');
+  await initializeCloud();
+  if (auth && !auth.active) return;
+  // No practice code runs until the server has verified the account and
+  // restored only that account's learning state.
+  for (const file of ['four-data.js', 'four-logic.js', 'four-learning.js', 'four-app.js']) {
+    await import('/toefl/' + file);
+  }
+}
+
+initialize().catch(error => {
+  if (auth && !auth.active) return;
+  const app = document.getElementById('app');
+  if (!app) return;
+  const message = document.createElement('p');
+  message.textContent = error?.status === 401 ? '请重新登录。' : '学习记录暂时无法加载，请检查连接后重试。';
+  const retry = document.createElement('button');
+  retry.type = 'button';
+  retry.textContent = '重新加载';
+  retry.addEventListener('click', () => location.reload());
+  app.replaceChildren(message, retry);
+});

@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-150a814b931345c1bb68972d94c53129-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-7a64a8e7c931c4cc1f2778c5efb780e737974d1dd7f1e89e1420fdd19b843a8b",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of the exponential function $f$ is shown, where $y=f(x)$. The $y$-intercept of the graph\nis $(0,y)$. What is the value of $y$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "id": "sat:item:pdf-150a814b931345c1bb68972d94c53129-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Out of 300 seeds that were planted, $80 \\%$ sprouted. How many of these seeds sprouted？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "id": "sat:item:pdf-150a814b931345c1bb68972d94c53129-m1-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $g$ is defined by $g ( x )=6 x$. For what value of $x$ is $g ( x )=54$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "sat:item:pdf-150a814b931345c1bb68972d94c53129-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the area, in square centimeters, of a rectangle with a length of 34 centimeters （$\\mathrm{cm}$） and\na width of $29 \\mathrm{cm}$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "id": "sat:item:pdf-150a814b931345c1bb68972d94c53129-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$h(x)=x+b$$\nFor the linear function $h$,$b$ is a constant and $h(0)=45$. What is the value of $b$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-150a814b931345c1bb68972d94c53129",
+        "sourceQuestionId": "m1-q14"
+      }
+    }
+  ]
+}

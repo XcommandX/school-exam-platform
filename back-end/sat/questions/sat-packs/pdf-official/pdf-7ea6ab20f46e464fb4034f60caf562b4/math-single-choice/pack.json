@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-7ea6ab20f46e464fb4034f60caf562b4-math-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 2 数学（Routing+Hard） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-24cc55417c870c1b9042b7b10cb60a86202c04f18c9dd5bb99e38fb3a657bf2f",
+      "path": "assets/24cc55417c870c1b9042b7b10cb60a86202c04f18c9dd5bb99e38fb3a657bf2f.png",
+      "mediaType": "image/png",
+      "sha256": "24cc55417c870c1b9042b7b10cb60a86202c04f18c9dd5bb99e38fb3a657bf2f",
+      "byteLength": 11165,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-9f8f334d302ca06f55a764735ba447e628bc6ff2878e0ba187ac3b2e2b536c3b",
+      "path": "assets/9f8f334d302ca06f55a764735ba447e628bc6ff2878e0ba187ac3b2e2b536c3b.png",
+      "mediaType": "image/png",
+      "sha256": "9f8f334d302ca06f55a764735ba447e628bc6ff2878e0ba187ac3b2e2b536c3b",
+      "byteLength": 14773,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-ceb63898c1e77b6ebb2d6a0f05aa3530a5c4723baf6ebe643701810e31738348",
+      "path": "assets/ceb63898c1e77b6ebb2d6a0f05aa3530a5c4723baf6ebe643701810e31738348.png",
+      "mediaType": "image/png",
+      "sha256": "ceb63898c1e77b6ebb2d6a0f05aa3530a5c4723baf6ebe643701810e31738348",
+      "byteLength": 27251,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "id": "asset-6a2142e0b6a9c619e55e6150001616a598a98f91bfba6e0649be9f019e5a4387",
+      "path": "assets/6a2142e0b6a9c619e55e6150001616a598a98f91bfba6e0649be9f019e5a4387.png",
+      "mediaType": "image/png",
+      "sha256": "6a2142e0b6a9c619e55e6150001616a598a98f91bfba6e0649be9f019e5a4387",
+      "byteLength": 39316,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+        "sourceQuestionId": "m1-q18"
+      }
+    }
+  ]
+}

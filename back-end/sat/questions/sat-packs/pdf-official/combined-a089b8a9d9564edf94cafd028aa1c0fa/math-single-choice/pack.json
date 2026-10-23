@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-8c9afef67de048b8bb7736c40ce69427-math-single-choice",
+  "revision": 1,
+  "title": "2024年12月第8套数学（只录M2，M1和第7套变体重复） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1635ac1558063cdd4703eea136f0bf21898de5de04481cd2e0f249b9fe777aae",
+      "path": "assets/1635ac1558063cdd4703eea136f0bf21898de5de04481cd2e0f249b9fe777aae.png",
+      "mediaType": "image/png",
+      "sha256": "1635ac1558063cdd4703eea136f0bf21898de5de04481cd2e0f249b9fe777aae",
+      "byteLength": 24130,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "id": "asset-3f54fc0ca9957a890b7e29eb9b12dfe47a41535dfa3de4fb5b5beda801510448",
+      "path": "assets/3f54fc0ca9957a890b7e29eb9b12dfe47a41535dfa3de4fb5b5beda801510448.png",
+      "mediaType": "image/png",
+      "sha256": "3f54fc0ca9957a890b7e29eb9b12dfe47a41535dfa3de4fb5b5beda801510448",
+      "byteLength": 20843,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "id": "asset-5138f9b5a48ce90f4970a58acaabb292b1137f90b57fbfe51697e5c43c6b22cf",
+      "path": "assets/5138f9b5a48ce90f4970a58acaabb292b1137f90b57fbfe51697e5c43c6b22cf.png",
+      "mediaType": "image/png",
+      "sha256": "5138f9b5a48ce90f4970a58acaabb292b1137f90b57fbfe51697e5c43c6b22cf",
+      "byteLength": 16190,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q10"
+      }
+    }
+  ]
+}

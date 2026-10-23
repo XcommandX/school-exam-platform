@@ -1,0 +1,985 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A certain pigeon species can fly at an average speed of 16 meters per second when in continuous\nflight. At this rate, how many meters would this pigeon species fly in 3 seconds?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$16$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$48$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$19$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-17cc9dd4c744a4626517a7a23d3afdde813ad1b10366401bc3a8c621e8f9963c",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn the figure shown, lines $r$ and $s$ are parallel, and line $t$ intersects both lines. What is the value of\n$a$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$180$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$77$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$167$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$90$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "There is a linear relationship between the mass of an object attached to a vertical spring and the\nlength of the spring extension. The table shows data collected after certain objects were each\nattached to the spring.\nMass of object\nLength of spring extension\n40 grams\n12.8 centimeters\n100 grams\n32 centimeters\nWhat is the length of the spring extension, in centimeters, when a 70-gram object is attached to\nthe spring?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$51.2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$19.2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$35.2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$22.4$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$g=14-x/23$$\nThe equation shown gives the estimated amount of gas $g$, in gallons, that remains in the gas tank\nof a car after being driven $x$ miles, where $0\\le x\\le 322$.What is the estimated amount of gas, in\ngallons, that remains in the gas tank of the car when $x=230$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$14$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$0$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q6",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$x2=24-5x$$\nWhat is the solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q6"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$19$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$30$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q7",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A rectangle has an area of 48 square meters and a length of 12 meters. What is the width, in\nmeters, of the rectangle?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q7"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$576$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$36$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$144$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$a/(b+c)=55$$\nThe given equation relates the positive numbers $a$, $b$, and $c$. Which equation correctly expresses $a$\nin terms of $b$ and $c$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$a=(b+c)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$a=55-(b+c)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$a=55(b+c)$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$a=55/(b+c)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Quadrilateral $MNOP$ is similar to quadrilateral $QRST$ such that $M$, $N$, $O$, and $P$ correspond to $Q$,\n$R$, $S$, and $T$, respectively. The length of each side of quadrilateral $MNOP$ is 2 times the length of\nits corresponding side in quadrilateral $QRST$. The measure of angle $P$ is 50\n$$\\circ$$\nand $S$\n$T=8$.Which of the following must be true?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$O P=8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measure of angle $T$ is 50 .\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measure of angle $R$ is 100 .\n$$\\circ$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$O P=32$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the polynomial function $f$, the graph of $y=f ( x )$ in the $xy$-plane passes through the\npoints $( - 4 , 0 ) , ( 3 , 0 )$ , and $( 5 , 0 )$.Which of the following must be a factor of\n$f ( x )$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x+5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x+3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x - 3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$x - 4$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1cef9e84dd1b20f33b7950dab607ef669b5f966fe10de7f991a24359a7ffdfa0",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\nIn triangle $QRS$, what is the value of $\\tan$⁡$y$ ?$\\circ$"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c/4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$c/10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{4}{10}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{10}{4}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$8x+32y=38$$\n$$12x+48y=57$$\nAt how many points do the graphs of the given equations intersect in the $xy$-plane?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly one"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Infinitely many"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly two"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Zero"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Number of cars\nMaximum number of passengers and crew\n$$2$$\n$$75$$\n$$7$$\n$$245$$\n$$9$$\n$$313$$\nThe table shows the linear relationship between the number of cars, $c$, on a commuter train and\nthe maximum number of passengers and crew, $p$, that the train can carry. Which equation\nrepresents the linear relationship between $c$ and $p$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$34p-c=7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$34c-p=7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$34p-c=-7$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$34c-p=-7$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y\\gt 9/2x+b$$\n\nIn the given inequality, $b$ is a positive constant. Which of the following does $NOT$ contain any\npoints $(x,y)$ in the $xy$-plane that are solutions to this inequality?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The region where $x\\gt 0$andy$\\gt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The region where $x\\lt 0$andy$\\lt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The region where $x\\lt 0$andy$\\gt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The region where $x\\gt 0$andy$\\lt 0$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The expression $x 2+k x+14$，where $k$ is a constant, can be rewritten as $( x+n ) ($\n$x+7 )$，where $n$ is a constant. What is the value of $k$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$5$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m1-q20",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$-5x2-x+9=0$$\nWhat is the greatest solution to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m1-q20"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-1}{5}+\\frac{181}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-1}{10}+\\frac{181}{10}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-1}{5}-\\frac{181}{5}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{-1}{10}-\\frac{181}{10}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ is defined by $f ( x )=20 x 3$ . The graph of $y=f ( - x )+c$ in the\n$xy$-plane, where $c$ is a positive integer constant, has an $x$-intercept at $( r , 0 )$ and a $y$-intercept\nat $( 0 , t )$，where $r$ and $t$ are constants. Which of the following must be true about $r$ and $t$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r \\gt 0$ and $t \\gt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r \\gt 0$ and $t \\lt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r \\lt 0$ and $t \\gt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r \\lt 0$ and $t \\lt 0$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-841d6999303f44238b0d83a2787869d5-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A certain investment account offers a special interest rate for the first 4 months the account is\nopen followed by a lower interest rate for the remainder of the time the account is open. Bennett\n\nopened one of these accounts with an original account balance of \\$900 and did not make any\nother deposits or withdrawals. 4 months after Bennett opened the account, the balance had\nincreased by $0.6\\%$ of the original balance. 6 months after Bennett opened the account, the\nbalance had increased by an additional $0.1\\%$ of the balance at the end of the first 4 months.\nEvery 2 months after the first 6 months, the balance had increased by an additional $0.1\\%$ of the\nbalance 2 months before. Which of the following equations could represent the account balance\n$B(x)$in dollars, $x$ months after the account was opened, where $x\\ge 4$？"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-841d6999303f44238b0d83a2787869d5",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$B(x)=905.40(1.001)2x-8$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$B(x)=905.40(1.001)x/2-\\frac{4}{2}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$B(x)=905.40(1.001)x/2-4$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$B(x)=905.40(1.001)2x-4$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

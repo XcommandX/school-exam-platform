@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-6b159b2b37e04088bf53a463e8943b86-rw-single-choice",
+  "revision": 1,
+  "title": "2025年11月亚太第3套阅读语法 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f7d6439f5ce1a763fae8b96f695f2b8ab92208608c3b86822f22d096ff0df026",
+      "path": "assets/f7d6439f5ce1a763fae8b96f695f2b8ab92208608c3b86822f22d096ff0df026.png",
+      "mediaType": "image/png",
+      "sha256": "f7d6439f5ce1a763fae8b96f695f2b8ab92208608c3b86822f22d096ff0df026",
+      "byteLength": 33420,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6b159b2b37e04088bf53a463e8943b86",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "id": "asset-2c456db29d9195230b0733a3c63e5825c5174584c0ee265f7f89d6b93a3aa6fe",
+      "path": "assets/2c456db29d9195230b0733a3c63e5825c5174584c0ee265f7f89d6b93a3aa6fe.png",
+      "mediaType": "image/png",
+      "sha256": "2c456db29d9195230b0733a3c63e5825c5174584c0ee265f7f89d6b93a3aa6fe",
+      "byteLength": 15241,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6b159b2b37e04088bf53a463e8943b86",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "id": "asset-24202cd5ae3f742b456d5dac23421d4996892536fa697c0d7e1a287e30bcc063",
+      "path": "assets/24202cd5ae3f742b456d5dac23421d4996892536fa697c0d7e1a287e30bcc063.png",
+      "mediaType": "image/png",
+      "sha256": "24202cd5ae3f742b456d5dac23421d4996892536fa697c0d7e1a287e30bcc063",
+      "byteLength": 26391,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-6b159b2b37e04088bf53a463e8943b86",
+        "sourceQuestionId": "m2-q6"
+      }
+    }
+  ]
+}

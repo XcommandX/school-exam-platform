@@ -1,6 +1,6 @@
 # School Exam Platform
 
-校内 SAT / TOEFL 练习平台。当前是本机测试版本；统一身份、正式云端同步和部署尚未启用。
+校内 SAT / TOEFL 练习平台。当前是本机测试版本；首页、TOEFL 和 SAT 共用账号。首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存在本机服务端；公网部署与录音上传尚未启用。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)。
 
 ## 项目结构
 
@@ -30,7 +30,7 @@ local-data/                 仅本机：真实题库、媒体、记录备份、�
 python3 back-end/server/serve_platform.py --port 8888
 ```
 
-打开 <http://127.0.0.1:8888/>，或在 macOS 双击根目录 `Start Study Platform.command`。服务仅监听本机，不用于校内公开部署。页面 URL 仍为 `/sat/`、`/toefl/`，源码分目录不会改变浏览器存储命名空间或已有作答记录。
+打开 <http://127.0.0.1:8888/> 后先登录；账号创建、管理与保存边界见 [统一账号](docs/unified-auth.md)。也可在 macOS 双击根目录 `Start Study Platform.command`。服务仅监听本机，不用于校内公开部署。页面 URL 仍为 `/sat/`、`/toefl/`，源码分目录不会改变浏览器存储命名空间或已有作答记录。
 
 TOEFL 匿名构建命令：
 
@@ -38,7 +38,7 @@ TOEFL 匿名构建命令：
 node back-end/toefl/scripts/build.mjs
 ```
 
-产物在 `local-data/builds/toefl/`，只有原创匿名样例，音频是测试提示音。真实托福题库和原音频不在当前 Git 仓库，正式账号、云端记录和外部 AI 没有接入统一服务。
+产物在 `local-data/builds/toefl/`，只有原创匿名样例，音频是测试提示音。真实托福题库和原音频不在当前 Git 仓库，统一账号与 TOEFL 文字记录已接入本机服务；原云站、正式 TOEFL 题库、录音上传和外部 AI 未接入。
 
 ## SAT 完整模考题包
 
@@ -51,6 +51,7 @@ node back-end/toefl/scripts/build.mjs
 | 内容 | 入口 |
 | --- | --- |
 | 仓库约定 | [AGENTS.md](AGENTS.md) |
+| 统一登录与用户管理 | [统一账号](docs/unified-auth.md) |
 | 三人 Git 协作 | [CONTRIBUTING](docs/CONTRIBUTING.md) |
 | 启动、路由与数据边界 | [统一首页](docs/unified-home.md) |
 | 前后端、登录与加密分发讨论 | [设计说明](docs/frontend-backend-plan.md) |

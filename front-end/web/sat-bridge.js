@@ -3,15 +3,32 @@
 (() => {
   if(!location.pathname.startsWith('/sat/'))return;
 
-  const DB_NAME='SchoolExamPlatform:sat:v1';
+  const accountId=window.PlatformSession?.user?.id;
+  const namespace=accountId?'school-exam-platform:account:'+accountId+':sat:':'school-exam-platform:sat:';
+  const DB_NAME=accountId?'SchoolExamPlatform:account:'+accountId+':sat:v1':'SchoolExamPlatform:sat:v1';
   const keys=new Map([
-    ['sat-reading-practice-v1','school-exam-platform:sat:runtime:v1'],
-    ['sat-ui-preferences-v1','school-exam-platform:sat:ui:v1']
+    ['sat-reading-practice-v1',namespace+'runtime:v1'],
+    ['sat-ui-preferences-v1',namespace+'ui:v1']
   ]);
+  // Keep shared-bank writes bound to the page's verified account, including
+  // when another tab signs into a different account in the same browser.
+  if(accountId){
+    const nativeFetch=window.fetch.bind(window);
+    window.fetch=(input,init={})=>{
+      const url=new URL(typeof input==='string'?input:input.url,location.href);
+      if(url.origin===location.origin&&['/api/question-bank','/api/sat-library-backup'].includes(url.pathname)
+          &&String(init.method||(typeof input==='object'&&input.method)||'GET').toUpperCase()!=='GET'){
+        const headers=new Headers(init.headers||(typeof input==='object'&&input.headers)||{});
+        headers.set('X-Account-ID',accountId);
+        init={...init,headers};
+      }
+      return nativeFetch(input,init);
+    };
+  }
   const params=new URLSearchParams(location.search);
   const requestedView=params.get('view');
   const view=requestedView==='questionLibrary'?'practiceBuilder':requestedView;
-  const linked=['dashboard','startPractice','practiceBuilder','wrongBook','timingSettings'].includes(view);
+  const linked=['dashboard','startPractice','practiceBuilder','wrongBook','timingSettings','history','syncConflicts'].includes(view);
   let skipInitialRuntime=linked;
 
   // Rewrite names before the unmodified engine opens storage. Never inspect or

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-a0814402e04a4177af8bdfd58037d2da-math-spr",
+  "revision": 1,
+  "title": "2023年6月第1&2&3套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-5a72d3860b76b1762e915e95b2d5dcdee7f517ceec185ab6cad23d0480f9660c",
+      "path": "assets/5a72d3860b76b1762e915e95b2d5dcdee7f517ceec185ab6cad23d0480f9660c.png",
+      "mediaType": "image/png",
+      "sha256": "5a72d3860b76b1762e915e95b2d5dcdee7f517ceec185ab6cad23d0480f9660c",
+      "byteLength": 17691,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-a0814402e04a4177af8bdfd58037d2da",
+        "sourceQuestionId": "m2-q9"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

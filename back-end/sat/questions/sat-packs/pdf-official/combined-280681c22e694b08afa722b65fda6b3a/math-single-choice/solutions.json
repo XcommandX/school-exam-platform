@@ -1,0 +1,787 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "体积 = 棱长$^{3}=7^{3}=343$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "该不等式组表明 $y$ 必须小于 $x$，且 $x$ 必须小于 31。因此，任何满足条件的数对 $(x, y)$都必\n须使 $y$ 严格小于 $x$，同时 $x$ 小于 31，只有选项A 满足要求"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "斜率 = $(1 - 17)/(8 - 4)=(-16)/4=-4$。代入点 $(4, 17)$：$17=-4\\times 4+b \\to b=33$，$f(x)=-4x$ +\n33。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "解方程组，令 $9(x - 3)=(x - 3)^{2}$，移项并提公因式 $(x - 3)[(x - 3) - 9]=0$\n解得 $x=3$ 或 $x=12$。当 $x=3$ 时，$y=9(3 - 3)=0$；当 $x=12$ 时，$y=9(12 - 3)=9 \\times 9=81$\n验证 $y=(x - 3)^{2}$：$x=3$ 时，$y=0$，符合；$x=12$ 时，$y=81$，符合。\n因此解为 $(3, 0)$ 和 $(12, 81)$。选项中只有 $(12, 81)$ 符合，对应选项 $(C)$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图像经过点 $(-3, 0)$、$(1, 0)$、$(7, 0)$，即当 $x=-3$、1、7 时 $f(x)=0$，说明这些是函数的零\n点。\n零点对应的因式为 $(x+3)$、$(x - 1)$、$(x - 7)$。选项中 $(x - 1)$ 在列，对应零点 $x=1$，因此 $(x$ -\n1) 必须是 $f(x)$ 的一个因式。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "左边化简：\n$$6x^22 / 18x^5=(\\frac{6}{18}) \\cdot (x^22 / x^5)=(\\frac{1}{3}) \\cdot x^17$$\n右边为 $(\\frac{1}{3}) \\cdot x^b$ 两边相等得 $x^17=x^b$，所以 $b=17$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由题意，直线 $k$ 斜率为 $\\frac{-5}{4}$。则直线 $j$ 斜率 为 $\\frac{4}{5}$，过点 $(16, 22)$：$y - 22=(\\frac{4}{5})(x - 16) y$\n= $(\\frac{4}{5})x - \\frac{64}{5}+\\frac{110}{5} y=(\\frac{4}{5})x+\\frac{46}{5} y$-截距为 $\\frac{46}{5}$，对应选项 $(D)$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图中$y$ 截距为$-4$，是$f(0)$加2 后的结果，故$f$（0）应为$-6$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "覆盖两次需 $2d$ 平方英尺，所需加仑数为 $2d / 450$，成本 $c=17 \\times (2d / 450)=(34d) / 450$ =\n$(17d) / 225$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "已知 $f(x)=6 \\times 4^x$ 代入 $x=3$ 得：$f(3)=6 \\times 4^3=6 \\times 64=384$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线经过点 $(0, 4)$ 和 $(2, 0)$。斜率 $m=(0 - 4)/(2 - 0)=(-4)/2=-2$。$y$-截距为 4，所以直线方\n程为 $y=-2x+4$。即 $f(x)=-2x+4$，对应选项 (A)"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 $t=x - 9$，则原方程化为$4t - 4=7t+4$ 得出$t=\\frac{-8}{3}$，因此 $x - 9=\\frac{-8}{3}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x(x - 5)=104 \\to x^{2} - 5x - 104=0 \\to (x - 13)(x+8)=0 \\to x=13$ 或 $x=-8$（舍去）。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当 $x$ 为负数时，$3^x$ 趋近于 0，此时 $y \\approx 10$，因此常数项为 10。\n当 $x=1$ 时，$y=14$，代入 $y=3^x+10$ 得 $3+10=13$\n只有 $(D) y=3^x+10$ 符合"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似三角形对应角相等，角 $Y$ 对应角 $B$，所以角 $Y=17^{\\circ}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "角 $T=2\\pi /3+23\\pi /18=12\\pi /18+23\\pi /18=35\\pi /18$ 弧度。转换为度：$35\\pi /18 \\times (180/\\pi )=35 \\times$\n$10=350^{\\circ}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "溶质守恒：$0.06x+0.09y=0.07(x+y)$。对应选项 $B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "考查三角形全等。因为$m$ 平行于$n$，所以$\\angle D=C$\n$\\angle$，$\\angle E=A$\n$\\angle$，所以三角形对应的三个角分别\n相等，只要给出对应的边相等，那就可以根据$ASA$ 定理证明两个三角形全等，即$DE$ 和\n$BC$，或者$AB$ 和$EB$，或者$DB$ 和$CB$。故选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$$(1.40)^2=1.96$$\n增长率为 $1.96 - 1=0.96=96\\%$\n所以 $p=96$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$ 截距对应因式分解形式。$5x^{2} - 40x+35=5(x^{2} - 8x+7)=5(x - 1)(x - 7)$，$x$ 截距为 1 和 7"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 2013 年底价值为 $V$，则 2014 年底为 $V \\times (1+1.73)=V \\times 2.73$，2015 年底为 $V \\times 2.73 \\times$\n$(1 - 0.18)=V \\times 2.73 \\times 0.82=V \\times 2.2386$，净增长率 = $(2.2386 - 1) \\times 100\\%=123.86\\%$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据图像，斜率为负，$y$ 截距约在9 左右，故选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "要使方程组有无穷多解，两个方程必须表示同一条直线。所以选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "2016 年4 月为2015 年4 月后第12 个月，读取$x=12$ 数据约为50 左右，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$f(x)=-4x+b$，代入 $(3, -5)$：$-5=-12+b \\to b=7$，$f(x)=-4x+7$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线过点 $(0, 5)$ 和 $(\\frac{-5}{3}, 0)$，斜率 $m=(5 - 0) / (0+\\frac{5}{3})=5 / (\\frac{5}{3})=3$。\n直线方程为 $y=3x+5$。\n阴影区域在直线下方，因此不等式为 $y \\lt 3x+5$。\n故答案为 $y \\lt 3x+5$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "依次带入，$D$ 选项合适，代入第一个不等式：$0\\le 5+8=13$ 成立。\n代入第二个不等式：$0\\ge -3(5)-8$，即 $0\\ge -23$ 成立。\n所以 $(D)$ 同时满足两个不等式"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "侧面面积为(59) (590)。底面半径为 $\\frac{590}{2}\\pi$。底面面积为 $\\pi ( \\frac{590}{2}\\pi ) 2$\n。总面积为 $( 59 ) ( 590 )+2 \\pi ( 295/\\pi ) 2$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程$|6-x|+3=73$ 的解为$x=-64$ 和$x=76$，它们的和为12。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程 $(8cx+7)/5=4x - 7$ 两边乘以5 得 $8cx+7=20x - 35$，整理得 $8cx - 20x=-42$，即 $(8c$ -\n$20)x=-42$。当 $8c - 20=0$ 时，左边为0，右边为$-42$，方程无解。解 $8c - 20=0$ 得 $c=\\frac{20}{8}$\n= $\\frac{5}{2}$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由函数定义 $f(x)=3x - 7$，得 $f($a$)=3$a $- 7$。\n已知 $f($a$)+1=2$a，即 3a $- 7+1=2$a，化简得 3a $- 6=2$a，解得 $a=6$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "根据题意，初始值700，之后的四个月每月增加$0.6\\%$得初始值（注意这里不是指数变\n化），四个月后数据为$700+700 4 0.06\\%=704.2$,4\n∗∗\n个月后，每2 个月（周期为2）增加率为\n$0.2\\%$，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "切线 $t$ 垂直于圆心 $(-5,5)$ 与切点 $(6,-1)$ 的半径，斜率为 $\\frac{11}{6}$，且过点 $(6,-1)$，其方程为 $y$ =\n$(\\frac{11}{6})x - 12$。代入各选项验证，只有点 $(12,10)$ 满足方程。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-m2-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将方程化为标准形式：$4x^2 - p x+(w+85)=0$。由于方程恰好有一个实数解，判别式为\n零：$\\Delta=p^2 - 16(w+85)=0$，即 $p^2=16(w+85)$。因此 $w+85$ 必须是完全平方数（因为\n$p$ 为整数，可设 $p=4k$，得 $k^2=w+85$）。计算各选项对应的 $w+85$：\n(A$) -21+85=64=8^2$\n$$(B) 15+85=100=10^2$$\n$(C) 64+85=149$ 不是完全平方数\n$$(D) 315+85=400=20^2$$\n所以选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m2-q22"
+      }
+    }
+  ]
+}

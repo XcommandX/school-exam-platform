@@ -1,0 +1,626 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$x=7$ 带入等式$60x+35y=840$ 得到$60(7)+35y=840$，解出$y=12$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将$x=0$ 带入函数$y=30x+6$，解出$y=30(0)+6=6$，排除A，$D$ 选项。将$x=2$ 带入函数\n$y=30x+6$，解出$y=30(2)+6=66$。选$B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "令$x=0$，$g(0)=11(\\frac{1}{7})0=11$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "选中房间$C$ 中访客的概率为$1-0.44-0.24=0.32$。因此房间$C$ 中有$0.32(375)=120$ 位访客。选\n$$D$$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由直角三角形得到 $x2=2.52+5.92$，解出 $x=41.06$。因为 $62\\lt x2\\lt 72$。因此$x$ 在6 和7 之间。\n选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "指数模型的一般公式为 $y=a b t$ ，其中a 为初始值，$b$ 为增长因子，$t$ 为增长周期的\n数量。由题可得，$a=2500$。经过一年，新的鲸鱼数量是原来的$1+7\\%=1.07$ 倍，所以\n$b=1.07$。增长周期为一年，$x$ 为年数，所以有$x$ 个增长周期，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $k \\gt - 3$，所以$k+3$ 不等于0，将分子分母同时除以$k+3$ 得到$\\frac{48}{4}=12$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$x=60$，所以速度为60 千米每小时，因为$y=4.32$，所以燃油费用为4.32 美元。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将 $x/y=3$ 带入 $4x/ty=96$，得到 $4/t 3=96$\n⋅\n。解出$t=\\frac{1}{8}$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$DE$ 平行于$AC$，所以三角形$BDE$ 和三角形$BAC$ 相似。因此 $BD/BA=BE/BC$ 因为\n$BD=AD$，所以$BA=BD+AD=2BD$，因为$BE=7$，所以 $BD/2BD=7/BC$，即 $\\frac{1}{2}=7/BC$，解出\n$BC=14$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由给出的方程可得$x=0$，$5x-11=0$，且$5x-u=0$。解出$x=0$，$\\frac{11}{5}$，或$u/5$。因为解的和是7，\n所以$0+(\\frac{11}{5})+(u/5)=7$，解出$u=24$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在城市道路上，汽车的速度为26 英里每加仑，因为汽车行驶了$c$ 英里，所以消耗了$c/26$\n加仑的汽油。在高速上，汽车的速度为31 英里每加仑，因为汽车行驶了$h$ 英里，所以消\n耗了$h/31$ 加仑的汽油。因为汽车一共消耗了19 加仑汽油，所以$(c/26)+(h/31)=19$。因为汽\n车一共行驶了570 英里，所以$h+c=570$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "有题中可得2 英寸零件的数量为$5n$。所以$5n+n+4=100$，即$6n+4=100$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "底面面积为 $\\frac{1}{2}(16)(16)=128$ 平方英寸。体积为 $\\frac{1}{3}(128)(9)=384$ 立方英寸。因为1 夸脱\n=57.75 立方英寸，且1 品脱=0.5 夸脱，所以1 品脱=28.875 立方英寸。因此384 立方英寸\n=$\\frac{384}{28.875}$ 品脱，约等于13.30 品脱。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "取图中两点$(-12, 0)$和$(0, -11)$，得到直线的斜率为 $-11-\\frac{0}{0}-(-12)=\\frac{-11}{12}$，因此直线方程\n为 $y=-11/12x-11$。带入点$(v, -7)$得到 $-7=-11/12v-11$，解出$v=\\frac{-48}{11}$，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "任取表中两个点，比如$(0, -2)$和$(12, 0)$，计算的斜率为 $0-(-2)/12-0=\\frac{1}{6}$，直线方程为 $y$−\n$(-2)=1/6x$，化简得$x-6y=12$。选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由题中可得，$s$ 需要小于$-7$，观察4 个选项，只有A 中的$s$ 值是一定小于$-7$ 的"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将方程配方 $y=x2+14x+60=x2+14x+49+11=(x+7)2+11$，其中11 为函数的最小值，选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一元二次方程的解为 $x=-(-3)\\pm (-3)2-4(2)(-3)/2(2)=3\\pm \\frac{33}{4}$，选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$g(c+1)$比$m$ 多$79\\%$，所以$g(c+1)=(1+79\\%)m=1.79m$。因为$g(c)=m$，所以 $g ( c )=a$\n$b c=m$。因此 $g ( c+1 )=a b c+1=a b c b=m b$\n⋅\n。\n综上$1.79m=mb$，所以$b=1.79$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时减去$5/c$ 得到 $-9/d=7-5/c$，通分得 $-9/d=7c-5/c$，取倒数得到 $-d/9=c/7c-5$，\n最后等式两边同时乘以$-9$ 得到 $d=-9c/7c-5=9c/5-7c$。选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "批量折扣之后，单价是 $44 ( 1 - n \\% )=44 ( 1 - n/100 )$ ，额外折扣之\n后，单价是 $44 ( 1 - n/100 ) - 4$。因此总价是 $n ( 44 ( 1$ −\n$n/100 ) - 4 )=n ( 40 - 44n/100 )=40 n - 11n2/25$。因为总花费是\n624，所以 $40 n - 11n2/25=624$，写成一元二次方程的一般形式得到 $11 n 2$ −\n$1000 n+15600=0$，解出 $n=-(-1000)\\pm (-1000)2-4(11)(15600)/2(11)=20$ 或70.9。因\n为$n$ 是整数，所以$n=20$。选$C$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为$LM$ 平行于$PQ$，所以三角形$LRM$ 和三角形$QRP$ 相似，因此 $LR/RQ=MR/RP$ 带入\n$MR=6$，$LR=7$，$RP=15$，得到 $7/RQ=\\frac{6}{15}$，解出$RQ=\\frac{35}{2}$，因此$LQ=LR+RQ=\\frac{49}{2}$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "观察数据知当$x$ 越来越小时，$y$ 越来越接近0，所以函数的渐近线是$y=0$，所以常数部分是\n0，排除$CD$ 选项。当$x=0$ 时，$y\\approx 7$，那么data A 指数部分的系数应该是7, data $b$ 是data $a$ *\n3，那么，$3*70=210$，系数接近$B$，所以选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "对于数据集A，中位数的位置在$\\frac{41}{2}=20.5$，即第21 个数。因为数值0 有1 个（排第1），\n数值1 有7 个（排到8）， 数值2 有8 个（排到16），数值3 有9 个（排到25），所以第\n21 个数为3\n对于数据集$B$，中位数的位置在$\\frac{40}{2}=20$，即第20，21 个数。因为删掉的是最大的数。所\n以第20，21 个数不变，还是3.\n因此两个数据集的中位数相同，选$B$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "等式两边同时除以2 得到 $x2-k/2x+y2+t/2y-6=0$，配方得 $x2-k/2x+(k/4)2+y2+t/2y+(t/4)2-6$−\n$(k/4)2-(t/4)2=0$，即 $(x-k/4)2+(y+t/4)2=6+k/16+t/16$ 。因为半径是 52，所以 $6+k/16+t$/\n$16=52$，解出$t=736-k$，选$D$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-bb52ff2b1da140e484fb53374fc8ceb5-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "在直角三角形$XYZ$ 中$\\tan Z=YX/XZ=\\cot Y$。在直角三角形$YXW$ 中$\\cot$\n$Y=YW/XW=\\frac{652}{489}$。因此$\\tan Z=\\frac{652}{489}=\\frac{4}{3}$。选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+        "sourceQuestionId": "m2-q16"
+      }
+    }
+  ]
+}

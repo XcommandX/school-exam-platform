@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-3376e89aaff44783b4efe24db8df9b70-math-single-choice",
+  "revision": 1,
+  "title": "2025年5月第3套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-abb4d4a073f383571a285f4f392f63d948a3aa798b5bca977eb438fe81fcfba8",
+      "path": "assets/abb4d4a073f383571a285f4f392f63d948a3aa798b5bca977eb438fe81fcfba8.png",
+      "mediaType": "image/png",
+      "sha256": "abb4d4a073f383571a285f4f392f63d948a3aa798b5bca977eb438fe81fcfba8",
+      "byteLength": 66007,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3376e89aaff44783b4efe24db8df9b70",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "id": "asset-affee62b1764e1ce265b06ff1eed6f1572b119dbde799eb1601a4a21dabaf23b",
+      "path": "assets/affee62b1764e1ce265b06ff1eed6f1572b119dbde799eb1601a4a21dabaf23b.png",
+      "mediaType": "image/png",
+      "sha256": "affee62b1764e1ce265b06ff1eed6f1572b119dbde799eb1601a4a21dabaf23b",
+      "byteLength": 14299,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3376e89aaff44783b4efe24db8df9b70",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "id": "asset-7b50d931c67fdd06f4ab880eef15ab37d4a45b6613877e46e147ce523ee6c226",
+      "path": "assets/7b50d931c67fdd06f4ab880eef15ab37d4a45b6613877e46e147ce523ee6c226.png",
+      "mediaType": "image/png",
+      "sha256": "7b50d931c67fdd06f4ab880eef15ab37d4a45b6613877e46e147ce523ee6c226",
+      "byteLength": 36938,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3376e89aaff44783b4efe24db8df9b70",
+        "sourceQuestionId": "m2-q17"
+      }
+    }
+  ]
+}

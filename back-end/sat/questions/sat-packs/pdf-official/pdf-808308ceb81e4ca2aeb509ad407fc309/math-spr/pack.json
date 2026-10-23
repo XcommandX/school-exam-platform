@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-808308ceb81e4ca2aeb509ad407fc309-math-spr",
+  "revision": 1,
+  "title": "Bluebook Practice 6 数学（Routing+Hard） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-998824e844ceff089f586d20c48d340d82a1199c2a36983b786cc31a973a6462",
+      "path": "assets/998824e844ceff089f586d20c48d340d82a1199c2a36983b786cc31a973a6462.png",
+      "mediaType": "image/png",
+      "sha256": "998824e844ceff089f586d20c48d340d82a1199c2a36983b786cc31a973a6462",
+      "byteLength": 12493,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-6a23b83ba27961d11f78156988977831b148d9841c024135365f744123147279",
+      "path": "assets/6a23b83ba27961d11f78156988977831b148d9841c024135365f744123147279.png",
+      "mediaType": "image/png",
+      "sha256": "6a23b83ba27961d11f78156988977831b148d9841c024135365f744123147279",
+      "byteLength": 14127,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "id": "asset-dd81ca04e24963b7c08d4aec0b8d72151af7fef90a3e079e61211252639a194b",
+      "path": "assets/dd81ca04e24963b7c08d4aec0b8d72151af7fef90a3e079e61211252639a194b.png",
+      "mediaType": "image/png",
+      "sha256": "dd81ca04e24963b7c08d4aec0b8d72151af7fef90a3e079e61211252639a194b",
+      "byteLength": 10932,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+        "sourceQuestionId": "m1-q19"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

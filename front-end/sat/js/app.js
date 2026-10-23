@@ -1,9 +1,11 @@
 'use strict';
 window.SATApp = (() => {
   const root=document.getElementById('app');
-  const appState={view:'dashboard',activePractice:null,activeAttemptId:null,reviewQuestionId:null,returnView:'practiceBuilder',filters:{sourceId:'',questionType:'',section:new URLSearchParams(location.search).get('section')||'',search:''},practiceKind:'section',page:1,builderMode:'custom',selected:new Set(),selectedSource:'',practiceName:'',practiceNameEdited:false,durationSeconds:1920,sourceDurations:{},phase:'draft',importPreviews:[],notice:'',busy:false};
+  const appState={view:'dashboard',activePractice:null,activeAttemptId:null,reviewQuestionId:null,returnView:'practiceBuilder',filters:{sourceId:'',questionType:'',section:new URLSearchParams(location.search).get('section')||'',search:''},practiceKind:'section',page:1,builderMode:'custom',selected:new Set(),selectedSource:'',practiceName:'',practiceNameEdited:false,durationSeconds:1920,sourceDurations:{},phase:'draft',historyFilters:{status:'',section:'',search:''},historyPage:1,notice:'',busy:false};
   let data={sources:[],questions:[],attempts:[],wrongBook:[]},counts=new Map(),available={sources:[],questions:[]};
   let reviewOverviewScroll=null,breakTicker=null,breakBattery=null,navigationRevision=0;
+  let accountMenuOpen=false,accountSyncBusy=false,accountLogoutBusy=false,practiceOpening=false;
+  let conflictResolving=false,syncConflictCount=0,syncConflictState={loading:false,items:[],error:''};
   const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const id=()=>crypto.randomUUID();
   const date=value=>new Date(value).toLocaleString('sv-SE',{hour12:false}).slice(0,16);
@@ -51,12 +53,13 @@ window.SATApp = (() => {
     attempts.forEach(a=>a.questionIds.forEach(id=>counts.set(id,(counts.get(id)||0)+1)));
   }
   function go(view,options={}){
-    navigationRevision++;
+    navigationRevision++;accountMenuOpen=false;
     if(view==='questionLibrary')view='practiceBuilder';
     appState.notice='';appState.view=view;Object.assign(appState,options);appState.page=1;
     if(['wrongBook','practiceBuilder'].includes(view))appState.filters={sourceId:'',questionType:'',section:new URLSearchParams(location.search).get('section')||'',search:''};
     if(view==='practiceBuilder'){appState.practiceNameEdited=false;appState.practiceKind='section';appState.selected=new Set();appState.selectedSource='';appState.builderMode='custom';appState.durationSeconds=appState.filters.section==='math'?2100:SATSettings.customDuration;appState.sourceDurations=SATSettings.durationPreferences;appState.phase='draft';}
     if(view==='startPractice'&&SATLibrary.state.status==='idle')loadLibrary();
+    if(view==='syncConflicts')loadSyncConflicts();
     if(view==='practiceBuilder'&&SATBuilderLibrary.state.status==='idle')loadBuilderLibrary();
     root.hidden=false;document.querySelector('.exam-shell').hidden=true;render();window.scrollTo(0,0);
   }
@@ -66,7 +69,7 @@ window.SATApp = (() => {
   }
   function render(){
     SATMathTools.destroyImages(root);
-    const pages={dashboard:dashboard,importQuestions:importPage,startPractice:()=>SATLibrary.render(data.attempts),questionDetail:detail,practiceBuilder:builder,attemptOverview:overview,questionReview:review,wrongBook:wrongBook,timingSettings:timingSettings};
+    const pages={dashboard:dashboard,history:historyPage,syncConflicts:syncConflictsPage,importQuestions:importPage,startPractice:()=>SATLibrary.render(data.attempts),questionDetail:detail,practiceBuilder:builder,attemptOverview:overview,questionReview:review,wrongBook:wrongBook,timingSettings:timingSettings};
     // The new visual theme is only for management pages. Every practice stage
     // keeps the original styling, including readiness and completion screens.
     root.toggleAttribute('data-sat-management',Object.hasOwn(pages,appState.view));
@@ -76,7 +79,7 @@ window.SATApp = (() => {
     if(appState.view==='ready'){root.innerHTML=readyPage();return;}
     if(appState.view==='moduleOver'){root.innerHTML=moduleOver();return;}
     if(['preparing','saving','congrats'].includes(appState.view)){root.innerHTML=transitionPage(appState.view);return;}
-    root.innerHTML=`<header class="app-header"><button class="app-brand" data-action="dashboard"><span class="app-brand-mark">${icon('library')}</span><span>SAT <strong>Practice</strong></span></button><div class="app-header-tools">${location.pathname.startsWith('/sat/')?'<a class="app-home-link" href="/">↖ Study Space</a>':''}${button('Settings','timingSettings',`aria-label="Practice settings" ${appState.view==='timingSettings'?'aria-current="page"':''}`,'app-settings-button')}</div></header><main class="app-main ${appState.view==='questionReview'?'app-review-main':''}">${appState.view!=='dashboard'?button('<span class="app-back-icon" aria-hidden="true">←</span><span>Overview</span>','dashboard','aria-label="Back to Overview"','app-back'):''}<div id="appNotice" class="app-notice" role="status" ${appState.notice?'':'hidden'}>${escape(appState.notice)}</div>${pages[appState.view]()}</main>`;
+    root.innerHTML=`<header class="app-header"><button class="app-brand" data-action="dashboard"><span class="app-brand-mark">${icon('library')}</span><span>SAT <strong>Practice</strong></span></button><div class="app-header-tools">${location.pathname.startsWith('/sat/')?'<a class="app-home-link" href="/">↖ Study Space</a>':''}${window.PlatformAuth?.user?accountMenu():button('Settings','timingSettings',`aria-label="Practice settings" ${appState.view==='timingSettings'?'aria-current="page"':''}`,'app-settings-button')}</div></header><main class="app-main ${appState.view==='questionReview'?'app-review-main':''}">${appState.view!=='dashboard'?button('<span class="app-back-icon" aria-hidden="true">←</span><span>Overview</span>','dashboard','aria-label="Back to Overview"','app-back'):''}<div id="appNotice" class="app-notice" role="status" ${appState.notice?'':'hidden'}>${escape(appState.notice)}</div>${pages[appState.view]()}</main>`;
     hydratePackContent();
   }
   function heading(title,subtitle='',extra=''){return `<div class="app-heading"><div><h1>${title}</h1>${subtitle?`<p>${subtitle}</p>`:''}</div>${extra}</div>`;}
@@ -90,23 +93,70 @@ window.SATApp = (() => {
         ['wrong','wrongBook','错题本','Wrong Book'],
         ['add','importQuestions','添加题目','Add Questions']
       ].map(([ico,action,cn,en],index)=>`<button class="dashboard-entry entry-${ico}" data-action="${action}"><span class="entry-top"><span class="entry-icon">${icon(ico)}</span><span class="entry-arrow">↗</span></span><span class="entry-copy"><span class="entry-cn">${cn}</span><strong>${en}</strong></span><span class="entry-index" aria-hidden="true">0${index+1}</span></button>`).join('')}</div>
-      <div class="bank-status"><span class="bank-status-dot ${SATBank.state.connected?'connected':''}" aria-hidden="true"></span><span>${SATBank.state.connected?'Question bank: '+escape(SATBank.state.name)+' · Auto-sync enabled.':'Your question bank is not connected yet.'}</span>${button('Manage library','bank-manage','','app-link')}${SATBank.state.updates.length?button(`${SATBank.state.updates.length} updated set(s)`,'importQuestions','','app-link'):''}</div>`+
-      `<section class="recent-practices"><div class="section-heading"><h2>Recent Practices</h2><span>${data.attempts.length} attempts</span></div>${data.attempts.length?table(['Practice Name','Date','Status','Questions','Correct','Incorrect','Unanswered','Time','Action'],data.attempts.slice(0,20).map(a=>`<tr><td class="practice-name">${escape(a.practiceName)}${a.status==='incomplete'?`<small>${a.totalQuestions-a.unansweredCount} / ${a.totalQuestions} answered · ${a.untimed?'Untimed':clock(a.remainingTimeMs||0)+' remaining'}</small>`:''}</td><td class="muted">${date(a.savedAt||a.completedAt)}</td><td>${statusBadge(a.status)}</td><td>${a.totalQuestions}</td><td class="correct-text">${a.status==='completed'?a.correctCount:'—'}</td><td class="incorrect-text">${a.status==='completed'?a.incorrectCount:'—'}</td><td class="muted">${a.unansweredCount}</td><td>${time(a.elapsedMs)}</td><td class="record-actions">${a.status==='completed'?button('Review','attempt',`data-id="${a.id}"`,'app-link'):a.resumable?button('Resume','resume',`data-id="${a.id}"`,'app-button resume-button'):'<small>Resume unavailable</small>'}${button('Delete','delete-attempt',`data-id="${a.id}"`,'app-link danger-text')}</td></tr>`).join('')):empty('No practices yet','Choose Practice Builder to build your first set.')}</section>`;
+      <div class="bank-status"><span class="bank-status-dot ${SATBank.state.connected?'connected':''}" aria-hidden="true"></span><span>${SATBank.state.connected?'Question bank: '+escape(SATBank.state.name)+' · Auto-sync enabled.':'Your question bank is not connected yet.'}</span></div>`+
+      `<section class="recent-practices"><div class="section-heading"><h2>Recent Practices</h2><div class="history-heading-actions"><span>${data.attempts.length} attempts</span>${button('查看全部','history','','app-button')}</div></div>${data.attempts.length?attemptTable(data.attempts.slice(0,20)):empty('No practices yet','Choose Practice Builder to build your first set.')}</section>`;
   }
+
+  function accountSummary(){
+    const completed=data.attempts.filter(a=>a.status==='completed');
+    let answered=0,graded=0,correct=0;
+    for(const a of completed){const count=Math.max(0,(Number(a.totalQuestions)||0)-(Number(a.unansweredCount)||0));answered+=count;const scored=Math.max(0,count-(Number(a.ungradedCount)||0));graded+=scored;correct+=Math.min(scored,Math.max(0,Number(a.correctCount)||0));}
+    return {completed:completed.length,answered,accuracy:graded?Math.round(correct/graded*100)+'%':'—'};
+  }
+  function accountSyncStatus(){return window.SATAccountSync?.getStatus?.()||'等待同步';}
+  function accountIcon(name){
+    const paths={home:'<path d="m3 10 9-7 9 7v10H3V10Zm6 10v-7h6v7"/>',start:'<path d="m8 4 12 8-12 8V4Z"/>',builder:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8m-8 4h8m-8 4h4"/>',history:'<path d="M3 11a9 9 0 1 1 2.4 7M3 5v6h6m3-4v5l3 2"/>',wrong:'<path d="M5 3h14v18l-7-4-7 4V3Zm4 6h6m-3-3v6"/>',settings:'<path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="18" r="2"/>',user:'<circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',back:'<path d="M18 18 6 6m0 9V6h9"/>'};
+    return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name]||paths.home}</svg>`;
+  }
+  function accountMenu(){
+    const user=window.PlatformAuth.user,name=user.displayName||user.name||user.username,summary=accountSummary();
+    const item=(action,label,glyph)=>`<button type="button" role="menuitem" data-account-action="${action}" ${appState.view===action?'aria-current="page"':''}><span class="sat-menu-glyph" aria-hidden="true">${accountIcon(glyph)}</span><span>${label}</span></button>`;
+    return `<div class="sat-account"><button type="button" class="sat-account-trigger" id="satAccountButton" aria-label="${escape(name)} 的账号菜单" aria-haspopup="menu" aria-controls="satAccountMenu" aria-expanded="${accountMenuOpen}"><span class="sat-account-avatar" aria-hidden="true">${escape(Array.from(name)[0]?.toUpperCase()||'?')}</span><span class="sat-account-name">${escape(user.username)}</span><svg class="sat-account-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button><div class="sat-account-menu" id="satAccountMenu" ${accountMenuOpen?'':'hidden'}><div class="sat-account-user"><span class="sat-account-avatar" aria-hidden="true">${escape(Array.from(name)[0]?.toUpperCase()||'?')}</span><div><strong>${escape(name)}</strong><span>${user.role==='admin'?'管理员':'学生'}</span></div></div><div class="sat-account-stats"><div><b>${summary.completed}</b><span>已完成练习</span></div><div><b>${summary.answered}</b><span>已答题目</span></div><div><b>${summary.accuracy}</b><span>客观题正确率</span></div></div><div class="sat-account-links" role="menu" aria-label="SAT 账号与学习">${item('dashboard','Overview','home')}${item('startPractice','Start Practice','start')}${item('practiceBuilder','Practice Builder','builder')}${item('history','练习记录','history')}${item('wrongBook','错题本','wrong')}${item('timingSettings','练习设置','settings')}${item('syncConflicts','同步冲突'+(syncConflictCount?' · '+syncConflictCount:''),'history')}<a href="/account" role="menuitem"><span class="sat-menu-glyph" aria-hidden="true">${accountIcon('user')}</span><span>${user.role==='admin'?'账号管理':'个人中心'}</span></a><a href="/" role="menuitem"><span class="sat-menu-glyph" aria-hidden="true">${accountIcon('back')}</span><span>返回 Study Space</span></a></div><div class="sat-account-sync"><span id="satAccountSyncStatus" role="status">${escape(accountSyncStatus())}</span><button type="button" data-account-action="sync" ${accountSyncBusy?'disabled':''}>${accountSyncBusy?'同步中…':'立即同步'}</button></div><button class="sat-account-logout" type="button" data-account-action="logout" ${accountLogoutBusy?'disabled':''}>${accountLogoutBusy?'正在退出…':'退出登录'}</button></div></div>`;
+  }
+  function setAccountMenu(open,focus=false){
+    const menu=document.getElementById('satAccountMenu'),trigger=document.getElementById('satAccountButton');if(!menu||!trigger)return;
+    accountMenuOpen=open;menu.hidden=!open;trigger.setAttribute('aria-expanded',String(open));
+    if(open&&focus)menu.querySelector('[role="menuitem"]')?.focus();
+  }
+  function updateAccountSyncStatus(event){if(Number.isInteger(event?.detail?.conflicts))syncConflictCount=event.detail.conflicts;const status=document.getElementById('satAccountSyncStatus');if(status)status.textContent=accountSyncStatus();const label=root.querySelector('[data-account-action=syncConflicts]>span:last-child');if(label)label.textContent='同步冲突'+(syncConflictCount?' · '+syncConflictCount:'');}
+  async function loadSyncConflicts(){
+    if(syncConflictState.loading)return;
+    syncConflictState.loading=true;syncConflictState.error='';
+    try{if(!window.SATAccountSync?.getConflicts)throw new Error('同步尚未就绪，请稍后重试。');syncConflictState.items=await window.SATAccountSync.getConflicts();syncConflictCount=syncConflictState.items.length;}
+    catch(error){syncConflictState.error=error.message;}
+    finally{syncConflictState.loading=false;if(appState.view==='syncConflicts')render();}
+  }
+  function syncConflictsPage(){
+    const state=syncConflictState;
+    return heading('同步冲突','',button('刷新','sync-conflicts-refresh',state.loading?'disabled':''))+`<div class="sat-sync-conflicts">${state.loading?'<p role="status">正在读取同步冲突…</p>':state.error?`<div class="app-notice" role="alert">${escape(state.error)}</div>`:state.items.length?state.items.map(item=>`<section class="sat-sync-conflict"><div class="sat-conflict-heading"><h2>${escape(item.label||'未命名记录')}</h2><span>${({attempt:'练习记录',attempts:'练习记录',setting:'练习设置',settings:'练习设置',wrongBook:'错题本',wrong:'错题本'})[item.kind]||'学习数据'}</span></div>${item.reason?`<p>${escape(item.reason)}</p>`:''}${item.canKeepLocal?'<p>保留本机版本会上传本机内容；采用服务器版本会替换这条本机内容。</p>':'<p>此记录已完成或已删除，不能用本机旧版本覆盖。</p>'}<div class="sat-conflict-actions">${button('下载本机副本','sync-conflict-download',`data-id="${escape(item.id)}"`)}${item.canKeepLocal?button('保留本机版本','sync-conflict-local',`data-id="${escape(item.id)}"`):''}${button('采用服务器版本','sync-conflict-server',`data-id="${escape(item.id)}"`,'app-button filled')}</div></section>`).join(''):'<div class="app-empty"><h3>没有待处理的同步冲突</h3></div>'}</div>`;
+  }
+  function attemptSections(a){
+    const explicit=(a.modules||[]).map(m=>m.section).filter(Boolean);
+    const sections=explicit.length?explicit:(a.questionSnapshots?.length?a.questionSnapshots:(a.questionIds||[]).map(question).filter(Boolean)).map(q=>SATSession.section(q));
+    const set=new Set(sections.map(section=>section==='Math'||section==='math'?'math':section==='Reading and Writing'||section==='reading-writing'?'reading-writing':null).filter(Boolean));
+    if(a.fullSAT){set.add('math');set.add('reading-writing');}return set;
+  }
+  function attemptSectionLabel(a){const sections=attemptSections(a);return sections.size===2?'英语 + 数学':sections.has('math')?'数学':sections.has('reading-writing')?'英语':'—';}
+  function attemptTable(attempts,showSection=false){
+    const headers=['Practice Name',...(showSection?['科目']:[]),'Date','Status','Questions','Correct','Incorrect','Unanswered','Time','Action'];
+    return table(headers,attempts.map(a=>`<tr><td class="practice-name">${escape(a.practiceName)}${a.status==='incomplete'?`<small>${Math.max(0,(a.totalQuestions||0)-(a.unansweredCount||0))} / ${a.totalQuestions||0} answered · ${a.untimed?'Untimed':clock(a.remainingTimeMs||0)+' remaining'}</small>`:''}</td>${showSection?`<td>${attemptSectionLabel(a)}</td>`:''}<td class="muted">${date(a.savedAt||a.completedAt)}</td><td>${statusBadge(a.status)}</td><td>${a.totalQuestions||0}</td><td class="correct-text">${a.status==='completed'?a.correctCount||0:'—'}</td><td class="incorrect-text">${a.status==='completed'?a.incorrectCount||0:'—'}</td><td class="muted">${a.unansweredCount||0}</td><td>${time(a.elapsedMs||0)}</td><td class="record-actions">${a.status==='completed'?button('Review','attempt',`data-id="${escape(a.id)}"`,'app-link'):a.resumable?button('Resume','resume',`data-id="${escape(a.id)}"`,'app-button resume-button'):'<small>Resume unavailable</small>'}${button('Delete','delete-attempt',`data-id="${escape(a.id)}"`,'app-link danger-text')}</td></tr>`).join(''));
+  }
+  function historyResults(){
+    const f=appState.historyFilters,search=f.search.trim().toLocaleLowerCase();
+    const rows=data.attempts.filter(a=>(!f.status||a.status===f.status)&&(!f.section||(f.section==='full'?attemptSections(a).size===2:attemptSections(a).has(f.section)))&&(!search||String(a.practiceName||'').toLocaleLowerCase().includes(search)));
+    const size=25,pages=Math.max(1,Math.ceil(rows.length/size));appState.historyPage=Math.max(1,Math.min(pages,appState.historyPage));
+    return `<div class="sat-history-count" role="status">${rows.length} 条记录</div>${rows.length?attemptTable(rows.slice((appState.historyPage-1)*size,appState.historyPage*size),true):'<div class="app-empty"><h3>暂无符合条件的练习记录</h3></div>'}${pages>1?`<div class="sat-history-pagination">${button('上一页','history-prev',appState.historyPage===1?'disabled':'')}<span>${appState.historyPage} / ${pages}</span>${button('下一页','history-next',appState.historyPage===pages?'disabled':'')}</div>`:''}`;
+  }
+  function historyPage(){
+    const f=appState.historyFilters,summary=accountSummary();
+    return heading('练习记录')+`<div class="app-stats dashboard-stats">${stat(summary.completed,'已完成练习')}${stat(summary.answered,'已答题目')}${stat(summary.accuracy,'客观题正确率')}</div><div class="app-filters sat-history-filters"><label>状态<select data-history-filter="status"><option value="">全部状态</option><option value="completed" ${f.status==='completed'?'selected':''}>已完成</option><option value="incomplete" ${f.status==='incomplete'?'selected':''}>未完成</option></select></label><label>科目<select data-history-filter="section"><option value="">全部科目</option><option value="reading-writing" ${f.section==='reading-writing'?'selected':''}>英语</option><option value="math" ${f.section==='math'?'selected':''}>数学</option><option value="full" ${f.section==='full'?'selected':''}>英语 + 数学</option></select></label><label>搜索<input type="search" data-history-filter="search" value="${escape(f.search)}" placeholder="搜索练习名称"></label></div><div id="satHistoryResults">${historyResults()}</div>`;
+  }
+  function updateHistoryResults(){const results=document.getElementById('satHistoryResults');if(results)results.innerHTML=historyResults();}
 
   const statusBadge=status=>`<span class="app-badge ${status==='completed'?'completed':'incomplete'}">${status==='completed'?'Completed':'Incomplete'}</span>`;
   function table(headers,body,className=''){return `<div class="app-table-wrap ${className}"><table class="app-table"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table></div>`;}
   function empty(title,subtitle){return `<div class="app-empty"><h3>${title}</h3><p>${subtitle}</p></div>`;}
-  function importPage(){
-    const valid=appState.importPreviews.filter(p=>!p.errors.length&&!p.imported).length;
-    return heading('Add Questions','')+
-      folderPanel()+`<div class="import-layout"><section><div id="dropZone" class="app-dropzone" tabindex="0" role="button" aria-label="Choose JSON files"><span class="upload-icon">${icon('add')}</span><h2>Drop JSON files here</h2><p>or</p><div class="pack-import-actions">${button('Choose Files','choose-files','','app-button filled')}${button('Choose SAT Pack Folder','choose-pack')}</div><input id="packFiles" type="file" webkitdirectory directory multiple hidden><p class="muted">.json files only · Multiple files supported</p><input id="jsonFiles" type="file" accept=".json,application/json" multiple hidden></div>
-      <div id="importPreview" aria-live="polite">${appState.importPreviews.map(p=>`<div class="import-file ${p.errors.length?'has-error':''}"><div><strong>${escape(p.fileName)}</strong><span>${p.count} questions detected · ${SATModel.formatDuration(p.defaultDurationSeconds||1920)}</span></div><div>${p.imported?'<span class="correct-text">✓ Imported</span>':p.errors.length?`<ul>${p.errors.map(e=>`<li>✕ ${escape(e)}</li>`).join('')}</ul>`:'<span class="correct-text">✓ Valid</span>'}</div>${p.warnings?.length?`<ul class="import-warnings">${p.warnings.map(w=>`<li>${escape(w)}</li>`).join('')}</ul>`:''}</div>`).join('')}</div>
-      <div class="import-actions">${button(appState.busy?'Processing…':'Import Questions','import',valid&&!appState.busy?'':'disabled','app-button filled')}${button('Practice Builder','practiceBuilder')}</div></section>
-      </div>`;
-  }
-  function folderPanel(){const b=SATBank.state;return `<section class="folder-panel"><h2>Question Bank Folder</h2><p>${b.mode==='local'?'Connected to this project’s <strong>question-bank/</strong>. New files load automatically; Choose Files and drag/drop save JSON here.':b.mode==='folder'?'JSON imports are saved in the connected folder. New files are scanned automatically while permission remains granted.':'To use <strong>question-bank/</strong> as your library, open <strong>Start SAT Practice.command</strong>, or click Choose Folder and select the project’s question-bank folder. Until connected, imports are saved in this browser only.'}</p><p role="status"><strong>${b.connected?'Connected: '+escape(b.name):'Not Connected'}</strong> · ${escape(b.message)}</p><div>${b.mode==='local'?'':button('Choose Folder','folder-choose',b.busy?'disabled':'')}${button('Sync Folder','folder-sync',b.busy||!b.name?'disabled':'')}</div>${b.updates.map(p=>`<div class="folder-update"><strong>${escape(p.fileName)} — Updated file detected</strong><p>Import as a new version. Existing practices and the previous source will be kept.</p>${button('Import New Version','folder-update',`data-id="${p.contentHash}"`)}</div>`).join('')}${b.errors.length?`<ul>${b.errors.map(e=>`<li>${escape(e)}</li>`).join('')}</ul>`:''}</section>`;}
-  async function connectFolder(){await SATBank.choose();await syncFolder(true);}
+  function importPage(){return heading('Add Questions');}
   async function syncFolder(interactive){await SATBank.sync(interactive);await refresh();if(interactive||appState.view==='importQuestions')render();}
   function filters(){const f=appState.filters;const types=[...new Set(libraryQuestions().map(q=>q.questionType).filter(Boolean))].sort();return `<div class="app-filters"><label>Section<select data-filter="section"><option value="">All Sections</option><option value="reading-writing" ${f.section==='reading-writing'?'selected':''}>Reading and Writing</option><option value="math" ${f.section==='math'?'selected':''}>Math</option></select></label><label>Source<select data-filter="sourceId"><option value="">All Sources</option>${(appState.view==='wrongBook'?data.sources:librarySources()).map(s=>`<option value="${s.id}" ${f.sourceId===s.id?'selected':''}>${escape(s.fileName)}</option>`).join('')}</select></label><label>Question Type<select data-filter="questionType"><option value="">All Types</option>${appState.view==='practiceBuilder'?`<option value="__wrongBook" ${f.questionType==='__wrongBook'?'selected':''}>Wrong Book</option>`:''}<option value="__uncategorized" ${f.questionType==='__uncategorized'?'selected':''}>Uncategorized</option>${types.map(t=>`<option value="${escape(t)}" ${f.questionType===t?'selected':''}>${escape(type(libraryQuestions().find(q=>q.questionType===t)))}</option>`).join('')}</select></label><label>Search<input type="search" data-filter="search" value="${escape(f.search)}" placeholder="Search passage, prompt, or choices"></label></div>`;}
   function filtered(items){const f=appState.filters,search=f.search.toLowerCase();return items.filter(q=>(!f.section||(SATSession.section(q)==='Math'?'math':'reading-writing')===f.section)&&(!f.sourceId||q.metadata.sourceId===f.sourceId)&&(!f.questionType||(f.questionType==='__wrongBook'?inWrong(q.id):f.questionType==='__uncategorized'?!q.questionType:q.questionType===f.questionType))&&(!search||[q.passage,q.prompt,...q.options].some(t=>t.toLowerCase().includes(search))));}
@@ -196,8 +246,9 @@ window.SATApp = (() => {
       // runtime and the active collection marker; do not run collection sync.
       for(const preview of previews){
         const previous=await SATStorage.get('sources',preview.sourceId);
-        if(previous&&previous.contentHash!==preview.contentHash)throw new Error('This package revision already exists with different content.');
-        if(!previous||previous.deleted){preview.collectionId=collectionId;await SATImporter.commit(preview);}
+        const previousHash=previous?.accountSnapshot?previous.originalContentHash:previous?.contentHash;
+        if(previous&&(!previous.accountSnapshot||previousHash)&&previousHash!==preview.contentHash)throw new Error('This package revision already exists with different content.');
+        if(!previous||previous.deleted||previous.accountSnapshot){preview.collectionId=collectionId;await SATImporter.commit(preview);}
       }
       await refresh();
       if(!stillHere())return;
@@ -213,7 +264,7 @@ window.SATApp = (() => {
     if(ids.some(id=>!id))throw new Error('The test collection is incomplete. Sync the library first.');
     await startPractice(ids,assessment.title,1920,{assessment});
   }
-  function readyPage(){const p=appState.activePractice;return `<section class="practice-ready"><h1>Practice Test</h1><div class="ready-card"><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></i><span>Timing</span></h2>${p.untimed?'':`<div class="ready-overtime"><button type="button" class="overtime-switch" data-action="allow-overtime" role="switch" aria-checked="${!!p.allowOvertime}" aria-describedby="overtimeDescription"><span>时间结束后不强制收卷</span><span class="switch-track" aria-hidden="true"></span></button><p id="overtimeDescription">开启后，倒计时归零仍可继续作答，直到手动提交。</p></div>`}<p>${p.untimed?'No time limit. Time spent on each question is still recorded, and Timer remains available.':'Practice tests are timed, but you can pause them.'} Choose Save and Exit to save your progress and resume in this browser.</p><div class="ready-facts"><strong>${p.questionIds.length} Questions</strong><strong>${p.untimed?'Untimed':SATModel.formatDuration(p.durationSeconds)}</strong><span>${p.modules.length} module(s) · ${[...new Set(p.modules.map(m=>m.section||'Reading and Writing'))].join(' + ')}</span>${p.modules.map((m,i)=>`<label class="module-time">${m.section||'Reading and Writing'} · Module ${m.moduleNumber||i+1} · ${m.end-m.start} questions ${p.standardTiming?`<strong>${m.durationSeconds/60}</strong>`:`<input ${p.untimed?'disabled':''} aria-label="Module ${i+1} minutes" type="number" min="1" max="64" step="0.1" value="${m.durationSeconds/60}" data-module-time="${i}">`} min</label>`).join('')}</div><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h13v18H5V2Zm3 5h7m-7 4h7m-7 4h3m2 4 2 2 6-6"/></svg></i><span>Results</span></h2><p>When you finish, return to <strong>Recent Practices</strong> to review your answers and explanations.</p><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 9h16m-8-2v8m0-2-5 9m5-9 5 9"/></svg></i><span>${p.modules.some(m=>m.section==='Math')?'Test Tools':'Reading Tools'}</span></h2><p>${p.modules.every(m=>m.section==='Math')?'Use Reference, image controls, Line Reader, and keyboard shortcuts.':'Use Highlights &amp; Notes for reading, Reference for math, and Line Reader or keyboard shortcuts.'}</p><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="11" rx="1"/><path d="M9 10V6a3 3 0 0 1 6 0m-3 8v4"/></svg></i><span>No Device Lock</span></h2><p>You can use other programs or apps during practice.</p></div><footer><div class="practice-timing-toggle" role="group" aria-label="Practice timing mode">${button('Timed','timing-mode',`data-mode="timed" aria-pressed="${!p.untimed}"`,'practice-timing-button')}${button('Untimed','timing-mode',`data-mode="untimed" aria-pressed="${!!p.untimed}"`,'practice-timing-button')}</div>${button('Back','ready-back','','primary')}${button('Next','begin','','primary')}</footer></section>`;}
+  function readyPage(){const p=appState.activePractice;return `<section class="practice-ready"><h1>Practice Test</h1>${appState.notice?`<p class="practice-start-error" role="alert">${escape(appState.notice)}</p>`:''}<div class="ready-card"><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></i><span>Timing</span></h2>${p.untimed?'':`<div class="ready-overtime"><button type="button" class="overtime-switch" data-action="allow-overtime" role="switch" aria-checked="${!!p.allowOvertime}" aria-describedby="overtimeDescription"><span>时间结束后不强制收卷</span><span class="switch-track" aria-hidden="true"></span></button><p id="overtimeDescription">开启后，倒计时归零仍可继续作答，直到手动提交。</p></div>`}<p>${p.untimed?'No time limit. Time spent on each question is still recorded, and Timer remains available.':'Practice tests are timed, but you can pause them.'} Choose Save and Exit to save your progress and resume in this browser.</p><div class="ready-facts"><strong>${p.questionIds.length} Questions</strong><strong>${p.untimed?'Untimed':SATModel.formatDuration(p.durationSeconds)}</strong><span>${p.modules.length} module(s) · ${[...new Set(p.modules.map(m=>m.section||'Reading and Writing'))].join(' + ')}</span>${p.modules.map((m,i)=>`<label class="module-time">${m.section||'Reading and Writing'} · Module ${m.moduleNumber||i+1} · ${m.end-m.start} questions ${p.standardTiming?`<strong>${m.durationSeconds/60}</strong>`:`<input ${p.untimed?'disabled':''} aria-label="Module ${i+1} minutes" type="number" min="1" max="64" step="0.1" value="${m.durationSeconds/60}" data-module-time="${i}">`} min</label>`).join('')}</div><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h13v18H5V2Zm3 5h7m-7 4h7m-7 4h3m2 4 2 2 6-6"/></svg></i><span>Results</span></h2><p>When you finish, return to <strong>Recent Practices</strong> to review your answers and explanations.</p><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 9h16m-8-2v8m0-2-5 9m5-9 5 9"/></svg></i><span>${p.modules.some(m=>m.section==='Math')?'Test Tools':'Reading Tools'}</span></h2><p>${p.modules.every(m=>m.section==='Math')?'Use Reference, image controls, Line Reader, and keyboard shortcuts.':'Use Highlights &amp; Notes for reading, Reference for math, and Line Reader or keyboard shortcuts.'}</p><h2><i class="ready-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="11" rx="1"/><path d="M9 10V6a3 3 0 0 1 6 0m-3 8v4"/></svg></i><span>No Device Lock</span></h2><p>You can use other programs or apps during practice.</p></div><footer><div class="practice-timing-toggle" role="group" aria-label="Practice timing mode">${button('Timed','timing-mode',`data-mode="timed" aria-pressed="${!p.untimed}"`,'practice-timing-button')}${button('Untimed','timing-mode',`data-mode="untimed" aria-pressed="${!!p.untimed}"`,'practice-timing-button')}</div>${button('Back','ready-back','','primary')}${button('Next','begin','','primary')}</footer></section>`;}
   function moduleOver(){return `<section class="module-over"><h1>This Module Is Over</h1><p>All your work has been saved.</p><p>You’ll move on automatically in just a moment.</p><p>Do not refresh this page or quit the app.</p><div class="module-spinner" role="status" aria-label="Returning to Dashboard">${Array.from({length:12},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div></section>`;}
   function transitionArt(stage){
     if(stage==='preparing')return `<svg class="preparing-art" viewBox="0 0 456 200" aria-hidden="true" focusable="false"><defs><clipPath id="preparingGlassClip"><path d="M192 64v14c0 20 11 30 25 35q9 3 0 7c-15 6-25 18-25 36v13h72v-13c0-18-10-30-25-36q-9-4 0-7c14-5 25-15 25-35V64Z"/></clipPath><clipPath id="preparingUpperClip"><rect class="preparing-upper-level" x="195" y="65" width="66" height="48"/></clipPath><clipPath id="preparingLowerClip"><rect class="preparing-lower-level" x="195" y="120" width="66" height="48"/></clipPath></defs><g class="preparing-cloud preparing-cloud-back" fill="#E3F5FB"><path d="M-55 104h105a12 12 0 0 0 0-24h-3c-6-12-21-14-29-3-7-7-19-5-24 3-16-6-31 4-30 17h-19Z"/></g><g class="preparing-cloud preparing-cloud-large" fill="#DDF8FD"><path d="M-92 160H82a24 24 0 0 0-7-47c-9-33-51-45-76-20-14-4-23-2-31 4-8-23-29-36-52-34-31 2-52 28-49 58-24 11-15 39 41 39Z"/></g><g class="preparing-cloud preparing-cloud-small" fill="#B9E7F5" opacity=".72"><path d="M-58 172H78a15 15 0 0 0 2-30c-5-15-20-20-32-12-11-16-35-18-49-3-16-5-30 1-35 14-22-3-36 15-22 31Z"/></g><g class="preparing-hourglass"><path d="M192 64v14c0 20 11 30 25 35q9 3 0 7c-15 6-25 18-25 36v13h72v-13c0-18-10-30-25-36q-9-4 0-7c14-5 25-15 25-35V64Z" fill="#DDF8FD" stroke="#565656" stroke-width="2"/><g clip-path="url(#preparingGlassClip)"><path d="M201 64h54v14c0 20-9 31-27 35-18-4-27-15-27-35Zm0 105h54v-13c0-20-9-31-27-35-18 4-27 15-27 35Z" fill="#BDEFFD"/><g clip-path="url(#preparingUpperClip)"><path d="M195 65h66v13c0 22-12 33-33 35-21-2-33-13-33-35Z" fill="#FF8065"/></g><g clip-path="url(#preparingLowerClip)"><path d="M195 168h66v-13c0-22-12-33-33-35-21 2-33 13-33 35Z" fill="#FF8065"/></g><g class="preparing-sand-stream" fill="#FA6A46"><circle class="preparing-grain" cx="228" cy="118" r="3.2"/><circle class="preparing-grain preparing-grain-second" cx="228" cy="118" r="2.5"/><circle class="preparing-grain preparing-grain-third" cx="228" cy="118" r="2"/></g><path d="M198 67v12c0 19 9 29 21 33m-21 54v-11c0-19 9-29 21-33" fill="none" stroke="#FFF" stroke-width="5" opacity=".42"/><path d="M258 67v12c0 19-9 29-21 33m21 54v-11c0-19-9-29-21-33" fill="none" stroke="#FFF" stroke-width="5" opacity=".42"/></g><path d="M187 49h82v15h-82Zm0 120h82v15h-82Z" fill="#8B8B8B" stroke="#565656" stroke-width="2" stroke-linejoin="round"/><path d="M189 51h78v5h-78Zm0 120h78v5h-78Z" fill="#BBB"/></g></svg>`;
@@ -230,17 +281,37 @@ window.SATApp = (() => {
     return `<main class="practice-transition${stage==='preparing'?' practice-transition--preparing':''}" aria-labelledby="transitionTitle">${confetti}<h1 id="transitionTitle" tabindex="-1">${title}</h1><div class="transition-card" role="status">${transitionArt(stage)}<p>${message}</p></div>${complete?`<div class="completion-actions">${button('View Your Score','attempt',`data-id="${escape(appState.activeAttemptId)}"`,'completion-button score-button')}${button('Go to Dashboard','dashboard','','completion-button dashboard-button')}</div>`:''}</main>`;
   }
   const transitionDelay=()=>new Promise(resolve=>setTimeout(resolve,500));
-  async function beginPractice(){
-    const p=appState.activePractice;if(!p||appState.phase!=='ready')return;
-    appState.phase='preparing';go('preparing');
-    let loaded;
-    try{
-      [loaded]=await Promise.all([Promise.all(p.questionIds.map(id=>SATStorage.get('questions',id))),transitionDelay()]);
-      if(loaded.some(q=>!q||q.deleted))throw new Error('One or more questions are no longer in your library.');
-    }catch(error){appState.phase='ready';go('ready');throw error;}
-    p.createdAt=Date.now();appState.phase='active';appState.view='exam';root.hidden=true;ExamEngine.start(loaded,p,finishAttempt);
+  async function acquirePracticeLock(){
+    if(!window.SATAccountSync?.acquirePractice)return false;
+    if(await window.SATAccountSync.acquirePractice()!==true)throw new Error('此账号已在另一标签页练习，请先在那里保存并退出。');
+    return true;
   }
-  async function resumePractice(id){const a=await SATStorage.get('attempts',id);if(!a?.resumable||a.status!=='incomplete'||!a.runtimeSnapshot)throw new Error('This practice cannot be resumed.');const loaded=await Promise.all(a.questionIds.map(id=>a.questionSnapshots?.find(q=>q.id===id)||SATStorage.get('questions',id)));if(loaded.some(q=>!q))throw new Error('A question could not be loaded.');const runtime=structuredClone(a.runtimeSnapshot);appState.activePractice=runtime.activePractice;appState.phase='active';appState.view='exam';root.hidden=true;ExamEngine.start(loaded,runtime.activePractice,finishAttempt,runtime);}
+  async function beginPractice(){
+    const p=appState.activePractice;if(!p||appState.phase!=='ready'||practiceOpening||ExamEngine.isRunning())return;
+    practiceOpening=true;let acquired=false,started=false;
+    try{
+      acquired=await acquirePracticeLock();
+      appState.phase='preparing';go('preparing');
+      const [loaded]=await Promise.all([Promise.all(p.questionIds.map(id=>SATStorage.get('questions',id))),transitionDelay()]);
+      if(loaded.some(q=>!q||q.deleted))throw new Error('One or more questions are no longer in your library.');
+      p.createdAt=Date.now();appState.phase='active';appState.view='exam';root.hidden=true;ExamEngine.start(loaded,p,finishAttempt);started=true;
+    }catch(error){appState.phase='ready';go('ready',{notice:error.message});throw error;}
+    finally{practiceOpening=false;if(acquired&&!started)window.SATAccountSync?.releasePractice?.();}
+  }
+  async function resumePractice(id){
+    if(practiceOpening||ExamEngine.isRunning())return;
+    practiceOpening=true;let acquired=false,started=false;
+    const previous={view:appState.view,phase:appState.phase,activePractice:appState.activePractice};
+    try{
+      acquired=await acquirePracticeLock();
+      const a=await SATStorage.get('attempts',id);
+      if(!a?.resumable||a.status!=='incomplete'||!a.runtimeSnapshot)throw new Error('This practice cannot be resumed.');
+      const loaded=await Promise.all(a.questionIds.map(id=>a.questionSnapshots?.find(q=>q.id===id)||SATStorage.get('questions',id)));
+      if(loaded.some(q=>!q))throw new Error('A question could not be loaded.');
+      const runtime=structuredClone(a.runtimeSnapshot);appState.activePractice=runtime.activePractice;appState.phase='active';appState.view='exam';root.hidden=true;ExamEngine.start(loaded,runtime.activePractice,finishAttempt,runtime);started=true;
+    }catch(error){Object.assign(appState,previous,{notice:error.message});root.hidden=false;document.querySelector('.exam-shell').hidden=true;render();throw error;}
+    finally{practiceOpening=false;if(acquired&&!started)window.SATAccountSync?.releasePractice?.();}
+  }
   const confirmDialog=document.createElement('dialog');confirmDialog.className='app-confirm';document.body.append(confirmDialog);
   function confirmAction(title,body,action,trigger){confirmDialog.innerHTML=`<h2>${escape(title)}</h2><p>${escape(body)}</p><p class="confirm-error" role="alert"></p><div><button class="app-button" data-cancel>Cancel</button><button class="app-button danger-text" data-confirm>Delete</button></div>`;confirmDialog.querySelector('[data-cancel]').onclick=()=>confirmDialog.close();confirmDialog.querySelector('[data-confirm]').onclick=async e=>{e.target.disabled=true;try{await action();confirmDialog.close();await refresh();render();}catch(error){confirmDialog.querySelector('.confirm-error').textContent=error.message;e.target.disabled=false;}};confirmDialog.onclose=()=>{if(trigger?.isConnected)trigger.focus();else root.querySelector('button')?.focus();};confirmDialog.showModal();confirmDialog.querySelector('[data-cancel]').focus();}
   async function finishAttempt({status,reason,runtime,examQuestions}){
@@ -269,27 +340,56 @@ window.SATApp = (() => {
   function wrongBook(){return heading('Wrong Book','Answered mistakes and questions you choose to keep.',`<span class="app-subject">SAT</span>`)+filters()+`<div id="questionResults">${wrongResults()}</div>`;}
   function wrongResults(){const items=filtered(activeWrongBook().map(w=>question(w.questionId)).filter(Boolean));return `<div class="results-heading">${items.length} Questions ${appState.filters.sourceId?button('Delete This Source','delete-source',`data-id="${appState.filters.sourceId}"`,'app-link danger-text'):''}</div>`+table(['Question','Source','Question Type','Added','Practice Count','Review','Remove'],rowsFor(items).map(q=>{const w=data.wrongBook.find(w=>w.questionId===q.id);return `<tr><td>${questionCell(q)}</td><td class="source-text">${escape(q.metadata.sourceFileName)}</td><td><span class="type-badge">${escape(type(q))}</span></td><td class="muted">${date(w.addedAt)}<small>${w.reason==='manual'?'Manually added':'Answered incorrectly'}</small></td><td>${counts.get(q.id)||0}</td><td>${button('Review','wrong-review',`data-id="${q.id}"`,'app-link')}</td><td>${button('Remove','remove-wrong',`data-id="${q.id}"`,'app-link danger-text')}</td></tr>`;}).join('')||'<tr><td colspan="7" class="empty-cell">No questions here. Only answered mistakes are added automatically.</td></tr>')+pagination(items.length);}
   function updateResults(){const results={practiceBuilder:builderResults,wrongBook:wrongResults};document.getElementById('questionResults').innerHTML=results[appState.view]();}
-  async function previewFiles(files,packMode=false){
-    appState.busy=true;appState.notice='Reading files…';render();
-    try{const known=new Set(data.sources.map(s=>s.contentHash));const previews=[];
-      if(packMode)previews.push(...await SATPack.previewFiles(files,known));
-      else for(const file of files){const result=await SATImporter.preview(file,known);if(!result.errors.length)known.add(result.contentHash);previews.push(result);}
-      appState.importPreviews=previews;appState.notice='';
-    }catch(error){appState.notice=error.message;}finally{appState.busy=false;if(appState.view==='importQuestions')render();}
-  }
-  async function importFiles(){
-    if(appState.importPreviews.some(p=>!p.packIdentity&&!p.errors.length&&!p.imported))await SATBank.prepareWrite();appState.busy=true;render();let added=0,saved=0;
-    try{for(const p of appState.importPreviews){if(p.errors.length||p.imported)continue;try{if(!p.packIdentity&&await SATBank.saveFile(p))saved++;added+=await SATImporter.commit(p);p.imported=true;}catch(error){p.errors.push((p.savedToBank?'JSON saved to question-bank; browser import failed. Sync Folder to retry. ':'')+(error.name==='ConstraintError'?'This question set has already been imported.':error.message));}}
-    await refresh();appState.notice=added?`${added} questions added. ${saved?`${saved} JSON file(s) saved to ${SATBank.state.name}.`:'Browser only — connect question-bank to save JSON files on disk.'}`:'No questions were added. Check the messages below.';
-    }finally{appState.busy=false;render();}
-  }
   async function toggleWrong(id){if(inWrong(id))await SATStorage.removeFromWrongBook(id);else await SATStorage.addToWrongBook({questionId:id,addedAt:Date.now(),reason:'manual',sourceAttemptId:appState.activeAttemptId||null});await refresh();render();}
+  root.addEventListener('click',async event=>{
+    if(!root.hasAttribute('data-sat-management'))return;
+    if(event.target.closest('#satAccountButton')){setAccountMenu(!accountMenuOpen);return;}
+    const target=event.target.closest('[data-account-action]');if(!target||target.disabled)return;
+    const action=target.dataset.accountAction;
+    if(!['sync','logout'].includes(action)){setAccountMenu(false);go(action);return;}
+    try{
+      if(action==='sync'){
+        if(!window.SATAccountSync?.sync)throw new Error('同步尚未就绪，请稍后重试。');
+        accountSyncBusy=true;target.disabled=true;target.textContent='同步中…';
+        await window.SATAccountSync.sync();await refresh();
+        if(root.hasAttribute('data-sat-management'))render();
+      }else{
+        accountLogoutBusy=true;target.disabled=true;target.textContent='正在退出…';
+        if(window.SATAccountSync?.logout)await window.SATAccountSync.logout();
+        else throw new Error('同步尚未就绪，请稍后再退出。');
+      }
+    }catch(error){appState.notice=error.message;if(root.hasAttribute('data-sat-management'))render();}
+    finally{accountSyncBusy=false;accountLogoutBusy=false;const sync=root.querySelector('[data-account-action="sync"]'),logout=root.querySelector('[data-account-action="logout"]');if(sync){sync.disabled=false;sync.textContent='立即同步';}if(logout){logout.disabled=false;logout.textContent='退出登录';}updateAccountSyncStatus();}
+  });
+  document.addEventListener('click',event=>{if(accountMenuOpen&&!event.target.closest('.sat-account'))setAccountMenu(false);});
+  document.addEventListener('keydown',event=>{
+    if(!root.hasAttribute('data-sat-management'))return;
+    const trigger=document.getElementById('satAccountButton'),menu=document.getElementById('satAccountMenu');if(!trigger||!menu)return;
+    if(event.key==='Escape'&&accountMenuOpen){event.preventDefault();setAccountMenu(false);trigger.focus();return;}
+    if(event.target===trigger&&['ArrowDown','ArrowUp'].includes(event.key)){event.preventDefault();setAccountMenu(true,true);if(event.key==='ArrowUp')menu.querySelector('[data-account-action="logout"]')?.focus();return;}
+    if(!accountMenuOpen||!menu.contains(event.target)||!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;
+    event.preventDefault();const items=[...menu.querySelectorAll('a[href],button:not(:disabled)')],index=items.indexOf(document.activeElement);
+    items[event.key==='Home'?0:event.key==='End'?items.length-1:(index+(event.key==='ArrowDown'?1:-1)+items.length)%items.length]?.focus();
+  });
+  root.addEventListener('focusout',event=>{if(accountMenuOpen&&event.target.closest('.sat-account')&&event.relatedTarget&&!event.relatedTarget.closest('.sat-account'))setAccountMenu(false);});
+  window.addEventListener('sat-account-sync-status',updateAccountSyncStatus);
+  window.addEventListener('sat-account-sync-applied',async()=>{try{await refresh();if(['dashboard','history','wrongBook','startPractice'].includes(appState.view)&&!appState.busy)render();}catch(error){if(root.hasAttribute('data-sat-management')){appState.notice=error.message;render();}}});
+  document.addEventListener('platform:user',()=>{if(root.hasAttribute('data-sat-management')){const account=root.querySelector('.sat-account');if(account)account.outerHTML=accountMenu();}});
   root.addEventListener('click',async event=>{
     const target=event.target.closest('[data-action]');if(!target||target.disabled)return;
     const action=target.dataset.action,id=target.dataset.id;
     try{
-      if(['dashboard','importQuestions','questionLibrary','startPractice','practiceBuilder','wrongBook','timingSettings'].includes(action)){appState.notice='';go(action);return;}
+      if(['dashboard','history','importQuestions','questionLibrary','startPractice','practiceBuilder','wrongBook','timingSettings'].includes(action)){appState.notice='';go(action);return;}
       switch(action){
+        case 'sync-conflicts-refresh':await loadSyncConflicts();break;
+        case 'sync-conflict-download':target.disabled=true;try{await window.SATAccountSync.downloadConflict(id);}finally{if(target.isConnected)target.disabled=false;}break;
+        case 'sync-conflict-local':case 'sync-conflict-server':{
+          const item=syncConflictState.items.find(row=>String(row.id)===id);if(conflictResolving||!item||action==='sync-conflict-local'&&!item.canKeepLocal)return;
+          conflictResolving=true;root.querySelectorAll('[data-action^=sync-conflict-]').forEach(button=>{button.disabled=true;});
+          try{await window.SATAccountSync.resolveConflict(id,action==='sync-conflict-local'?'local':'server');await refresh();await loadSyncConflicts();}finally{conflictResolving=false;root.querySelectorAll('[data-action^=sync-conflict-]').forEach(button=>{button.disabled=false;});}
+          break;
+        }
+        case 'history-prev':case 'history-next':appState.historyPage+=action==='history-next'?1:-1;updateHistoryResults();document.getElementById('satHistoryResults')?.scrollIntoView({block:'start'});break;
         case 'builder-library-refresh':if(!appState.busy)await loadBuilderLibrary();break;
         case 'library-category':if(!appState.busy){SATLibrary.setCategory(target.dataset.category);render();root.querySelector('[data-action="library-category"][aria-pressed="true"]')?.focus();}break;
         case 'library-select':if(!appState.busy){SATLibrary.select(id);render();root.querySelector('.is-selected .sat-library-select')?.focus();}break;
@@ -297,14 +397,7 @@ window.SATApp = (() => {
         case 'library-start':case 'library-restart':await startLibraryCollection(id);break;
         case 'library-review':{const a=data.attempts.find(a=>a.libraryCollectionId===id&&a.status==='completed');if(!a)throw new Error('No completed practice is available for this test.');appState.activeAttemptId=a.id;reviewOverviewScroll=null;go('attemptOverview');break;}
         case 'library-resume':{const a=data.attempts.find(a=>a.libraryCollectionId===id&&a.status==='incomplete'&&a.resumable);if(!a)throw new Error('No saved practice is available for this test.');await resumePractice(a.id);break;}
-        case 'bank-manage':go('importQuestions');break;
-        case 'folder-choose':await connectFolder();break;
-        case 'folder-sync':await syncFolder(true);break;
-        case 'folder-update':{const p=SATBank.state.updates.find(p=>p.contentHash===id);if(p){await SATImporter.commit(p);SATBank.state.updates=SATBank.state.updates.filter(x=>x!==p);await SATBank.sync(false);await refresh();render();}break;}
         case 'collection-test':await startCollectionTest();break;
-        case 'choose-pack':document.getElementById('packFiles').click();break;
-        case 'choose-files':document.getElementById('jsonFiles').click();break;
-        case 'import':await importFiles();break;
         case 'detail':appState.reviewQuestionId=id;appState.returnView=appState.view;go('questionDetail');break;
         case 'detail-back':go(appState.returnView);break;
         case 'builder-custom':appState.builderMode='custom';appState.page=1;render();break;
@@ -340,15 +433,10 @@ window.SATApp = (() => {
     finally{el.disabled=false;}
   }
   async function awaitConfig(el){try{await SATSettings.setConfig({moduleQuestionLimit:el.value});root.querySelectorAll('[data-module-limit]').forEach(e=>e.value=SATSettings.config.moduleQuestionLimit);document.getElementById('configStatus').textContent='Saved. Applies to new practices.';}catch(e){appState.notice=e.message;render();}}
-  root.addEventListener('input',event=>{const el=event.target;if(el.dataset.target){el.nextElementSibling.textContent=SATModel.formatDuration(el.value);return;}if(el.dataset.duration){if(!el.dataset.part)changeDuration(el);return;}if(el.id==='practiceName'){appState.practiceName=el.value;appState.practiceNameEdited=!!el.value.trim();return;}if(el.dataset.filter==='search'){appState.filters.search=el.value;appState.page=1;updateResults();}});
+  root.addEventListener('input',event=>{const el=event.target;if(el.dataset.historyFilter==='search'){appState.historyFilters.search=el.value;appState.historyPage=1;updateHistoryResults();return;}if(el.dataset.target){el.nextElementSibling.textContent=SATModel.formatDuration(el.value);return;}if(el.dataset.duration){if(!el.dataset.part)changeDuration(el);return;}if(el.id==='practiceName'){appState.practiceName=el.value;appState.practiceNameEdited=!!el.value.trim();return;}if(el.dataset.filter==='search'){appState.filters.search=el.value;appState.page=1;updateResults();}});
   root.addEventListener('focusout',event=>{const el=event.target;if(el.dataset.part&&!el.closest('.duration-parts').contains(event.relatedTarget))changeDuration(el);});
   root.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.dataset.part){event.preventDefault();changeDuration(event.target);}});
-  root.addEventListener('change',event=>{const el=event.target;if(el.id==='packFiles'){previewFiles([...el.files],true);return;}if(el.id==='practiceKind'){appState.practiceKind=el.value;if(el.value==='full-sat')appState.filters.section='';render();return;}if(el.id==='examTimerWarning'){saveTimerWarning(el);return;}if(el.hasAttribute('data-module-limit')){awaitConfig(el);return;}if(el.hasAttribute('data-module-time')){const p=appState.activePractice;if(appState.phase!=='ready'||!p||p.standardTiming||p.fullSAT||!p.modules[Number(el.dataset.moduleTime)])return;p.modules[Number(el.dataset.moduleTime)].durationSeconds=SATModel.clampDuration(Number(el.value)*60);p.durationSeconds=p.modules.reduce((sum,m)=>sum+m.durationSeconds,0);render();return;}if(el.dataset.target){SATSettings.setTarget(el.dataset.target,el.value).catch(error=>{appState.notice=error.message;render();});return;}if(el.dataset.duration){if(!el.dataset.part)changeDuration(el);return;}if(el.id==='jsonFiles'){previewFiles([...el.files]);return;}if(el.dataset.filter && el.dataset.filter!=='search'){appState.filters[el.dataset.filter]=el.value;appState.page=1;updateResults();if(appState.view==='practiceBuilder')syncPracticeName();}if(el.dataset.selectQuestion){if(el.checked)appState.selected.add(el.dataset.selectQuestion);else appState.selected.delete(el.dataset.selectQuestion);syncSelection();}if(el.name==='practice-source'){appState.selectedSource=el.value;render();}});
-  root.addEventListener('click',event=>{if(event.target.closest('#dropZone')&&!event.target.closest('button,input'))document.getElementById('jsonFiles').click();});
-  root.addEventListener('keydown',event=>{if(event.target.id==='dropZone'&&['Enter',' '].includes(event.key)){event.preventDefault();document.getElementById('jsonFiles').click();}});
-  root.addEventListener('dragover',event=>{const zone=event.target.closest('#dropZone');if(zone){event.preventDefault();zone.classList.add('drag-over');}});
-  root.addEventListener('dragleave',event=>{const zone=event.target.closest('#dropZone');if(zone&&!zone.contains(event.relatedTarget))zone.classList.remove('drag-over');});
-  root.addEventListener('drop',event=>{const zone=event.target.closest('#dropZone');if(zone){event.preventDefault();zone.classList.remove('drag-over');previewFiles([...event.dataTransfer.files]);}});
+  root.addEventListener('change',event=>{const el=event.target;if(el.dataset.historyFilter&&el.dataset.historyFilter!=='search'){appState.historyFilters[el.dataset.historyFilter]=el.value;appState.historyPage=1;updateHistoryResults();return;}if(el.id==='practiceKind'){appState.practiceKind=el.value;if(el.value==='full-sat')appState.filters.section='';render();return;}if(el.id==='examTimerWarning'){saveTimerWarning(el);return;}if(el.hasAttribute('data-module-limit')){awaitConfig(el);return;}if(el.hasAttribute('data-module-time')){const p=appState.activePractice;if(appState.phase!=='ready'||!p||p.standardTiming||p.fullSAT||!p.modules[Number(el.dataset.moduleTime)])return;p.modules[Number(el.dataset.moduleTime)].durationSeconds=SATModel.clampDuration(Number(el.value)*60);p.durationSeconds=p.modules.reduce((sum,m)=>sum+m.durationSeconds,0);render();return;}if(el.dataset.target){SATSettings.setTarget(el.dataset.target,el.value).catch(error=>{appState.notice=error.message;render();});return;}if(el.dataset.duration){if(!el.dataset.part)changeDuration(el);return;}if(el.dataset.filter && el.dataset.filter!=='search'){appState.filters[el.dataset.filter]=el.value;appState.page=1;updateResults();if(appState.view==='practiceBuilder')syncPracticeName();}if(el.dataset.selectQuestion){if(el.checked)appState.selected.add(el.dataset.selectQuestion);else appState.selected.delete(el.dataset.selectQuestion);syncSelection();}if(el.name==='practice-source'){appState.selectedSource=el.value;render();}});
   function hydratePackContent(){
     root.querySelectorAll('[data-pack-question]').forEach(container=>{
       const q=appState.view==='questionReview'?attemptQuestion(container.dataset.packQuestion):question(container.dataset.packQuestion),key=container.dataset.packKey;if(!q?.packContent)return;
@@ -357,14 +445,19 @@ window.SATApp = (() => {
       SATContent.render(container,blocks,{assets:q.packAssets,imageFactory:math?options=>SATMathTools.createImage(options):undefined});
     });
   }
-  function breakPage(){return `<section class="sat-break"><div id="breakBattery" class="break-battery"></div><div class="break-time-column"><div class="break-countdown"><h2>Remaining Break Time:</h2><div id="breakTime" role="timer">10:00</div></div><button class="resume-testing" id="resumeTesting">Resume Testing</button></div><div class="break-information"><h1>Practice Test Break</h1><p>You can resume this practice test as soon as you’re ready to move on. On test day, you’ll wait until the clock counts down. Read below to see how breaks work on test day.</p><hr><h2>Take a Break: Do Not Close Your Device</h2><p>After the break, a <strong>Resume Testing Now</strong> button will appear and you’ll start the next section.</p><strong>Follow these rules during the break:</strong><ol><li>Do not disturb students who are still testing.</li><li>Do not exit the app or close your laptop.</li><li>Do not access phones, smartwatches, textbooks, notes, or the internet.</li><li>Do not eat or drink near any testing device.</li><li>Do not speak in the testing room; outside the room, do not discuss the exam with anyone.</li></ol></div></section>`;}
+  function studentFooter(){const name=SATSession.getStudentName();return `<footer data-sat-student-name title="${escape(name)}">${escape(name)}</footer>`;}
+  document.addEventListener('platform:user',()=>{
+    const name=SATSession.getStudentName();
+    root.querySelectorAll('[data-sat-student-name]').forEach(el=>{el.textContent=name;el.title=name;});
+  });
+  function breakPage(){return `<section class="sat-break"><div id="breakBattery" class="break-battery"></div><div class="break-time-column"><div class="break-countdown"><h2>Remaining Break Time:</h2><div id="breakTime" role="timer">10:00</div></div><button class="resume-testing" id="resumeTesting">Resume Testing</button></div><div class="break-information"><h1>Practice Test Break</h1><p>You can resume this practice test as soon as you’re ready to move on. On test day, you’ll wait until the clock counts down. Read below to see how breaks work on test day.</p><hr><h2>Take a Break: Do Not Close Your Device</h2><p>After the break, a <strong>Resume Testing Now</strong> button will appear and you’ll start the next section.</p><strong>Follow these rules during the break:</strong><ol><li>Do not disturb students who are still testing.</li><li>Do not exit the app or close your laptop.</li><li>Do not access phones, smartwatches, textbooks, notes, or the internet.</li><li>Do not eat or drink near any testing device.</li><li>Do not speak in the testing room; outside the room, do not discuss the exam with anyone.</li></ol></div>${studentFooter()}</section>`;}
   window.addEventListener('sat-section-break',event=>{
     clearInterval(breakTicker);breakBattery?.destroy();appState.phase='section-break';go('sectionBreak');breakBattery=SATMathTools.mountBattery(document.getElementById('breakBattery'));
     const update=()=>{const seconds=Math.max(0,Math.ceil((event.detail.endTimestamp-Date.now())/1000)),time=document.getElementById('breakTime'),button=document.getElementById('resumeTesting');if(!time)return;time.textContent=`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;button.disabled=false;if(!seconds)button.textContent='Resume Testing Now';};
     update();breakTicker=setInterval(update,250);
     document.getElementById('resumeTesting').onclick=()=>event.detail.resume();
   });
-  function sectionReadyPage(){return `<section class="sat-math-ready"><div id="readyBattery" class="ready-battery"></div><div class="math-ready-content"><h1 tabindex="-1">Resume Testing Now</h1><p>Your testing timer has not started counting down yet.</p><button class="resume-testing" id="startMathSection">Resume Testing</button></div><footer>Student</footer></section>`;}
+  function sectionReadyPage(){return `<section class="sat-math-ready"><div id="readyBattery" class="ready-battery"></div><div class="math-ready-content"><h1 tabindex="-1">Resume Testing Now</h1><p>Your testing timer has not started counting down yet.</p><button class="resume-testing" id="startMathSection">Resume Testing</button></div>${studentFooter()}</section>`;}
   window.addEventListener('sat-section-ready',event=>{
     clearInterval(breakTicker);breakBattery?.destroy();appState.phase='section-ready';go('sectionReady');breakBattery=SATMathTools.mountBattery(document.getElementById('readyBattery'));
     root.querySelector('h1').focus({preventScroll:true});
@@ -381,15 +474,24 @@ window.SATApp = (() => {
   });
   const ready=(async()=>{
     try{
-      await SATBank.init();if(SATBank.state.mode==='browser'&&questions.length)await SATStorage.migrateDefaults(questions);await SATStorage.migrateModel();await SATSettings.load();await refresh();await syncFolder(false);
+      await SATBank.init();if(SATBank.state.mode==='browser'&&questions.length)await SATStorage.migrateDefaults(questions);await SATStorage.migrateModel();await refresh();await syncFolder(false);
+      await window.SATAccountSync?.initialize();await SATSettings.load();await refresh();
       let runtime;try{runtime=JSON.parse(localStorage.getItem('sat-reading-practice-v1'));}catch{}
-      const p=SATModel.normalizePractice(runtime?.activePractice);
+      const p=SATModel.normalizePractice(runtime?.activePractice);let startupNotice='';
       if(p && Array.isArray(p.questionIds) && p.questionIds.length && runtime.questionStates?.length===p.questionIds.length && Number.isFinite(runtime.endTimestamp) && runtime.currentQuestion>=0 && runtime.currentQuestion<p.questionIds.length){
-        const previous=await SATStorage.get('attempts',p.id);
-        if(previous?.status==='completed')localStorage.removeItem('sat-reading-practice-v1');
-        else{const loaded=await Promise.all(p.questionIds.map(id=>SATStorage.get('questions',id)));if(loaded.every(Boolean)){appState.view='exam';appState.phase='active';appState.activePractice=p;root.hidden=true;ExamEngine.start(loaded,p,finishAttempt,runtime);return;}}
+        let acquired=false,started=false;practiceOpening=true;
+        try{
+          acquired=await acquirePracticeLock();
+          const previous=await SATStorage.get('attempts',p.id);
+          if(previous?.status==='completed')localStorage.removeItem('sat-reading-practice-v1');
+          else{
+            const loaded=await Promise.all(p.questionIds.map(id=>SATStorage.get('questions',id)));
+            if(loaded.every(Boolean)){appState.view='exam';appState.phase='active';appState.activePractice=p;root.hidden=true;ExamEngine.start(loaded,p,finishAttempt,runtime);started=true;return;}
+          }
+        }catch(error){startupNotice=error.message;appState.phase='draft';appState.activePractice=null;}
+        finally{practiceOpening=false;if(acquired&&!started)window.SATAccountSync?.releasePractice?.();}
       }
-      go('dashboard');
+      go('dashboard',{notice:startupNotice});
     }catch(error){root.innerHTML=`<main class="app-main"><h1>Could not open your library</h1><p>${escape(error.message)}</p><p>Allow browser storage for this page, then reload.</p></main>`;throw error;}
   })();
   async function autoSync(){

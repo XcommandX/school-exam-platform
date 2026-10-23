@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-c000586e84784465bea2ab2bc4d04389-math-single-choice",
+  "revision": 1,
+  "title": "2023年10月第1套数学（只有1个Module） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-27e58c2df7789bac4aa89906a368d80dbb6a85fcba50f76a9adf3e679835939e",
+      "path": "assets/27e58c2df7789bac4aa89906a368d80dbb6a85fcba50f76a9adf3e679835939e.png",
+      "mediaType": "image/png",
+      "sha256": "27e58c2df7789bac4aa89906a368d80dbb6a85fcba50f76a9adf3e679835939e",
+      "byteLength": 36494,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c000586e84784465bea2ab2bc4d04389",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-12652843457efec24bf634554566eacfeb582a920f79856081da8e01f0d2f2fb",
+      "path": "assets/12652843457efec24bf634554566eacfeb582a920f79856081da8e01f0d2f2fb.png",
+      "mediaType": "image/png",
+      "sha256": "12652843457efec24bf634554566eacfeb582a920f79856081da8e01f0d2f2fb",
+      "byteLength": 21636,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c000586e84784465bea2ab2bc4d04389",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "id": "asset-071af65d5d81b92576f09bd94f087e0f58f77fdc797ab48e3bacf63a348e5ff1",
+      "path": "assets/071af65d5d81b92576f09bd94f087e0f58f77fdc797ab48e3bacf63a348e5ff1.png",
+      "mediaType": "image/png",
+      "sha256": "071af65d5d81b92576f09bd94f087e0f58f77fdc797ab48e3bacf63a348e5ff1",
+      "byteLength": 76422,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-c000586e84784465bea2ab2bc4d04389",
+        "sourceQuestionId": "m1-q15"
+      }
+    }
+  ]
+}

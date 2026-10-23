@@ -11,7 +11,7 @@ window.SATBank=(()=>{
  async function init(){
   handle=null;token='';Object.assign(state,{connected:false,writable:false,mode:'browser',name:'',updates:[],errors:[],collectionId:null,assessment:null});
   if(location.protocol==='http:'&&location.hostname==='127.0.0.1'){
-   try{const info=await api('/status');if(info.service==='sat-question-bank-v1'){token=info.token;Object.assign(state,{mode:'local',connected:true,writable:true,name:'question-bank',message:'Project question-bank connected. Imports are saved to this folder.'});return;}}catch{}
+   try{const info=await api('/status');if(info.service==='sat-question-bank-v1'){token=info.token;Object.assign(state,{mode:'local',connected:true,writable:info.writable!==false,name:'question-bank',message:info.writable===false?'Project question-bank connected. Shared imports require an administrator.':'Project question-bank connected. Imports are saved to this folder.'});return;}}catch{}
   }
   if(!window.showDirectoryPicker){state.message='Folder access is unavailable here. Open Start SAT Practice.command for automatic project-folder storage. Choose Files still imports into this browser only.';return;}
   try{handle=(await SATStorage.get('settings','questionBankFolder'))?.value||null;if(handle){state.mode='folder';state.name=handle.name;state.connected=(await handle.queryPermission({mode:'read'}))==='granted';state.writable=(await handle.queryPermission({mode:'readwrite'}))==='granted';state.message=state.connected?'Folder connected. Enable write access when importing to save JSON files.':'Click Sync Folder to reconnect.';}else state.message='Direct html/index.html opening cannot read its neighboring folder automatically. Choose question-bank once and allow access, or use Start SAT Practice.command.';}
@@ -90,7 +90,8 @@ window.SATBank=(()=>{
  }
  // Called from Import before unrelated async work to retain the user gesture.
  async function prepareWrite(){
-  if(state.mode==='local'||!handle)return;
+  if(state.mode==='local'){if(!state.writable)throw new Error('Only administrators can import into the shared question bank.');return;}
+  if(!handle)return;
   let permission=await handle.queryPermission({mode:'readwrite'});
   if(permission!=='granted')permission=await handle.requestPermission({mode:'readwrite'});
   state.writable=permission==='granted';if(!state.writable)throw new Error('Write access was not granted. No questions were imported. Allow write access to save into the connected folder.');

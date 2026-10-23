@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-81872a8d5f684a29a7abdf41dc366c29-math-single-choice",
+  "revision": 1,
+  "title": "Bluebook Practice 1 数学（Routing+Hard） · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-ee8273344e9847c17e7d226ef7b28da5e31cddb51ad189175ce670bf35fa99e3",
+      "path": "assets/ee8273344e9847c17e7d226ef7b28da5e31cddb51ad189175ce670bf35fa99e3.png",
+      "mediaType": "image/png",
+      "sha256": "ee8273344e9847c17e7d226ef7b28da5e31cddb51ad189175ce670bf35fa99e3",
+      "byteLength": 7894,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "id": "asset-832cf1eb7047cf09afa6042ec77778a056625d013556ab93fd86bb02b3519c53",
+      "path": "assets/832cf1eb7047cf09afa6042ec77778a056625d013556ab93fd86bb02b3519c53.png",
+      "mediaType": "image/png",
+      "sha256": "832cf1eb7047cf09afa6042ec77778a056625d013556ab93fd86bb02b3519c53",
+      "byteLength": 27276,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "id": "asset-2b1d2fb92ad9a3b54030bd71b298aaca05d00f09e10e9c6973b0765fb856f883",
+      "path": "assets/2b1d2fb92ad9a3b54030bd71b298aaca05d00f09e10e9c6973b0765fb856f883.png",
+      "mediaType": "image/png",
+      "sha256": "2b1d2fb92ad9a3b54030bd71b298aaca05d00f09e10e9c6973b0765fb856f883",
+      "byteLength": 22982,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+        "sourceQuestionId": "m2-q14"
+      }
+    }
+  ]
+}

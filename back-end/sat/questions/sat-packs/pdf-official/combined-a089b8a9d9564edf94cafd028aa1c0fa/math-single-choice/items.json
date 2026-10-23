@@ -1,0 +1,938 @@
+{
+  "items": [
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q1",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1635ac1558063cdd4703eea136f0bf21898de5de04481cd2e0f249b9fe777aae",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph shows the estimated concentration of a certain strain of bacteria, in millions of cells\nper $\\mathrm{mL}$ of nutrient medium, over time $x$, in minutes since the initial measurement. According to\nthe graph, which of the following is closest to the number of minutes it took for the estimated\nconcentration of the bacteria to increase from the initial concentration to 20 million cells per $\\mathrm{mL}$\nof nutrient medium?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q1"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$70$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$35$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$10$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$7$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q2",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Area (square feet)\nWater (gallons)\n$$560$$\n$$1,008$$\n$$840$$\n$$1,512$$\n$$1,120$$\n$$2,016$$\nThe roofs on the buildings of a public garden are designed to allow water to drain into the garden.\nThe table shows the relationship between the area $x$, in square feet, of a roof and the amount of\nwater $f(x)$, in gallons, drained from the roof into the garden over a certain period of time. Which\nequation could define $f$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q2"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=0.6x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=1.8x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=504.0x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f(x)=1,008.0x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q3",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each day Daniela takes a 30-minute morning walk. The equation $s=70 m+285$ models the\ntotal number of steps, $s$, Daniela has taken one morning $m$ minutes after the start of her walk,\nwhere $0 \\le m \\le 30$.Which is the best interpretation of 285 in this context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q3"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated total number of steps Daniela will take during her walk"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated total number of steps Daniela will have taken after her walk"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated number of steps Daniela takes each minute during her walk"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated number of steps Daniela had taken that morning before starting her walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q4",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$y=0.25x2-7.5x+95.25$$\nThe equation gives the estimated stock price $y$, in dollars, for a certain company $x$ days after the\ncompany went public, where $0\\le x\\le 20$.Which statement is the best interpretation of $(x,y)=(1,88)$ in\nthis context?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q4"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1 day after the company went public, the company’$s$ estimated stock price is \\$88.."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "88 days after the company went public, the company’$s$ estimated stock price is \\$1."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The company’$s$ estimated stock price increased \\$88. every day after the company went public."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The company’$s$ estimated stock price increased \\$1 every 88 days after the company went\npublic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q5",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Nicole walks at a speed of 2 miles per hour and runs at a speed of 7 miles per hour. She walks for\n$w$ hours and runs for $r$ hours for a combined total of 13 miles. Which equation represents this\nsituation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q5"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2 w+7 r=13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{2} w+\\frac{1}{7} r=13$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{1}{2} w+\\frac{1}{7} r=117$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$2 w+7 r=117$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q8",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-3f54fc0ca9957a890b7e29eb9b12dfe47a41535dfa3de4fb5b5beda801510448",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.\n$$\\triangle$$\n$$QPR$$\nis similar to\n$$\\triangle$$\n$STR$.\nThe lengths represented by $ST$―,$QP$―,$PR$―, and $QR$― in the\nfigure are 6, 16, 30, and 34, respectively. What is the length of $SR$―?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q8"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{204}{16}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{204}{30}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{96}{30}$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$\\frac{96}{34}$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q9",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A total of 3 squares each have side length $r$. A total of 6 equilateral triangles each have side\nlength $t$. None of these squares and triangles shares a side. The sum of the perimeters of all these\nsquares and triangles is 270. Which equation represents this situation?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q9"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$9 r+24 t=270$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$3 r+6 t=270$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$12 r+18 t=270$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$6 r+3 t=270$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q10",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, $x$ and $y$."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-5138f9b5a48ce90f4970a58acaabb292b1137f90b57fbfe51697e5c43c6b22cf",
+          "role": "illustration",
+          "alt": "Source question content."
+        },
+        {
+          "type": "markdown",
+          "text": "Which equation is the most appropriate linear model for the data shown?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q10"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=30.38+15.12x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=15.12x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=30.38+0.76x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$y=0.76x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q11",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$36(x-1)=4(-9+9x)$$\nHow many solutions does the given equation have?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q11"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Zero"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly one"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Exactly two"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Infinitely many"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q12",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$10yz-9xz=10xy-z$$\nThe given equation relates the real numbers $x$, $y$, and $z$, where $x\\lt 0$ and $y\\gt 0$.Which equation\ncorrectly expresses $z$ in terms of $x$ and $y$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q12"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$z=10xy/10y-9x+1$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$z=10xy/10y-9x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$z=-29xy$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$z=9x$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q13",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $f$ gives the product of a number, $x$, and a number that is 62 more than $x$. Which\nequation defines $f$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q13"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( x )=x 2+x+62$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( x )=x 2+62$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( x )=x 2+62 x$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$f ( x )=x 2+62 x+62$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q14",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For a certain circuit, its power $P$, in watts; current $C$, in amperes; voltage $V$, in volts; and\nresistance $R$, in ohms, are related as $CV2/P=P R$ , where $P$, $C$, $V$, and $R$ are positive.\nWhen $R=18$, which equation correctly expresses $P$ in terms of $C$ and $V$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q14"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$P=CV2/18P$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$P=CV2/18$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$P=C2V4/18 3$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$P=18/C2V4 3$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q15",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$$88x2+bx+c=0$$\nIn the given equation, $b$ and $c$ are positive constants. The equation has more than one real\nsolution. Which of the following describes the relationship between $b$ and $c$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q15"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b=352c$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b\\gt 352c$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b2=352c$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$b\\lt 352c$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q17",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $N ( m )=65 ( Q ) m/6$ gives the predicted population $N (m)$, in\nthousands, of a certain bacteria colony $m$ minutes after the initial measurement, where $Q$ is a\nconstant greater than 1. The predicted population increases by $p \\%$ every 180 seconds. What is\nthe value of $p$ in terms of $Q$?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q17"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$100 ( Q \\frac{1}{2}+1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$100 ( Q 30+1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$100 ( Q \\frac{1}{2} - 1 )$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$100 ( Q 30 - 1 )$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q18",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In the $xy$-plane, a circle has center $C$ with coordinates $(h, k)$. Points $A$ and $B$ lie on the circle. Point\n$A$ has coordinates $( h+1 , k+230 )$, and $A C B$\n$$\\angle$$\nis a right angle. What is the length\nof A $B$ ― ?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q18"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "231 3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "231 2"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2 230"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$462$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:pdf-8c9afef67de048b8bb7736c40ce69427-m2-q21",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A right rectangular prism has a base area of $16t$ square centimeters $( \\mathrm{cm} 2$\n) .The length of the base of the rectangular prism is $\\frac{8}{3} \\mathrm{cm}$, and the height of the rectangular\nprism is $9 \\mathrm{cm}$. Which expression represents the surface area, in $\\mathrm{cm} 2$ , of the right\nrectangular prism?"
+        }
+      ],
+      "source": {
+        "kind": "editable-pdf-source",
+        "sourceSetId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+        "sourceQuestionId": "m2-q21"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$32 t+96$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$140 t+48$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$800 t+48$$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$$144t$$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

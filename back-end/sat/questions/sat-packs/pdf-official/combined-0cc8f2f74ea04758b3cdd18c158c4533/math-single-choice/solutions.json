@@ -1,0 +1,787 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方程 $p/2-7=13$ 两边同时加上 7，得 $p/2=20$；再将两边同时乘以 2，得 $p=40$。因此选择\n$C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形的内角和为 $180^{\\circ}$，所以 $\\angle A=180^{\\circ}-34^{\\circ}-26^{\\circ}=120^{\\circ}$，对应选项$D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "交点同时满足 $y=54$ 和 $y=6x^{2}$，因此 $6x^{2}=54$。两边除以 6，得 $x^{2}=9$，所以 $x=\\pm 3$。选项中只\n有 3 是可能的值，因此选择 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线 $k$ 的方程为 $y=5x+16$，因此斜率为 5。两条互相垂直的非竖直直线，其斜率之积为\n$-1$，所以直线 $j$ 的斜率为 $\\frac{-1}{5}$，对应选项 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q6",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形的面积为底乘高的一半，因此面积为 $\\frac{1}{2}\\times 4\\times 17=34$ 平方英寸，对应选项 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q6"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "因为 $DE AC$\n∥\n，所以 $\\triangle BDE$ 与 $\\triangle BAC$ 相似，对应边满足 $DE/AC=BD/BA$。已知 $BD=x$、\n$AD=y$，且 $x/y=\\frac{3}{2}$，因此 $BD/BA=x/(x+y)=\\frac{3}{5}$。代入 $DE=57$，得 $57/AC=\\frac{3}{5}$，所以\n$AC=57\\times \\frac{5}{3}=95$。因此选择 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设指数函数 $g(x)=ab^x$。由表中 $g(0)=1$ 得 $a=1$，再由 $g(1)=\\frac{1}{63}$ 得 $b=\\frac{1}{63}$，因此\n$g(x)=(\\frac{1}{63})^x$。验证：当 $x=-1$ 时，$g(-1)=63$；当 $x=2$ 时，$g(2)=\\frac{1}{63}^{2}=\\frac{1}{3969}$，均与表格一\n致，所以选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "图像的 $y$ 轴截距是 $x=0$ 时的函数值。由 $f(x)=-9x+90$，得 $f(0)=90$。这里 $x=0$ 表示 Eli 还没\n有制作任何蜡烛，因此截距表示他开始制作蜡烛时约有 90 盎司蜡，对应选项 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "从1652 年到1752 年共100 年，每25 年人口翻一倍，因此共翻倍 $100\\div 25=4$ 次。设1652 年\n的人口为 $x$，则 $x\\times 2^{4}=16,000$，所以 $x=16,000\\div 16=1,000$，对应选项A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "儿童人数与成人人数之比为 1:20，所以成人人数是儿童人数的 20 倍。儿童有 $x$ 人，因此\n成人有 $20x$ 人，对应选项 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两组数据均已按从小到大排列。$G$ 组有5 个数据，中位数是第3 个数，即21；$H$ 组有4 个\n数据，中位数是中间两个数的平均值，即 $(21+21)\\div 2=21$。因此，两组的中位数相等，选择\nA。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "长方形的周长为 $2\\times ($长+宽)，所以周长是 $2[(x+33)+x]=4x+66$ 厘米。“至少 540 厘米”表示周\n长大于或等于 540 厘米，因此不等式为 $4x+66\\ge 540$，对应选项 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设线性函数为 $f(x)=mx+b$。由题意，图像经过点 $(11,43.31)$ 和 $(15,44.15)$，所以斜率\n$m=(44.15-43.31)/(15-11)=\\frac{0.84}{4}=0.21$。代入 $f(11)=43.31$，得 $b=43.31-0.21\\times 11=41$。因此\n$f(x)=0.21x+41$，对应选项 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q18",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "原方程为 $11v=mp$。将等式两边同时除以 11，得到 $v=mp/11$，因此选 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "当最佳拟合直线预测的 $y$ 值大于数据点的实际 $y$ 值时，该数据点位于拟合直线下方。图中\n共有 7 个数据点位于直线下方，因此答案是 7，选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将中间项拆分并分组：$4x^{2}+19x-63=4x^{2}+28x-9x-63=4x(x+7)-9(x+7)=(x+7)(4x-9)$。因此，$II$\n中的 $4x-9$ 是因式。I 中的 $x-7$ 不是因式：当 $x=7$ 时，原式等于 266，不为 0。所以只有 $II$\n符合，选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由一元二次方程求根公式，$x^{2}-3x-7=0$ 的判别式为 $(-3)^{2}-4\\times 1\\times (-7)=37$，因此 $p=37$。对于\n$x^{2}-17x+c=0$，两根的乘积等于常数项 $c$，所以 $c=((17-\\sqrt{37})(17+\\sqrt{37}))/4=(289-37)/4=63$。\n因此选择 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m1-q22"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "二元一次方程组有无穷多解，意味着两个方程表示同一条直线，因此第二个方程可以由第\n一个方程两边同乘一个非零常数得到。将 $-20x+35y=95$ 两边同乘 $\\frac{4}{5}$，得到\n$-16x+28y=76$，与选项 $C$ 一致。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "利用乘法分配律展开：$(3x^{7}+5)(x^{7}+10)=3x^{14}+30x^{7}+5x^{7}+50$。 合并同类项，得到\n$3x^{14}+35x^{7}+50$，与选项 $B$ 一致。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "最佳拟合直线大约经过 $(0,10.1)$ 和 $(8.7,0)$。因此斜率为 $m=(0-10.1)/(8.7-0)\\approx -1.16$，最接近\n$-1.2$，所以选 $B$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "高级滑冰者人数增加约 $53\\%$，所以 2020 年人数约为 1.53a；中级滑冰者人数增加约 $19\\%$，\n所以 2020 年人数约为 $1.19b$。总人数从 44 人增加约 $32\\%$，因此 2020 年总人数约为\n44(1.32)。两类人数之和等于总人数，故最符合题意的方程为 $1.53a+1.19b=44(1.32)$，对应\n选项 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将 $y=x^{2}-2x+3$ 代入 $2x+y=39$，得 $2x+x^{2}-2x+3=39$，化简为 $x^{2}=36$。因此 $x=\\pm 6$。由于题目要\n求 $x\\gt 0$，所以 $x=6$，对应选项 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每一组 $(x,y)$ 都必须同时满足 $y-5x-9$。 选项 $D$ 的三组数分别为 $(6,4)$、$(7,5)$、$(8,6)$：\n$(6,4)$：$4\\lt 6$，且 $4\\gt -39$； $(7,5)$：$5\\lt 7$，且 $5\\gt -44$； $(8,6)$：$6\\lt 8$，且 $6\\gt -49$。 因此，$D$ 中所有\n数对都满足该不等式组。 A 的第一组数不满足 $-6\\lt -13$；$b\\gt 56$；$C$ 的第一组数不满足\n$11\\lt 6$。所以选择 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将两个方程相加，$11y$ 与 $-11y$ 抵消，得到 $x-1/2x=5+1$，即 $1/2x=6$。因此所求值为 6，选\n择 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将这 5 次发球速度从小到大排列：182、182、184、207、210。数据个数为奇数，中位数\n是正中间的第 3 个数，即 $184 \\mathrm{km}/h$，因此选 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q10",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "每经过 25.2 分钟，质量减少 $26\\%$，也就是保留原来的 $1-0.26=0.74$。经过 $t$ 分钟，相当于\n经历 $t/25.2$ 个这样的时间段，所以指数模型可写为$M=M0(0.74)t/25.2$。取初始质量$M0=100$\n克，就得到选项 $D$：$M=100(0.74)t/25.20$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q10"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q11",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "设 $y=11-x/2$，则原方程为 $y/5+1=y/8$。移项得 $(\\frac{1}{5}-\\frac{1}{8})y=-1$，即 $(\\frac{3}{40})y=-1$，所以\n$y=\\frac{-40}{3}$。所求 $x/2-11=-y=\\frac{40}{3}$，因此选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q11"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q12",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将两点分别代入函数： $t=f(-2)=-2(-2+6)+k=k-8$； $-t=f(5)=-2(5+6)+k=k-22$。 两式相加得\n$0=2k-30$，因此 $k=15$，对应选项 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q12"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将方程整理为 $x^{2}+(n-2)x+23=0$。方程无实数解，所以判别式必须小于 0，即 $(n-2)^{2}-92\\lt 0$。\n因此$|n-2|\\lt 92$，得到$2-92\\lt n\\lt 2+92$。由于$2+92\\approx 11.59$，且 $n$ 为整数，$n$ 的最大可能值为\n11，对应选项 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q16",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将函数图像向右平移 a 个单位，应把原式中的 $x$ 替换为 $x-a$；再向下平移 $b$ 个单位，应将\n函数值减去 $b$。因此 $t(x)=r(x-a)-b=9/(x-a)^{2}-8-b=9/(x-a)^{2}-(8+b)$，对应选项 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q16"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "将方程移项得 $x^{2}+12x+y^{2}-10y=104$。分别配方：$(x+6)^{2}+(y-5)^{2}=104+36+25=165$。圆的标准\n方程为 $(x-h)^{2}+(y-k)^{2}=r^{2}$，因此半径 $r=\\sqrt{165}$，对应选项 $C$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由图像经过 $(0,\\frac{55}{68})$，得 $v(0)=c/[4\\times (-17)]=\\frac{55}{68}$，所以 $c=-55$。 又因为图像经过 $(11,0)$，\n且 $x=11$ 时分母不为零，所以 $121+11b-55=0$，解得 $b=-6$。 因此分子为 $x^{2}-6x-55=(x-11)$\n\n$(x+5)$。要使 $v(q)=0$，分子必须为零且分母不为零，故 $q=11$ 或 $q=-5$；这两个值均不使分母\n为零。选项中只有 $-5$ 符合，因此选 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "两个正四棱锥的底面边长均为 $\\sqrt{121}=11 \\mathrm{cm}$。侧面三角形的斜高为 ℓ=$\\sqrt{h^{2}+(\\frac{11}{2})^{2}}$，因此\n第一个棱锥的斜高为 $\\sqrt{199.25} \\mathrm{cm}$，第二个为 $\\sqrt{706.25} \\mathrm{cm}$。 四个侧面的总面积为\n$4\\times (\\frac{1}{2})\\times 11\\times$ℓ=22ℓ。由于底面积相同，表面积之差就是侧面积之差：\n$22(\\sqrt{706.25}-\\sqrt{199.25})\\approx 274.1 \\mathrm{cm}^{2}$。 因此最接近的是 274，即选项 A。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-1c6f767cf8b047bea469376361dafdf8-m2-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "三角形内角和为 $180^{\\circ}$，所以 $x+y=180-26=154$。 $D$ 中的表达式为\n$26-3x-3y=26-3(x+y)=26-462=-436$，无论 $x$ 和 $y$ 各是多少，其值都相同，因此不能提供\n新的独立条件。例如，$(x,y)=(80,74)$ 和 $(90,64)$ 均满足 $x+y=154$ 及 $x\\gt y\\gt 26$。 其余选项代入\n$y=154-x$ 后，分别得到：A 为 $2x-436$，$B$ 为 $180+2x$，$C$ 为 $488-6x$。知道其中任一表达式\n的值，都能唯一确定 $x$，进而确定 $y$。因此，不足以确定 $x$ 和 $y$ 的是 $D$。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+        "sourceQuestionId": "m2-q21"
+      }
+    }
+  ]
+}

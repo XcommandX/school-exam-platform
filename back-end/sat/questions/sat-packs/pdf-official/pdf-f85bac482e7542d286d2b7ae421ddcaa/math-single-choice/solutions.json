@@ -1,0 +1,373 @@
+{
+  "visibility": "authoring-only",
+  "solutions": [
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q1",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "数据分析题目注意再审题时明确变量名称及单位，本题数据 3 years 无论是名称和单位对\n应的都是横坐标，只要读取$x$ 坐标为3 就可以获得正确答案"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q1"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q2",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-c"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直接读取黑点坐标即可$(4, 5)$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q3",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "$x$-intercept 指的是$x$ 轴截距，就是$y=0$，图中直接读取$x$ 轴交点坐标（5, 0）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q3"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q4",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "概率题，所有概率题都是$a/b$ 形式，a 为符合条件数据（2 蓝）$b$ 为全部数据（7）答案$\\frac{2}{7}$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q5",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "直线为一次函数，看图可知为增长趋势，故选A"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q5"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q7",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "基础的一次函数，直接代入$x=10$ 到函数中计算即可得到答案37"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q7"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q8",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "基础的一次函数，直接图中找$y$ 轴的焦点数值（坐标）就是$y$-intercept"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q8"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q9",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "经典的一次函数方程组system of equations，直接消去$y$ 得到等式，$12x-20=28$，解得$x=4$，\n解的坐标为$(4, 28)$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q9"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q13",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数基本题型，知道斜率slope：39 和$y$-intercept： 0 即可直接获得函数式，$f(x)=39x$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q13"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q14",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "准确提取题目中出现的数字、单位及程度表述minimum was 0.6，maximum was 1.8，即可\n得到正确的不等式"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q15",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-d"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "一次函数应用的问题，$y$-intercept 的应用意义基本都是变量$x$ 为0 时候的函数值，$x$ 在应用\n题中若为时间变量，意义就是刚开始，时间为零的时候。所以为$D$（刚买上的时候）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q15"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q17",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "由函数信息（1, 11）和（2, 16）可以得到，一次函数斜率$(16-11)/(2-1)=5$，得到$y=5x+b$，\n再随意代入一个坐标，如（1, 11）可得到$b=6$，所以为$y=5x+6$"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q17"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q19",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "coaches 与 athletes 的比例是1: 26，若有$x$ 个coaches，按比例athletes 是$26x$ 个"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q19"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q20",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "方法1：$(1.84)x/4=(1+p/100)x$，解指数函数，两侧同时4 次方再开根号$x$ 次方，得到\n$1.84=(1+p/100)4$，$(1+p/100)=1.844$，利用计算器$p=100(1.844-1)$，利用计算器计算可得\n$p\\approx 16.47$；\n方法2：为方便计算可令$x=4($不用$x=1$ 是为了避免出现计算时有分数)，直接得到\n$1.84=(1+p/100)4$ 再代入计算。"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q20"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q21",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-a"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "相似三角形问题关键时找到对应的边或者角，本题相似的三角形朝向不相同需要注意，\n$QR$¯和$ST$¯是对应的两个边，所以$\\triangle STR$ 与$\\triangle QPR$ 边的比例为=$\\frac{14}{15}$，边\n\n$SR$¯=$\\frac{14}{15} QR$¯=$\\frac{14}{15} 25=\\frac{350}{15}$\n∗\n∗\n（注意答案并没有化简分数，同时图上的三角形大小与\n题目表述不一致）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q21"
+      }
+    },
+    {
+      "itemId": "sat:item:pdf-f85bac482e7542d286d2b7ae421ddcaa-m1-q22",
+      "itemRevision": 1,
+      "answer": {
+        "status": "needs-review",
+        "type": "single-choice",
+        "optionId": "choice-b"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "markdown",
+            "text": "题目没有提供三角形的图，保险起见可自己草稿纸上画图，确认边$AB$ 和边$BC$ 都是直角\n边，直接利用勾股定理计算斜边$AC$ 即可， A $C=( 10 37 ) 2$ +\n$( 24 37 ) 2=26 37$ （题中10，24，26，也就是5，12，13 是常见\n的直角三角形边的组合）"
+          }
+        ]
+      },
+      "provenance": {
+        "kind": "pdf-source-standard-answer",
+        "sourceSetId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+        "sourceQuestionId": "m1-q22"
+      }
+    }
+  ]
+}

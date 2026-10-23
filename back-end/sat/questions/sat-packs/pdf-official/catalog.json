@@ -1,0 +1,6341 @@
+{
+  "schemaVersion": "sat-offline-conversion-catalog/1",
+  "sourceCatalog": "source-catalog.json",
+  "assemblySummary": "assembly-summary.json",
+  "collections": [
+    {
+      "collectionId": "combined-e8f3ea9d83574a8b98f0be6fee283b2d",
+      "title": "2023年10月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-e8f3ea9d83574a8b98f0be6fee283b2d",
+      "questionCount": 76,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-b97105d977f04f50ab38a1ba456b762a",
+          "sourceFile": "阅读文法/2023年10月第1套阅读语法.pdf",
+          "sourceSha256": "64c0fb75ae887b1c4957163b97f107cbd7eea976945f60b8cbc26f394f5c032e",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-c000586e84784465bea2ab2bc4d04389",
+          "sourceFile": "数学/2023年10月第1套数学（只有1个Module）.pdf",
+          "sourceSha256": "3282286d798583cdc7fe1c330df705cca427934407a92981e657363e7dad5849",
+          "questionCount": 22,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        10,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-377856b148ae47918759550fb51b14df",
+      "title": "2023年10月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-377856b148ae47918759550fb51b14df",
+      "questionCount": 31,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 23
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 8
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-bf9fb720345644ada8bda594a0397956",
+          "sourceFile": "阅读文法/2023年10月第2套阅读语法（只有23题）.pdf",
+          "sourceSha256": "9eb2a025e0d4b46a8f06a3d0eeacd160a0b58ffe8e8adb00502e80ba87d63de9",
+          "questionCount": 23,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-9ef2dff5413d4ce48eb510443ead13e6",
+          "sourceFile": "数学/2023年10月第2套数学（只有8题）.pdf",
+          "sourceSha256": "e4912e9069420053eb9327659b852b9ea3f0b4702d88c5cab6956c8a35e884ec",
+          "questionCount": 8,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        10,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-9ca0ca5c7b8448568e0b71d6781aa62a",
+      "title": "2023年11月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-9ca0ca5c7b8448568e0b71d6781aa62a",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-fae8a26bf13f405998b6bdefc852d5dc",
+          "sourceFile": "阅读文法/2023年11月第1套阅读语法.pdf",
+          "sourceSha256": "3e2002358c06aab3f1859988ec5a37c5329dedcd613c6ad21712f418e2bd08de",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-2f71b04ac5774e09bc59e93f3e71c92a",
+          "sourceFile": "数学/2023年11月第1套数学.pdf",
+          "sourceSha256": "fe90c52bb0d9d228c36b357db40f70770fb147e526c9e7aa26d9553b3064072e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        11,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-910b2775f83946a4965714cf3633349a",
+      "title": "2023年11月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-910b2775f83946a4965714cf3633349a",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-6a9915a29a47425698973c303bccf423",
+          "sourceFile": "阅读文法/2023年11月第2套阅读语法.pdf",
+          "sourceSha256": "0cd23b19f7b3c41f17d7c277230d945ab3575142dbb6aab121fc825f87afc4d1",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-218b2d54e56c47bf892b8b7571b936f1",
+          "sourceFile": "数学/2023年11月第2套数学.pdf",
+          "sourceSha256": "505c90213a8b7034e98a696d90bdddd8ad0e5b5888251401b05cc3785efcf904",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        11,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-5ae71d3f106d4374b2107ae898b45a77",
+      "title": "2023年11月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-5ae71d3f106d4374b2107ae898b45a77",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-b5eb4397c4ec4540add7ad1500439762",
+          "sourceFile": "阅读文法/2023年11月第3套阅读语法.pdf",
+          "sourceSha256": "f15bcca00b39e3c7180ec9710226290ec26cd5a02f26c3418745b28acb999fea",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-25e21d56d2d24b16b70a16a8dc1d21c3",
+          "sourceFile": "数学/2023年11月第3套数学.pdf",
+          "sourceSha256": "e645cbe3d8efb2602d880ae02654b87395a7a0c9ca3e52c02e515c82a18d962b",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        11,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-6233e127cdc2487986c68b02f99a1d2e",
+      "title": "2023年11月第4套阅读语法(只有19题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年11月第4套阅读语法(只有19题）.pdf",
+      "sourceSha256": "582b43b11f4e1e792ca645a92313cd70aa66fd5c4e3511f3f1e332e52caf816d",
+      "directory": "pdf-6233e127cdc2487986c68b02f99a1d2e",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 19,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 19
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-1f81f9eed7e0417d8eeb14f7af0a469d",
+      "title": "2023年11月第5套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-1f81f9eed7e0417d8eeb14f7af0a469d",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-cab5bba1807649cf944d2e6193787015",
+          "sourceFile": "阅读文法/2023年11月第5套阅读语法.pdf",
+          "sourceSha256": "ff4fb0582c2d381a0a2357f67ec3c4607b10d67192e12419df835b9f423fa3cd",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-fe09dbad8ee543c0ba99261a993ad2f0",
+          "sourceFile": "数学/2023年11月第5套数学.pdf",
+          "sourceSha256": "ca0ca649a02bfbf55e9867d79dd57f83df88365582675ee647228b33e52e2111",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        11,
+        5,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-a24187140c4041d496fb805af844195a",
+      "title": "2023年12月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-a24187140c4041d496fb805af844195a",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-44eb914eca05444780664de0218517d8",
+          "sourceFile": "阅读文法/2023年12月第1套阅读语法.pdf",
+          "sourceSha256": "69b6b8b9196f848dd710eabb53b2ef81ba141848231a66556cf6170be00baa04",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-78de879af67946f58f4ec910e41ae491",
+          "sourceFile": "数学/2023年12月第1套数学.pdf",
+          "sourceSha256": "11c16e8b795a3288ca03fc81caffe1dd6b9f6c095d5fc8cb51513322c59a08fe",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        12,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-d1a90a2c531644e38632803bc6aeca1b",
+      "title": "2023年12月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-d1a90a2c531644e38632803bc6aeca1b",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-d814681372374c99bfb9bd721caabb46",
+          "sourceFile": "阅读文法/2023年12月第2套阅读语法.pdf",
+          "sourceSha256": "60a996bd51eca49eb73667262eb8483805899107a41ee629cf9066bcc8ba1f78",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-ea1e81d530fb48398352e3b970614b58",
+          "sourceFile": "数学/2023年12月第2套数学.pdf",
+          "sourceSha256": "dded71332084ecb3737e2774aeed461349f1e98ca7bf05c085ace97b5637c114",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        12,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-34ffb11d6860486aacecee12b08e7c4b",
+      "title": "2023年12月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-34ffb11d6860486aacecee12b08e7c4b",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-4d5906d0bece4625aa636c9facc17c99",
+          "sourceFile": "阅读文法/2023年12月第3套阅读语法.pdf",
+          "sourceSha256": "3beb6864b9313685781ad2b8279ff6cacc37a7f7bd613ab9d0d30da524950427",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-374179f8f14d4590ba5b6431af0793f4",
+          "sourceFile": "数学/2023年12月第3套数学.pdf",
+          "sourceSha256": "583e7f6b3b2a0f6e0b0c326b57469bacd77acaf1daae4a53138dcdb6b9542a9e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        12,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-be3c780fc5c34d54a17442fdeea90217",
+      "title": "2023年12月第4套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-be3c780fc5c34d54a17442fdeea90217",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-c19481f9275440eb8c0006d613d6412f",
+          "sourceFile": "阅读文法/2023年12月第4套阅读语法.pdf",
+          "sourceSha256": "1d743e07b1fd16442cb95d454161f5823832401e532b4023273962b902a29e9f",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-f795d739e2b54a2cb3e7d97d2e735117",
+          "sourceFile": "数学/2023年12月第4套数学.pdf",
+          "sourceSha256": "0e6c09584c792a290588a06f89556741cac8db6456aada29e819b567c0fb1633",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2023,
+        12,
+        4,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-22d5d73dcbba499aaea6b2489b9e5c30",
+      "title": "2023年12月第5套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年12月第5套阅读语法.pdf",
+      "sourceSha256": "0258968c43dd86da884e04c745ef8bbcbddaecd8c38a6865307b69bc742e2d61",
+      "directory": "pdf-22d5d73dcbba499aaea6b2489b9e5c30",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-c71561763313418d8f432a90c33bd0c3",
+      "title": "2023年3月考题阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年3月考题阅读语法.pdf",
+      "sourceSha256": "35a5ef592b4448611cc0258e8d24d8a2da1b67fb4ce7e6aaace3f5a2c7827023",
+      "directory": "pdf-c71561763313418d8f432a90c33bd0c3",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-cf4d964132c247cf8156c8faf0d96132",
+      "title": "2023年5月考题阅读语法 (只有38题)",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年5月考题阅读语法 (只有38题).pdf",
+      "sourceSha256": "c2303fd7646abc24f3dd1965e9d137b6a15def4b0fc53f6bfea7246023e3089f",
+      "directory": "pdf-cf4d964132c247cf8156c8faf0d96132",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 38,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 11
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-a0814402e04a4177af8bdfd58037d2da",
+      "title": "2023年6月第1&2&3套数学",
+      "category": "测试",
+      "sourceFile": "数学/2023年6月第1&2&3套数学.pdf",
+      "sourceSha256": "9cbd723b713b57c44f79e13516d917c905663bf71060ab65a7f4656e3aac564c",
+      "directory": "pdf-a0814402e04a4177af8bdfd58037d2da",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-1efd1c5d109c43f585835ed1bccd98a7",
+      "title": "2023年6月第1套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年6月第1套阅读语法.pdf",
+      "sourceSha256": "eb26948bccc420abef7788f42517ca33baccdfb435fa191b6f981bc14dbb8dbb",
+      "directory": "pdf-1efd1c5d109c43f585835ed1bccd98a7",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-fce43feaf47e460faf2118fe7deaf7c6",
+      "title": "2023年6月第2套阅读语法（M1-19题、M2-27题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年6月第2套阅读语法（M1-19题、M2-27题）.pdf",
+      "sourceSha256": "3af3a1e184e709147fd0f19c06ee532a1c793612140fb8bd8b3dffd3b088c67f",
+      "directory": "pdf-fce43feaf47e460faf2118fe7deaf7c6",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 46,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 19
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-d6f08bfcd1ab450da567079638e9e590",
+      "title": "2023年6月第3套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2023年6月第3套阅读语法.pdf",
+      "sourceSha256": "fe7f3b6fd355bde253e72a74b138fe5ef6dab9e2014c87a677c00e05db1ee463",
+      "directory": "pdf-d6f08bfcd1ab450da567079638e9e590",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-b26657e3364e4a26af2a696d66b6fd78",
+      "title": "2024年10月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-b26657e3364e4a26af2a696d66b6fd78",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-70cb861515e54db2a30f89c462a5f986",
+          "sourceFile": "阅读文法/2024年10月第1套 阅读语法.pdf",
+          "sourceSha256": "2f96bdf71d796291c145f276d6e1f3d716e423ae79359fa99e885086343238a7",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-f72188917c30414291c9ff2da6996c35",
+          "sourceFile": "数学/2024年10月第1套 数学.pdf",
+          "sourceSha256": "1912ea5c6cf231d219ccf0e0be1f74925b26d813e65697cd3d9accf1212dc9b3",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        10,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-2b805f0cebd34ec09009c8ffc88ef78d",
+      "title": "2024年10月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-2b805f0cebd34ec09009c8ffc88ef78d",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-61d3024a3dc14b9681134e34308b15bf",
+          "sourceFile": "阅读文法/2024年10月第2套阅读语法.pdf",
+          "sourceSha256": "1fb5742564e29cb9152e7a3a95f065502809a190fc034100f14ecb63e1342bbd",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-ef9b5ef2a1d74b5582c7e2d457f1c890",
+          "sourceFile": "数学/2024年10月第2套数学.pdf",
+          "sourceSha256": "b3e540a816bef12551bec67534a8a21f2b4391d75c59bc81e061eddc924adbf6",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        10,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-b80282a34ada4b2a971fecc5c4be8954",
+      "title": "2024年10月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-b80282a34ada4b2a971fecc5c4be8954",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-994f2a78164e4f95a47e31c63f82b7c7",
+          "sourceFile": "阅读文法/2024年10月第3套阅读语法.pdf",
+          "sourceSha256": "f91a77a6e1eb2cb438ae0c807055d01241122c5ad40eac1f95761b8aa02be003",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-e9935a1ebb2947b9946bf54b5babdb5c",
+          "sourceFile": "数学/2024年10月第3套数学.pdf",
+          "sourceSha256": "d0f26ee9a2c85ecc44544db76bb8a468be92eb1b3b6d769c227a0ccb663be5e8",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        10,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-7ed46f6d0b4f4684a9e45f6f257197dc",
+      "title": "2024年10月第4&6套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年10月第4&6套阅读语法.pdf",
+      "sourceSha256": "911afe48edda316a0aec0c8247cc1a0ce6c38d4b247d46e80b7da9272a3f1f02",
+      "directory": "pdf-7ed46f6d0b4f4684a9e45f6f257197dc",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+      "title": "2024年10月第4套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年10月第4套数学.pdf",
+      "sourceSha256": "67394be4c5275f9b56dfa1e4e1a735265895cf6cf669cb1dea321350f6e4b201",
+      "directory": "pdf-ec0faf92672c4bbda34ea3b4e8578235",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-144a15b31d4946c4be964926d174699b",
+      "title": "2024年10月第5套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-144a15b31d4946c4be964926d174699b",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-96d49127e56f4161b8dc919c714db9a5",
+          "sourceFile": "阅读文法/2024年10月第5套阅读语法.pdf",
+          "sourceSha256": "85bb08197d23fac36168afbd572faf942f6cca8a7dd754d28a689928f052411e",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-29ad1f70200341919cb8048bc1d4055c",
+          "sourceFile": "数学/2024年10月第5套数学.pdf",
+          "sourceSha256": "5b3fecaaa3468cf8109da989a7d43d6b5ed4abf4694a46278c4eaaf6c47e5c95",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        10,
+        5,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-8f0ec6eebc4048f5bbb2b19ab3144789",
+      "title": "2024年10月第6套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年10月第6套数学.pdf",
+      "sourceSha256": "445186039327063e6e78e301e4be2b6b1a15ac31095c399f722a49262a9d112f",
+      "directory": "pdf-8f0ec6eebc4048f5bbb2b19ab3144789",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-8152c25646f84af1951ac9118475fb32",
+      "title": "2024年10月第7套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-8152c25646f84af1951ac9118475fb32",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-f0cf803f5ad64256919cc189c82a25a7",
+          "sourceFile": "阅读文法/2024年10月第7套阅读语法.pdf",
+          "sourceSha256": "e84850fe6c79455d6bbeb725408607c81ef019c542be2d3d18c7059e3943b78f",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-41704d62d20e4d3bb435fbb2cae4f326",
+          "sourceFile": "数学/2024年10月第7套数学.pdf",
+          "sourceSha256": "4952bdf128d2ae44b628fc3ca981219c940635e49ff654762271958f9af0846e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        10,
+        7,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-9907c0ae14364bc6a1e3e57d11f726cd",
+      "title": "2024年11月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-9907c0ae14364bc6a1e3e57d11f726cd",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-e247511bfbe745b590ea2f0f3f45f2fe",
+          "sourceFile": "阅读文法/2024年11月第1套阅读语法.pdf",
+          "sourceSha256": "5de11982e03a5e4e30802c935cbfc9c0b8af332724e59462c993d14d4062e58d",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-5fe582570b0946f4b27541bde23a7476",
+          "sourceFile": "数学/2024年11月第1套数学.pdf",
+          "sourceSha256": "1e1c7ba95d857d7199008f70f0d6f5550e19025e3dca021ca18d25c152aac7de",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        11,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-a1af9e99ab114b9286d9a1e97fe874d4",
+      "title": "2024年11月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-a1af9e99ab114b9286d9a1e97fe874d4",
+      "questionCount": 71,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-d60a24e0a14c46789e85afc15aa191e4",
+          "sourceFile": "阅读文法/2024年11月第2套阅读语法（只保留M1，M2和第1套重复）.pdf",
+          "sourceSha256": "b9feb7eb6416e6e94a4116adb1b2aab63700473bdd1fa61a28c85678127d0a90",
+          "questionCount": 27,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-8902bef50f7a49e2ba54c10533d530aa",
+          "sourceFile": "数学/2024年11月第2套数学.pdf",
+          "sourceSha256": "f7a4a80a8fc25c6aa1c0ef4a38fcad7d77a573c16586b51775afaa35ff067240",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        11,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+      "title": "2024年11月第3&4套数学（只保留M2，M1和第1套重复）",
+      "category": "测试",
+      "sourceFile": "数学/2024年11月第3&4套数学（只保留M2，M1和第1套重复）.pdf",
+      "sourceSha256": "e1e01f1e3ca9231cfa3723438bfc8fafc5cd3438841edcbad10c00ea7fdc63a5",
+      "directory": "pdf-ad2e25df47df4a2283d42573d8f62e64",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-18272a692b8d4a79a8b276a8518b5a09",
+      "title": "2024年11月第3套阅读语法（此套重题较多）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年11月第3套阅读语法（此套重题较多）.pdf",
+      "sourceSha256": "25673d3de43415cc70bff825fb9081be04d7bffbafe1ca9eea6ce78c3b0d54b7",
+      "directory": "pdf-18272a692b8d4a79a8b276a8518b5a09",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-5e4cc077dcdd4e168fa2fc9c70f7b84c",
+      "title": "2024年11月第4套阅读语法（只保留M1，M2和第1套重复）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年11月第4套阅读语法（只保留M1，M2和第1套重复）.pdf",
+      "sourceSha256": "72e71ff1e8c4abfa149dd35753006eb2abe7e1bf40783fc9e2cd999eb9394a0c",
+      "directory": "pdf-5e4cc077dcdd4e168fa2fc9c70f7b84c",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-d3d0f004ad3846508655a20104f0ba85",
+      "title": "2024年11月第5套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-d3d0f004ad3846508655a20104f0ba85",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-cd3b177766d840ca85fff39a967e1bcd",
+          "sourceFile": "阅读文法/2024年11月第5套阅读语法.pdf",
+          "sourceSha256": "cef53c562ba0287e3eb2b4a400bf8c46f4d2b77545e382ec0019f8348264bffe",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-94f5afab576446fd887a258355cfac7b",
+          "sourceFile": "数学/2024年11月第5套数学.pdf",
+          "sourceSha256": "5e7e1e3ac30716bf56c1e9d0ba9357696d5e91d3890eddc2854d52bc83b41524",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        11,
+        5,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-931eea89517d40f79ce25c7d718099cc",
+      "title": "2024年11月第6套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-931eea89517d40f79ce25c7d718099cc",
+      "questionCount": 71,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-e8453963e73e4ccaaba4124fbb975b29",
+          "sourceFile": "阅读文法/2024年11月第6套阅读语法（只保留M1，M2和第5套重复）.pdf",
+          "sourceSha256": "73246f8f6f0a1cc32cafcc90a07fe60bf068f37fd78484b787476e2effdd4e23",
+          "questionCount": 27,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-6ce782e8cdbb483f945e43400a8595f5",
+          "sourceFile": "数学/2024年11月第6套数学.pdf",
+          "sourceSha256": "eb53779aa4492e98bf32fcb6a52d22517ca71ef5599b5666c000a0667e0f4ca4",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        11,
+        6,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-f8b05d8258914334b07986466165d6f4",
+      "title": "2024年12月第1&2套阅读语法（其中M2和第4套重复，第4套不录入）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年12月第1&2套阅读语法（其中M2和第4套重复，第4套不录入）.pdf",
+      "sourceSha256": "00096da1c625329324918bb1f5cf0c2e2a5f69446814e71865564d279515fa0e",
+      "directory": "pdf-f8b05d8258914334b07986466165d6f4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-d4ed535ffa5845aea83af9be6f12850c",
+      "title": "2024年12月第1&4套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年12月第1&4套数学.pdf",
+      "sourceSha256": "3d053cfca51792ebf2ca9e94ab135310d03697b6d46a957a9d439a6bb4c62e2b",
+      "directory": "pdf-d4ed535ffa5845aea83af9be6f12850c",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-cf09bcd59f3b4c53b86aa1274247f215",
+      "title": "2024年12月第2&3套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年12月第2&3套数学.pdf",
+      "sourceSha256": "bbd72fbdd7ef3e7f06b3187021b7ec8f8445f9aef09056478e406849ee9d45cf",
+      "directory": "pdf-cf09bcd59f3b4c53b86aa1274247f215",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-5efe690d105244e0a61a21a0d4e8ea75",
+      "title": "2024年12月第3套阅读语法（M1和第4套重复，第4套不录入）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年12月第3套阅读语法（M1和第4套重复，第4套不录入）.pdf",
+      "sourceSha256": "632104fad5edfd81c24ab5681f71dc16dbcb0a9efc7d6dc1845eef44da15368d",
+      "directory": "pdf-5efe690d105244e0a61a21a0d4e8ea75",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-ce5714536a2a456eae971a5331dd1b8a",
+      "title": "2024年12月第6套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-ce5714536a2a456eae971a5331dd1b8a",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-cc9f56676464443381b49ac69001bc9a",
+          "sourceFile": "阅读文法/2024年12月第6套阅读语法（注：第5套均为旧题，不录入第5套）.pdf",
+          "sourceSha256": "386a2fa7d35215bd276478bb235a0e2f37b2171addc280ce784bc19beabc2d7f",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-ebfa4550eaef40cdbb7eb22e5bca2a97",
+          "sourceFile": "数学/2024年12月第6套数学.pdf",
+          "sourceSha256": "1610585aa82a5d8f662f17ce2d340f6378b3ce68d1a00d1e3944eed850e4de4e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        12,
+        6,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-eb23c2778ce14be7b3ed9c1317f937da",
+      "title": "2024年12月第7套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-eb23c2778ce14be7b3ed9c1317f937da",
+      "questionCount": 71,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-a15e75fe381846fd9e3fbcaca7aac963",
+          "sourceFile": "阅读文法/2024年12月第7套阅读语法（只录M1，M2和第6套重复）.pdf",
+          "sourceSha256": "d0588d90bb3755bc24ac312cfd3f171a7468e61b2f79d7a900c5c16868fe7a9d",
+          "questionCount": 27,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-49b72d72832f4bf698adeb216244c7c3",
+          "sourceFile": "数学/2024年12月第7套数学.pdf",
+          "sourceSha256": "f808c90af172ddb83263c4cb7152c3621c03e9c6d26ad77314d0cc09b523cd78",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        12,
+        7,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-a089b8a9d9564edf94cafd028aa1c0fa",
+      "title": "2024年12月第8套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-a089b8a9d9564edf94cafd028aa1c0fa",
+      "questionCount": 49,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-d4e8464884df41f5ab0750da815b3591",
+          "sourceFile": "阅读文法/2024年12月第8套阅读语法（只录M1，M2和第6套重复）.pdf",
+          "sourceSha256": "981c3f8e1ae440cb75e60187daa8517465c5250a3b772fb1864991b8885f0c9a",
+          "questionCount": 27,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-8c9afef67de048b8bb7736c40ce69427",
+          "sourceFile": "数学/2024年12月第8套数学（只录M2，M1和第7套变体重复）.pdf",
+          "sourceSha256": "4f41e28e0cf29c78330f7c7443724d50e92e73718b37be2bb741ef28b76b0096",
+          "questionCount": 22,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        12,
+        8,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-81bf3432913345b1a1d740f214eac243",
+      "title": "2024年3月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-81bf3432913345b1a1d740f214eac243",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-2fb0132a9e064e8bb380aa795115fb00",
+          "sourceFile": "阅读文法/2024年3月第1套阅读语法.pdf",
+          "sourceSha256": "94ab896563bad51eecb8bc50b218e0d28ba286652e8c18748f2af68a05820721",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-6c44658b4d8746ed94c1094d70bb3afa",
+          "sourceFile": "数学/2024年3月第1套数学.pdf",
+          "sourceSha256": "80699bc34a0dd123ef7d314ff8f2787833919786a57e140cf710f8ab5ef8b61d",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        3,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0f05f3d2da704a5aab2633a89b285626",
+      "title": "2024年3月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0f05f3d2da704a5aab2633a89b285626",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-1449873990ab495d94b5b11a93db54c7",
+          "sourceFile": "阅读文法/2024年3月第2套阅读语法.pdf",
+          "sourceSha256": "f57dcdfbf5cac8f66650acb56a48bcab06995ef0a800f69a80ddb35cac70ee16",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-74f2164cd24e4475954042048aafaf0d",
+          "sourceFile": "数学/2024年3月第2套数学.pdf",
+          "sourceSha256": "90d0e8ddb4dd58e643f5bf99b002b97fd4123cf466a563652429b65ffccac4cb",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        3,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-1d33b9773a534b9b8aebf9a553c4d0e1",
+      "title": "2024年3月第3套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年3月第3套数学.pdf",
+      "sourceSha256": "478bdd2bb5c0d6f04829097c628ecdfa6024dd62d5c18526f52d28ab2937da6d",
+      "directory": "pdf-1d33b9773a534b9b8aebf9a553c4d0e1",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-aa5f3d0b9e434c2e9715868162927066",
+      "title": "2024年3月第3套阅读语法 Module 1-版本2",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年3月第3套阅读语法 Module 1-版本2.pdf",
+      "sourceSha256": "3bdd48bb14a0a06e6c2e457effb635bbf45d696687f199209830467c5947fc31",
+      "directory": "pdf-aa5f3d0b9e434c2e9715868162927066",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-431089f0ec854e68a0eda7da7ddc79e5",
+      "title": "2024年3月第3套阅读语法 Module1-版本1",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年3月第3套阅读语法 Module1-版本1.pdf",
+      "sourceSha256": "53c7c91b458f6624cbdfbca6cf0078b70657f2c63baf3bad7b493876d8813c41",
+      "directory": "pdf-431089f0ec854e68a0eda7da7ddc79e5",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2a9d4db63e5e4322bc678c8eb172ea5e",
+      "title": "2024年3月第4套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年3月第4套阅读语法.pdf",
+      "sourceSha256": "7011a9f5c036f56285dc389f0537d0df82c013fe8e889a9b442232613d9e5f45",
+      "directory": "pdf-2a9d4db63e5e4322bc678c8eb172ea5e",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-d09e384c08af41c4acb197dee0c7f9ff",
+      "title": "2024年5月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-d09e384c08af41c4acb197dee0c7f9ff",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-ad759a3672a4449b8359388ff4b30219",
+          "sourceFile": "阅读文法/2024年5月第1套阅读语法.pdf",
+          "sourceSha256": "d57f6916c79f3eb5568639d27db2a6051cb4936755b822bd333a65b6a340e73c",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-91204dc74b1a4f58a12daa53f54e0323",
+          "sourceFile": "数学/2024年5月第1套数学.pdf",
+          "sourceSha256": "4add18e48c5e59ef5507f63985ea87b8f71e6d25f76ebca8fa086e5dcd55c415",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        5,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0efd91fe28b647869dea3d9163daca73",
+      "title": "2024年5月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0efd91fe28b647869dea3d9163daca73",
+      "questionCount": 76,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-86225d36174c48e4a5291a89966d38f5",
+          "sourceFile": "阅读文法/2024年5月第2套阅读语法.pdf",
+          "sourceSha256": "b47a7967d4012397dedd79dca24e7c761db7716c945e81b40160886c57e29b17",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-cfc4aa764ac342108a676897b653c484",
+          "sourceFile": "数学/2024年5月第2套数学（只有1个Module）.pdf",
+          "sourceSha256": "da34dda6c125e6de0c209f62c4a8e25a95f5aa5f094b6c0da244df36100e14d3",
+          "questionCount": 22,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        5,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-6ab36303e26446cf9d2f87f43ef2defa",
+      "title": "2024年5月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-6ab36303e26446cf9d2f87f43ef2defa",
+      "questionCount": 65,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-3196fb60f9504d74bef4f33328df9dd6",
+          "sourceFile": "阅读文法/2024年5月第3套阅读语法（Only 21 questions）.pdf",
+          "sourceSha256": "a93966ae903c8f4b654b3504016b2c220659493ff83640fdb874806ef0343419",
+          "questionCount": 21,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-def573aed1a045ce917b62b504fbe15b",
+          "sourceFile": "数学/2024年5月第3套数学.pdf",
+          "sourceSha256": "280e855ebf2eb03b3d19c8d2ccf41a562ff5397b785168ad7430c01ea87faa6d",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        5,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-71402b86b97147bcab0c65cf39d162d4",
+      "title": "2024年6月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-71402b86b97147bcab0c65cf39d162d4",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-82d5b9373ab04099ab7c58ba3a6e2020",
+          "sourceFile": "阅读文法/2024年6月第1套阅读语法.pdf",
+          "sourceSha256": "6ebc0f9d398445cd0e2a21865a4d092ac20bf6a194bccf0bb68a86117fa8e72f",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-90219f72e9fb41eb82922c5b354de07b",
+          "sourceFile": "数学/2024年6月第1套数学.pdf",
+          "sourceSha256": "11787939e8b35e401528a3fb45e1d8f37572684ff5b5ec573bbfde9663f979f8",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        6,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-e681b0946d244c73b423afd11167bf21",
+      "title": "2024年6月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-e681b0946d244c73b423afd11167bf21",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-dbb52b580b4a456585088c7028d53b9e",
+          "sourceFile": "阅读文法/2024年6月第2套阅读语法.pdf",
+          "sourceSha256": "aafdc8ec917551507797c4a47806a69946ceeceec3d57f4284e592b477dc308b",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-f7dd178416a6451a944c9b1c8f141998",
+          "sourceFile": "数学/2024年6月第2套数学.pdf",
+          "sourceSha256": "30155c91d67fb3ccd78f9d0ce449a270afec11a3523c05ae914be0056aaece50",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        6,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-8c09424241764144bf6ee48f29357978",
+      "title": "2024年6月第3套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年6月第3套阅读语法.pdf",
+      "sourceSha256": "c16d10159a498ea31e9d749e833b807172f4ea0ca76c99650bf5e9ad49f98f06",
+      "directory": "pdf-8c09424241764144bf6ee48f29357978",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-23a41754d1374d8787ed128f58e3abcd",
+      "title": "2024年6月第4套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-23a41754d1374d8787ed128f58e3abcd",
+      "questionCount": 83,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 18
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-06a6d1a1f78f408aad5202d6f820745e",
+          "sourceFile": "阅读文法/2024年6月第4套阅读语法（M1-21 questions; M2-18 questions）.pdf",
+          "sourceSha256": "6247dc2b8b60768daca393960b4e1fa703f8cf1fac998968afb01532705980d1",
+          "questionCount": 39,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-bce147a157cf469f96853e8c2d44e147",
+          "sourceFile": "数学/2024年6月第4套数学.pdf",
+          "sourceSha256": "a5d9cfa56ae3bb74ec71cd7d8588157935d858e66816082cc7520eaded5e2bf0",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        6,
+        4,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-d8c8515e47464a41bfaf2a4e2551c7f9",
+      "title": "2024年6月第5套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-d8c8515e47464a41bfaf2a4e2551c7f9",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-29af898c31d84966b13d2d063ab967be",
+          "sourceFile": "阅读文法/2024年6月第5套阅读语法.pdf",
+          "sourceSha256": "d0e0f397b57bc976ca6b977f077dbaf3c66ba01aafb044d18fe2d4d805d33335",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-c9db9162fc01417dbb8cc0e3ade1a397",
+          "sourceFile": "数学/2024年6月第5套数学.pdf",
+          "sourceSha256": "8eecf454043aa529de2c8acfee2c92a97f842fd4b9790d5761bcdf3c31a3d708",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        6,
+        5,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-37814b0512914a6e86bb51c6046ce908",
+      "title": "2024年8月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-37814b0512914a6e86bb51c6046ce908",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-ebf9692bcd804ccd8395be3044af8e3c",
+          "sourceFile": "阅读文法/2024年8月第1套 阅读语法.pdf",
+          "sourceSha256": "e7001c81d7612dbdd8e5fcea21e85be50fd876f1983e96b7e59f6503df0edb66",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-1541a209d6214233851e46a4a8d7ad46",
+          "sourceFile": "数学/2024年8月第1套 数学.pdf",
+          "sourceSha256": "f76f62dc58960bd76430c8c20d90e519c07f339aa77bb2c73ce78c90d60822b4",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        8,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-c3c2e83185364b1e87eb772c487895e8",
+      "title": "2024年8月第2&7套数学",
+      "category": "测试",
+      "sourceFile": "数学/2024年8月第2&7套数学.pdf",
+      "sourceSha256": "166d1eade784d7fda83628bec2874ebc8e9da04b1b4ec762eb19a02bcea42359",
+      "directory": "pdf-c3c2e83185364b1e87eb772c487895e8",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-9fc11f13c28049358f25188370d4b1cb",
+      "title": "2024年8月第2&7套阅读语法（只有44道题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年8月第2&7套阅读语法（只有44道题）.pdf",
+      "sourceSha256": "2277e2bfedf8f518512f65a9f1051f3823c137bbd4a0c7f1dbfab229876d0015",
+      "directory": "pdf-9fc11f13c28049358f25188370d4b1cb",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 17
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-ab8e585d9d2547db95d48edf1b7bf890",
+      "title": "2024年8月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-ab8e585d9d2547db95d48edf1b7bf890",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-074e5ff5d7204bec8825eaa67a1f1a9e",
+          "sourceFile": "阅读文法/2024年8月第3套阅读语法.pdf",
+          "sourceSha256": "21f2b67d2f3eb139fe5426254c15714a6c4d2c4815f6d252be386cec5296a8fa",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-86248c9c59254bd4b30fc9856ce4d791",
+          "sourceFile": "数学/2024年8月第3套数学.pdf",
+          "sourceSha256": "9674b76f98392d894c0c2e1b619c075b6cea75469122028b3f8000edd12e504e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        8,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0094a34c57f04d5e8e24a3331fac0cee",
+      "title": "2024年8月第4套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0094a34c57f04d5e8e24a3331fac0cee",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-75a3eb30f35840598eefe7cb8278cca6",
+          "sourceFile": "阅读文法/2024年8月第4套阅读语法.pdf",
+          "sourceSha256": "22944357fb1c0266a32ccf18bd685cbf46fe8c0734dbc76c236efea1dfb068b7",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-0b7d0c05b30440de838c9e5aa7db1505",
+          "sourceFile": "数学/2024年8月第4套数学.pdf",
+          "sourceSha256": "00ec81a1574253c4d1f588b17254057c01e273ed571e3e9098e538c32b2899e8",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        8,
+        4,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-62575bd21b324aac87e299ca887696d9",
+      "title": "2024年8月第5套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-62575bd21b324aac87e299ca887696d9",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-8eefc05a41314fe38ebc6de9f584704b",
+          "sourceFile": "阅读文法/2024年8月第5套阅读语法.pdf",
+          "sourceSha256": "a72469ae3e633fa2fa82664ccc438d617dae8811d128ee34a1eac3393836f633",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-dfd7a2459ad94f9490e5618493633bdd",
+          "sourceFile": "数学/2024年8月第5套数学.pdf",
+          "sourceSha256": "7daed20d672d6e453ea24345466c2de459fb12149cb45a5ad9883b0d8bc54950",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2024,
+        8,
+        5,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-b479c996f1c2481cb6af622823586b59",
+      "title": "2024年8月第6套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2024年8月第6套阅读语法.pdf",
+      "sourceSha256": "1a75cb3addbcf6663c452d1cb832d44a662549dad29bd768fac0aaf2702710db",
+      "directory": "pdf-b479c996f1c2481cb6af622823586b59",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+      "title": "2025年10月亚太数学去重版（仅8道）",
+      "category": "测试",
+      "sourceFile": "数学/2025年10月亚太数学去重版（仅8道）.pdf",
+      "sourceSha256": "72c9cb7ac78dc2052d9316e764db79bb6d53021d4b071f33dc18918d43f1aa24",
+      "directory": "pdf-fffbdc6d52e749ca8d63a2f6e858f868",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 8,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 8
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-bc1b17d5ab844b85ab31dcbb17a69be9",
+      "title": "2025年10月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-bc1b17d5ab844b85ab31dcbb17a69be9",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-f1bb1c0bea1c4d59b7cdbe80c7546482",
+          "sourceFile": "阅读文法/2025年10月亚太第1套阅读语法.pdf",
+          "sourceSha256": "82411521a447c1267a0e2781b8f1796a5968f078d75e138446f6b25f78aa49eb",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-755a1a28a7294e24931917fadd928a37",
+          "sourceFile": "数学/2025年10月亚太第1套数学.pdf",
+          "sourceSha256": "3416c324832ea725c6baf36102c5e9d47e4709c96f0ec8c64627eca21412c0bd",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        10,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-245ce0ca2de54c1eafe9104097848628",
+      "title": "2025年10月亚太第1套阅读语法(M2-Easy)",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年10月亚太第1套阅读语法(M2-Easy).pdf",
+      "sourceSha256": "17cfe17a8a8b43fba4a37c566a12ba2b2820a2a85db85e7d10d53f5eada9d7bb",
+      "directory": "pdf-245ce0ca2de54c1eafe9104097848628",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-0a69bae4862d448d9dfab4216255a5d7",
+      "title": "2025年10月亚太第2套SAT · Easy",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0a69bae4862d448d9dfab4216255a5d7",
+      "questionCount": 64,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 20
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-277fd4f8649c41e9952bdb4b9b0b114e",
+          "sourceFile": "阅读文法/2025年10月亚太第2套阅读语法(M2-Easy-20道题）.pdf",
+          "sourceSha256": "9da4eeacd63e87144d61bbe9f22335c31d4acb40eda85665b99a58917b344e1d",
+          "questionCount": 20,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-c84fd52c36814c548a81284ff3468a92",
+          "sourceFile": "数学/2025年10月亚太第2套数学（简单）.pdf",
+          "sourceSha256": "b5fa0334150a3e3dd41e8a69c6c5fb66d31360c47314a68322554e15512bdde3",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        10,
+        2,
+        "亚太",
+        "Easy"
+      ]
+    },
+    {
+      "collectionId": "pdf-f68d694a1b604f4e8c6d26c398eea2b4",
+      "title": "2025年10月亚太第2套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年10月亚太第2套阅读语法.pdf",
+      "sourceSha256": "b4f9b49775ea886c17e6ee5bffe2cab6fa8c3f89d9cc7aee98d4e397910826c0",
+      "directory": "pdf-f68d694a1b604f4e8c6d26c398eea2b4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2959b6eae6d04460a54ea3746ee16bb5",
+      "title": "2025年10月亚太第3套阅读语法（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年10月亚太第3套阅读语法（去重版）.pdf",
+      "sourceSha256": "86c406d16b0eec4ca2c0d0677f21ceae6514b4aa0a436fdbf400356b1ff34285",
+      "directory": "pdf-2959b6eae6d04460a54ea3746ee16bb5",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 18,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 10
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 8
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-bab3a5e4ed7447b197faa171ec9e5975",
+      "title": "2025年10月北美第1套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年10月北美第1套数学.pdf",
+      "sourceSha256": "1f0a616ab3add75e947289bb2d5e68f1e11731c72c52d4bdfe021fa941d36211",
+      "directory": "pdf-bab3a5e4ed7447b197faa171ec9e5975",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+      "title": "2025年10月北美第1套阅读语法（M2简单，和北美第2套阅读语法重复不录入）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年10月北美第1套阅读语法（M2简单，和北美第2套阅读语法重复不录入）.pdf",
+      "sourceSha256": "941e5144366e40810a9cab297d79872e3c38546d26fcbb5e23c2e303b9204926",
+      "directory": "pdf-af4b003e96b4464fa7d0a0a85a580ee3",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-a464b1157318488cb2492150e9f54c23",
+      "title": "2025年10月北美第2套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年10月北美第2套数学.pdf",
+      "sourceSha256": "e08e2f12c015c14aec1bdbfdddf22baca3d2f7ce0e75043d8580fcad07c40de1",
+      "directory": "pdf-a464b1157318488cb2492150e9f54c23",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-00e742b3b3f241d583259c135da44035",
+      "title": "2025年11月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-00e742b3b3f241d583259c135da44035",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-f720f1eb4378480a9947fd2c610ed2e5",
+          "sourceFile": "阅读文法/2025年11月亚太第1套阅读语法.pdf",
+          "sourceSha256": "959e32b201ca38044e98e424a85fbd17625e139e2c0a3e00dea155ccd95247c9",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-2c75dfe35dd44d5e96021733209687b5",
+          "sourceFile": "数学/2025年11月亚太第1套数学.pdf",
+          "sourceSha256": "2f1ddae31d265a531c63a8496b7a72b233fc10b3a9e9d00f35124d58ce5e56fa",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        11,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-2be14fbb531d4238bcc19140d1d6b39d",
+      "title": "2025年11月亚太第1套阅读语法 M2-easy",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年11月亚太第1套阅读语法 M2-easy.pdf",
+      "sourceSha256": "0b6c447549118054a5c079802aa7704dd33ebbb0bc8af80af671bc15ab21c7ac",
+      "directory": "pdf-2be14fbb531d4238bcc19140d1d6b39d",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-718c79511abd42b7b0556db0efa65425",
+      "title": "2025年11月亚太第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-718c79511abd42b7b0556db0efa65425",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-5ab7947e52b4469680f0f46a0d23f30d",
+          "sourceFile": "阅读文法/2025年11月亚太第2套阅读语法.pdf",
+          "sourceSha256": "c9a74333cfb5783346b3ab027c5c3fee42eacc93e953465bcec82f65922df9e8",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-fab4be97bd7a4c9090dfc10cc5890cb7",
+          "sourceFile": "数学/2025年11月亚太第2套数学.pdf",
+          "sourceSha256": "f7ce79b95509af876fe87b390df06e7b266e9e43b2ab1ab9a696fb0ad05035a4",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        11,
+        2,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-ab5467d10d7a44728531c45d5f4d2314",
+      "title": "2025年11月亚太第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-ab5467d10d7a44728531c45d5f4d2314",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-6b159b2b37e04088bf53a463e8943b86",
+          "sourceFile": "阅读文法/2025年11月亚太第3套阅读语法.pdf",
+          "sourceSha256": "3a45c700efc811d8e34895cf09a8acc788332d093392be2eeae553dd75148a9c",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-c745dd7a688b4da9861bbe4257d793a1",
+          "sourceFile": "数学/2025年11月亚太第3套数学.pdf",
+          "sourceSha256": "785a0e957d08f0bf337beb28153b4617132776c0d2a562435623852901e4e074",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        11,
+        3,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-ebb05f8f13af46f28b1dde0876d9f251",
+      "title": "2025年11月亚太第3套阅读语法M2-easy（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年11月亚太第3套阅读语法M2-easy（去重版）.pdf",
+      "sourceSha256": "364a290251e1e346b8897d564e25233151839cb900bb66759f32c7442a566217",
+      "directory": "pdf-ebb05f8f13af46f28b1dde0876d9f251",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 7,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 7
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2101acb9bf214b9a867f46c5af5de2c7",
+      "title": "2025年11月北美第1套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年11月北美第1套数学.pdf",
+      "sourceSha256": "77436c50b2242fb127b49f0ef358e4b548afcd73e4e387f89e4b18a90996136a",
+      "directory": "pdf-2101acb9bf214b9a867f46c5af5de2c7",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-4f2eb33d5c854e2a995f18c9082f0211",
+      "title": "2025年11月北美阅读语法（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年11月北美阅读语法（去重版）.pdf",
+      "sourceSha256": "66931f1792dcb6f015ae2808519c461f53e0fc1cf4d34c3ae908a06b5abe7fc6",
+      "directory": "pdf-4f2eb33d5c854e2a995f18c9082f0211",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 17,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 9
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 8
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-8df16e7cba4e4d4990cfb75e477eda46",
+      "title": "2025年11月第2套阅读语法M2-easy（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年11月第2套阅读语法M2-easy（去重版）.pdf",
+      "sourceSha256": "c3d96be2a464f446e3609a5e436557487ef99730d6c96f19fc22cdab95612850",
+      "directory": "pdf-8df16e7cba4e4d4990cfb75e477eda46",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 13,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 13
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-daf0d5b61e504efd8bbfb7fd0643c778",
+      "title": "2025年12月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-daf0d5b61e504efd8bbfb7fd0643c778",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-b41f59b97d2d46e59e0fc9135a6eb1ba",
+          "sourceFile": "阅读文法/2025年12月亚太第1套阅读语法.pdf",
+          "sourceSha256": "e51991502bb708f9ebcd8987b27ecd714d30457ddedb078140fd690059d38b7b",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-6fe105fb1ac64abfb655248d18aaff21",
+          "sourceFile": "数学/2025年12月亚太第1套数学.pdf",
+          "sourceSha256": "6bb64d3c087d7d12e3aea6b62e8d73b9d1e327d9f8699f25da89cf8dd1580d05",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        12,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-bb99328e105540b0888afdc810ba063a",
+      "title": "2025年12月亚太第2&3套阅读语法（合并去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月亚太第2&3套阅读语法（合并去重版）.pdf",
+      "sourceSha256": "f9a4c406975f53a92465ee355298dda8251acab94a1cbea71d43ec2ef7278489",
+      "directory": "pdf-bb99328e105540b0888afdc810ba063a",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 35,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 25
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 10
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-c78a6cdec6b44094b152d4b780c74a9a",
+      "title": "2025年12月亚太第2套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年12月亚太第2套数学.pdf",
+      "sourceSha256": "d969578345b8c33ba6c18ee495a2109b65de2681ad5b8e7480f7088f62fd2377",
+      "directory": "pdf-c78a6cdec6b44094b152d4b780c74a9a",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+      "title": "2025年12月亚太第3套数学（M1少1题）",
+      "category": "测试",
+      "sourceFile": "数学/2025年12月亚太第3套数学（M1少1题）.pdf",
+      "sourceSha256": "677109856b44b05bfcfadd194e8f9b5875d3cae73fd4089dcc2f5c4e9369e67d",
+      "directory": "pdf-2bf1bf24e7864982adfe6b37e8ed8006",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 43,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-dde9d3a6eaab4eb28c160f9ab65c3a41",
+      "title": "2025年12月亚太阅读语法第1套M2-Easy（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月亚太阅读语法第1套M2-Easy（去重版）.pdf",
+      "sourceSha256": "7f4b5ec777ccc6a690a687f84c7efbe0c9e1055ef97efa01dbfab80e9610d00b",
+      "directory": "pdf-dde9d3a6eaab4eb28c160f9ab65c3a41",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 23,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 23
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-5226270bb9624cf1bade301516efa786",
+      "title": "2025年12月亚太阅读语法第2套M2-Easy-13道题（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月亚太阅读语法第2套M2-Easy-13道题（去重版）.pdf",
+      "sourceSha256": "a5ea013f526ec8760836f9b660419ee99971a3dd9edb0b6a91b185b6e825b9d2",
+      "directory": "pdf-5226270bb9624cf1bade301516efa786",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 13,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 13
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-8247b4f1404c40c9974cd102a7ca3a2b",
+      "title": "2025年12月亚太阅读语法第3套M2-Easy-9道题（去重版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月亚太阅读语法第3套M2-Easy-9道题（去重版）.pdf",
+      "sourceSha256": "816beae1b4d20eb5bb2e247b170d6338549d82dee282e32d238cec789cc4ecaa",
+      "directory": "pdf-8247b4f1404c40c9974cd102a7ca3a2b",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 9,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 9
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-c374ec72fa734bbcb2e0bd1ce367ba90",
+      "title": "2025年12月北美第1套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月北美第1套阅读语法.pdf",
+      "sourceSha256": "cc81d6968f0ddde6c72f658f41972520d456e129df2d0484a278d6e398444cd4",
+      "directory": "pdf-c374ec72fa734bbcb2e0bd1ce367ba90",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-eccbb99513b14508af222ccea27fc199",
+      "title": "2025年12月北美第2套阅读语法（只有M1-剩17题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年12月北美第2套阅读语法（只有M1-剩17题）.pdf",
+      "sourceSha256": "8e248d3a57026edc25284011835d979b8c177adbe5fdbe344ce9e098d0b21538",
+      "directory": "pdf-eccbb99513b14508af222ccea27fc199",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 17,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 17
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-3b6c94dc5be44cc3a35dd31c19e2fee0",
+      "title": "2025年3月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-3b6c94dc5be44cc3a35dd31c19e2fee0",
+      "questionCount": 93,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 19
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 20
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-4a269c786ac8420883e16b64cd29bc6f",
+          "sourceFile": "阅读文法/2025年3月第1套阅读语法.pdf",
+          "sourceSha256": "17d37c7239347609306329aa021e01a8268cbacb6ee65fafea31b15a598a021f",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-2ddfa2bc54b44143af94127954454fd0",
+          "sourceFile": "数学/2025年3月第1套数学（缺5题）.pdf",
+          "sourceSha256": "52f9a1ae9f130e97c4d6d2535e2dd23ff168901952468e0fb85522cc63cc3d02",
+          "questionCount": 39,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-4c9fd01ecc7c41768fddd0f4da8dfc3b",
+      "title": "2025年3月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-4c9fd01ecc7c41768fddd0f4da8dfc3b",
+      "questionCount": 97,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-3f63e69ba27f421887cae16464f9d07d",
+          "sourceFile": "阅读文法/2025年3月第2套阅读语法.pdf",
+          "sourceSha256": "ffda354ce068187940fe4a5d6cea7a4fe876f09bbf10202d786df73770ea3dac",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-94fd4f9af6134e4abe9adbc7f23c827d",
+          "sourceFile": "数学/2025年3月第2套数学（缺1题）.pdf",
+          "sourceSha256": "4085695ddbcb8f9f0242d154345301fd683ea3509c5712fdae02953a2b3d840d",
+          "questionCount": 43,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0c8086fcbbab4d4e9d513db5301fed62",
+      "title": "2025年3月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0c8086fcbbab4d4e9d513db5301fed62",
+      "questionCount": 54,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 6
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 4
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-209911de4aa8495b80d7530b1f4b1622",
+          "sourceFile": "阅读文法/2025年3月第3套阅读语法（只录新题）.pdf",
+          "sourceSha256": "c4bbaaccb43d535c3b25dfd634faa89c7616e064b2d2e462d05af523ecc50039",
+          "questionCount": 10,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-576c166eef1d4a159208504ec619c342",
+          "sourceFile": "数学/2025年3月第3套数学.pdf",
+          "sourceSha256": "35ff0366f14998e278e12fddc62ad5c6347d2065cff3409483c270c542f63e04",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-097aea805d674283b21730d4bf184704",
+      "title": "2025年3月第4套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-097aea805d674283b21730d4bf184704",
+      "questionCount": 60,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 11
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 12
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 15
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-dc93a31f6a2443c292b415b25212826c",
+          "sourceFile": "阅读文法/2025年3月第4套阅读语法（只录新题）.pdf",
+          "sourceSha256": "a7ab93f8c6f79eb22bbae774d85697927d712cea1645d7140782aa1fee0f4017",
+          "questionCount": 23,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-00097cc834314083b7b9c6664b92e322",
+          "sourceFile": "数学/2025年3月第4套数学（缺7题）[第5套全部为旧题，不录入].pdf",
+          "sourceSha256": "ce0c7fb0419ebaea86bf0f07df2ffa532247663802e93d1bac45676e5622b2b9",
+          "questionCount": 37,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        4,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-25416c47ca6e4b16b55bcc3c35842ca5",
+      "title": "2025年3月第5套阅读语法【只留新题】",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年3月第5套阅读语法【只留新题】.pdf",
+      "sourceSha256": "35c2ae965c975c3989e540e3c5221c0fc569e47be236bc38f8948d1028ff7049",
+      "directory": "pdf-25416c47ca6e4b16b55bcc3c35842ca5",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 11,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 9
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 2
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-811cd836a1ae4085a1e47c12e4c18845",
+      "title": "2025年3月第6套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-811cd836a1ae4085a1e47c12e4c18845",
+      "questionCount": 93,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 23
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-9c3d076675ad40289a542a6772240c81",
+          "sourceFile": "阅读文法/2025年3月第6套阅读语法（缺4题）.pdf",
+          "sourceSha256": "094e50b5685251180a43c3f7aa241834ead075e198e1981db67564475762eb4a",
+          "questionCount": 50,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-ed3378c1c71449c2a4c0b268b20173f9",
+          "sourceFile": "数学/2025年3月第6套数学（缺1题）.pdf",
+          "sourceSha256": "611158201eef1e42aaaca6d685a5528c821cd279b590442dc0ce520f7e7ea34d",
+          "questionCount": 43,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        6,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-84a6885ac9b143129f71d29b1335b495",
+      "title": "2025年3月第7套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-84a6885ac9b143129f71d29b1335b495",
+      "questionCount": 95,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 19
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-3ae568854fb84c64bb67019eefb3abbb",
+          "sourceFile": "阅读文法/2025年3月第7套阅读语法.pdf",
+          "sourceSha256": "61da4d96a26e1c0e252ffe08887d28bd7bc57551f4c851cd6235c3d306ff59eb",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-8530322a9f9b485ea4f8e6873166928a",
+          "sourceFile": "数学/2025年3月第7套数学（缺3题）.pdf",
+          "sourceSha256": "785fc0f6897f4546b33a4df461b4c144f13411022537441980d47e882ae85baa",
+          "questionCount": 41,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        7,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-39f1e11c6a4541e2848662854b5ae602",
+      "title": "2025年3月第8套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-39f1e11c6a4541e2848662854b5ae602",
+      "questionCount": 57,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 2
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 16
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 21
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 18
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-8a4aa5e698e543cabd751842bac04b71",
+          "sourceFile": "阅读文法/2025年3月第8套阅读语法（只保留新题）.pdf",
+          "sourceSha256": "152032b54d86535c49f56db1d201f7c991d7d6d3ccfd9ecd96aadfb49b5d4d69",
+          "questionCount": 18,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-641aa91d10014685b82e54f57bfd9acf",
+          "sourceFile": "数学/2025年3月第8套数学（缺5题）.pdf",
+          "sourceSha256": "3486bdc45f90344253e1e838ff4d11793fb04395d7b8ea03132b2dd6671e012b",
+          "questionCount": 39,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        3,
+        8,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-94ac0070057a4641844de47628c90a71",
+      "title": "2025年5月第1套阅读语法（缺4题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年5月第1套阅读语法（缺4题）.pdf",
+      "sourceSha256": "3286ad12dba3778cdc6cf21dc2a324364a96c4e180bddad8da04a05a5d783664",
+      "directory": "pdf-94ac0070057a4641844de47628c90a71",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 50,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 25
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 25
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-c3a85451b62b4e738a0636b67042348f",
+      "title": "2025年5月第2&3套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年5月第2&3套阅读语法.pdf",
+      "sourceSha256": "ce89688b62cc7829ac4a22df115862bbdcc760bfa4695b1b333e019b5814ffd8",
+      "directory": "pdf-c3a85451b62b4e738a0636b67042348f",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-af9d02ba73c148f4b3d4778398dbd9fc",
+      "title": "2025年5月第2套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年5月第2套数学.pdf",
+      "sourceSha256": "107621354e61b2d6c4aa368e0dc2fcfc112294916e7d602dbfe16eebd981c1cb",
+      "directory": "pdf-af9d02ba73c148f4b3d4778398dbd9fc",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-3376e89aaff44783b4efe24db8df9b70",
+      "title": "2025年5月第3套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年5月第3套数学.pdf",
+      "sourceSha256": "85e31b1ef03b90117ff9fe9f4ac8832ca6bbb69d989c177944e35f9e12c15f0b",
+      "directory": "pdf-3376e89aaff44783b4efe24db8df9b70",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-716185a67a75485d9c638ef9dc861e7f",
+      "title": "2025年5月第4套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年5月第4套阅读语法.pdf",
+      "sourceSha256": "879c8154469a2415a52ec6c9e1bfcc5dc7cc4227608d57017636c32e3bac0c2f",
+      "directory": "pdf-716185a67a75485d9c638ef9dc861e7f",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-709371f679ef4e2f9244d6cec6bda674",
+      "title": "2025年6月第1套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年6月第1套阅读语法.pdf",
+      "sourceSha256": "64f062c769088aa505ae00396dc5146d8a05aaf40dbd1d13c13e30c5306b73a7",
+      "directory": "pdf-709371f679ef4e2f9244d6cec6bda674",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-8f656c6cc16f464f9e9acdd8801bf541",
+      "title": "2025年6月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-8f656c6cc16f464f9e9acdd8801bf541",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-04d96a9139e64ff3a63b5c87203ffbee",
+          "sourceFile": "阅读文法/2025年6月第2套阅读语法.pdf",
+          "sourceSha256": "1176bef74606104a57c3b02928675dfce2f1257045e1005b71891b63b567fda1",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-89b10ca1f9dc450aa33f43ab1618eb80",
+          "sourceFile": "数学/2025年6月第2套数学.pdf",
+          "sourceSha256": "c790877635ecc156c26956a7e3fd060b9ee6828a2bab0ef7b76aba0345e1c487",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        6,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-fcb91bb773244933b881711f06c4298e",
+      "title": "2025年6月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-fcb91bb773244933b881711f06c4298e",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-5f4ca75982c747e4a53733b5836614d1",
+          "sourceFile": "阅读文法/2025年6月第3套阅读语法.pdf",
+          "sourceSha256": "1317b5355e5e612bb2ba88eabb7067f49bb52dcbcbb0d4cc795ef567a96cecc5",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-ccf730160d9e45918e30cb5d43db7cf8",
+          "sourceFile": "数学/2025年6月第3套数学.pdf",
+          "sourceSha256": "c9f0024ff4705ac9902b6db43cf6255d9cf2a2571e1a46cb2df431adbcfe3424",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        6,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0012cb6b14c241b1b0cee3555c0d1bba",
+      "title": "2025年8月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0012cb6b14c241b1b0cee3555c0d1bba",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-de46af5c1831444fa567f11f158ccb7b",
+          "sourceFile": "阅读文法/2025年8月第1套阅读语法.pdf",
+          "sourceSha256": "d2a149babc0f6b910d1ba17290e958118cc7d27fcbedb066b459b6bce4ff03b5",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-7464e6af9f9c4110bf0ddef60e737f58",
+          "sourceFile": "数学/2025年8月第1套数学.pdf",
+          "sourceSha256": "fc581adf1e44427d0e1421ce1b54cac232ed95966e25086ebd73e79509feb6e1",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        8,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-43a8988de18b466b9de5eef5f12a02e5",
+      "title": "2025年8月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-43a8988de18b466b9de5eef5f12a02e5",
+      "questionCount": 96,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 25
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-76ddc1a05f554cfe8e80edfb314fc181",
+          "sourceFile": "阅读文法/2025年8月第3套阅读语法【M2缺两道题】.pdf",
+          "sourceSha256": "7c1609912f1b315900fa2f47bbfbfcbe23c3c8a1da5eaf02be7d8e8f8a5e7af3",
+          "questionCount": 52,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-20eee207e6724de383a9f22758f79a40",
+          "sourceFile": "数学/2025年8月第3套数学.pdf",
+          "sourceSha256": "34262bfc500d66743c222e4f28e4e85c278196890358ac394d4366eb261882f9",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        8,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-3594e453f01d4e29b73b9290235125d4",
+      "title": "2025年8月第4套阅读语法（M1和M2合并版，重题较多）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年8月第4套阅读语法（M1和M2合并版，重题较多）.pdf",
+      "sourceSha256": "e38ee064e49b5919e4536022b6d2e7390f37805d53ff4677735588982da3ba29",
+      "directory": "pdf-3594e453f01d4e29b73b9290235125d4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-f62e7d389c3e4ae9afc48c33b604e6b6",
+      "title": "2025年8月第5套阅读语法M2 （1-23题）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年8月第5套阅读语法M2 （1-23题）.pdf",
+      "sourceSha256": "540a12ca8b2e69d1d03ade1ba0f5db4097769f9649fba2e5b66e6324ff95df06",
+      "directory": "pdf-f62e7d389c3e4ae9afc48c33b604e6b6",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 23,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 23
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-f2a60aa6c908499695007353dd5c2992",
+      "title": "2025年8月第6套阅读语法M2-Easy",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年8月第6套阅读语法M2-Easy.pdf",
+      "sourceSha256": "6362412a9449986bf27654e5ab9121bc5827e37e51bb2d3ede4f3a9a43fe417e",
+      "directory": "pdf-f2a60aa6c908499695007353dd5c2992",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 24,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 24
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-aab66ae4b19b424ab2299beef1533962",
+      "title": "2025年8月阅读语法第2套-M2和第1套重复，不录入",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年8月阅读语法第2套-M2和第1套重复，不录入.pdf",
+      "sourceSha256": "14cf7ee019a807e407b98230058995e6b79780d8c7ea684e29bb59d085d3c819",
+      "directory": "pdf-aab66ae4b19b424ab2299beef1533962",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 26,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 26
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+      "title": "2025年9月北美数学去重合并版",
+      "category": "测试",
+      "sourceFile": "数学/2025年9月北美数学去重合并版.pdf",
+      "sourceSha256": "b6f10fc99bb40ed317da03b9d10580e69cf8c595046f55ebcd51c63ab4059f34",
+      "directory": "pdf-98ab9fd1c3274aa4b3669c900f2beb27",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 12,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 6
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 6
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-c2006c65793442479958503d6f35a096",
+      "title": "2025年9月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-c2006c65793442479958503d6f35a096",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-347f08f51c7c4b58bf01bc25f2f67414",
+          "sourceFile": "阅读文法/2025年9月第1套阅读语法.pdf",
+          "sourceSha256": "490aef09dc48c25f48a462c6c3fcd75c23e98621e5366393633b9fae5102bac7",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-69f83993653749e2b6a4941ab7d00b50",
+          "sourceFile": "数学/2025年9月第1套数学.pdf",
+          "sourceSha256": "08276d20277cf1190f29625f1adfb97e289d321768ab3840133640a7977b5baf",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        9,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-07eec1f91a2541f8b79911ee22e49544",
+      "title": "2025年9月第1套阅读语法M2-Easy去重版",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年9月第1套阅读语法M2-Easy去重版.pdf",
+      "sourceSha256": "4164c335bd77fe4ae9f1634deadce2014e569656d9cc48355f20b8f76a923351",
+      "directory": "pdf-07eec1f91a2541f8b79911ee22e49544",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 16,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 16
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+      "title": "2025年9月第2套数学去重版（M2只有19道题）",
+      "category": "测试",
+      "sourceFile": "数学/2025年9月第2套数学去重版（M2只有19道题）.pdf",
+      "sourceSha256": "e39eeb92c424d87f43447a93460425e81b9fcd004b24ff0cce67964fa7f2ab40",
+      "directory": "pdf-0fb349f417e24bd3bcfe5ddcedd70abe",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 19,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 19
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-c076afb088c845b7b36d566593580694",
+      "title": "2025年9月第2套阅读语法",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年9月第2套阅读语法.pdf",
+      "sourceSha256": "e22eb10045874b508373b1442a22bc4dfba17a6c938d192534dd762e950e7596",
+      "directory": "pdf-c076afb088c845b7b36d566593580694",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-4a0d8d1b67dd4cd3b3c3e127f4c5c831",
+      "title": "2025年9月第2套阅读语法M2 Easy-去重版",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年9月第2套阅读语法M2 Easy-去重版.pdf",
+      "sourceSha256": "acc51b4c18ff85dc2e0ce53d1b5bfeda0568789816e9c7e7f0b2769b670ff942",
+      "directory": "pdf-4a0d8d1b67dd4cd3b3c3e127f4c5c831",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 17,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 17
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-1b5fe7f6aec74c51bda5bb7869de7b52",
+      "title": "2025年9月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-1b5fe7f6aec74c51bda5bb7869de7b52",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-25844cb9712d4682ba1bb1a6df6087d2",
+          "sourceFile": "阅读文法/2025年9月第3套阅读语法.pdf",
+          "sourceSha256": "c28e313a2dff9d16bb58cb0f473a56bf09d538cfcfd0404e92a4505710f63078",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-0f7142aacabd45d79730bfe045f63c0f",
+          "sourceFile": "数学/2025年9月第3套数学.pdf",
+          "sourceSha256": "bcf52403a928eb2e8f9798aac43b665df3c3fd1ac5265b542a5afd29339aa2db",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2025,
+        9,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-3e7d0cbb11ba471fa0e0d835a497b138",
+      "title": "2025年9月第4套数学",
+      "category": "测试",
+      "sourceFile": "数学/2025年9月第4套数学.pdf",
+      "sourceSha256": "9bccf9140c9840d79074d5b79d8f0955a4e650ae88aa74fcd2dc41c872bff161",
+      "directory": "pdf-3e7d0cbb11ba471fa0e0d835a497b138",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-5a66bef72c2749e686130df05a64ce4b",
+      "title": "2025年9月第4套阅读语法（北美B-F去重合并版）",
+      "category": "测试",
+      "sourceFile": "阅读文法/2025年9月第4套阅读语法（北美B-F去重合并版）.pdf",
+      "sourceSha256": "9048f1cd7a391c2ad968ba6083092f5eef5cc1119bde4a3f1502bab04e03ff8c",
+      "directory": "pdf-5a66bef72c2749e686130df05a64ce4b",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-841d6999303f44238b0d83a2787869d5",
+      "title": "2025年9月第5套数学去重版（M1全+M2部分题）",
+      "category": "测试",
+      "sourceFile": "数学/2025年9月第5套数学去重版（M1全+M2部分题）.pdf",
+      "sourceSha256": "c00d3aa909880ffa8dbad59e6277ff8158e4e8325325ea050be153c84dfe1c98",
+      "directory": "pdf-841d6999303f44238b0d83a2787869d5",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 25,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 3
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-174de8f87e144bd09edf77988cbcf07d",
+      "title": "2026年10月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-174de8f87e144bd09edf77988cbcf07d",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-317856f68c034ebe84c1096f97a4dc57",
+          "sourceFile": "阅读文法/2026年10月第1套阅读语法.pdf",
+          "sourceSha256": "e0b22db896896d431bd726e7e50969baa21c48c5b141fe8dcafe5aeb8961edfe",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-6b0d74156f2847238a2debc54a825fb3",
+          "sourceFile": "数学/2026年10月第1套数学.pdf",
+          "sourceSha256": "a2896eec6386d48bf4e20b35b8492468b6ae05fe1858bc806840e1855f9c9161",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        10,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-d30a4f4c81784c0fbdb6bb05599fb92c",
+      "title": "2026年10月第1套阅读语法-亚太",
+      "category": "测试",
+      "sourceFile": "阅读文法/2026年10月第1套阅读语法-亚太.pdf",
+      "sourceSha256": "92429302bcb37cd34289929c2d30c62180e9593857fa46e301abe8771da6b868",
+      "directory": "pdf-d30a4f4c81784c0fbdb6bb05599fb92c",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-f8d8068c779348d5ae1d4d6b9feb646a",
+      "title": "2026年10月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-f8d8068c779348d5ae1d4d6b9feb646a",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-cbe2f6a8ce19489c9520547f1eed51b7",
+          "sourceFile": "阅读文法/2026年10月第2套阅读语法.pdf",
+          "sourceSha256": "7215d6368ea8c258a6501152b1f21efbcd4c71d9e7002afc0209ee9c6cb4cc70",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-aa5bffac741243aab2bf4b9ddbe1b44b",
+          "sourceFile": "数学/2026年10月第2套数学.pdf",
+          "sourceSha256": "be9e1a2d2afda9e4a39d2fccb58603c5a075ff3c5652241e7944aac0f99038df",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        10,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-2b49ac5dd7544842b724a449591c83cc",
+      "title": "2026年10月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-2b49ac5dd7544842b724a449591c83cc",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-560587e5aa1a4a31b3a7146b0bd1eabb",
+          "sourceFile": "阅读文法/2026年10月第3套阅读语法.pdf",
+          "sourceSha256": "96685fe4a694eb04b2a01d8f9a8792cbde7d2af795532d18f68268f7d60e2a89",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-3f20c3da269b45be902763524a375144",
+          "sourceFile": "数学/2026年10月第3套数学.pdf",
+          "sourceSha256": "a62af51e4726d6d4ddeff662c9f3d57aeed9e074ada9b976ab0ff43cbf8eeb69",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        10,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-dfbe7bab410d46e5a2f5822e0104bfab",
+      "title": "2026年3月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-dfbe7bab410d46e5a2f5822e0104bfab",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-b8d4b42192c744028c3bbce8f3a4595b",
+          "sourceFile": "阅读文法/2026年3月亚太第1套阅读语法.pdf",
+          "sourceSha256": "fb5503340d022feab8d35ee8323a31e4d5bf7c96a941d9f35d36b9c109f317a2",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-4024e931e99441f2a7f01cdcf26f1a5c",
+          "sourceFile": "数学/2026年3月亚太第1套数学.pdf",
+          "sourceSha256": "e96e0c61a998709085b806b2e173eebe11adf9f2a37720f901b61b32ce6236bc",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        3,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-22736dd863414d0599a4679ba113e38d",
+      "title": "2026年3月亚太第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-22736dd863414d0599a4679ba113e38d",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-99d5a177d7fa4faf9c03a915aede78d4",
+          "sourceFile": "阅读文法/2026年3月亚太第2套阅读语法.pdf",
+          "sourceSha256": "0bfa94bc63470f05924cd9881a93cdeb6055805e7143f896e450e7f5e831f5d7",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-66c9044a75564f7fa324480141943a3b",
+          "sourceFile": "数学/2026年3月亚太第2套数学.pdf",
+          "sourceSha256": "b51428ca41b0e50c54ae660ff1c3fd378a895bcff1a176cc3d7d33bf65cbe9a6",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        3,
+        2,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-280681c22e694b08afa722b65fda6b3a",
+      "title": "2026年3月亚太第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-280681c22e694b08afa722b65fda6b3a",
+      "questionCount": 63,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 19
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-f8f0ec9575e14f01805caefdbb869568",
+          "sourceFile": "阅读文法/2026年3月第3套亚太阅读语法（只有19题）.pdf",
+          "sourceSha256": "007f8a17f55e272edc64e2105b30ea435233fae8d501326870901ccd7bab6545",
+          "questionCount": 19,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+          "sourceFile": "数学/2026年3月亚太第3套数学.pdf",
+          "sourceSha256": "22b69aaed2bbaaf854d9ec6762e199400f5e4b744f28e5be553f3c57dbdbea83",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        3,
+        3,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-891fcf8317bd4a4bb1de92fea1b970ec",
+      "title": "2026年5月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-891fcf8317bd4a4bb1de92fea1b970ec",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-9753f1ff5da645c6ba1ee0f870728ce9",
+          "sourceFile": "阅读文法/2026年5月第1套阅读语法.pdf",
+          "sourceSha256": "c6ef6c9e34ef1866c633cafc71ec10c5bcebd41112eff5bc6b0e3868d5065f5c",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-85505b5ef7c04c7d9d46496a92b71605",
+          "sourceFile": "数学/2026年5月第1套数学.pdf",
+          "sourceSha256": "581f8add5873648305e3f02870faadb5cfe369923980e9f00019274cd5b15ac6",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        5,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-bd28a2d5ef384e8d9a6e904691fc25b3",
+      "title": "2026年5月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-bd28a2d5ef384e8d9a6e904691fc25b3",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-73db204844d2418185c9125d0887acb4",
+          "sourceFile": "阅读文法/2026年5月第2套阅读语法.pdf",
+          "sourceSha256": "efbe03757d2475019141815706ec223c311a0d783fb5aa899cee1685b9dc0334",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-7a526cc861424c46ac55d6032fe95322",
+          "sourceFile": "数学/2026年5月第2套数学.pdf",
+          "sourceSha256": "283410ec02ca2359013c89ea03008602e466109354d3b095e1b5b47fe677bf22",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        5,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+      "title": "2026年5月第3套数学（只有26题）",
+      "category": "测试",
+      "sourceFile": "数学/2026年5月第3套数学（只有26题）.pdf",
+      "sourceSha256": "9cb450adaeaac172243f44db595b7e9c8bf211f41e613665d7078e2b48fe4030",
+      "directory": "pdf-bb67b9ec4d634df59ab5855ac17fb387",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 26,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 10
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 16
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-ac8b4ded933d4cd78019a13495ad09f1",
+      "title": "2026年6月第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-ac8b4ded933d4cd78019a13495ad09f1",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-2e9ddffcb3cf4f5d8f35abc26cef7301",
+          "sourceFile": "阅读文法/2026年6月第1套阅读语法.pdf",
+          "sourceSha256": "b68f4190161f4e7fd2d24717ee890826cad3a68b18273eea2db28c7c7c199923",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-d3c7a34699d047ea8060775dea4d6b63",
+          "sourceFile": "数学/2026年6月第1套数学.pdf",
+          "sourceSha256": "50d434457430676ef3950a672940e7d856e49271b74516f734d9575d1f001b67",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        6,
+        1,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-ca33399f58734d089ba6901ae1d946d5",
+      "title": "2026年6月第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-ca33399f58734d089ba6901ae1d946d5",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-2c79b73a2e304529a1a17c255280ccfa",
+          "sourceFile": "阅读文法/2026年6月第2套阅读语法.pdf",
+          "sourceSha256": "c833acd4e4c3b0c55c4bf1a5bf02bf4b82d80c9e62318363d990dc9e53a4771a",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-d8d3d2334d584b579b648e9c1e6a8385",
+          "sourceFile": "数学/2026年6月第2套数学.pdf",
+          "sourceSha256": "1edfe6adc331b30b8f758c435c411c523dc0e43781359b914b165457328e10ea",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        6,
+        2,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-3c5444438b9147e698705909c7c78bc2",
+      "title": "2026年6月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-3c5444438b9147e698705909c7c78bc2",
+      "questionCount": 72,
+      "fullSAT": false,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 23
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 14
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 18
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 17
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-b732c67629b34ddf93e28b6089bea355",
+          "sourceFile": "阅读文法/2026年6月第3套阅读语法（M1 23题+M2 14题）.pdf",
+          "sourceSha256": "0c0d93d3cba18c61e1d7630ba385f65eba3d232059cfb408a46a234ca6748d4b",
+          "questionCount": 37,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-bb52ff2b1da140e484fb53374fc8ceb5",
+          "sourceFile": "数学/2026年6月第3套数学（M1 18题+M2 17题）.pdf",
+          "sourceSha256": "3485196720c76dcce8241690c552d413e4de1753d2142cce311b46fe7ba12136",
+          "questionCount": 35,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        6,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-a24fa3196e8844b69c2ab52f85cfb6c2",
+      "title": "2026年8月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-a24fa3196e8844b69c2ab52f85cfb6c2",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-1819e838d6ef41f9a47790ea129519cb",
+          "sourceFile": "阅读文法/2026年8月亚太第1套阅读语法.pdf",
+          "sourceSha256": "33bd89d147dad380772ceda687dae8291b8c36c49693821fc58e11399e28494a",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-6ac1e9d9a0b74860be28da68301fc4a3",
+          "sourceFile": "数学/2026年8月亚太第1套数学.pdf",
+          "sourceSha256": "baf589a58419dd26c43c7a06006af26f6b85971600fdaeff3602ff4b5d035069",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        8,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-c276b4cf318d4b9f8b1fc72cd3343064",
+      "title": "2026年8月亚太第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-c276b4cf318d4b9f8b1fc72cd3343064",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-be7bf6274e0642e0aa4adaa20cbcbe93",
+          "sourceFile": "阅读文法/2026年8月亚太第2套阅读语法.pdf",
+          "sourceSha256": "2cbc28c5fa0a9cc55494b4b9c21c7b5822fda0c3c2ceb4267cf56610c938aeb8",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-11be491de3c34b30bc472a5a813f3e69",
+          "sourceFile": "数学/2026年8月亚太第2套数学.pdf",
+          "sourceSha256": "e3e112a866e0fbcc573d9cfa45df4a6d9e2b88e265530c1563df1c12dbb809eb",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        8,
+        2,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-e655a0dc8c53437cae0d37e9a0380d85",
+      "title": "2026年8月北美第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-e655a0dc8c53437cae0d37e9a0380d85",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-1427505d00174f8d86d7e32ee23396e5",
+          "sourceFile": "阅读文法/2026年8月北美第1套阅读语法.pdf",
+          "sourceSha256": "6bbcfc8955da2aff14885d0f841fab3f58a861fb3a4b52c5f0e305f6bd242cb2",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-d8bfb013c9bc423f83d9dd6df637eb49",
+          "sourceFile": "数学/2026年8月北美第1套数学.pdf",
+          "sourceSha256": "617e33b766da7ee3824561ac46ed1c472991faa325e45768659ca9c7f4f3f7c0",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        8,
+        1,
+        "北美",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-8b48ac7ac5954afd9c64e6814d01f738",
+      "title": "2026年9月亚太第1套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-8b48ac7ac5954afd9c64e6814d01f738",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-3a1ce87ce215499c83bd4abdeb6b8712",
+          "sourceFile": "阅读文法/2026年9月第1套阅读语法 (亚太).pdf",
+          "sourceSha256": "af31ac37b080378d81b679e2cf557717a88b7b0e667bbfd5aad2de984f25cf50",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-1aff2c9ac6b64e88b666705aca4ec9a7",
+          "sourceFile": "数学/2026年9月第1套数学 (亚太).pdf",
+          "sourceSha256": "f68fc0da9832b9984a65a87ccb0436b2a17f4e8996f81ed844bd0ac6ed2e903e",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        9,
+        1,
+        "亚太",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "combined-0cc8f2f74ea04758b3cdd18c158c4533",
+      "title": "2026年9月北美第2套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-0cc8f2f74ea04758b3cdd18c158c4533",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-a8d9d21a17d540458ca17fe39df01beb",
+          "sourceFile": "阅读文法/2026年9月第2套阅读语法 (北美).pdf",
+          "sourceSha256": "f05c8ea66abdf814d7cadba5f66566f233e2106a78cd57993891fc13780f5e73",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-1c6f767cf8b047bea469376361dafdf8",
+          "sourceFile": "数学/2026年9月第2套数学 (北美).pdf",
+          "sourceSha256": "703442e016565fbf8b6693c78e5d71b0b56408eab0445fd4a58ad65194c6171c",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        9,
+        2,
+        "北美",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-09a099fab1c44b609c3a5215b83b1aa4",
+      "title": "2026年9月第1套阅读语法M2 -Easy (亚太)",
+      "category": "测试",
+      "sourceFile": "阅读文法/2026年9月第1套阅读语法M2 -Easy (亚太).pdf",
+      "sourceSha256": "31e57049416df1eb0e915f5605986a0b3e8224882249618563b9684be093d3ee",
+      "directory": "pdf-09a099fab1c44b609c3a5215b83b1aa4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-eb5a8e2ebce44fd1bdb3dca6cae7b7c2",
+      "title": "2026年9月第2套阅读语法M2 -Easy (北美)",
+      "category": "测试",
+      "sourceFile": "阅读文法/2026年9月第2套阅读语法M2 -Easy (北美).pdf",
+      "sourceSha256": "a8746f4d47661a1c875423972e28ab23880a87d72b7619fea24a81a99161af7e",
+      "directory": "pdf-eb5a8e2ebce44fd1bdb3dca6cae7b7c2",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "combined-1354a330ae4f4669ac423d58161f5b60",
+      "title": "2026年9月第3套SAT",
+      "category": "测试",
+      "status": "converted",
+      "directory": "combined-1354a330ae4f4669ac423d58161f5b60",
+      "questionCount": 98,
+      "fullSAT": true,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27,
+          "durationSeconds": 1920
+        },
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22,
+          "durationSeconds": 2100
+        }
+      ],
+      "sourceCollections": [
+        {
+          "collectionId": "pdf-0d1f6ec01003481aae515089b297d77a",
+          "sourceFile": "阅读文法/2026年9月第3套阅读语法.pdf",
+          "sourceSha256": "f9583044a100a482307df0d02c9cc82bbaa93ba9fdb718d6debe76aea411e34b",
+          "questionCount": 54,
+          "section": "reading-writing"
+        },
+        {
+          "collectionId": "pdf-622a4f75b72949119b9109a41e3fccb1",
+          "sourceFile": "数学/2026年9月第3套数学.pdf",
+          "sourceSha256": "3f038332c258be499b83a7e15571d42a9cb10e62fc7ac8547561abe57c6d7e2b",
+          "questionCount": 44,
+          "section": "math"
+        }
+      ],
+      "assemblyIdentity": [
+        2026,
+        9,
+        3,
+        "",
+        "standard"
+      ]
+    },
+    {
+      "collectionId": "pdf-2f88ecf50fcb4001b4736803ad6ac70e",
+      "title": "Bluebook  Practice 7 数学(Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook  Practice 7 数学(Routing+Hard).pdf",
+      "sourceSha256": "c45dcc44fb8ab15bf2ec77f14f20c44151f53684113462b9830dd15341d33fcc",
+      "directory": "pdf-2f88ecf50fcb4001b4736803ad6ac70e",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-0615075b86314e34a2effbc3ba04a2ff",
+      "title": "Bluebook  Practice 7 阅读语法 (Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook  Practice 7 阅读语法 (Routing+Hard).pdf",
+      "sourceSha256": "8e12578d344f9681fbe4393aac486083a7df312f031c784b384fe516527cfa5a",
+      "directory": "pdf-0615075b86314e34a2effbc3ba04a2ff",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-662010fc3fff47478b987083053d318a",
+      "title": "Bluebook  Practice 7 阅读语法(Easy)",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook  Practice 7 阅读语法(Easy).pdf",
+      "sourceSha256": "b9c8bc2f2509bc19db017f0dd060389032c4d492a7e7ccc86e099a6434bf240c",
+      "directory": "pdf-662010fc3fff47478b987083053d318a",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-4341716981c8422ab9c2125fcb5863a8",
+      "title": "Bluebook  Practice 9 数学(Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook  Practice 9 数学(Routing+Hard).pdf",
+      "sourceSha256": "c4b809d2fc6cd9d0b554c3b87d662aa8078736d62fadbb0ce9d485e1bc035614",
+      "directory": "pdf-4341716981c8422ab9c2125fcb5863a8",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+      "title": "Bluebook Pracitce 11数学 Easy",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Pracitce 11数学 Easy.pdf",
+      "sourceSha256": "a363e62c99119e542ade934a96f5d6ef6ef233e04345a79c23ddfd6cd8c72c84",
+      "directory": "pdf-fd2a9d45733f4e6bb08e17e9b4cab7ac",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-a99ff5ab2e774f89ba14a48d2db8d45b",
+      "title": "Bluebook Pracitce 11数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Pracitce 11数学（Routing+Hard）.pdf",
+      "sourceSha256": "06f3cd08a8cb79cfce23a8935e5cee58cd210e2c9a0fcbec4e10f0febe200e21",
+      "directory": "pdf-a99ff5ab2e774f89ba14a48d2db8d45b",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-bb331d3e22634207a4cbdb7b95c66665",
+      "title": "Bluebook Pracitce 11阅读语法(Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Pracitce 11阅读语法(Routing+Hard).pdf",
+      "sourceSha256": "a032f5a307b20f7b82a388dd4f2db6993d752d44c1e9c39058e0c7a990322e9e",
+      "directory": "pdf-bb331d3e22634207a4cbdb7b95c66665",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+      "title": "Bluebook Practice 1 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 1 数学（Routing+Hard）.pdf",
+      "sourceSha256": "250135c8aef2885faca98afdf0224edc4328077d89385eb111d8db61bb1cda4f",
+      "directory": "pdf-81872a8d5f684a29a7abdf41dc366c29",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-1daf8607fc044bdf9995a7fa5aec3d85",
+      "title": "Bluebook Practice 1 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 1 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "0c8cb6133286170ab4ad0ffb56f66d19e61eb72ab3f4c51cf401fdc91fa3277e",
+      "directory": "pdf-1daf8607fc044bdf9995a7fa5aec3d85",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-f948e55a13ef40038acdc318c94c2f71",
+      "title": "Bluebook Practice 10 数学（Easy）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 10 数学（Easy）.pdf",
+      "sourceSha256": "e12a0962b01b3763062dd1d2eb15eb16e340c2fddda6b8bf10fd713bccc5dbb7",
+      "directory": "pdf-f948e55a13ef40038acdc318c94c2f71",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-117fa29a975c4342aa0e0843f1ad6d10",
+      "title": "Bluebook Practice 10 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 10 数学（Routing+Hard）.pdf",
+      "sourceSha256": "a9167460a525a5bfbb6d5ef1a16e56a78d065cf46e1ba2646359a4ef291884e0",
+      "directory": "pdf-117fa29a975c4342aa0e0843f1ad6d10",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-b2a6c45265ad49a4bc930d4641601f78",
+      "title": "Bluebook Practice 10 阅读语法（Easy）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 10 阅读语法（Easy）.pdf",
+      "sourceSha256": "d6dea475137d0b1e97a4693e0c025f3af5adbbe7bd560ffe1f8db0058c2d1608",
+      "directory": "pdf-b2a6c45265ad49a4bc930d4641601f78",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-29cf384cb7784552bb43830b0cfc13ad",
+      "title": "Bluebook Practice 10阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 10阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "852a1302577d98cc9a35dcef9cfe0baba6b43f7a0f98b18cbab8fe5fa278a1ee",
+      "directory": "pdf-29cf384cb7784552bb43830b0cfc13ad",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+      "title": "Bluebook Practice 2 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 2 数学（Routing+Hard）.pdf",
+      "sourceSha256": "71689dc10b1293d8e64b46b3d33a323542067f43f84e843c218103950b998e71",
+      "directory": "pdf-7ea6ab20f46e464fb4034f60caf562b4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-7c78b1b9ad0149bfa3837e9d35589dc0",
+      "title": "Bluebook Practice 2 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 2 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "e926786f5ff38c9c1dd62d2b791c93bba5415beaef9a53cb61fcc5231b55fe20",
+      "directory": "pdf-7c78b1b9ad0149bfa3837e9d35589dc0",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-99e51cde1fff44ac90d785f5a6a27cc9",
+      "title": "Bluebook Practice 3 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 3 数学（Routing+Hard）.pdf",
+      "sourceSha256": "9c12df917d068cc7f6c548f3f1e0047bbb031ada9018391a3ac95d2e9c185130",
+      "directory": "pdf-99e51cde1fff44ac90d785f5a6a27cc9",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-46e6ba85b61f45ffacb15909fa855a79",
+      "title": "Bluebook Practice 3 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 3 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "521086f7f2fc8b049a9920320ac0132bd2cb7e31a1dcd5fbfca6c2ef14361b5c",
+      "directory": "pdf-46e6ba85b61f45ffacb15909fa855a79",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-38bbee0fd5884351becd5c07af2d1885",
+      "title": "Bluebook Practice 4 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 4 数学（Routing+Hard）.pdf",
+      "sourceSha256": "6f699bf8b4a0cfd240ac85ee110f99d85d1fea766ca173165ec91b1dc030427a",
+      "directory": "pdf-38bbee0fd5884351becd5c07af2d1885",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-6afe8cf357614ee6a8d55bfd75a9f8ab",
+      "title": "Bluebook Practice 4 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 4 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "40b7148b3a14e521bfc05e5667d100655d3e102b4a92bbee967c3f068ee89749",
+      "directory": "pdf-6afe8cf357614ee6a8d55bfd75a9f8ab",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-9e8f47cbd9d94aa19a3b390ac8aa2cdc",
+      "title": "Bluebook Practice 5 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 5 数学（Routing+Hard）.pdf",
+      "sourceSha256": "a1bc52490b02476fa0f49e356b1fdbc5febab0174ddc0d56aeae33017820ef61",
+      "directory": "pdf-9e8f47cbd9d94aa19a3b390ac8aa2cdc",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-ce4a674159a146e2971871de9d3e70d2",
+      "title": "Bluebook Practice 5 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 5 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "9ea4ec66b248444ae647b0b9ad03914215e6d9551a6507fc14175e272c691792",
+      "directory": "pdf-ce4a674159a146e2971871de9d3e70d2",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+      "title": "Bluebook Practice 5 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 5 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "bc8e9db72d550f5e204b74b06d44b477c6d4455cdec8aa5d9d1c7e934113d897",
+      "directory": "pdf-33e014ed082a41bdab5da7b8a3dcaecf",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+      "title": "Bluebook Practice 6 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 6 数学（Easy Module）.pdf",
+      "sourceSha256": "808340c9faa0989062051fc2d750d1ea6342cdcd58d4433ff1d3ca697c95b7e1",
+      "directory": "pdf-e7804a0601d646b58639c49d0d0b88a7",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+      "title": "Bluebook Practice 6 数学（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 6 数学（Routing+Hard）.pdf",
+      "sourceSha256": "3e1a2b927d1e0d39dfc78d4c61836d885c2b57c3d2cd43db04bdf86b9f8b1a7c",
+      "directory": "pdf-808308ceb81e4ca2aeb509ad407fc309",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-49be0c7f577b474889cb90e8423e2280",
+      "title": "Bluebook Practice 6 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 6 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "d8f72ad3e4d90a6fcacf775a2bdf0cf510030787d94b55fdeb2e312cf8bea720",
+      "directory": "pdf-49be0c7f577b474889cb90e8423e2280",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-21d69d09b535487d861042292af3b9a4",
+      "title": "Bluebook Practice 6 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 6 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "a51749189de908e7ea7561192287491d85598ee84c3ae265f95d8d545f5eacfe",
+      "directory": "pdf-21d69d09b535487d861042292af3b9a4",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+      "title": "Bluebook Practice 7 数学（Easy）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 7 数学（Easy）.pdf",
+      "sourceSha256": "811886c19a6ded7f60009b2d63cf02d8c642c0b28b78cb4973cd35e2706811cf",
+      "directory": "pdf-373082a351ff4618bb63a9b8a0ede3a9",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-5c87d0fb8de24deab639b565b868888d",
+      "title": "Bluebook Practice 8 数学 （Easy）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 8 数学 （Easy）.pdf",
+      "sourceSha256": "df14c105cddfd682bf06b764218f4a48a886d35b6c1f40b9bd0b0014ddaf6875",
+      "directory": "pdf-5c87d0fb8de24deab639b565b868888d",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2af1f7eeac2c406dbe807637d2225f94",
+      "title": "Bluebook Practice 8 数学(Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 8 数学(Routing+Hard).pdf",
+      "sourceSha256": "1e83dab0c690845842221ce18d31064b7c41d7672a2a11866125850b835e4b63",
+      "directory": "pdf-2af1f7eeac2c406dbe807637d2225f94",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 44,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        },
+        {
+          "section": "math",
+          "moduleNumber": 2,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-77326364aa524e3c8c14e5bf6a08d654",
+      "title": "Bluebook Practice 8 阅读语法 (Easy)",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 8 阅读语法 (Easy).pdf",
+      "sourceSha256": "916ebef009ccee1b291857b8545fdf3b7fff67921a037d2c93abcbc32cfa58ac",
+      "directory": "pdf-77326364aa524e3c8c14e5bf6a08d654",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+      "title": "Bluebook Practice 8 阅读语法(Routing+Hard)",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 8 阅读语法(Routing+Hard).pdf",
+      "sourceSha256": "c0d56df08108e8b66ca2306c8fb1bc7cfadbab071f0a474d7922eb4092eb467d",
+      "directory": "pdf-bc2aae59ab234a35abfc061b8c6f365d",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+      "title": "Bluebook Practice 9 阅读语法（Easy）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 9 阅读语法（Easy）.pdf",
+      "sourceSha256": "c7f68fa3ac1d6c40024fb5d64b35cdec1446c49b67af80a84db90e53e2815abd",
+      "directory": "pdf-ddfa93d3e8944ec6a63da93952fac245",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-315f103515f7431baa08f3e99f04ee9b",
+      "title": "Bluebook Practice 9 阅读语法（Routing+Hard）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice 9 阅读语法（Routing+Hard）.pdf",
+      "sourceSha256": "ac5716e35c26ac2423edb299dcaac41c27e75f52f42801bd2a930fd7be397b40",
+      "directory": "pdf-315f103515f7431baa08f3e99f04ee9b",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 54,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        },
+        {
+          "section": "reading-writing",
+          "moduleNumber": 2,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-150a814b931345c1bb68972d94c53129",
+      "title": "Bluebook Practice 9数学（Easy）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice 9数学（Easy）.pdf",
+      "sourceSha256": "c069684d3b1068852b7443bce617b2454525ed3a02e567751c0e8cb56f98f7d9",
+      "directory": "pdf-150a814b931345c1bb68972d94c53129",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+      "title": "Bluebook Practice1 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice1 数学（Easy Module）.pdf",
+      "sourceSha256": "ac30a038c63335bf41b98e4553c9011cf27779c2a8a0f64be8852893f736adc1",
+      "directory": "pdf-b6abdcaddd9646058b0b42e619443eb2",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-dd3c422e84524b42bc9f3824d4c8a1e9",
+      "title": "Bluebook Practice1 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice1 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "e1b7139d473e839aa636af1b2f9bbf81fc0319e60a428fbc4eb06810587eafe4",
+      "directory": "pdf-dd3c422e84524b42bc9f3824d4c8a1e9",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-2ba4e6d542404c68800102f4c673583e",
+      "title": "Bluebook Practice2 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice2 数学（Easy Module）.pdf",
+      "sourceSha256": "7edad2a9a238a1c0488c3c6f301c01d418ce8c52f933b6158c603454fb3a08ea",
+      "directory": "pdf-2ba4e6d542404c68800102f4c673583e",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-a8f8268dd6604851a81c5bead8a147ed",
+      "title": "Bluebook Practice2 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice2 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "c9d97767460593de6f7402596cf0a29d4111ae28728daf74a3031714d615fc9b",
+      "directory": "pdf-a8f8268dd6604851a81c5bead8a147ed",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-676d419890854bbfaeb9c8ea650abf6c",
+      "title": "Bluebook Practice3 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice3 数学（Easy Module）.pdf",
+      "sourceSha256": "653859f81bb63bfb76502ad1a6378dc9edcb86a9f23b4773338c8af13be57840",
+      "directory": "pdf-676d419890854bbfaeb9c8ea650abf6c",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-24fbe6598b2445378d321e49dff815c7",
+      "title": "Bluebook Practice3 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice3 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "f73fa0e9404a64633e979ccf94f7a72ed0a05bf4ba2436e912f773755f1def1b",
+      "directory": "pdf-24fbe6598b2445378d321e49dff815c7",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+      "title": "Bluebook Practice4 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice4 数学（Easy Module）.pdf",
+      "sourceSha256": "6c66e8425272a381bd7033f5ff54c8d1831881fec5aa8254dfb3bd3d226c2514",
+      "directory": "pdf-271e8be9a2c24171accfcd96e7d5289d",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-3fe2bd86063d4f8abb87710641883520",
+      "title": "Bluebook Practice4 阅读语法（Easy Module）",
+      "category": "测试",
+      "sourceFile": "阅读文法/Bluebook Practice4 阅读语法（Easy Module）.pdf",
+      "sourceSha256": "9342209adb26cae7a132f8ae111d393d425579210687bcb78590d4aa375d2fe5",
+      "directory": "pdf-3fe2bd86063d4f8abb87710641883520",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 27,
+      "modules": [
+        {
+          "section": "reading-writing",
+          "moduleNumber": 1,
+          "questionCount": 27
+        }
+      ]
+    },
+    {
+      "collectionId": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+      "title": "Bluebook Practice5 数学（Easy Module）",
+      "category": "测试",
+      "sourceFile": "数学/Bluebook Practice5 数学（Easy Module）.pdf",
+      "sourceSha256": "4b17415cdc1fb8f258de35b2ed9cce19a0830267023159315ac2bd65e5b51301",
+      "directory": "pdf-f85bac482e7542d286d2b7ae421ddcaa",
+      "status": "converted",
+      "fullSAT": false,
+      "questionCount": 22,
+      "modules": [
+        {
+          "section": "math",
+          "moduleNumber": 1,
+          "questionCount": 22
+        }
+      ]
+    }
+  ]
+}

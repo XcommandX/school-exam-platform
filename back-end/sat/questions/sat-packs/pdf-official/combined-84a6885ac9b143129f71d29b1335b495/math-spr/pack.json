@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-8530322a9f9b485ea4f8e6873166928a-math-spr",
+  "revision": 1,
+  "title": "2025年3月第7套数学（缺3题） · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-13abb98c6f3f72c7ee62f8c4afe815306f1ca8eaf5f2f9e0356a7e5c21832e44",
+      "path": "assets/13abb98c6f3f72c7ee62f8c4afe815306f1ca8eaf5f2f9e0356a7e5c21832e44.png",
+      "mediaType": "image/png",
+      "sha256": "13abb98c6f3f72c7ee62f8c4afe815306f1ca8eaf5f2f9e0356a7e5c21832e44",
+      "byteLength": 10953,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8530322a9f9b485ea4f8e6873166928a",
+        "sourceQuestionId": "m1-q18"
+      }
+    },
+    {
+      "id": "asset-2d764c1877496d62e42e30d12c320f9364bd9b7bbc20c58927108ec8595c2065",
+      "path": "assets/2d764c1877496d62e42e30d12c320f9364bd9b7bbc20c58927108ec8595c2065.png",
+      "mediaType": "image/png",
+      "sha256": "2d764c1877496d62e42e30d12c320f9364bd9b7bbc20c58927108ec8595c2065",
+      "byteLength": 45106,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-8530322a9f9b485ea4f8e6873166928a",
+        "sourceQuestionId": "m1-q19"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

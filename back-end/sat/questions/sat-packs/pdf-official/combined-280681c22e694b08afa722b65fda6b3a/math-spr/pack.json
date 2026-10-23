@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-0645c3421c4a4df8b2c7e7ee4812aefd-math-spr",
+  "revision": 1,
+  "title": "2026年3月亚太第3套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fde95fab05348e42d5a232281c860816470a50e9d026d941b56030060c33b215",
+      "path": "assets/fde95fab05348e42d5a232281c860816470a50e9d026d941b56030060c33b215.png",
+      "mediaType": "image/png",
+      "sha256": "fde95fab05348e42d5a232281c860816470a50e9d026d941b56030060c33b215",
+      "byteLength": 14516,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-0645c3421c4a4df8b2c7e7ee4812aefd",
+        "sourceQuestionId": "m1-q9"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

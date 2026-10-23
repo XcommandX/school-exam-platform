@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-2101acb9bf214b9a867f46c5af5de2c7-math-spr",
+  "revision": 1,
+  "title": "2025年11月北美第1套数学 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-422ecf5786620615cfc538d90eea1b27d8231200af0d9afe2e9e6c7c9f907c3a",
+      "path": "assets/422ecf5786620615cfc538d90eea1b27d8231200af0d9afe2e9e6c7c9f907c3a.png",
+      "mediaType": "image/png",
+      "sha256": "422ecf5786620615cfc538d90eea1b27d8231200af0d9afe2e9e6c7c9f907c3a",
+      "byteLength": 23013,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2101acb9bf214b9a867f46c5af5de2c7",
+        "sourceQuestionId": "m1-q14"
+      }
+    },
+    {
+      "id": "asset-5c6a8225834546926751742119120b62ab2cab5e2d69f9bac2f03df89d0bfd70",
+      "path": "assets/5c6a8225834546926751742119120b62ab2cab5e2d69f9bac2f03df89d0bfd70.png",
+      "mediaType": "image/png",
+      "sha256": "5c6a8225834546926751742119120b62ab2cab5e2d69f9bac2f03df89d0bfd70",
+      "byteLength": 15138,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-2101acb9bf214b9a867f46c5af5de2c7",
+        "sourceQuestionId": "m2-q18"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:pdf-3e7d0cbb11ba471fa0e0d835a497b138-math-single-choice",
+  "revision": 1,
+  "title": "2025年9月第4套数学 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-423d5d5aff20e1dc830c438838d9a4cf58dcb5e9f828030f448e8b026615219b",
+      "path": "assets/423d5d5aff20e1dc830c438838d9a4cf58dcb5e9f828030f448e8b026615219b.png",
+      "mediaType": "image/png",
+      "sha256": "423d5d5aff20e1dc830c438838d9a4cf58dcb5e9f828030f448e8b026615219b",
+      "byteLength": 11350,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3e7d0cbb11ba471fa0e0d835a497b138",
+        "sourceQuestionId": "m1-q2"
+      }
+    },
+    {
+      "id": "asset-687f2a5f7ad33efc950ef363d67b468708f6cd20344325c4ae7f7187cc75e4fb",
+      "path": "assets/687f2a5f7ad33efc950ef363d67b468708f6cd20344325c4ae7f7187cc75e4fb.png",
+      "mediaType": "image/png",
+      "sha256": "687f2a5f7ad33efc950ef363d67b468708f6cd20344325c4ae7f7187cc75e4fb",
+      "byteLength": 47498,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3e7d0cbb11ba471fa0e0d835a497b138",
+        "sourceQuestionId": "m1-q4"
+      }
+    },
+    {
+      "id": "asset-cd8e0e1d64e6abc8b73fb69f6daf10dce193c863795cea7a34e4d6a2841e6231",
+      "path": "assets/cd8e0e1d64e6abc8b73fb69f6daf10dce193c863795cea7a34e4d6a2841e6231.png",
+      "mediaType": "image/png",
+      "sha256": "cd8e0e1d64e6abc8b73fb69f6daf10dce193c863795cea7a34e4d6a2841e6231",
+      "byteLength": 74104,
+      "source": {
+        "kind": "pdf-source-region",
+        "sourceSetId": "pdf-3e7d0cbb11ba471fa0e0d835a497b138",
+        "sourceQuestionId": "m1-q10"
+      }
+    }
+  ]
+}
