@@ -2,6 +2,8 @@
 (() => {
 let examQuestions=[], running=false, timerHandle=null, finishing=null, onFinish=null;
 const $ = id => document.getElementById(id);
+function updateStudentName(){const name=SATSession.getStudentName();$('studentName').textContent=name;$('studentName').title=name;}
+document.addEventListener('platform:user',updateStudentName);
 const STORAGE_KEY = 'sat-reading-practice-v1';
 const duration = 32 * 60 * 1000;
 const emptyQuestionState = () => ({selectedOption:null,numericResponse:'',eliminatedOptions:[],markedForReview:false,highlights:[],notesExpanded:false,timeSpentMs:0,materialScrollTop:0});
@@ -170,7 +172,7 @@ function render(){
  document.querySelectorAll('#navigator h3,.review-card-heading h3').forEach(e=>e.textContent=label+' Questions');
  $('questionNumber').textContent=state.currentQuestion-module.start+1;
  $('navigatorToggle').firstChild.textContent=`Question ${state.currentQuestion-module.start+1} of ${module.end-module.start} `;
- $('studentName').textContent=studentName;
+ updateStudentName();
  $('reviewToggle').setAttribute('aria-pressed',currentState().markedForReview);
  $('highlightToggle').setAttribute('aria-pressed',state.highlightMode);$('highlightToggle').classList.toggle('is-enabled',state.highlightMode);
  $('eliminationToggle').setAttribute('aria-pressed',state.eliminationVisible);$('eliminationToggle').hidden=spr;
