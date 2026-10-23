@@ -71,3 +71,17 @@ node back-end/tests/sat-library.browser.cjs
 另做真实接口运行检查：独立临时服务使用全新空 private_root 与真实题集目录，新 Chrome context 只经网站加载所选三集（完整 98 题、数学 5 题、英语 4 题），不遍历全部题包。107 题均进入准备及考试；10 张图片成功解码，121 个公式无渲染错误，保留 1 条兼容警告。完整卷固定 32/32/35/35 分钟，Save and Exit / Resume 保持同场；最小英语题集完成后 Open Review、Restart 新场并保留旧记录通过。页面、HTTP、请求和外部请求错误均为 0。测试浏览器与临时服务已关闭，未改活动卷或用户浏览器历史，临时私有目录未生成文件；脱敏报告只含计数和状态，位于忽略的 `local-data/agent-output/2026-10-23/sat-library-real-runtime-smoke-redacted.json`。此检查覆盖选中三集的实际接入，不表示重新审核了全库题意、来源答案或全部设备。
 
 接入时发现旧的 8888 本机进程尚未载入新接口（目录返回 404），已仅重启此项目服务并核对目录返回 200、三类分别 48/181/47、不可用项为 0。以后修改服务端路由后需重新启动本机服务，仅刷新前端页面不会让旧服务进程获得新接口。
+
+## Practice Builder 全库索引
+
+原先首页题数和 Builder 只读取当前浏览器已经导入的 questions，所以未开始过的题集没有出现在选题范围中；截图中的 196 是本机已导入题数，不是新题包不受支持。现在后台 `GET /api/sat-library/question-index` 返回全库的来源、题目版本和完整搜索文字，支持英语、数学选择题与数学填空；不读取答案、解析或图片字节。每个集合按 report、manifest 与 items 的文件状态缓存，文件更新后自动失效，损坏集合独立显示错误。
+
+页面把索引与本机题目按不可变题目 ID 合并，保留已有完整题、额外手动导入版本及个人记录。来源显示实际标题，题型使用新题包的原始分类；分页、跨页全选、按来源和全文搜索都使用全库索引。开始时仅加载选中题所在集合，核对包、题目修订与模块引用后才导入，不修改活动卷或归档历史。索引加载中首页显示加载状态，失败可 Retry；活跃来源中已删除的单题保持隐藏，已删除整源可显式恢复。原有自动命名、手工名称、自定义时长和错题本规则保留。
+
+原创合成模块与浏览器检查、原 Start Practice 浏览器回归、源码白名单导出检查均通过；真实隔离运行核对 8309 题、363 个题型来源、276 个集合全部进入 Builder，可按科目筛选并全选。仅为实际选中的英语与数学填空各一题请求两个题集，两模块均使用指定的 120 秒，作答、保存与恢复通过，历史及活动标记未改。真实报告只含计数与状态，位于本机忽略目录 `local-data/agent-output/2026-10-23/sat-builder-real-smoke-redacted.json`，不含题目正文、答案或图片。
+
+```sh
+node back-end/tests/sat-builder-library.test.cjs
+node back-end/tests/sat-builder-library.browser.cjs
+python3 -B -m unittest discover -s back-end/tests -p 'test_sat_library_server.py' -q
+```
