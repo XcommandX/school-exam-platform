@@ -4,6 +4,8 @@
 
 格式定义位于 [`shared/question-set.schema.json`](../shared/question-set.schema.json)，标准库校验和 SAT 兼容转换位于 [`shared/question_schema.py`](../shared/question_schema.py)。后端还会检查 JSON Schema 无法独立表达的关系：模块题量之和、模块时长数量、正确选项范围、题目 ID 所属题集、文字格式范围与表格列数。
 
+数学竞赛 `/contests/` 使用独立内容契约：支持多个有效选择答案、AIME 0–999 整数和 USAMO 证明草稿，以及逐题质量门控与来源。它没有改变本页的公共 v1 选择题 schema，不经由 SAT 适配器；见 [数学竞赛数据与导入](math-contests.md)。
+
 ## 题集与题目
 
 ```json

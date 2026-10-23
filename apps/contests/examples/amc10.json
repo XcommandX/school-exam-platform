@@ -1,0 +1,182 @@
+{
+  "example": true,
+  "notice": "原创合成示例；非官方竞赛题，不代表真实历年覆盖。",
+  "exam": {
+    "id": "example-amc10-2026",
+    "contest": "AMC10",
+    "year": 2026,
+    "season": "regular",
+    "paper": null,
+    "special_paper": false,
+    "problem_count": 2,
+    "expected_problem_count": 2,
+    "missing_numbers": []
+  },
+  "problems": [
+    {
+      "id": "example-amc10-2026-01",
+      "exam_id": "example-amc10-2026",
+      "contest": "AMC10",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 1,
+      "question_type": "multiple_choice",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original example. A robot starts with $4$ blue tiles and receives $7$ more. How many tiles does it have?",
+        "html": "<p>Original example. A robot starts with $4$ blue tiles and receives $7$ more. How many tiles does it have?</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [
+        {
+          "label": "A",
+          "text_latex": "$8$",
+          "html": "$8$"
+        },
+        {
+          "label": "B",
+          "text_latex": "$10$",
+          "html": "$10$"
+        },
+        {
+          "label": "C",
+          "text_latex": "$11$",
+          "html": "$11$"
+        },
+        {
+          "label": "D",
+          "text_latex": "$12$",
+          "html": "$12$"
+        },
+        {
+          "label": "E",
+          "text_latex": "$28$",
+          "html": "$28$"
+        }
+      ],
+      "answer": {
+        "type": "choice",
+        "accepted": [
+          "C"
+        ],
+        "display": "C",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "Addition gives $4+7=11$, so C is accepted.",
+          "html": "<p>Addition gives $4+7=11$, so C is accepted.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-amc10-2026-02",
+      "exam_id": "example-amc10-2026",
+      "contest": "AMC10",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 2,
+      "question_type": "multiple_choice",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original input example. Which option equals $6$? Select either one of the equivalent expressions.",
+        "html": "<p>Original input example. Which option equals $6$? Select either one of the equivalent expressions.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [
+        {
+          "label": "A",
+          "text_latex": "$2+3$",
+          "html": "$2+3$"
+        },
+        {
+          "label": "B",
+          "text_latex": "$2\\times3$",
+          "html": "$2\\times3$"
+        },
+        {
+          "label": "C",
+          "text_latex": "$9-2$",
+          "html": "$9-2$"
+        },
+        {
+          "label": "D",
+          "text_latex": "$12/2$",
+          "html": "$12/2$"
+        },
+        {
+          "label": "E",
+          "text_latex": "$3^2$",
+          "html": "$3^2$"
+        }
+      ],
+      "answer": {
+        "type": "choice",
+        "accepted": [
+          "B",
+          "D"
+        ],
+        "display": "B or D",
+        "verification": "synthetic_example"
+      },
+      "solutions": [],
+      "quality": {
+        "flags": [
+          "original_synthetic_example",
+          "missing_solution"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    }
+  ]
+}
