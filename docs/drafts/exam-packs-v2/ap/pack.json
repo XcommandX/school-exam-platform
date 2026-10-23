@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "2.0-draft",
+  "documentType": "exam-pack",
+  "status": "draft",
+  "id": "ap:catalogue-specimen:2026-2027",
+  "revision": "0.1.0",
+  "title": "AP 分科分年套题包结构目录样包（原创，非完整试卷）",
+  "language": "en",
+  "exam": "ap",
+  "subject": "multiple-independent-courses",
+  "examVersion": "catalogue-2026-2027",
+  "administrationYear": null,
+  "effectiveFrom": null,
+  "files": {
+    "assessment": "assessment.json",
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "graph-position",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/position-line.svg",
+      "status": "included",
+      "sha256": "ac46b5524b75f17725c573a7f865de18c14e86baf6cc3f4aa6522880ba33ee1c",
+      "width": 600,
+      "height": 340,
+      "license": "Original synthetic project example; distribution terms require project-owner review.",
+      "source": "Original synthetic diagram authored for this draft."
+    },
+    {
+      "id": "graph-blank",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/blank-axes.svg",
+      "status": "included",
+      "sha256": "bfa163ded8df27102700c3e28f750e83096fed32a1cde5955efc68d97afbb96f",
+      "width": 600,
+      "height": 340,
+      "license": "Original synthetic project example; distribution terms require project-owner review.",
+      "source": "Original synthetic diagram authored for this draft."
+    },
+    {
+      "id": "staff-blank",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/blank-staff.svg",
+      "status": "included",
+      "sha256": "265758b4aae703eed55049186abfc0d0edee8e8d54d4217a6fc2c0a4344ed7f3",
+      "width": 600,
+      "height": 200,
+      "license": "Original synthetic project example; distribution terms require project-owner review.",
+      "source": "Original synthetic diagram authored for this draft."
+    },
+    {
+      "id": "spanish-conversation-audio",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/placeholders/conversation-es.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": 80,
+      "language": "es",
+      "caption": "Placeholder for five original conversation turns; no speech audio has been recorded.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "spanish-source-audio",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/placeholders/source-es.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": 60,
+      "language": "es",
+      "caption": "Placeholder for an original short announcement.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "spanish-project-qa-audio",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/placeholders/project-qa-es.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": 80,
+      "language": "es",
+      "caption": "Placeholder for four original project questions.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "music-dictation-audio",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/placeholders/dictation.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": 8,
+      "language": null,
+      "caption": "Placeholder for an original four-note melody.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "music-model-audio",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/placeholders/model-singing.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": 8,
+      "language": null,
+      "caption": "Placeholder for an original model singing performance.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "music-score",
+      "kind": "musicxml",
+      "mediaType": "application/vnd.recordare.musicxml+xml",
+      "path": "assets/placeholders/sight-singing.musicxml",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": null,
+      "language": null,
+      "caption": "Placeholder for a reviewed MusicXML melody, not an executable engine.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "language-ppr-template",
+      "kind": "document",
+      "mediaType": "application/pdf",
+      "path": "assets/placeholders/project-reference-template.pdf",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": null,
+      "language": "es",
+      "caption": "Placeholder template for a project reference; no student project.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    },
+    {
+      "id": "java-reference",
+      "kind": "document",
+      "mediaType": "application/pdf",
+      "path": "assets/placeholders/java-reference.pdf",
+      "status": "placeholder",
+      "sha256": null,
+      "durationSeconds": null,
+      "language": "en",
+      "caption": "Placeholder for independently licensed reference; official source is linked, not copied.",
+      "source": "Not supplied; no official media downloaded.",
+      "license": "not-yet-cleared"
+    }
+  ],
+  "toolRequirements": [
+    {
+      "id": "desmos-graphing",
+      "provider": "desmos",
+      "kind": "graphing-calculator",
+      "runtimeRegistryKey": "desmos.shared",
+      "configuration": {
+        "startBlank": true,
+        "persistWorkingState": "attempt-only",
+        "officialExamFeatureParity": "unverified",
+        "supportedHostingModes": [
+          "official-hosted",
+          "authorized-self-hosted"
+        ],
+        "hostingNote": "Hosting, licensed runtime artifacts and keys are resolved once by the platform; no SDK is included in this pack. Self-hosting requires applicable Desmos authorization.",
+        "mode": "graphing",
+        "runtimeLoadPolicy": "once-per-platform-runtime-key",
+        "hostingModeResolution": "platform-runtime-registry"
+      },
+      "verificationStatus": "requires-platform-integration-review"
+    },
+    {
+      "id": "desmos-scientific",
+      "provider": "desmos",
+      "kind": "scientific-calculator",
+      "runtimeRegistryKey": "desmos.shared",
+      "configuration": {
+        "startBlank": true,
+        "persistWorkingState": "attempt-only",
+        "officialExamFeatureParity": "unverified",
+        "supportedHostingModes": [
+          "official-hosted",
+          "authorized-self-hosted"
+        ],
+        "hostingNote": "Hosting, licensed runtime artifacts and keys are resolved once by the platform; no SDK is included in this pack. Self-hosting requires applicable Desmos authorization.",
+        "mode": "scientific",
+        "runtimeLoadPolicy": "once-per-platform-runtime-key",
+        "hostingModeResolution": "platform-runtime-registry"
+      },
+      "verificationStatus": "requires-platform-integration-review"
+    },
+    {
+      "id": "desmos-four-function",
+      "provider": "desmos",
+      "kind": "four-function-calculator",
+      "runtimeRegistryKey": "desmos.shared",
+      "configuration": {
+        "startBlank": true,
+        "persistWorkingState": "attempt-only",
+        "officialExamFeatureParity": "unverified",
+        "supportedHostingModes": [
+          "official-hosted",
+          "authorized-self-hosted"
+        ],
+        "hostingNote": "Hosting, licensed runtime artifacts and keys are resolved once by the platform; no SDK is included in this pack. Self-hosting requires applicable Desmos authorization.",
+        "mode": "four-function",
+        "runtimeLoadPolicy": "once-per-platform-runtime-key",
+        "hostingModeResolution": "platform-runtime-registry"
+      },
+      "verificationStatus": "requires-platform-integration-review"
+    }
+  ],
+  "provenance": {
+    "authorship": "Original synthetic tasks; official sources are used only to identify task families and policies.",
+    "containsOfficialQuestions": false,
+    "containsPersonalSubmissions": false
+  },
+  "references": [
+    {
+      "id": "modes",
+      "title": "AP exam modes for 2027",
+      "url": "https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/digital-ap-exams/exam-modes",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "calculator",
+      "title": "AP calculator policies; current 2026–27 page",
+      "url": "https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/calculator-policy",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "csp",
+      "title": "AP Computer Science Principles exam",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "calculus",
+      "title": "2026 AP Calculus AB scoring guidelines",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-calculus-ab.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "history",
+      "title": "AP US History exam; 2027 updates",
+      "url": "https://apcentral.collegeboard.org/courses/ap-united-states-history/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "history-2026",
+      "title": "2026 AP US History released FRQ",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "spanish-2027",
+      "title": "AP Spanish Language and Culture exam; May 2027 format",
+      "url": "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "spanish-2026",
+      "title": "2026 AP Spanish speaking prompts",
+      "url": "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam/speaking-prompts-2026",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "music",
+      "title": "AP Music Theory exam; May 2027 hybrid format",
+      "url": "https://apcentral.collegeboard.org/courses/ap-music-theory/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "physics",
+      "title": "AP Physics 1 exam; May 2027 updates",
+      "url": "https://apcentral.collegeboard.org/courses/ap-physics-1/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "csa",
+      "title": "AP Computer Science A exam",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "cyber",
+      "title": "AP Cybersecurity exam; first exam 2027",
+      "url": "https://apcentral.collegeboard.org/courses/ap-cybersecurity/exam",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "art",
+      "title": "AP Art and Design submission components",
+      "url": "https://apstudents.collegeboard.org/art-design-program/digital-submission-guide/overview-of-digital-submission-process",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "capstone",
+      "title": "AP Seminar and Research assessment families",
+      "url": "https://apcentral.collegeboard.org/courses/ap-capstone/frequently-asked-questions/how-does-assessment-work-ap-capstone-courses-there-ap-exam",
+      "accessedOn": "2026-10-22"
+    }
+  ],
+  "draftNotes": [
+    "This is a catalogue of independent course/year structures, never a mixed official AP examination.",
+    "assemblyStatus is incomplete for every profile. No official section question counts or scaled-score conversion are implied.",
+    "Placeholder media paths intentionally do not exist; they block runnable delivery until assets are authored, reviewed and hashed.",
+    "Desmos runtime/SDK/API key is platform-managed and is not carried in the pack. No calculator is automatically enabled on unlisted courses.",
+    "All answer keys, model responses and rubric notes are instructor-only; active runtime is unchanged.",
+    "All Desmos modes share runtimeRegistryKey desmos.shared; the platform loads the provider runtime once and creates mode-configured instances as needed."
+  ]
+}

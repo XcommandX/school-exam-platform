@@ -1,0 +1,2634 @@
+{
+  "visibility": "instructor-only",
+  "solutions": [
+    {
+      "id": "csp:single:a:solution",
+      "itemId": "csp:single",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "choice",
+            "kind": "option-set",
+            "expected": [
+              "a"
+            ],
+            "orderMatters": false,
+            "partialCredit": false
+          }
+        ],
+        "rubric": {
+          "criteria": [],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Temperature."
+              }
+            ],
+            "isUniqueCorrectResponse": true
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The input is the datum supplied to the program; the label is its output."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "csp:select-two:a:solution",
+      "itemId": "csp:select-two",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "choices",
+            "kind": "option-set",
+            "expected": [
+              "a",
+              "b"
+            ],
+            "orderMatters": false,
+            "partialCredit": false
+          }
+        ],
+        "rubric": {
+          "criteria": [],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Test 0 and test 10."
+              }
+            ],
+            "isUniqueCorrectResponse": true
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Both endpoints are valid boundary cases. The set must contain exactly those two choices."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "calc:frq:a:solution",
+      "itemId": "calc:frq",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "method",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "A correct difference quotient is shown."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "units",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "The answer is 1 with units L/s²; equivalent units accepted."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": [
+            "Do not grade the numeric entry alone as the full part; working and units are evidence."
+          ]
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "(4 − 2)/(2 − 0) = 1 L/s²."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The flow rate changes by 2 L/s over 2 s. The units describe change in flow rate per second."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "calc:frq:b:solution",
+      "itemId": "calc:frq",
+      "partId": "b",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "setup",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses left-endpoint rates with widths 2 and 2."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "calculation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Obtains 12 liters with supporting work."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "2·2 + 2·4 = 12 L."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The two width-2 intervals use their left-endpoint rates, 2 and 4. The method, not merely 12, is assessed."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "calc:frq:c:solution",
+      "itemId": "calc:frq",
+      "partId": "c",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "initial",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Includes initial volume."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "total",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Reports 24 L, or applies a consistent earlier approximation with a clear explanation."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": [
+                "A valid follow-through may earn this point after an arithmetic error in part b; teacher review required."
+              ]
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "12 + 12 = 24 L."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The integral approximation is the amount added, so add the initial 12 liters."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:saq-early:a:solution",
+      "itemId": "ush:saq-early",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 1,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "explanation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Provides a defensible explanation supported by the material."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Lighting can make evening travel more practical."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Use a specific statement in the fictional evidence and connect it to the claim. This is a structural exercise, not a claim about an actual historical event."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:saq-late:a:solution",
+      "itemId": "ush:saq-late",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 1,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "explanation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Provides a defensible explanation supported by the material."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Residents on unlit streets may not benefit equally."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Use a specific statement in the fictional evidence and connect it to the claim. This is a structural exercise, not a claim about an actual historical event."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:dbq:essay:solution",
+      "itemId": "ush:dbq",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 4,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "thesis",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "States a defensible claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses both fictional documents accurately."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "sourcing",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains how author or purpose affects the evidence."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "qualification",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains an evidence limitation."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A defensible argument could say the project improved mobility but distributed benefits unequally; the municipal report emphasizes services while the resident letter highlights access gaps. Neither proves all residents shared these experiences."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "A DBQ needs evidence, an argument and analysis of document context. Multiple historical arguments can be creditworthy; this mini rubric does not reproduce the official 7-point rubric."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:leq-2026-1:essay:solution",
+      "itemId": "ush:leq-2026-1",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "claim",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Develops a coherent change-and-continuity claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses two clearly invented, internally consistent examples."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "reasoning",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects examples to the argument."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Example: in a fictional community, a new transit route reduces travel time while outlying districts remain underserved; describe two invented observations and use them to support a change-and-continuity argument."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Alternative essay prompts are selected at assessment level. This synthetic skill exercise is not official history exam content or a substitute for factual history knowledge."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:leq-2026-2:essay:solution",
+      "itemId": "ush:leq-2026-2",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "claim",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Develops a coherent change-and-continuity claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses two clearly invented, internally consistent examples."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "reasoning",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects examples to the argument."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Example: in a fictional community, a new transit route reduces travel time while outlying districts remain underserved; describe two invented observations and use them to support a change-and-continuity argument."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Alternative essay prompts are selected at assessment level. This synthetic skill exercise is not official history exam content or a substitute for factual history knowledge."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:leq-2026-3:essay:solution",
+      "itemId": "ush:leq-2026-3",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "claim",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Develops a coherent change-and-continuity claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses two clearly invented, internally consistent examples."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "reasoning",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects examples to the argument."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Example: in a fictional community, a new transit route reduces travel time while outlying districts remain underserved; describe two invented observations and use them to support a change-and-continuity argument."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Alternative essay prompts are selected at assessment level. This synthetic skill exercise is not official history exam content or a substitute for factual history knowledge."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "ush:leq-2027:essay:solution",
+      "itemId": "ush:leq-2027",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "claim",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "States a defensible focused claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses relevant labelled fictional evidence."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "reasoning",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains how evidence supports the claim."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A response can choose a narrow focus, state a claim, use clearly invented evidence and explain its relevance."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The item demonstrates broad-prompt structure only. Real AP preparation requires reviewed factual content and the correct year-specific rubric."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:conversation-2026:turn-1:solution",
+      "itemId": "language:conversation-2026",
+      "partId": "turn-1",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Responds appropriately to this prompt."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates comprehensibly in Spanish."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "El evento será el sábado."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "An oral answer should address that turn, remain comprehensible and fit the exchange. Accept other relevant responses. Audio is a placeholder; no recording is supplied."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:conversation-2026:turn-2:solution",
+      "itemId": "language:conversation-2026",
+      "partId": "turn-2",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Responds appropriately to this prompt."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates comprehensibly in Spanish."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Podemos reunirnos en la biblioteca."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "An oral answer should address that turn, remain comprehensible and fit the exchange. Accept other relevant responses. Audio is a placeholder; no recording is supplied."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:conversation-2026:turn-3:solution",
+      "itemId": "language:conversation-2026",
+      "partId": "turn-3",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Responds appropriately to this prompt."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates comprehensibly in Spanish."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Podemos elegir cuentos breves."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "An oral answer should address that turn, remain comprehensible and fit the exchange. Accept other relevant responses. Audio is a placeholder; no recording is supplied."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:conversation-2026:turn-4:solution",
+      "itemId": "language:conversation-2026",
+      "partId": "turn-4",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Responds appropriately to this prompt."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates comprehensibly in Spanish."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Podemos compartir una invitación con la clase."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "An oral answer should address that turn, remain comprehensible and fit the exchange. Accept other relevant responses. Audio is a placeholder; no recording is supplied."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:conversation-2026:turn-5:solution",
+      "itemId": "language:conversation-2026",
+      "partId": "turn-5",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Responds appropriately to this prompt."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates comprehensibly in Spanish."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Prefiero preparar las invitaciones."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "An oral answer should address that turn, remain comprehensible and fit the exchange. Accept other relevant responses. Audio is a placeholder; no recording is supplied."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:essay-2027:essay:solution",
+      "itemId": "language:essay-2027",
+      "partId": "essay",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "argument",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Develops a clear relevant position."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "sources",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Integrates print and audio material accurately."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "language",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses comprehensible Spanish and appropriate connections."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Por la tarde puede asistir la mayoría de los encuestados y podrían llegar más voluntarios. Sin embargo, la encuesta solo representa a treinta personas y no garantiza la asistencia."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Use the numerical evidence and the organizer’s position while distinguishing evidence from inference. A different well-supported choice is acceptable."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:project-2027:presentation:solution",
+      "itemId": "language:project-2027",
+      "partId": "presentation",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "content",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains relevant research findings."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Supports observations and identifies sources."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Delivers a comprehensible organized presentation."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A model presentation names the practice research question, describes a specific documented observation, compares perspectives and credits sources. There is no single script."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Project-specific content must be assessed for relevant evidence and communication, not matched to a fixed transcript."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:project-2027:qa-1:solution",
+      "itemId": "language:project-2027",
+      "partId": "qa-1",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "relevance",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Addresses the question with a concrete project detail."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates a comprehensible connected answer."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid answer responds to question 1 with a specific detail from the learner’s practice project."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Accept multiple project-dependent answers. The task definition holds no learner project or recording."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:project-2027:qa-2:solution",
+      "itemId": "language:project-2027",
+      "partId": "qa-2",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "relevance",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Addresses the question with a concrete project detail."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates a comprehensible connected answer."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid answer responds to question 2 with a specific detail from the learner’s practice project."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Accept multiple project-dependent answers. The task definition holds no learner project or recording."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:project-2027:qa-3:solution",
+      "itemId": "language:project-2027",
+      "partId": "qa-3",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "relevance",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Addresses the question with a concrete project detail."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates a comprehensible connected answer."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid answer responds to question 3 with a specific detail from the learner’s practice project."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Accept multiple project-dependent answers. The task definition holds no learner project or recording."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "language:project-2027:qa-4:solution",
+      "itemId": "language:project-2027",
+      "partId": "qa-4",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "relevance",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Addresses the question with a concrete project detail."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "communication",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Communicates a comprehensible connected answer."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid answer responds to question 4 with a specific detail from the learner’s practice project."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Accept multiple project-dependent answers. The task definition holds no learner project or recording."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "physics:graph-method:a:solution",
+      "itemId": "physics:graph-method",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "shape",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Draws a constant positive velocity of 2 m/s."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "labels",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Labels both axes and units correctly."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A horizontal line at v = 2 m/s from t = 0 to 4 s, with correctly labelled axes."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Velocity is the slope of position versus time. Here 8/4 = 2 m/s throughout."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "physics:graph-method:b:solution",
+      "itemId": "physics:graph-method",
+      "partId": "b",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "method",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Describes a feasible measurement method."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "uncertainty",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains how a stated change reduces uncertainty."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Use recorded video and calibrated position markers, then estimate elapsed time between frames; use a higher frame rate or repeat trials to reduce uncertainty."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "A valid method measures both distance and time and links the uncertainty improvement to a stated measurement limitation."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "music:dictation:notation:solution",
+      "itemId": "music:dictation",
+      "partId": "notation",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 4,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "note-1",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Correct pitch and quarter-note duration at position 1."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "note-2",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Correct pitch and quarter-note duration at position 2."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "note-3",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Correct pitch and quarter-note duration at position 3."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "note-4",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Correct pitch and quarter-note duration at position 4."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "One bar in 4/4: C4 quarter, D4 quarter, E4 quarter, C4 quarter."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "This original four-note task demonstrates score input and rubric mapping. Do not apply the four-point synthetic rubric as the official melodic-dictation rubric."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "music:sight-sing:performance:solution",
+      "itemId": "music:sight-sing",
+      "partId": "performance",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "pitch",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Preserves the intended relative pitch contour."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "rhythm",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Maintains four equal beats."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Perform the relative contour of C–D–E–C with four equal beats; a transposition may be accepted under this synthetic rubric."
+              }
+            ],
+            "isUniqueCorrectResponse": false,
+            "reviewOnlyContent": [
+              {
+                "type": "audio",
+                "assetId": "music-model-audio",
+                "alt": "Unrecorded original reference performance.",
+                "playback": {
+                  "maxPlays": null,
+                  "allowSeek": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Assess the pitch relationships and rhythmic continuity. A missing score/audio asset blocks execution, and this draft does not implement acoustic grading."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "csa:method:a:solution",
+      "itemId": "csa:method",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "signature",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses the specified public void method signature."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "condition",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Tests n > 0 or an equivalent condition."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "update",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Adds n to the field exactly when positive."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "code",
+                "language": "java",
+                "text": "public void addPositive(int n) {\n  if (n > 0) {\n    value += n;\n  }\n}"
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The method tests positivity, changes the instance field only for positive input, and has the requested signature. Equivalent Java code is acceptable."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "cyber:evidence:a:solution",
+      "itemId": "cyber:evidence",
+      "partId": "a",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "rule",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Identifies the overly broad first-match allow."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects the accepted outside-subnet address to the policy violation."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "fix",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Proposes a correctly ordered subnet allow followed by deny."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "Rule 1 allows any source before the deny rule. The synthetic log shows a connection from outside 192.0.2.0/24 accepted on port 22. Allow TCP 22 from 192.0.2.0/24 first, then deny TCP 22 from other sources."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ordered first-match rules make the broad first allow override the intended restriction. Cite the actual log field and policy instead of merely naming a general threat."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "cyber:evidence:b:solution",
+      "itemId": "cyber:evidence",
+      "partId": "b",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "risk",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains risk of write access granted to others."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "mitigation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Proposes a justified narrower permission."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "World-writable config allows unauthorized changes. If only the service owner needs it, use owner read/write and no group/other access, such as 600, after verifying service requirements."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Least privilege depends on which processes require access; explain the assumption rather than claiming one permission works universally."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "csp:create:artifacts:solution",
+      "itemId": "csp:create",
+      "partId": "artifacts",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "program",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Demonstrates a coherent original program with list and procedure."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Provides a demonstration and readable code."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "reference",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Provides a readable individually authored project reference."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "One acceptable practice project stores book titles in a list and calls a search procedure with a parameter; code, a short demonstration video and an individually prepared reference document make its behavior inspectable."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "This structural project has many correct implementations. Submitted learner files are private attempt data; this pack includes only requirements."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "csp:create:written:solution",
+      "itemId": "csp:create",
+      "partId": "written",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 2,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "description",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Accurately identifies the relevant list or procedure."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "complexity",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains a concrete alternative and why the abstraction simplifies it."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A book-title list permits one loop to search any number of titles, instead of creating a separate variable and conditional for each title."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Reward a concrete connection to the student-authored practice program, not a generic memorized claim."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "art:portfolio:sustained:solution",
+      "itemId": "art:portfolio",
+      "partId": "sustained",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "visual",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Demonstrates purposeful visual development."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "explanation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects decisions to the stated purpose or inquiry."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Supplies coherent process/materials information and attribution."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid original portfolio presents purposeful visual work, explains materials and decisions, identifies sources where used, and relates the work to the stated inquiry. No unique image or prose answer exists."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Judge visual evidence and written evidence together. This small synthetic rubric does not reproduce official portfolio scoring."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "art:portfolio:selected:solution",
+      "itemId": "art:portfolio",
+      "partId": "selected",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "visual",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Demonstrates purposeful visual development."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "explanation",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects decisions to the stated purpose or inquiry."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Supplies coherent process/materials information and attribution."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid original portfolio presents purposeful visual work, explains materials and decisions, identifies sources where used, and relates the work to the stated inquiry. No unique image or prose answer exists."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Judge visual evidence and written evidence together. This small synthetic rubric does not reproduce official portfolio scoring."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "research:paper-defense:paper:solution",
+      "itemId": "research:paper-defense",
+      "partId": "paper",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "inquiry",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Clearly explains the inquiry and method."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses evidence to support the conclusion."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "limitations",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains limitations and makes appropriate attributions."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A strong response states a focused inquiry, justifies the method, supports conclusions with evidence and acknowledges limitations; the defense explains these choices in response to questions."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Research quality and defense are evaluated through criteria. Do not represent an academic paper as one fixed correct answer or an automatically graded short essay."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "research:paper-defense:defense:solution",
+      "itemId": "research:paper-defense",
+      "partId": "defense",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "inquiry",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Clearly explains the inquiry and method."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "evidence",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Uses evidence to support the conclusion."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "limitations",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains limitations and makes appropriate attributions."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A strong response states a focused inquiry, justifies the method, supports conclusions with evidence and acknowledges limitations; the defense explains these choices in response to questions."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Research quality and defense are evaluated through criteria. Do not represent an academic paper as one fixed correct answer or an automatically graded short essay."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "seminar:team-project:individual:solution",
+      "itemId": "seminar:team-project",
+      "partId": "individual",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "sources",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Evaluates relevant credible sources."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "perspectives",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects multiple perspectives."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "argument",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains an evidence-based conclusion."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid practice response evaluates credible sources, relates different perspectives and supports a proposed conclusion while crediting evidence. Team responses show an integrated argument rather than unrelated reports."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The schema separates individual and collaborative components. Scoring evidence remains distinct from actual participant identity and teacher grades."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    },
+    {
+      "id": "seminar:team-project:team:solution",
+      "itemId": "seminar:team-project",
+      "partId": "team",
+      "status": "synthetic-needs-subject-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 3,
+        "rules": [],
+        "rubric": {
+          "criteria": [
+            {
+              "id": "sources",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Evaluates relevant credible sources."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "perspectives",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Connects multiple perspectives."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            },
+            {
+              "id": "argument",
+              "maxScore": 1,
+              "description": [
+                {
+                  "type": "text",
+                  "text": "Explains an evidence-based conclusion."
+                }
+              ],
+              "dependencies": [],
+              "exceptions": []
+            }
+          ],
+          "notes": []
+        },
+        "modelResponses": [
+          {
+            "id": "model-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "A valid practice response evaluates credible sources, relates different perspectives and supports a proposed conclusion while crediting evidence. Team responses show an integrated argument rather than unrelated reports."
+              }
+            ],
+            "isUniqueCorrectResponse": false
+          }
+        ]
+      },
+      "explanation": {
+        "status": "draft-needs-subject-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The schema separates individual and collaborative components. Scoring evidence remains distinct from actual participant identity and teacher grades."
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": []
+      }
+    }
+  ],
+  "draftNotes": [
+    "Every scorable Part has a solution reference and explanatory content.",
+    "Rubrics and model answers are synthetic and require subject review. They are not official College Board rubrics.",
+    "Open-ended tasks accept more than one defensible response; numeric results alone do not establish method credit.",
+    "Do not send this file, review-only transcripts or model assets during secure assessment. Current runtime does not yet enforce this separation."
+  ]
+}

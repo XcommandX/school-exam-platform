@@ -55,6 +55,7 @@ node back-end/toefl/scripts/build.mjs
 | 三人 Git 协作 | [CONTRIBUTING](docs/CONTRIBUTING.md) |
 | 启动、路由与数据边界 | [统一首页](docs/unified-home.md) |
 | 前后端、登录与加密分发讨论 | [设计说明](docs/frontend-backend-plan.md) |
+| 跨考试题包历史草案 | [结构策略草案](docs/所有题目包结构策略.md)（当前 SAT 实现以专用协议为准） |
 | SAT 协议 | [专用题目包](docs/drafts/sat-question-packs/README.md) |
 | 耕读离线三类题包转换 | [批量转换说明](docs/sat-offline-conversion.md) |
 | TOEFL 源码、构建与测试 | [模块说明](docs/toefl/README.md) |

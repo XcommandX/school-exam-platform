@@ -1,0 +1,2525 @@
+{
+  "materials": [
+    {
+      "id": "calc:table",
+      "content": [
+        {
+          "type": "text",
+          "text": "A pump supplies water; selected flow rates are shown. The volume at time 0 is 12 liters."
+        },
+        {
+          "type": "table",
+          "columns": [
+            {
+              "id": "t",
+              "label": "Time",
+              "unit": "s"
+            },
+            {
+              "id": "r",
+              "label": "Flow rate",
+              "unit": "L/s"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r0",
+              "cells": [
+                "0",
+                "2"
+              ]
+            },
+            {
+              "id": "r1",
+              "cells": [
+                "2",
+                "4"
+              ]
+            },
+            {
+              "id": "r2",
+              "cells": [
+                "4",
+                "6"
+              ]
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "ush:doc-a",
+      "content": [
+        {
+          "type": "text",
+          "text": "Fictional 1890 town report: new street lighting made evening travel easier but raised the municipal budget."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {
+        "documentLabel": "Document 1",
+        "documentType": "primary-source-style-fiction",
+        "date": "1890",
+        "creator": "Fictional town council"
+      }
+    },
+    {
+      "id": "ush:doc-b",
+      "content": [
+        {
+          "type": "text",
+          "text": "Fictional 1891 resident letter: lights helped night-shift workers; some outlying streets still lacked service."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {
+        "documentLabel": "Document 2",
+        "documentType": "primary-source-style-fiction",
+        "date": "1891",
+        "creator": "Fictional resident"
+      }
+    },
+    {
+      "id": "language:conversation",
+      "content": [
+        {
+          "type": "text",
+          "text": "Original practice scenario: discuss planning a community reading event."
+        },
+        {
+          "type": "audio",
+          "assetId": "spanish-conversation-audio",
+          "alt": "Five short conversation prompts; audio not yet supplied.",
+          "playback": {
+            "policyStatus": "draft-needs-version-review",
+            "autoplay": true,
+            "allowSeek": false,
+            "maxPlays": 1
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Draft original prompts: ¿Cuándo será el evento? ¿Dónde? ¿Qué libros elegiremos? ¿Cómo invitaremos a otros? ¿Qué tarea prefieres?"
+        }
+      ],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "language:print-source",
+      "content": [
+        {
+          "type": "text",
+          "text": "Original fictional survey: 18 of 30 participants prefer an afternoon community reading event; 12 prefer morning."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "language:audio-source",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "spanish-source-audio",
+          "alt": "Original fictional organizer announcement; audio missing.",
+          "playback": {
+            "maxPlays": 2,
+            "allowSeek": false,
+            "policyStatus": "2027-essay-opportunities-verified-rendering-pending"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Draft transcript: Un evento por la tarde permite que más voluntarios lleguen después de sus clases. Esta es una opinión de una organizadora ficticia."
+        }
+      ],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "language:qa-prompts",
+      "content": [
+        {
+          "type": "audio",
+          "assetId": "spanish-project-qa-audio",
+          "alt": "Four original project Q&A prompts, not yet recorded.",
+          "playback": {
+            "maxPlays": 1,
+            "allowSeek": false,
+            "policyStatus": "needs-official-version-review"
+          }
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Draft questions: ¿Qué investigaste? ¿Qué fuente fue más útil? ¿Qué comparación hiciste? ¿Qué pregunta investigarías después?"
+        }
+      ],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "physics:position",
+      "content": [
+        {
+          "type": "image",
+          "assetId": "graph-position",
+          "alt": "Original straight-line position-time graph from (0 seconds, 0 meters) to (4 seconds, 8 meters)."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "music:dictation",
+      "content": [
+        {
+          "type": "text",
+          "text": "Listen to the original four-note melody in C major and 4/4, then write it on the staff. The audio has not yet been authored."
+        },
+        {
+          "type": "audio",
+          "assetId": "music-dictation-audio",
+          "alt": "Unrecorded original four-note dictation.",
+          "playback": {
+            "maxPlays": null,
+            "policyStatus": "placeholder-needs-2027-CED-playback-rules"
+          }
+        },
+        {
+          "type": "image",
+          "assetId": "staff-blank",
+          "alt": "Blank five-line staff response template."
+        }
+      ],
+      "reviewOnlyContent": [
+        {
+          "type": "text",
+          "text": "Original authoring specification: four quarter notes C4, D4, E4, C4 in 4/4, one measure, C major, no accompaniment."
+        }
+      ],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "music:sight-score",
+      "content": [
+        {
+          "type": "music-notation",
+          "assetId": "music-score",
+          "alt": "Pending MusicXML notation for the original C4 D4 E4 C4 melody."
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "csa:class",
+      "content": [
+        {
+          "type": "code",
+          "language": "java",
+          "text": "public class Counter {\n  private int value;\n  public Counter(int start) { value = start; }\n  // Add the requested method below.\n}"
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "cyber:policy",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "device-policy",
+          "fields": {
+            "device": "practice-server",
+            "policyVersion": "synthetic-1"
+          },
+          "content": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": "Only trusted subnet 192.0.2.0/24 should reach TCP port 22."
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "cyber:firewall",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "firewall-rules",
+          "fields": {
+            "syntax": "synthetic-order-first-match"
+          },
+          "content": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": "1 allow tcp source any destination port 22\n2 deny tcp source any destination port 22"
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "cyber:log",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "system-log",
+          "fields": {
+            "timezone": "UTC",
+            "timestampsAreSynthetic": true
+          },
+          "content": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": "2027-01-01T00:00:00Z ACCEPT src=198.51.100.8 dst_port=22 rule=1"
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    },
+    {
+      "id": "cyber:permissions",
+      "content": [
+        {
+          "type": "structured-document",
+          "format": "file-permissions",
+          "fields": {
+            "syntax": "posix-style-synthetic"
+          },
+          "content": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": "-rw-rw-rw- owner=service group=service path=/practice/config.txt"
+            }
+          ]
+        }
+      ],
+      "reviewOnlyContent": [],
+      "attribution": {
+        "author": "Platform draft authors",
+        "source": "Original synthetic material",
+        "license": "CC0-1.0"
+      },
+      "metadata": {}
+    }
+  ],
+  "items": [
+    {
+      "id": "csp:single",
+      "revision": "0.1.0",
+      "title": "CSP single-select specimen",
+      "sectionId": "ap-computer-science-principles:2027:mcq",
+      "taskType": "single-choice",
+      "classification": {
+        "courseId": "ap-computer-science-principles",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A program reads a temperature then displays whether it is above 30. Which is its input?"
+            }
+          ],
+          "interactions": [
+            {
+              "id": "choice",
+              "kind": "single-choice",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "minSelections": 1,
+                "maxSelections": 1
+              },
+              "options": [
+                {
+                  "id": "a",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Temperature"
+                    }
+                  ]
+                },
+                {
+                  "id": "b",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Displayed label"
+                    }
+                  ]
+                },
+                {
+                  "id": "c",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Comparison result"
+                    }
+                  ]
+                },
+                {
+                  "id": "d",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Screen color"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutionId": "csp:single:a:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "csp:select-two",
+      "revision": "0.1.0",
+      "title": "CSP select-two specimen",
+      "sectionId": "ap-computer-science-principles:2027:mcq",
+      "taskType": "multiple-choice",
+      "classification": {
+        "courseId": "ap-computer-science-principles",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Select TWO actions that help test a procedure accepting integers from 0 through 10."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "choices",
+              "kind": "multiple-choice",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "minSelections": 2,
+                "maxSelections": 2
+              },
+              "options": [
+                {
+                  "id": "a",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Test 0"
+                    }
+                  ]
+                },
+                {
+                  "id": "b",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Test 10"
+                    }
+                  ]
+                },
+                {
+                  "id": "c",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Ignore boundary values"
+                    }
+                  ]
+                },
+                {
+                  "id": "d",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Change the instructions instead of running tests"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "solutionId": "csp:select-two:a:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "calc:frq",
+      "revision": "0.1.0",
+      "title": "Calculus method, number and unit specimen",
+      "sectionId": "ap-calculus-ab:2026:frq-calculator",
+      "taskType": "multipart-frq",
+      "classification": {
+        "courseId": "ap-calculus-ab",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "calc:table"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Estimate the rate of change of flow rate between 0 and 2 seconds. Show a quotient and state units."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "work",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            },
+            {
+              "id": "value",
+              "kind": "numeric-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "allowFraction": true,
+                "allowDecimal": true
+              }
+            },
+            {
+              "id": "unit",
+              "kind": "text-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "calc:frq:a:solution"
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Use two left-endpoint rectangles to approximate the added volume from 0 to 4 seconds; explain your setup."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "work",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            },
+            {
+              "id": "value",
+              "kind": "numeric-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "calc:frq:b:solution"
+        },
+        {
+          "id": "c",
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "State an approximation for the total volume at 4 seconds and explain how the initial volume enters."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "calc:frq:c:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "scoringPolicy": {
+        "roundingRule": {
+          "scope": "whole-item",
+          "maxRoundingPointLoss": 1,
+          "defaultDecimalPlaces": 3,
+          "status": "illustrative-2026-calculus-policy-needs-item-review"
+        },
+        "maxScore": 6
+      }
+    },
+    {
+      "id": "ush:saq-early",
+      "revision": "0.1.0",
+      "title": "History alternative SAQ specimen",
+      "sectionId": "ap-united-states-history:2026:saq-choice",
+      "taskType": "short-answer",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "ush:doc-a",
+        "ush:doc-b"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Explain one way a shared public service can change daily life."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:saq-early:a:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "ush:saq-late",
+      "revision": "0.1.0",
+      "title": "History alternative SAQ specimen",
+      "sectionId": "ap-united-states-history:2026:saq-choice",
+      "taskType": "short-answer",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "ush:doc-a",
+        "ush:doc-b"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Explain one limitation of an unevenly distributed public service."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:saq-late:a:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "ush:dbq",
+      "revision": "0.1.0",
+      "title": "DBQ structure with two sample documents",
+      "sectionId": "ap-united-states-history:2026:dbq",
+      "taskType": "document-based-essay",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "ush:doc-a",
+        "ush:doc-b"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Evaluate how a fictional town lighting project changed residents’ experiences. Use both documents and discuss a limitation of the evidence."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "wordLimit": null,
+                "allowCitationMarkers": true
+              }
+            }
+          ],
+          "solutionId": "ush:dbq:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "documentAssembly": {
+        "expectedOfficialDocumentCount": 7,
+        "includedSyntheticDocumentCount": 2,
+        "assemblyStatus": "incomplete",
+        "note": "This two-document exercise demonstrates references only; it is not a complete AP DBQ."
+      }
+    },
+    {
+      "id": "ush:leq-2026-1",
+      "revision": "0.1.0",
+      "title": "LEQ alternative 1",
+      "sectionId": "ap-united-states-history:2026:leq-choice",
+      "taskType": "long-essay",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Using a fictional community of your own design, develop an argument about change and continuity in transport. Clearly label the evidence as invented."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:leq-2026-1:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "ush:leq-2026-2",
+      "revision": "0.1.0",
+      "title": "LEQ alternative 2",
+      "sectionId": "ap-united-states-history:2026:leq-choice",
+      "taskType": "long-essay",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Using a fictional community of your own design, develop an argument about change and continuity in communication. Clearly label the evidence as invented."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:leq-2026-2:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "ush:leq-2026-3",
+      "revision": "0.1.0",
+      "title": "LEQ alternative 3",
+      "sectionId": "ap-united-states-history:2026:leq-choice",
+      "taskType": "long-essay",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Using a fictional community of your own design, develop an argument about change and continuity in public health. Clearly label the evidence as invented."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:leq-2026-3:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "ush:leq-2027",
+      "revision": "0.1.0",
+      "title": "2027 required broad-prompt structure",
+      "sectionId": "ap-united-states-history:2027:leq",
+      "taskType": "long-essay",
+      "classification": {
+        "courseId": "ap-united-states-history",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Develop an evidence-based argument about one or more changes in a fictional community, choosing a focus within the broad topic."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "ush:leq-2027:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": [],
+        "formatDifference": "One required broad prompt; do not carry forward 2026 choose-one-of-three assembly."
+      }
+    },
+    {
+      "id": "language:conversation-2026",
+      "revision": "0.1.0",
+      "title": "2026 conversation-stage specimen",
+      "sectionId": "ap-spanish-language-and-culture:2026:speaking",
+      "taskType": "spoken-conversation",
+      "classification": {
+        "courseId": "ap-spanish-language-and-culture",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "language:conversation"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "turn-1",
+          "label": "turn-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Respond in Spanish to conversation prompt 1."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 20,
+                "requiredRecordingCount": 1
+              }
+            }
+          ],
+          "stageId": "conversation-turn-1",
+          "solutionId": "language:conversation-2026:turn-1:solution"
+        },
+        {
+          "id": "turn-2",
+          "label": "turn-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Respond in Spanish to conversation prompt 2."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 20,
+                "requiredRecordingCount": 1
+              }
+            }
+          ],
+          "stageId": "conversation-turn-2",
+          "solutionId": "language:conversation-2026:turn-2:solution"
+        },
+        {
+          "id": "turn-3",
+          "label": "turn-3",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Respond in Spanish to conversation prompt 3."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 20,
+                "requiredRecordingCount": 1
+              }
+            }
+          ],
+          "stageId": "conversation-turn-3",
+          "solutionId": "language:conversation-2026:turn-3:solution"
+        },
+        {
+          "id": "turn-4",
+          "label": "turn-4",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Respond in Spanish to conversation prompt 4."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 20,
+                "requiredRecordingCount": 1
+              }
+            }
+          ],
+          "stageId": "conversation-turn-4",
+          "solutionId": "language:conversation-2026:turn-4:solution"
+        },
+        {
+          "id": "turn-5",
+          "label": "turn-5",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Respond in Spanish to conversation prompt 5."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 20,
+                "requiredRecordingCount": 1
+              }
+            }
+          ],
+          "stageId": "conversation-turn-5",
+          "solutionId": "language:conversation-2026:turn-5:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "stages": [
+        {
+          "id": "conversation-turn-1",
+          "sequence": 1,
+          "promptMaterialRef": "language:conversation",
+          "promptCueIndex": 0,
+          "partRefs": [
+            "turn-1"
+          ],
+          "responseTimeSeconds": 20,
+          "timingStatus": "2026-format-specimen-needs-final-source-check"
+        },
+        {
+          "id": "conversation-turn-2",
+          "sequence": 2,
+          "promptMaterialRef": "language:conversation",
+          "promptCueIndex": 1,
+          "partRefs": [
+            "turn-2"
+          ],
+          "responseTimeSeconds": 20,
+          "timingStatus": "2026-format-specimen-needs-final-source-check"
+        },
+        {
+          "id": "conversation-turn-3",
+          "sequence": 3,
+          "promptMaterialRef": "language:conversation",
+          "promptCueIndex": 2,
+          "partRefs": [
+            "turn-3"
+          ],
+          "responseTimeSeconds": 20,
+          "timingStatus": "2026-format-specimen-needs-final-source-check"
+        },
+        {
+          "id": "conversation-turn-4",
+          "sequence": 4,
+          "promptMaterialRef": "language:conversation",
+          "promptCueIndex": 3,
+          "partRefs": [
+            "turn-4"
+          ],
+          "responseTimeSeconds": 20,
+          "timingStatus": "2026-format-specimen-needs-final-source-check"
+        },
+        {
+          "id": "conversation-turn-5",
+          "sequence": 5,
+          "promptMaterialRef": "language:conversation",
+          "promptCueIndex": 4,
+          "partRefs": [
+            "turn-5"
+          ],
+          "responseTimeSeconds": 20,
+          "timingStatus": "2026-format-specimen-needs-final-source-check"
+        }
+      ]
+    },
+    {
+      "id": "language:essay-2027",
+      "revision": "0.1.0",
+      "title": "Print and audio argumentative essay",
+      "sectionId": "ap-spanish-language-and-culture:2027:frq",
+      "taskType": "argumentative-essay",
+      "classification": {
+        "courseId": "ap-spanish-language-and-culture",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "language:print-source",
+        "language:audio-source"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "essay",
+          "label": "essay",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Write an argument in Spanish for morning or afternoon scheduling, using both fictional sources and acknowledging a limitation."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "essay",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "wordLimit": null
+              }
+            }
+          ],
+          "solutionId": "language:essay-2027:essay:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "physics:graph-method",
+      "revision": "0.1.0",
+      "title": "Physics graph and experimental design",
+      "sectionId": "ap-physics-1:2027:frq",
+      "taskType": "experimental-design-graph",
+      "classification": {
+        "courseId": "ap-physics-1",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "physics:position"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Draw the corresponding velocity-time graph for 0 to 4 s, with labelled axes."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "graph",
+              "kind": "drawing",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "backgroundAssetId": "graph-blank",
+                "axes": {
+                  "x": {
+                    "label": "t",
+                    "unit": "s"
+                  },
+                  "y": {
+                    "label": "v",
+                    "unit": "m/s"
+                  }
+                },
+                "allowLabels": true,
+                "acceptedExportMediaTypes": [
+                  "image/png",
+                  "image/svg+xml"
+                ]
+              }
+            }
+          ],
+          "solutionId": "physics:graph-method:a:solution"
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Explain one measurement method and one way to reduce timing uncertainty."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "work",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            },
+            {
+              "id": "handwritten",
+              "kind": "file-upload",
+              "required": false,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "image/png",
+                  "image/jpeg",
+                  "application/pdf"
+                ],
+                "maxFiles": 2,
+                "maxBytesPerFile": 10000000,
+                "alternativeToInteractionId": "work",
+                "doesNotRequireOcr": true
+              }
+            }
+          ],
+          "solutionId": "physics:graph-method:b:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "music:dictation",
+      "revision": "0.1.0",
+      "title": "Music notation and handwritten dictation",
+      "sectionId": "ap-music-theory:2027:written-frq",
+      "taskType": "melodic-dictation",
+      "classification": {
+        "courseId": "ap-music-theory",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "music:dictation"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "notation",
+          "label": "notation",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Notate the heard melody using either the music entry control or a handwritten upload."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "notes",
+              "kind": "music-entry",
+              "required": false,
+              "prompt": [],
+              "constraints": {
+                "acceptedFormats": [
+                  "musicxml"
+                ],
+                "clef": "treble",
+                "keySignature": "C-major",
+                "timeSignature": "4/4",
+                "requiredAlternativeGroup": "notation"
+              }
+            },
+            {
+              "id": "handwritten",
+              "kind": "file-upload",
+              "required": false,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "image/png",
+                  "image/jpeg",
+                  "application/pdf"
+                ],
+                "requiredAlternativeGroup": "notation",
+                "doesNotRequireOcr": true
+              }
+            }
+          ],
+          "responseGroups": [
+            {
+              "id": "notation",
+              "minCompleted": 1,
+              "maxCompleted": 1,
+              "interactionIds": [
+                "notes",
+                "handwritten"
+              ]
+            }
+          ],
+          "solutionId": "music:dictation:notation:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "music:sight-sing",
+      "revision": "0.1.0",
+      "title": "Music sight-singing response",
+      "sectionId": "ap-music-theory:2027:sight-singing",
+      "taskType": "sight-singing",
+      "classification": {
+        "courseId": "ap-music-theory",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "music:sight-score"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "performance",
+          "label": "performance",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Sing the displayed original melody in a comfortable register, preserving relative pitch and rhythm."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "mimeTypes": [
+                  "audio/webm",
+                  "audio/mp4",
+                  "audio/wav"
+                ],
+                "maxDurationSeconds": 30
+              }
+            }
+          ],
+          "solutionId": "music:sight-sing:performance:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "stages": [
+        {
+          "id": "prepare",
+          "sequence": 1,
+          "partRefs": [],
+          "durationSeconds": null,
+          "timingStatus": "needs-CED-review"
+        },
+        {
+          "id": "record",
+          "sequence": 2,
+          "partRefs": [
+            "performance"
+          ],
+          "durationSeconds": null,
+          "timingStatus": "needs-CED-review"
+        }
+      ]
+    },
+    {
+      "id": "csa:method",
+      "revision": "0.1.0",
+      "title": "Java method writing",
+      "sectionId": "ap-computer-science-a:2027:frq",
+      "taskType": "code-response",
+      "classification": {
+        "courseId": "ap-computer-science-a",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "csa:class"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Write a public void method addPositive(int n) that increases value by n only when n is positive."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "code",
+              "kind": "code-entry",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "java",
+                "languageVersion": "profile-controlled",
+                "execution": "not-required-for-rubric",
+                "preserveWhitespace": true
+              }
+            }
+          ],
+          "solutionId": "csa:method:a:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    },
+    {
+      "id": "cyber:evidence",
+      "revision": "0.1.0",
+      "title": "Cybersecurity linked device evidence",
+      "sectionId": "ap-cybersecurity:2027:frq",
+      "taskType": "evidence-based-frq",
+      "classification": {
+        "courseId": "ap-cybersecurity",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "cyber:policy",
+        "cyber:firewall",
+        "cyber:log",
+        "cyber:permissions"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "a",
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Use the policy, ordered firewall rules and log to explain the misconfiguration; propose a corrected policy rule sequence."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "cyber:evidence:a:solution"
+        },
+        {
+          "id": "b",
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Explain why the configuration file permissions create risk and suggest a narrower setting for a service-owned private configuration."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "cyber:evidence:b:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      }
+    }
+  ],
+  "assessmentTasks": [
+    {
+      "id": "language:project-2027",
+      "revision": "0.1.0",
+      "title": "2027 language project presentation and Q&A",
+      "sectionId": "ap-spanish-language-and-culture:2027:frq",
+      "taskType": "project-speaking",
+      "classification": {
+        "courseId": "ap-spanish-language-and-culture",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [
+        "language:qa-prompts"
+      ],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "presentation",
+          "label": "presentation",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Present what you learned from an ORIGINAL practice project about community reading traditions; cite sources."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "presentation",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "maxDurationSeconds": 180
+              }
+            }
+          ],
+          "solutionId": "language:project-2027:presentation:solution"
+        },
+        {
+          "id": "qa-1",
+          "label": "qa-1",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer project question 1 using your own practice project."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "maxDurationSeconds": 40
+              }
+            }
+          ],
+          "solutionId": "language:project-2027:qa-1:solution"
+        },
+        {
+          "id": "qa-2",
+          "label": "qa-2",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer project question 2 using your own practice project."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "maxDurationSeconds": 40
+              }
+            }
+          ],
+          "solutionId": "language:project-2027:qa-2:solution"
+        },
+        {
+          "id": "qa-3",
+          "label": "qa-3",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer project question 3 using your own practice project."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "maxDurationSeconds": 40
+              }
+            }
+          ],
+          "solutionId": "language:project-2027:qa-3:solution"
+        },
+        {
+          "id": "qa-4",
+          "label": "qa-4",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Answer project question 4 using your own practice project."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "recording",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "language": "es",
+                "maxDurationSeconds": 40
+              }
+            }
+          ],
+          "solutionId": "language:project-2027:qa-4:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "artifactRequirements": [
+        {
+          "id": "ppr",
+          "kind": "project-reference",
+          "templateAssetId": "language-ppr-template",
+          "required": true,
+          "studentArtifactStorage": "attempt-only",
+          "acceptedMediaTypes": [
+            "application/pdf"
+          ]
+        }
+      ],
+      "projectReferencePolicy": {
+        "permittedDuring": [
+          "presentation",
+          "qa-1",
+          "qa-2",
+          "qa-3",
+          "qa-4"
+        ],
+        "referenceMustBeStudentAuthored": true,
+        "policyVersion": "2027-needs-complete-CED-audit"
+      },
+      "stages": [
+        {
+          "id": "prepare",
+          "sequence": 1,
+          "partRefs": [],
+          "durationSeconds": 180
+        },
+        {
+          "id": "presentation",
+          "sequence": 2,
+          "partRefs": [
+            "presentation"
+          ],
+          "durationSeconds": 180
+        },
+        {
+          "id": "qa-1",
+          "sequence": 3,
+          "partRefs": [
+            "qa-1"
+          ],
+          "promptMaterialRef": "language:qa-prompts",
+          "promptCueIndex": 0,
+          "responseTimeSeconds": 40
+        },
+        {
+          "id": "qa-2",
+          "sequence": 4,
+          "partRefs": [
+            "qa-2"
+          ],
+          "promptMaterialRef": "language:qa-prompts",
+          "promptCueIndex": 1,
+          "responseTimeSeconds": 40
+        },
+        {
+          "id": "qa-3",
+          "sequence": 5,
+          "partRefs": [
+            "qa-3"
+          ],
+          "promptMaterialRef": "language:qa-prompts",
+          "promptCueIndex": 2,
+          "responseTimeSeconds": 40
+        },
+        {
+          "id": "qa-4",
+          "sequence": 6,
+          "partRefs": [
+            "qa-4"
+          ],
+          "promptMaterialRef": "language:qa-prompts",
+          "promptCueIndex": 3,
+          "responseTimeSeconds": 40
+        }
+      ]
+    },
+    {
+      "id": "csp:create",
+      "revision": "0.1.0",
+      "title": "CSP Create project structure",
+      "sectionId": "ap-computer-science-principles:2027:create",
+      "taskType": "performance-task",
+      "classification": {
+        "courseId": "ap-computer-science-principles",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "artifacts",
+          "label": "artifacts",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Create an original practice program using a list and a procedure, and prepare code, video and project-reference artifacts."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "code-pdf",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "video",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "video/mp4"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "ppr",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            }
+          ],
+          "solutionId": "csp:create:artifacts:solution"
+        },
+        {
+          "id": "written",
+          "label": "written",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Explain how one list or procedure in your practice project manages complexity."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "response",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "csp:create:written:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "artifactRequirements": [
+        {
+          "id": "program-code",
+          "interactionId": "code-pdf",
+          "required": true,
+          "partRefs": [
+            "artifacts"
+          ]
+        },
+        {
+          "id": "program-video",
+          "interactionId": "video",
+          "required": true,
+          "partRefs": [
+            "artifacts"
+          ]
+        },
+        {
+          "id": "personalized-project-reference",
+          "interactionId": "ppr",
+          "required": true,
+          "partRefs": [
+            "artifacts"
+          ]
+        }
+      ],
+      "projectReferencePolicy": {
+        "permittedDuring": [
+          "written"
+        ],
+        "studentAuthoredRequired": true,
+        "containsActualStudentReference": false
+      },
+      "stages": [
+        {
+          "id": "development",
+          "sequence": 1,
+          "partRefs": [
+            "artifacts"
+          ],
+          "durationSeconds": 32400,
+          "timingMeaning": "Official current profile provides 9 in-class hours; not the length of this specimen."
+        },
+        {
+          "id": "exam-written",
+          "sequence": 2,
+          "partRefs": [
+            "written"
+          ],
+          "durationSeconds": null,
+          "assemblyStatus": "incomplete-four-official-prompts-not-reproduced"
+        }
+      ]
+    },
+    {
+      "id": "art:portfolio",
+      "revision": "0.1.0",
+      "title": "Art portfolio task structure",
+      "sectionId": "ap-2-d-art-and-design:2027:portfolio",
+      "taskType": "portfolio",
+      "classification": {
+        "courseId": "ap-2-d-art-and-design",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "sustained",
+          "label": "sustained",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Present an original investigation through images and written evidence, with process documentation and attribution."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "images",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "image/jpeg",
+                  "image/png"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "written",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "art:portfolio:sustained:solution"
+        },
+        {
+          "id": "selected",
+          "label": "selected",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Submit selected practice works and identify materials, processes, dimensions and ideas."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "works",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "image/jpeg",
+                  "image/png"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "metadata",
+              "kind": "extended-text",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "art:portfolio:selected:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "artifactRequirements": [
+        {
+          "id": "sustained-images",
+          "interactionId": "images",
+          "officialTargetCount": 15,
+          "specimenIncludesStudentFiles": false,
+          "partRefs": [
+            "sustained"
+          ]
+        },
+        {
+          "id": "selected-works",
+          "interactionId": "works",
+          "official2DTargetCount": 5,
+          "official3DViewsPerWork": 2,
+          "note": "3-D requires a distinct course profile, not this 2-D profile.",
+          "partRefs": [
+            "selected"
+          ]
+        }
+      ],
+      "citationRequirements": {
+        "creditPreexistingWork": true,
+        "fields": [
+          "creator",
+          "title",
+          "date",
+          "sourceUrl",
+          "license"
+        ]
+      }
+    },
+    {
+      "id": "research:paper-defense",
+      "revision": "0.1.0",
+      "title": "Research paper, presentation and oral defense",
+      "sectionId": "ap-research:2027:portfolio",
+      "taskType": "research-project",
+      "classification": {
+        "courseId": "ap-research",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "paper",
+          "label": "paper",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Submit an original practice research paper with a focused question, method, evidence, limitations and citations."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "paper",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            }
+          ],
+          "solutionId": "research:paper-defense:paper:solution"
+        },
+        {
+          "id": "defense",
+          "label": "defense",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Present the research and answer questions about method, evidence and limitations."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "slides",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "presentation",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "video/mp4"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "defense",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "maxDurationSeconds": null,
+                "timingStatus": "teacher-guided-practice"
+              }
+            }
+          ],
+          "solutionId": "research:paper-defense:defense:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "artifactRequirements": [
+        {
+          "id": "academic-paper",
+          "interactionId": "paper",
+          "officialWordCountRange": [
+            4000,
+            5000
+          ],
+          "isOfficialSubmission": false,
+          "partRefs": [
+            "paper"
+          ]
+        },
+        {
+          "id": "presentation-defense",
+          "interactionIds": [
+            "slides",
+            "presentation",
+            "defense"
+          ],
+          "teacherScoredComponent": true,
+          "partRefs": [
+            "defense"
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "research",
+          "sequence": 1,
+          "partRefs": [
+            "paper"
+          ],
+          "durationSeconds": null
+        },
+        {
+          "id": "presentation-defense",
+          "sequence": 2,
+          "partRefs": [
+            "defense"
+          ],
+          "durationSeconds": null
+        }
+      ],
+      "citationRequirements": {
+        "required": true,
+        "allowedStyles": [
+          "APA",
+          "MLA",
+          "Chicago",
+          "consistent-other"
+        ]
+      }
+    },
+    {
+      "id": "seminar:team-project",
+      "revision": "0.1.0",
+      "title": "Seminar individual and team evidence structure",
+      "sectionId": "ap-seminar:2027:performance",
+      "taskType": "team-performance-task",
+      "classification": {
+        "courseId": "ap-seminar",
+        "topicIds": [],
+        "skillIds": [],
+        "difficulty": "synthetic-unclassified"
+      },
+      "stimulusRefs": [],
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Original structure specimen; this is not a released AP question."
+        }
+      ],
+      "parts": [
+        {
+          "id": "individual",
+          "label": "individual",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Provide an individually authored practice research report with sources."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "report",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            }
+          ],
+          "solutionId": "seminar:team-project:individual:solution"
+        },
+        {
+          "id": "team",
+          "label": "team",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Develop a team presentation that reconciles perspectives; answer oral-defense questions."
+            }
+          ],
+          "interactions": [
+            {
+              "id": "slides",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "application/pdf"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "video",
+              "kind": "file-upload",
+              "required": true,
+              "prompt": [],
+              "constraints": {
+                "acceptedMediaTypes": [
+                  "video/mp4"
+                ],
+                "maxFiles": 20,
+                "studentArtifactStorage": "attempt-only"
+              }
+            },
+            {
+              "id": "defense",
+              "kind": "audio-recording",
+              "required": true,
+              "prompt": [],
+              "constraints": {}
+            }
+          ],
+          "solutionId": "seminar:team-project:team:solution"
+        }
+      ],
+      "delivery": {
+        "assemblyStatus": "incomplete",
+        "officialQuestion": false,
+        "timeLimitSeconds": null,
+        "referenceMaterialIds": []
+      },
+      "collaborationPolicy": {
+        "individualPartIds": [
+          "individual"
+        ],
+        "teamPartIds": [
+          "team"
+        ],
+        "actualTeamMembershipStoredIn": "attempt-only"
+      },
+      "artifactRequirements": [
+        {
+          "id": "individual-report",
+          "interactionId": "report",
+          "partRefs": [
+            "individual"
+          ]
+        },
+        {
+          "id": "team-presentation",
+          "interactionIds": [
+            "slides",
+            "video",
+            "defense"
+          ],
+          "partRefs": [
+            "team"
+          ]
+        }
+      ]
+    }
+  ],
+  "draftNotes": [
+    "All examples are original synthetic format exercises, not official AP questions.",
+    "No attempt, student response, recording, project file, score or personal identifier is included.",
+    "Media placeholders block live delivery. Some families are represented structurally, not as fully populated subject-valid exam tasks."
+  ]
+}

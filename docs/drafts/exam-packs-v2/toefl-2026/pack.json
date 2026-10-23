@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "2.0-draft",
+  "documentType": "exam-pack",
+  "status": "draft",
+  "id": "toefl:ibt-2026:synthetic-structure-pack",
+  "revision": "0.1.0",
+  "title": "新 TOEFL iBT 2026 全题型结构样包（缺题、缺媒体，不可作为完整模考）",
+  "language": "en",
+  "exam": "toefl",
+  "subject": "Integrated four skills",
+  "examVersion": "ibt-2026-01-21",
+  "administrationYear": 2026,
+  "effectiveFrom": "2026-01-21",
+  "files": {
+    "assessment": "assessment.json",
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "img-campus-map",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/campus-map.svg",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "caption": "Original campus studio map to be authored."
+    },
+    {
+      "id": "img-interviewer",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/interviewer.svg",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "caption": "Original illustrative interviewer portrait to be authored."
+    },
+    {
+      "id": "audio-speaking-intro",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/speaking-intro.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null
+    },
+    {
+      "id": "audio-listening-response",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/listening-response.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-listening-conversation",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/listening-conversation.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-listening-announcement",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/listening-announcement.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-listening-academic-talk",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/listening-academic-talk.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-1",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-1.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-2",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-2.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-3",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-3.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-4",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-4.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-5",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-5.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-6",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-6.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "audio-repeat-7",
+      "kind": "audio",
+      "mediaType": "audio/mpeg",
+      "path": "assets/repeat-7.mp3",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "video-interview-1",
+      "kind": "video",
+      "mediaType": "video/mp4",
+      "path": "assets/interview-1.mp4",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "video-interview-2",
+      "kind": "video",
+      "mediaType": "video/mp4",
+      "path": "assets/interview-2.mp4",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "video-interview-3",
+      "kind": "video",
+      "mediaType": "video/mp4",
+      "path": "assets/interview-3.mp4",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    },
+    {
+      "id": "video-interview-4",
+      "kind": "video",
+      "mediaType": "video/mp4",
+      "path": "assets/interview-4.mp4",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "original-synthetic-placeholder",
+      "license": "Not an included media file; replace with authorized original media.",
+      "durationSeconds": null,
+      "language": "en"
+    }
+  ],
+  "toolRequirements": [],
+  "provenance": {
+    "contentOrigin": "original-synthetic",
+    "authors": [
+      "School Exam Platform draft authors"
+    ],
+    "containsOfficialQuestions": false,
+    "containsPersonalData": false,
+    "frameworkSourceRefs": [
+      "ets-content",
+      "ets-spec-2026"
+    ],
+    "reviewStatus": "needs-review"
+  },
+  "references": [
+    {
+      "id": "ets-content",
+      "title": "ETS current 2026 test content",
+      "url": "https://www.ets.org/toefl/test-takers/ibt/about/content.html?version=after-jan-2026",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-spec-2026",
+      "title": "ETS 2026 Blueprint and Specifications",
+      "url": "https://www.ets.org/pdfs/toefl/toefl-ibt-test-specifications-2026.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-teacher-faq",
+      "title": "ETS Teacher FAQ: adaptive testing and score reporting",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toefl/teacher-faq.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-reading",
+      "title": "ETS Reading tasks",
+      "url": "https://www.ets.org/toefl/test-takers/ibt/about/content/reading.html",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-listening",
+      "title": "ETS Listening tasks",
+      "url": "https://www.ets.org/toefl/test-takers/ibt/about/content/listening.html",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-writing",
+      "title": "ETS Writing tasks",
+      "url": "https://www.ets.org/toefl/test-takers/ibt/about/content/writing.html",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-speaking",
+      "title": "ETS Speaking tasks",
+      "url": "https://www.ets.org/toefl/test-takers/ibt/about/content/speaking.html",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-overview",
+      "title": "ETS Updated TOEFL Test Overview: interview timing",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-test-overview.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-practice-2026",
+      "title": "ETS Teacher Resources Practice Test 1: task directions and timing",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-teachers-resources-practice-test-1.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-speaking-rubric",
+      "title": "ETS Speaking scoring guides",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toefl/speaking-rubrics.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "ets-writing-rubric",
+      "title": "ETS Writing scoring guides",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toefl/writing-rubrics.pdf",
+      "accessedOn": "2026-10-22"
+    }
+  ],
+  "draftNotes": [
+    "这是含试卷结构、题目、答案解析和资源清单的出题端整包设计，不是已接入引擎的格式。",
+    "所有正文、题干、参考答案均为原创结构示例；没有下载或复制 ETS 原题、原音频、原视频。",
+    "全部媒体只有清单占位，文件尚未制作；assemblyStatus=incomplete 且 mockReady=false。",
+    "正式客户端投递须移除 solutions、reviewOnlyContent 和仅教师可见元信息，不能仅靠 CSS 隐藏。",
+    "本包只描述 TOEFL iBT 自 2026-01-21 起的新题型；旧 integrated-writing、独立口语等需要单独 examVersion。",
+    "Desmos 不是本 TOEFL profile 的考试工具，不从 SAT 的工具许可继承。"
+  ]
+}

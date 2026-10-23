@@ -1,0 +1,1802 @@
+{
+  "visibility": "instructor-only",
+  "solutions": [
+    {
+      "id": "sol-r-complete-1",
+      "itemId": "r-complete",
+      "partId": "r-complete-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-1-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-1": [
+                "dent"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 student，已显示 stu，应补 dent；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-2",
+      "itemId": "r-complete",
+      "partId": "r-complete-2",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-2-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-2": [
+                "rary"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 library，已显示 lib，应补 rary；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-3",
+      "itemId": "r-complete",
+      "partId": "r-complete-3",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-3-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-3": [
+                "et"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 quiet，已显示 qui，应补 et；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-4",
+      "itemId": "r-complete",
+      "partId": "r-complete-4",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-4-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-4": [
+                "tice"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 practice，已显示 prac，应补 tice；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-5",
+      "itemId": "r-complete",
+      "partId": "r-complete-5",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-5-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-5": [
+                "view"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 review，已显示 re，应补 view；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-6",
+      "itemId": "r-complete",
+      "partId": "r-complete-6",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-6-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-6": [
+                "ress"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 progress，已显示 prog，应补 ress；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-7",
+      "itemId": "r-complete",
+      "partId": "r-complete-7",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-7-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-7": [
+                "kly"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 weekly，已显示 wee，应补 kly；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-8",
+      "itemId": "r-complete",
+      "partId": "r-complete-8",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-8-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-8": [
+                "ful"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 helpful，已显示 help，应补 ful；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-9",
+      "itemId": "r-complete",
+      "partId": "r-complete-9",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-9-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-9": [
+                "tions"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 questions，已显示 ques，应补 tions；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-complete-10",
+      "itemId": "r-complete",
+      "partId": "r-complete-10",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-complete-10-response",
+            "kind": "gap-map",
+            "expected": {
+              "r-gap-10": [
+                "ther"
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "完整单词是 together，已显示 toge，应补 ther；只提交所缺字母，不重复输入已显示前缀。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-daily-1",
+      "itemId": "r-daily",
+      "partId": "r-daily-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-daily-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "邮件明确把地点从 Room 110 改到 Room 204，并明确时间不变，因此应选地点。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-academic-1",
+      "itemId": "r-academic",
+      "partId": "r-academic-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-academic-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "文章给出树叶蒸发使附近空气降温这一机制；其余选项未被文本支持。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-r-academic-2",
+      "itemId": "r-academic",
+      "partId": "r-academic-2",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "r-academic-2-response",
+            "kind": "option-set",
+            "expected": [
+              "loc-c"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "在前两句说明树木的好处之后，用转折引出适宜品种与水资源条件，逻辑最连贯；应放在 loc-c。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-l-response-1",
+      "itemId": "l-response",
+      "partId": "l-response-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "l-response-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "问句询问地点，A 提供领取地点；其他选项未回答 where。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-l-conversation-1",
+      "itemId": "l-conversation",
+      "partId": "l-conversation-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "l-conversation-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "工作人员建议下午使用图书馆的打印机，因此 A 正确。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-l-announcement-1",
+      "itemId": "l-announcement",
+      "partId": "l-announcement-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "l-announcement-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "通知区分关门时间与归还工具截止时间；归还截止是四点半。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-l-academic-1",
+      "itemId": "l-academic",
+      "partId": "l-academic-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "l-academic-1-response",
+            "kind": "option-set",
+            "expected": [
+              "A"
+            ]
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": []
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "讲解指出低温低湿用于减缓劣化，不能推导所有物种的储藏条件相同。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-w-build-1",
+      "itemId": "w-build",
+      "partId": "w-build-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "w-build-1-response",
+            "kind": "token-order",
+            "expected": {
+              "acceptedOrders": [
+                [
+                  "tok-when",
+                  "tok-the",
+                  "tok-started"
+                ]
+              ]
+            }
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "She wanted to know when the workshop started.",
+            "status": "original-reference-not-official"
+          }
+        ]
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考整句：She wanted to know when the workshop started. 间接疑问句使用陈述语序，不使用 does；固定文字和标点不属于需要选择的词块。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-w-email-1",
+      "itemId": "w-email",
+      "partId": "w-email-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-email",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-writing-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "task-fulfillment",
+              "description": "回应全部交际要求，并用相关细节支持目的",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "register-organization",
+              "description": "语气、礼貌与结构适合收件人和情境",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "language",
+              "description": "词汇与句式准确，错误不妨碍理解",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Dear Coordinator, My class timetable has changed, and my seminar now overlaps with the studio workshop I booked for Tuesday. Could I move to another session later in the week? I can send my booking reference and the email address used for registration if that would help. Thank you for checking the available options. Best regards, Alex",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考邮件依次说明冲突、询问其他场次并主动提供查单信息，语气适合协调员。其他满足全部任务要求的表达也可以；不能按与范文逐字相同来判分。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-writing-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-w-discussion-1",
+      "itemId": "w-discussion",
+      "partId": "w-discussion-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-academic_discussion",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-writing-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "contribution",
+              "description": "回应讨论、表达自己的观点，并发展理由或例子",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "coherence",
+              "description": "观点与支持关系清晰，衔接连贯",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "language",
+              "description": "使用合适且有变化的词汇与句式",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "I would prioritize quiet rooms while retaining some shared workspaces. Student A is right that collaboration matters, but group work can often take place in ordinary classrooms outside teaching hours. Students who need silence have fewer alternatives when every open area is noisy. A university could also make the rooms flexible: movable partitions would allow a group room to become several small quiet rooms during examination periods. Booking data could then help staff adjust the balance each term. This approach would provide a dependable place for concentrated reading without assuming that students always study in the same way.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "该参考从资源可替代性提出观点，回应同学意见，并提供可移动隔断和使用数据作为新贡献。100 词是有效回答建议，不是低于该字数自动判零；仍须依据任务完成度与语言表现整体评价。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-writing-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-1",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Welcome to the campus studio.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "Welcome to the campus studio.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-2",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-2",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Please collect your badge at the desk.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "Please collect your badge at the desk.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-3",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-3",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "The workshop begins in the east room.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "The workshop begins in the east room.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-4",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-4",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "You may leave your coat in the lockers beside the entrance.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "You may leave your coat in the lockers beside the entrance.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-5",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-5",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "If you need paper, ask the assistant at the information desk.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "If you need paper, ask the assistant at the information desk.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-6",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-6",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Students who registered online can show their confirmation on a phone.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "Students who registered online can show their confirmation on a phone.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-repeat-7",
+      "itemId": "s-repeat",
+      "partId": "s-repeat-7",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-listen_repeat",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "reference-preservation",
+              "description": "保留原句词序、词形和关键意义",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "intelligibility",
+              "description": "根据录音判断可懂度；不能仅依据 ASR 推断",
+              "evidenceRequired": "response-audio"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Before leaving the building, please return borrowed equipment to the desk where you collected it.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        },
+        "referenceTranscript": "Before leaving the building, please return borrowed equipment to the desk where you collected it.",
+        "referenceRole": "source-to-repeat-not-automatic-text-match"
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "复述的参考是原句本身，应结合真实录音判断信息保留与可懂度。此句时限仍待核验，不从示例音频长度或匿名 fixture 推算正式时限。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-interview-1",
+      "itemId": "s-interview",
+      "partId": "s-interview-1",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-interview",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "content-development",
+              "description": "切题并用解释或例子展开",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "delivery",
+              "description": "根据音频判断流畅度、节奏和可懂度",
+              "evidenceRequired": "response-audio"
+            },
+            {
+              "id": "language",
+              "description": "词汇与句式准确且足以表达意思",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "I find the library’s small reading room useful because it is quiet and has a desk lamp at each seat. I can focus on difficult chapters there before joining classmates in a group room.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考回答切题并给出解释或例子；没有唯一立场或措辞。范文只是内容示范，口语的节奏与可懂度必须根据实际录音评价。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-interview-2",
+      "itemId": "s-interview",
+      "partId": "s-interview-2",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-interview",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "content-development",
+              "description": "切题并用解释或例子展开",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "delivery",
+              "description": "根据音频判断流畅度、节奏和可懂度",
+              "evidenceRequired": "response-audio"
+            },
+            {
+              "id": "language",
+              "description": "词汇与句式准确且足以表达意思",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "Last term I moved my revision sessions from late evening to the morning. I was less tired and noticed mistakes more quickly, so I learned to plan demanding work for times when I could concentrate.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考回答切题并给出解释或例子；没有唯一立场或措辞。范文只是内容示范，口语的节奏与可懂度必须根据实际录音评价。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-interview-3",
+      "itemId": "s-interview",
+      "partId": "s-interview-3",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-interview",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "content-development",
+              "description": "切题并用解释或例子展开",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "delivery",
+              "description": "根据音频判断流畅度、节奏和可懂度",
+              "evidenceRequired": "response-audio"
+            },
+            {
+              "id": "language",
+              "description": "词汇与句式准确且足以表达意思",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "I would provide more quiet rooms, since silence is difficult to find elsewhere on a busy campus. Shared areas still matter, but an existing classroom can often support group work after lessons.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考回答切题并给出解释或例子；没有唯一立场或措辞。范文只是内容示范，口语的节奏与可懂度必须根据实际录音评价。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    },
+    {
+      "id": "sol-s-interview-4",
+      "itemId": "s-interview",
+      "partId": "s-interview-4",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "rubric",
+        "maxScore": 5,
+        "rules": [],
+        "rubric": {
+          "id": "rubric-toefl-2026-interview",
+          "version": "0.1-draft-summary",
+          "authority": "practice-summary-of-official-guide",
+          "sourceRefs": [
+            "ets-speaking-rubric"
+          ],
+          "aggregation": "holistic-not-sum-of-dimensions",
+          "scoreLevels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "criteria": [
+            {
+              "id": "content-development",
+              "description": "切题并用解释或例子展开",
+              "evidenceRequired": "response-text-or-transcript"
+            },
+            {
+              "id": "delivery",
+              "description": "根据音频判断流畅度、节奏和可懂度",
+              "evidenceRequired": "response-audio"
+            },
+            {
+              "id": "language",
+              "description": "词汇与句式准确且足以表达意思",
+              "evidenceRequired": "response-text-or-transcript"
+            }
+          ],
+          "levelSummary": {
+            "0": "无相关有效英文作答",
+            "1": "仅有零散有效内容，难以传达意义",
+            "2": "任务完成度及语言清晰度存在较大不足",
+            "3": "部分有效，但内容或表达有明显局限",
+            "4": "总体有效，少量不足不妨碍主要意义",
+            "5": "充分有效，内容与表达符合任务要求"
+          },
+          "verificationStatus": "needs-review-against-official-guide"
+        },
+        "modelResponses": [
+          {
+            "kind": "text",
+            "text": "I expect study spaces to become more flexible. Movable partitions and simple booking systems could help staff switch between individual and group layouts as students’ needs change.",
+            "status": "original-reference-not-unique-correct-answer"
+          }
+        ],
+        "practiceAiPolicy": {
+          "official": false,
+          "mustDiscloseEvidenceScope": true,
+          "transcriptOnlyExcludes": [
+            "pronunciation",
+            "pace",
+            "prosody",
+            "pauses",
+            "audio-intelligibility"
+          ]
+        }
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "参考回答切题并给出解释或例子；没有唯一立场或措辞。范文只是内容示范，口语的节奏与可懂度必须根据实际录音评价。"
+          }
+        ],
+        "steps": [],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "ets-speaking-rubric"
+        ],
+        "authorship": "original-synthetic"
+      }
+    }
+  ],
+  "draftNotes": [
+    "答案、参考表达和解析均为原创草案，status=needs-review；无 ETS 真题或真实学生作答。",
+    "客观题按规范化答案评分；组句按 token ID 顺序匹配，不能只比较显示字符串。",
+    "开放题按整体 rubric 评估，参考表达不构成唯一正确字符串；评分维度不得简单相加冒充官方分数。",
+    "口语若只有 ASR 文字，可评价内容和语言证据，不能臆测发音、语速、停顿或韵律。",
+    "出题端 solutions 不应在正式答题时直接下发；此处可见性字段仅是设计约定，现有引擎并未实现。"
+  ]
+}

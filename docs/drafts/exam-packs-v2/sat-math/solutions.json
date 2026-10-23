@@ -1,0 +1,405 @@
+{
+  "visibility": "instructor-only",
+  "solutions": [
+    {
+      "id": "sat:solution:table",
+      "itemId": "sat:math:q-table-mcq",
+      "partId": "sat:part:table",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "sat:interaction:table",
+            "kind": "option-set",
+            "expected": [
+              "sat:interaction:table:C"
+            ],
+            "comparison": "exact-option-set"
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [],
+        "scoreMeaning": "Local synthetic practice point, not an official SAT item weight."
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "The function increases by 2 when x increases by 1, so f(x)=2x+1 and f(4)=9."
+          }
+        ],
+        "steps": [
+          {
+            "id": "table-step-1",
+            "content": [
+              {
+                "type": "math",
+                "latex": "m=(3-1)/(1-0)=2",
+                "spokenText": "slope equals two"
+              }
+            ]
+          },
+          {
+            "id": "table-step-2",
+            "content": [
+              {
+                "type": "math",
+                "latex": "f(4)=2(4)+1=9",
+                "spokenText": "f of four equals nine"
+              }
+            ]
+          }
+        ],
+        "optionFeedback": [
+          {
+            "optionId": "sat:interaction:table:A",
+            "content": [
+              {
+                "type": "text",
+                "text": "7 is f(3), rather than f(4)."
+              }
+            ]
+          },
+          {
+            "optionId": "sat:interaction:table:B",
+            "content": [
+              {
+                "type": "text",
+                "text": "8 omits the intercept of 1."
+              }
+            ]
+          },
+          {
+            "optionId": "sat:interaction:table:D",
+            "content": [
+              {
+                "type": "text",
+                "text": "10 does not follow the table’s constant increase of 2."
+              }
+            ]
+          }
+        ],
+        "sourceRefs": [],
+        "authorship": "Original explanatory text; mathematically checked in this draft, awaiting project editorial review."
+      }
+    },
+    {
+      "id": "sat:solution:multiple-values",
+      "itemId": "sat:math:q-multiple-values-spr",
+      "partId": "sat:part:multiple-values",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "sat:interaction:multiple-values",
+            "kind": "numeric",
+            "expected": {
+              "canonicalValues": [
+                {
+                  "numerator": "-3",
+                  "denominator": "1"
+                },
+                {
+                  "numerator": "3",
+                  "denominator": "1"
+                }
+              ],
+              "acceptedRepresentations": [
+                "-3",
+                "3"
+              ],
+              "representationPolicy": "exact-rational-equivalence-after-input-profile-validation"
+            },
+            "inputProfileRef": "sat-spr-2026",
+            "numericTolerance": null,
+            "award": "full-credit-if-any-one-accepted-value"
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [],
+        "scoreMeaning": "Local synthetic practice point, not an official SAT item weight."
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Both −3 and 3 square to 9. The prompt asks for one possible value, so either one alone earns credit."
+          }
+        ],
+        "steps": [
+          {
+            "id": "roots-step-1",
+            "content": [
+              {
+                "type": "math",
+                "latex": "x=\\pm\\sqrt{9}=\\pm3",
+                "spokenText": "x equals plus or minus three"
+              }
+            ]
+          },
+          {
+            "id": "roots-step-2",
+            "content": [
+              {
+                "type": "text",
+                "text": "Enter one value only; do not type a list or ±3."
+              }
+            ]
+          }
+        ],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "cb-spr"
+        ],
+        "authorship": "Original explanatory text; mathematically checked in this draft, awaiting project editorial review."
+      }
+    },
+    {
+      "id": "sat:solution:fraction",
+      "itemId": "sat:math:q-fraction-spr",
+      "partId": "sat:part:fraction",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "sat:interaction:fraction",
+            "kind": "numeric",
+            "expected": {
+              "canonicalValues": [
+                {
+                  "numerator": "2",
+                  "denominator": "3"
+                }
+              ],
+              "acceptedRepresentations": [
+                "2/3",
+                ".6666",
+                ".6667",
+                "0.666",
+                "0.667"
+              ],
+              "representationPolicy": "explicit-decimal-lexical-set-or-exact-rational-equivalence-after-input-profile-validation",
+              "rejectedExamples": [
+                ".66",
+                "0.66",
+                ".67",
+                "0.67",
+                "2 / 3",
+                "66.7%"
+              ],
+              "decimalMatch": "lexical-not-numeric-tolerance"
+            },
+            "inputProfileRef": "sat-spr-2026",
+            "numericTolerance": null,
+            "award": "full-credit-if-any-one-accepted-representation",
+            "notes": "An equivalent fraction such as 4/6 is mathematically equal and fits the input profile; a short rounded decimal such as .67 must not receive credit."
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [],
+        "scoreMeaning": "Local synthetic practice point, not an official SAT item weight."
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Divide both sides by 3 to obtain 2/3. A fraction is simplest here; the listed decimal forms demonstrate the official field-limited entry examples."
+          }
+        ],
+        "steps": [
+          {
+            "id": "fraction-step-1",
+            "content": [
+              {
+                "type": "math",
+                "latex": "x=2/3",
+                "spokenText": "x equals two thirds"
+              }
+            ]
+          },
+          {
+            "id": "fraction-step-2",
+            "content": [
+              {
+                "type": "text",
+                "text": "The answer key distinguishes accepted decimal spellings from exact rational equality; it does not use a broad error tolerance."
+              }
+            ]
+          }
+        ],
+        "optionFeedback": [],
+        "sourceRefs": [
+          "cb-framework-2026",
+          "cb-spr"
+        ],
+        "authorship": "Original explanatory text; mathematically checked in this draft, awaiting project editorial review."
+      }
+    },
+    {
+      "id": "sat:solution:geometry",
+      "itemId": "sat:math:q-geometry-mcq",
+      "partId": "sat:part:geometry",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "sat:interaction:geometry",
+            "kind": "option-set",
+            "expected": [
+              "sat:interaction:geometry:B"
+            ],
+            "comparison": "exact-option-set"
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [],
+        "scoreMeaning": "Local synthetic practice point, not an official SAT item weight."
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "Use one perpendicular leg as the base and the other as the height. The area is half the product, or 12 square units."
+          }
+        ],
+        "steps": [
+          {
+            "id": "area-step-1",
+            "content": [
+              {
+                "type": "math",
+                "latex": "A=\\frac{1}{2}bh",
+                "spokenText": "Area is one half base times height"
+              }
+            ]
+          },
+          {
+            "id": "area-step-2",
+            "content": [
+              {
+                "type": "math",
+                "latex": "A=\\frac{1}{2}\\cdot6\\cdot4=12",
+                "spokenText": "Area equals twelve square units"
+              }
+            ]
+          }
+        ],
+        "optionFeedback": [
+          {
+            "optionId": "sat:interaction:geometry:A",
+            "content": [
+              {
+                "type": "text",
+                "text": "10 is the sum of the leg lengths, not an area."
+              }
+            ]
+          },
+          {
+            "optionId": "sat:interaction:geometry:C",
+            "content": [
+              {
+                "type": "text",
+                "text": "20 is not half the product of the two perpendicular lengths."
+              }
+            ]
+          },
+          {
+            "optionId": "sat:interaction:geometry:D",
+            "content": [
+              {
+                "type": "text",
+                "text": "24 omits the factor of one half."
+              }
+            ]
+          }
+        ],
+        "sourceRefs": [],
+        "authorship": "Original explanatory text; mathematically checked in this draft, awaiting project editorial review."
+      }
+    },
+    {
+      "id": "sat:solution:teaching",
+      "itemId": "sat:math:teaching-parabola",
+      "partId": "sat:part:teaching",
+      "status": "needs-review",
+      "scoring": {
+        "mode": "automatic",
+        "maxScore": 1,
+        "rules": [
+          {
+            "interactionId": "sat:interaction:teaching",
+            "kind": "option-set",
+            "expected": [
+              "sat:interaction:teaching:B"
+            ],
+            "comparison": "exact-option-set"
+          }
+        ],
+        "rubric": {
+          "criteria": []
+        },
+        "modelResponses": [],
+        "scoreMeaning": "Local synthetic practice point, not an official SAT item weight."
+      },
+      "explanation": {
+        "status": "needs-review",
+        "content": [
+          {
+            "type": "text",
+            "text": "At an x-intercept, y=0. Solving x²−4=0 gives x=−2 or x=2, matching the static fallback and the intended teaching graph."
+          }
+        ],
+        "steps": [
+          {
+            "id": "graph-step-1",
+            "content": [
+              {
+                "type": "math",
+                "latex": "x^2-4=0",
+                "spokenText": "x squared minus four equals zero"
+              }
+            ]
+          },
+          {
+            "id": "graph-step-2",
+            "content": [
+              {
+                "type": "math",
+                "latex": "(x-2)(x+2)=0",
+                "spokenText": "x minus two times x plus two equals zero"
+              }
+            ]
+          }
+        ],
+        "optionFeedback": [],
+        "sourceRefs": [],
+        "authorship": "Original explanatory text; mathematically checked in this draft, awaiting project editorial review."
+      }
+    }
+  ],
+  "draftNotes": [
+    "The answers and explanations are author material. A production exam delivery must remove this file and review-only material from student payloads.",
+    "All explanations are original and await project editorial review; no official SAT scoring parameters are claimed.",
+    "Numeric rules are schema proposals only; the current engine does not implement these comparators."
+  ]
+}

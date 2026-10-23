@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "2.0-draft",
+  "documentType": "exam-pack",
+  "status": "draft",
+  "id": "sat:math:synthetic-structure-pack",
+  "revision": "0.1.0",
+  "title": "SAT Math 原创套题结构样包（非完整试卷）",
+  "language": "en",
+  "exam": "sat",
+  "subject": "math",
+  "examVersion": "digital-sat-2026",
+  "administrationYear": 2026,
+  "effectiveFrom": null,
+  "files": {
+    "assessment": "assessment.json",
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "sat-math:asset:triangle",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/right-triangle.svg",
+      "status": "included",
+      "sha256": "275593bedc6e130b711bf474eb8df6a143bbc93221d7da852adb7e1438bcd3f8",
+      "width": 600,
+      "height": 320,
+      "caption": "Right triangle with perpendicular legs 6 and 4 units.",
+      "source": "Original synthetic illustration created for this schema draft.",
+      "license": "Original synthetic project example; distribution terms require project-owner review."
+    },
+    {
+      "id": "sat-math:asset:parabola-fallback",
+      "kind": "image",
+      "mediaType": "image/svg+xml",
+      "path": "assets/parabola-fallback.svg",
+      "status": "included",
+      "sha256": "d7121063d4e41f8bda79f585c4a2b72aefddfe08489c69fbe9ebd73835db2080",
+      "width": 600,
+      "height": 400,
+      "caption": "y=x^2-4; x-intercepts -2 and 2; vertex (0,-4).",
+      "source": "Original synthetic illustration created for this schema draft.",
+      "license": "Original synthetic project example; distribution terms require project-owner review."
+    },
+    {
+      "id": "sat-math:asset:teaching-graph-state",
+      "kind": "graph-state",
+      "mediaType": "application/json",
+      "path": "assets/teaching-parabola.graph-state.json",
+      "status": "placeholder",
+      "sha256": null,
+      "source": "Awaiting author export from shared Desmos runtime; descriptor only.",
+      "license": "No Desmos engine or licensed SDK redistributed."
+    }
+  ],
+  "toolRequirements": [
+    {
+      "id": "sat-math:tool:exam-calculator",
+      "provider": "desmos",
+      "kind": "calculator",
+      "runtimeRegistryKey": "desmos.shared",
+      "configuration": {
+        "role": "utility",
+        "allowedModes": [
+          "graphing",
+          "scientific"
+        ],
+        "initialState": "blank",
+        "requestedExamProfile": "college-board-sat-2026",
+        "scope": "math-section",
+        "learnerStateStorage": "separate-attempt",
+        "resetPolicy": "platform-profile-defined"
+      },
+      "verificationStatus": "not-implemented-not-verified",
+      "notes": "Registry key is a proposal. Platform resolves one shared SDK and authorized calculator modes. A generic API instance is not asserted equivalent to Bluebook."
+    },
+    {
+      "id": "sat-math:tool:teaching-plot",
+      "provider": "desmos",
+      "kind": "interactive-graph",
+      "runtimeRegistryKey": "desmos.shared",
+      "configuration": {
+        "role": "stimulus",
+        "mode": "graphing",
+        "scope": "teaching-only",
+        "authorInitialStateAssetId": "sat-math:asset:teaching-graph-state",
+        "learnerStateStorage": "separate-attempt"
+      },
+      "verificationStatus": "placeholder-graph-export-required"
+    }
+  ],
+  "provenance": {
+    "origin": "original-synthetic",
+    "officialQuestionsIncluded": false,
+    "questionAuthors": [
+      "Project schema draft"
+    ],
+    "contentReviewStatus": "needs-review",
+    "examRuleSources": [
+      "cb-framework-2026",
+      "cb-spr",
+      "cb-math-overview",
+      "cb-structure",
+      "cb-calculator-policy"
+    ],
+    "dateMeaning": "Framework edition was published in September 2026; no exact day on which all included rules changed is asserted."
+  },
+  "references": [
+    {
+      "id": "cb-math-overview",
+      "title": "College Board: The Math Section — Overview",
+      "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/math/overview",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "cb-spr",
+      "title": "College Board: Student-Produced Responses",
+      "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/math/student-produced",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "cb-structure",
+      "title": "College Board: How the SAT Is Structured",
+      "url": "https://satsuite.collegeboard.org/sat/whats-on-the-test/structure",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "cb-framework-2026",
+      "title": "College Board: Assessment Framework for the Digital SAT Suite, v4, September 2026; Appendix D, printed p.205",
+      "url": "https://satsuite.collegeboard.org/media/pdf/assessment-framework-for-digital-sat-suite.pdf",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "cb-calculator-policy",
+      "title": "College Board: SAT Suite of Assessments Calculator Policy",
+      "url": "https://satsuite.collegeboard.org/in-school-assessments/calculator-policy",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "desmos-api",
+      "title": "Desmos API documentation v1.12",
+      "url": "https://www.desmos.com/api/v1.12/docs/index.html",
+      "accessedOn": "2026-10-22"
+    },
+    {
+      "id": "desmos-testing",
+      "title": "Desmos: Practice With Testing Calculators",
+      "url": "https://help.desmos.com/hc/en-us/articles/18228147914381-Practice-With-Testing-Calculators",
+      "accessedOn": "2026-10-22"
+    }
+  ],
+  "draftNotes": [
+    "只有4道正式结构样题，另有1道教学扩展示例；不是44题完整卷，也不是 College Board 官方真题。",
+    "不含账号、学生答案、练习进度、错题、录音或学生 Desmos 状态。",
+    "工具共用平台级注册表/API；套题包不携带 Desmos 引擎、SDK 或 API key。",
+    "现有 SAT Reading and Writing 代码与 v1 导入格式均未修改；本包暂不可由现有引擎直接导入。"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "profile": {
+    "id": "sat:profile:math:digital-2026-draft",
+    "examVersion": "digital-sat-2026",
+    "subject": "math",
+    "administrationYear": 2026,
+    "effectiveFrom": null,
+    "datePrecision": "month-for-framework-edition; exact-effective-date-unspecified",
+    "sourceRefs": [
+      "cb-framework-2026",
+      "cb-structure",
+      "cb-calculator-policy"
+    ],
+    "assemblyStatus": "incomplete",
+    "deliveryReady": false,
+    "standardBlueprint": {
+      "sectionQuestionCount": 44,
+      "moduleCount": 2,
+      "questionsPerDeliveredModule": 22,
+      "moduleTimeLimitSeconds": 2100,
+      "sectionTimeLimitSeconds": 4200,
+      "questionFormats": [
+        "single-choice",
+        "numeric-entry"
+      ],
+      "sourceReference": "cb-framework-2026"
+    },
+    "sampleInventory": {
+      "examItemsIncluded": 4,
+      "teachingOnlyItemsIncluded": 1,
+      "missingExamItems": 40
+    },
+    "numericResponseProfiles": [
+      {
+        "id": "sat-spr-2026",
+        "inputTypes": [
+          "integer",
+          "decimal",
+          "fraction"
+        ],
+        "maxCharactersNonnegative": 5,
+        "maxCharactersNegativeIncludingSign": 6,
+        "entryCount": 1,
+        "allowMixedNumbers": false,
+        "allowUnitsInInput": false,
+        "forbiddenSymbols": [
+          "%",
+          ",",
+          "$"
+        ],
+        "leadingNegativeSignOnly": true,
+        "syntaxPattern": "^-?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+|[0-9]+/[0-9]+)$",
+        "denominatorMustBeNonzero": true,
+        "decimalRule": "Use source-reviewed acceptable lexical forms for field-limited truncated/rounded decimals; never substitute a universal broad tolerance.",
+        "ruleSourceRefs": [
+          "cb-framework-2026",
+          "cb-spr"
+        ]
+      }
+    ],
+    "defaultMathAssumptions": {
+      "numberDomain": "real-unless-stated",
+      "figuresDrawnToScaleUnlessStated": true,
+      "geometryPlaneUnlessStated": true
+    },
+    "referenceSheet": {
+      "status": "placeholder",
+      "availability": "throughout-math",
+      "sourceRefs": [
+        "cb-framework-2026"
+      ],
+      "notes": "Approved formula sheet content must be authored/authorized and versioned before a complete delivery."
+    },
+    "ruleEditionPublishedOn": "2026-09",
+    "rulesVerifiedOn": "2026-10-22"
+  },
+  "sections": [
+    {
+      "id": "sat:section:math",
+      "title": "Math",
+      "sequence": 1,
+      "assemblyStatus": "incomplete",
+      "modules": [
+        {
+          "id": "sat:module:math:1",
+          "sequence": 1,
+          "expectedItemCount": 22,
+          "itemRefs": [
+            "sat:math:q-table-mcq",
+            "sat:math:q-multiple-values-spr",
+            "sat:math:q-fraction-spr",
+            "sat:math:q-geometry-mcq"
+          ],
+          "timeLimitSeconds": 2100,
+          "assemblyStatus": "incomplete",
+          "toolPolicy": {
+            "allowedToolIds": [
+              "sat-math:tool:exam-calculator"
+            ],
+            "availability": "entire-module",
+            "initialCalculatorState": "blank"
+          },
+          "navigation": {
+            "withinModule": "free",
+            "previousModule": "forbidden-after-submit-or-timeout",
+            "onTimeExpired": "submit-and-follow-routing",
+            "learnerCanChooseRoute": false
+          }
+        },
+        {
+          "id": "sat:module:math:2",
+          "sequence": 2,
+          "expectedItemCount": 22,
+          "itemRefs": [],
+          "timeLimitSeconds": 2100,
+          "assemblyStatus": "incomplete",
+          "toolPolicy": {
+            "allowedToolIds": [
+              "sat-math:tool:exam-calculator"
+            ],
+            "availability": "entire-module",
+            "initialCalculatorState": "blank"
+          },
+          "navigation": {
+            "withinModule": "free",
+            "previousModule": "forbidden-after-submit-or-timeout",
+            "onTimeExpired": "submit-and-follow-routing",
+            "learnerCanChooseRoute": false
+          },
+          "routing": {
+            "kind": "multistage-adaptive",
+            "basedOnModuleId": "sat:module:math:1",
+            "branches": [
+              {
+                "id": "sat:route:math:lower",
+                "difficulty": "lower",
+                "itemRefs": []
+              },
+              {
+                "id": "sat:route:math:higher",
+                "difficulty": "higher",
+                "itemRefs": []
+              }
+            ],
+            "status": "not-implemented",
+            "selectionPolicy": null,
+            "notes": "Official routing/calibration is not public here. Do not invent a threshold or claim SAT equivalence; local routes need an explicitly labeled, separately validated practice policy."
+          }
+        }
+      ]
+    }
+  ],
+  "scoreReporting": {
+    "mode": "raw-practice-only",
+    "examSampleMaxRawScore": 4,
+    "teachingItemsCountTowardExamScore": false,
+    "officialScale": {
+      "minimum": 200,
+      "maximum": 800,
+      "available": false,
+      "reason": "No official item parameters, adaptive calibration or score conversion supplied."
+    },
+    "rule": "Report number correct and sample completion; do not map raw percentages to official SAT Math scores."
+  },
+  "draftNotes": [
+    "缺题模块不得允许开始正式整卷模考；可单题/样题预览。",
+    "SAT全卷还包含Reading and Writing及section间休息；本包仅是Math科目的结构示例。",
+    "单题正确得1分仅为样题练习分，不表示官方IRT权重。"
+  ]
+}
