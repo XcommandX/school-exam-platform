@@ -68,11 +68,13 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front
 
 ## 数据边界
 
-2026-10-23 指定测试集合已改为新协议 SAT 包：98 题，原 929 题已备份归档。新包、原图和备份仍只在本机忽略目录。新包协议、转换与恢复说明见 [SAT 数学与整套练习](sat-math-exam.md)，下文首次迁移数量保留历史背景。
+2026-10-23 指定测试集合已改为新协议 SAT 包：98 题，原 929 题已备份归档。该指定活动卷的新包、原图和备份仍只在本机忽略目录。新包协议、转换与恢复说明见 [SAT 数学与整套练习](sat-math-exam.md)，下文首次迁移数量保留历史背景。
+
+Start Practice 与 Practice Builder 全库接口默认合并 `back-end/sat/questions/sat-packs/gengdu-offline/` 和 `pdf-official/` 两份独立目录，按需读取所选题集；显式 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 只读取指定目录。耕读副本已获共享授权，PDF 转换题包与必要图片获本轮本地 commit 授权，未授权 push；范围见 `AGENTS.md`。这些目录不替换旧活动卷，也不包含个人作答记录。
 
 源码在 `front-end/web/`、`front-end/sat/`、`back-end/toefl/`、`back-end/shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
 
-真实题库在 `local-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `local-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅在登录后通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
+旧格式真实题库在 `local-data/question-banks/{sat,ap,toefl,vocab}/`，图片在 `local-data/question-assets/<exam>/`。这些目录被 Git 忽略，不随提交/推送共享。服务器仅在登录后通过明确的题库接口和图片路由读取它们，不将仓库根目录作为静态网站公开。
 
 本次本地迁移仅保留原 SAT 题目及其标准答案、解析、格式、模块信息与必要图片。逐字段白名单去除已选答案、学生信息和任意个人元数据；不复制 HAR、PDF、OCR 模型、备份、个人练习或浏览器记录。原始目录不修改。带个人练习含义的来源名称改为中性补充题集名称，题目内容保留。
 
@@ -82,7 +84,7 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front
 
 首页计划、目标与减少动画偏好通过 `/api/me/home` 按账号保存到服务端，并缓存于账号空间；统计读取该账号 TOEFL 服务端状态与 SAT 服务端摘要，并合并无冲突的 SAT 本机待同步记录。旧匿名及独立应用的数据保留，不自动分配给任何新账号，不迁移原模板硬编码数字。
 
-`.DS_Store` 由根目录忽略规则覆盖所有层级；生成的 `dist/`、真实题库与个人数据均不应提交。
+`.DS_Store` 由根目录忽略规则覆盖所有层级；除 `AGENTS.md` 明确授权的 SAT 题包与必要图片外，生成的 `dist/`、真实来源资料与个人数据均不应提交。
 
 ## 本地迁移
 
