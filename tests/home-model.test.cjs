@@ -11,4 +11,10 @@ assert.equal(s.today,3);assert.equal(s.streak,2);assert.deepEqual(s.all,{answers
 assert.equal(summarize([],toefl,[],now).streak,1);
 assert.equal(summarize([],[],[],now).streak,0);
 assert.equal(summarize([],[],[{type:'progress',day:'2026-10-22',at:now,words:{test:true}}],now).streak,1);
+const awaiting={id:'awaiting',status:'completed',completedAt:now,totalQuestions:1,unansweredCount:0,ungradedCount:1,correctCount:0};
+assert.deepEqual(summarize([awaiting],[],[],now).sat,{answers:1,correct:0,graded:0,attempts:1});
+const mixed={...awaiting,id:'mixed',totalQuestions:5,unansweredCount:1,ungradedCount:2,correctCount:1};
+assert.deepEqual(summarize([mixed],[],[],now).sat,{answers:4,correct:1,graded:2,attempts:1});
+assert.deepEqual(summarize([{...awaiting,ungradedCount:9,correctCount:7}],[],[],now).sat,{answers:1,correct:0,graded:0,attempts:1});
+assert.deepEqual(summarize([awaiting,sat[0]],[],[],now).sat,{answers:4,correct:2,graded:3,attempts:2});
 console.log('Home model: score scale, partial/invalid targets, completed-only counts, deduplication, recording, streak and empty-state checks passed.');

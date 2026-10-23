@@ -21,12 +21,12 @@ node scripts/build.mjs
 
 ## 页面与功能
 
-- 首页采用用户确认的模板：暖白底、TOEFL 蓝色主卡、SAT 橙色主卡与 Study Space 品牌；两个考试名称使用同一字号与对齐规则，悬浮、聚焦和减少动画偏好均有对应样式。图标直接随源码提供，主页不依赖外链字体或图标脚本。
+- 首页采用用户确认的模板：暖白底、TOEFL 绿色主卡、SAT 橙色主卡与 Study Space 品牌；两个考试名称使用同一字号与对齐规则，悬浮、聚焦和减少动画偏好均有对应样式。图标直接随源码提供，主页不依赖外链字体或图标脚本。
 - 删除原模板顶部的白色导航、搜索、继续上次示例和底部工具栏；“学习计划”“成绩报告”迁入右上头像菜单，仅显示功能名，不附描述。没有会员体系，不显示会员标识；页脚不显示口号。
-- TOEFL 阅读、听力、口语、写作保留独立跳转，开始练习进入 `/toefl/`；SAT 阅读与文法合并显示为“英语”，使用书本图标，开始练习进入 SAT 管理首页。SAT 数学仍显示准确的待接入说明。
+- TOEFL 阅读、听力、口语、写作保留独立跳转，开始练习进入 `/toefl/`；SAT 阅读与文法合并显示为“英语”，使用书本图标，数学入口也已接入，分别传入 `section=reading-writing` 与 `section=math`，开始练习进入 SAT 管理首页。
 - 右上头像显示 `admin` 本机测试身份，无需输入密码。这不是正式登录或管理员授权；`/api/auth/session` 明确返回 `authenticated: false`、`loginEnabled: false`。
 - 学习计划可保存每日题目目标及个人计划；今日摘要显示新平台已完成题目数与每日目标。目标设置支持新 TOEFL 四科 1–6 分、每 0.5 分一档，目标总分为四科均值取最近的 0.5 分；SAT 两科各 200–800 分、每 10 分一档。目标提示支持鼠标悬浮和键盘聚焦，可查看具体分科目标。
-- 成绩报告和练习记录读取当前浏览器的新平台记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率。
+- 成绩报告和练习记录读取当前浏览器的新平台记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率；SAT 的 `ungradedCount` 从正确率分母扣除，但仍计入已答题目与学习活动。
 - AP 与跨考试 Personal Vocab 通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
 
 ### 文案与后续交接约定
@@ -41,11 +41,11 @@ SAT 管理页面不显示重复的顶部 Overview / Questions / Practice / Wrong
 
 SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/sat/`。本轮只更新其非考试管理页面，新增主题限定于 `.app-shell[data-sat-management]`；`apps/sat/js/app.js` 只在相应管理视图设置该标记。因此不能再概括为“SAT 的所有 JS、CSS 完全没改”。
 
-从开始练习后的 `ready`、`preparing`、`exam`、`check`、`moduleOver`、`saving`、`congrats` 阶段不应用管理主题，原有考试布局、配色、字体、动画、作答和计时实现继续保护。独立的 `apps/web/sat-bridge.js` 负责统一入口和存储名称映射。当前 SAT 仅支持 Reading & Writing，首页称为“英语”；没有数学、自适应分流或官方量尺分。
+从开始练习后的 `ready`、`preparing`、`exam`、`check`、`moduleOver`、`saving`、`congrats` 阶段不应用管理主题，原有考试实现继续保护；2026-10-23 截图授权的数学与休息流程例外见 [SAT 数学与整套练习](sat-math-exam.md)。独立的 `apps/web/sat-bridge.js` 负责统一入口和存储名称映射。当前 SAT 已支持 Reading & Writing 与 Math，没有自适应分流或官方量尺分。
 
 ### TOEFL 接入边界
 
-本轮功能分支使用 `feature/toefl-exam-interface` 分支版本 `72ab41d` 的 `apps/toefl/` 源码。原前端与云端源文件保留在模块内；统一平台只服务本地匿名构建，并在入口注入独立的 `apps/web/toefl-bridge.js`，映射存储名称及已有导航状态。
+本地整合版本使用 `toefl` 分支 `98aa9c7` 的 `apps/toefl/` 源码。原前端与云端源文件保留在模块内；统一平台只服务本地匿名构建，并在入口注入独立的 `apps/web/toefl-bridge.js`，映射存储名称与录音库。URL 路由与账号范围内的页面恢复由模块原生实现负责，桥接层不再抢写导航。链接合同见 [TOEFL 页面入口约定](../apps/toefl/ENTRY_INTERFACE.md)，本轮合并及接口问题见 [本地整合报告](local-integration-2026-10-23.md)。
 
 匿名构建使用 `fixtures/anonymous-bank.json` 的原创样例；音频为合成测试提示音，场景图为原创 SVG。已提供四科和学习页面入口，不能将这些样例、套题页或已有评分源码描述为真实题库、完整官方模考或已上线的 AI 评分。私有托福题库、原音频、正式云端资源、登录和同步尚未接入统一服务。
 
@@ -61,11 +61,13 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `apps/
 | `/toefl/?view=progress` | 学习进度 |
 | `/toefl/?view=mock` | 套题样例页 |
 | `/toefl/?view=vocab` | 词汇样例训练 |
-| `/toefl/?view=wrongBook` | 专项复习 |
+| `/toefl/?view=wrongBook` | 错题本，可按 `section` 筛选 |
 
 账号菜单在打开或关闭个人中心、目标、计划等弹窗时保留展开状态；点击首页空白或再次点击头像时收起。未设置分数的悬浮提示只显示“未设置”，不添加说明小字。
 
 ## 数据边界
+
+2026-10-23 指定测试集合已改为新协议 SAT 包：98 题，原 929 题已备份归档。新包、原图和备份仍只在本机忽略目录。新包协议、转换与恢复说明见 [SAT 数学与整套练习](sat-math-exam.md)，下文首次迁移数量保留历史背景。
 
 源码在 `apps/web/`、`apps/sat/`、`apps/toefl/`、`shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
 
@@ -104,6 +106,8 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 | `GET /api/toefl/status` | 匿名构建可用性、样例数量与入口 |
 | `GET /api/question-bank/status` | SAT 兼容接口状态与同源写入令牌 |
 | `GET /api/question-bank` | 将统一题库转换为旧 SAT 引擎可导入格式 |
+| `GET /api/sat-packs` | 读取活动 SAT 新包及有序试卷配置 |
+| `POST /api/sat-library-backup` | 校验同源与令牌后备份本机旧库，成功后才允许浏览器归档 |
 | `POST /api/question-bank` | 校验、过滤个人字段并保存 SAT JSON |
 | `/sat/` | 进入旧 SAT 引擎，支持首页功能入口参数 |
 | `/toefl/` | 仅服务通过匿名标记检查的预览文件及资源白名单 |

@@ -31,7 +31,8 @@
       if (a.status !== 'completed' || !finite(finished) || finished > now || (a.id && seen.has(`sat:${a.id}`))) continue;
       if (a.id) seen.add(`sat:${a.id}`);
       const answered = Math.max(0,whole(a.totalQuestions)-whole(a.unansweredCount));
-      rows.push({exam:'sat',at:finished,answered,correct:Math.min(answered,whole(a.correctCount)),graded:answered,name:a.practiceName || 'SAT 练习'});
+      const graded = Math.max(0,answered-whole(a.ungradedCount));
+      rows.push({exam:'sat',at:finished,answered,correct:Math.min(graded,whole(a.correctCount)),graded,name:a.practiceName || 'SAT 练习'});
     }
     for (const h of toeflHistory) {
       if (h.preview || h.conflictCopy || !finite(h.finished) || h.finished > now || (h.id && seen.has(`toefl:${h.id}`))) continue;

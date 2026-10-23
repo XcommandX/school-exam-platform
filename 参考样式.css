@@ -85,8 +85,8 @@
   transition: transform .4s var(--ref-ease), box-shadow .4s var(--ref-ease);
 }
 .style-reference .ref-card--toefl {
-  --ref-accent: var(--ref-blue);
-  background: linear-gradient(145deg, #3064d2, #2446a4);
+  --ref-accent: #167568;
+  background: linear-gradient(145deg, #167568, #0a514b);
 }
 .style-reference .ref-card--sat {
   --ref-accent: var(--ref-orange);

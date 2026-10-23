@@ -56,5 +56,29 @@ export function createAccountFeatures(deps){
   let response=await env.ASSETS.fetch(new Request(new URL('/data/catalog.json',req.url))),catalog=response.ok?JSON.parse(new TextDecoder().decode(await assetDecoded(env,await response.arrayBuffer()))).records:[];
   return json({user,...projectAccountData(values,groups,catalog)});
  }
- const safe=fn=>async(...args)=>{try{return await fn(...args)}catch{return json({error:'账号服务暂不可用，请稍后重试。',code:'unavailable'},503)}};return Object.fromEntries(Object.entries({checkInvitation,register,invitations,userDetail}).map(([key,fn])=>[key,safe(fn)]));
+ async function deleteUser(req,env,session){
+  if(session?.role!=='admin')return json({error:'只有管理员可以删除账号。'},403);
+  if(req.method!=='POST')return json({error:'不支持该操作'},405);
+  let data=await body(req);
+  if(!data||typeof data.userId!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(data.userId)||typeof data.confirmUsername!=='string'||data.confirmUsername.length>40)return json({error:'请提供要删除的账号，并准确输入用户名。'},400);
+  if(data.userId===session.user_id||data.userId==='owner')return json({error:'不能删除当前账号或管理员账号。'},403);
+  let user=await env.DB.prepare('SELECT id,username,role FROM users WHERE id=?').bind(data.userId).first();
+  if(!user)return json({error:'账号不存在或已删除，请刷新列表。'},404);
+  if(user.role!=='user')return json({error:'不能删除管理员账号。'},403);
+  if(data.confirmUsername!==user.username)return json({error:'输入的用户名不一致，账号未删除。'},400);
+  // Recheck both identities inside every transactional statement. Exact namespace
+  // ranges never match a neighbouring account; invitations stay consumed.
+  let guard="EXISTS(SELECT 1 FROM users WHERE id=? AND username=? COLLATE BINARY AND role='user') AND EXISTS(SELECT 1 FROM users WHERE id=? AND role='admin')",bind=[user.id,user.username,session.user_id],now=Date.now(),statements=[];
+  for(let table of ['states','recordings','assessments'])statements.push(env.DB.prepare('DELETE FROM '+table+' WHERE key>=? AND key<? AND '+guard).bind(user.id+':',user.id+';',...bind));
+  statements.push(
+   env.DB.prepare('DELETE FROM account_activity WHERE user_id=? AND '+guard).bind(user.id,...bind),
+   env.DB.prepare('DELETE FROM sessions WHERE user_id=? AND '+guard).bind(user.id,...bind),
+   env.DB.prepare('UPDATE invitations SET used_by=NULL WHERE used_by=? AND '+guard).bind(user.id,...bind),
+   env.DB.prepare('UPDATE invitations SET revoked_at=? WHERE created_by=? AND used_at IS NULL AND revoked_at IS NULL AND '+guard).bind(now,user.id,...bind),
+   env.DB.prepare("DELETE FROM users WHERE id=? AND username=? COLLATE BINARY AND role='user' AND id<>? AND id<>'owner' AND EXISTS(SELECT 1 FROM users WHERE id=? AND role='admin')").bind(user.id,user.username,session.user_id,session.user_id)
+  );
+  let results=await env.DB.batch(statements);
+  return results.at(-1)?.meta?.changes===1?json({ok:true,deletedUserId:user.id}):json({error:'账号已变化或已删除，请刷新后重试。'},409);
+ }
+ const safe=fn=>async(...args)=>{try{return await fn(...args)}catch{return json({error:'账号服务暂不可用，请稍后重试。',code:'unavailable'},503)}};return Object.fromEntries(Object.entries({checkInvitation,register,invitations,userDetail,deleteUser}).map(([key,fn])=>[key,safe(fn)]));
 }
