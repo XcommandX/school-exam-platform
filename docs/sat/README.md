@@ -8,7 +8,9 @@ python3 back-end/server/serve_platform.py --port 8888
 
 打开 <http://127.0.0.1:8888/sat/>。统一平台使用独立的浏览器存储命名空间；目录调整不修改已有本机历史记录。
 
-SAT 概览中的 `Practice Builder`（原 `Question Library` 卡片）集中提供练习名称、自定义选题、按来源组题、时长设置和开始练习。`Start Practice` 按 2026-10-23 后续截图接入 Full-Length Tests、Reading and Writing、Math 三分类目录，默认第一类；题集按开始、继续、重新开始和复盘分别显示入口。全真模考来源按官方考试日期时间线排列，School Day 保留月精度，Bluebook、拼卷及无日期来源单独归组，日期依据见 [考试日期](../sat-exam-dates.md)。`Explore Questions`、导入后的 `Practice Builder` 按钮以及首页英语/数学入口均进入组题页；旧 `view=questionLibrary` 链接兼容转到 `Practice Builder`，`view=practiceBuilder&mode=source` 继续支持按来源组题。整套模考入口与开始后的考试流程保持原有行为。
+SAT 概览中的 `Practice Builder`（原 `Question Library` 卡片）集中提供练习名称、自定义选题、按来源组题、时长设置和开始练习。`Start Practice` 按 2026-10-23 后续截图接入 Full-Length Tests、Reading and Writing、Math 三分类目录，默认第一类；题集按开始、继续、重新开始和复盘分别显示入口。全真模考来源按官方考试日期时间线排列，School Day 保留月精度，Bluebook、拼卷及无日期来源单独归组，日期依据见 [考试日期](../sat-exam-dates.md)。`Explore Questions` 以及首页英语/数学入口均进入组题页；旧 `view=questionLibrary` 链接兼容转到 `Practice Builder`，`view=practiceBuilder&mode=source` 继续支持按来源组题。整套模考入口与开始后的考试流程保持原有行为。
+
+2026-10-24 已移除概览的 `Manage library` 入口及整个旧导入界面实现，包括文件夹管理、选择文件/题包、拖放、预览与导入按钮。首页 `Add Questions` 卡片继续保留，进入后仅显示 `Add Questions` 标题，下方留空，等待后续功能接入。后台既有题库加载、Start Practice、Practice Builder 和答题记录继续保留，不删除题库或历史。删除前源码与恢复补丁只保存在忽略的 `local-data/localfiles/sat-manage-library-<时间>/`，不进入 Git。
 
 独立 SAT 服务使用不同端口与运行数据目录：
 
