@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd-8900490",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Jeremy deposited *x* dollars in his investment account on January 1, 2001. The amount of money in the account doubled each year until Jeremy had 480 dollars in his investment account on January 1, 2005. What is the value of *x* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd",
+        "sourceQuestionId": "8900490",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd-8900492",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $\\frac{4a}{b}$= 6.7 and $\\frac{4a}{b}$= 26.8, what is the value of *n* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd",
+        "sourceQuestionId": "8900492",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

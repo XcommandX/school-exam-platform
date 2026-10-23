@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-math-single-choice",
+  "revision": 1,
+  "title": "Linear inequalities in one or two variables_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-b06c1ab4d3a17346aad29910e5015ed7fbdc6f2eb8dc15b365a8d6eccef33f97",
+      "path": "assets/b06c1ab4d3a17346aad29910e5015ed7fbdc6f2eb8dc15b365a8d6eccef33f97.png",
+      "mediaType": "image/png",
+      "sha256": "b06c1ab4d3a17346aad29910e5015ed7fbdc6f2eb8dc15b365a8d6eccef33f97",
+      "byteLength": 4279,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900305",
+        "url": "https://static.shanmaostar.com/default/nsat/62333015995862159422.png"
+      }
+    },
+    {
+      "id": "asset-726f413d02642ddbdb5576152404a53d61d5acf7817dddcc0b39ab7884854a1d",
+      "path": "assets/726f413d02642ddbdb5576152404a53d61d5acf7817dddcc0b39ab7884854a1d.png",
+      "mediaType": "image/png",
+      "sha256": "726f413d02642ddbdb5576152404a53d61d5acf7817dddcc0b39ab7884854a1d",
+      "byteLength": 4219,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900305",
+        "url": "https://static.shanmaostar.com/default/nsat/06421055525891197154.png"
+      }
+    },
+    {
+      "id": "asset-2e51815249ae1009d26972ecb5be949414e1ff205b3cc7a37add9d3146afba32",
+      "path": "assets/2e51815249ae1009d26972ecb5be949414e1ff205b3cc7a37add9d3146afba32.png",
+      "mediaType": "image/png",
+      "sha256": "2e51815249ae1009d26972ecb5be949414e1ff205b3cc7a37add9d3146afba32",
+      "byteLength": 4298,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900305",
+        "url": "https://static.shanmaostar.com/default/nsat/00028376224412284035.png"
+      }
+    },
+    {
+      "id": "asset-256a48f4b5897f5c81a96414896e21c8adf0ace975ebb4dd711a667bb3fefdaf",
+      "path": "assets/256a48f4b5897f5c81a96414896e21c8adf0ace975ebb4dd711a667bb3fefdaf.png",
+      "mediaType": "image/png",
+      "sha256": "256a48f4b5897f5c81a96414896e21c8adf0ace975ebb4dd711a667bb3fefdaf",
+      "byteLength": 4452,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900305",
+        "url": "https://static.shanmaostar.com/default/nsat/55456855850108961684.png"
+      }
+    },
+    {
+      "id": "asset-8693d8ab46bb741647e30987376c3c53c07cde3bb8701ca2b2dbb21df4e8f6f5",
+      "path": "assets/8693d8ab46bb741647e30987376c3c53c07cde3bb8701ca2b2dbb21df4e8f6f5.png",
+      "mediaType": "image/png",
+      "sha256": "8693d8ab46bb741647e30987376c3c53c07cde3bb8701ca2b2dbb21df4e8f6f5",
+      "byteLength": 4363,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900307",
+        "url": "https://static.shanmaostar.com/default/nsat/55512974293844598400.png"
+      }
+    },
+    {
+      "id": "asset-36f0a085c2c3b10ab3a4231b93ba6a392930ab783bbc1d929ff4ffb75b2a72b6",
+      "path": "assets/36f0a085c2c3b10ab3a4231b93ba6a392930ab783bbc1d929ff4ffb75b2a72b6.png",
+      "mediaType": "image/png",
+      "sha256": "36f0a085c2c3b10ab3a4231b93ba6a392930ab783bbc1d929ff4ffb75b2a72b6",
+      "byteLength": 4373,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900307",
+        "url": "https://static.shanmaostar.com/default/nsat/31422770541768299201.png"
+      }
+    },
+    {
+      "id": "asset-5f65d27aefadbafaf5ff0dcf351a06fa5b662824f7eddd4ec2e6f260a4a9f0a1",
+      "path": "assets/5f65d27aefadbafaf5ff0dcf351a06fa5b662824f7eddd4ec2e6f260a4a9f0a1.png",
+      "mediaType": "image/png",
+      "sha256": "5f65d27aefadbafaf5ff0dcf351a06fa5b662824f7eddd4ec2e6f260a4a9f0a1",
+      "byteLength": 4200,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900307",
+        "url": "https://static.shanmaostar.com/default/nsat/84315134288702654438.png"
+      }
+    },
+    {
+      "id": "asset-2e4bcfe54a0b305a4c48009b245e0e066bcd994d06b4ea6df7cb13d6de382458",
+      "path": "assets/2e4bcfe54a0b305a4c48009b245e0e066bcd994d06b4ea6df7cb13d6de382458.png",
+      "mediaType": "image/png",
+      "sha256": "2e4bcfe54a0b305a4c48009b245e0e066bcd994d06b4ea6df7cb13d6de382458",
+      "byteLength": 4421,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900307",
+        "url": "https://static.shanmaostar.com/default/nsat/94922818739418304041.png"
+      }
+    }
+  ]
+}

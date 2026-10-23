@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd-math-spr",
+  "revision": 1,
+  "title": "Ratios, rates, proportional relationships, and units_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-15a351207536453a88fa932d05458a81-math-single-choice",
+  "revision": 1,
+  "title": "Percentages_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-e0ae517a20ee8449abf0b951ec57701460364d4599900c1d24c9cbe995e49dfb",
+      "path": "assets/e0ae517a20ee8449abf0b951ec57701460364d4599900c1d24c9cbe995e49dfb.png",
+      "mediaType": "image/png",
+      "sha256": "e0ae517a20ee8449abf0b951ec57701460364d4599900c1d24c9cbe995e49dfb",
+      "byteLength": 8286,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-15a351207536453a88fa932d05458a81",
+        "sourceQuestionId": "8900467",
+        "url": "https://static.shanmaostar.com/default/nsat/46459559349126778079.png"
+      }
+    },
+    {
+      "id": "asset-91edcb1fd1b0914c178f6d1306a8bb849b62ca490a66abcb0a091f256dda5bd7",
+      "path": "assets/91edcb1fd1b0914c178f6d1306a8bb849b62ca490a66abcb0a091f256dda5bd7.png",
+      "mediaType": "image/png",
+      "sha256": "91edcb1fd1b0914c178f6d1306a8bb849b62ca490a66abcb0a091f256dda5bd7",
+      "byteLength": 36288,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-15a351207536453a88fa932d05458a81",
+        "sourceQuestionId": "8900471",
+        "url": "https://static.shanmaostar.com/default/nsat/13012598084481700730.png"
+      }
+    }
+  ]
+}

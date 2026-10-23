@@ -1,0 +1,642 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081395",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For a certain position, an employer offers an hourly wage of \\$16.00 at the start of employment. One year after the start of employment, the hourly wage is increased by 9% of the hourly wage at the start of employment. For the next five years, at the end of every 6-month interval, the hourly wage is increased by 3% of the hourly wage at the end of the previous 6-month interval. Which of the following functions *H* models the hourly wage, in dollars, x years after the start of employment,where 1≤x≤6?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081395",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$H(x)=17.44(1.03)^{2\\left(x-1\\right)}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$H(x)=17.44(1.03)^{6\\left(x-1\\right)}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$H(x)=17.44(1.03)^{\\frac{1}{6}\\left(x-1\\right)}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$H(x)=17.44(1.03)^{\\frac{1}{2}\\left(x-1\\right)}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081396",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A. certain investment account offers a special interest rate for the first 4 months the account is open followed by a lower interest rate for the remainder of the time the account is open. Akeyla opened one of these account with an original account balance of \\$700.00 and did not make another deposits or withdrawals, 4 months after Akeyla opened the account, the balance had increased by 0.6% of the original balance. 6 months after Akeyla opened the account, the balance had increased by an additional 0.1% of the balance at the end of the first 4 months. Every 2months after the first 6 months, the balance had increased by an additional 0.1% of the balance 2 months before. Which of the following equations could represent the account balance *B(x)*, in dollars, *x* months after the account was opened, where x≥4?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081396",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$B(x)=704.20(1,001)^{\\frac{x-4}{2}}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$B(x)=700.00(1.001)^{\\frac{x-4}{2}}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$B(x)=704.20(1,001)^{2\\left(x-4\\right)}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$B(x)=700.00(1,001)^{2\\left(x-4\\right)}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081397",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f(x)=25(1.40)x^{\\frac{x}{3}}$   \nFor the given function *f*, the value of *f(x)* increases by *p*% for every increase of x by 6. What is the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081397",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "40"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "49"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "80"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "96"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081398",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $N(m)=65(Q)^{\\frac{7}{4}}$  gives the predicted population *N(m)*, in thousands, of a certain bacteria colony m minutes after the initial measurement, where *Q* is a constant greater than 1. The predicted population increases by *p*% every 2 minutes , what is the value of *p* in terms of *Q*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081398",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$100\\left(Q^{\\frac{3}{2}}+1\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$100\\left(Q^{30}+1\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$100\\left(Q^{\\frac{1}{2}}-1\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$100\\left(Q^{30}-1\\right)$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081399",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f(x)=3^{-2(x+1)}$   \nWhich of the following equivalent forms of the given function *f* displays, as the base or the coefficient, the y-coordinate of the y-intercept of the graph of *y*=*f(x)* in the xy-plane?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081399",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\left(\\frac{1}{3}\\right)^{2x+2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{1}{9}\\left(\\frac{1}{3}\\right)^{2x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=81^{\\left(-\\frac{1}{2}x-\\frac{1}{2}\\right)}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=3^{\\left(-2x-2\\right)}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081400",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The functions *f*  and *g* are defined by the given equation, where x≥ 0. Which of the following equations display, as a constant or coefficient, the maximum value of the function it defines, where x≥ 0?  \nI.$f\\left(x\\right)=33(0.4)^{x+3}$   \nII. $f\\left(x\\right)=33\\left(0.16\\right)(0.4)^{x-2}$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081400",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081401",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The functions *f*  and *g* are defined by the given equation, where x≥ 0. Which of the following equations display, as a constant or coefficient, the maximum value of the function it defines, where x≥ 0?  \nI.$f(x)=17(1.25)^x+43$   \nII. $g(x)=8(0.73)^x$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081401",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081402",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The functions *f* and *g* are defined by the equations shown, where *a* and *b* are integer constants, a &lt; b and b &lt; 0. If *y*= *f*(*x*) and *y*= *g*(*x*) are graphed in the xy-plane, which of the following equations displays, as a constant or coefficient, the y-coordinate of the y-intercept of the graph of the corresponding function?  \nI.$f(x)=a(2.3)^{x+b}$   \n\nII. $g(x)=a(2.3)^x+b$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081402",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081403",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the exponential function *f*, the value of f (1) is *k*, where *k* is a constant. Which of the following equivalent forms of the function shows the value of *k* as the coefficient or the base?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081403",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=50(1.4)^{x+1}$ $f(x)=50(1.4)^{x+1}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=70(1.4)^x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=98(1.4)^{x-1}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=137.2(1.4)^{x-2}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081404",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the function *f*, for every increase of 2 in the value of *x*, the value of *f(x)* increases by a factor of *c*, where *c* is a constant. Which of the following equivalent forms of function *f* displays the value of *c* as the base or the coefficient?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081404",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=26(2)^{6x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=26(8)^{2x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=26(64)^x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=26(4,096)^{\\frac{x}{2}}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b-6081405",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the function *f*, for each increase in the value of *x* by *c*, where *c* is a positive constant, the value of *f(x)* increases by a factor of 27. Which of the following equivalent forms of the function *f* displays$\\frac{1}{c}$ as a coefficient of *x*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5b0c28c27c7443be8ae0a8e7c491fd5b",
+        "sourceQuestionId": "6081405",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=48(3)^{\\frac{1}{2}x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=48(3^3)^{\\frac{1}{6}x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=48(3)^{\\frac{1}{4}x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=48(27x^{\\frac{1}{3}x})^{\\frac{1}{2}}$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

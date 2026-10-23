@@ -1,0 +1,450 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900451",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-d113b02d93c062e25d172634a26eacfef9b986a223fc22a605a65876d64c8d80",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot above shows the federal-mandated minimum wage every 10 years between 1940 and 2010. A line of best fit is shown, and its equation is *y* =0.096*x* - 0.488. What does the line of best fit predict about the increase in the minimum wage over the 70-year period?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900451",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Each year between 1940 and 2010, the average increase in minimum wage was 0.096 dollars."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Each year between 1940 and 2010, the average increase in minimum wage was 0.49 dollars."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.096 dollars."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.488 dollars."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900452",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-e2042a67ffa746326143d6d1003f25a85e7df56391460248498eb468ec7bf0e4",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot above shows a company’s ice cream sales *d*, in dollars, and the high temperature *t*, in degrees Celsius (°C), on 12 different days. A line of best fit for the data is also shown. Which of the following could be an equation of the line of best fit?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900452",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*d* = 0.03*t* + 402"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*d* = 10*t* + 402"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*d* = 33*t* + 300"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*d* = 33*t* + 84"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900455",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot below shows the amount of electric energy generated, in millions of megawatt-hours, by nuclear sources over a 10‐year period."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-de9ca52fa11faa86829e62bf1c665d1384782d6ecef9e6184f77118390d5f83e",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Of the following equations, which best models the data in the scatterplot?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900455",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 1.674*x*$^{2}$ + 19.6*x* -745.73"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = -1.674*x*$^{2}$ - 19.6*x* -745.73"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 1.674*x*$^{2}$ + 19.6*x* +745.73"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = -1.674*x*$^{2}$ + 19.6*x* + 745.73"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900456",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For *x* &gt; 0, the function *f* is defined as follows:  \n*f(x)* equals 201% of *x*  \nWhich of the following could describe this function?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900456",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Decreasing exponential"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Decreasing linear"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Increasing exponential"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Increasing linear"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900457",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b69f71d4759a93d7ee142447a52c9c5bfff3b0bf9a4594dc602a74cb822e65a0",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot above shows the size *x* and the sale price *y* of 25 houses for sale in Town H. Which of the following could be an equation for a line of best fit for the data?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900457",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 200*x* + 100"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 100*x* + 100"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 50*x* + 100"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 100*x*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900458",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-61a87777a9ed01a536b0f16a8a526f467231c6bd054adc97104a766bf721cdb9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Two investments were made as shown in the table above. The interest in Account A is compounded once per year. Which of the following is true about the investments?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900458",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Account A always earns more money per year than Account B."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Account A always earns less money per year than Account B."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Account A earns more money per year than Account B at first but eventually earns less money per year."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Account A earns less money per year than Account B at first but eventually earns more money per year."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900459",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-e4e4f145b33005a66806c25dd5ad215d2999585eaff4a6605b94d35ead9689f5",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot above shows the numbers of grams of both total protein and total fat for eight sandwiches on a restaurant menu. The line of best fit for the data is also shown. According to the line of best fit, which of the following is closest to the predicted increase in total fat, in grams, for every increase of 1 gram in total protein?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900459",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.0"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

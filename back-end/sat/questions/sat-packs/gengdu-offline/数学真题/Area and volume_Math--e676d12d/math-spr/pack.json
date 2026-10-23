@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-e676d12d27ea408894de749c8c13ee77-math-spr",
+  "revision": 1,
+  "title": "Area and volume_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-970fd22b6bfb554acac5eb9bf58d0ff2a5305a1635e11779c614f14fc4776854",
+      "path": "assets/970fd22b6bfb554acac5eb9bf58d0ff2a5305a1635e11779c614f14fc4776854.png",
+      "mediaType": "image/png",
+      "sha256": "970fd22b6bfb554acac5eb9bf58d0ff2a5305a1635e11779c614f14fc4776854",
+      "byteLength": 19531,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-e676d12d27ea408894de749c8c13ee77",
+        "sourceQuestionId": "8900508",
+        "url": "https://static.shanmaostar.com/default/nsat/88179380528257007441.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

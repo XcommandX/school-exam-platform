@@ -102,6 +102,7 @@ FRONTEND_FILES = (
     "vendor/marked-metadata.json",
     "js/app.js",
     "js/library.js",
+    "js/builder-library.js",
     "js/storage.js",
     "js/question-bank.js",
     "js/material-text.js",

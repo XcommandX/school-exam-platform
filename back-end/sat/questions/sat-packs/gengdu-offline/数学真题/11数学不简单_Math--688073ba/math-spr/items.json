@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123572",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table summarizes the distribution of age and assigned group for 90 participants in a study."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-422bb86d0cb2cee957a09b3b440fcfc4119c3474fd8100871058c9f70130933d",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "One of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age? (Express your answer as a decimal or fraction, not as a percent.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123572",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123573",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-a05f8cad579cd87beb5afa07c6bfa8c5d33dca3e35c1ba7742197c98b91144df",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The table shows the distribution of two types of trees at two different sites, If a tree represented in the table is selected at random,what is the probability of selecting tree from site A, given that the tree is a red maple? (Express your answer as a decimal or fraction, not as a percent.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123573",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123574",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For an exercise physiology study, 75 participants were assigned to an activity, and their average heart rate while engaged in the activity was recorded, The table summarizes the results of this study."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-3449ffb48071acfb84d14fc49b5ed41de772f4dffb600fd39c971f3fdbb39ef6",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "One of these participants will be selected at random. What is the probability of selecting a participant who was assigned to the swimming activity given that the participant had an average heart rate of less than 130 beats per minute while engaged in an activity? (Express your answer as a decimal or fraction, not as a percent.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123574",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

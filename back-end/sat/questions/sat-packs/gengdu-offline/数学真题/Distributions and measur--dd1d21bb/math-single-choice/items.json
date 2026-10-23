@@ -1,0 +1,812 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900428",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-58a8eac98d2677afef41d7594ccefcd5aac07df0ff19653bf26d83d77ff99a69",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The box plots summarize the masses, in kilograms, of two groups of gazelles. Based on the box plots, which of the following statements must be true?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900428",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean mass of group 1 is greater than the mean mass of group 2."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean mass of group 1 is less than the mean mass of group 2."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median mass of group 1 is greater than the median mass of group 2."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median mass of group 1 is less than the median mass of group 2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900430",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-18632a4f0b2c48203c4920c146dbd4740ca553c43484549588044037135a7bf9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Data set A and data set B each consist of 27 values. The table shows the frequencies of the values for each data set. Which of the following statements best compares the means of the two data sets?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900430",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of data set A is greater than the mean of data set B."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of data set A is less than the mean of data set B."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of data set A is equal to the mean of data set B."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There is not enough information to compare the means of the data sets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900431",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A data set of 27 different numbers has a mean of 33 and a median of 33. A new data set is created by adding 7 to each number in the original data set that is greater than the median and subtracting 7 from each number in the original data set that is less than the median. Which of the following measures does NOT have the same value in both the original and new data sets?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900431",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Median"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Mean"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Sum of the numbers"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Standard deviation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900432",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The dot plots represent the distributions of values in data sets A and B."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-0dbbbf3b9474b2d604963ad6327015a17d854c532d35c94a88abff952c8db320",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following statements must be true?  \nI. The median of data set A is equal to the median of data set B.  \nII. The standard deviation of data set A is equal to the standard deviation of data set B."
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900432",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900433",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1d1f91b6029cdea044afabce0b14e3d4f6507969f9d68056eccc75847b8004ac",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Two data sets of 23 integers each are summarized in the histograms shown. For each of the histograms, the first interval represents the frequency of integers greater than or equal to 10, but less than 20. The second interval represents the frequency of integers greater than or equal to 20, but less than 30, and so on. What is the smallest possible difference between the mean of data set A and the mean of data set B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900433",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900434",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-926ebd7e88721cf930d589c4f0185ad0a1dc4785bd09e63c6da8485bdccf862e",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The frequency distribution above summarizes a set of data, where *a* is a positive integer. How much greater is the mean of the set of data than the median?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900434",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900435",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Two different teams consisting of 10 members each ran in a race. Each member’s completion time of the race was recorded. The mean of the completion times for each team was calculated and is shown below.  \nTeam A: 3.41 minutes  \nTeam B: 3.79 minutes  \nWhich of the following MUST be true?  \nI. Every member of team A completed the race in less time than any member of team B.  \nII. The median time it took the members of team B to complete the race is greater than the median time it took the members of team A to complete the race.  \nIII. There is at least one member of team B who took more time to complete the race than some member of team A."
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900435",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "III only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and III only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II and III only"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I, II, and III"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900436",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The mean score of 8 players in a basketball game was 14.5 points. If the highest individual score is removed, the mean score of the remaining 7 players becomes 12 points. What was the highest score?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900436",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "20"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "24"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "32"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900437",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each of the following frequency tables represents a data set. Which data set has the greatest mean?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900437",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-948acf3225be4b74c8341e8935e71de2d8aed7a3a1252751a27ae89c5d05ff59",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-aeb00407b6b321ff9ad6afa103c8f0fc700fecc1c84cd3d09cae5865b7a4aa37",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-b80ed09cd8d3a1723c1f83502d297053b78b0e96bdca6961d727e84b4b85806b",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-b0fa92ebfe8b2d2082ab7d04dfa384e6e01f9ee02e0b28646cae93cfecbda1e2",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900438",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The mean amount of time that the 20 employees of a construction company have worked for the company is 6.7 years. After one of the employees leaves the company, the mean amount of time that the remaining employees have worked for the company is reduced to 6.25 years. How many years did the employee who left the company work for the company?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900438",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.45"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.30"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9.00"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "15.25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900439",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-a2ddabf046113b4190adb8bb9b4bea7fb849f0e13db283cf018e1c52634af32e",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The dot plot represents the 15 values in data set A. Data set B is created by adding 56 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900439",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is equal to the median of data set A, and the range of data set B is greater than the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is greater than the median of data set A, and the range of data set B is equal to the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900441",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Data set F consists of 55 integers between 170 and 290. Data set G consists of all the integers in data set F as well as the integer 10. Which of the following must be less for data set F than for data set G?  \nI. The mean  \nII. The median"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900441",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-8900443",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-e40e3d4fd90807bdb8d17f2396099ada32a7ab0a4ff7ea4bd00bf3720cc01145",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "A survey was given to residents of all 50 states asking if they had earned a bachelor’s degree or higher. The results from 7 of the states are given in the table above. The median percent of residents who earned a bachelor’s degree or higher for all 50 states was 26.95%. What is the difference between the median percent of residents who earned a bachelor’s degree or higher for these 7 states and the median for all 50 states?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900443",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.05%"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.95%"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.22%"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.45%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

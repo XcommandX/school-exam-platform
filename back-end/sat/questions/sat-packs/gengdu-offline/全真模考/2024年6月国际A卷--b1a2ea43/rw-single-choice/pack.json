@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb-rw-single-choice",
+  "revision": 1,
+  "title": "2024年6月国际A卷 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-78cc5a92203cd2128d72609d52e5635af1287e00e9bcf5dfab9606c7d7119663",
+      "path": "assets/78cc5a92203cd2128d72609d52e5635af1287e00e9bcf5dfab9606c7d7119663.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "78cc5a92203cd2128d72609d52e5635af1287e00e9bcf5dfab9606c7d7119663",
+      "byteLength": 1238,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb",
+        "sourceQuestionId": "7062477",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-5cf9d314fad0a5b512ad55eada2c9ef369bf65407abedcdf97d8a0db1bc1a1f9",
+      "path": "assets/5cf9d314fad0a5b512ad55eada2c9ef369bf65407abedcdf97d8a0db1bc1a1f9.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "5cf9d314fad0a5b512ad55eada2c9ef369bf65407abedcdf97d8a0db1bc1a1f9",
+      "byteLength": 1083,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb",
+        "sourceQuestionId": "7062478",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-25108c93748f60fa84f31317702ea30953e94bc8b473612aa631010d91a71066",
+      "path": "assets/25108c93748f60fa84f31317702ea30953e94bc8b473612aa631010d91a71066.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "25108c93748f60fa84f31317702ea30953e94bc8b473612aa631010d91a71066",
+      "byteLength": 75103,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb",
+        "sourceQuestionId": "7062479",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/77453435615163768717.jpg"
+      }
+    }
+  ]
+}

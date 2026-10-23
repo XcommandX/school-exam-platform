@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c-math-single-choice",
+  "revision": 1,
+  "title": "Inference from sample statistics and margin of error_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d9e397db33557cf3518e32585133a0f045bfec0466cecb1312b90afa655e47f9",
+      "path": "assets/d9e397db33557cf3518e32585133a0f045bfec0466cecb1312b90afa655e47f9.png",
+      "mediaType": "image/png",
+      "sha256": "d9e397db33557cf3518e32585133a0f045bfec0466cecb1312b90afa655e47f9",
+      "byteLength": 24739,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c",
+        "sourceQuestionId": "8900446",
+        "url": "https://static.shanmaostar.com/default/nsat/18394396590397904920.png"
+      }
+    },
+    {
+      "id": "asset-c24d16bbc1c97d42983a05ce917c1352894ef1b2916e48710bb3f3c4ce4b73a1",
+      "path": "assets/c24d16bbc1c97d42983a05ce917c1352894ef1b2916e48710bb3f3c4ce4b73a1.png",
+      "mediaType": "image/png",
+      "sha256": "c24d16bbc1c97d42983a05ce917c1352894ef1b2916e48710bb3f3c4ce4b73a1",
+      "byteLength": 10079,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c",
+        "sourceQuestionId": "8900448",
+        "url": "https://static.shanmaostar.com/default/nsat/92288493927899228398.png"
+      }
+    },
+    {
+      "id": "asset-aed4e0069ad2adf1dfbf7a05d7cb07b632f830e24b2c5df97befbcc1f2ed2933",
+      "path": "assets/aed4e0069ad2adf1dfbf7a05d7cb07b632f830e24b2c5df97befbcc1f2ed2933.png",
+      "mediaType": "image/png",
+      "sha256": "aed4e0069ad2adf1dfbf7a05d7cb07b632f830e24b2c5df97befbcc1f2ed2933",
+      "byteLength": 7842,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c",
+        "sourceQuestionId": "8900450",
+        "url": "https://static.shanmaostar.com/default/nsat/65208500169945811361.png"
+      }
+    }
+  ]
+}

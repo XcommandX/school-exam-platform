@@ -1,0 +1,2160 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850214",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "An artist made 14 pleces of pottery using 48 pounds of clay. The pottery included only bowis and vases. Each bowl used 3 pounds of clay and each vase used 5 pounds of clay. How many vases did the artist make?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850214",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850215",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$2x^2+18x+2y^2+16y=\\frac{11}{2}$   \nThe given equation defines a circle in the *xy*-plane. What is the radius of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850215",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{\\sqrt{22}}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\sqrt{11}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\sqrt{39}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{\\sqrt{602}}{2}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850216",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation *E(t)* = 3·$\\left(1.7\\right)^t$   gives the estimated number of employees at a certain business, where *t* is the number of years since the business opened. Which of the following is the best interpretation of the number 3 in this context?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850216",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The increase in the estimated number of emoployees each year"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated number of employees when the business opened"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The percent increase In the estimated number of employees each year"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The number of years the business has been open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850217",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table gives the distribution of flavor and type of topping for customer orders at an ice cream shop."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-299567e1b8cbb715790bacb27d28577aca09ccca5b19c6ab9de75f77ab928b35",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "If a customer order is selected at random, what is the probability of selecting an order with  \n\nsprinkles, given the flavor of ice cream is vanilla?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850217",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.13"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.19"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.38"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850218",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-2e1e0c298661056e6f9ce1c9a5b26aec2e7b0691d3c7c13c0669f43852a70e47",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Note: Figure not drawn to scale.  \nIn the figure, line *AB* is parallel to line *CD*, and line *AD* intersects line *BC* at point *E*. If  *y* = 115  \n\nand *z* = 118, what is the value of *x*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850218",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "53"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "62"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "127"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "143"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850220",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function *f* models the resistivity of copper, in nanoohm$\\ast$ $\\ast$• meters, as a function of the temperature *x*, in kelvins, of the copper. The graph of *y* = *f(x)* is shown."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-d73ca8283d2c6894687187ccf16c9292e88094617f9bc20895214074a5b3d207",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "According to the model, which of the following statements about the estimated resistivity of copper is true?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850220",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It Increases at a rate of  $\\frac{3}{5}$ nanoohm • meters per 100 kelvins."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It increases at a rate of 6 nanoohm • meters per 100 kelvins."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "At 100 kelvins, it is 10 nanoohm • meters."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "From 200 kelvins to 400 kelvins, it decreases 12 nanoohm • meters."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850221",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Line *t* in the *xy*-plane has a slope of $\\frac{1}{9}$  and passes through the point (45, -8). Which equation defines line *t*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850221",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=-13x+\\frac{1}{9}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=\\frac{x}{9}-13$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=\\frac{x}{9}-8$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=45x-8$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850222",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "One gallon of paint will cover 280 square feet of a surface. A room has a total wall area of *w* square feet. Which equation represents the total amount of paint *P*, in gallons, needed to paint the walls of the room twice?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850222",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*P* = 560*w*"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*P* = 280*w*"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$P=\\frac{w}{140}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$P=\\frac{w}{280}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850223",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If |12 - 2*x*| = 48, which of the following is a value of 6 - *x*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850223",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "24"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850224",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Line *p* in the *xy*-plane contains the points (11, 0) and (11, 11). Which equation defines line *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850224",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* = 0"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* = 11"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 0"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* = 11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850225",
+      "revision": 2,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-61037617c079dc03a74fe12ef15fa3b70c8e539e8f0c59531df922061333b1af",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The line slants sharply up from left to right.  \nThe line passes through the following points:  \n(0 comma negative 4)  \n(2 comma 0)  \nThe line shown can be represented by the equation $ax+by=32$ , where *a* and *b* are constants.  \nWhich of the following is true about *a* and *b*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850225",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a\\lt 0\\ and\\ b\\lt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a\\lt 0\\ and\\ b\\gt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a\\gt 0\\ and\\ b\\lt 0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a\\gt 0\\ and\\ b\\gt 0$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850227",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The area of a rectangular region is increasing at a rate of 330 square feet per hour. Which of the following is closest to this rate in <u>square meters per minute</u>? (Use 1 meter = 3.28 feet.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850227",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.51"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.68"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18.04"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "30.67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850228",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is NOT a factor of $1,120x^4+43750$$1,120x^4-43,750$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850228",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$2x^2+25$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$2x^2-5$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$2x^{ }+5$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "70"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850230",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$y=3x^2+28$   \n\n$y=px^{ }+25$   \nIn the given system of equations, *p* is a positive constant. The graphs of the equations in the given system intersect at exactly one point, (*x, y*), in the *xy*-plane. What is the value of *x*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850230",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "31"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "53"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850231",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$-3x+24px=96$   \nIn the given equation, *p* is a constant. The equation has no solution. What is the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850231",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{1}{8}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{4}{3}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850232",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f\\left(x\\right)=\\left(2x-15\\right)\\left(2x+7\\right)$   \nWhat is the minimum value of the given function?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850232",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "–121"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-\\frac{7}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850234",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$\\frac{1}{16}=\\frac{1}{R_1}+\\frac{1}{R_2}$   \nThe given equation relates the resistances, *R$_{1}$* and *R$_{2}$*, in ohms, of two resistors arranged in parallel in a circuit with a total resistance of 16 ohms, where *R$_{1}$* and *R$_{2}$* are positive. Which equation correctly expresses *R$_{1}$* in terms of *R$_{2}$*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850234",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$R_1=16+R_2$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$R_1=16-R_2$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$R_1=\\frac{16R_2}{R_2-16}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$R_1=\\frac{16R_2}{R_2-16}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850235",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For two acute angles *X* and *Y*, the measure of angle *Y* is 47° and $\\frac{Sin\\ X}{Cos\\ Y}=1$. What is the measure, in degrees, of angle *X*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850235",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "92"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "47"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "45"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "43"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850236",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the *x*-intercept of the graph of $=_{ax+}^{28-x}$$=\\frac{28-x}{ax+b}$ $=_{ax+}^{28-x}$  in the *xy*-plane, where *a* and *b* are positive constants？"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850236",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-$\\frac{b}{a}$ ,0)"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(0,$\\frac{28}{b}$ )"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(0,-28)"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(28,0)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850237",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-3a8b5690d859b70aabdc69485e3a1cab81fc03ca088642f716ce930a7a082f03",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph shows the estimated bollng point *y*, in degrees Celsius, of a straight-chain alkane with a molecular weight of *x* grams per mole, where 1 $\\le$ *x* $\\le$ 280. Which statement is the best interpretation of the point（169.39，219.86）?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850237",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "A straight-chain alkane with a molecular weight of 219.86 grams per mole has an estimated boiling point of169.39 degrees Celsius."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "A straight-chain alkane with a molecular weight of 169.39 grams per mole has an estimated boiling point of 219.86 degrees Celsius."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The minimum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 169.39 grams per mole and an estimated boiling point of 219.86 degrees Celsius."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The maximum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 169.39 grams per mole and an estimated boiling point of 219.86 degrees Celsius."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850238",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each 3.0-ounce serving of cheddar cheese and each 1.2-ounce serving of tuna provides about 1microgram of vitamin B12. If a total of 3.5 micrograms of vitamin B12 are consumed from eating *x* ounces of cheese and *y* ounces of tuna, which equation best represents this situation?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850238",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.83x+0.33y=3.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3.0x+1.2y=3.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.2x+3.0y=3.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.33x+0.83y=3.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850239",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*f(x)*=$11x^{10}$$11x^{10}+2x^8$$f\\left(X\\right)=$ $11x^{10}+2x^8$   \n  *g(x)*=$-13x^7$ $-13x^7+7x^5$   \nThe polynomial *p*(*x*) is defined as the product of the given polynomials, f(*x*) and g(*x*).  What is the coefficient of $x^{15}$  in *p*(*x*)?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850239",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "15"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "51"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "77"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "103"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850240",
+      "revision": 3,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between *x* and *y* for the 9 data points in data set A."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-67e303a5b165fe9faa5efdb6d1938b59d3e1fe6eaac5dc6a9c8f34fba6b15158",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "A quadratic model for the data in data set A can be written as  $0.04x^2-0.08x+6.51$$y=$ $0.04x^2-0.08x+6.51$ . The graph of this model is shown in the *xy*-plane. The data point at *x* = 0 was found to be the result of a recording error and was removed from data set A to create data set B, consisting of the remaining 8 data points. A quadratic model for the data In data set B can be written as *y*=$ax^2+bx+c$ ,where *a*, *b*, and *c* are constants. If the quadratic models for data sets A and B are calculated in the same way, which of the following statements must be true?  \nI. a$\\gt$ 0.04  \nII. c$\\lt$ 6.51"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850240",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850242",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$=2x^2-12x+20$   \n$+3=0$   \nHow many solutions are there to the given system of equations?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850242",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There is exactly 1 solution."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There are exactly 2 solutions."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There are exactly 3 solutions."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There are no solutions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850243",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b2a07d4113e2faf29d6d4c64a65bfb81d54fbc126821977c446ca1307e6fb08b",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "In triangles *RST* and *XYZ* shown, $\\overline{XY}$  is parallel to $\\overline{TS}$  and tan*R*= $\\frac{160}{231}$ . What is the value of sin*X* in triangle *XYZ*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850243",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{160}{391}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{160}{281}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{231}{281}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{231}{160}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850244",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A bookstore is giving away free books every day. The equation *f*(x) = 168 -12*x*  gives the number of free books,  *f*(*x*), that remain to be given away after *x* days. Which of the following is the best interpretation of *f*(14) = 0 in this context?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850244",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The bookstore has 14 free books to give away."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The bookstore will give away 14 free books in 12 days."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It will take 14 days to give away all the free books."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "It will take 168 days to give away 14 free books."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850245",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A right square prism has a height of 9 units. The volume of the prism is 1,521 cubic units. What is the length, in units, of an edge of the base?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850245",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "13"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "39"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "169"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850246",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A zoologist observed the nests of wood ducks in an area. Each year, the zoologist recorded the number of eggs in each of the first 35 nests that were observed and created a frequency table for the data set. Which of the following frequency tables represents the data set with the smallest standard deviation?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850246",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-ae1dc57be316df2a683ea2101daacb996c8fd6c333d3f4e81e62b73e40e35357",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-d8c95c306a8db4c2c6e36c18263cbce02493b70f1814043e4ff3743248bdf0c1",
+              "role": "illustration",
+              "alt": "Source question figure."
+            },
+            {
+              "type": "image",
+              "assetId": "asset-c785ce96561412a5d8a5b2cde76e724afb37a5c8423c630a46f431f0f4ede641",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-0c4ed1ee8757acc7ef37758c6134826876306100fc22074f3503c263db63f81c",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-1b9eaa6bf8d54e6a6c141099db78ea646d634aff05c3ac5f35745e7b54be6d38",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850247",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A community organization surveyed a random sample of residents of the community to estimate the percentage of residents who visit their local library at least once per month. From the survey, the organization estimates that 19% of residents of the community visit their local library at least once per month, with an associated margin of error of 3.7%. The organization repeated the survey with a random sample of residents that was double the original sample size. Assuming the margins of error are calculated in the same way for both studies, which of the following is true about the margin of error associated with the estimate from the larger sample?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850247",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The margin of error is less than 3.7%."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The margin of error is 7.4%."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The margin of error is greater than 19%."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The margin of error is 38%."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850249",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function *f* is defined by *f*(*z*) = 8*z*. Which of the following is equivalent to *f*(*z* - 6)?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850249",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-8*z*"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8*z-6*"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8*z-48*"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-8*z+48*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850252",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The measure of angle *F* is $\\frac{\\pi}{12}$  radians. If the measure of angle *F* is 3*n* degrees, where *n* is a constant, what is the value of *n*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850252",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "12"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850253",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function g is defined by *g*(*x*) = -2*x*(*x* + 4) (*x* - *k*)$x^2$$^{2}$  + *r*, where *k* and *r* are integer constants. In the *xy*-plane, the graph of *y* = *g*(*x*) passes through the point (6, 16), and *g*(0) = 16. What is the value of *r* + *k*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850253",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-6"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850254",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function *f* is a quadratic function. In the *xy*-plane, the graph of *y* = *f*(*x*) has a vertex at (1, 4) and passes through the points (2, 28) and (-1, 100). What is the value of *f*(-2) - *f*(0)?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850254",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "76"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "124"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "192"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "220"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850255",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The expression $\\frac{kx-17}{2x^2-11x+15}$  is equivalent to $\\frac{p}{x-3}-\\frac{1}{2x-5}$  , where *k* and *p* are constants. What is the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850255",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-16"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{14}{5}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850256",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function *f* is defined by *f*(x) = 41(0.26)$x^x$$^{x}$ . For any positive integer *n*, the value of *f*(*n*) is *p*% less than the value of *f*(*n* - 1). What is the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850256",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "74"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "59"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "41"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82-16850257",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A company developed a plan to set the selling price of a product. The company determined that for a selling price of \\$90.00, zero products would be sold. For each \\$1.50 decrease in the selling price, the number of products sold would increase by one. For a revenue of exactly \\$1,336.50, which of the following could be the number of products sold?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6b6a0f6e3145425eb6cfd7fcf8991a82",
+        "sourceQuestionId": "16850257",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "27"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "30"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "831"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1,350"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

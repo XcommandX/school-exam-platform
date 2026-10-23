@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-4e20d4fe787943d3a639482071471468-math-single-choice",
+  "revision": 1,
+  "title": "SAT数学讲义2_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-ba5e1b8b89db7cf162e3c31dfb07cd42a09e24a03e1b51f3b62908a10be72552",
+      "path": "assets/ba5e1b8b89db7cf162e3c31dfb07cd42a09e24a03e1b51f3b62908a10be72552.png",
+      "mediaType": "image/png",
+      "sha256": "ba5e1b8b89db7cf162e3c31dfb07cd42a09e24a03e1b51f3b62908a10be72552",
+      "byteLength": 20019,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-4e20d4fe787943d3a639482071471468",
+        "sourceQuestionId": "8018398",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/50967694606149785860.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123561",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The amount of money owed on a certain type of loan has two components: the principal balance of the loan and the amount of interest accrued on the loan, For a loan of this type, each payment was \\$298.00 and there were 60 payments total. Part of each payment was applied to the principal balance of the loan, and the rest was applied to the amount of interest accrued on the loan.The amount of the 1st payment that was applied to the principal balance was \\$220.93. For each additional payment, the amount that was applied to the principal balance was approximately 0.5% greater than the amount that was applied to the principal balance for the previous payment, Which function best approximates the amount of the *x* th payment, in dollars, that was applied to the amount of interest accrued,where *x* ≤ 60?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123561",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*f*(*x*)=298.00-220.93(1.005)$^{x-1}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*f*(*x*)=298.00-220.93(1.005)$^{x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*f*(*x*)=(298.00-220.93)(0.995)$^{x-1}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*f*(*x*)=(298.00-220.93)(0.995)$^{x}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123563",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The result of increasing the quantity *x* by 1,700% is 612. What is the value of *x* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123563",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "34"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "36"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10,404"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "11,016"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123564",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A square map has a side length of 30 inches, and 1 inch on the map represents an actual distance of13 miles. A smaller version of the same map is printed as a square with the side length 85% shorter than the side length of the previous map. On the smaller map, which of the following is closest to the actual distance, in miles, represented by 1 inch?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123564",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.95"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.03"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "25.50"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "86.67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123565",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A square map has a side length of 35 inches, and 1 inch on the map represents an actual distance of 17miles. A smaller version of the same map is printed as a square with the side length 55% shorter than the side length of the previous map, On the smaller map, which of the following is closest to the actual distance, in miles, represented by l inch?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123565",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.65"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10.97"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "19.25"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "37.78"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123567",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The percent increase in mass of a certain red kangaroo from 70 days old to 150 days old was 726%. If this red kangaroo's mass was k grams at 70 days old, which expression represents its mass, in grams, at l50 days old?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123567",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.09k"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1.09k"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.26k"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8.26k"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123568",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The value of an autographed baseball increased by 178% from the end of 2012 to the end of 2013 and then decreased by 21% from the end of 2013 to the end of 2014. What was the net percentage increase in the value of the autographed baseball from the end of 2012 to the end of 2014?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123568",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "119.62%"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "140.62%"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "157.00%"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "236.38%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-43ad1297aaa946268e5c7995f976b5ce-6123570",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function$f\\left(n\\right)=7\\left(20.44\\right)^{\\frac{n}{4}}$   gives each term of a sequence as a function of the term's position, *n*, in the sequence, where *n* is a whole number. The value of the term in position l4 is p% more than the value of the term in position 10. What is the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-43ad1297aaa946268e5c7995f976b5ce",
+        "sourceQuestionId": "6123570",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "20,44"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "44"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1,944"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2,044"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

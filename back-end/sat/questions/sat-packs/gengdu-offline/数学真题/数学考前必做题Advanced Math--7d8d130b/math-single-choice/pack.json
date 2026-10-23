@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-7d8d130b849c4266bea3dda17ce6192c-math-single-choice",
+  "revision": 1,
+  "title": "数学考前必做题Advanced Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-58b4e6822e5b159c78aae2fadff58e302bed9b4463401ed38c289c3d5ecb95b8",
+      "path": "assets/58b4e6822e5b159c78aae2fadff58e302bed9b4463401ed38c289c3d5ecb95b8.png",
+      "mediaType": "image/png",
+      "sha256": "58b4e6822e5b159c78aae2fadff58e302bed9b4463401ed38c289c3d5ecb95b8",
+      "byteLength": 42859,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8257770",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/74867968721386970284.png"
+      }
+    },
+    {
+      "id": "asset-a7bfc76631f82a9352b63497d3c0f10f70595811f61bf4abfe9b2dbd929b8249",
+      "path": "assets/a7bfc76631f82a9352b63497d3c0f10f70595811f61bf4abfe9b2dbd929b8249.png",
+      "mediaType": "image/png",
+      "sha256": "a7bfc76631f82a9352b63497d3c0f10f70595811f61bf4abfe9b2dbd929b8249",
+      "byteLength": 46655,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8257770",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/28862966216890854638.png"
+      }
+    },
+    {
+      "id": "asset-a1c6d4ca539a2d67fea9777b7dd38fcb8f874d6f355abdc45775f4239fc28d61",
+      "path": "assets/a1c6d4ca539a2d67fea9777b7dd38fcb8f874d6f355abdc45775f4239fc28d61.png",
+      "mediaType": "image/png",
+      "sha256": "a1c6d4ca539a2d67fea9777b7dd38fcb8f874d6f355abdc45775f4239fc28d61",
+      "byteLength": 51217,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8257770",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/24183080657727596553.png"
+      }
+    },
+    {
+      "id": "asset-7fcc3d415b5d899c77d1bb38f386b44e43d7d862ebcab6d7a8fbe76b2c0098aa",
+      "path": "assets/7fcc3d415b5d899c77d1bb38f386b44e43d7d862ebcab6d7a8fbe76b2c0098aa.png",
+      "mediaType": "image/png",
+      "sha256": "7fcc3d415b5d899c77d1bb38f386b44e43d7d862ebcab6d7a8fbe76b2c0098aa",
+      "byteLength": 53050,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8257770",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/74853746641994536616.png"
+      }
+    },
+    {
+      "id": "asset-b598a119c1788f85b2548bb0dd381a16b83a0dfa49fdc0e1b951a5c82fcfb540",
+      "path": "assets/b598a119c1788f85b2548bb0dd381a16b83a0dfa49fdc0e1b951a5c82fcfb540.png",
+      "mediaType": "image/png",
+      "sha256": "b598a119c1788f85b2548bb0dd381a16b83a0dfa49fdc0e1b951a5c82fcfb540",
+      "byteLength": 56520,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8257988",
+        "url": "https://static.shanmaostar.com/default/nsat/72302192718671108537.png"
+      }
+    },
+    {
+      "id": "asset-cfa9ffe8df5883c1b2d49aec4c253fc6c02bc5cbb5cf674dd45529c7823f550c",
+      "path": "assets/cfa9ffe8df5883c1b2d49aec4c253fc6c02bc5cbb5cf674dd45529c7823f550c.png",
+      "mediaType": "image/png",
+      "sha256": "cfa9ffe8df5883c1b2d49aec4c253fc6c02bc5cbb5cf674dd45529c7823f550c",
+      "byteLength": 10301,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7d8d130b849c4266bea3dda17ce6192c",
+        "sourceQuestionId": "8258288",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/22813670630840301403.png"
+      }
+    }
+  ]
+}

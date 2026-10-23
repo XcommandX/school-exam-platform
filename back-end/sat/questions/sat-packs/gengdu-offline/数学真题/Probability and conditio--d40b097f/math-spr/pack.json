@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-d40b097fa4374427b1306e410038424d-math-spr",
+  "revision": 1,
+  "title": "Probability and conditional probability_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-94ee5e6c4edfec446c7ea59d883a3d6d74e87d02b64a74635386661717b8ce05",
+      "path": "assets/94ee5e6c4edfec446c7ea59d883a3d6d74e87d02b64a74635386661717b8ce05.png",
+      "mediaType": "image/png",
+      "sha256": "94ee5e6c4edfec446c7ea59d883a3d6d74e87d02b64a74635386661717b8ce05",
+      "byteLength": 25375,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900481",
+        "url": "https://static.shanmaostar.com/default/nsat/36025828610928197990.png"
+      }
+    },
+    {
+      "id": "asset-46f81a17cafc3ba14bd2f5783ae119b264431be8bb43ded4e68b45b187bf7d05",
+      "path": "assets/46f81a17cafc3ba14bd2f5783ae119b264431be8bb43ded4e68b45b187bf7d05.png",
+      "mediaType": "image/png",
+      "sha256": "46f81a17cafc3ba14bd2f5783ae119b264431be8bb43ded4e68b45b187bf7d05",
+      "byteLength": 10385,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900482",
+        "url": "https://static.shanmaostar.com/default/nsat/04195005457203733535.png"
+      }
+    },
+    {
+      "id": "asset-94a86e4efa0ac4d84f32da164dd6c5036f49ae7e31a62413c79391ed8825428e",
+      "path": "assets/94a86e4efa0ac4d84f32da164dd6c5036f49ae7e31a62413c79391ed8825428e.png",
+      "mediaType": "image/png",
+      "sha256": "94a86e4efa0ac4d84f32da164dd6c5036f49ae7e31a62413c79391ed8825428e",
+      "byteLength": 18886,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900483",
+        "url": "https://static.shanmaostar.com/default/nsat/04290947196213991686.png"
+      }
+    },
+    {
+      "id": "asset-106c7d07830ba25b962b6a039ec8fbcc0118c840f3d7973ad6b95cd390b7a336",
+      "path": "assets/106c7d07830ba25b962b6a039ec8fbcc0118c840f3d7973ad6b95cd390b7a336.png",
+      "mediaType": "image/png",
+      "sha256": "106c7d07830ba25b962b6a039ec8fbcc0118c840f3d7973ad6b95cd390b7a336",
+      "byteLength": 19936,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900485",
+        "url": "https://static.shanmaostar.com/default/nsat/02986986319176895903.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

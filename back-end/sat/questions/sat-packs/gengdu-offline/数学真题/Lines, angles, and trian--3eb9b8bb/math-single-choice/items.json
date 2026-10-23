@@ -1,0 +1,364 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900538",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In triangle *ABC*, the measure of angle *B* is 90° and *BD* is an altitude of the triangle. The length of *AB* is 15 and the length of *AC* is 23 greater than the length of *AB*. What is the value of $\\frac{BC}{BD}$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900538",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{15}{38}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{15}{38}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{15}{38}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{15}{38}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900539",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In triangles *ABC* and *DEF*, angles *B* and *E* each have measure 27° and angles *C* and *F* each have measure 41°. Which additional piece of information is sufficient to determine whether triangle *ABC* is congruent to triangle *DEF*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900539",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measure of angle *A*"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The length of side *AB*"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The lengths of sides *BC* and *EF*"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "No additional information is necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900540",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In triangles *LMN* and *RST*, angles *L* and *R* each have measure 60°, *LN* = 10, and *RT* = 30. Which additional piece of information is sufficient to prove that triangle *LMN* is similar to triangle *RST*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900540",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*MN* = 7 and *ST* = 7"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*MN* = 7 and *ST* = 21"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measures of angles *M* and *S* are 70° and 60°, respectively."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measures of angles *M* and *T* are 70° and 50°, respectively."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900541",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-019b2c3d978c4c4dd9f96a059c6fd9e25e3cf9b939128468781c5664e53eec37",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "In the figure above, what is the length of $\\overline{NQ}$  ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900541",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.2"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.3"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.4"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900542",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Triangle *XYZ* is similar to triangle *RST* such that *X*, *Y*, and *Z* correspond to *R*, *S*, and *T*, respectively. The measure of ∠*Z* is 20° and 2*XY* = *RS*. What is the measure of ∠*T*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900542",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2°"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10°"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "20°"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "40°"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-8900543",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-bf30af0e99ec170a96b61b5fa428387591420c84a97b79845cc04f6f34ce807b",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "In the figure above, *RT* = *TU*. What is the value of *x* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900543",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "72"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "66"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "64"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "58"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

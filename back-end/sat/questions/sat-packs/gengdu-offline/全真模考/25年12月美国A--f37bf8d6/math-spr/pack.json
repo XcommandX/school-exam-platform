@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-f37bf8d67b16401584e83d7bc4931958-math-spr",
+  "revision": 1,
+  "title": "25年12月美国A · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-3e202f550e38b05e745fb4a31610cba580ee9270aa88915734ac8b1d538d7599",
+      "path": "assets/3e202f550e38b05e745fb4a31610cba580ee9270aa88915734ac8b1d538d7599.png",
+      "mediaType": "image/png",
+      "sha256": "3e202f550e38b05e745fb4a31610cba580ee9270aa88915734ac8b1d538d7599",
+      "byteLength": 127740,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f37bf8d67b16401584e83d7bc4931958",
+        "sourceQuestionId": "15222549",
+        "url": "https://static.shanmaostar.com/default/nsat/02767626263421434963.png"
+      }
+    },
+    {
+      "id": "asset-8033b4fb8ebe887d0cd824c584a671e66d8287ed66de0ea7f291c6c2de5538ab",
+      "path": "assets/8033b4fb8ebe887d0cd824c584a671e66d8287ed66de0ea7f291c6c2de5538ab.png",
+      "mediaType": "image/png",
+      "sha256": "8033b4fb8ebe887d0cd824c584a671e66d8287ed66de0ea7f291c6c2de5538ab",
+      "byteLength": 5188,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f37bf8d67b16401584e83d7bc4931958",
+        "sourceQuestionId": "15222572",
+        "url": "https://static.shanmaostar.com/default/nsat/05086543374822612974.png"
+      }
+    },
+    {
+      "id": "asset-7df7fb4316f4befd84b539a8b15e78ac697706266f2392de4c473de92ab5efae",
+      "path": "assets/7df7fb4316f4befd84b539a8b15e78ac697706266f2392de4c473de92ab5efae.png",
+      "mediaType": "image/png",
+      "sha256": "7df7fb4316f4befd84b539a8b15e78ac697706266f2392de4c473de92ab5efae",
+      "byteLength": 67005,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f37bf8d67b16401584e83d7bc4931958",
+        "sourceQuestionId": "15222587",
+        "url": "https://static.shanmaostar.com/default/nsat/79365838020904652575.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

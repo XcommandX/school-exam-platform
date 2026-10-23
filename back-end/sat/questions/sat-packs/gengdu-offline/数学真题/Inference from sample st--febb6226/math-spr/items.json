@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c-8900447",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-c8ad791cca40995aa845d1cb7d8885898ffcf3dc83a8eb4c0d9a10c8f016eb7a",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "A researcher interviewed 411 randomly selected US residents and asked about their views on the use of nuclear energy. The table above summarizes the responses of the interviewees. If the population of the United States was 300 million when the survey was given, based on the sample data for the 411 US residents, what is the best estimate, in <u>millions</u>, of the difference between the number of US residents who somewhat favor or strongly favor the use of nuclear energy and the number of those who somewhat oppose or strongly oppose it? (Round your answer to the nearest whole number.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c",
+        "sourceQuestionId": "8900447",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

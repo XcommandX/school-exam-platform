@@ -54,3 +54,7 @@ uploads/
 # User-provided SAT source collection and offline image bundle (local only)
 /耕读合集/
 /耕读合集.zip
+
+# Shared SAT library keeps unpacked questions and assets; ZIP exports stay local.
+/back-end/sat/questions/sat-packs/gengdu-offline/*.zip
+/back-end/sat/questions/sat-packs/gengdu-offline/*.zip.sha256

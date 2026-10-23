@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305-math-single-choice",
+  "revision": 1,
+  "title": "Lines, angles, and triangles_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-019b2c3d978c4c4dd9f96a059c6fd9e25e3cf9b939128468781c5664e53eec37",
+      "path": "assets/019b2c3d978c4c4dd9f96a059c6fd9e25e3cf9b939128468781c5664e53eec37.png",
+      "mediaType": "image/png",
+      "sha256": "019b2c3d978c4c4dd9f96a059c6fd9e25e3cf9b939128468781c5664e53eec37",
+      "byteLength": 17390,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900541",
+        "url": "https://static.shanmaostar.com/default/nsat/60647767447945554930.png"
+      }
+    },
+    {
+      "id": "asset-bf30af0e99ec170a96b61b5fa428387591420c84a97b79845cc04f6f34ce807b",
+      "path": "assets/bf30af0e99ec170a96b61b5fa428387591420c84a97b79845cc04f6f34ce807b.png",
+      "mediaType": "image/png",
+      "sha256": "bf30af0e99ec170a96b61b5fa428387591420c84a97b79845cc04f6f34ce807b",
+      "byteLength": 20694,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eb9b8bbc84d4ed7b43a3da3e3c59305",
+        "sourceQuestionId": "8900543",
+        "url": "https://static.shanmaostar.com/default/nsat/61431418695040157049.png"
+      }
+    }
+  ]
+}

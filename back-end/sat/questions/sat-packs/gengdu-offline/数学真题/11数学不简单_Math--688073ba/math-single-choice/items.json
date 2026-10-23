@@ -1,0 +1,744 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123575",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table summarizes the distribution of 187 objects by group and by mass, in kilograms."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-0b403af200b2d2bf8e69197cf039dd6a7847b13f3d9775d1266acd2dbec907cf",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "One of these objects will be selected at random. What is the probability of selecting an object from group A, given that the obiect has a mass of at least 40 kilograms?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123575",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{43}{92}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{43}{130}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{49}{187}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{43}{187}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123576",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "16,18,18,24,24  \nA researcher used a set of capacitors for an experiment, Each value in the data set shown represents the maximum capacity, in microfarads ( µF), of a capacitor in the set before the start of the experiment. During the experiment, the researcher was able to increase the maximum capacity of each capacitor by 2 µF. Which of the following is true about this set of capacitors after the experiment?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123576",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean maximum capacity is 20 µF, and the median maximum capacity is 20 µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean maximum capacity is 20 µF, and the median maximum capacity is 18 µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean maximum capacity is 22µF, and the median maximum capacity is 20µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean maximum capacity is 22µF, and the median maximum capacity is 18µF."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123577",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-e0e7369761f73ca518c1c61958f6580380b36ba0e69f13c3384083c8b436ac0b",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The histogram summarizes a data set of the durations, to the nearest minute, of the 44 intervals between eruptions of Grand Geyser in Yellowstone National Park in a certain 14-day period. A duration of762 minutes is added to this data set to create a new data set of the durations of 45intervals, which of the following measures must be greater for the new data set than for the original data set?  \nⅠ.The mean duration  \nⅡ. The median duration"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123577",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ⅰonly"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ⅱ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ⅰ and Ⅱ"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither Ⅰ nor Ⅱ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123578",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1baf69aec5d87c5ebacad6837305e3429de3277decc818e2e5118e73c4f77a31",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The dot plot shows the distribution of capacity for a set of capacitors, set A, which a researcher used for a certain experiment. For another experiment, the researcher used a different set of capacitors, set B. Set B has the same number of capacitors as set A but the capacity of each capacitor of set B is 13 microfarads (µF) greater than the capacity of each respective capacitor in set A. Which of the following is true about the capacities of the capacitors in set B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123578",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean capacity is 8 µF, and the range ofcapacities is 12 µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean capacity is 8 µF, and the range of capacities is 25 µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean capacity is 2l µF, and the range of capacities is 12 µF."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean capacity is 2l µF, and the range of capacities is 25 µF."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123579",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-c2c296a56a9fec213c15e6d24433e32c8fc07b4357e40663e4ce8be9c80027a1",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The dot plot represents the l5 values in data set A. Data set B is created by adding 56 to each of the values in data set A. Which of the following correctly compares the medians and the ranges of data sets A and B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123579",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is equal to the median of data set A, and the range of data set B is equal to the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is equal to the median of data set A, and the range of data set B is greater than the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is greater than the median of data set A, and the range of data set B is equal to the range of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is greater than the median of data set A, and the range of data set B is greater than the range of data set A."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123580",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-f6ca7ec74f4c1f1773bac3eb6b9e32bf52a31353c695e3476f3e3f4c034810a9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Data set l contains the 9 values shown in the table. Data set 2 is created by adding a value of 4 to data set 1. Which of the following statistical measures changes the least between data set l and data set 2?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123580",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The range"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The standard deviation"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123581",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The maximum temperature on April l, in degrees Fahrenheit (ºF), was recorded each year at a certain weather station for ll years. The histogram summarizes the recorded data set."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-f91f58f68318ead6cf335fbddc20577d658742bbb0b6b5e0716ecd1b36763476",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The temperature of 78.2 ºF is removed from this data set to create a new data set of 10 temperatures.  \nWhich of the following statements must be true?  \n I. The mean of the new data set is less than the mean of the original data set.                                                                       Il. The median ofthe new data set is less than the median of the original data set."
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123581",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Il only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "l and Il"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "neither A nor B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123582",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Ari examined a set of 85 plants, The lightest plant had a mass of 2.8 kilograms kg and the heaviest plant had amass of' 6.2 kg. Chihiro examined the same set of 85 plants and also an additional plant with a mass of 11.6 kg Which of the following must be true about the set of plants that Ari examined and the set of plants that Chihiro examined?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123582",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The standard deviation of the masses, in kg, of the plants that Ari examined is greater than the standard deviation ofthe masses,in kg, of the plants that Chihiro examined."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The range of the masses, in kg, of the plants that Ari examined is greater than the range of the masses,in kg, of the plants that Chihiro examined."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of the masses,in kg, of the plants that Ari examined is less than themedian of the masses, in kg, of he plants that Chihiro examined."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The mean of the masses, in kg, of the plants that Ari examined is less than the mean of the masses, in kg, of the plants that Chihiro examined."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123583",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Micha and Rana each selected a random sample of students at their school and asked how many soft drink servings each student had consumed the previous week, Micha estimated that the mean number of soft drink servings was 7., with an associated margin of error of1 .2. Rana estimated that the mean number of soft drink servings was 8.3,with an associated margin of error of0.8.Assuming the margins of error were calculated in the same way, which of the following best explains why Rana obtained a smaller margin of error than Micha?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123583",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Rana's sample contained more students than Micha's sample contained."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Rana's sample contained more students who drink soft drinks than Micha's sample containe"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Rana's sample contained more students who drank exactly seven soft drink servings than Micha's sample contained."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Rana's sample contained more students who drank exactly eight sot drink servings than Micha's sample contained."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123584",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For a study, a group of chipmunks will be selected from a habitat consisting of 220chipmunks, and a group of prairie dogs will be selected from a habitat consisting of 190prairie dogs. Some of the chipmunks and prairie dogs will be in a treatment group, and some of the chipmunks and prairie dogs will be in a control group. Which of the following is necessary for this study to attempt to establish a cause-and-effect relationship between two variables?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123584",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The number of chipmunks in the treatment group is equal to the number of prairie dogs in the treatment group, and the number of chipmunks in thecontrol group is equal to the number of prairie dogs in the control group."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The chipmunks and the prairie dogs are randomly assigned to the treatmentand control groups."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The chipmunks and the prairie dogs are randomly selected from their respective habitats."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The average age of the chipmunks in the treatment group is equal to theaverage age of the prairie dogs in the treatment group, and the average age ofthe chipmunks in the control group is equal to the average age of the prairiedogs in the control group."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123585",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A community center offers a Spanish course. This year, all students in the course were offered additional audio lessons they could take at home. The students who took these additional audio lessons did better in the course than students who didn't take the additional audio lessons. Which of the following is an appropriate conclusion?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123585",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Taking additional audio lessons will cause an improvement for any student who takes any foreign language course."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Taking additional audio lessons will cause an improvement for any student who takes a Spanish course."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Taking additional audio lessons was the cause of the improvement for the students at the community center who took the Spanish course."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "No conclusion about cause and effect can be made regarding students at the community center who took the additional audio lessons at home and their performance in the Spanish course."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-688073baa997412b88ae713d4777de9c-6123586",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "To determine if cooking with olive oil reduces the risk of heartburn for men, researchers interviewed a random sample of5,500 men who had no history of heartburn, Study participants were identified as either regular or occasional olive oil users. Five years later,researchers interviewed the men again.They found that the proportion of men who experienced frequent heartburn was significantly lower for men identified as regular olive oil users Which of the following is the most appropriate conclusion of the study?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-688073baa997412b88ae713d4777de9c",
+        "sourceQuestionId": "6123586",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Olive oil use causes a reduction in the risk of heartburn for men and women."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Olive oil use causes a reduction in the risk of heartburn for men but not necessarily for women."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There is an association between olive oil use and the risk of heartburn for men and women, but it is not necessarily a cause-and-effect relationship."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There is an association between olive oil use and the risk of heartburn for men, but it is not necessarily a cause-and-effect relationship, and the association may not exist for women."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

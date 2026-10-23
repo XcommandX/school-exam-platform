@@ -1,0 +1,266 @@
+{
+  "collectionId": "gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4",
+  "sourceSha256": "65b5103b8050236c58e76df9dcdad147d104516fc28039f8f10f2ac5dc233417",
+  "sourceUnmodified": true,
+  "questionCount": 18,
+  "imageReferences": 6,
+  "latexFragments": 47,
+  "superscriptSubscriptFragments": 4,
+  "discardedEditorTextareas": 40,
+  "missingSourceAltText": 6,
+  "tableConversions": [],
+  "reviewNotes": [
+    {
+      "sourceQuestionId": "8255659",
+      "issue": "duplicate-converted-choice-content",
+      "policy": "preserve-source-latex-data-do-not-guess-correction"
+    },
+    {
+      "sourceQuestionId": "8255660",
+      "issue": "duplicate-converted-choice-content",
+      "policy": "preserve-source-latex-data-do-not-guess-correction"
+    },
+    {
+      "sourceQuestionId": "8256481",
+      "issue": "duplicate-converted-choice-content",
+      "policy": "preserve-source-latex-data-do-not-guess-correction"
+    },
+    {
+      "sourceQuestionId": "8256483",
+      "issue": "duplicate-converted-choice-content",
+      "policy": "preserve-source-latex-data-do-not-guess-correction"
+    },
+    {
+      "issue": "all-source-standard-answers-unreviewed",
+      "policy": "confirmed-remains-needs-review-no-certified-grading"
+    },
+    {
+      "issue": "table-rendering-provisional",
+      "policy": "two-or-other-simple-explicit-cell-tables-use-static-svg-no-guessed-data"
+    },
+    {
+      "issue": "missing-original-image-alt",
+      "count": 6,
+      "policy": "neutral-alt-no-inferred-answer-description"
+    }
+  ],
+  "answerStatus": {
+    "needs-review": 18
+  },
+  "explanationsMissing": 18,
+  "sourceOrder": [
+    {
+      "sourceQuestionId": "8255659",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8255659",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8255660",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 2,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8255660",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8255662",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8255662",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8255663",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 8,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8255663",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8255678",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 26,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8255678",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256297",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256297",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256406",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 22,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256406",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256473",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 21,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256473",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256474",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 22,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256474",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256475",
+      "section": "math",
+      "moduleNumber": 3,
+      "number": 19,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256475",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256476",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 19,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256476",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256477",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 10,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256477",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256478",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 1,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256478",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256479",
+      "section": "math",
+      "moduleNumber": 3,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-spr",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256479",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256480",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256480",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256481",
+      "section": "math",
+      "moduleNumber": 2,
+      "number": 14,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256481",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256482",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 2,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256482",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "8256483",
+      "section": "math",
+      "moduleNumber": 1,
+      "number": 3,
+      "packId": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-8256483",
+      "itemRevision": 1
+    }
+  ],
+  "modules": [
+    {
+      "section": "math",
+      "moduleNumber": 1,
+      "questionCount": 6
+    },
+    {
+      "section": "math",
+      "moduleNumber": 2,
+      "questionCount": 10
+    },
+    {
+      "section": "math",
+      "moduleNumber": 3,
+      "questionCount": 2
+    }
+  ],
+  "conversionMode": "bank",
+  "itemIdPolicy": "collection",
+  "fullSAT": false,
+  "assessmentFile": null,
+  "packs": {
+    "math-single-choice": {
+      "questionCount": 9,
+      "assetCount": 1
+    },
+    "math-spr": {
+      "questionCount": 9,
+      "assetCount": 5
+    }
+  },
+  "uniqueOriginalImages": 6,
+  "revisionChanges": []
+}

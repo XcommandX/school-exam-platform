@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-729ad10493b14c448678f23e7dbf694e-rw-single-choice",
+  "revision": 1,
+  "title": "阅读难题合集11_ReadingAndWriting · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fd26ac27d467916271c56681e4a5f6ce34d06cc18e1ce1257f13edb27298bedb",
+      "path": "assets/fd26ac27d467916271c56681e4a5f6ce34d06cc18e1ce1257f13edb27298bedb.png",
+      "mediaType": "image/png",
+      "sha256": "fd26ac27d467916271c56681e4a5f6ce34d06cc18e1ce1257f13edb27298bedb",
+      "byteLength": 76060,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-729ad10493b14c448678f23e7dbf694e",
+        "sourceQuestionId": "13071128",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/43614857708811658291.png"
+      }
+    },
+    {
+      "id": "asset-692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629",
+      "path": "assets/692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629.png",
+      "mediaType": "image/png",
+      "sha256": "692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629",
+      "byteLength": 81960,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-729ad10493b14c448678f23e7dbf694e",
+        "sourceQuestionId": "13071131",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/92756988722185090722.png"
+      }
+    }
+  ]
+}

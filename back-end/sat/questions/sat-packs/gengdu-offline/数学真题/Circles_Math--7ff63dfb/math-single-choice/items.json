@@ -1,0 +1,728 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900514",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-0583521f789bbb49bc1e89bdbda258e552fa65cdd28ef7ed4742b1c50e70eb36",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The circle above has center *O*, the length of arc"
+        },
+        {
+          "type": "image",
+          "assetId": "asset-d291d01f0f07a250526c02bc68ede4cb4231f6ed606866e96a47dc26735893dd",
+          "role": "illustration",
+          "alt": "多 A D C 有 上小括號 在上方"
+        },
+        {
+          "type": "markdown",
+          "text": "$\\overline{ADC}$ is 5*π*, and *x* = 100 . What is the length of arc"
+        },
+        {
+          "type": "image",
+          "assetId": "asset-f2dab1d1792744649f233936d5c23e6381495a36ce117f468bb6e684f9219070",
+          "role": "illustration",
+          "alt": "多 A B C 有 上小括號 在上方"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900514",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9*π*"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "13*π*"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18*π*"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{13}{2}\\pi$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900516",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*x*$^{2}$ + 20*x* + *y*$^{2}$ + 16*y* = -20  \n  \nThe equation above defines a circle in the *xy*-plane. What are the coordinates of the center of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900516",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-20 , -16)"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-10 , -8)"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(10 , 8)"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(20 , 16)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900517",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-3cd8fe5d6e19324f3d8d22e7348450c5317d4f66c68bad2590e95838e0952fec",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Point *O* is the center of the circle above, and the measure of ∠*OAB* is 30°. If the length of $\\overline{OC}$  is 18, what is the length of arc $\\overline{AB}$$AB$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900517",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9π"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "12π"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "15π"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18π"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900520",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "What is the diameter of the circle in the *xy*-plane with equation $\\left(x-5\\right)^2+\\left(y-3\\right)^2=16$  ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900520",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "8"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900523",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A circle in the *xy*-plane has its center at （-4, -6）. Line *k* is tangent to this circle at the point （-7, -7）. What is the slope of line *k*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900523",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-\\frac{1}{3}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-\\frac{1}{3}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900525",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In the *xy*-plane, the graph of 2*x*$^{2}$ - 6*x* + 2*y*$^{2}$ +2*y* = 45 is a circle. What is the radius of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900525",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6.5"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\sqrt{40}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\sqrt{40}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900526",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $\\left(x-2\\right)^2+\\left(y-1\\right)^2=49$  represents circle A. Circle B is obtained by shifting circle A down 2 units in the *xy*-plane. Which of the following equations represents circle B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900526",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-2\\right)^2+\\left(y-1\\right)^2=49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x^2+\\left(y-3\\right)^2=49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-2\\right)^2+\\left(y-1\\right)^2=49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x^2+\\left(y+1\\right)^2=49$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900527",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A circle has center *O*, and points *A* and *B* lie on the circle. The measure of arc *AB* is 45$^{\\circ}$ and the length of arc *AB* is 3 inches. What is the circumference, in inches, of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900527",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900528",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which of the following equations represents a circle in the *xy*-plane that intersects the *y*-axis at exactly one point?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900528",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-8\\right)^2+\\left(y-8\\right)^2=16$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-8\\right)^2+\\left(y-8\\right)^2=16$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-8\\right)^2+\\left(y-8\\right)^2=16$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-8\\right)^2+\\left(y-8\\right)^2=16$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900529",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "(*x* -6)$^{2}$ + (y +5)$^{2}$ = 16  \nIn the *xy*-plane, the graph of the equation above is a circle. Point *P* is on the circle and has coordinates $\\left(10,-5\\right)$ . If $\\overline{PQ}$  is a diameter of the circle, what are the coordinates of point *Q* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900529",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(10,-5\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(10,-5\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(10,-5\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(10,-5\\right)$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900531",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation *x* $^{2}$ + (y -2)$^{2}$= 36 represents circle A. Circle B is obtained by shifting circle A down 4 units in the *xy*-plane. Which of the following equations represents circle B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900531",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* $^{2}$ + (y +2)$^{2}$ = 36"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* $^{2}$ + (y -6)$^{2}$ = 36"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(x -4) $^{2}$ + (y +2)$^{2}$ = 36"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(*x* +4)  $^{2}$ + (y -2)$^{2}$ = 36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-8900533",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A circle in the *xy*-plane has equation (*x* +3)$^{2}$ + (y -1)$^{2}$ = 25. Which of the following points does NOT lie in the interior of the circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900533",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-7 , 3)"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-3 , 1)"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(0 , 0)"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(3 , 2)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

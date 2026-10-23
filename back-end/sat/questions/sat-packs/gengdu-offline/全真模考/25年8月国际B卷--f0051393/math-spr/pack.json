@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-f005139329394192b7ee9daa2f94c5a0-math-spr",
+  "revision": 1,
+  "title": "25年8月国际B卷 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fc5bf591f0312aceeae0e933634933b10d173f81ec51f2fe4757c4924a491db6",
+      "path": "assets/fc5bf591f0312aceeae0e933634933b10d173f81ec51f2fe4757c4924a491db6.png",
+      "mediaType": "image/png",
+      "sha256": "fc5bf591f0312aceeae0e933634933b10d173f81ec51f2fe4757c4924a491db6",
+      "byteLength": 106338,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f005139329394192b7ee9daa2f94c5a0",
+        "sourceQuestionId": "16736103",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/27213255290705677393.png"
+      }
+    },
+    {
+      "id": "asset-5b01a6d70db178b6f2986bb7147756b69f01c4e518ba0b5ea01b0ec0e4c3d74c",
+      "path": "assets/5b01a6d70db178b6f2986bb7147756b69f01c4e518ba0b5ea01b0ec0e4c3d74c.png",
+      "mediaType": "image/png",
+      "sha256": "5b01a6d70db178b6f2986bb7147756b69f01c4e518ba0b5ea01b0ec0e4c3d74c",
+      "byteLength": 17964,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f005139329394192b7ee9daa2f94c5a0",
+        "sourceQuestionId": "16736107",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/86457196932447439285.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

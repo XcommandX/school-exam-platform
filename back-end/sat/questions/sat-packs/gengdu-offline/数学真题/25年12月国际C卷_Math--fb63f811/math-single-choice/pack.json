@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-fb63f81113274ff5b1ecffb7d083d693-math-single-choice",
+  "revision": 2,
+  "title": "25年12月国际C卷_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-6872b44679a607eee134b025e78c95e601907786a0a40944b0115fa6b39c927b",
+      "path": "assets/6872b44679a607eee134b025e78c95e601907786a0a40944b0115fa6b39c927b.png",
+      "mediaType": "image/png",
+      "sha256": "6872b44679a607eee134b025e78c95e601907786a0a40944b0115fa6b39c927b",
+      "byteLength": 144011,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017036",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/34475000251049989899.png"
+      }
+    },
+    {
+      "id": "asset-258e25277c9a891435d2886328c6ce26ab2cd79bf6f3ed253a44559b0c3318dd",
+      "path": "assets/258e25277c9a891435d2886328c6ce26ab2cd79bf6f3ed253a44559b0c3318dd.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "258e25277c9a891435d2886328c6ce26ab2cd79bf6f3ed253a44559b0c3318dd",
+      "byteLength": 689,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017043",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-3707ef596d08f9f9d79a407ff3a9348d9e22818f6dc75c6806b25c4083f21a4a",
+      "path": "assets/3707ef596d08f9f9d79a407ff3a9348d9e22818f6dc75c6806b25c4083f21a4a.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "3707ef596d08f9f9d79a407ff3a9348d9e22818f6dc75c6806b25c4083f21a4a",
+      "byteLength": 726,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017052",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-ed22970465c5f92a388358ed30b0372d1d5ad0bb8591f1032a7c80741b76cbb3",
+      "path": "assets/ed22970465c5f92a388358ed30b0372d1d5ad0bb8591f1032a7c80741b76cbb3.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "ed22970465c5f92a388358ed30b0372d1d5ad0bb8591f1032a7c80741b76cbb3",
+      "byteLength": 726,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017052",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-644606489331af37231d18f06d28d99e174e431623a293b7f03e69ed6376541d",
+      "path": "assets/644606489331af37231d18f06d28d99e174e431623a293b7f03e69ed6376541d.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "644606489331af37231d18f06d28d99e174e431623a293b7f03e69ed6376541d",
+      "byteLength": 726,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017052",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-9735e4dc757ceada174580e00e11327f88195cf068ce3a7afca9065b255ffcc0",
+      "path": "assets/9735e4dc757ceada174580e00e11327f88195cf068ce3a7afca9065b255ffcc0.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "9735e4dc757ceada174580e00e11327f88195cf068ce3a7afca9065b255ffcc0",
+      "byteLength": 726,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017052",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-cfb526360eb75a4be1282a28df659ab7e9f3bdefb47c7e0fb2f757c756bfaa74",
+      "path": "assets/cfb526360eb75a4be1282a28df659ab7e9f3bdefb47c7e0fb2f757c756bfaa74.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "cfb526360eb75a4be1282a28df659ab7e9f3bdefb47c7e0fb2f757c756bfaa74",
+      "byteLength": 727,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-fb63f81113274ff5b1ecffb7d083d693",
+        "sourceQuestionId": "16017056",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

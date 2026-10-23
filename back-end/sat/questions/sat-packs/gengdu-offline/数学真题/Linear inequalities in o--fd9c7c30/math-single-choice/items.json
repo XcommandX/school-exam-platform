@@ -1,0 +1,716 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900295",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Adam’s school is a 20-minute walk or a 5-minute bus ride away from his house. The bus runs once every 30 minutes, and the number of minutes, *w*, that Adam waits for the bus varies between 0 and 30. Which of the following inequalities gives the values of *w* for which it would be faster for Adam to walk to school?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900295",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*w* -5 &lt; 20"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*w* -5 &gt; 20"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*w* +5 &lt; 20"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*w* +5 &gt; 20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900296",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A laundry service is buying detergent and fabric softener from its supplier. The supplier will deliver no more than 300 pounds in a shipment. Each container of detergent weighs 7.35 pounds, and each container of fabric softener weighs 6.2 pounds. The service wants to buy at least twice as many containers of detergent as containers of fabric softener. Let *d* represent the number of containers of detergent, and let *s* represent the number of containers of fabric softener, where *d* and *s* are nonnegative integers. Which of the following systems of inequalities best represents this situation?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900296",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.35*d* + 6.2*s* $\\le$ 300  \n*d* $\\ge$  2*s*"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "7.35*d* + 6.2*s* $\\le$ 300  \n2*d* $\\ge$  *s*"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "14.7*d* + 6.2*s* $\\le$ 300  \n*d* $\\ge$  2*s*"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "14.7*d* + 6.2*s* $\\le$ 300  \n*2d* $\\ge$  *s*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900298",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*y*$\\le$ *x* + 7  \n*y*$\\ge$ -2*x* -1  \n  \n$\\le$Which point (*x , y* ) is a solution to the given system of inequalities in the *xy*-plane?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900298",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(-14 , 0)"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(0 , -14)"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(0 , 14)"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "(14 , 0)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900299",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A salesperson’s total earnings consist of  a base salary of  *x* dollars per year, plus commission earnings of 11% of the total sales the salesperson makes during the year. This year, the salesperson has a goal for the total earnings to be at  least 3 times and at most 4 times the base salary. Which of the following inequalities represents all possible values of total sales *s* , in dollars, the salesperson can make this year in order to meet that goal?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900299",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2*x* $\\le$ *s* $\\le$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{2}{0.11}x\\le s\\le\\frac{3}{0.11}x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3*x* $\\le$ *s* $\\le$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{2}{0.11}x\\le s\\le\\frac{3}{0.11}x$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900302",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A psychologist set up an experiment to study the tendency of a person to select the first item when presented with a series of items. In the experiment, 300 people were presented with a set of five pictures arranged in random order. Each person was asked to choose the most appealing picture. Of the first 150 participants, 36 chose the first picture in the set. Among the remaining 150 participants, *p* people chose the first picture in the set. If more than 20% of all participants chose the first picture in the set, which of the following inequalities best describes the possible values of *p* ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900302",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*p* &gt; 0.20(300-36), where *p*$\\le$ 150"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*p* &gt; 0.20(300+36), where *p*$\\le$ 150"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*p* -36 &gt; 0.20(300), where *p*$\\le$ 150"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*p* +36 &gt; 0.20(300), where *p*$\\le$ 150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900303",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The triangle inequality theorem states that the sum of any two sides of a triangle must be greater than the length of the third side. If a triangle has side lengths of 6 and 12, which inequality represents the possible lengths, *x*, of the third side of the triangle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900303",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* &lt; 18"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* &gt; 18"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6 &lt; *x* &lt; 18"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*x* &lt; 6 or *x* &gt; 18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900305",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*y* &lt; 6*x* + 2  \nFor which of the following tables are all the values of *x* and their corresponding values of *y* solutions to the given  \ninequality?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900305",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-b06c1ab4d3a17346aad29910e5015ed7fbdc6f2eb8dc15b365a8d6eccef33f97",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-726f413d02642ddbdb5576152404a53d61d5acf7817dddcc0b39ab7884854a1d",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-2e51815249ae1009d26972ecb5be949414e1ff205b3cc7a37add9d3146afba32",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-256a48f4b5897f5c81a96414896e21c8adf0ace975ebb4dd711a667bb3fefdaf",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900306",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A shipping service restricts the dimensions of the boxes it will ship for a certain type of service. The restriction states that for boxes shaped like rectangular prisms, the sum of the perimeter of the base of the box and the height of the box cannot exceed 130 inches. The perimeter of the base is determined using the width and length of the box. If a box has a height of 60 inches and its length is 2.5 times the width, which inequality shows the allowable width *x*, in inches, of the box?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900306",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0 &lt; *x* $\\le$ 10"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0 &lt; *x* $\\le$$11\\frac{2}{3}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0 &lt; *x* $\\le$$11\\frac{2}{3}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0 &lt; *x* $\\le$ 20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900307",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*y* &gt; 13*x* -18  \nFor which of the following tables are all the values of *x* and their corresponding values of *y* solutions to the given inequality?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900307",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-8693d8ab46bb741647e30987376c3c53c07cde3bb8701ca2b2dbb21df4e8f6f5",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-36f0a085c2c3b10ab3a4231b93ba6a392930ab783bbc1d929ff4ffb75b2a72b6",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-5f65d27aefadbafaf5ff0dcf351a06fa5b662824f7eddd4ec2e6f260a4a9f0a1",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "image",
+              "assetId": "asset-2e4bcfe54a0b305a4c48009b245e0e066bcd994d06b4ea6df7cb13d6de382458",
+              "role": "illustration",
+              "alt": "Source question figure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900308",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A business owner plans to purchase the same model of chair for each of the 81 employees. The total budget to spend on  these chairs is \\$14,000, which includes a 7% sales tax. Which of the following is closest to the maximum possible price per chair, before sales tax, the business owner could pay based on this budget?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900308",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "\\$148.75"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "\\$161.53"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "\\$172.84"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "\\$184.94"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900309",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Ken is working this summer as part of a crew on a farm. He earned \\$8 per hour for the first 10 hours he worked this week. Because of his performance, his crew leader raised his salary to \\$10 per hour for the rest of the week. Ken saves 90% of his earnings from each week. What is the least number of hours he must work the rest of the week to save at least \\$270 for the week?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900309",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "38"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "33"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "22"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9-8900310",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "*y* &gt; 2*x* -1  \n2*x* &gt; 5  \nWhich of the following consists of the *y*-coordinates of all the points that satisfy the system of inequalities above?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-fd9c7c30ddc9498aa08e7db728f23df9",
+        "sourceQuestionId": "8900310",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* &gt; 6"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* &gt; 4"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* &gt; $\\frac{5}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "*y* &gt; $\\frac{5}{2}$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

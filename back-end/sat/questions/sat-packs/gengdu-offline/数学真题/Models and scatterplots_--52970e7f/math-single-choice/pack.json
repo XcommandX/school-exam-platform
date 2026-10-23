@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-math-single-choice",
+  "revision": 1,
+  "title": "Models and scatterplots_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d113b02d93c062e25d172634a26eacfef9b986a223fc22a605a65876d64c8d80",
+      "path": "assets/d113b02d93c062e25d172634a26eacfef9b986a223fc22a605a65876d64c8d80.png",
+      "mediaType": "image/png",
+      "sha256": "d113b02d93c062e25d172634a26eacfef9b986a223fc22a605a65876d64c8d80",
+      "byteLength": 60907,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900451",
+        "url": "https://static.shanmaostar.com/default/nsat/70008910437365490737.png"
+      }
+    },
+    {
+      "id": "asset-e2042a67ffa746326143d6d1003f25a85e7df56391460248498eb468ec7bf0e4",
+      "path": "assets/e2042a67ffa746326143d6d1003f25a85e7df56391460248498eb468ec7bf0e4.png",
+      "mediaType": "image/png",
+      "sha256": "e2042a67ffa746326143d6d1003f25a85e7df56391460248498eb468ec7bf0e4",
+      "byteLength": 54763,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900452",
+        "url": "https://static.shanmaostar.com/default/nsat/48906001270973318030.png"
+      }
+    },
+    {
+      "id": "asset-de9ca52fa11faa86829e62bf1c665d1384782d6ecef9e6184f77118390d5f83e",
+      "path": "assets/de9ca52fa11faa86829e62bf1c665d1384782d6ecef9e6184f77118390d5f83e.png",
+      "mediaType": "image/png",
+      "sha256": "de9ca52fa11faa86829e62bf1c665d1384782d6ecef9e6184f77118390d5f83e",
+      "byteLength": 69989,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900455",
+        "url": "https://static.shanmaostar.com/default/nsat/03656072869078114660.png"
+      }
+    },
+    {
+      "id": "asset-b69f71d4759a93d7ee142447a52c9c5bfff3b0bf9a4594dc602a74cb822e65a0",
+      "path": "assets/b69f71d4759a93d7ee142447a52c9c5bfff3b0bf9a4594dc602a74cb822e65a0.png",
+      "mediaType": "image/png",
+      "sha256": "b69f71d4759a93d7ee142447a52c9c5bfff3b0bf9a4594dc602a74cb822e65a0",
+      "byteLength": 72030,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900457",
+        "url": "https://static.shanmaostar.com/default/nsat/43905864604344435762.png"
+      }
+    },
+    {
+      "id": "asset-61a87777a9ed01a536b0f16a8a526f467231c6bd054adc97104a766bf721cdb9",
+      "path": "assets/61a87777a9ed01a536b0f16a8a526f467231c6bd054adc97104a766bf721cdb9.png",
+      "mediaType": "image/png",
+      "sha256": "61a87777a9ed01a536b0f16a8a526f467231c6bd054adc97104a766bf721cdb9",
+      "byteLength": 14169,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900458",
+        "url": "https://static.shanmaostar.com/default/nsat/12800253217568144347.png"
+      }
+    },
+    {
+      "id": "asset-e4e4f145b33005a66806c25dd5ad215d2999585eaff4a6605b94d35ead9689f5",
+      "path": "assets/e4e4f145b33005a66806c25dd5ad215d2999585eaff4a6605b94d35ead9689f5.png",
+      "mediaType": "image/png",
+      "sha256": "e4e4f145b33005a66806c25dd5ad215d2999585eaff4a6605b94d35ead9689f5",
+      "byteLength": 58039,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900459",
+        "url": "https://static.shanmaostar.com/default/nsat/88703734445142962438.png"
+      }
+    }
+  ]
+}

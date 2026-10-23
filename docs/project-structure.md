@@ -12,6 +12,7 @@ front-end/
     integration/                    页面入口 URL 生成器
 back-end/
   server/serve_platform.py           仅本机运行的统一开发服务
+  sat/questions/sat-packs/           用户授权共享的 SAT 题库，默认读取 gengdu-offline/
   toefl/
     src/                            Worker、账号、同步、评分与 SQL
     content/                        题目编辑格式校验
@@ -74,7 +75,7 @@ python3 back-end/server/serve_platform.py --port 8888
 
 TOEFL 构建只从明确白名单复制匿名预览所需文件。`clients/`、`templates/` 和服务端源码不会因为拆到新目录而被统一服务公开。后端内存测试构建和预览均写 `local-data/builds/toefl/`。
 
-独立 SAT 服务从 `front-end/sat/` 读静态文件，默认只向 `local-data/standalone-sat/` 写运行题库与图片。前端目录不再生成本机题库。完整题包只在 `local-data/exports/`；解压到 `local-data/sat-packs/` 后由统一服务读取。
+独立 SAT 服务从 `front-end/sat/` 读静态文件，默认只向 `local-data/standalone-sat/` 写运行题库与图片。前端目录不再生成本机题库。旧活动卷和完整题包导出仍在 `local-data/`。2026-10-23 用户另将离线题库完整复制到 `back-end/sat/questions/sat-packs/gengdu-offline/` 并授权提交该副本；统一服务的 Start Practice 及 Practice Builder 全库接口默认读取这里，可由 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 覆盖。个人记录和运行时写入仍归 `local-data/`，不随题库进入 Git。
 
 两个考试的完整源码仍保留在一个 Git 仓库；Git 可以识别大量文件为重命名。其他成员尚在旧目录的分支需要在合入时处理路径适配，不能只复制旧文件夹回来。建议其他成员在本次结构合入共用版本之后更新 `main` 再开新任务。
 

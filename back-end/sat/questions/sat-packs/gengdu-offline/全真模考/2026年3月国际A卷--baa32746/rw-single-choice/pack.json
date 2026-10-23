@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-baa32746a6be4d3abaf3159f02e36996-rw-single-choice",
+  "revision": 1,
+  "title": "2026年3月国际A卷 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-2319a810feb4d346bd482442ea43b6fcaeb1e3db3bcfe18b112d87e0dabbf6e9",
+      "path": "assets/2319a810feb4d346bd482442ea43b6fcaeb1e3db3bcfe18b112d87e0dabbf6e9.png",
+      "mediaType": "image/png",
+      "sha256": "2319a810feb4d346bd482442ea43b6fcaeb1e3db3bcfe18b112d87e0dabbf6e9",
+      "byteLength": 266618,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-baa32746a6be4d3abaf3159f02e36996",
+        "sourceQuestionId": "16172731",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/02996022770385893807.png"
+      }
+    },
+    {
+      "id": "asset-a939ed6b9c7bebaa8efeb6af57791f75412c2ac78c37e41fcc83f06721083d61",
+      "path": "assets/a939ed6b9c7bebaa8efeb6af57791f75412c2ac78c37e41fcc83f06721083d61.png",
+      "mediaType": "image/png",
+      "sha256": "a939ed6b9c7bebaa8efeb6af57791f75412c2ac78c37e41fcc83f06721083d61",
+      "byteLength": 195548,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-baa32746a6be4d3abaf3159f02e36996",
+        "sourceQuestionId": "16172758",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/24911064446379072666.png"
+      }
+    }
+  ]
+}

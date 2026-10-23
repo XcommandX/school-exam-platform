@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-6fed7f0db9044be88f2adb7efc003068-math-single-choice",
+  "revision": 1,
+  "title": "Systems of two linear equations in two variables_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-fdf91a0f667db3ee8a20e3d95d2dc7d8fdd5b672228e109345614527b90a1dd2",
+      "path": "assets/fdf91a0f667db3ee8a20e3d95d2dc7d8fdd5b672228e109345614527b90a1dd2.png",
+      "mediaType": "image/png",
+      "sha256": "fdf91a0f667db3ee8a20e3d95d2dc7d8fdd5b672228e109345614527b90a1dd2",
+      "byteLength": 25245,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-6fed7f0db9044be88f2adb7efc003068",
+        "sourceQuestionId": "8900294",
+        "url": "https://static.shanmaostar.com/default/nsat/91588793134472178865.png"
+      }
+    }
+  ]
+}

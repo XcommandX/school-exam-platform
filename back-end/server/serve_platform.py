@@ -19,7 +19,7 @@ import sys
 import tempfile
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import unquote, urlsplit
+from urllib.parse import quote, unquote, urlsplit
 import webbrowser
 import xml.etree.ElementTree as ET
 
@@ -352,6 +352,184 @@ def read_sat_library(library_root, collection_id=None):
     return {**result, **metadata, 'modules': modules}
 
 
+def _sat_index_signature(folder, paths):
+    """Stat only the declared text dependencies; never open image resources."""
+    signature = []
+    for relative in paths:
+        path = _safe_local_path(folder, relative)
+        if not path.is_file():
+            raise ValueError('A SAT question index dependency is missing.')
+        stat = path.stat()
+        if stat.st_size > MAX_BYTES:
+            raise ValueError('A SAT question index dependency exceeds 20 MB.')
+        signature.append((relative, stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns))
+    return tuple(signature)
+
+
+def _sat_index_text(blocks):
+    # Match SATPack.plainText so search sees exactly the same text after import.
+    if not isinstance(blocks, list):
+        raise ValueError('Invalid SAT index content blocks.')
+    values = []
+    for block in blocks:
+        if not isinstance(block, dict):
+            raise ValueError('Invalid SAT index content block.')
+        if block.get('type') == 'markdown' and isinstance(block.get('text'), str):
+            values.append(re.sub(r'</?u>', '', block['text']))
+        elif block.get('type') == 'image' and isinstance(block.get('alt', ''), str):
+            values.append(block.get('alt', ''))
+        else:
+            raise ValueError('Unsupported SAT index content block.')
+    return '\n\n'.join(values)
+
+
+def _read_sat_question_index_collection(folder, report, metadata):
+    """Read only manifests and items, with no solutions or binary assets."""
+    declared = report.get('packs')
+    if not isinstance(declared, dict) or not 1 <= len(declared) <= 64:
+        raise ValueError('SAT library package declarations are missing.')
+    collection_id = metadata['collectionId']
+    paths, sources, questions, references, pack_ids = ['conversion-report.json'], [], [], {}, set()
+    stamps = list(_sat_index_signature(folder, paths))
+    if _read_local_json(_safe_local_path(folder, paths[0])) != report:
+        raise ValueError('SAT library metadata changed while reading the question index.')
+    encode = lambda value: quote(value, safe="~()*!.'-")  # JavaScript encodeURIComponent
+    for directory, summary in declared.items():
+        if (not isinstance(summary, dict) or type(summary.get('questionCount')) is not int
+                or summary['questionCount'] < 1):
+            raise ValueError('Invalid SAT library package count.')
+        manifest_relative = directory + '/pack.json' if isinstance(directory, str) else ''
+        manifest_path = _safe_local_path(folder, manifest_relative)
+        stamps.extend(_sat_index_signature(folder, [manifest_relative]))
+        manifest = _read_local_json(manifest_path)
+        if (not isinstance(manifest, dict) or manifest.get('schemaVersion') != 'sat-question-pack/0.1-draft'
+                or manifest.get('documentType') != 'sat-question-pack' or manifest.get('exam') != 'sat'
+                or manifest.get('contentFormat') != 'markdown-latex/0.1-draft'
+                or manifest.get('section') not in {'math', 'reading-writing'}
+                or manifest.get('responseType') not in {'single-choice', 'student-produced-response'}
+                or manifest['section'] == 'reading-writing' and manifest['responseType'] != 'single-choice'
+                or not isinstance(manifest.get('title'), str) or not manifest['title'].strip()
+                or not isinstance(manifest.get('files'), dict) or set(manifest['files']) != {'items', 'solutions'}
+                or not isinstance(manifest.get('assets'), list)):
+            raise ValueError('Unsupported SAT question index package.')
+        pack_id, revision = manifest.get('id'), manifest.get('revision')
+        if (not isinstance(pack_id, str) or not re.fullmatch(r'sat:pack:[A-Za-z0-9][A-Za-z0-9._:-]*', pack_id)
+                or type(revision) is not int or not 1 <= revision <= 9007199254740991 or pack_id in pack_ids):
+            raise ValueError('Invalid or duplicate SAT question index package identity.')
+        pack_ids.add(pack_id)
+        item_path = _safe_local_path(manifest_path.parent, manifest['files']['items'])
+        solution_path = _safe_local_path(manifest_path.parent, manifest['files']['solutions'])
+        if len({manifest_path, item_path, solution_path}) != 3:
+            raise ValueError('SAT package files must have distinct paths.')
+        asset_paths = set()
+        for asset in manifest['assets']:
+            if (not isinstance(asset, dict) or not isinstance(asset.get('path'), str)
+                    or not asset['path'].startswith('assets/') or asset['path'] in asset_paths):
+                raise ValueError('Invalid SAT question index asset path.')
+            _safe_local_path(manifest_path.parent, asset['path'])
+            asset_paths.add(asset['path'])
+        item_relative = item_path.relative_to(folder).as_posix()
+        paths.extend((manifest_relative, item_relative))
+        stamps.extend(_sat_index_signature(folder, [item_relative]))
+        document = _read_local_json(item_path)
+        if (not isinstance(document, dict) or set(document) != {'items'} or not isinstance(document['items'], list)
+                or len(document['items']) != summary['questionCount']):
+            raise ValueError('SAT question index items disagree with package counts.')
+        section = 'Math' if manifest['section'] == 'math' else 'Reading and Writing'
+        source_id = 'pack:' + encode(pack_id) + '@' + str(revision)
+        sources.append({'id': source_id, 'fileName': manifest_relative, 'displayName': manifest['title'],
+                        'section': section, 'questionCount': len(document['items']),
+                        'defaultDurationSeconds': 2100 if manifest['section'] == 'math' else 1920,
+                        'responseType': manifest['responseType'],
+                        'packIdentity': {key: manifest[key] for key in ('id', 'revision', 'section', 'responseType')},
+                        'collectionId': collection_id, 'libraryCollectionId': collection_id})
+        seen_items = set()
+        for position, item in enumerate(document['items']):
+            spr = manifest['responseType'] == 'student-produced-response'
+            expected = {'id', 'revision', 'classification', 'content', 'prompt', 'source'} | (set() if spr else {'options'})
+            if (not isinstance(item, dict) or set(item) != expected or not isinstance(item.get('id'), str)
+                    or not re.fullmatch(r'sat:item:[A-Za-z0-9][A-Za-z0-9._:-]*', item['id'])
+                    or type(item.get('revision')) is not int or not 1 <= item['revision'] <= 9007199254740991
+                    or item['id'] in seen_items or not isinstance(item.get('classification'), dict)
+                    or set(item['classification']) != {'skill'} or not isinstance(item['classification']['skill'], str)
+                    or not item['classification']['skill'].strip() or not isinstance(item.get('source'), dict)
+                    or 'kind' not in item['source'] or set(item['source']) - {'kind', 'url', 'sourceSetId', 'sourceQuestionId'}
+                    or any(not isinstance(value, str) or not value.strip() for value in item['source'].values())):
+                raise ValueError('Invalid or duplicate SAT question index item identity.')
+            seen_items.add(item['id'])
+            options = item.get('options', [])
+            if (not isinstance(options, list) or not spr and len(options) != 4
+                    or any(not isinstance(option, dict) or set(option) != {'id', 'content'} for option in options)):
+                raise ValueError('Invalid SAT question index options.')
+            question = {'id': source_id + ':' + encode(item['id']) + '@' + str(item['revision']),
+                        'passage': _sat_index_text(item['content']), 'prompt': _sat_index_text(item['prompt']),
+                        'options': [_sat_index_text(option['content']) for option in options],
+                        'questionType': item['classification']['skill'], 'section': section,
+                        'responseType': manifest['responseType'], 'packId': pack_id, 'packRevision': revision,
+                        'itemId': item['id'], 'itemRevision': item['revision'], 'packSource': dict(item['source']),
+                        'libraryCollectionId': collection_id,
+                        'metadata': {'sourceId': source_id, 'sourceFileName': manifest_relative,
+                                     'sourceQuestionIndex': position, 'libraryCollectionId': collection_id},
+                        'indexOnly': True}
+            questions.append(question)
+            references[(pack_id, revision, item['id'], item['revision'])] = (manifest['section'], question)
+    order = report.get('sourceOrder')
+    if not isinstance(order, list) or len(order) != metadata['questionCount'] or len(references) != len(order):
+        raise ValueError('SAT question index source order is missing or incomplete.')
+    seen, counts = set(), {}
+    for position, reference in enumerate(order):
+        if (not isinstance(reference, dict) or reference.get('section') not in {'math', 'reading-writing'}
+                or type(reference.get('moduleNumber')) is not int or reference['moduleNumber'] < 1
+                or type(reference.get('number')) is not int or reference['number'] < 1):
+            raise ValueError('Invalid SAT question index source position.')
+        identity = tuple(reference.get(key) for key in ('packId', 'packRevision', 'itemId', 'itemRevision'))
+        if (not isinstance(identity[0], str) or type(identity[1]) is not int or not isinstance(identity[2], str)
+                or type(identity[3]) is not int or identity in seen or identity not in references
+                or references[identity][0] != reference['section']):
+            raise ValueError('SAT question index source reference does not match its package revision.')
+        seen.add(identity)
+        key = reference['section'], reference['moduleNumber']
+        counts[key] = counts.get(key, 0) + 1
+        references[identity][1]['metadata'].update({'sourceModuleNumber': reference['moduleNumber'],
+                                                 'sourceQuestionNumber': reference['number'], 'sourceOrderIndex': position})
+    if counts != {(module['section'], module['moduleNumber']): module['questionCount'] for module in metadata['modules']}:
+        raise ValueError('SAT question index source module counts disagree.')
+    signature = _sat_index_signature(folder, paths)
+    if signature != tuple(stamps):
+        raise ValueError('SAT library files changed while reading the question index.')
+    return {'sources': sources, 'questions': questions}, paths, signature
+
+
+def read_sat_library_question_index(library_root, cache=None):
+    """Search all cataloged questions without importing full packs into storage."""
+    available, indexed, errors = _sat_library_index(library_root)
+    sources, questions, source_ids = [], [], set()
+    cache = {} if cache is None else cache
+    for collection_id in list(cache):
+        if collection_id not in indexed:
+            del cache[collection_id]
+    for collection_id, (folder, report, metadata) in indexed.items():
+        try:
+            previous = cache.get(collection_id)
+            if (previous is not None and previous['folder'] == folder
+                    and previous['signature'] == _sat_index_signature(folder, previous['paths'])):
+                result = previous['result']
+            else:
+                # A changed dependency invalidates this collection only.
+                result, paths, signature = _read_sat_question_index_collection(folder, report, metadata)
+                cache[collection_id] = {'folder': folder, 'paths': paths, 'signature': signature, 'result': result}
+            ids = {source['id'] for source in result['sources']}
+            if source_ids & ids:
+                raise ValueError('Multiple SAT collections claim the same package revision.')
+            source_ids.update(ids)
+            sources.extend(result['sources'])
+            questions.extend(result['questions'])
+        except (OSError, ValueError, TypeError, KeyError):
+            cache.pop(collection_id, None)
+            errors.append({'collectionId': collection_id, 'error': 'The collection question index could not be read safely.'})
+    return {'schemaVersion': 1, 'available': available, 'sources': sources, 'questions': questions, 'errors': errors}
+
+
 def prepare_toefl_preview(root):
     """Build only the module's anonymous preview; never start its cloud worker."""
     root = Path(root).resolve()
@@ -397,7 +575,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     root = Path(root).resolve()
     private = Path(private_root).resolve() if private_root else root / 'local-data'
     configured_library = sat_library_root or os.environ.get('SAT_LIBRARY_ROOT')
-    library = Path(configured_library).expanduser() if configured_library else private / 'sat-packs/gengdu-offline'
+    library = Path(configured_library).expanduser() if configured_library else root / 'back-end/sat/questions/sat-packs/gengdu-offline'
     if not library.is_absolute():
         library = root / library
     banks = private / 'question-banks'
@@ -409,6 +587,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     token = secrets.token_urlsafe(32)
     project = hashlib.sha256(str(root).encode()).hexdigest()
     lock = threading.Lock()
+    question_index_lock, question_index_cache = threading.Lock(), {}
     toefl_preview = toefl_preview_status(root)
     session = {'mode': 'test-admin', 'loginEnabled': False, 'authenticated': False,
                'user': {'id': 'local-test-admin', 'name': 'admin', 'displayName': 'admin',
@@ -483,6 +662,14 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     return self.reply(200, read_sat_pack_collection(private))
                 except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
                     return self.reply(400, {'error': str(error)})
+            if route == '/api/sat-library/question-index':
+                try:
+                    with question_index_lock:
+                        return self.reply(200, read_sat_library_question_index(library, question_index_cache))
+                except OSError:
+                    return self.reply(400, {'error': 'The local SAT library could not be read.'})
+                except (ValueError, TypeError, KeyError):
+                    return self.reply(400, {'error': 'The local SAT question index is unavailable.'})
             if route == '/api/sat-library' or route.startswith('/api/sat-library/collections/'):
                 identity = None if route == '/api/sat-library' else route[len('/api/sat-library/collections/'):]
                 try:
@@ -673,7 +860,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=REPOSITORY)
     parser.add_argument('--port', type=int, default=8888)
-    parser.add_argument('--sat-library-root', type=Path, help='Local SAT catalog folder; defaults to SAT_LIBRARY_ROOT or local-data/sat-packs/gengdu-offline.')
+    parser.add_argument('--sat-library-root', type=Path, help='SAT catalog folder; defaults to SAT_LIBRARY_ROOT or back-end/sat/questions/sat-packs/gengdu-offline.')
     parser.add_argument('--open', action='store_true')
     args = parser.parse_args()
     prepare_toefl_preview(args.root)

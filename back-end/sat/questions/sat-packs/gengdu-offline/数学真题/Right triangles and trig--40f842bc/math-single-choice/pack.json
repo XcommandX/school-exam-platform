@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea-math-single-choice",
+  "revision": 1,
+  "title": "Right triangles and trigonometry_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-6c791c34e0356efffc05a6a201f734ccf04c26d84a23cd5a89d6fdba655e02bc",
+      "path": "assets/6c791c34e0356efffc05a6a201f734ccf04c26d84a23cd5a89d6fdba655e02bc.png",
+      "mediaType": "image/png",
+      "sha256": "6c791c34e0356efffc05a6a201f734ccf04c26d84a23cd5a89d6fdba655e02bc",
+      "byteLength": 17691,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900550",
+        "url": "https://static.shanmaostar.com/default/nsat/43392148067470088527.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-math-spr",
+  "revision": 1,
+  "title": "Models and scatterplots_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-ff02ed9fb62900360a855be4a9b3e56d4b74d074295587f335ecf0719ecd5cd3",
+      "path": "assets/ff02ed9fb62900360a855be4a9b3e56d4b74d074295587f335ecf0719ecd5cd3.png",
+      "mediaType": "image/png",
+      "sha256": "ff02ed9fb62900360a855be4a9b3e56d4b74d074295587f335ecf0719ecd5cd3",
+      "byteLength": 24805,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900453",
+        "url": "https://static.shanmaostar.com/default/nsat/99354249621372637653.png"
+      }
+    },
+    {
+      "id": "asset-854ff23ebebfd9132ac6a05c8386f27b71e1f961956034ac100d3667ca478f0a",
+      "path": "assets/854ff23ebebfd9132ac6a05c8386f27b71e1f961956034ac100d3667ca478f0a.png",
+      "mediaType": "image/png",
+      "sha256": "854ff23ebebfd9132ac6a05c8386f27b71e1f961956034ac100d3667ca478f0a",
+      "byteLength": 38326,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900454",
+        "url": "https://static.shanmaostar.com/default/nsat/81311618386669314317.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

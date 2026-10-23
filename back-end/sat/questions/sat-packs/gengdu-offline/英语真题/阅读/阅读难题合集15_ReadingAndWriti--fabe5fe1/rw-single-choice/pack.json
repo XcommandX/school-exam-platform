@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-fabe5fe145d74272b38604e7b92cdefb-rw-single-choice",
+  "revision": 1,
+  "title": "阅读难题合集15_ReadingAndWriting · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-0a74409d32ca6f1c66353280fbeb75153785d9fbdba199e47002536fe3469e45",
+      "path": "assets/0a74409d32ca6f1c66353280fbeb75153785d9fbdba199e47002536fe3469e45.png",
+      "mediaType": "image/png",
+      "sha256": "0a74409d32ca6f1c66353280fbeb75153785d9fbdba199e47002536fe3469e45",
+      "byteLength": 92324,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-fabe5fe145d74272b38604e7b92cdefb",
+        "sourceQuestionId": "17010910",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/52831046108113937471.png"
+      }
+    }
+  ]
+}

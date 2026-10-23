@@ -18,7 +18,7 @@ python3 back-end/tools/sat/question_bank_server.py --port 8876
 
 它默认从 `front-end/sat/` 读静态文件，将题库、图片等运行文件保存到 `local-data/standalone-sat/`，不写回前端目录。双击 `back-end/tools/sat/Start SAT Practice.command` 也可启动；停止服务在对应终端按 Control-C。不要让统一服务与独立服务共用一个端口或混用浏览器命名空间。
 
-使用 `front-end/sat/data/examples/synthetic-practice.json` 可验证两道原创合成题。真实题目和必要图片只放本机 `local-data/`，不放 Git。完整 98 题指定卷的结构、转换、加载、待审答案和备份见 [SAT 数学与整套练习](../sat-math-exam.md)。
+使用 `front-end/sat/data/examples/synthetic-practice.json` 可验证两道原创合成题。2026-10-23 用户明确授权将已复制到 `back-end/sat/questions/sat-packs/gengdu-offline/` 的题库作为可提交 GitHub 的共享副本，Start Practice 与 Practice Builder 全库接口共用它；其他真实资料和个人数据仍留在忽略的 `local-data/`。完整 98 题指定卷的结构、转换、加载、待审答案和备份见 [SAT 数学与整套练习](../sat-math-exam.md)。
 
 `source-snapshot.json` 是最初接入的历史源码导出摘要，保留当时相对路径与哈希。需要新源码导出时，运行 `back-end/tools/sat/prepare_sat_source.py`；新导出仍采用 `front-end/`、`back-end/`、`docs/` 布局，并在导出目录生成自己的 `docs/sat/SOURCE_MANIFEST.json`。该工具按固定白名单复制源码和许可，生成空题库与原创样例，不包含 `local-data/`、真实题目、备份或个人记录。
 
@@ -28,7 +28,9 @@ python3 back-end/tools/sat/question_bank_server.py --port 8876
 
 - `GET /api/sat-library` 返回三分类元数据、题数、原模块信息及不可用题集错误；目录只保存元数据，不预取全部题目。
 - `GET /api/sat-library/collections/{collectionId}` 只在 Start Exam / Restart Exam 时加载所选题集，返回 `packs`、可选 `assessment` 与带精确版本引用的来源 `modules`。切换分类、选中卡片、Open Review 和 Resume Exam 不重新下载题包。
-- 服务根目录可由 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 配置，默认 `local-data/sat-packs/gengdu-offline`；目录迁移后仍用稳定 `collectionId` 关联练习记录。
+- 服务根目录可由 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 配置，默认 `back-end/sat/questions/sat-packs/gengdu-offline`；显式参数优先于环境变量，相对路径以仓库根目录为基准。Start Practice 与 Practice Builder 全库索引共用该根目录，目录迁移后仍用稳定 `collectionId` 关联练习记录。
+
+上述共享题库由用户从原 `local-data/sat-packs/gengdu-offline/` 完整复制，迁移只调整服务端默认读取位置，不改题包内容、版本、活动卷或浏览器记录。旧 `/api/sat-packs` 活动卷和可写旧格式题库仍归 `local-data/`。转换工具仍默认输出到 `local-data/`，不会自动覆盖共享副本；更新共享副本时应保留稳定身份及版本引用。服务启动时确定题库路径，修改后需重启服务；已有 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 会继续覆盖默认值。
 
 示例（替换为自己的题集目录）：
 

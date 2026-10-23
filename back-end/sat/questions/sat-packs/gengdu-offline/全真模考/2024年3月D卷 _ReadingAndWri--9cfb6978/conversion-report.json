@@ -1,0 +1,597 @@
+{
+  "collectionId": "gengdu-offline-9cfb6978707549e2833524ad5e64feaf",
+  "sourceSha256": "61f8cf29ca5615bd9e51524c6cdeefbb152906bb55467a88df580d8f55e99c33",
+  "sourceUnmodified": true,
+  "questionCount": 54,
+  "imageReferences": 4,
+  "latexFragments": 0,
+  "superscriptSubscriptFragments": 5,
+  "discardedEditorTextareas": 0,
+  "missingSourceAltText": 4,
+  "tableConversions": [],
+  "reviewNotes": [
+    {
+      "issue": "all-source-standard-answers-unreviewed",
+      "policy": "confirmed-remains-needs-review-no-certified-grading"
+    },
+    {
+      "issue": "table-rendering-provisional",
+      "policy": "two-or-other-simple-explicit-cell-tables-use-static-svg-no-guessed-data"
+    },
+    {
+      "issue": "missing-original-image-alt",
+      "count": 4,
+      "policy": "neutral-alt-no-inferred-answer-description"
+    }
+  ],
+  "answerStatus": {
+    "needs-review": 54
+  },
+  "explanationsMissing": 54,
+  "sourceOrder": [
+    {
+      "sourceQuestionId": "1681167",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 1,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681167",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681168",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 2,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681168",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681169",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 3,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681169",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681170",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 4,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681170",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681171",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 5,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681171",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681172",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 6,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681172",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681173",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 7,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681173",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681174",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 8,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681174",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681175",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 9,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681175",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681176",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 10,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681176",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681177",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 11,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681177",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681178",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 12,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681178",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681179",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 13,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681179",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681180",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 14,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681180",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681181",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 15,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681181",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681182",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 16,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681182",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681183",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 17,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681183",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681184",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 18,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681184",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681185",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 19,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681185",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681186",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681186",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681187",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 21,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681187",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681188",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 22,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681188",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681189",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 23,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681189",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681190",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 24,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681190",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681191",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 25,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681191",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681192",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 26,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681192",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681193",
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "number": 27,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681193",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681194",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 1,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681194",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681195",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 2,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681195",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681196",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 3,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681196",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681197",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 4,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681197",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681198",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 5,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681198",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681199",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 6,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681199",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681200",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 7,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681200",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681201",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 8,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681201",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681202",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 9,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681202",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681203",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 10,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681203",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681204",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 11,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681204",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681205",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 12,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681205",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681206",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 13,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681206",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681207",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 14,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681207",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681208",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 15,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681208",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681209",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 16,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681209",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681210",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 17,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681210",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681211",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 18,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681211",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681212",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 19,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681212",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681213",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 20,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681213",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681214",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 21,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681214",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681215",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 22,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681215",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681216",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 23,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681216",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681217",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 24,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681217",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681218",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 25,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681218",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681219",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 26,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681219",
+      "itemRevision": 1
+    },
+    {
+      "sourceQuestionId": "1681220",
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "number": 27,
+      "packId": "sat:pack:gengdu-offline-9cfb6978707549e2833524ad5e64feaf-rw-single-choice",
+      "packRevision": 1,
+      "itemId": "sat:item:gengdu-gengdu-offline-9cfb6978707549e2833524ad5e64feaf-1681220",
+      "itemRevision": 1
+    }
+  ],
+  "modules": [
+    {
+      "section": "reading-writing",
+      "moduleNumber": 1,
+      "questionCount": 27
+    },
+    {
+      "section": "reading-writing",
+      "moduleNumber": 2,
+      "questionCount": 27
+    }
+  ],
+  "conversionMode": "bank",
+  "itemIdPolicy": "collection",
+  "fullSAT": false,
+  "assessmentFile": null,
+  "packs": {
+    "rw-single-choice": {
+      "questionCount": 54,
+      "assetCount": 4
+    }
+  },
+  "uniqueOriginalImages": 4,
+  "revisionChanges": []
+}

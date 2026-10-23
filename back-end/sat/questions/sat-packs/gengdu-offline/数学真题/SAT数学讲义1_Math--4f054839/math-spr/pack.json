@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-4f054839759149fb87a28bb07456efbe-math-spr",
+  "revision": 1,
+  "title": "SAT数学讲义1_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-6ffb792135d8367c4e02325cb99a7cded9a6006239e04d802d456880dd1bf62d",
+      "path": "assets/6ffb792135d8367c4e02325cb99a7cded9a6006239e04d802d456880dd1bf62d.png",
+      "mediaType": "image/png",
+      "sha256": "6ffb792135d8367c4e02325cb99a7cded9a6006239e04d802d456880dd1bf62d",
+      "byteLength": 10260,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-4f054839759149fb87a28bb07456efbe",
+        "sourceQuestionId": "8018326",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/49931121085247056157.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-09e1d51b4fe2471aa0e5c14f3de3a05d-6123605",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The perimeter of an isosceles right triangle is 18+ $18\\sqrt{2}$  inches. What is the length, ininches, of the hypotenuse of this triangle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-09e1d51b4fe2471aa0e5c14f3de3a05d",
+        "sourceQuestionId": "6123605",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$9\\sqrt{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$18\\sqrt{2}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-09e1d51b4fe2471aa0e5c14f3de3a05d-6123608",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "In triangle *FGH* and triangle *KLM*, the measures of angles *G* and *L* are each 30°, The lengths of $\\overline{GH}$  and $\\overline{LM}$  are each 34 centimeters, and $\\frac{GH}{GF}$ = $\\frac{LM}{LK}$  . which additional piece of information would be necessary to prove that triangle *FGH* is congruent to triangle *KLM*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-09e1d51b4fe2471aa0e5c14f3de3a05d",
+        "sourceQuestionId": "6123608",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The lengths of and $\\overline{FG}$  are $\\overline{KM}$  each 17 centimeters."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measures of angles *H* and *M* are each 60°"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The measures of angles *F* and *K* are each 90"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "No additional information is necessary."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

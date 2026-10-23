@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-75110f2d20084468b62faff62c175fb8-math-single-choice",
+  "revision": 1,
+  "title": "25年12月国际A卷 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f7159891f43d8b40aca16876de236e0dc05794f4ab6513de4a2fb1883bd52f7c",
+      "path": "assets/f7159891f43d8b40aca16876de236e0dc05794f4ab6513de4a2fb1883bd52f7c.png",
+      "mediaType": "image/png",
+      "sha256": "f7159891f43d8b40aca16876de236e0dc05794f4ab6513de4a2fb1883bd52f7c",
+      "byteLength": 37566,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584031",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/29356329234503993537.png"
+      }
+    },
+    {
+      "id": "asset-e16938e8f0b745bf4d60abe00ad976f6463979d465bd1a20be2a7a3fbcaa0ff2",
+      "path": "assets/e16938e8f0b745bf4d60abe00ad976f6463979d465bd1a20be2a7a3fbcaa0ff2.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "e16938e8f0b745bf4d60abe00ad976f6463979d465bd1a20be2a7a3fbcaa0ff2",
+      "byteLength": 748,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584032",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-32a9e330b5b64eb1050507ca43f49761462fdb1950b603ee415d0e6c026ce7a9",
+      "path": "assets/32a9e330b5b64eb1050507ca43f49761462fdb1950b603ee415d0e6c026ce7a9.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "32a9e330b5b64eb1050507ca43f49761462fdb1950b603ee415d0e6c026ce7a9",
+      "byteLength": 709,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584035",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-bf7c1bc4ec78bd451115619c6a38f8fe4fd3998b9558f12e1abc991325dadcbc",
+      "path": "assets/bf7c1bc4ec78bd451115619c6a38f8fe4fd3998b9558f12e1abc991325dadcbc.png",
+      "mediaType": "image/png",
+      "sha256": "bf7c1bc4ec78bd451115619c6a38f8fe4fd3998b9558f12e1abc991325dadcbc",
+      "byteLength": 4871,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584036",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/03155378593597505128.png"
+      }
+    },
+    {
+      "id": "asset-e8c474ebdca7ff7fea62f6e29889b156e74db28ffd26a5e136bb153dfdb0111d",
+      "path": "assets/e8c474ebdca7ff7fea62f6e29889b156e74db28ffd26a5e136bb153dfdb0111d.png",
+      "mediaType": "image/png",
+      "sha256": "e8c474ebdca7ff7fea62f6e29889b156e74db28ffd26a5e136bb153dfdb0111d",
+      "byteLength": 44145,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584038",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/91887915187991918922.png"
+      }
+    },
+    {
+      "id": "asset-f6524e32b6c0599cea4605ac3b140db15715d1c86513c74433915e1867f33156",
+      "path": "assets/f6524e32b6c0599cea4605ac3b140db15715d1c86513c74433915e1867f33156.png",
+      "mediaType": "image/png",
+      "sha256": "f6524e32b6c0599cea4605ac3b140db15715d1c86513c74433915e1867f33156",
+      "byteLength": 55446,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584049",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/24778484799380256117.png"
+      }
+    },
+    {
+      "id": "asset-f176ac9a77bbd5feb74f518da35d14cc8f738e36ce2e34ac22b802392b5825e7",
+      "path": "assets/f176ac9a77bbd5feb74f518da35d14cc8f738e36ce2e34ac22b802392b5825e7.png",
+      "mediaType": "image/png",
+      "sha256": "f176ac9a77bbd5feb74f518da35d14cc8f738e36ce2e34ac22b802392b5825e7",
+      "byteLength": 38593,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584051",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/72717376805982755150.png"
+      }
+    },
+    {
+      "id": "asset-f5ed5b271095ef82fa5b0ed626e3591ed8b5980700f02ae11413ba97cffae4ee",
+      "path": "assets/f5ed5b271095ef82fa5b0ed626e3591ed8b5980700f02ae11413ba97cffae4ee.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "f5ed5b271095ef82fa5b0ed626e3591ed8b5980700f02ae11413ba97cffae4ee",
+      "byteLength": 755,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584055",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-dce51e67f0f1ddbadd4a6b7b7e42c5b60ec6ea6f6002a05155616c505ace15dc",
+      "path": "assets/dce51e67f0f1ddbadd4a6b7b7e42c5b60ec6ea6f6002a05155616c505ace15dc.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "dce51e67f0f1ddbadd4a6b7b7e42c5b60ec6ea6f6002a05155616c505ace15dc",
+      "byteLength": 730,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584057",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-eda1f3150e019839d14731904949fd23ebd8685906081b29736cf9a1a89f2719",
+      "path": "assets/eda1f3150e019839d14731904949fd23ebd8685906081b29736cf9a1a89f2719.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "eda1f3150e019839d14731904949fd23ebd8685906081b29736cf9a1a89f2719",
+      "byteLength": 730,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584057",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-fc2d9d9ce137c7d81a52969d361964cfcfccb44b17541708c215a0936ace8a2b",
+      "path": "assets/fc2d9d9ce137c7d81a52969d361964cfcfccb44b17541708c215a0936ace8a2b.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "fc2d9d9ce137c7d81a52969d361964cfcfccb44b17541708c215a0936ace8a2b",
+      "byteLength": 730,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584057",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "asset-7fd0d9c4495a085ad40b6ba720d2e0d2af470dd35b9ac9284ad87dbd3e4e5f7b",
+      "path": "assets/7fd0d9c4495a085ad40b6ba720d2e0d2af470dd35b9ac9284ad87dbd3e4e5f7b.svg",
+      "mediaType": "image/svg+xml",
+      "sha256": "7fd0d9c4495a085ad40b6ba720d2e0d2af470dd35b9ac9284ad87dbd3e4e5f7b",
+      "byteLength": 730,
+      "source": {
+        "kind": "source-html-table-conversion",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584057",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

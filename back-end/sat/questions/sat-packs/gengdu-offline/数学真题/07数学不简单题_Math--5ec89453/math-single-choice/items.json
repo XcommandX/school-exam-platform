@@ -1,0 +1,526 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081406",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f\\left(x\\right)=3\\left(x-a\\right)\\left(x-b\\right)\\left(x-c\\right)$   \nThe function f is defined by the given equation, where a, b, and c are distinct constant. When a &lt; x &lt; b, the value of f(x) is positive. The graph of y= f(x) in the xy-plane contains the point (r, s), where r and s are constants. If s = 8, which of the following could be true?  \nⅠ. $r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$  \n$r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$  \n$r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081406",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ⅰ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Ⅰ and $r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$r\\lt a\\ \\ \\ b\\lt r\\lt a\\ \\ r\\gt c$ only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081407",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is a factor of $36x^2\\left(x+12\\right)-36\\left(x+12\\right)^3$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081407",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-12x+144"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2x+12"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6x+6"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "24x-144"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081408",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f(x)=(x-a)(x-b)$   \nThe function f is defined by the given equation, where a and b are integer constants. If $f(15)\\gt 0$, $f(18)\\lt 0$, and $f(21)\\gt 0$ , which of the following could be the value of $a+b$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081408",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "20"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "33"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081410",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f\\left(x\\right)=x^5+ax^4+bx^3$   \n$g\\left(x\\right)=x^5+sx^4+tx^3$   \nIn the polynomial functions *f* and *g* above, *a*, *b*, *s*, and *t* are constants. If the polynomial $h(x)=f(x)+g(x)$ is divisible by $x^4$  ,which of the following must be true ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081410",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a=s=0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$a+s=0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$b=t=0$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$b=t=0$$b+t=0$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081413",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $x^2+(y-1)^2=49$ represents circle A. Circle B is obtained by shifting circle A down 2 units in the xy-plane. Which of the following equations represents circle B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081413",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$(x-2)^2+(y-1)^2-49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x^2+(y-3)^2=49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$(x+2)^2+(y-1)^2-49$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x^2+(y+1)^2=49$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081415",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$\\frac{\\sqrt[3]{x^{17}y^5}}{5x^2\\left(\\sqrt[8]{y^8}\\right)}$   \nFor all positive values of x and y, the given expression is equivalent to which of the following?  \nⅠ.$\\frac{x^{\\frac{14}{3}}y^{\\frac{5}{3}}}{5xy}$   \nⅡ.$\\frac{\\sqrt[3]{x^{11}y^2}}{5}$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081415",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": ",Ⅰ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": ",Ⅱ only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": ",Ⅰand Ⅱ"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": ",Neither Ⅰ nor Ⅱ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081416",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $\\frac{y+13}{x-10}+\\frac{y(x-10)}{x^2y-10xy}$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081416",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy+y+3}{x^3y-20x^2y+100xy}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy+11y+13}{x^2y-10xy+x-10}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy^2+14xy-10y}{x^2y-10xy}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy^2+14xy-10y}{x^3y-20x^2y+100xy}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081417",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$\\frac{x^2}{\\sqrt{x^2-c^2}}=\\frac{c^2}{\\sqrt{x^2-c^2}}+39$   \n  \nIn the given equation, c is a positive constant. Which of the following is one of the solutions to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081417",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy+y+3}{x^3y-20x^2y+100xy}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy+11y+13}{x^2-10xy+x-10}$$-c^2-39^2$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy^2+14xy-10y}{x^2-10xy}$$-\\sqrt{39^2-c^2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{xy^2+14xy-10y}{x^3y-20x^2y+100xy}$$-\\sqrt{c^2+39^2}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-5ec89453417f40daba6ab3f5b5371071-6081418",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The equation $\\frac{36y^2+43y-25}{ky-3}=-9y-4-\\frac{37}{ky-3}$ is true for all values of $y\\ne\\frac{3}{k}$ ,where k is a constant . What is the value of k?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-5ec89453417f40daba6ab3f5b5371071",
+        "sourceQuestionId": "6081418",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "27"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-4"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-27"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

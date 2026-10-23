@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea-math-spr",
+  "revision": 1,
+  "title": "Right triangles and trigonometry_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-3a1189fe33bcc32fd114b5635be63e908a5acfce58e5d1d13552b8fd9f6b0a0a",
+      "path": "assets/3a1189fe33bcc32fd114b5635be63e908a5acfce58e5d1d13552b8fd9f6b0a0a.png",
+      "mediaType": "image/png",
+      "sha256": "3a1189fe33bcc32fd114b5635be63e908a5acfce58e5d1d13552b8fd9f6b0a0a",
+      "byteLength": 15344,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900548",
+        "url": "https://static.shanmaostar.com/default/nsat/28332024647778709857.png"
+      }
+    },
+    {
+      "id": "asset-56276c282ff9385378f901cf8710ca770c5b01da6c5bc22c4b7046a504f44cfe",
+      "path": "assets/56276c282ff9385378f901cf8710ca770c5b01da6c5bc22c4b7046a504f44cfe.png",
+      "mediaType": "image/png",
+      "sha256": "56276c282ff9385378f901cf8710ca770c5b01da6c5bc22c4b7046a504f44cfe",
+      "byteLength": 10735,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900549",
+        "url": "https://static.shanmaostar.com/default/nsat/16431531927152644639.png"
+      }
+    },
+    {
+      "id": "asset-fcfa77792c1fa81c0413b9b095abc55280407ed54ac238d902141d86b859ff83",
+      "path": "assets/fcfa77792c1fa81c0413b9b095abc55280407ed54ac238d902141d86b859ff83.png",
+      "mediaType": "image/png",
+      "sha256": "fcfa77792c1fa81c0413b9b095abc55280407ed54ac238d902141d86b859ff83",
+      "byteLength": 15675,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900552",
+        "url": "https://static.shanmaostar.com/default/nsat/60407325437431119644.png"
+      }
+    },
+    {
+      "id": "asset-15c5e0c26478afaca123d49d6e26cae71a0314b8757557f3ded81d1fe67a47cd",
+      "path": "assets/15c5e0c26478afaca123d49d6e26cae71a0314b8757557f3ded81d1fe67a47cd.png",
+      "mediaType": "image/png",
+      "sha256": "15c5e0c26478afaca123d49d6e26cae71a0314b8757557f3ded81d1fe67a47cd",
+      "byteLength": 14303,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900558",
+        "url": "https://static.shanmaostar.com/default/nsat/17460742163786801807.png"
+      }
+    },
+    {
+      "id": "asset-b91495d7febbc650b923a67fcdc1f8f4f9e7afa63f14b0c08d3dbb8cc777f825",
+      "path": "assets/b91495d7febbc650b923a67fcdc1f8f4f9e7afa63f14b0c08d3dbb8cc777f825.png",
+      "mediaType": "image/png",
+      "sha256": "b91495d7febbc650b923a67fcdc1f8f4f9e7afa63f14b0c08d3dbb8cc777f825",
+      "byteLength": 16943,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-40f842bc667343d4b6fcd470c5f8c6ea",
+        "sourceQuestionId": "8900565",
+        "url": "https://static.shanmaostar.com/default/nsat/39643392808562121590.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

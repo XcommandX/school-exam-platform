@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-75110f2d20084468b62faff62c175fb8-math-spr",
+  "revision": 1,
+  "title": "25年12月国际A卷 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-4b6dffdcc87d1fb6b4b839d36e1a907377fe9e71ccba3d598aeaa663b64cd1f8",
+      "path": "assets/4b6dffdcc87d1fb6b4b839d36e1a907377fe9e71ccba3d598aeaa663b64cd1f8.png",
+      "mediaType": "image/png",
+      "sha256": "4b6dffdcc87d1fb6b4b839d36e1a907377fe9e71ccba3d598aeaa663b64cd1f8",
+      "byteLength": 43138,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-75110f2d20084468b62faff62c175fb8",
+        "sourceQuestionId": "15584029",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/28959835292081688998.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

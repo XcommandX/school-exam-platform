@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c-math-spr",
+  "revision": 1,
+  "title": "Inference from sample statistics and margin of error_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-c8ad791cca40995aa845d1cb7d8885898ffcf3dc83a8eb4c0d9a10c8f016eb7a",
+      "path": "assets/c8ad791cca40995aa845d1cb7d8885898ffcf3dc83a8eb4c0d9a10c8f016eb7a.png",
+      "mediaType": "image/png",
+      "sha256": "c8ad791cca40995aa845d1cb7d8885898ffcf3dc83a8eb4c0d9a10c8f016eb7a",
+      "byteLength": 21147,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-febb6226c8de4e20ab4e92ed41f77e2c",
+        "sourceQuestionId": "8900447",
+        "url": "https://static.shanmaostar.com/default/nsat/18916270384960910604.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,2062 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112098",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Each rock in a collection of 70 rocks was classified as either igneous, metamorphic, or sedimentary, as shown in the frequency table."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-25c111a4b6f99391e31f44c6da78545412119129967bb3df9211f808ba04be3b",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "If one"
+        },
+        {
+          "type": "image",
+          "assetId": "asset-22f2709845f95c012d672067e1e084a4d6a3aa504fc2c449f35bab0805535b87",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "of these rocks is selected at random, what is the probability of selecting a rock that is igneous?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112098",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{10}{24}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{10}{36}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{10}{60}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{10}{70}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112099",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For certain air temperatures, the table gives wind chill temperatures for two different wind speeds."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-54f59658a99239735f7b0b27aa1b87adda3e15a76917976fb6d8cb6e4cf5ede3",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-54ba59a9726e85e1e03157027b2040cb87076b6dad4639555ec70022b21fc151",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "According to the table, what is the wind chill temperature, in degrees Fahrenheit (°F), when the air temperature is 27°F and the wind speed is 20 miles per hour (mph)? (Disregard the degree symbol when entering your answer.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112099",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "27"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "17"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112100",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$\\frac{j}{5}=k+9m$   \nThe given equation relates the distinct positive numbers *j*, *k*, and *m*. Which equation correctly expresses *j* in terms of *k* and *m*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112100",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$j=k+5\\left(9m\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$j=5\\left(k+9m\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$j=5k+9m$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$j=\\frac{k+9m}{5}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112101",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The function $h$is defined by $h\\left(x\\right)=5\\left|x\\right|$ What is the value of $h\\left(-4\\right)$*h*(-4)?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112101",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-20$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$1$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$9$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$20$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112102",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A student council group is selling car stickers for a fundraiser. They use the function $p\\left(x\\right)=5x-210$ to determine their profit $p\\left(x\\right)$, in dollars, for selling $x$car stickers. In order to earn a profit of \\$800, how many car stickers must they sell?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112102",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$160$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$42$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$202$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$20$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112103",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For two acute angles *X* and *Y*, the measure of angle *Y* is 32° and $\\frac{\\sin X}{\\cos Y}=1.$ What is the measure, in degrees, of angle *X*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112103",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$77$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$58$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$45$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$32$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112104",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Charles saves $\\frac{4}{5}$of the \\$230 he earns each week from his summer job. If Charles continues to save at this rate, how much money, in dollars, will Charles save in 3 weeks?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112104",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$184$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$368$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$552$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$690$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112106",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-dc34470562b7a31bd1004232d3bfdd34d773242e1867d9ef18347e2b84bae19e",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Line $k$is shown in the $xy$-plane. Line $n$(not shown) is perpendicular to line $k$and passes through the point (4, 7). Which equation defines line $n$$?$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112106",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=-\\frac{6}{5}x+\\frac{59}{5}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=-\\frac{6}{5}x+7$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=\\frac{6}{5}x+\\frac{59}{5}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=\\frac{6}{5}x+7$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112107",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "If $7\\left(6-9x\\right)+4=6\\left(6-9x\\right)+19$, what is the value of $6-9x$?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112107",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-15"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-1"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112108",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Trapezoid *CDEF* is similar to trapezoid *JKLM*, such that *C*, *D*, *E*, and *F* correspond to *J*, *K*, *L*, and *M*, respectively. The length of each side of trapezoid *JKLM* is 4 times the length of its corresponding side in trapezoid *CDEF*. The measure of angle *C* is 42°. What is the measure of angle *J*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112108",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "38°"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "42°"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "46°"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "168°"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112109",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-afd58a7646f934898b6692ce8322210a62dba9c8ca1e8b013e92c210a5747b43",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The table gives the average time *t*, in minutes, it takes Adriana to travel a certain distance *d*, in miles. Which equation could represent this linear relationship?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112109",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$t=50d$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$t=\\frac{1}{2}d$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$t=2d$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$t=\\frac{1}{50}d$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112110",
+      "revision": 2,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-ce239ddaf44d1f3fd2d02f10106fbe43fd356bc64235e33d12b7a51cfdb3fcda",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "In right triangle *ABC*, the tangent of $\\lt C$∠$\\lt C$ is$\\frac{3}{4}$  \n$\\frac{3}{4}.$ What is the length of $\\overline{AB}$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112110",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{35}{16}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\frac{15}{4}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$54$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$72$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112111",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f\\left(x\\right)=x^2-12x+30$   \nWhat is the minimum value of the given function?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112111",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-12"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "-6"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112114",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$x\\left(x+9\\right)-13=0$   \nWhat are the solutions to the given equation?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112114",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x=\\frac{9\\pm\\sqrt{29}}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x=\\frac{9\\pm\\sqrt{133}}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x=\\frac{-9\\pm\\sqrt{29}}{2}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$x=\\frac{-9\\pm\\sqrt{133}}{2}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112115",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The positive number *a* is 290% of the number *b*, and *a* is 90% of the number *c*. If *c* is *p*% of *b*, which of the following is closest to the value of *p*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112115",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2.61"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3.8"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "322"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "3.82"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112116",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A computer program models the total mass of the population of a certain type of algae after the algae was placed in an environment where it has no natural predators. According to the model, the estimated total mass of this population of algae at the end of every 6‑hour period is 129% greater than the estimated total mass of this population of algae at the end of the previous 6‑hour period, and the estimated total mass of this population of algae is 613.90 grams after 18 hours. Which equation best represents this model, where *A* is the estimated total mass, in grams, of the population of algae after *x* hours, and *x* &lt; 50?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112116",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$A=34.11\\left(1.29\\right)$$A=34.11\\left(1.29\\right)^{\\frac{x}{6}}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$A=34.11\\left(1.29\\right)$$A=34.11\\left(1.29\\right)^{\\frac{x}{6}}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$A=34.11\\left(1.29\\right)$$A=34.11\\left(1.29\\right)^{\\frac{x}{6}}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$A=34.11\\left(1.29\\right)$$A=34.11\\left(1.29\\right)^{\\frac{x}{6}}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112117",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-d17904f62439aed0b32f32e37b75bcde929eca42667861daa7f278846e971d70",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "What is an equation of the graph shown?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112117",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=2^{-x}+4$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=2^{-x}+4$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=2^{-x}+4$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=2^{-x}+4$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112119",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For the linear function $\\int_{ }$$f$  , $\\int_{ }^{ }$  $f(0)_{ }$$f\\left(0\\right)=0$ and  $f(0)_{ }$$f\\left(0\\right)=0$ . Which equation defines $f$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112119",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{x}{7}^{ }$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{x}{7}^{ }$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{x}{7}^{ }$$x+7$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{x}{7}^{ }$$x+7$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112120",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows"
+        },
+        {
+          "type": "image",
+          "assetId": "asset-9b7a90e5e7412d7f24a5f574bd8ab5658377a209bedb643bae45c633fb97f8e9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "the relationship between two variables, *x* and *y*."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-d59e65afba5f53f9687ba9dfdda815bc429222ab36084f577a9d1ed69bd1cb46",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-9b7a90e5e7412d7f24a5f574bd8ab5658377a209bedb643bae45c633fb97f8e9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-9b7a90e5e7412d7f24a5f574bd8ab5658377a209bedb643bae45c633fb97f8e9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Which of the following equations is the most appropriate linear model for the data shown?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112120",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=59.34+0.91x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=59.34+0.91x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=59.34+0.91x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=-0.91x$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112121",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Which expression is equivalent to $9yz^3+6yz+3yz^3$ ?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112121",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$9yz^3+6yz+3yz^3$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$12yz^6+6yz$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$12yz^6+6yz$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$12yz^6+6yz$$18yz^7$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112122",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-0b7ce5d539c4fe8eaaf44ee5e3729fc68cab00fac1d290947dcd69a71eb2d8d1",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-8ba2cb698003818398e7201a83139428817aa4f5b8c93061f75838594d79ba4c",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The figure shows a rectangular pool surrounded by a concrete path that is *x* feet (ft) wide on all sides. The pool is 21 ft long and 11 ft wide. The area of the concrete path is 144 ft$^{2}$. What is the value of *x*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112122",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "18"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112123",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A sum of 9,000 dollars was invested in a certificate of deposit (CD) that earns interest, and no other deposits or withdrawals were made after that. The function $f\\left(x\\right)=9,000\\left(1+0.03\\right)^x$ gives the value of the CD, in dollars, $x$ years after the investment was initially made, where$x\\le5$  . Which of the following is the best interpretation of the statement \"$f\\left(2\\right)$  is approximately equal to 9,474.08\" in this context?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112123",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The value of the CD would be approximately 9,474.08 dollars if invested at 2% interest."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "9,474.08 days after the investment was made, the value of the CD was approximately 2 times greater than its initial value."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2 years after the investment was made, the value of the CD was approximately 9,474.08 dollars."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "2 years after the investment was made, the value of the CD was approximately 9,474.08 dollars greater than its initial value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112124",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-121f8fc8396586b20afaec05fd9f1d90cf60bd6ff0e44406a530700e93ff7b7c",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-e509e5bf27a60052bb557389b46efad7ae87b4f904b3c0f178b37de5634b912b",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The histogram summarizes the distribution of an original data set that represents the number of points per game a basketball team has scored in the last 50 games played. If the team scores 18 points in the next game and this game is added to the original data set to create a new data set of 51 values, which of the following must be true?  \nI. The median number of points per game for the new data set is less than the median number of points per game for the original data set.  \nII. The mean number of points per game for the new data set is less than the mean number of points per game for the original data set."
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112124",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112125",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b2c6b4894e2ae39554b07e75af4d9ce53dabeea69be24a995aa8c9691bbd6778",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-f66771c448bd03a4d8b47e9ff7745e913c3690eb9b6939b0aec04630bc1fbf82",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "What is an equation of the graph shown?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112125",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$49x-35y=-126$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$49x-35y=-126$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$7x-5y=-126$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$7x-5y=-126$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112127",
+      "revision": 2,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-6c4c1f13315316d86a16c0a608d268d9ddd73b1f8bf29889a8715b5728906a7a",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The shaded region shown represents the solutions to which inequality?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112127",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y\\gt 4x+3$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y\\gt 4x-3$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y\\lt 4x+3$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y\\lt 4x-3$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112128",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A circle in the *xy*-plane has its center at (-5, 2) and the point (-9, 5) lies on the circle. Which equation represents this circle?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112128",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-5\\right)^2+\\left(y+2\\right)^2=5$$(x-5)^2+(y+2)^2=5$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x+5\\right)^2+\\left(y-2\\right)^2=5$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x-5\\right)^2+\\left(y+2\\right)^2=25$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$\\left(x+5\\right)^2+\\left(y-2\\right)^2=25$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112129",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$18\\left(x+5\\right)=2\\left(x+c\\right)+16x$   \n  \nIn the given equation, *c* is a constant. The equation has infinitely many solutions. What is the value of *c*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112129",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "90"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "45"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "10"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112130",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Hannah and Wyatt are saving money to purchase a car. Hannah saves $\\frac{1}{5}$  of her salary each month, and Wyatt saves $\\frac{2}{7}$  of his salary each month. Together, they save a total of \\$3,270 from their monthly salaries each month. If *h* and *w* represent Hannah's and Wyatt's monthly salaries, in dollars, respectively, which equation shows the relationship between *h* and *w*?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112130",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$h+w=3,270$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$h+2w=3,270$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$10h+7w=114,450$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$7h+10w=114,450$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112132",
+      "revision": 2,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A giant panda is predicted to have a mass between $\\frac{1}{950}$  and $\\frac{1}{850}$  times its mother's mass when it is born. If its mother is predicted to have a mass of 95,950 grams when the giant panda is born, which inequality best represents the prediction of the giant panda's mass *p*, in grams, when it is born?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112132",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$10.1\\le p\\lt 11.289$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$101\\le p\\lt 112.89$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$1,010\\le p\\lt 1,128.9$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$10,100\\le p\\lt 11,289$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112133",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$x-a=\\left(x-a\\right)\\left(x-24\\right)$   \nWhich of the following are solutions to the given equation, where *a* is a constant and *a* &gt; 25?  \nI. *a*  \nII. 24  \nIII. 25"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112133",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and III only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II and III only"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I, II, and III"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112134",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "At a nature preserve, a wildlife biologist counted bald eagles from an observation deck at the same time each day for 21 days. The table summarizes the resulting data set, data set A."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-bf9488f0fb7a32a706b18c8c6109be9e1e55423f37eabbf17244310f9325c2e0",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The data value 19 was recorded in error and is removed from data set A to create data set B, which consists of the remaining 20 data values. Which statement best compares the median of data set A and the median of data set B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112134",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is less than the median of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is equal to the median of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The median of data set B is greater than the median of data set A."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "There is not enough information to compare the medians of the two data sets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112135",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$f\\left(x\\right)=4^{\\left(-5（x+1\\right)}$$f(x)=4^{-5（x+1)}$   \nWhich of the following equivalent forms of the given function $f$  displays, as the base or the coefficient, the *y*-coordinate of the *y*-intercept of the graph of $y=f\\left(x\\right)$  in the *xy*-plane?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112135",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\frac{1}{1,024}\\left(\\frac{1}{4}\\right)^{5x}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=\\left(\\frac{1}{4}\\right)^{5x+5}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=4^{-5x-5}$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=1,024^{-x-1}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39-24112139",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$\\left(5x+10\\right)\\left(2x+1\\right)-\\left(3x+34\\right)$   \n Which of the following is a factor of the given expression ?  \nI. $2x+6$   \nII.$10x-8$"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-6bf4283e0a7b43dd941650a8b9d7df39",
+        "sourceQuestionId": "24112139",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I only"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "II only"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "I and II"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Neither I nor II"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

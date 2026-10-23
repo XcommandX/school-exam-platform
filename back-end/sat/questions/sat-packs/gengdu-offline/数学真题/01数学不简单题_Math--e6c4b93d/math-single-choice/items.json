@@ -1,0 +1,800 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370552",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-b18d5791ec3d11e2b4970d96d9490f5e1232d3cfa986cef18a598491c25fc887",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "In the scatterplot above, each point represents the quantity $n$ of a product sold by a business at price $p$ , in dollars, for one of 30 days. Which of the following equations best models the relationship between price and quantity sold?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370552",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$n=50p+200$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$n=-50p+200$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$n=-50p+300$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$n=\\frac{1}{50}p+2$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370553",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-5eb83a11182cff607eaa6cb66cc3821c02f1a1f087d51aa729e300fd0b5e84ee",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot above shows a company's ice cream sales $d$, in dollars, and the high temperature $t$, in degrees Celsius (°C), on 12different days. A line of best fit for the data is also shown. Which of the following could be an equation of the line of best fit?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370553",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$d=0.03t+402$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$d=10t+402$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$d=33t+300$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$d=33t+84$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370554",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "At a depth of h meters below the surface,the estimated total pressure P$_{1}$, in kilopascals (kPa), a diver experienced is given by P$_{1}$= 10h + 101, which is a combination of estimated water pressure and estimated atmospheric pressure. After maintaining a certain depth, the diver descended d additional meters. The estimated total pressure P$_{2}$, in kPa, the diver experienced after descending these d additional meters is given by P$_{2}$= 10d + 211. Which of the following is the best interpretation of 211 in this context?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370554",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated total pressure, in kPa, the diver experienced when the diver began to descend d additional meters"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated total pressure, in kPa, the diver experienced at a depth of d meters"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated increase in the total pressure, in kPa, the diver experienced for each increase in the depth by 1 meter"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "The estimated increase in the total pressure, in kPa, the diver experienced for each increase in the depth by d meters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370555",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Alex engages in up to 3 types of exercise each week for a total of 9 hours while training for a triathlon. Alex swims for the same number of <u>minutes</u> each week, The equation y= 540-x-200 represents the situation where Alex bikes for x minutes during a week and runs for any remaining training time y, in minutes. If this equation is graphed in the xy-plane, which statement is the best interpretation of the x-intercept of the graph?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370555",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "During a week when Alex swims for 340 minutes, he bikes for 200 minutes."
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "Each week, Alex bikes and runs for a total of 340 minutes."
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "During a week when Alex doesn't bike, he runs for 340 minutes."
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "During a week when Alex doesn't run, he bikes for 340 minutes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370557",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "For groups of 25 or more people, a museum charges \\$21 per person for the first 25 people and \\$14 for each additional person. Which function *f* gives the total charge, in dollars, for a tour group with *n* people, where n $\\ge$ 25?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370557",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(n)=14n+175$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(n)=14n+525\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(n)=35n-350$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(n)=14n+21\\right)$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370558",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A window repair specialist charges \\$220 for the first two hours of repair plus an hourly fee for each additional hour. The total cost for 5 hours of repair is \\$400. Which function *f* gives the total cost, in dollars, for *x* hours of repair, where x $\\ge$ 2?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370558",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x)=60x+100\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f(x)=60x+220$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x)=80x\\right)$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x)=80x+220\\right)$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370559",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The cost of renting a piece of equipment is \\$78*n* for the first day and \\$39*n* for each additional day, where *n* is a positive integer. Which of the following functions gives the cost *C(x)*, in dollars, of renting this equipment for *x* days, where *x* is a positive integer?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370559",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$C\\left(x\\right)=39nx+39n$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$C\\left(x\\right)=39nx+39n$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$C\\left(x\\right)=39nx+39n$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$C\\left(x\\right)=39nx+39n$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370560",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A beekeeper's initial observation of the population of a certain bee colony was 1,100 bees. The beekeeper set a goal to increase the population to2,600 bees. The beekeeper uses a model that predicts the population of this bee colony begins at 1,100 and increases by 120 bees per week in  first two weeks after the initial observation, and then increases by 180 bees per week until the beekeeper's goal is reached.  According to this model, at the end of week w after the initial observation, where w＞2, which of the following functions gives the predicted number of bees still needed to reach the beekeeper's goal?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370560",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p(w)=2,600-180w$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p(w)=2,480+180w$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p(w)=1,620-180w$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$p(w)=-120+180w$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370567",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-da699bc76f25fb935238e10bc23911de65ba04b918ef980552220dd009f3ee0a",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, x and y. for data set A. A line of best fit for the data is also shown,.Data set B is created by subtracting 9 units from the value of y for each data point from data set A. Which of the following is closest to the y-coordinate of the y-intercept of the line of best fit for data set B?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370567",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "45.57"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "53"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "59.62"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "62.75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370568",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-9a27573b4a519281683394fa0a02bd7f00c5971355513afdd3a819b003143868",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between two variables, ***x*** and ***y***, for data set P. A line of best fit for the data is also shown. Data set Q is created by adding 649 units to the value of ***x*** for each data point from data set P. Which of the following could be an equation of a line of best fit for data set Q?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370568",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=28+\\frac{35}{1,301}x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=28+\\frac{35}{1,301}x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=28+\\frac{35}{1,301}x$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$y=28+\\frac{35}{1,301}x$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370569",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-674a348cd99214f090a8852bb448e5d704cf4965ee15d684adbae9b2ba8c3f25",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of the linear function y= f(x) + 11 is show. If c and d are positive constants,which equation could define f?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370569",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=-d-cx$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=d+cx$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=d-cx$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$f\\left(x\\right)=-d+cx$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370570",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-1e41c81238deb594f38a1c60424c821446a9e7b500f7fca3a1365b0f6c7e981e",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The graph of line ***h*** is shown in the *xy*-plane. Line ***k*** (not shown) is defined by $sx+40y=t$ where ***s*** and ***t*** are constants. If line ***k*** is graphed in this *xy*-plane, the result is a graph of two linear equations. This system of two linear equations has no solution. Which of the following is **NOT** a possible value of ***t***?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370570",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-320$"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-320$"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-320$"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "$-320$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370571",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-57cedbd879319f0b55d5581a90e62df78b4c5be218d93407bcc3f12512f9f6d2",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "A certain open star cluster contains M-type stars and K-type stars. The estimated total mass of M-type and K-type stars in this open star cluster is 115,478 quettagrams. The graph shown models the possible combinations of the number of M-type stars, x, and K-type stars, y, that could be in this open star cluster if all the M-type stars have the same estimated mass and all the K-type stars have the same estimated mass. Based on the graph, which of the following is closest to the estimated mass, in quettagrams, of each M-typestar in this cluster?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370571",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "836"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "990"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "54450"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "61028"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

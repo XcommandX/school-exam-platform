@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-math-single-choice",
+  "revision": 1,
+  "title": "Distributions and measures of center and spread_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-58a8eac98d2677afef41d7594ccefcd5aac07df0ff19653bf26d83d77ff99a69",
+      "path": "assets/58a8eac98d2677afef41d7594ccefcd5aac07df0ff19653bf26d83d77ff99a69.png",
+      "mediaType": "image/png",
+      "sha256": "58a8eac98d2677afef41d7594ccefcd5aac07df0ff19653bf26d83d77ff99a69",
+      "byteLength": 12790,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900428",
+        "url": "https://static.shanmaostar.com/default/nsat/88425805243590555962.png"
+      }
+    },
+    {
+      "id": "asset-18632a4f0b2c48203c4920c146dbd4740ca553c43484549588044037135a7bf9",
+      "path": "assets/18632a4f0b2c48203c4920c146dbd4740ca553c43484549588044037135a7bf9.png",
+      "mediaType": "image/png",
+      "sha256": "18632a4f0b2c48203c4920c146dbd4740ca553c43484549588044037135a7bf9",
+      "byteLength": 16387,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900430",
+        "url": "https://static.shanmaostar.com/default/nsat/13289087615627300991.png"
+      }
+    },
+    {
+      "id": "asset-0dbbbf3b9474b2d604963ad6327015a17d854c532d35c94a88abff952c8db320",
+      "path": "assets/0dbbbf3b9474b2d604963ad6327015a17d854c532d35c94a88abff952c8db320.png",
+      "mediaType": "image/png",
+      "sha256": "0dbbbf3b9474b2d604963ad6327015a17d854c532d35c94a88abff952c8db320",
+      "byteLength": 17148,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900432",
+        "url": "https://static.shanmaostar.com/default/nsat/91010434494555115213.png"
+      }
+    },
+    {
+      "id": "asset-1d1f91b6029cdea044afabce0b14e3d4f6507969f9d68056eccc75847b8004ac",
+      "path": "assets/1d1f91b6029cdea044afabce0b14e3d4f6507969f9d68056eccc75847b8004ac.png",
+      "mediaType": "image/png",
+      "sha256": "1d1f91b6029cdea044afabce0b14e3d4f6507969f9d68056eccc75847b8004ac",
+      "byteLength": 30674,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900433",
+        "url": "https://static.shanmaostar.com/default/nsat/76857956487705008925.png"
+      }
+    },
+    {
+      "id": "asset-926ebd7e88721cf930d589c4f0185ad0a1dc4785bd09e63c6da8485bdccf862e",
+      "path": "assets/926ebd7e88721cf930d589c4f0185ad0a1dc4785bd09e63c6da8485bdccf862e.png",
+      "mediaType": "image/png",
+      "sha256": "926ebd7e88721cf930d589c4f0185ad0a1dc4785bd09e63c6da8485bdccf862e",
+      "byteLength": 7350,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900434",
+        "url": "https://static.shanmaostar.com/default/nsat/39455513597542275954.png"
+      }
+    },
+    {
+      "id": "asset-948acf3225be4b74c8341e8935e71de2d8aed7a3a1252751a27ae89c5d05ff59",
+      "path": "assets/948acf3225be4b74c8341e8935e71de2d8aed7a3a1252751a27ae89c5d05ff59.png",
+      "mediaType": "image/png",
+      "sha256": "948acf3225be4b74c8341e8935e71de2d8aed7a3a1252751a27ae89c5d05ff59",
+      "byteLength": 6862,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900437",
+        "url": "https://static.shanmaostar.com/default/nsat/03125333021321208886.png"
+      }
+    },
+    {
+      "id": "asset-aeb00407b6b321ff9ad6afa103c8f0fc700fecc1c84cd3d09cae5865b7a4aa37",
+      "path": "assets/aeb00407b6b321ff9ad6afa103c8f0fc700fecc1c84cd3d09cae5865b7a4aa37.png",
+      "mediaType": "image/png",
+      "sha256": "aeb00407b6b321ff9ad6afa103c8f0fc700fecc1c84cd3d09cae5865b7a4aa37",
+      "byteLength": 6894,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900437",
+        "url": "https://static.shanmaostar.com/default/nsat/87174748837773407625.png"
+      }
+    },
+    {
+      "id": "asset-b80ed09cd8d3a1723c1f83502d297053b78b0e96bdca6961d727e84b4b85806b",
+      "path": "assets/b80ed09cd8d3a1723c1f83502d297053b78b0e96bdca6961d727e84b4b85806b.png",
+      "mediaType": "image/png",
+      "sha256": "b80ed09cd8d3a1723c1f83502d297053b78b0e96bdca6961d727e84b4b85806b",
+      "byteLength": 6787,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900437",
+        "url": "https://static.shanmaostar.com/default/nsat/11720568732675753762.png"
+      }
+    },
+    {
+      "id": "asset-b0fa92ebfe8b2d2082ab7d04dfa384e6e01f9ee02e0b28646cae93cfecbda1e2",
+      "path": "assets/b0fa92ebfe8b2d2082ab7d04dfa384e6e01f9ee02e0b28646cae93cfecbda1e2.png",
+      "mediaType": "image/png",
+      "sha256": "b0fa92ebfe8b2d2082ab7d04dfa384e6e01f9ee02e0b28646cae93cfecbda1e2",
+      "byteLength": 6955,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900437",
+        "url": "https://static.shanmaostar.com/default/nsat/00609184847899317698.png"
+      }
+    },
+    {
+      "id": "asset-a2ddabf046113b4190adb8bb9b4bea7fb849f0e13db283cf018e1c52634af32e",
+      "path": "assets/a2ddabf046113b4190adb8bb9b4bea7fb849f0e13db283cf018e1c52634af32e.png",
+      "mediaType": "image/png",
+      "sha256": "a2ddabf046113b4190adb8bb9b4bea7fb849f0e13db283cf018e1c52634af32e",
+      "byteLength": 7705,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900439",
+        "url": "https://static.shanmaostar.com/default/nsat/63886502958886422008.png"
+      }
+    },
+    {
+      "id": "asset-e40e3d4fd90807bdb8d17f2396099ada32a7ab0a4ff7ea4bd00bf3720cc01145",
+      "path": "assets/e40e3d4fd90807bdb8d17f2396099ada32a7ab0a4ff7ea4bd00bf3720cc01145.png",
+      "mediaType": "image/png",
+      "sha256": "e40e3d4fd90807bdb8d17f2396099ada32a7ab0a4ff7ea4bd00bf3720cc01145",
+      "byteLength": 79817,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900443",
+        "url": "https://static.shanmaostar.com/default/nsat/04413114927070509346.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-3eece9fc582a475289f3a3d295efc85b-rw-single-choice",
+  "revision": 1,
+  "title": "Bluebook 6 英语部分（hard module） · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-4f61e6399dbce927c357c01b602e63338516d6e45d4f3fbee93cdbafa8276b84",
+      "path": "assets/4f61e6399dbce927c357c01b602e63338516d6e45d4f3fbee93cdbafa8276b84.png",
+      "mediaType": "image/png",
+      "sha256": "4f61e6399dbce927c357c01b602e63338516d6e45d4f3fbee93cdbafa8276b84",
+      "byteLength": 114185,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eece9fc582a475289f3a3d295efc85b",
+        "sourceQuestionId": "1844504",
+        "url": "https://static.shanmaostar.com/default/nsat/12856583555027857349.png"
+      }
+    },
+    {
+      "id": "asset-e754fd4314156ebae1fae85c6ec757fe42ad4723844e652ef17919fda423ced8",
+      "path": "assets/e754fd4314156ebae1fae85c6ec757fe42ad4723844e652ef17919fda423ced8.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "e754fd4314156ebae1fae85c6ec757fe42ad4723844e652ef17919fda423ced8",
+      "byteLength": 84165,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eece9fc582a475289f3a3d295efc85b",
+        "sourceQuestionId": "1844506",
+        "url": "https://static.shanmaostar.com/default/nsat/93471500160127914186.png"
+      }
+    },
+    {
+      "id": "asset-55a6d1c8e9541ca0deddf6aa3070a2b8bcd68ba2a5317b46b640f8628b1c0daa",
+      "path": "assets/55a6d1c8e9541ca0deddf6aa3070a2b8bcd68ba2a5317b46b640f8628b1c0daa.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "55a6d1c8e9541ca0deddf6aa3070a2b8bcd68ba2a5317b46b640f8628b1c0daa",
+      "byteLength": 74530,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eece9fc582a475289f3a3d295efc85b",
+        "sourceQuestionId": "1844532",
+        "url": "https://static.shanmaostar.com/default/nsat/57497571765848393342.png"
+      }
+    },
+    {
+      "id": "asset-c3563c8bb848a7721cb1e8a57a208382fecb27d1e7ba3a35f0d925e08f5b740e",
+      "path": "assets/c3563c8bb848a7721cb1e8a57a208382fecb27d1e7ba3a35f0d925e08f5b740e.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "c3563c8bb848a7721cb1e8a57a208382fecb27d1e7ba3a35f0d925e08f5b740e",
+      "byteLength": 116687,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-3eece9fc582a475289f3a3d295efc85b",
+        "sourceQuestionId": "1844534",
+        "url": "https://static.shanmaostar.com/default/nsat/28230303160494035810.png"
+      }
+    }
+  ]
+}

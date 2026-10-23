@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-bca39786430347d3894996cc8988b88e-rw-single-choice",
+  "revision": 1,
+  "title": "2025年8月美国A卷 · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-8b608a7a39b27e9f7f09e0f658c5741d95a91dfda001d9c4604c12f040f4d9b7",
+      "path": "assets/8b608a7a39b27e9f7f09e0f658c5741d95a91dfda001d9c4604c12f040f4d9b7.png",
+      "mediaType": "image/png",
+      "sha256": "8b608a7a39b27e9f7f09e0f658c5741d95a91dfda001d9c4604c12f040f4d9b7",
+      "byteLength": 63624,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-bca39786430347d3894996cc8988b88e",
+        "sourceQuestionId": "12850280",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/49692784935622126344.png"
+      }
+    },
+    {
+      "id": "asset-692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629",
+      "path": "assets/692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629.png",
+      "mediaType": "image/png",
+      "sha256": "692bdff5f85aa1bc45e141784b2f6381a7b9e94051cbb3bb9e83678233418629",
+      "byteLength": 81960,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-bca39786430347d3894996cc8988b88e",
+        "sourceQuestionId": "12850283",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/92756988722185090722.png"
+      }
+    },
+    {
+      "id": "asset-d821b824bf8874983e386ac8fcd2206fa2eeb022a4cb7a9f4db2806e785cb095",
+      "path": "assets/d821b824bf8874983e386ac8fcd2206fa2eeb022a4cb7a9f4db2806e785cb095.png",
+      "mediaType": "image/png",
+      "sha256": "d821b824bf8874983e386ac8fcd2206fa2eeb022a4cb7a9f4db2806e785cb095",
+      "byteLength": 91413,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-bca39786430347d3894996cc8988b88e",
+        "sourceQuestionId": "12850309",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/54747300882348715784.png"
+      }
+    }
+  ]
+}

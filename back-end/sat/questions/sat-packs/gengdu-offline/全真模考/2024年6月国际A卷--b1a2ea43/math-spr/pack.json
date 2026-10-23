@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb-math-spr",
+  "revision": 1,
+  "title": "2024年6月国际A卷 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-8cb399bd0780b9d3afb83ff81b6e070969785b95964628101b574de432239e24",
+      "path": "assets/8cb399bd0780b9d3afb83ff81b6e070969785b95964628101b574de432239e24.png",
+      "mediaType": "image/png",
+      "sha256": "8cb399bd0780b9d3afb83ff81b6e070969785b95964628101b574de432239e24",
+      "byteLength": 649737,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-b1a2ea43b87b4bc09dc4a93899d7befb",
+        "sourceQuestionId": "7062552",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/23149127951739854882.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

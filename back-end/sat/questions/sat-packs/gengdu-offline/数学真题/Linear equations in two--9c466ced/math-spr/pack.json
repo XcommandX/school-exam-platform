@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-9c466ced1ba44f0292ae6d4c28c21118-math-spr",
+  "revision": 1,
+  "title": "Linear equations in two variables_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-22efab46fc9ff7a36baad6c89ebde939e0254715715cfa682f529fa30ad1d70a",
+      "path": "assets/22efab46fc9ff7a36baad6c89ebde939e0254715715cfa682f529fa30ad1d70a.png",
+      "mediaType": "image/png",
+      "sha256": "22efab46fc9ff7a36baad6c89ebde939e0254715715cfa682f529fa30ad1d70a",
+      "byteLength": 3920,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-9c466ced1ba44f0292ae6d4c28c21118",
+        "sourceQuestionId": "8900253",
+        "url": "https://static.shanmaostar.com/default/nsat/85662932602865446345.png"
+      }
+    },
+    {
+      "id": "asset-4c953c0e8d0688bc265fd0545f5a3a32ff56a184204614445cfb08381aef86a1",
+      "path": "assets/4c953c0e8d0688bc265fd0545f5a3a32ff56a184204614445cfb08381aef86a1.png",
+      "mediaType": "image/png",
+      "sha256": "4c953c0e8d0688bc265fd0545f5a3a32ff56a184204614445cfb08381aef86a1",
+      "byteLength": 54161,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-9c466ced1ba44f0292ae6d4c28c21118",
+        "sourceQuestionId": "8900263",
+        "url": "https://static.shanmaostar.com/default/nsat/47756231762490166419.png"
+      }
+    },
+    {
+      "id": "asset-84e2077c60a72ee67a4248ac7c0a8811bcdadb525dff207407e0ce11ed76f908",
+      "path": "assets/84e2077c60a72ee67a4248ac7c0a8811bcdadb525dff207407e0ce11ed76f908.png",
+      "mediaType": "image/png",
+      "sha256": "84e2077c60a72ee67a4248ac7c0a8811bcdadb525dff207407e0ce11ed76f908",
+      "byteLength": 3442,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-9c466ced1ba44f0292ae6d4c28c21118",
+        "sourceQuestionId": "8900267",
+        "url": "https://static.shanmaostar.com/default/nsat/87146161322164480713.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

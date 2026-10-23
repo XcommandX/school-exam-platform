@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-ddb5a744241e422a8cd312bc6343d862-math-single-choice",
+  "revision": 1,
+  "title": "数学考前必做题Algebra · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1e41c81238deb594f38a1c60424c821446a9e7b500f7fca3a1365b0f6c7e981e",
+      "path": "assets/1e41c81238deb594f38a1c60424c821446a9e7b500f7fca3a1365b0f6c7e981e.png",
+      "mediaType": "image/png",
+      "sha256": "1e41c81238deb594f38a1c60424c821446a9e7b500f7fca3a1365b0f6c7e981e",
+      "byteLength": 9182,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ddb5a744241e422a8cd312bc6343d862",
+        "sourceQuestionId": "8256814",
+        "url": "https://static.shanmaostar.com/default/nsat/44371927545990923111.svg"
+      }
+    },
+    {
+      "id": "asset-a093ec1860f9b17402a99fe4974d217643f09a1c51c006b72ed3eea8153e6dcb",
+      "path": "assets/a093ec1860f9b17402a99fe4974d217643f09a1c51c006b72ed3eea8153e6dcb.png",
+      "mediaType": "image/png",
+      "sha256": "a093ec1860f9b17402a99fe4974d217643f09a1c51c006b72ed3eea8153e6dcb",
+      "byteLength": 7038,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ddb5a744241e422a8cd312bc6343d862",
+        "sourceQuestionId": "8257578",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/71754281375244030462.png"
+      }
+    }
+  ]
+}

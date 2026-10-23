@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370556",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "$c(r)=\\frac{2}{3}(2\\pi r)$  \nThe function c gives the partial length, in centimeters (cm), of the circumference of a circle with a radius that measures r cm. According to the function, for each increase of 18 cm in the length of the radius, this partial length of the circumference increases by kπ cm. What is the value of k?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370556",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934-9370572",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "A linear model estimates the population of a city from **1992** to **2016**. The model estimates the population was **61** thousand in **1992**, **217** thousand in **2012**, and ***x*** thousand in **2016**. To the nearest whole number what is the value of ***x***?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-e6c4b93d6b7d4da191de83785cf1d934",
+        "sourceQuestionId": "9370572",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

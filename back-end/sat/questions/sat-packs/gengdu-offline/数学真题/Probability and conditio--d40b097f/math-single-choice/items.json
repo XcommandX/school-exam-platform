@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-d40b097fa4374427b1306e410038424d-8900486",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The table below shows the distribution of US states according to whether they have a state-level sales tax and a state-level income tax."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-3aadf0607b45f264a56c2e691bf8864949e8084c6288fa9690a0e75557615373",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "To the nearest tenth of a percent, what percent of states with a state-level sales tax do not have a state-level income tax?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900486",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "6.0%"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "12.0%"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "13.3%"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "14.0%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-d40b097fa4374427b1306e410038424d-8900487",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Employees working for a customer service line at an electric company recorded all the calls last Monday and noted whether the caller asked for repairs and whether the caller asked about a bill. The results are summarized in the table below."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-9de153c71cfeed516952a4b1cc68f1ee4fd6fac31ef9b98567bc8bbd500f142d",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "If a caller last Monday who asked about his or her bill is selected at random, which of the following is closest to the probability that the customer also asked for repairs?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900487",
+        "url": "https://gengdu.shanmaostar.com"
+      },
+      "options": [
+        {
+          "id": "choice-a",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.05"
+            }
+          ]
+        },
+        {
+          "id": "choice-b",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.07"
+            }
+          ]
+        },
+        {
+          "id": "choice-c",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.20"
+            }
+          ]
+        },
+        {
+          "id": "choice-d",
+          "content": [
+            {
+              "type": "markdown",
+              "text": "0.27"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

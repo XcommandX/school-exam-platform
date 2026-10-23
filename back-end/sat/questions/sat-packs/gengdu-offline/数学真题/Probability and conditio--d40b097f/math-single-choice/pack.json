@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-d40b097fa4374427b1306e410038424d-math-single-choice",
+  "revision": 1,
+  "title": "Probability and conditional probability_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-3aadf0607b45f264a56c2e691bf8864949e8084c6288fa9690a0e75557615373",
+      "path": "assets/3aadf0607b45f264a56c2e691bf8864949e8084c6288fa9690a0e75557615373.png",
+      "mediaType": "image/png",
+      "sha256": "3aadf0607b45f264a56c2e691bf8864949e8084c6288fa9690a0e75557615373",
+      "byteLength": 14597,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900486",
+        "url": "https://static.shanmaostar.com/default/nsat/97655410281878577221.png"
+      }
+    },
+    {
+      "id": "asset-9de153c71cfeed516952a4b1cc68f1ee4fd6fac31ef9b98567bc8bbd500f142d",
+      "path": "assets/9de153c71cfeed516952a4b1cc68f1ee4fd6fac31ef9b98567bc8bbd500f142d.png",
+      "mediaType": "image/png",
+      "sha256": "9de153c71cfeed516952a4b1cc68f1ee4fd6fac31ef9b98567bc8bbd500f142d",
+      "byteLength": 19765,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-d40b097fa4374427b1306e410038424d",
+        "sourceQuestionId": "8900487",
+        "url": "https://static.shanmaostar.com/default/nsat/19248933987369150345.png"
+      }
+    }
+  ]
+}

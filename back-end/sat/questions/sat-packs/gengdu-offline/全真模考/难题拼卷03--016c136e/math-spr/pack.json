@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-016c136e92d54f01817951b5057bb6ad-math-spr",
+  "revision": 1,
+  "title": "难题拼卷03 · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-3080730e97d1a5d472aa0e4d394bcf421902dbc3887dde42d0f90b0e8d5299ac",
+      "path": "assets/3080730e97d1a5d472aa0e4d394bcf421902dbc3887dde42d0f90b0e8d5299ac.png",
+      "mediaType": "image/png",
+      "sha256": "3080730e97d1a5d472aa0e4d394bcf421902dbc3887dde42d0f90b0e8d5299ac",
+      "byteLength": 32697,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-016c136e92d54f01817951b5057bb6ad",
+        "sourceQuestionId": "12855722",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/52263244999898812864.png"
+      }
+    },
+    {
+      "id": "asset-cea2212856ae825028e5601ff877254e3939177f8ec5f7f40572babdf141c4fb",
+      "path": "assets/cea2212856ae825028e5601ff877254e3939177f8ec5f7f40572babdf141c4fb.png",
+      "mediaType": "image/png",
+      "sha256": "cea2212856ae825028e5601ff877254e3939177f8ec5f7f40572babdf141c4fb",
+      "byteLength": 47814,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-016c136e92d54f01817951b5057bb6ad",
+        "sourceQuestionId": "12855737",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/04910765023574071495.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-e676d12d27ea408894de749c8c13ee77-math-single-choice",
+  "revision": 1,
+  "title": "Area and volume_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d7e0a9cfdf23eaf62ae3333d004005e11e6b7ed16e14a217a0a61853aeba2ebe",
+      "path": "assets/d7e0a9cfdf23eaf62ae3333d004005e11e6b7ed16e14a217a0a61853aeba2ebe.png",
+      "mediaType": "image/png",
+      "sha256": "d7e0a9cfdf23eaf62ae3333d004005e11e6b7ed16e14a217a0a61853aeba2ebe",
+      "byteLength": 7863,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-e676d12d27ea408894de749c8c13ee77",
+        "sourceQuestionId": "8900498",
+        "url": "https://static.shanmaostar.com/default/nsat/38873701770434530659.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-459950284bda4c62a98e287447d68f95-math-single-choice",
+  "revision": 1,
+  "title": "Observational studies and experiments_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-d03102d72497b7c2ddd717aa2851c65cd5a1cacfb06cf309c2778c90ea78a82a",
+      "path": "assets/d03102d72497b7c2ddd717aa2851c65cd5a1cacfb06cf309c2778c90ea78a82a.png",
+      "mediaType": "image/png",
+      "sha256": "d03102d72497b7c2ddd717aa2851c65cd5a1cacfb06cf309c2778c90ea78a82a",
+      "byteLength": 23858,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-459950284bda4c62a98e287447d68f95",
+        "sourceQuestionId": "8900461",
+        "url": "https://static.shanmaostar.com/default/nsat/07069713326452017518.png"
+      }
+    }
+  ]
+}

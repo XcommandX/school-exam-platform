@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-876ffb0beebc4b018c4cebf3e5017463-math-single-choice",
+  "revision": 2,
+  "title": "2023年11月A卷 · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-474b2c9857350f4b3a098c90a75d451735b6ab8f7e116fbc7ee6c7981014e8d4",
+      "path": "assets/474b2c9857350f4b3a098c90a75d451735b6ab8f7e116fbc7ee6c7981014e8d4.png",
+      "mediaType": "image/png",
+      "sha256": "474b2c9857350f4b3a098c90a75d451735b6ab8f7e116fbc7ee6c7981014e8d4",
+      "byteLength": 323901,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-876ffb0beebc4b018c4cebf3e5017463",
+        "sourceQuestionId": "7292853",
+        "url": "https://static.shanmaostar.com/default/nsat/22251809731319612505.png"
+      }
+    },
+    {
+      "id": "asset-c6afd9e30f904dc7d461dc0ba9ba286c4f78a98efbe32b2b12df684218874d1d",
+      "path": "assets/c6afd9e30f904dc7d461dc0ba9ba286c4f78a98efbe32b2b12df684218874d1d.png",
+      "mediaType": "image/png",
+      "sha256": "c6afd9e30f904dc7d461dc0ba9ba286c4f78a98efbe32b2b12df684218874d1d",
+      "byteLength": 12618,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-876ffb0beebc4b018c4cebf3e5017463",
+        "sourceQuestionId": "7292854",
+        "url": "https://static.shanmaostar.com/default/nsat/75294282263092471845.png"
+      }
+    },
+    {
+      "id": "asset-0f403754e9420ac11503f5d4f78d27bfba93611eb232f020dd7c4936ad159b27",
+      "path": "assets/0f403754e9420ac11503f5d4f78d27bfba93611eb232f020dd7c4936ad159b27.png",
+      "mediaType": "image/png",
+      "sha256": "0f403754e9420ac11503f5d4f78d27bfba93611eb232f020dd7c4936ad159b27",
+      "byteLength": 32249,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-876ffb0beebc4b018c4cebf3e5017463",
+        "sourceQuestionId": "7292892",
+        "url": "https://static.shanmaostar.com/default/nsat/79653827486571292586.png"
+      }
+    }
+  ]
+}

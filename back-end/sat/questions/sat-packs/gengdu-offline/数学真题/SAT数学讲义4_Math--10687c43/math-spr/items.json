@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-10687c439adc4e3095eba688a61cd278-8018443",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "Data set A consists of 10 positive integers less than 60. The list shown gives 9 of the integers from data set A.                43.45.44.43.38.39.40.46.40 The mean of these 9 integers is 42. If the mean of data set A is an integer that is greater than 42, what is the value of the largest integer from data set A?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-10687c439adc4e3095eba688a61cd278",
+        "sourceQuestionId": "8018443",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-10687c439adc4e3095eba688a61cd278-8018451",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between the length of eruption *y,* in hours, and the number of days after January 11, *x*, for some eruptions of a certain geyser."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-ccb046acb35a633fc127283aa9ce0d08c77bc704925a3c2a3863ae1a7eeed428",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "What is the average rate of change, in hours per day, of the length of eruption from theeruption on January 17 to the eruption on January 19?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-10687c439adc4e3095eba688a61cd278",
+        "sourceQuestionId": "8018451",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-10687c439adc4e3095eba688a61cd278-8018458",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-44214c7d0bde8c8b3874983cdd620a7efd7c7d8770e5440e58727393dc245df9",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "The figure shows two rectangles. If a point within the figure is selected at random, what is the probability that the point is within the shaded region?(Express your answer as a decimal or fraction, not as a percent.)"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-10687c439adc4e3095eba688a61cd278",
+        "sourceQuestionId": "8018458",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

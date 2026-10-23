@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-ee0ae564892d459abba42e8f9bb5c971-rw-single-choice",
+  "revision": 1,
+  "title": "阅读难题合集3_ReadingAndWriting · rw-single-choice",
+  "section": "reading-writing",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-13c4731e2beb5940cbf015d6f95c478f4640ff8741088614e5df942f4ea18764",
+      "path": "assets/13c4731e2beb5940cbf015d6f95c478f4640ff8741088614e5df942f4ea18764.png",
+      "mediaType": "image/png",
+      "sha256": "13c4731e2beb5940cbf015d6f95c478f4640ff8741088614e5df942f4ea18764",
+      "byteLength": 510943,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ee0ae564892d459abba42e8f9bb5c971",
+        "sourceQuestionId": "6230606",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/33195701804037238007.png"
+      }
+    },
+    {
+      "id": "asset-0c0f62cb1dbcf7ac8d7fc5369fb34dc9b7630ba9c18dd2322a816e4e6abb198b",
+      "path": "assets/0c0f62cb1dbcf7ac8d7fc5369fb34dc9b7630ba9c18dd2322a816e4e6abb198b.png",
+      "mediaType": "image/png",
+      "sha256": "0c0f62cb1dbcf7ac8d7fc5369fb34dc9b7630ba9c18dd2322a816e4e6abb198b",
+      "byteLength": 100812,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ee0ae564892d459abba42e8f9bb5c971",
+        "sourceQuestionId": "6230611",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/02380938636222074389.png"
+      }
+    },
+    {
+      "id": "asset-c0df2cd3a1612b7f5adac7d72d8f46b2f13d397c52188da869578655564cc2f2",
+      "path": "assets/c0df2cd3a1612b7f5adac7d72d8f46b2f13d397c52188da869578655564cc2f2.png",
+      "mediaType": "image/png",
+      "sha256": "c0df2cd3a1612b7f5adac7d72d8f46b2f13d397c52188da869578655564cc2f2",
+      "byteLength": 93526,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ee0ae564892d459abba42e8f9bb5c971",
+        "sourceQuestionId": "6230614",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/95508890654496505649.png"
+      }
+    },
+    {
+      "id": "asset-d50a1c4e9c6c0a5fbe968ce95453b6856b8569d764a325e48b5b93ab03658905",
+      "path": "assets/d50a1c4e9c6c0a5fbe968ce95453b6856b8569d764a325e48b5b93ab03658905.png",
+      "mediaType": "image/png",
+      "sha256": "d50a1c4e9c6c0a5fbe968ce95453b6856b8569d764a325e48b5b93ab03658905",
+      "byteLength": 381602,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-ee0ae564892d459abba42e8f9bb5c971",
+        "sourceQuestionId": "6230620",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/38824669952989834071.png"
+      }
+    }
+  ]
+}

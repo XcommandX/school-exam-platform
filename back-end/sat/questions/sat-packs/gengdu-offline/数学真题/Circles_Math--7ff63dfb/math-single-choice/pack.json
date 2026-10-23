@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa-math-single-choice",
+  "revision": 1,
+  "title": "Circles_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-0583521f789bbb49bc1e89bdbda258e552fa65cdd28ef7ed4742b1c50e70eb36",
+      "path": "assets/0583521f789bbb49bc1e89bdbda258e552fa65cdd28ef7ed4742b1c50e70eb36.png",
+      "mediaType": "image/png",
+      "sha256": "0583521f789bbb49bc1e89bdbda258e552fa65cdd28ef7ed4742b1c50e70eb36",
+      "byteLength": 10330,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900514",
+        "url": "https://static.shanmaostar.com/default/nsat/11894066843410165692.png"
+      }
+    },
+    {
+      "id": "asset-d291d01f0f07a250526c02bc68ede4cb4231f6ed606866e96a47dc26735893dd",
+      "path": "assets/d291d01f0f07a250526c02bc68ede4cb4231f6ed606866e96a47dc26735893dd.png",
+      "mediaType": "image/png",
+      "sha256": "d291d01f0f07a250526c02bc68ede4cb4231f6ed606866e96a47dc26735893dd",
+      "byteLength": 905,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900514"
+      }
+    },
+    {
+      "id": "asset-f2dab1d1792744649f233936d5c23e6381495a36ce117f468bb6e684f9219070",
+      "path": "assets/f2dab1d1792744649f233936d5c23e6381495a36ce117f468bb6e684f9219070.png",
+      "mediaType": "image/png",
+      "sha256": "f2dab1d1792744649f233936d5c23e6381495a36ce117f468bb6e684f9219070",
+      "byteLength": 914,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900514"
+      }
+    },
+    {
+      "id": "asset-3cd8fe5d6e19324f3d8d22e7348450c5317d4f66c68bad2590e95838e0952fec",
+      "path": "assets/3cd8fe5d6e19324f3d8d22e7348450c5317d4f66c68bad2590e95838e0952fec.png",
+      "mediaType": "image/png",
+      "sha256": "3cd8fe5d6e19324f3d8d22e7348450c5317d4f66c68bad2590e95838e0952fec",
+      "byteLength": 24974,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-7ff63dfb2d5f4b17a67d3dfaafb837fa",
+        "sourceQuestionId": "8900517",
+        "url": "https://static.shanmaostar.com/default/nsat/11234634263284121214.png"
+      }
+    }
+  ]
+}

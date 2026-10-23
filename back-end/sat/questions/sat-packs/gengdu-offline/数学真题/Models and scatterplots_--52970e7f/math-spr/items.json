@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900453",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "markdown",
+          "text": "The scatterplot shows the relationship between the length of time *y* , in hours, a certain bird spent in flight and the number of days after January 11, *x* ."
+        },
+        {
+          "type": "image",
+          "assetId": "asset-ff02ed9fb62900360a855be4a9b3e56d4b74d074295587f335ecf0719ecd5cd3",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "What is the average rate of change, in hours per day, of the length of time the bird spent in flight on January 13 to the length of time the bird spent in flight on January 15?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900453",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    },
+    {
+      "id": "sat:item:gengdu-gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2-8900454",
+      "revision": 1,
+      "classification": {
+        "skill": "Unclassified"
+      },
+      "content": [],
+      "prompt": [
+        {
+          "type": "image",
+          "assetId": "asset-854ff23ebebfd9132ac6a05c8386f27b71e1f961956034ac100d3667ca478f0a",
+          "role": "illustration",
+          "alt": "Source question figure."
+        },
+        {
+          "type": "markdown",
+          "text": "Each dot in the scatterplot above represents the temperature and the number of people who visited a beach in Lagos, Nigeria, on one of eleven different days. The line of best fit for the data is also shown. The line of best fit for the data has a slope of approximately 57. According to this estimate, how many additional people per day are predicted to visit the beach for each 5°C increase in average temperature?"
+        }
+      ],
+      "source": {
+        "kind": "gengdu-export",
+        "sourceSetId": "gengdu-offline-52970e7f57bb4e4f977db0eff7b608e2",
+        "sourceQuestionId": "8900454",
+        "url": "https://gengdu.shanmaostar.com"
+      }
+    }
+  ]
+}

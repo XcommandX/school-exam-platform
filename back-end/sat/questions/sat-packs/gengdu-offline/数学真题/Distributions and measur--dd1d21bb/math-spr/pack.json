@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0-math-spr",
+  "revision": 1,
+  "title": "Distributions and measures of center and spread_Math · math-spr",
+  "section": "math",
+  "responseType": "student-produced-response",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-51f7d8a5607cc4383bf62b5e58f93877667f0f594b0a11c885271dc42dbaaef7",
+      "path": "assets/51f7d8a5607cc4383bf62b5e58f93877667f0f594b0a11c885271dc42dbaaef7.png",
+      "mediaType": "image/png",
+      "sha256": "51f7d8a5607cc4383bf62b5e58f93877667f0f594b0a11c885271dc42dbaaef7",
+      "byteLength": 11099,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900444",
+        "url": "https://static.shanmaostar.com/default/nsat/65645947645810678085.png"
+      }
+    },
+    {
+      "id": "asset-89ac98c0905862276db71973f4c0fa3cc00c144601184e31d7a9ecadd55f08a1",
+      "path": "assets/89ac98c0905862276db71973f4c0fa3cc00c144601184e31d7a9ecadd55f08a1.png",
+      "mediaType": "image/png",
+      "sha256": "89ac98c0905862276db71973f4c0fa3cc00c144601184e31d7a9ecadd55f08a1",
+      "byteLength": 13540,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-dd1d21bbec8d44dc9b8fcd23bf2de3c0",
+        "sourceQuestionId": "8900445",
+        "url": "https://static.shanmaostar.com/default/nsat/60741938748450452188.png"
+      }
+    }
+  ],
+  "inputProfile": {
+    "id": "sat-spr-input/0.1-draft",
+    "status": "requires-rule-review",
+    "maxNonnegativeCharacters": 5,
+    "maxNegativeCharacters": 6,
+    "allowedForms": [
+      "integer",
+      "decimal",
+      "fraction"
+    ],
+    "allowMixedNumber": false
+  }
+}

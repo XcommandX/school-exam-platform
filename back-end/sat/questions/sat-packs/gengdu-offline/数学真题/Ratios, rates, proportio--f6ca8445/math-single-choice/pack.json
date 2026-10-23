@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd-math-single-choice",
+  "revision": 1,
+  "title": "Ratios, rates, proportional relationships, and units_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-cbe7dbcc5f39580d4a10590ebc72d59d56c2d4fa8a751721fc586a440f1020b0",
+      "path": "assets/cbe7dbcc5f39580d4a10590ebc72d59d56c2d4fa8a751721fc586a440f1020b0.png",
+      "mediaType": "image/png",
+      "sha256": "cbe7dbcc5f39580d4a10590ebc72d59d56c2d4fa8a751721fc586a440f1020b0",
+      "byteLength": 23740,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd",
+        "sourceQuestionId": "8900488",
+        "url": "https://static.shanmaostar.com/default/nsat/90852913693209846218.png"
+      }
+    },
+    {
+      "id": "asset-0bed391cd62df633ea98442df26b2084943088a8f7f6424a2083792229d34e6f",
+      "path": "assets/0bed391cd62df633ea98442df26b2084943088a8f7f6424a2083792229d34e6f.png",
+      "mediaType": "image/png",
+      "sha256": "0bed391cd62df633ea98442df26b2084943088a8f7f6424a2083792229d34e6f",
+      "byteLength": 28468,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-f6ca844525fb40ad8b1f7a1c0cf9d8dd",
+        "sourceQuestionId": "8900491",
+        "url": "https://static.shanmaostar.com/default/nsat/78678391150120340145.png"
+      }
+    }
+  ]
+}

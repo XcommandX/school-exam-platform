@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4-math-single-choice",
+  "revision": 1,
+  "title": "数学考前必做题geometry · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-f78e6a5f6fc25d0017030f8c8d88067f71c24e9e05450c77cc4c7066574dcc25",
+      "path": "assets/f78e6a5f6fc25d0017030f8c8d88067f71c24e9e05450c77cc4c7066574dcc25.png",
+      "mediaType": "image/png",
+      "sha256": "f78e6a5f6fc25d0017030f8c8d88067f71c24e9e05450c77cc4c7066574dcc25",
+      "byteLength": 526289,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-bc4214f0d4a64f13b809d9560fe496f4",
+        "sourceQuestionId": "8256480",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/89784657242595183968.png"
+      }
+    }
+  ]
+}

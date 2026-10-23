@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "sat-question-pack/0.1-draft",
+  "documentType": "sat-question-pack",
+  "status": "draft",
+  "exam": "sat",
+  "id": "sat:pack:gengdu-offline-86315edd81c84065b465ff3abb700055-math-single-choice",
+  "revision": 1,
+  "title": "12数学不简单题_Math · math-single-choice",
+  "section": "math",
+  "responseType": "single-choice",
+  "contentFormat": "markdown-latex/0.1-draft",
+  "files": {
+    "items": "items.json",
+    "solutions": "solutions.json"
+  },
+  "assets": [
+    {
+      "id": "asset-1904f608eb031816bba43a27b1f6db0902283264ddb6807120b0c232db97dbe5",
+      "path": "assets/1904f608eb031816bba43a27b1f6db0902283264ddb6807120b0c232db97dbe5.png",
+      "mediaType": "image/png",
+      "sha256": "1904f608eb031816bba43a27b1f6db0902283264ddb6807120b0c232db97dbe5",
+      "byteLength": 458568,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-86315edd81c84065b465ff3abb700055",
+        "sourceQuestionId": "6123587",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/87409443210281097460.png"
+      }
+    },
+    {
+      "id": "asset-98c67760c0033522e693a2ea53568ec40cb4fd20c2fa817ef84b27d2bd5454b7",
+      "path": "assets/98c67760c0033522e693a2ea53568ec40cb4fd20c2fa817ef84b27d2bd5454b7.png",
+      "mediaType": "image/png",
+      "sha256": "98c67760c0033522e693a2ea53568ec40cb4fd20c2fa817ef84b27d2bd5454b7",
+      "byteLength": 194134,
+      "source": {
+        "kind": "gengdu-source-image",
+        "sourceSetId": "gengdu-offline-86315edd81c84065b465ff3abb700055",
+        "sourceQuestionId": "6123597",
+        "url": "https://static.shanmaostar.com/szgditPe/default/nsat/49476305499441364708.png"
+      }
+    }
+  ]
+}

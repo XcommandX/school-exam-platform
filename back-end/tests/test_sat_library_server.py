@@ -8,9 +8,10 @@ import tempfile
 import threading
 import unittest
 from unittest.mock import patch
+from urllib.parse import quote
 import _paths
 
-from server.serve_platform import create_server, read_sat_library
+from server.serve_platform import create_server, read_sat_library, read_sat_library_question_index
 
 
 SPEC = importlib.util.spec_from_file_location('library_fixture_converter', _paths.ROOT / 'back-end/tools/sat/convert_gengdu_sat.py')
@@ -194,6 +195,152 @@ class SatLibraryServerTests(unittest.TestCase):
         manifest['files']['items'] = '../private-notes.json'
         manifest_path.write_text(json.dumps(manifest))
         self.assertEqual(self.request('/api/sat-library/collections/synthetic-math')[0], 400)
+
+    def test_question_index_lists_every_package_with_importer_ids_and_complete_search_text(self):
+        folder = self.folders['synthetic-math'] / 'math-single-choice'
+        item_path = folder / 'items.json'
+        document = json.loads(item_path.read_text())
+        search_text = 'Complete searchable material ' + ('original content ' * 1700) + ' tail-search-marker'
+        document['items'][0]['content'] = [{'type': 'markdown', 'text': '<u>' + search_text + '</u>'}]
+        document['items'][0]['classification']['skill'] = 'Original Algebra'
+        item_path.write_text(json.dumps(document))
+        status, index = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(index['schemaVersion'], 1)
+        self.assertTrue(index['available'])
+        self.assertEqual(index['errors'], [])
+        self.assertEqual(len(index['sources']), 4)
+        self.assertEqual(len(index['questions']), 100)
+        question = next(item for item in index['questions'] if item['libraryCollectionId'] == 'synthetic-math')
+        manifest = json.loads((folder / 'pack.json').read_text())
+        source_id = 'pack:' + quote(manifest['id'], safe="~()*!.'-") + '@' + str(manifest['revision'])
+        self.assertEqual(question['id'], source_id + ':' + quote(document['items'][0]['id'], safe="~()*!.'-") + '@1')
+        self.assertEqual(question['passage'], search_text)
+        self.assertEqual(question['questionType'], 'Original Algebra')
+        self.assertEqual(question['packSource'], document['items'][0]['source'])
+        self.assertEqual(question['metadata'], {'sourceId': source_id, 'sourceFileName': 'math-single-choice/pack.json',
+                                              'sourceQuestionIndex': 0, 'libraryCollectionId': 'synthetic-math',
+                                              'sourceModuleNumber': 3, 'sourceQuestionNumber': 1, 'sourceOrderIndex': 0})
+        self.assertTrue(question['indexOnly'])
+        source = next(item for item in index['sources'] if item['id'] == source_id)
+        self.assertEqual(source['packIdentity'], {key: manifest[key] for key in ('id', 'revision', 'section', 'responseType')})
+        self.assertEqual(source['defaultDurationSeconds'], 2100)
+        self.assertNotIn(str(self.library), json.dumps(index))
+
+    def test_question_index_never_reads_solutions_images_or_full_collections(self):
+        folder = self.folders['synthetic-math'] / 'math-single-choice'
+        (folder / 'solutions.json').write_text('Private answer marker: deliberately invalid JSON')
+        (folder / 'assets/private-image.png').write_bytes(b'Private image marker')
+        manifest_path = folder / 'pack.json'
+        manifest = json.loads(manifest_path.read_text())
+        manifest['assets'].append({'id': 'original-image', 'path': 'assets/private-image.png', 'mediaType': 'image/png',
+                                   'byteLength': 20, 'sha256': '0' * 64, 'source': {'kind': 'original-synthetic'}})
+        manifest_path.write_text(json.dumps(manifest))
+        original_read_text = Path.read_text
+
+        def text_only(path, *args, **kwargs):
+            self.assertNotEqual(path.name, 'solutions.json')
+            self.assertNotIn('assets', path.parts)
+            return original_read_text(path, *args, **kwargs)
+
+        with patch.object(Path, 'read_text', text_only), patch.object(Path, 'read_bytes', side_effect=AssertionError('No binary reads')), \
+                patch('server.serve_platform._read_sat_collection', side_effect=AssertionError('No full collection reads')):
+            status, index = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(len(index['questions']), 100)
+        self.assertEqual(index['errors'], [])
+        serialized = json.dumps(index)
+        for private in ('Private answer marker', 'Private image marker', 'correctOption', 'answerRule', 'explanation', 'dataBase64', 'packAssets'):
+            self.assertNotIn(private, serialized)
+
+    def test_question_index_cache_skips_unchanged_items_and_invalidates_updates_and_directory_moves(self):
+        status, first = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(len(first['questions']), 100)
+        original_read_text = Path.read_text
+
+        def no_item_reload(path, *args, **kwargs):
+            self.assertNotIn(path.name, {'pack.json', 'items.json'})
+            return original_read_text(path, *args, **kwargs)
+
+        with patch.object(Path, 'read_text', no_item_reload):
+            self.assertEqual(self.request('/api/sat-library/question-index')[1], first)
+        item_path = self.folders['synthetic-math'] / 'math-single-choice/items.json'
+        document = json.loads(item_path.read_text())
+        document['items'][0]['prompt'] = [{'type': 'markdown', 'text': 'Updated original cache marker?'}]
+        item_path.write_text(json.dumps(document))
+        status, updated = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(next(item['prompt'] for item in updated['questions'] if item['libraryCollectionId'] == 'synthetic-math'),
+                         'Updated original cache marker?')
+        self.folders['synthetic-math'].rename(self.library / 'relocated-original')
+        self.assertEqual(self.request('/api/sat-library/question-index')[1], updated)
+
+    def test_question_index_isolates_damaged_items_source_revisions_and_removed_collections(self):
+        self.assertEqual(len(self.request('/api/sat-library/question-index')[1]['questions']), 100)
+        item_path = self.folders['synthetic-math'] / 'math-single-choice/items.json'
+        original = item_path.read_text()
+        item_path.write_text('invalid JSON')
+        status, damaged = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(len(damaged['questions']), 99)
+        self.assertEqual([error['collectionId'] for error in damaged['errors']], ['synthetic-math'])
+        item_path.write_text(original)
+        self.assertEqual(len(self.request('/api/sat-library/question-index')[1]['questions']), 100)
+        report_path = self.folders['synthetic-math'] / 'conversion-report.json'
+        report = json.loads(report_path.read_text())
+        report['sourceOrder'][0]['itemRevision'] += 1
+        report_path.write_text(json.dumps(report))
+        self.assertEqual(len(self.request('/api/sat-library/question-index')[1]['questions']), 99)
+        self.rows = [row for row in self.rows if row['collectionId'] != 'synthetic-english']
+        self.save_catalog()
+        status, removed = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(len(removed['questions']), 98)
+
+    def test_question_index_rejects_unsafe_items_paths_and_symlinks_without_exposing_private_paths(self):
+        folder = self.folders['synthetic-math'] / 'math-single-choice'
+        manifest_path = folder / 'pack.json'
+        manifest = json.loads(manifest_path.read_text())
+        manifest['files']['items'] = '../private-items.json'
+        manifest_path.write_text(json.dumps(manifest))
+        status, unsafe = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(len(unsafe['questions']), 99)
+        self.assertEqual(unsafe['errors'][0]['collectionId'], 'synthetic-math')
+        self.assertNotIn(str(self.root), json.dumps(unsafe))
+        manifest['files']['items'] = 'items.json'
+        manifest_path.write_text(json.dumps(manifest))
+        item_path = folder / 'items.json'
+        outside = self.root / 'private-outside.json'
+        item_path.rename(outside)
+        item_path.symlink_to(outside)
+        self.assertEqual(len(self.request('/api/sat-library/question-index')[1]['questions']), 99)
+
+    def test_question_index_supports_spr_and_keeps_package_order_and_source_numbers(self):
+        questions = original_questions() + original_questions() + original_questions()
+        questions[0]['number'] = 9
+        questions[1].update({'question_id': '2000', 'number': 2})
+        questions[2].update({'question_id': '3000', 'number': 4, 'question_type': 'response', 'correct_answer': '7'})
+        questions[2].pop('choices')
+        report = CONVERTER.convert_document({'title': 'Original mixed response order', 'questions': questions},
+                                            self.folders['synthetic-math'], collection_id='synthetic-math', mode='bank', replace=True)
+        next(row for row in self.rows if row['collectionId'] == 'synthetic-math')['questionCount'] = 3
+        self.save_catalog()
+        status, index = self.request('/api/sat-library/question-index')
+        self.assertEqual(status, 200)
+        self.assertEqual(index['errors'], [])
+        selected = [item for item in index['questions'] if item['libraryCollectionId'] == 'synthetic-math']
+        self.assertEqual([item['itemId'] for item in selected], [item['itemId'] for item in report['sourceOrder']])
+        self.assertEqual([item['metadata']['sourceQuestionIndex'] for item in selected], [0, 1, 0])
+        self.assertEqual([item['metadata']['sourceQuestionNumber'] for item in selected], [9, 2, 4])
+        self.assertEqual(selected[-1]['responseType'], 'student-produced-response')
+        self.assertEqual(selected[-1]['options'], [])
+        self.assertNotIn('answer', selected[-1])
+
+    def test_question_index_missing_library_is_an_available_empty_contract(self):
+        self.assertEqual(read_sat_library_question_index(self.root / 'missing'),
+                         {'schemaVersion': 1, 'available': False, 'sources': [], 'questions': [], 'errors': []})
 
 
 if __name__ == '__main__':
