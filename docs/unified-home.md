@@ -70,7 +70,7 @@ SAT 自定义训练、题库、错题本、练习报告和复盘仍复用 `front
 
 2026-10-23 指定测试集合已改为新协议 SAT 包：98 题，原 929 题已备份归档。该指定活动卷的新包、原图和备份仍只在本机忽略目录。新包协议、转换与恢复说明见 [SAT 数学与整套练习](sat-math-exam.md)，下文首次迁移数量保留历史背景。
 
-Start Practice 与 Practice Builder 全库接口默认合并 `back-end/sat/questions/sat-packs/gengdu-offline/` 和 `pdf-official/` 两份独立目录，按需读取所选题集；显式 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 只读取指定目录。耕读副本已获共享授权，PDF 转换题包与必要图片获本轮本地 commit 授权，未授权 push；范围见 `AGENTS.md`。这些目录不替换旧活动卷，也不包含个人作答记录。
+Start Practice 与 Practice Builder 全库接口默认合并 `back-end/question-banks/sat-packs/gengdu-offline/` 和 `pdf-official/` 两份独立目录，按需读取所选题集；显式 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 只读取指定目录。耕读副本已获共享授权，PDF 转换题包与必要图片获本轮本地 commit 授权，未授权 push；范围见 `AGENTS.md`。这些目录不替换旧活动卷，也不包含个人作答记录。
 
 源码在 `front-end/web/`、`front-end/sat/`、`back-end/toefl/`、`back-end/shared/`、`scripts/`。统一 v1 题库格式和示例见 [question-format.md](question-format.md)；TOEFL 当前仍使用本模块的匿名样例格式，没有自动接入统一 v1 题库或未来 v2 题包。
 

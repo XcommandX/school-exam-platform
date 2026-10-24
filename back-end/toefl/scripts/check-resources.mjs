@@ -117,6 +117,8 @@ export function validate(bank, manifest) {
 async function inventory(root, relative = '', names = []) {
   const current = relative ? path.join(root, relative) : root, stat = await lstat(current);
   if (stat.isSymbolicLink()) fail(relative || 'resource root', 'symbolic links are forbidden');
+  // Finder metadata is not a resource and must never enter a build or manifest.
+  if (path.posix.basename(relative) === '.DS_Store' && stat.isFile()) return names;
   if (stat.isDirectory()) {
     if (relative) {
       safePath(relative);

@@ -448,7 +448,7 @@ def assemble(root, evidence_root, *, summary_path=None, publish_root=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=ROOT / "back-end/sat/questions/sat-packs/pdf-official")
+    parser.add_argument("--root", type=Path, default=ROOT / "back-end/question-banks/sat-packs/pdf-official")
     parser.add_argument("--evidence-root", type=Path, default=ROOT / "local-data/pdf-sat-conversion/extracted")
     parser.add_argument("--summary", type=Path)
     parser.add_argument("--publish-root", type=Path,

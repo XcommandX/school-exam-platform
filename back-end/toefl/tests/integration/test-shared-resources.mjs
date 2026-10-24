@@ -63,7 +63,14 @@ try {
   bad = structuredClone(manifest); bad.files.push(bad.files[1]); assert.throws(() => validate(bank, bad), /duplicate/);
   bad = structuredClone(manifest); bad.files.push({ ...bad.files[1], path: 'audio/FIXTURE-TONE.wav' }); assert.throws(() => validate(bank, bad), /case-colliding/);
   await writeFile(path.join(resourceRoot, 'audio/unlisted.wav'), 'extra'); await assert.rejects(() => checkResources({ resourceRoot }), /not listed/);
-  await reset(); await writeFile(path.join(resourceRoot, '.DS_Store'), 'machine metadata'); await assert.rejects(() => checkResources({ resourceRoot }), /unsafe/);
+  await reset();
+  for (const folder of ['', 'audio', 'images']) await writeFile(path.join(resourceRoot, folder, '.DS_Store'), 'machine metadata');
+  const withMetadata = await checkResources({ resourceRoot });
+  assert.deepEqual(withMetadata.counts, manifest.counts, 'Finder metadata at every level does not block the shared build');
+  assert.ok(withMetadata.files.every(entry => !entry.path.includes('.DS_Store')), 'Finder metadata is never published');
+  await reset(); await mkdir(path.join(resourceRoot, '.DS_Store')); await assert.rejects(() => checkResources({ resourceRoot }), /unsafe/);
+  await reset(); await symlink(path.join(resourceRoot, 'bank.json'), path.join(resourceRoot, '.DS_Store')); await assert.rejects(() => checkResources({ resourceRoot }), /symbolic/);
+  await reset(); await writeFile(path.join(resourceRoot, '.unexpected'), 'unexpected hidden file'); await assert.rejects(() => checkResources({ resourceRoot }), /unsafe/);
   await reset(); await mkdir(path.join(resourceRoot, 'recordings')); await assert.rejects(() => checkResources({ resourceRoot }), /unexpected/);
   await reset(); await writeFile(path.join(resourceRoot, 'audio/fixture-tone.wav'), Buffer.alloc(content.get('audio/fixture-tone.wav').length, 7));
   await assert.rejects(() => checkResources({ resourceRoot }), /SHA-256/);

@@ -21,8 +21,8 @@ CONVERTER = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = CONVERTER
 SPEC.loader.exec_module(CONVERTER)
 
-DEFAULT_LIBRARY = Path('back-end/sat/questions/sat-packs/gengdu-offline')
-PDF_LIBRARY = Path('back-end/sat/questions/sat-packs/pdf-official')
+DEFAULT_LIBRARY = Path('back-end/question-banks/sat-packs/gengdu-offline')
+PDF_LIBRARY = Path('back-end/question-banks/sat-packs/pdf-official')
 
 
 class SatLibraryLocationTests(unittest.TestCase):

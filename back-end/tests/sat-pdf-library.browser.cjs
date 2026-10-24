@@ -20,7 +20,7 @@ from pathlib import Path
 root = Path.cwd()
 sys.path.insert(0, str(root / 'back-end'))
 from server.serve_platform import read_sat_library, _sat_library_index
-base = root / 'back-end/sat/questions/sat-packs'
+base = root / 'back-end/question-banks/sat-packs'
 pdf = base / 'pdf-official'
 libraries = (base / 'gengdu-offline', pdf)
 rows = json.loads((pdf / 'catalog.json').read_text())['collections']

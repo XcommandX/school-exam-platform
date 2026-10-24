@@ -21,7 +21,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[3]
-DEFAULT_OUTPUT = ROOT / "back-end/sat/questions/sat-packs/pdf-official"
+DEFAULT_OUTPUT = ROOT / "back-end/question-banks/sat-packs/pdf-official"
 DEFAULT_EVIDENCE = ROOT / "local-data/pdf-sat-conversion/extracted"
 PACK_NAMES = ("rw-single-choice", "math-single-choice", "math-spr")
 ANSWER_MARKER = re.compile(

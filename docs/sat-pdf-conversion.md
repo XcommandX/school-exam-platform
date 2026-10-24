@@ -1,6 +1,6 @@
 # SAT 可编辑 PDF 题库转换与合并
 
-本次来源为用户指定的“更新到26年10月SAT最新真题题库+答案”。原 PDF 保留在忽略的 `local-data/references/`，不改写、不纳入本次提交。用户要求转换结果进入 `back-end/sat/questions/sat-packs/pdf-official/` 并本地提交；本次不包含推送、合入 main 或发布网站。目录名 `pdf-official` 不构成官方认证。
+本次来源为用户指定的“更新到26年10月SAT最新真题题库+答案”。原 PDF 保留在忽略的 `local-data/references/`，不改写、不纳入本次提交。用户要求转换结果进入 `back-end/question-banks/sat-packs/pdf-official/` 并本地提交；本次不包含推送、合入 main 或发布网站。目录名 `pdf-official` 不构成官方认证。
 
 ## 转换和来源追溯
 
@@ -20,7 +20,7 @@
 
 原阅读包和原数学包的题目 ID、修订、题序、答案与图片保持一致；组合仅新增共同目录与有序模块引用。只有英语 M1/M2 各 27 题、数学 M1/M2 各 22 题且原题号连续，才设置 `fullSAT: true`，按 32/32/35/35 分钟与英语后 10 分钟休息启动。缺题或非标准模块的组合保留 Partial Test，不补题、不重编号。
 
-例如 `2026年10月第3套阅读语法.pdf` 与 `2026年10月第3套数学.pdf` 具有相同年月、套号和地区范围，合为一套；相应纯题目 PDF 只作为同卷来源，不重复出现。最终得到 **71 个跨科组合：51 套完整 SAT、20 套 Partial Test**；另有 112 个单科来源无法明确匹配，公开目录共 **183 集、10,558 题**。254 个纯题目版不再重复上架。逐组合及未合并理由见 [合并说明](../back-end/sat/questions/sat-packs/pdf-official/合并说明.md)，原508来源到最终题集的映射见同目录的 `pdf-source-manifest.json`。
+例如 `2026年10月第3套阅读语法.pdf` 与 `2026年10月第3套数学.pdf` 具有相同年月、套号和地区范围，合为一套；相应纯题目 PDF 只作为同卷来源，不重复出现。最终得到 **71 个跨科组合：51 套完整 SAT、20 套 Partial Test**；另有 112 个单科来源无法明确匹配，公开目录共 **183 集、10,558 题**。254 个纯题目版不再重复上架。逐组合及未合并理由见 [合并说明](../back-end/question-banks/sat-packs/pdf-official/合并说明.md)，原508来源到最终题集的映射见同目录的 `pdf-source-manifest.json`。
 
 ## 文字、公式和异常
 
@@ -37,7 +37,7 @@
 每次重建使用新的 `staging` 与 `publish-staging` 目录；若这些路径已经存在，应改用新的路径，不覆盖上次产物。先从当前题库复制 **两份**身份清单：`pdf-source-manifest.json` 保留原 PDF/题目身份，`assembly-identities.json` 保留跨科组合身份。只复制其中一份会造成身份变化或组合来源冲突。以下初始化命令要求 `staging` 尚不存在：
 
 ```sh
-python3 -c "from pathlib import Path; import shutil; src=Path('back-end/sat/questions/sat-packs/pdf-official'); dst=Path('local-data/pdf-sat-conversion/staging'); dst.mkdir(parents=True, exist_ok=False); [shutil.copy2(src/name, dst/name) for name in ('pdf-source-manifest.json', 'assembly-identities.json')]"
+python3 -c "from pathlib import Path; import shutil; src=Path('back-end/question-banks/sat-packs/pdf-official'); dst=Path('local-data/pdf-sat-conversion/staging'); dst.mkdir(parents=True, exist_ok=False); [shutil.copy2(src/name, dst/name) for name in ('pdf-source-manifest.json', 'assembly-identities.json')]"
 
 python3 back-end/tools/sat/convert_pdf_sat.py \
   --source-root '/path/to/source-pdfs' \

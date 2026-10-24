@@ -11,7 +11,7 @@ front-end/                  浏览器代码：页面、样式、题型交互和�
   toefl/                    TOEFL 界面、浏览器客户端和页面模板
 back-end/                   本机服务、托福后端源码、维护工具与检查
   server/                   统一本机 Python 服务
-  sat/questions/sat-packs/   用户授权共享的 SAT 题库副本
+  question-banks/sat-packs/   用户授权共享的 SAT 题库副本
   question-banks/toefl/      用户授权共享的完整托福题目、来源音频与图片
   toefl/                    Worker 源码、匿名/共享构建、题型协议及模块测试
   tools/sat/                SAT 导入、转换、打包、源码导出和独立服务
@@ -21,7 +21,7 @@ docs/                       共享说明、格式合同、样式参考与设计�
 local-data/                 仅本机：真实题库、媒体、记录备份、参考资料和产物
 ```
 
-`local-data/` 被整体忽略，不进入 GitHub。GitHub 的三个主体目录是 `front-end/`、`back-end/`、`docs/`。Start Practice 和 Practice Builder 全库接口默认合并 `back-end/sat/questions/sat-packs/` 下的 `gengdu-offline/` 与 `pdf-official/` 两份目录；前者是已授权共享的副本，后者的转换题包与必要图片获本次本地 commit 授权，未授权 push。个人记录、备份和原始来源资料仍不提交。根目录保留本说明、`AGENTS.md`、启动/同步入口和 Git 必需配置；隐藏的 `.github/` 是 GitHub 模板目录。具体路径和迁移规则见 [项目结构](docs/project-structure.md)。
+`local-data/` 被整体忽略，不进入 GitHub。GitHub 的三个主体目录是 `front-end/`、`back-end/`、`docs/`。Start Practice 和 Practice Builder 全库接口默认合并 `back-end/question-banks/sat-packs/` 下的 `gengdu-offline/` 与 `pdf-official/` 两份目录；前者是已授权共享的副本，后者的转换题包与必要图片获本次本地 commit 授权，未授权 push。个人记录、备份和原始来源资料仍不提交。根目录保留本说明、`AGENTS.md`、启动/同步入口和 Git 必需配置；隐藏的 `.github/` 是 GitHub 模板目录。具体路径和迁移规则见 [项目结构](docs/project-structure.md)。
 
 ## 启动
 

@@ -10,7 +10,7 @@
 
 ## 已确认需求
 
-2026-10-23 题库共享路径更新：用户已将离线题库完整复制到 `back-end/sat/questions/sat-packs/gengdu-offline/`，并明确授权该副本可提交 GitHub。统一服务的题集目录、单集加载与 Practice Builder 全库索引使用同一默认根目录，参数与环境变量仍可覆盖；前端 API、稳定身份和历史快照不变。旧活动卷、可写旧格式题库、备份与个人记录仍在 `local-data/`。这是指定数据目录的共享例外，不启用正式认证、云端记录或网站部署。
+2026-10-23 题库共享路径更新：用户已将离线题库完整复制到 `back-end/question-banks/sat-packs/gengdu-offline/`，并明确授权该副本可提交 GitHub。统一服务的题集目录、单集加载与 Practice Builder 全库索引使用同一默认根目录，参数与环境变量仍可覆盖；前端 API、稳定身份和历史快照不变。旧活动卷、可写旧格式题库、备份与个人记录仍在 `local-data/`。这是指定数据目录的共享例外，不启用正式认证、云端记录或网站部署。
 
 2026-10-23 更新：题目包按考试与题目类型分别设计与存放，不再追求 SAT、TOEFL、AP 的统一题目结构。SAT 专用题目包及 Markdown/LaTeX 约定见 [新草案](sat-question-package-draft.md)；复杂表格、图表与坐标系的结构化渲染仍待定，目前支持静态图片。当前 `back-end/shared/question_schema.py` 的 v1 只保留既有兼容职责，新协议由 SAT 专属服务接口和引擎处理；统一入口、身份与云端记录的目标不变。
 
@@ -85,3 +85,7 @@ SAT 已先导入可独立运行的纯代码版本；继续核实所需题库资�
 - 正式部署平台、数据存储、备份恢复与容量策略。
 
 Practice Builder 现在以 `/api/sat-library/question-index` 的纯文字全库索引支持筛选与组题，与浏览器已导入题目按版本 ID 合并；仅开始所选练习时下载相应题集资源。索引不含答案、解析或图片，按集合缓存并检测文字依赖变化，不依赖全量浏览器导入或活动卷迁移。具体行为与验证见 [SAT 模块](sat/README.md)。
+
+## 2026-10-24 共享题库集中目录
+
+SAT 的两份目录统一放在 `back-end/question-banks/sat-packs/`（`gengdu-offline/`、`pdf-official/`），TOEFL 保留 `back-end/question-banks/toefl/`。此调整只统一存放位置，不统一两科题目模型。服务端默认路径、SAT 维护工具及说明已同步；前端 URL、collectionId、版本、账号记录与旧活动卷不变。原目录由用户移动，未检查或重写 SAT 题库内部。

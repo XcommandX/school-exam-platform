@@ -8,7 +8,7 @@ const crypto = require('node:crypto');
 
 const ROOT = path.resolve(__dirname, '../../..');
 const katex = require(path.join(ROOT, 'front-end/sat/vendor/katex/katex.min.js'));
-const DEFAULT_ROOT = path.join(ROOT, 'back-end/sat/questions/sat-packs/pdf-official');
+const DEFAULT_ROOT = path.join(ROOT, 'back-end/question-banks/sat-packs/pdf-official');
 const DEFAULT_REPORT = path.join(ROOT, 'local-data/pdf-sat-conversion/latex-review.json');
 const forbiddenMath = /\\(?:def|gdef|edef|xdef|let|futurelet|global|newcommand|renewcommand|providecommand|newenvironment|renewenvironment|csname|catcode|includegraphics|href|url|htmlClass|htmlId|htmlStyle|htmlData|html@mathml)(?![A-Za-z])/;
 

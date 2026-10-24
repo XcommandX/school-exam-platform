@@ -16,7 +16,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[3]
-DEFAULT_ROOT = ROOT / "back-end/sat/questions/sat-packs/pdf-official"
+DEFAULT_ROOT = ROOT / "back-end/question-banks/sat-packs/pdf-official"
 DEFAULT_REPORT = ROOT / "local-data/pdf-sat-conversion/assembly-review.json"
 PACK_NAMES = {"rw-single-choice", "math-single-choice", "math-spr"}
 MAPPING_FIELDS = ("collectionId", "sourceFile", "canonicalCollectionId", "publishedCollectionId",

@@ -661,7 +661,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
         if not library.is_absolute():
             library = root / library
     else:
-        library_base = root / 'back-end/sat/questions/sat-packs'
+        library_base = root / 'back-end/question-banks/sat-packs'
         library = (library_base / 'gengdu-offline', library_base / 'pdf-official')
     banks = private / 'question-banks'
     for exam in EXAMS:
