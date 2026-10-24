@@ -27,7 +27,7 @@
 - 2026-10-24 用户已将 SAT 共享题库移动到 `back-end/question-banks/sat-packs/`，与 TOEFL 共享题库并列。服务、维护工具、验证用例和说明使用新路径；这次只调整访问位置，不校验或改写 SAT 题包内部，旧活动卷与个人数据继续留在 `local-data/`。
 - 每次提交均忽略所有层级的 `.DS_Store`；根目录 `.gitignore` 的 `.DS_Store` 规则递归生效，不得强制加入或上传这类本机文件。
 - 不把前端隐藏菜单当作访问控制。学生只能访问自己的答题记录，管理员权限由后端或数据库策略实施。
-- 当前候选免费服务还未选定或部署；新增持续产生费用的依赖时明确说明费用来源。
+- 2026-10-24 本轮授权从 GitHub `main` 基线 `4c00fced` 在独立 `chore/cloudflare-deployment` 分支适配并部署现有完整共享内容，选择 Workers Free + SQLite Durable Objects Free。实现、验证、实际发布状态与维护以 `docs/cloudflare-deployment.md` 为准；原 Python 本机方式保留，既有 Windows 兼容性问题也在该文档如实记录。旧条目中 SAT 转换阶段“仅本地 commit / 未授权部署”不覆盖本次明确授权的 GitHub 现有共享副本。仍不迁移旧账号、记录或录音，不改私人 TOEFL 站，不自动合入 `main` 或升级付费；新增持续产生费用的依赖必须另行授权。
 
 ## 界面与实现风格
 

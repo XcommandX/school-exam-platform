@@ -107,7 +107,7 @@
   });
 
   const click=action=>{
-    const button=document.querySelector(`[data-action="${action}"]`);
+    const button=document.querySelector(`[data-action="${action}"], [data-account-action="${action}"]`);
     if(!button)throw new Error('The requested SAT page is unavailable.');
     button.click();
   };

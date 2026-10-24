@@ -34,6 +34,8 @@ coverage/
 *.log
 
 # Local cloud tooling state
+.dev.vars
+.dev.vars.*
 .wrangler/
 .vercel/
 .netlify/

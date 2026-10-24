@@ -10,7 +10,7 @@ window.SATBank=(()=>{
  const api=(path='',options={})=>requestJSON('/api/question-bank'+path,options);
  async function init(){
   handle=null;token='';Object.assign(state,{connected:false,writable:false,mode:'browser',name:'',updates:[],errors:[],collectionId:null,assessment:null});
-  if(location.protocol==='http:'&&location.hostname==='127.0.0.1'){
+  if((window.PlatformSession?.authenticated===true&&window.PlatformSession.user?.id)||(location.protocol==='http:'&&location.hostname==='127.0.0.1')){
    try{const info=await api('/status');if(info.service==='sat-question-bank-v1'){token=info.token;Object.assign(state,{mode:'local',connected:true,writable:info.writable!==false,name:'question-bank',message:info.writable===false?'Project question-bank connected. Shared imports require an administrator.':'Project question-bank connected. Imports are saved to this folder.'});return;}}catch{}
   }
   if(!window.showDirectoryPicker){state.message='Folder access is unavailable here. Open Start SAT Practice.command for automatic project-folder storage. Choose Files still imports into this browser only.';return;}
