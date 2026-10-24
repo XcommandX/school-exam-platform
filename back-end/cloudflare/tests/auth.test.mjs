@@ -2,7 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
-import { createHash, pbkdf2Sync } from 'node:crypto';
+import nodeCrypto, { createHash, pbkdf2Sync } from 'node:crypto';
+import { syncBuiltinESMExports } from 'node:module';
 import {
   AuthStore, AuthError, PlatformAuthStore, hashPassword, verifyPassword,
   validateUsername, validateDisplayName, validatePassword,
@@ -116,6 +117,31 @@ test('PBKDF2 is exactly 600000 SHA256 with 24-byte random salts and compatible h
   assert.equal(verifyPassword(PASSWORD, first.replace('$600000$', '$2000001$')), false);
   assert.equal(verifyPassword(PASSWORD, 'not-a-hash'), false);
   assert.equal(verifyPassword('\ud800', first), false);
+});
+
+test('600k portable PBKDF2 matches independent Node vectors for UTF-8, long HMAC keys and NUL', () => {
+  const salt = Buffer.from('00112233445566778899aabbccddeeff0123456789abcdef', 'hex');
+  assert.equal(salt.length, 24, 'the existing stored format requires a 24-byte salt');
+  for (const password of ['密码🔐\u0000abc', 'p'.repeat(256), 'é'.repeat(100)]) {
+    const reference = pbkdf2Sync(password, salt, PASSWORD_ITERATIONS, 32, 'sha256').toString('hex');
+    assert.equal(verifyPassword(password, `pbkdf2_sha256$600000$${salt.toString('hex')}$${reference}`), true);
+    const actual = hashPassword(password).split('$');
+    assert.equal(actual[3], pbkdf2Sync(password, Buffer.from(actual[2], 'hex'), 600000, 32, 'sha256').toString('hex'));
+  }
+});
+
+test('hash and verify still work when native PBKDF2 explicitly refuses 600k', () => {
+  const original = nodeCrypto.pbkdf2Sync;
+  nodeCrypto.pbkdf2Sync = () => { throw new Error('simulated production native PBKDF2 iteration limit'); };
+  syncBuiltinESMExports();
+  try {
+    assert.throws(() => pbkdf2Sync(PASSWORD, new Uint8Array(24), 600000, 32, 'sha256'), /iteration limit/);
+    const encoded = hashPassword(PASSWORD);
+    assert.equal(verifyPassword(PASSWORD, encoded), true);
+  } finally {
+    nodeCrypto.pbkdf2Sync = original;
+    syncBuiltinESMExports();
+  }
 });
 
 test('username, display name, and password validation retain the Python/client contract', () => {

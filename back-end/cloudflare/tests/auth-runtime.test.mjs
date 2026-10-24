@@ -2,7 +2,7 @@
 // state only; no network deployment, private database, paid API or new packages.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { pbkdf2Sync } from 'node:crypto';
@@ -16,6 +16,8 @@ import { PlatformAuthStore, hashPassword, verifyPassword } from './src/auth.mjs'
 export { PlatformAuthStore };
 export default {
   async fetch(request, env) {
+    // Algorithm-only test: local workerd is unlimited; this synthetic outer
+    // route is NOT a Free Worker CPU test. Real setup/login below go through DO.
     if (new URL(request.url).pathname === '/crypto-probe') {
       const first = hashPassword('runtime-fixture-password');
       const good = verifyPassword('runtime-fixture-password', first);
@@ -29,11 +31,9 @@ export default {
 `;
 
 async function createRuntime() {
-  const modules = [{ type: 'ESModule', path: resolve(root, 'auth-runtime-fixture.mjs'), contents: script }];
-  for (const name of ['auth.mjs', 'auth-schema.mjs', 'json-stream.mjs']) {
-    const path = resolve(root, 'src', name);
-    modules.push({ type: 'ESModule', path, contents: await readFile(path, 'utf8') });
-  }
+  const bundle = await build({ stdin: { contents: script, resolveDir: root, sourcefile: 'auth-runtime-fixture.mjs' },
+    bundle: true, write: false, format: 'esm', platform: 'neutral', external: ['node:*'], target: 'es2022' });
+  const modules = [{ type: 'ESModule', path: resolve(root, 'auth-runtime-fixture.mjs'), contents: bundle.outputFiles[0].text }];
   return new Miniflare(convertV4MiniflareOptions({
     modulesRoot: root, modules, compatibilityDate: '2026-10-19', compatibilityFlags: ['nodejs_compat'],
     bindings: { SETUP_TOKEN },
@@ -49,7 +49,7 @@ async function rpc(runtime, path, body) {
   return { status: response.status, headers: response.headers, value: await response.json() };
 }
 
-test('workerd nodejs_compat really hashes/verifies 600000 PBKDF2 iterations without fallback', { timeout: 30_000 }, async t => {
+test('workerd hashes/verifies standard 600000 PBKDF2 iterations without native KDF or weak fallback', { timeout: 30_000 }, async t => {
   const runtime = await createRuntime();
   t.after(() => runtime.dispose());
   const start = performance.now();
@@ -61,7 +61,7 @@ test('workerd nodejs_compat really hashes/verifies 600000 PBKDF2 iterations with
   assert.equal(value.bad, false);
   const parts = value.first.split('$');
   assert.equal(pbkdf2Sync('runtime-fixture-password', Buffer.from(parts[2], 'hex'), 600000, 32, 'sha256').toString('hex'), parts[3]);
-  t.diagnostic(`Local workerd startup + 3 native 600000-iteration operations: ${Math.round(performance.now() - start)} ms (not cloud CPU billing measurement).`);
+  t.diagnostic(`Local workerd startup + 3 JS 600000-iteration operations: ${Math.round(performance.now() - start)} ms (not cloud CPU billing measurement).`);
 });
 
 test('workerd SQLite DO enforces setup, single-session login, admin authorization and revocation', { timeout: 60_000 }, async t => {

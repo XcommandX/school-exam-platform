@@ -18,10 +18,11 @@
 
 - 公网地址：<https://school-exam-platform.xcommandx-school.workers.dev>。本次注册用户确认的免费 `xcommandx-school.workers.dev` 子域名，没有购买域名或执行付费升级。
 - 20:14（Asia/Shanghai）首次发布成功，代码对应独立分支提交 `8921de2`；初始 Worker 版本 `3924deb0-180c-41a6-8cbe-c2ce7997b8c6`。完整静态资源发布完成：本次上传 7,261 项，289 项无需重复上传。
-- 20:15 设置一次性初始化 secret 后，Cloudflare 生成版本 `04d07d92-2077-445e-a6be-7d77512857ef`；代码和共享题库未变。
+- 20:15 设置一次性初始化 secret 后，Cloudflare 生成版本 `04d07d92-2077-445e-a6be-7d77512857ef`；20:30 按用户要求重新打开初始化页、轮换尚未使用的凭证，版本为 `fd364b69-51be-40d2-9019-539fb0d8bc5e`。这两次只有 secret 变化，代码和共享题库未变。
 - 配置初始化凭证前、后各执行公网匿名检查，均 **26/26 通过**：服务状态、登录与初始化页面、未登录 API/页面保护、内部目录与题库脚本保护、跨站写入拒绝、三个公共前端文件 SHA-256 一致，以及真实 AUTH SQLite DO 对无效初始化的拒绝。
-- 管理员初始化页面已在维护者浏览器安全打开，账号与密码由用户本人填写。本文此时尚未确认首位管理员创建、正式账号登录后保存或两台真实设备验收；本地浏览器回归不能代替这些操作。
-- 实现提交已上传 GitHub 的 `chore/cloudflare-deployment` 分支；`main` 仍为基线 `4c00fced`，没有合并。只推送分支不会自动重新发布网站，也没有设置自动部署。
+- 管理员初始化页面已在维护者浏览器安全打开，账号与密码由用户本人填写。首次提交发现线上内置 PBKDF2 上限与本地 workerd 不同，返回 `crypto_unavailable`；上述 26 项匿名检查没有执行密码散列，因此不能证明账号功能可用。现改为标准 JavaScript PBKDF2 实现，并新增真实 AUTH DO 的未知账号登录探测，成功标准是正常 `401 invalid_credentials` 而不是 `503`。修复发布及管理员创建结果另见下方记录；本地回归不能代替正式账号或两台真实设备验收。
+- PBKDF2 修复在本地完成 **112/112** 回归与 **15/15** Chrome 检查；静态资产 7,550 项、1,511,766,097 bytes 全量 SHA-256 复核一致。修复后的正式发布、27 项公网检查及用户本人初始化确认尚待完成，不能以本地通过代替。
+- 初次实现提交已上传 GitHub 的 `chore/cloudflare-deployment` 分支；`main` 仍为基线 `4c00fced`，没有合并。只推送分支不会自动重新发布网站，也没有设置自动部署。
 
 ## 架构和安全边界
 
@@ -106,6 +107,14 @@ node scripts/check-live.mjs https://实际域名.workers.dev
 
 一次业务写请求可能经过多个 DO 请求（身份初验/提交复验），不能将 DO 的 100,000 请求直接等同于 100,000 次学生保存。大型媒体、数据库读写、音频连发、登录散列和并发将影响用量。PBKDF2 在 SQLite DO 中执行，不在 10 ms 普通 Worker 中执行；不得通过降低密码散列强度来适应普通 Worker CPU。
 
+### 线上 PBKDF2 兼容性
+
+2026-10-24 用户实际创建管理员时发现：线上 Workers 的原生 `node:crypto.pbkdf2Sync` 和 WebCrypto 共用迭代限制，600,000 次会被拒绝；本地 workerd 的限制实现不同，所以本地 PASS 并不能证明生产支持。修复采用锁定的 `@noble/hashes@2.0.1` 同步 JavaScript PBKDF2-HMAC-SHA256，仍在 AUTH SQLite DO 中执行完整 600,000 次，24-byte 随机 salt、32-byte 结果及存储格式不变。不降为 100,000 次，不串联六次短 KDF，不切到客户端或外部收费服务。通过独立 Node 原生实现比较普通/UTF-8/长 HMAC 密钥/包含 NUL 的输入，另以原生 PBKDF2 被模拟为拒绝的回归测试确认不再依赖该路径，继续保持恒时比较及身份事务复验。完整测试按文件串行执行，避免数个高 CPU 运行时争抢本机资源；每项内部的并发与竞态测试仍保留。
+
+该依赖零传递运行依赖，版本与 integrity 锁定；上游有 Cure53 对 v1.0.0 的审计记录，不能将其说成 v2.0.1 整版重新审计。本地检查仍需在真实生产补一项未知随机账号登录：它执行相同 600k dummy verification，只应返回 `401 invalid_credentials`，不创建测试用户或读取现有用户。每次发布最多一次该探测；它消耗真实散列资源，并记录正常的失败登录审计和两个限流计数桶（含同出口 IP 的 30 次/15 分钟额度），并非零状态影响的只读检查。JavaScript 路径比原生慢，DO 阻塞/并发与免费用量需监测，不宣称支持 150 人同时登录。Worker 冻结时钟，不能把 `performance.now()` 的单请求结果称为真实 CPU 用量。
+
+依据：[workerd 生产迭代限制](https://github.com/cloudflare/workerd/blob/v1.20261019.1/src/workerd/io/limit-enforcer.h#L29)、[维护者对本地与生产限制的说明](https://github.com/cloudflare/workerd/issues/1346#issuecomment-1874827249)、[noble-hashes v2.0.1](https://github.com/paulmillr/noble-hashes/tree/2.0.1)。
+
 查看 Cloudflare 控制台 Workers / Durable Objects 使用量；在用量接近上限时先降低无意义重复加载、导出/整理个人记录并估算容量。未经用户另行授权，不自动升级付费、增加外部存储或 AI API。
 
 ## 更新、回滚和数据保护
@@ -121,7 +130,9 @@ node scripts/check-live.mjs https://实际域名.workers.dev
 
 ## 验证范围
 
-2026-10-24 最终本地验证：Cloudflare `npm test` **110/110 通过**；Chrome 真实 HTTPS 非 localhost 的隔离浏览器检查 **15/15 通过**。覆盖首次初始化、登录/退出、账号页、Secure/HttpOnly/SameSite Cookie、首页计划保存刷新、完整 SAT 目录与数学筛选、SAT 设置写入账号 DO、记录/错题/同步冲突直链、TOEFL 四科完整入口。JavaScript 异常、集成警告、外部服务请求均为 0；仅非致命 favicon 404。发现并修复了 HTTPS 题库连接门禁和账号菜单改名导致的 SAT 设置直链失效，不修改考试引擎。
+PBKDF2 修复后重新执行完整 Cloudflare 回归：**112/112 通过**（包括新增 UTF-8/长密钥/NUL 对照及原生 KDF 拒绝模拟）；隔离 HTTPS Chrome 复测 **15/15 通过**，异常和外部请求为 0。生产打包通过，另确认最终包无原生 PBKDF2 调用，并单独核对 RFC 7914 §11 公开算法向量。依赖安装后的 npm audit 报告 0 个已知漏洞，此结果不是安全审计。新加入的固定盐向量在首次运行因夹具误写为 25 字节而被现有 24 字节格式校验正确拒绝，修正夹具并增加长度断言后，全量复测通过；没有放宽生产校验。
+
+2026-10-24 首次发布前的本地验证：Cloudflare `npm test` **110/110 通过**；Chrome 真实 HTTPS 非 localhost 的隔离浏览器检查 **15/15 通过**。这组历史结果不代表后续 PBKDF2 修复已在生产通过，修复回归与发布结果以实际发布记录为准。覆盖首次初始化、登录/退出、账号页、Secure/HttpOnly/SameSite Cookie、首页计划保存刷新、完整 SAT 目录与数学筛选、SAT 设置写入账号 DO、记录/错题/同步冲突直链、TOEFL 四科完整入口。JavaScript 异常、集成警告、外部服务请求均为 0；仅非致命 favicon 404。发现并修复了 HTTPS 题库连接门禁和账号菜单改名导致的 SAT 设置直链失效，不修改考试引擎。
 
 自动化还覆盖登录/单会话/权限撤销、一次性初始化竞态、两账号隔离、跨会话保存读取、CAS/操作重放/删除/完成记录不可变、TOEFL 取消记录、完整题库构建、接近 20 MiB 共享题库导入以及 62 MiB SAT 快照真实 workerd 流式读写。运行时测试不等于校园网络、Safari、两台真实硬件、150 人并发或云端 CPU 额度的负载测试。
 

@@ -2,6 +2,8 @@
 
 > 2026-10-24 Cloudflare 适配分支更新：新增 Workers 同源入口 + SQLite Durable Objects（身份库、逐账号私有库、管理员旧格式共享题库），完整共享媒体由受保护静态资产提供。选择 DO 而非直接静态 Pages，是为了保留现有密码强度、账号隔离、64 MiB SAT 快照、CAS 与删除标记；2 MiB SQL 行限制由流式 256 KiB BLOB 分块处理。新云库为空，不迁移旧个人数据，不改原私人 TOEFL 部署。本机 Python 方式保持；下文“尚未选定供应商”等属于历史阶段。当前配置、发布步骤和免费约束见 [Cloudflare 部署](cloudflare-deployment.md)。
 
+> 2026-10-24 线上密码兼容性修复：生产 Cloudflare 的原生 PBKDF2 上限与本地 workerd 不同，因此 AUTH DO 改用锁定的 `@noble/hashes@2.0.1` 标准 JavaScript 实现，继续完整 PBKDF2-HMAC-SHA256 600,000 次、24-byte salt 与 32-byte 结果；不更改数据库格式、不降低强度，也不迁到客户端或收费服务。发布检查新增真实未知账号 dummy verification；算法正确性、云端资源/并发用量与实际账号验收是不同验证层次。
+
 > 2026-10-24 统一账号更新：首页、TOEFL 与 SAT 共用登录会话；首页设置、TOEFL 文字状态及 SAT 练习记录、错题本、练习设置按账号保存在本机 SQLite，TOEFL 录音仍在按账号隔离的浏览器空间。当前账号事实、接口、迁移边界以 [统一账号](unified-auth.md) 为准；下文未认证 admin 与待接身份的描述保留为此前阶段背景，不再是当前登录行为。
 
 2026-10-23 目录整理已实际完成：浏览器代码归 `front-end/`，服务、维护工具与检查归 `back-end/`，共享说明归 `docs/`，真实数据、参考资料和产物归被整体忽略的 `local-data/`。URL、题库身份和浏览器存储命名空间保持。迁移映射与验证见 [项目结构](project-structure.md)，统一身份、后端职责、加密分发和托管取舍详见 [前后端方案](frontend-backend-plan.md)。目录整理本身不启用云端服务；后续统一账号实现见本文顶部更新。

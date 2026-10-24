@@ -2,7 +2,7 @@
 // Miniflare uses disposable local state, not private banks or deployed services.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { Miniflare, convertV4MiniflareOptions } from 'miniflare';
@@ -26,10 +26,9 @@ export default {
   }
 };`;
 async function runtime() {
-  const modules = [{ type: 'ESModule', path: resolve(root, 'bank-runtime-fixture.mjs'), contents: script }];
-  for (const name of ['auth.mjs', 'auth-schema.mjs', 'json-stream.mjs', 'bank.mjs', 'bank-schema.mjs']) {
-    const path = resolve(root, 'src', name); modules.push({ type: 'ESModule', path, contents: await readFile(path, 'utf8') });
-  }
+  const bundle = await build({ stdin: { contents: script, resolveDir: root, sourcefile: 'bank-runtime-fixture.mjs' },
+    bundle: true, write: false, format: 'esm', platform: 'neutral', external: ['node:*'], target: 'es2022' });
+  const modules = [{ type: 'ESModule', path: resolve(root, 'bank-runtime-fixture.mjs'), contents: bundle.outputFiles[0].text }];
   return new Miniflare(convertV4MiniflareOptions({
     modulesRoot: root, modules, compatibilityDate: '2026-10-19', compatibilityFlags: ['nodejs_compat'],
     bindings: { SETUP_TOKEN }, durableObjects: {

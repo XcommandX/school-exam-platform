@@ -2,7 +2,7 @@
 // Usage: node scripts/check-live.mjs https://<worker>.<subdomain>.workers.dev
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {createHash} from 'node:crypto';
+import {createHash, randomBytes} from 'node:crypto';
 const supplied = process.argv[2];
 let origin;
 try {
@@ -52,4 +52,11 @@ const auth = await fetch(origin + '/api/auth/bootstrap', {method: 'POST', redire
 const body = await auth.json();
 assert.ok((auth.status === 503 && body.code === 'setup_unavailable') || (auth.status === 403 && body.code === 'invalid_setup_token'), `AUTH must fail closed before any user creation: HTTP ${auth.status}, code ${body.code}`);
 checks++; console.log('PASS', auth.status, 'AUTH SQLite DO refuses invalid initialization');
+// A random, non-existent account exercises the SAME 600k dummy verification
+// inside the real AUTH DO, without creating a user or inspecting credentials.
+// Once per release: this consumes KDF resources and writes normal failed-login
+// audit/rate-limit state (including one of the source IP's 30/15-minute quota).
+const crypto = await probe('/api/auth/login', 401, {method: 'POST', headers: {'Content-Type': 'application/json', Origin: origin},
+  body: JSON.stringify({username: 'probe-' + randomBytes(16).toString('hex'), password: 'public-non-account-release-check'})});
+assert.equal(JSON.parse(crypto.text).code, 'invalid_credentials', 'Production must perform a full-strength hash rather than return crypto_unavailable');
 console.log('LIVE ANONYMOUS CHECKS PASSED', checks, origin);

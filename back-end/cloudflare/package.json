@@ -6,7 +6,7 @@
   "engines": { "node": ">=22.13.0" },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
     "test:browser": "node tests/browser-smoke.mjs",
     "dev": "wrangler dev --config wrangler.jsonc --ip 127.0.0.1",
     "deploy": "wrangler deploy --config wrangler.jsonc"
@@ -16,5 +16,8 @@
     "wrangler": "4.152.0",
     "miniflare": "5.20261019.2-beta",
     "esbuild": "0.28.2"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.0.1"
   }
 }

@@ -1,8 +1,13 @@
-import { createHash, pbkdf2Sync, randomBytes, timingSafeEqual } from 'node:crypto';
+import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
+import { Buffer } from 'node:buffer';
+import { pbkdf2 } from '@noble/hashes/pbkdf2.js';
+import { sha256 } from '@noble/hashes/sha2.js';
 import { AUTH_SCHEMA, AUTH_SCHEMA_VERSION } from './auth-schema.mjs';
 import { InputError, readJSON } from './json-stream.mjs';
 
-// Requires nodejs_compat. Never replace 600000 with WebCrypto's lower limit.
+// Production Workers caps BOTH native node:crypto and WebCrypto PBKDF2 at 100k,
+// unlike local workerd. Use the locked standard JS implementation in the AUTH DO
+// for the SAME 600k HMAC-SHA256 function; never downgrade or chain shorter KDFs.
 export const PASSWORD_ITERATIONS = 600_000;
 export const SESSION_SECONDS = 12 * 60 * 60;
 export const SESSION_IDLE_SECONDS = 2 * 60 * 60;
@@ -74,8 +79,10 @@ export function hashPassword(password) {
   validatePassword(password);
   try {
     const salt = randomBytes(24);
-    const hash = pbkdf2Sync(password, salt, PASSWORD_ITERATIONS, 32, 'sha256');
-    return `pbkdf2_sha256$${PASSWORD_ITERATIONS}$${salt.toString('hex')}$${hash.toString('hex')}`;
+    const hash = pbkdf2(sha256, password, salt, { c: PASSWORD_ITERATIONS, dkLen: 32 });
+    try {
+      return `pbkdf2_sha256$${PASSWORD_ITERATIONS}$${salt.toString('hex')}$${Buffer.from(hash).toString('hex')}`;
+    } finally { hash.fill(0); }
   } catch {
     throw cryptoUnavailable();
   }
@@ -88,16 +95,17 @@ export function verifyPassword(password, encoded) {
   try {
     const salt = Uint8Array.from(parsed.salt.match(/../g), pair => parseInt(pair, 16));
     const expected = Uint8Array.from(parsed.expected.match(/../g), pair => parseInt(pair, 16));
-    const actual = pbkdf2Sync(password, salt, parsed.iterations, 32, 'sha256');
-    return timingSafeEqual(actual, expected);
+    const actual = pbkdf2(sha256, password, salt, { c: parsed.iterations, dkLen: 32 });
+    try { return timingSafeEqual(actual, expected); }
+    finally { actual.fill(0); }
   } catch {
-    // An unsupported native implementation is an operational error, not a bad
-    // password, and MUST NOT cause a silently weakened hash or fallback.
+    // A hashing failure is an operational error, not a bad password, and MUST
+    // NOT cause a silently weakened hash, alternate algorithm, or fallback.
     throw cryptoUnavailable();
   }
 }
 
-const nativePasswordCodec = Object.freeze({ hash: hashPassword, verify: verifyPassword });
+const passwordCodec600k = Object.freeze({ hash: hashPassword, verify: verifyPassword });
 
 function publicUser(row) {
   return {
@@ -138,11 +146,11 @@ function fields(value, required, optional = []) {
  * storage.transactionSync(callback) -> callback's result, rolling back throws.
  * clock returns integer epoch SECONDS; all public timestamps are milliseconds.
  * passwordCodec is a test seam for deterministic in-flight interleavings. The
- * real Durable Object always uses nativePasswordCodec, never an env override.
+ * real Durable Object always uses passwordCodec600k, never an env override.
  * Public methods all take the same object as their internal POST RPC body.
  */
 export class AuthStore {
-  constructor(storage, { clock = () => Math.floor(Date.now() / 1000), setupToken, passwordCodec = nativePasswordCodec } = {}) {
+  constructor(storage, { clock = () => Math.floor(Date.now() / 1000), setupToken, passwordCodec = passwordCodec600k } = {}) {
     if (!storage?.sql?.exec || typeof storage.transactionSync !== 'function') {
       throw new TypeError('AuthStore requires SQLite sql.exec and transactionSync');
     }
