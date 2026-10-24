@@ -2,6 +2,7 @@ import _paths
 from _auth_fixture import authenticated_headers
 """Integration checks use only generated questions and temporary private data."""
 import http.client
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -178,6 +179,115 @@ class PlatformServerTests(unittest.TestCase):
                 server.shutdown()
                 server.server_close()
                 worker.join()
+
+
+class SharedToeflServerTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        self.resource = self.root / 'back-end/question-banks/toefl'
+        self.preview = self.root / 'local-data/builds/toefl-shared/preview'
+        self.resource.mkdir(parents=True)
+        self.preview.mkdir(parents=True)
+        media = {'audio/synthetic.mp3': b'0123456789', 'images/synthetic.png': b'synthetic-image'}
+        bank = json.dumps({'records': [{'items': [{'id': 'q1'}]}]}).encode()
+        files = []
+        for name, body in {'bank.json': bank, **media}.items():
+            source = self.resource / name
+            source.parent.mkdir(parents=True, exist_ok=True)
+            source.write_bytes(body)
+            files.append({'path': name, 'bytes': len(body), 'sha256': hashlib.sha256(body).hexdigest()})
+            if name != 'bank.json':
+                target = self.preview / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(body)
+        self.manifest = {'schema_version': 1, 'kind': 'toefl-shared-bank', 'bank': 'bank.json',
+                         'counts': {'records': 1, 'questions': 1, 'audio': 1, 'images': 1}, 'files': files}
+        manifest = json.dumps(self.manifest).encode()
+        (self.resource / 'RESOURCE_MANIFEST.json').write_bytes(manifest)
+        for name in TOEFL_PUBLIC_FILES - {'audio/fixture-tone.wav', 'images/fixture-scene.svg'}:
+            (self.preview / name).write_text('<html><head></head><body>Shared TOEFL</body></html>' if name == 'index.html' else 'fixture')
+        (self.preview / 'cloud-client.js').write_text('NEVER EXPOSED')
+        (self.preview / 'audio/unlisted.mp3').write_bytes(b'not-listed')
+        self.info = {'mode': 'local-shared-bank', **self.manifest['counts'],
+                     'manifestSha256': hashlib.sha256(manifest).hexdigest(),
+                     'productionCredentials': False, 'productionData': True, 'deployable': False}
+        (self.preview.parent / 'build-info.json').write_text(json.dumps(self.info))
+        self.server = create_server(self.root, 0)
+        self.worker = threading.Thread(target=self.server.serve_forever, daemon=True)
+        self.worker.start()
+
+    def tearDown(self):
+        self.server.shutdown()
+        self.server.server_close()
+        self.worker.join()
+        self.temporary.cleanup()
+
+    def request(self, route, headers=None, authenticated=True):
+        connection = http.client.HTTPConnection('127.0.0.1', self.server.server_port, timeout=5)
+        connection.request('GET', route, headers={**(authenticated_headers(self.server) if authenticated else {}), **(headers or {})})
+        response = connection.getresponse()
+        result = response.status, response.read(), dict(response.getheaders())
+        connection.close()
+        return result
+
+    def test_shared_content_requires_login_and_keeps_platform_bridge(self):
+        self.assertEqual(self.request('/toefl/', authenticated=False)[0], 302)
+        for name in ['four-data.js', 'audio/synthetic.mp3', 'images/synthetic.png']:
+            self.assertEqual(self.request('/toefl/' + name, authenticated=False)[0], 404)
+        status, body, _ = self.request('/toefl/')
+        self.assertEqual(status, 200)
+        self.assertIn(b'/web/toefl-bridge.js', body)
+        status = json.loads(self.request('/api/toefl/status')[1])
+        self.assertEqual((status['contentMode'], status['recordCount'], status['questionCount']), ('shared-bank', 1, 1))
+        exam = next(exam for exam in json.loads(self.request('/api/platform/catalog')[1])['exams'] if exam['id'] == 'toefl')
+        self.assertEqual((exam['questionCount'], exam['sourceCount']), (1, 1))
+        for name in ['cloud-client.js', 'RESOURCE_MANIFEST.json', 'bank.json', 'audio/unlisted.mp3',
+                     'src/worker.mjs', 'audio/%2e%2e/cloud-client.js', 'audio/%252e%252e/cloud-client.js']:
+            self.assertEqual(self.request('/toefl/' + name)[0], 404, name)
+
+    def test_shared_mp3_range_and_image_responses(self):
+        status, body, headers = self.request('/toefl/audio/synthetic.mp3')
+        self.assertEqual((status, body, headers['Content-Type']), (200, b'0123456789', 'audio/mpeg'))
+        self.assertEqual(headers['Accept-Ranges'], 'bytes')
+        for request_range, expected, content_range in [('bytes=2-5', b'2345', 'bytes 2-5/10'),
+                                                        ('bytes=-3', b'789', 'bytes 7-9/10'),
+                                                        ('bytes=7-', b'789', 'bytes 7-9/10')]:
+            status, body, headers = self.request('/toefl/audio/synthetic.mp3', {'Range': request_range})
+            self.assertEqual((status, body, headers['Content-Range']), (206, expected, content_range))
+        for invalid in ['bytes=20-', 'bytes=6-2', 'bytes=0-1,4-5', 'bytes=-0', 'bytes=' + '9' * 100 + '-', 'bad-range']:
+            status, body, headers = self.request('/toefl/audio/synthetic.mp3', {'Range': invalid})
+            self.assertEqual((status, body, headers['Content-Range']), (416, b'', 'bytes */10'))
+        self.assertEqual(self.request('/toefl/images/synthetic.png')[0], 200)
+        (self.preview / 'audio/synthetic.mp3').unlink()
+        (self.preview / 'audio/synthetic.mp3').symlink_to(self.resource / 'audio/synthetic.mp3')
+        self.assertEqual(self.request('/toefl/audio/synthetic.mp3')[0], 404)
+
+    def test_startup_selects_shared_build_only_when_bank_exists(self):
+        from unittest.mock import patch
+        from server.serve_platform import prepare_toefl_preview
+        script = self.root / 'back-end/toefl/scripts/build.mjs'
+        script.parent.mkdir(parents=True)
+        script.write_text('// synthetic build entry')
+        with patch('server.serve_platform.shutil.which', return_value='node-fixture'), patch('server.serve_platform.subprocess.run') as build:
+            prepare_toefl_preview(self.root)
+            self.assertEqual(build.call_args.args[0], ['node-fixture', str(script.resolve()), '--shared-bank'])
+            (self.resource / 'bank.json').unlink()
+            prepare_toefl_preview(self.root)
+            self.assertEqual(build.call_args.args[0], ['node-fixture', str(script.resolve()), '--shared-bank'])
+            from server.serve_platform import toefl_preview_status
+            self.assertEqual(toefl_preview_status(self.root)['contentMode'], 'shared-bank-not-built')
+            self.assertFalse(toefl_preview_status(self.root)['available'])
+            (self.resource / 'RESOURCE_MANIFEST.json').unlink()
+            prepare_toefl_preview(self.root)
+            self.assertEqual(build.call_args.args[0], ['node-fixture', str(script.resolve())])
+
+    def test_shared_build_does_not_match_changed_manifest(self):
+        self.manifest['counts']['questions'] = 2
+        (self.resource / 'RESOURCE_MANIFEST.json').write_text(json.dumps(self.manifest))
+        from server.serve_platform import toefl_preview_status
+        self.assertFalse(toefl_preview_status(self.root)['available'])
+        self.assertEqual(toefl_preview_status(self.root)['contentMode'], 'shared-bank-not-built')
 
 
 if __name__ == '__main__':

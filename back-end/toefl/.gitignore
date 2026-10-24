@@ -83,3 +83,7 @@
 
 # Never include local operating-system metadata.
 .DS_Store
+
+!/scripts/check-resources.mjs
+
+!/tests/integration/test-shared-resources.mjs

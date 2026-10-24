@@ -12,7 +12,8 @@ front-end/                  浏览器代码：页面、样式、题型交互和�
 back-end/                   本机服务、托福后端源码、维护工具与检查
   server/                   统一本机 Python 服务
   sat/questions/sat-packs/   用户授权共享的 SAT 题库副本
-  toefl/                    Worker 源码、匿名构建、题型协议及模块测试
+  question-banks/toefl/      用户授权共享的完整托福题目、来源音频与图片
+  toefl/                    Worker 源码、匿名/共享构建、题型协议及模块测试
   tools/sat/                SAT 导入、转换、打包、源码导出和独立服务
   shared/                   公共校验与旧题库兼容工具
   tests/                    平台和 SAT 检查
@@ -24,7 +25,7 @@ local-data/                 仅本机：真实题库、媒体、记录备份、�
 
 ## 启动
 
-需要 Python 3.10+；构建 TOEFL 匿名样例还需要 Node.js 22.13+，无需安装第三方 Python 或 npm 包。
+需要 Python 3.10+；构建 TOEFL 题库还需要 Node.js 22.13+，无需安装第三方 Python 或 npm 包。
 
 ```sh
 python3 back-end/server/serve_platform.py --port 8888
@@ -38,7 +39,7 @@ TOEFL 匿名构建命令：
 node back-end/toefl/scripts/build.mjs
 ```
 
-产物在 `local-data/builds/toefl/`，只有原创匿名样例，音频是测试提示音。真实托福题库和原音频不在当前 Git 仓库，统一账号与 TOEFL 文字记录已接入本机服务；原云站、正式 TOEFL 题库、录音上传和外部 AI 未接入。
+产物在 `local-data/builds/toefl/`，只有原创匿名样例，音频是测试提示音。用户于 2026-10-24 另授权共享全部托福题目及引用来源媒体，位于 `back-end/question-banks/toefl/`。平台启动会校验并构建完整库到独立的 `local-data/builds/toefl-shared/`，登录后可访问；也可显式运行 `node back-end/toefl/scripts/build.mjs --shared-bank`。资源清单和范围见 [共享题库](docs/toefl/SHARED_BANK.md)。原私人云站保持独立，统一服务没有接入其账号、录音上传或外部 AI。
 
 ## SAT 完整模考题包
 
@@ -70,4 +71,4 @@ node back-end/toefl/scripts/test.mjs
 
 浏览器回归还需要开发环境已有 Playwright 与 Chrome，运行方式见相应模块文档。Windows、Safari、真实硬件和正式云端流程没有因这次路径整理自动完成验证。
 
-`push.command`、`pull.command` 仍位于根目录，只处理当前分支，不自动合入 `main` 或发布网站。除上述明确授权的 SAT 共享题库目录外，真实资源、备份、录音、密钥和 `.DS_Store` 不提交；目录中的重复 ZIP 及对应校验文件也不提交。修改读取路径不会自动 commit 或 push。
+`push.command`、`pull.command` 仍位于根目录，只处理当前分支，不自动合入 `main` 或发布网站。除上述明确授权的 SAT 与 TOEFL 共享题库目录外，真实资源、备份、录音、密钥和 `.DS_Store` 不提交；目录中的重复 ZIP 及对应校验文件也不提交。修改读取路径不会自动 commit 或 push。

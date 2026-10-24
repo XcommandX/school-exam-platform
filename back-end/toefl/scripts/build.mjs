@@ -1,20 +1,46 @@
 import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { checkResources } from './check-resources.mjs';
 
 export const moduleRoot = fileURLToPath(new URL('../', import.meta.url));
 export const repositoryRoot = fileURLToPath(new URL('../../../', import.meta.url));
 export const frontEndRoot = path.join(repositoryRoot, 'front-end/toefl');
 export const docsRoot = path.join(repositoryRoot, 'docs/toefl');
 export const distRoot = path.join(repositoryRoot, 'local-data/builds/toefl');
+export const sharedDistRoot = path.join(repositoryRoot, 'local-data/builds/toefl-shared');
+export const sharedResourceRoot = path.join(repositoryRoot, 'back-end/question-banks/toefl');
 export const anonymousFrontendFiles = Object.freeze([
   'index.html', 'four.css', 'four-logic.js', 'four-learning.js', 'four-app.js', 'favicon.svg',
 ]);
 const json = async name => JSON.parse(await readFile(path.join(moduleRoot, name), 'utf8'));
 
-// This build accepts only committed anonymous fixtures. Real resources and
-// production keys require a separate, explicitly reviewed publishing workflow.
-export async function build() {
+// Shared content has a separate output. The unauthenticated anonymous preview
+// must never start serving real questions because another build just ran.
+export async function buildShared({resourceRoot=sharedResourceRoot,outputRoot=sharedDistRoot}={}) {
+  const {bank,mediaPaths,counts}=await checkResources({resourceRoot});
+  const manifest=await readFile(path.join(resourceRoot,'RESOURCE_MANIFEST.json'));
+  await rm(outputRoot,{recursive:true,force:true});
+  const preview=path.join(outputRoot,'preview');
+  await mkdir(preview,{recursive:true});
+  for(const name of anonymousFrontendFiles)await cp(path.join(frontEndRoot,name),path.join(preview,name));
+  await writeFile(path.join(preview,'four-data.js'),`window.FOUR_DATA=${JSON.stringify(bank)};\n`);
+  for(const name of mediaPaths){
+    const target=path.join(preview,name);
+    await mkdir(path.dirname(target),{recursive:true});
+    await cp(path.join(resourceRoot,name),target);
+  }
+  await writeFile(path.join(outputRoot,'build-info.json'),JSON.stringify({
+    mode:'local-shared-bank',...counts,manifestSha256:createHash('sha256').update(manifest).digest('hex'),
+    productionCredentials:false,productionData:true,deployable:false,
+  },null,2)+'\n');
+  return {preview,records:counts.records,questions:counts.questions,mode:'local-shared-bank'};
+}
+
+// The default remains an anonymous fixture build without production credentials.
+export async function build({sharedBank=false,resourceRoot=sharedResourceRoot}={}) {
+  if(sharedBank)return buildShared({resourceRoot});
   const data = await json('fixtures/anonymous-bank.json');
   if (data.fixture !== true || data.records.some(r => r.source !== 'ANONYMOUS_FIXTURE')) {
     throw new Error('Local intake builds require anonymous fixtures.');
@@ -85,6 +111,9 @@ export async function build() {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const result = await build();
-  console.log(`Local anonymous preview built: ${result.records} sample records. No deployment package created.`);
+  const args=process.argv.slice(2);
+  if(args.length&&!(args[0]==='--shared-bank'&&args.length<=2))throw Error('Use build.mjs [--shared-bank [resource-directory]].');
+  const sharedBank=args[0]==='--shared-bank';
+  const result = await build({sharedBank,resourceRoot:args[1]?path.resolve(args[1]):sharedResourceRoot});
+  console.log(sharedBank?`Authenticated platform bank built: ${result.records} records, ${result.questions} questions. No Cloud deployment package created.`:`Local anonymous preview built: ${result.records} sample records. No deployment package created.`);
 }
