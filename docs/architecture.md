@@ -1,5 +1,7 @@
 # 架构与整合计划
 
+> 2026-10-25 Cloudflare 注册改为站内管理员审批：AUTH SQLite DO 保存独立申请，所有有效管理员共享查看待处理和已处理结果；任一管理员通过才原子创建 student，也可拒绝，多管理员竞态只允许首次操作生效。移除未发布的 Resend 依赖和公开邮件 token 审批，不需要域名或发信 secret；存在有效管理员才启用注册。未审批不能登录，旧账号不重审，服务端权限和审计不依赖前端隐藏。Python 服务和 SAT/TOEFL 考试流程不变；此功能尚未发布。详见 [站内审批注册](registration-approval.md)。
+
 > 2026-10-24 Cloudflare 适配分支更新：新增 Workers 同源入口 + SQLite Durable Objects（身份库、逐账号私有库、管理员旧格式共享题库），完整共享媒体由受保护静态资产提供。选择 DO 而非直接静态 Pages，是为了保留现有密码强度、账号隔离、64 MiB SAT 快照、CAS 与删除标记；2 MiB SQL 行限制由流式 256 KiB BLOB 分块处理。新云库为空，不迁移旧个人数据，不改原私人 TOEFL 部署。本机 Python 方式保持；下文“尚未选定供应商”等属于历史阶段。当前配置、发布步骤和免费约束见 [Cloudflare 部署](cloudflare-deployment.md)。
 
 > 2026-10-24 线上密码兼容性修复：生产 Cloudflare 的原生 PBKDF2 上限与本地 workerd 不同，因此 AUTH DO 改用锁定的 `@noble/hashes@2.0.1` 标准 JavaScript 实现，继续完整 PBKDF2-HMAC-SHA256 600,000 次、24-byte salt 与 32-byte 结果；不更改数据库格式、不降低强度，也不迁到客户端或收费服务。发布检查新增真实未知账号 dummy verification；算法正确性、云端资源/并发用量与实际账号验收是不同验证层次。

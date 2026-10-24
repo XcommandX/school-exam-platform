@@ -4,7 +4,7 @@
  * invalidates an in-flight password check even after disable -> enable or a
  * role change -> reversal. auth_meta contains no submitted credentials.
  */
-export const AUTH_SCHEMA_VERSION = '1';
+export const AUTH_SCHEMA_VERSION = '3';
 
 export const AUTH_SCHEMA = Object.freeze([
   `CREATE TABLE IF NOT EXISTS auth_meta (
@@ -48,4 +48,32 @@ export const AUTH_SCHEMA = Object.freeze([
     detail TEXT NOT NULL DEFAULT '{}'
   )`,
   'CREATE INDEX IF NOT EXISTS audit_events_time ON audit_events(occurred_at)',
+  // v3 removes unpublished email approvals, never existing accounts/sessions.
+  'DROP TABLE IF EXISTS pending_registrations',
+  `CREATE TABLE IF NOT EXISTS registration_requests (
+    id TEXT PRIMARY KEY,
+    username TEXT NOT NULL,
+    username_key TEXT NOT NULL,
+    display_name TEXT NOT NULL,
+    password_hash TEXT,
+    status TEXT NOT NULL CHECK(status IN ('hashing','pending','approved','rejected')),
+    created_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL,
+    lease_expires_at INTEGER NOT NULL,
+    reviewed_at INTEGER,
+    reviewed_order INTEGER NOT NULL DEFAULT 0,
+    reviewed_by TEXT,
+    reviewer_name TEXT,
+    CHECK(status != 'pending' OR password_hash IS NOT NULL),
+    CHECK(status NOT IN ('approved','rejected') OR password_hash IS NULL)
+  )`,
+  "CREATE UNIQUE INDEX IF NOT EXISTS registration_requests_active_username ON registration_requests(username_key) WHERE status IN ('hashing','pending')",
+  'CREATE INDEX IF NOT EXISTS registration_requests_expiry ON registration_requests(expires_at)',
+  'CREATE INDEX IF NOT EXISTS registration_requests_history ON registration_requests(reviewed_at)',
+  `CREATE TABLE IF NOT EXISTS registration_limits (
+    bucket TEXT PRIMARY KEY,
+    attempts INTEGER NOT NULL CHECK(attempts >= 0),
+    expires_at INTEGER NOT NULL
+  )`,
+  'CREATE INDEX IF NOT EXISTS registration_limits_expiry ON registration_limits(expires_at)',
 ]);

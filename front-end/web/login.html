@@ -19,12 +19,31 @@
     <section class="login-panel" aria-labelledby="login-title">
       <span class="login-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10V7a4 4 0 0 1 8 0v3"/><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M12 14v3"/></svg></span>
       <h1 id="login-title">登录</h1>
+      <nav class="auth-switch" aria-label="账号操作" id="auth-switch" hidden><button type="button" id="show-login" aria-pressed="true">登录</button><button type="button" id="show-register" aria-pressed="false">注册</button></nav>
       <form id="login-form">
         <label class="field" for="username">账号<input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="40" required autofocus></label>
         <label class="field" for="password">密码<span class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" maxlength="256" required><button id="password-toggle" class="password-toggle" type="button" aria-label="显示密码" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18"/></svg></button></span></label>
         <p class="login-status" id="login-status" role="status" aria-live="polite"></p>
         <button type="submit" class="login-submit" id="login-submit"><span>进入学习空间</span><span class="submit-arrow" aria-hidden="true">↗</span></button>
       </form>
+      <form id="register-form" hidden>
+        <label class="field" for="register-username">账号<input id="register-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" minlength="3" maxlength="40" pattern="[A-Za-z0-9][A-Za-z0-9_.\-]{2,39}" aria-describedby="username-help" required></label>
+        <p class="auth-help" id="username-help">3–40 位字母、数字、下划线、短横线或点，以字母或数字开头。</p>
+        <label class="field" for="register-name">显示名称<input id="register-name" name="displayName" type="text" autocomplete="nickname" maxlength="60" required></label>
+        <label class="field" for="register-password">密码<input id="register-password" name="password" type="password" autocomplete="new-password" minlength="6" maxlength="256" aria-describedby="password-help" required></label>
+        <p class="auth-help" id="password-help">至少 6 个字符，建议使用较长且不重复的密码。</p>
+        <label class="field" for="register-confirm">确认密码<input id="register-confirm" name="confirmPassword" type="password" autocomplete="new-password" minlength="6" maxlength="256" required></label>
+        <p class="approval-note">申请将提交到管理员的账号管理页面，批准后即可登录。</p>
+        <p class="login-status" id="register-status" role="status" aria-live="polite"></p>
+        <button type="submit" class="login-submit" id="register-submit"><span>提交注册申请</span><span class="submit-arrow" aria-hidden="true">↗</span></button>
+      </form>
+      <section id="registration-sent" class="registration-sent" aria-labelledby="sent-title" hidden>
+        <span class="approval-check" aria-hidden="true">✓</span>
+        <h2 id="sent-title" tabindex="-1">等待管理员确认</h2>
+        <p>注册申请已提交，请等待管理员批准。批准后，请使用新账号和密码登录。</p>
+        <p class="auth-help">申请不会自动登录。若迟迟未获批准，请联系管理员。</p>
+        <button type="button" class="login-submit" id="back-to-login">返回登录</button>
+      </section>
     </section>
   </main>
 </body>

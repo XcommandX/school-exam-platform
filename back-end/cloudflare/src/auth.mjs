@@ -5,6 +5,14 @@ import { sha256 } from '@noble/hashes/sha2.js';
 import { AUTH_SCHEMA, AUTH_SCHEMA_VERSION } from './auth-schema.mjs';
 import { InputError, readJSON } from './json-stream.mjs';
 
+export const REGISTRATION_SECONDS = 7 * 24 * 60 * 60;
+export const REGISTRATION_HISTORY_SECONDS = 30 * 24 * 60 * 60;
+export const MAX_REGISTRATION_HISTORY = 3000;
+export const REGISTRATION_LEASE_SECONDS = 120;
+export const MAX_PENDING_REGISTRATIONS = 500;
+const registrationUnavailable = () => new AuthError(503, '注册审批暂未启用，请联系维护者。', 'registration_unavailable');
+const registrationConflict = () => new AuthError(409, '申请已处理、已过期或不存在，请刷新列表。', 'registration_changed');
+
 // Production Workers caps BOTH native node:crypto and WebCrypto PBKDF2 at 100k,
 // unlike local workerd. Use the locked standard JS implementation in the AUTH DO
 // for the SAME 600k HMAC-SHA256 function; never downgrade or chain shorter KDFs.
@@ -162,6 +170,8 @@ export class AuthStore {
     this._tx(() => {
       for (const statement of AUTH_SCHEMA) this.sql.exec(statement);
       this.sql.exec('INSERT OR IGNORE INTO auth_meta(key,value) VALUES (?,?)', 'schema_version', AUTH_SCHEMA_VERSION);
+      // Only the known additive migration is accepted; future schemas fail closed.
+      this.sql.exec("UPDATE auth_meta SET value=? WHERE key=? AND value IN ('1','2')", AUTH_SCHEMA_VERSION, 'schema_version');
       if (this._one('SELECT value FROM auth_meta WHERE key=?', 'schema_version').value !== AUTH_SCHEMA_VERSION) {
         throw new AuthError(503, '账号数据库版本不受支持。', 'storage_unavailable');
       }
@@ -283,6 +293,110 @@ export class AuthStore {
       const result = this._newSession(user.id);
       this._audit('login.success', user.id, user.id);
       return result;
+    });
+  }
+
+  registrationConfigValue() { return { enabled: Boolean(this._one("SELECT 1 FROM users WHERE role='admin' AND active=1 LIMIT 1")), mode: 'admin' }; }
+
+  cleanupRegistrations() {
+    this._tx(() => {
+      const now = this.clock();
+      this.sql.exec("DELETE FROM registration_requests WHERE (status IN ('hashing','pending') AND expires_at<=?) OR (status='hashing' AND lease_expires_at<=?) OR (status IN ('approved','rejected') AND reviewed_at<=?)", now, now, now - REGISTRATION_HISTORY_SECONDS);
+      this.sql.exec("DELETE FROM registration_requests WHERE id IN (SELECT id FROM registration_requests WHERE status IN ('approved','rejected') ORDER BY reviewed_at DESC,reviewed_order DESC,rowid DESC LIMIT -1 OFFSET ?)", MAX_REGISTRATION_HISTORY);
+      this.sql.exec('DELETE FROM registration_limits WHERE expires_at<=?', now);
+    });
+  }
+
+  _registrationLimit(address) {
+    if (typeof address !== 'string' || !address.length || address.length > 256 || !wellFormed(address)) {
+      throw new AuthError(400, '请求字段无效。');
+    }
+    this.cleanupRegistrations();
+    // Commit counters even for duplicate names and failed hashing.
+    // These limits reserve work BEFORE hashing, across DO restarts.
+    this._tx(() => {
+      const now = this.clock();
+      const specs = [[this._bucket('registration-ip', address), 5, 3600], ['registration-global', 20, 600], ['registration-day', 100, 86400]];
+      const rows = specs.map(([bucket]) => this._one('SELECT * FROM registration_limits WHERE bucket=?', bucket));
+      for (let i = 0; i < specs.length; i++) {
+        if (rows[i]?.attempts >= specs[i][1]) throw new AuthError(429, '操作过于频繁，请稍后再试。', 'rate_limited', { retryAfter: Math.max(1, rows[i].expires_at - now) });
+      }
+      if (this._one('SELECT COUNT(*) AS count FROM registration_limits').count + rows.filter(row => !row).length > 2000) {
+        throw new AuthError(429, '操作过于频繁，请稍后再试。', 'rate_limited', { retryAfter: 60 });
+      }
+      specs.forEach(([bucket, , seconds], i) => this.sql.exec(
+        'INSERT INTO registration_limits(bucket,attempts,expires_at) VALUES (?,1,?) ON CONFLICT(bucket) DO UPDATE SET attempts=attempts+1',
+        bucket, rows[i]?.expires_at ?? now + seconds));
+    });
+  }
+
+  async register({ username, displayName, password, address }) {
+    if (!this.registrationConfigValue().enabled) throw registrationUnavailable();
+    username = validateUsername(username);
+    displayName = validateDisplayName(displayName);
+    validatePassword(password);
+    this._registrationLimit(address);
+    const id = hex(16), now = this.clock();
+    this._tx(() => {
+      if (this._one('SELECT 1 FROM users WHERE username_key=?', username.toLowerCase())) {
+        throw new AuthError(409, '该用户名已存在。', 'username_exists');
+      }
+      if (this._one("SELECT 1 FROM registration_requests WHERE username_key=? AND status IN ('hashing','pending')", username.toLowerCase())) {
+        throw new AuthError(409, '该用户名已有待审批申请，请勿重复提交。', 'registration_pending');
+      }
+      if (this._one("SELECT COUNT(*) AS count FROM registration_requests WHERE status IN ('hashing','pending')").count >= MAX_PENDING_REGISTRATIONS) {
+        throw new AuthError(429, '待审批申请已满，请稍后再试。', 'registration_capacity', { retryAfter: 600 });
+      }
+      this.sql.exec('INSERT INTO registration_requests(id,username,username_key,display_name,status,created_at,expires_at,lease_expires_at) VALUES (?,?,?,?,?,?,?,?)',
+        id, username, username.toLowerCase(), displayName, 'hashing', now, now + REGISTRATION_SECONDS, now + REGISTRATION_LEASE_SECONDS);
+    });
+    try {
+      const passwordHash = await this._hash(password);
+      this._tx(() => {
+        if (!this.registrationConfigValue().enabled) throw registrationUnavailable();
+        const row = this._one("SELECT * FROM registration_requests WHERE id=? AND status='hashing'", id);
+        if (!row || row.lease_expires_at <= this.clock() || row.expires_at <= this.clock()) throw registrationUnavailable();
+        if (this._one('SELECT 1 FROM users WHERE username_key=?', row.username_key)) {
+          throw new AuthError(409, '该用户名已存在。', 'username_exists');
+        }
+        this.sql.exec("UPDATE registration_requests SET password_hash=?,status='pending' WHERE id=?", passwordHash, id);
+      });
+      return { pending: true, message: '申请已提交，请等待管理员在站内审批后再登录。申请有效期为7天。' };
+    } catch (error) {
+      // Only remove this hash lease, never a replacement request for that name.
+      this._tx(() => this.sql.exec("DELETE FROM registration_requests WHERE id=? AND status='hashing'", id));
+      throw error;
+    }
+  }
+
+  registrations({ token }) {
+    this._tx(() => this._require(token, true));
+    this.cleanupRegistrations();
+    return this._tx(() => {
+      this._require(token, true);
+      const requests = this._all("SELECT id,username,display_name,status,created_at,reviewed_at,reviewer_name FROM registration_requests WHERE status!='hashing' ORDER BY created_at DESC,rowid DESC").map(row => ({
+        id: row.id, username: row.username, displayName: row.display_name, status: row.status,
+        createdAt: row.created_at * 1000, reviewedAt: row.reviewed_at === null ? null : row.reviewed_at * 1000,
+        reviewedBy: row.reviewer_name,
+      }));
+      return { requests, pendingCount: requests.filter(row => row.status === 'pending').length };
+    });
+  }
+
+  decideRegistration({ token, requestId, approve }) {
+    return this._tx(() => {
+      const actor = this._require(token, true);
+      if (typeof requestId !== 'string' || !/^[a-f0-9]{32}$/.test(requestId) || typeof approve !== 'boolean') throw new AuthError(400, '请求字段无效。');
+      const row = this._one('SELECT * FROM registration_requests WHERE id=?', requestId);
+      if (!row || row.status !== 'pending' || row.expires_at <= this.clock()) throw registrationConflict();
+      let user = null;
+      if (approve) user = this._insertUser(row.username, row.display_name, row.password_hash, 'student');
+      this.sql.exec('UPDATE registration_requests SET status=?,password_hash=NULL,reviewed_at=?,reviewed_by=?,reviewer_name=? WHERE id=?',
+        approve ? 'approved' : 'rejected', this.clock(), actor.user.id, actor.user.display_name, requestId);
+      this._audit(approve ? 'registration.approve' : 'registration.reject', actor.user.id, requestId, user ? { userId: user.id, role: 'student' } : {});
+      this.sql.exec('UPDATE registration_requests SET reviewed_order=(SELECT MAX(id) FROM audit_events) WHERE id=?', requestId);
+      this.sql.exec("DELETE FROM registration_requests WHERE id IN (SELECT id FROM registration_requests WHERE status IN ('approved','rejected') ORDER BY reviewed_at DESC,reviewed_order DESC,rowid DESC LIMIT -1 OFFSET ?)", MAX_REGISTRATION_HISTORY);
+      return approve ? { approved: true } : { rejected: true };
     });
   }
 
@@ -434,6 +548,18 @@ export class AuthStore {
 
   async dispatch(path, body) {
     switch (path) {
+      case '/registration-config':
+        fields(body, []);
+        return { status: 200, value: this.registrationConfigValue() };
+      case '/register':
+        fields(body, ['username', 'displayName', 'password', 'address']);
+        return { status: 202, value: await this.register(body) };
+      case '/registrations':
+        fields(body, ['token']);
+        return { status: 200, value: this.registrations(body) };
+      case '/decide-registration':
+        fields(body, ['token', 'requestId', 'approve']);
+        return { status: 200, value: this.decideRegistration(body) };
       case '/bootstrap':
         fields(body, ['setupToken', 'username', 'password'], ['displayName']);
         return { status: 201, value: await this.bootstrap(body) };
@@ -493,7 +619,19 @@ function reply(status, value) {
  */
 export class PlatformAuthStore {
   constructor(ctx, env) {
+    this.storage = ctx.storage;
     this.store = new AuthStore(ctx.storage, { setupToken: env?.SETUP_TOKEN });
+  }
+
+  async scheduleCleanup() {
+    if (this.storage.setAlarm && !await this.storage.getAlarm()) await this.storage.setAlarm(Date.now() + 60 * 60 * 1000);
+  }
+
+  async alarm() {
+    this.store.cleanupRegistrations();
+    if (this.store._one('SELECT 1 FROM registration_requests LIMIT 1') || this.store._one('SELECT 1 FROM registration_limits LIMIT 1')) {
+      await this.storage.setAlarm(Date.now() + 60 * 60 * 1000);
+    }
   }
 
   async fetch(request) {
@@ -502,6 +640,7 @@ export class PlatformAuthStore {
       const url = new URL(request.url);
       if (url.search) throw new AuthError(400, '请求字段无效。');
       const body = await readBody(request);
+      if (['/register', '/registrations', '/decide-registration'].includes(url.pathname)) await this.scheduleCleanup();
       const { status, value } = await this.store.dispatch(url.pathname, body);
       return reply(status, value);
     } catch (error) {

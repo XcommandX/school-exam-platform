@@ -14,6 +14,10 @@
 - 不把旧私有 `active.json` 带入新云站。新题库从目录中选择，旧切库备份接口返回明确 `no_active_collection`，不会假装备份成功。
 - 不自动合入 `main`，不建立未经授权的 GitHub Actions/付费项目。
 
+## 站内审批注册扩展（未发布）
+
+2026-10-25 用户将此前未发布的邮件方案改为站内审批，在 `feature/admin-registration-approval` 分支继续实现：所有有效管理员在账号管理共享查看注册申请并通过或拒绝，通过才创建学生账号。有有效管理员时才允许注册；无需 Resend、发信域名或邮件 secret，原有登录保持。接口、隐私、数据迁移及验证边界见 [站内审批注册](registration-approval.md)。用户完成独立本地测试并确认正常后，已授权 commit / push 至该功能分支；未授权合入 main、配置线上 secret 或部署，下方实际发布记录仍是此前版本。本地测试账号、数据库及凭证不上传。
+
 ## 实际发布记录（2026-10-24）
 
 - 公网地址：<https://school-exam-platform.xcommandx-school.workers.dev>。本次注册用户确认的免费 `xcommandx-school.workers.dev` 子域名，没有购买域名或执行付费升级。

@@ -13,7 +13,7 @@
     try {
       if (!value || !String(value).startsWith('/') || String(value).startsWith('//') || /[\\\x00-\x1f]/.test(value)) return '/';
       const url = new URL(value, location.origin);
-      if (url.origin !== location.origin || /^\/(?:login|api|web)(?:\/|\.|$)/.test(url.pathname)) return '/';
+      if (url.origin !== location.origin || /^\/(?:login|registration-review|api|web)(?:\/|\.|$)/.test(url.pathname)) return '/';
       return url.pathname + url.search + url.hash;
     } catch { return '/'; }
   }
@@ -37,7 +37,7 @@
   async function api(path, options = {}) {
     if (!String(path).startsWith('/api/') || String(path).startsWith('//') || /[\\\x00-\x1f]/.test(path)) throw new Error('请求地址无效。');
     const method = (options.method || 'GET').toUpperCase();
-    const publicRequest = path === '/api/auth/session' || path === '/api/auth/login';
+    const publicRequest = ['/api/auth/session', '/api/auth/login', '/api/auth/registration-config', '/api/auth/register'].includes(path);
     if (!publicRequest && (!active || !owner)) { invalidate(); throw new Error('登录已失效，请重新登录。'); }
     const headers = new Headers(options.headers || {});
     if (owner) headers.set('X-Account-ID', owner);

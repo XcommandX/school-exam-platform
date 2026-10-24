@@ -8,6 +8,7 @@
     "build": "node scripts/build.mjs",
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
     "test:browser": "node tests/browser-smoke.mjs",
+    "test:registration-browser": "node tests/registration-browser.mjs",
     "dev": "wrangler dev --config wrangler.jsonc --ip 127.0.0.1",
     "deploy": "wrangler deploy --config wrangler.jsonc"
   },

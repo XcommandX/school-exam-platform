@@ -120,6 +120,21 @@ export async function handle(request,env){
   if(path==='/api/platform/status'&&method==='GET')return json({service:'school-exam-platform-v1',deployment:'cloudflare',auth:{mode:'session',loginEnabled:true}});
   if(path==='/setup'&&!writing)return new Response(setupHTML,{headers:{'Content-Type':'text/html; charset=utf-8'}});
   if(path==='/setup.js'&&!writing)return new Response(setupJS,{headers:{'Content-Type':'text/javascript; charset=utf-8'}});
+  const registrationRoutes={
+    '/api/auth/registration-config':{method:'GET',rpc:'/registration-config',fields:[]},
+    '/api/auth/register':{method:'POST',rpc:'/register',fields:['username','displayName','password']},
+  };
+  if(['/registration-review','/registration-review/','/web/registration-review.html','/web/registration-review.js','/api/auth/registration-review','/api/auth/registration-approve'].includes(path))return json({error:'邮件审批链接已停用，请管理员登录站内审批。',code:'registration_mail_retired'},410);
+  if(Object.hasOwn(registrationRoutes,path)){
+    const route=registrationRoutes[path];
+    if(url.search)fail('请求字段无效。'); // Never accept bearer tokens in query strings.
+    if(method!==route.method)return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
+    if(method==='GET')return authResponse(await auth(env,route.rpc,{}));
+    const body=await readJSON(request,16*1024);
+    if(!fields(body,route.fields)||route.fields.some(key=>!Object.hasOwn(body,key)))fail('请求字段无效。');
+    // Never accept client-supplied IP, role, active, recipient or origin fields.
+    return authResponse(await auth(env,route.rpc,{...body,address:request.headers.get('CF-Connecting-IP')||'local-dev'}));
+  }
   const token=cookieToken(request);
   if(path==='/api/auth/login'&&method==='POST'){
     const body=await readJSON(request,16*1024);
@@ -154,6 +169,17 @@ export async function handle(request,env){
   if(path==='/api/auth/password'&&method==='POST'){
     const body=await readJSON(request,16*1024);if(!fields(body,['currentPassword','newPassword'])||Object.keys(body).length!==2)fail('请提供当前密码与新密码。');
     return authResponse(await auth(env,'/password',{token,...body}),{clearCookie:true});
+  }
+  if(path==='/api/admin/registrations'||path.startsWith('/api/admin/registrations/')){
+    if(user.role!=='admin')fail('需要管理员权限。',403,'admin_required');
+    if(url.search)fail('请求字段无效。');
+    if(path==='/api/admin/registrations'&&method==='GET')return authResponse(await auth(env,'/registrations',{token}));
+    const decision=path.match(/^\/api\/admin\/registrations\/([a-f0-9]{32})\/(approve|reject)$/);
+    if(decision&&method==='POST'){
+      const body=await readJSON(request,16*1024);if(!fields(body,[])||Object.keys(body).length)fail('请求字段无效。');
+      return authResponse(await auth(env,'/decide-registration',{token,requestId:decision[1],approve:decision[2]==='approve'}));
+    }
+    return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
   }
   if(path==='/api/admin/users'&&method==='GET')return authResponse(await auth(env,'/users',{token}));
   if(path==='/api/admin/users'&&method==='POST'){
