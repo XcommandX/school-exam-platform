@@ -1,4 +1,5 @@
-// Provision the first-admin secret without exposing it in shell arguments/logs.
+// Provision the first-admin secret through Wrangler stdin, never its arguments/logs.
+// The OS browser launcher briefly receives the setup URL; run on a trusted machine.
 // Run only after deploying. Re-running rotates the still-unused setup secret.
 import {randomBytes} from 'node:crypto';
 import {spawn} from 'node:child_process';

@@ -48,8 +48,8 @@ const invalidOrigin = await probe('/api/auth/bootstrap', 403, {method: 'POST', h
 assert.equal(JSON.parse(invalidOrigin.text).code, 'invalid_origin');
 // This known-invalid setup token can never create an account. It exercises the
 // real AUTH SQLite DO without a login, a default password, or a production user.
-const auth = await fetch(origin + '/api/auth/bootstrap', {method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(30000), headers: {'Content-Type': 'application/json', Origin: origin}, body: JSON.stringify({setupToken: 'invalid-anonymous-probe-token-not-a-secret'})});
+const auth = await fetch(origin + '/api/auth/bootstrap', {method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(30000), headers: {'Content-Type': 'application/json', Origin: origin}, body: JSON.stringify({setupToken: 'invalid-anonymous-probe-token-not-a-secret', username: '', password: ''})});
 const body = await auth.json();
-assert.ok((auth.status === 503 && body.code === 'setup_unavailable') || (auth.status === 403 && body.code === 'invalid_setup_token'), 'AUTH must fail closed before any user creation');
+assert.ok((auth.status === 503 && body.code === 'setup_unavailable') || (auth.status === 403 && body.code === 'invalid_setup_token'), `AUTH must fail closed before any user creation: HTTP ${auth.status}, code ${body.code}`);
 checks++; console.log('PASS', auth.status, 'AUTH SQLite DO refuses invalid initialization');
 console.log('LIVE ANONYMOUS CHECKS PASSED', checks, origin);

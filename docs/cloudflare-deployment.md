@@ -14,6 +14,15 @@
 - 不把旧私有 `active.json` 带入新云站。新题库从目录中选择，旧切库备份接口返回明确 `no_active_collection`，不会假装备份成功。
 - 不自动合入 `main`，不建立未经授权的 GitHub Actions/付费项目。
 
+## 实际发布记录（2026-10-24）
+
+- 公网地址：<https://school-exam-platform.xcommandx-school.workers.dev>。本次注册用户确认的免费 `xcommandx-school.workers.dev` 子域名，没有购买域名或执行付费升级。
+- 20:14（Asia/Shanghai）首次发布成功，代码对应独立分支提交 `8921de2`；初始 Worker 版本 `3924deb0-180c-41a6-8cbe-c2ce7997b8c6`。完整静态资源发布完成：本次上传 7,261 项，289 项无需重复上传。
+- 20:15 设置一次性初始化 secret 后，Cloudflare 生成版本 `04d07d92-2077-445e-a6be-7d77512857ef`；代码和共享题库未变。
+- 配置初始化凭证前、后各执行公网匿名检查，均 **26/26 通过**：服务状态、登录与初始化页面、未登录 API/页面保护、内部目录与题库脚本保护、跨站写入拒绝、三个公共前端文件 SHA-256 一致，以及真实 AUTH SQLite DO 对无效初始化的拒绝。
+- 管理员初始化页面已在维护者浏览器安全打开，账号与密码由用户本人填写。本文此时尚未确认首位管理员创建、正式账号登录后保存或两台真实设备验收；本地浏览器回归不能代替这些操作。
+- 实现提交已上传 GitHub 的 `chore/cloudflare-deployment` 分支；`main` 仍为基线 `4c00fced`，没有合并。只推送分支不会自动重新发布网站，也没有设置自动部署。
+
 ## 架构和安全边界
 
 配置见 [wrangler.jsonc](../back-end/cloudflare/wrangler.jsonc)，入口见 [worker.mjs](../back-end/cloudflare/src/worker.mjs)。
@@ -77,7 +86,7 @@ node scripts/check-live.mjs https://实际域名.workers.dev
 4. 后端只允许第一个管理员初始化成功；并发请求也只能成功一次。成功后由 `/account` 创建其他成员账号。
 5. 可执行 `npx wrangler secret delete SETUP_TOKEN` 移除已失效的 secret（不删除账号）。脚本不保存本地临时凭证；关闭初始化页面即可。
 
-初始化不是公开注册入口。密码不得发到聊天，不提供固定默认密码。遗失所有管理员凭证应由仓库维护者制定审计过的离线恢复流程，不开放绕过认证的重置后门。
+初始化不是公开注册入口。密码不得发到聊天，不提供固定默认密码。`http://127.0.0.1:8888/` 是开发者电脑上的本机服务，其既有管理员账号、密码和个人记录不会自动进入这个新云站。用户可在新站重新使用原用户名，但需自行设置密码；首位管理员登录后可在“账号管理 → 创建账号”中将角色选为“管理员”，创建另外两位管理员。此过程不删除或修改本机账号，也不迁移旧数据。遗失所有管理员凭证应由仓库维护者制定审计过的离线恢复流程，不开放绕过认证的重置后门。
 
 ## 免费额度与应用限制
 
@@ -116,7 +125,7 @@ node scripts/check-live.mjs https://实际域名.workers.dev
 
 自动化还覆盖登录/单会话/权限撤销、一次性初始化竞态、两账号隔离、跨会话保存读取、CAS/操作重放/删除/完成记录不可变、TOEFL 取消记录、完整题库构建、接近 20 MiB 共享题库导入以及 62 MiB SAT 快照真实 workerd 流式读写。运行时测试不等于校园网络、Safari、两台真实硬件、150 人并发或云端 CPU 额度的负载测试。
 
-**原 Python 测试未全绿，不能宣称 Windows 本机流程全部通过。** 同日执行原 `back-end/tests` 的 240 项，5 failures / 15 errors；只读核实相关 Python 服务、工具与测试同基线未改。已确认的既有 Windows 问题：TOEFL 服务端生成的反斜杠路径触发自身安全拒绝（4 failures）、系统 MIME 缺少 woff2（1 failure）、测试默认 GBK（4 errors）、转换器 CRLF 与修订过程 LF 字节比较冲突（3 errors）、符号链接权限（5 errors）、测试未关闭 SQLite 连接导致清理失败（3 errors）。UTF-8 定向复跑 6 项中 2 项通过、3 failures / 1 error，证实 UTF-8 并非全部原因。未在本次部署顺便修改原 Python。Cloudflare 不使用该 Python HTTP 路由、本机 SQLite 或转换修订器；其构建强制 UTF-8，最终完整题库与上述云运行时检查通过。原首页 Node 模型回归通过。
+**原 Python 测试未全绿，不能宣称 Windows 本机流程全部通过。** 同日执行原 `back-end/tests` 的 240 项，5 failures / 15 errors；只读核实相关 Python 服务、工具与测试同基线未改。已确认的既有 Windows 问题：TOEFL 服务端生成的反斜杠路径触发自身安全拒绝（4 failures）、系统 MIME 缺少 woff2（1 failure）、测试默认 GBK（4 errors）、转换器 CRLF 与修订过程 LF 字节比较冲突（3 errors）、符号链接权限（5 errors）、测试未关闭 SQLite 连接导致清理失败（3 errors）。UTF-8 定向复跑 6 项中 2 项通过、3 failures / 1 error，证实 UTF-8 并非全部原因。未在本次部署顺便修改原 Python。Cloudflare 不使用该 Python HTTP 路由、本机 SQLite 或转换修订器；其构建强制 UTF-8，最终完整题库与上述云运行时检查通过。原首页 Node 模型回归通过。另执行原 TOEFL `node back-end/toefl/scripts/test.mjs`：45 项通过、2 项在创建符号链接夹具时因 Windows `EPERM` 中止（`test-shared-resources.mjs`、`test-task-format.mjs`），没有绕过或移除符号链接安全检查；未使用外部 AI 或生产数据库。
 
 ## 官方资料
 

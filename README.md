@@ -2,6 +2,10 @@
 
 校内 SAT / TOEFL 练习平台。首页、TOEFL 和 SAT 共用账号；首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存。本分支新增 Cloudflare Workers + SQLite Durable Objects 云端适配，保留原 Python 本机运行方式；录音上传与外部 AI 不启用。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)，云端构建、初始化、配额与维护见 [Cloudflare 部署](docs/cloudflare-deployment.md)。
 
+## Cloudflare 在线版
+
+2026-10-24 已实际发布：<https://school-exam-platform.xcommandx-school.workers.dev>。完整共享 SAT / TOEFL 题库和必要音频图片已上传，页面与题库须登录。源码已上传 `chore/cloudflare-deployment` 分支，未合入 `main`；更新 GitHub 不会自动更新网站。首次使用需由维护者在安全初始化页面自行创建管理员；云端账号与 `127.0.0.1:8888` 本机账号独立，不迁移旧个人数据。发布版本、已完成与待验收检查见 [发布记录](docs/cloudflare-deployment.md#实际发布记录2026-10-24)。
+
 ## 项目结构
 
 ```text
