@@ -6,7 +6,7 @@
 - 已确认需要统一登录、统一网址和云端答题记录。
 - 三位开发者使用 Windows / macOS，并通过 GitHub 分支与 PR 协作。
 - 统一首页位于 `front-end/web/`，采用 Study Space 品牌和已确认的暖白底、TOEFL 绿卡与 SAT 橙卡模板；主卡连接两个考试应用，AP 与 Personal Vocab 保留接口。Python 3.10+ 标准库服务从 `back-end/server/serve_platform.py` 启动。详见 `docs/unified-home.md`。
-- SAT Reading & Writing 复用 `front-end/sat/` 原生答题引擎；非考试管理页面已做视觉更新。2026-10-23 已按截图限定接入 SAT 数学、新题包和整套练习，范围见 `docs/sat-math-exam.md`。TOEFL 源码来自 `toefl 98aa9c7`，目录整理后浏览器代码在 `front-end/toefl/`，服务端、构建与模块测试在 `back-end/toefl/`；统一服务提供其匿名样例题库构建，并接公共账号与 TOEFL 文字状态保存；不连接私有题库、原云站、录音云存储或外部 AI。AP、Personal Vocab 仍待接入。
+- SAT Reading & Writing 复用 `front-end/sat/` 原生答题引擎；非考试管理页面已做视觉更新。2026-10-23 已按截图限定接入 SAT 数学、新题包和整套练习，范围见 `docs/sat-math-exam.md`。TOEFL 源码来自 `toefl 98aa9c7`，目录整理后浏览器代码在 `front-end/toefl/`，服务端、构建与模块测试在 `back-end/toefl/`；统一服务接公共账号与 TOEFL 文字状态保存；2026-10-24 起可构建用户授权共享的完整题库，无共享资源时仍使用匿名样例；不连接原云站、录音云存储或外部 AI。AP、Personal Vocab 仍待接入。
 - 已接入统一账号：`/login`、首页、TOEFL 和 SAT 共用服务端会话，SQLite 位于忽略的 `local-data/auth/`。首页设置、TOEFL 文字状态及 SAT 练习记录、错题本、练习设置按账号保存在服务端；TOEFL 录音仍仅在当前账号的浏览器空间。SAT 运行中的逐题计时保留本机，保存退出或完成练习时同步持久记录及恢复快照。旧固定 `admin` 不再作为登录身份，旧匿名数据保留但不自动迁移。账号管理由后端检查管理员角色，具体接口与边界见 `docs/unified-auth.md`。本机实现不等于已部署公网云服务。
 - 读 README.md、docs/CONTRIBUTING.md 和任务相关的 docs/ 文档后再修改。进入子模块时继续读取该目录下的 AGENTS.md（如果存在）。
 - 项目固定四个主体目录：`front-end/`（浏览器代码）、`back-end/`（服务、维护工具与检查）、`docs/`（共享说明）、`local-data/`（本机数据与产物，整体忽略）。截图、临时报告、参考目录和构建结果写入 `local-data/` 对应子目录，不再散落根目录。根目录仅保留 README、AGENTS、启动/同步入口与必要 Git 配置；布局、运行命令和迁移说明见 `docs/project-structure.md`。已有源码搬家不等于实现了正式认证。
@@ -23,6 +23,7 @@
 - 数据库结构变更应形成可重复执行或可按顺序应用的迁移，并配套匿名测试数据。
 - Git 默认只保存源码、配置样例和原创合成测试题；2026-10-23 用户另明确授权已复制到 `back-end/sat/questions/sat-packs/gengdu-offline/` 的 SAT 题库与必要图片作为可提交 GitHub 的共享副本。Start Practice 与 Practice Builder 全库接口现默认合并该目录与并列的 `pdf-official/`；显式 `SAT_LIBRARY_ROOT` 或 `--sat-library-root` 仍只读取指定目录。耕读共享例外只覆盖指定题库目录，不包括密钥、数据库导出、学生信息、答题数据、备份或其他真实来源资料；其余仍存于被忽略的 `local-data/`，不得 force-add 绕过忽略规则。目录中的 ZIP 及其校验文件作为重复打包产物仍忽略，`.DS_Store` 所有层级继续忽略。准备可提交文件不等于已经 commit、push 或部署。
 - 2026-10-24 本轮用户授权将 `local-data/references/Reference Folders/真题库/更新到26年10月SAT最新真题题库+答案/` 中的 PDF 转换为 SAT 题包，并将 `back-end/sat/questions/sat-packs/pdf-official/` 中的题包与必要图片纳入本地 Git commit。该新增例外仅覆盖指定转换输出；原 PDF、抽取文本、截图、审阅产物、备份及个人数据仍留在忽略的 `local-data/`。当时仅授权本地 commit；2026-10-24 后续已明确授权将所有本地分支合入本地 `main`，仍未授权 push 或部署。转换、合并上架与验证规则见 `docs/sat-pdf-conversion.md`。
+- 2026-10-24 用户明确授权在确认 SAT 题库已进入 Git 后，将其现有全部 TOEFL 题目及所引用的来源音频、图片上传到 `toefl` 分支。共享副本仅位于 `back-end/question-banks/toefl/`，以 `RESOURCE_MANIFEST.json` 逐文件记录 SHA-256 和大小；不含用户作答、作文、口语录音、账号、数据库、密钥、原始资料包或重复产物。此授权覆盖 commit/push 至 `toefl`，main 由团队另行合并。私人托福站仅同步兼容源码，账号、数据、密钥和部署保持独立。详见 `docs/toefl/SHARED_BANK.md`。
 - 每次提交均忽略所有层级的 `.DS_Store`；根目录 `.gitignore` 的 `.DS_Store` 规则递归生效，不得强制加入或上传这类本机文件。
 - 不把前端隐藏菜单当作访问控制。学生只能访问自己的答题记录，管理员权限由后端或数据库策略实施。
 - 当前候选免费服务还未选定或部署；新增持续产生费用的依赖时明确说明费用来源。

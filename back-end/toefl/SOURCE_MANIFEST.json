@@ -12,11 +12,11 @@
     },
     {
       "path": "back-end/toefl/.gitignore",
-      "sha256": "e4e862cb700af3139948fced5a68f6bd86152bfe55ba27b63ff55bb035bc11e3"
+      "sha256": "88132e0c424e5936d1622b92ded76ee166fd50267f2bf748f3f00cffbcff8c68"
     },
     {
       "path": "back-end/toefl/AGENTS.md",
-      "sha256": "3a8620e69095e51211ac2b447bb82c1400f42437f2ee182c836bdaee5f8776f7"
+      "sha256": "8fada444a1390d3fa6d9f7bb290590d2bbc11bbd43cda8bbe8381efdb1a114b8"
     },
     {
       "path": "back-end/toefl/content/task-format.mjs",
@@ -48,7 +48,11 @@
     },
     {
       "path": "back-end/toefl/scripts/build.mjs",
-      "sha256": "5f17da8d29e3235b6d94c51ec7be7c7f1bd877b8b39e35b5f3dcfe7a686b7c60"
+      "sha256": "3f994cb25bf8bf9c2ca281b8259b30cdf33dbe328dbf9e988cd3bc279ca4fc0f"
+    },
+    {
+      "path": "back-end/toefl/scripts/check-resources.mjs",
+      "sha256": "c00876e5df0e882bf7783e6290b4b00fa70b880279bf8f8ac6881fe651ea931c"
     },
     {
       "path": "back-end/toefl/scripts/check-source.mjs",
@@ -268,7 +272,11 @@
     },
     {
       "path": "back-end/toefl/tests/integration/test-preview-boundary.mjs",
-      "sha256": "291a9cc73b35fd1ec72a0ceec58e5044b823e2ba392d982ce36d450f3507da36"
+      "sha256": "c2571682e7d517f94684c4c49e770a80dfdb0754a3f4aac110049eedd01caeec"
+    },
+    {
+      "path": "back-end/toefl/tests/integration/test-shared-resources.mjs",
+      "sha256": "6b15c1f732a07f77440c07a7fad6193322a591d7c5440f4ae046ec799971945d"
     },
     {
       "path": "back-end/toefl/tests/integration/test-source-publication.mjs",
@@ -280,7 +288,7 @@
     },
     {
       "path": "docs/toefl/.gitignore",
-      "sha256": "6e97a3b72dd286872449765ea5242c171989b836f7858a42b59bb48904780665"
+      "sha256": "1ca4f094e3592835dde9fbb5b854d6f7189c29d569da482cb99aac610f8db66e"
     },
     {
       "path": "docs/toefl/ENTRY_INTERFACE.md",
@@ -292,7 +300,11 @@
     },
     {
       "path": "docs/toefl/README.md",
-      "sha256": "ab3ea8e9c7b568abe03b21c4bd84723b1a4fd1054a5910636f5734eceb0c5de8"
+      "sha256": "a94939b0966a7e91174104a96dae33b64a67d41273649b49ce4f93ace0cab140"
+    },
+    {
+      "path": "docs/toefl/SHARED_BANK.md",
+      "sha256": "57d67f194e4d81bb760818df4327804473ab200ccb5b2f55bbd2f12adf2586f7"
     },
     {
       "path": "docs/toefl/source-snapshot.json",
@@ -304,7 +316,7 @@
     },
     {
       "path": "front-end/toefl/AGENTS.md",
-      "sha256": "c5504f2249959a70dc7f03ee3e747a6fc70e8be6e118ef6c4280f0d765052beb"
+      "sha256": "cdd72b9c8363ba5bff5f12e3ef55ccdaae46ff420b2635494c538599be8f4a50"
     },
     {
       "path": "front-end/toefl/clients/accounts-client.js",

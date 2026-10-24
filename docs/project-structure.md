@@ -13,6 +13,7 @@ front-end/
 back-end/
   server/serve_platform.py           仅本机运行的统一开发服务
   sat/questions/sat-packs/           SAT 题包，默认合并 gengdu-offline/ 与 pdf-official/
+  question-banks/toefl/              用户授权共享的托福题目、来源音频与图片
   toefl/
     src/                            Worker、账号、同步、评分与 SQL
     content/                        题目编辑格式校验
@@ -94,3 +95,7 @@ TOEFL 构建只从明确白名单复制匿名预览所需文件。`clients/`、`
 - 根目录可见主体目录恰为四个；共享 Markdown 本地链接无失效，暂存清单没有本机数据、ZIP、密钥或 `.DS_Store`。完整 SAT ZIP 的版本、引用、资源及摘要校验通过。
 
 检查截图与临时报告集中在忽略的 `local-data/agent-output/2026-10-23/`。本次未验证 Windows、Safari、真实麦克风/触控板、正式账号、真实云端同步或部署；匿名/替身测试不证明这些流程已经上线。
+
+## 2026-10-24 托福完整资源接入
+
+用户授权的托福题库、引用音频和图片位于 `back-end/question-banks/toefl/`，并有独立资源清单；不再仅留本机。默认匿名构建仍在 `local-data/builds/toefl/`，完整资源构建单独在 `local-data/builds/toefl-shared/`，统一服务可在登录后提供完整题库。原私人 Cloudflare 托福站继续使用其独立账号、加密资源和数据库，不带入平台统一账号适配。具体见 [共享题库](toefl/SHARED_BANK.md)。

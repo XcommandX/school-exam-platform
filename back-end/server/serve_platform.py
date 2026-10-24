@@ -38,6 +38,7 @@ SAT_LIBRARY_CATEGORIES = (
     ('reading-writing', 'Reading & Writing', {'英语', '英语真题'}),
     ('math', 'Math', {'数学', '数学真题'}),
 )
+TOEFL_FRONTEND_FILES = frozenset({'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js', 'four-app.js', 'favicon.svg'})
 TOEFL_PUBLIC_FILES = frozenset({
     'index.html', 'four.css', 'four-data.js', 'four-logic.js', 'four-learning.js',
     'four-app.js', 'favicon.svg', 'audio/fixture-tone.wav', 'images/fixture-scene.svg',
@@ -554,7 +555,7 @@ def read_sat_library_question_index(library_root, cache=None):
 
 
 def prepare_toefl_preview(root):
-    """Build only the module's anonymous preview; never start its cloud worker."""
+    """Build authenticated shared content when present; never start its cloud worker."""
     root = Path(root).resolve()
     script = root / 'back-end/toefl/scripts/build.mjs'
     if not script.is_file():
@@ -564,13 +565,70 @@ def prepare_toefl_preview(root):
         print('TOEFL preview needs Node.js 22.13+; install Node and restart, or build back-end/toefl first.', flush=True)
         return
     try:
-        subprocess.run([node, str(script)], cwd=script.parent.parent, check=True, timeout=60)
+        arguments = [node, str(script)]
+        if any((root / 'back-end/question-banks/toefl' / name).exists() for name in ('bank.json', 'RESOURCE_MANIFEST.json')):
+            arguments.append('--shared-bank')
+        subprocess.run(arguments, cwd=script.parent.parent, check=True, timeout=300)
     except (OSError, subprocess.SubprocessError) as error:
-        print(f'TOEFL anonymous preview could not be built: {error}. SAT remains available.', flush=True)
+        print(f'TOEFL content could not be built: {error}. SAT remains available.', flush=True)
 
 
-def toefl_preview_status(root):
-    """Only explicitly anonymous build output is eligible for public routing."""
+def _toefl_asset_configuration(root):
+    """Select a verified build without exposing source directories or a manifest."""
+    root = Path(root)
+    resource = root / 'back-end/question-banks/toefl'
+    if any((resource / name).exists() for name in ('bank.json', 'RESOURCE_MANIFEST.json')):
+        build = root / 'local-data/builds/toefl-shared'
+        preview = build / 'preview'
+        try:
+            manifest_path = _safe_local_path(root, 'back-end/question-banks/toefl/RESOURCE_MANIFEST.json')
+            manifest_bytes = manifest_path.read_bytes()
+            manifest = json.loads(manifest_bytes)
+            info = json.loads((build / 'build-info.json').read_text(encoding='utf-8'))
+            if (not isinstance(manifest, dict) or not isinstance(info, dict) or not isinstance(manifest.get('counts'), dict)
+                    or manifest.get('schema_version') != 1 or manifest.get('kind') != 'toefl-shared-bank'
+                    or manifest.get('bank') != 'bank.json' or not isinstance(manifest.get('files'), list)
+                    or info.get('mode') != 'local-shared-bank' or info.get('productionCredentials') is not False
+                    or info.get('productionData') is not True or info.get('deployable') is not False
+                    or info.get('manifestSha256') != hashlib.sha256(manifest_bytes).hexdigest()
+                    or any(type(info.get(k)) is not int or info[k] != manifest.get('counts', {}).get(k) for k in ('records', 'questions', 'audio', 'images'))):
+                raise ValueError('Shared resource build does not match its reviewed manifest.')
+            files, media = set(), set()
+            for entry in manifest['files']:
+                name = entry['path']
+                if name in files or type(entry.get('bytes')) is not int or entry['bytes'] < 0:
+                    raise ValueError('Invalid resource entry.')
+                files.add(name)
+                source = _safe_local_path(root, 'back-end/question-banks/toefl/' + name)
+                if not source.is_file() or source.stat().st_size != entry['bytes']:
+                    raise ValueError('Resource file has changed.')
+                if name == 'bank.json':
+                    if hashlib.sha256(source.read_bytes()).hexdigest() != entry['sha256']:
+                        raise ValueError('Resource bank has changed.')
+                    continue
+                if (not name.startswith(('audio/', 'images/'))
+                        or Path(name).suffix.lower() not in {'.mp3', '.wav', '.m4a', '.ogg', '.webm', '.opus', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg'}):
+                    raise ValueError('Invalid resource media path.')
+                target = _safe_local_path(root, 'local-data/builds/toefl-shared/preview/' + name)
+                if not target.is_file() or target.stat().st_size != entry['bytes']:
+                    raise ValueError('Built resource media is incomplete.')
+                media.add(name)
+            if 'bank.json' not in files or not all(_safe_local_path(root, 'local-data/builds/toefl-shared/preview/' + name).is_file() for name in TOEFL_FRONTEND_FILES):
+                raise ValueError('Shared build is incomplete.')
+            return ({'available': True, 'contentMode': 'shared-bank', 'recordCount': info['records'],
+                     'questionCount': info['questions'], 'practiceUrl': '/toefl/'}, preview, TOEFL_FRONTEND_FILES | media)
+        except (OSError, ValueError, TypeError, KeyError):
+            return ({'available': False, 'contentMode': 'shared-bank-not-built', 'recordCount': 0,
+                     'questionCount': 0, 'practiceUrl': '/toefl/'}, preview, frozenset())
+    # The independent anonymous build remains the fallback only when no shared
+    # bank is configured. An invalid shared build must not serve stale content.
+    return (toefl_preview_status(root, anonymous_only=True), root / 'local-data/builds/toefl/preview', TOEFL_PUBLIC_FILES)
+
+
+def toefl_preview_status(root, *, anonymous_only=False):
+    if not anonymous_only:
+        return _toefl_asset_configuration(root)[0]
+    """Only explicitly anonymous build output is eligible for fallback routing."""
     module = Path(root) / 'back-end/toefl'
     build = Path(root) / 'local-data/builds/toefl'
     preview = build / 'preview'
@@ -615,7 +673,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     project = hashlib.sha256(str(root).encode()).hexdigest()
     lock = threading.Lock()
     question_index_lock, question_index_cache = threading.Lock(), {}
-    toefl_preview = toefl_preview_status(root)
+    toefl_preview, toefl_preview_root, toefl_files = _toefl_asset_configuration(root)
     auth = make_auth_handler(private)
 
     def read_sets(exam):
@@ -660,6 +718,50 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             self.send_header('X-Frame-Options', 'DENY')
             self.end_headers()
             self.wfile.write(body)
+
+        def send_toefl_media(self, path):
+            """Only reached after authentication and the TOEFL manifest allowlist."""
+            size = path.stat().st_size
+            start, end, status = 0, size - 1, 200
+            requested = self.headers.get('Range')
+            if requested:
+                match = re.fullmatch(r'bytes=(\d{0,20})-(\d{0,20})', requested)
+                if match and (match[1] or match[2]):
+                    if match[1]:
+                        start = int(match[1])
+                        end = min(int(match[2]), size - 1) if match[2] else size - 1
+                    elif int(match[2]) > 0:
+                        start = max(0, size - int(match[2]))
+                    else:
+                        start = size
+                else:
+                    start = size
+                if start >= size or start > end:
+                    self.send_response(416)
+                    self.send_header('Content-Range', f'bytes */{size}')
+                    self.send_header('Content-Length', '0')
+                    self.send_header('Cache-Control', 'no-store')
+                    self.end_headers()
+                    return
+                status = 206
+            self.send_response(status)
+            self.send_header('Content-Type', mimetypes.guess_type(path.name)[0] or 'application/octet-stream')
+            self.send_header('Content-Length', str(max(0, end - start + 1)))
+            self.send_header('Accept-Ranges', 'bytes')
+            self.send_header('Cache-Control', 'no-store')
+            self.send_header('X-Content-Type-Options', 'nosniff')
+            if status == 206:
+                self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+            self.end_headers()
+            with path.open('rb') as stream:
+                stream.seek(start)
+                remaining = end - start + 1
+                while remaining > 0:
+                    chunk = stream.read(min(remaining, 128 * 1024))
+                    if not chunk:
+                        break
+                    self.wfile.write(chunk)
+                    remaining -= len(chunk)
 
         def valid_host(self):
             return self.headers.get('Host') == f'127.0.0.1:{self.server.server_port}'
@@ -735,9 +837,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                                             'collectionId': collection['collectionId']} for p in collection['packs']]
                         except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
                             failures.append({'file': 'active SAT packages', 'error': str(error)})
+                    shared_toefl = exam == 'toefl' and toefl_preview['available'] and toefl_preview['contentMode'] == 'shared-bank'
                     exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'toefl' and toefl_preview['available'],
-                                  'questionCount': sum(s['questionCount'] for s in sources),
-                                  'sourceCount': len(sources), 'sources': sources,
+                                  'questionCount': toefl_preview['questionCount'] if shared_toefl else sum(s['questionCount'] for s in sources),
+                                  'sourceCount': toefl_preview['recordCount'] if shared_toefl else len(sources), 'sources': sources,
                                   'sections': sorted({s['section'] for s in sources if s['section']}),
                                   **({'preview': toefl_preview} if exam == 'toefl' else {})})
                     errors.extend({'exam': exam, **failure} for failure in failures)
@@ -782,10 +885,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/toefl/'):
                 if not toefl_preview['available']:
-                    return self.reply(503, {'error': 'TOEFL 匿名样例尚未构建，请安装 Node.js 22.13+ 并重新启动平台。'})
-                base = root / 'local-data/builds/toefl/preview'
+                    return self.reply(503, {'error': 'TOEFL 题库尚未准备完成，请重新启动平台以构建并校验资源。'})
+                base = toefl_preview_root
                 relative = route[len('/toefl/'):] or 'index.html'
-                if relative not in TOEFL_PUBLIC_FILES:
+                if relative not in toefl_files:
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/sat/question-assets/') or route.startswith('/question-assets/'):
                 prefix = '/sat/question-assets/' if route.startswith('/sat/') else '/question-assets/'
@@ -802,10 +905,17 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     return self.reply(404, {'error': 'Not found.'})
             else:
                 return self.reply(404, {'error': 'Not found.'})
+            if base == toefl_preview_root:
+                try:
+                    _safe_local_path(root, str(base.relative_to(root) / relative))
+                except ValueError:
+                    return self.reply(404, {'error': 'Not found.'})
             path = (base / relative).resolve()
             if not path.is_relative_to(base.resolve()) or not path.is_file():
                 return self.reply(404, {'error': 'Not found.'})
             try:
+                if base == toefl_preview_root and relative.startswith(('audio/', 'images/')):
+                    return self.send_toefl_media(path)
                 body = path.read_bytes()
                 if path.suffix == '.html' and user and relative != 'login.html':
                     # HTML parses closing script tags before JavaScript parses JSON.
@@ -817,7 +927,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     # Bootstrap only the platform adapter. The SAT source HTML,
                     # scripts and styles remain byte-for-byte unchanged on disk.
                     body = body.replace(b'</head>', b'<script src="/web/sat-bridge.js"></script><script src="/web/sat-account-sync.js"></script></head>', 1)
-                elif base == root / 'local-data/builds/toefl/preview' and relative == 'index.html':
+                elif base == toefl_preview_root and relative == 'index.html':
                     body = re.sub(rb'<script\b[^>]*\bsrc=[\"\'](?:\./)?four-(?:data|logic|learning|app)\.js(?:\?[^\"\']*)?[\"\'][^>]*>\s*</script>', b'', body)
                     body = body.replace(b'</head>', b'<script type="module" src="/web/toefl-bridge.js"></script></head>', 1)
                 content_type = mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
