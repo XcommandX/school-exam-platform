@@ -4,7 +4,7 @@
 
 ## Cloudflare 在线版
 
-2026-10-24 已实际发布：<https://school-exam-platform.xcommandx-school.workers.dev>。完整共享 SAT / TOEFL 题库和必要音频图片已上传，页面与题库须登录。源码已上传 `chore/cloudflare-deployment` 分支，未合入 `main`；更新 GitHub 不会自动更新网站。首次使用需由维护者在安全初始化页面自行创建管理员；云端账号与 `127.0.0.1:8888` 本机账号独立，不迁移旧个人数据。发布版本、已完成与待验收检查见 [发布记录](docs/cloudflare-deployment.md#实际发布记录2026-10-24)。
+2026-10-24 已实际发布：<https://school-exam-platform.xcommandx-school.workers.dev>。完整共享 SAT / TOEFL 题库和必要音频图片已上传，页面与题库须登录。源码已上传 `chore/cloudflare-deployment` 分支，未合入 `main`；更新 GitHub 不会自动更新网站。首位管理员已由维护者在安全初始化页面自行创建并确认进入账号管理，一次性初始化凭证已移除；之后直接使用 `/login`，其他管理员在账号管理内创建。云端账号与 `127.0.0.1:8888` 本机账号独立，不迁移旧个人数据。发布版本、已完成与待验收检查见 [发布记录](docs/cloudflare-deployment.md#实际发布记录2026-10-24)。
 
 ## 项目结构
 
