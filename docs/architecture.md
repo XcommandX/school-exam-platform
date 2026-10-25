@@ -1,5 +1,7 @@
 # 架构与整合计划
 
+> 2026-10-26 TOEFL 六分制 AI：用户批准发布 Workers AI 同源批改、账号 DO 防过期校验/限流/缓存和显式上传同意。新结果使用 `toefl-practice-1-6-v1`、1–6 半分档直接量表，非官方单题估分；旧五分制保留并隔离统计，版本变更使旧缓存失效。口语只做转写内容反馈，不做发音评分，录音不持久上传。隔离本机演示不写评分；Python 与 SAT 流程不变。生产 AI binding 已配置，实际发布版本见 [部署记录](cloudflare-deployment.md)，接口与隐私见 [AI 批改](cloudflare-ai-preview.md)。
+
 > 2026-10-25 Cloudflare 注册改为站内管理员审批：AUTH SQLite DO 保存独立申请，所有有效管理员共享查看待处理和已处理结果；任一管理员通过才原子创建 student，也可拒绝，多管理员竞态只允许首次操作生效。移除未发布的 Resend 依赖和公开邮件 token 审批，不需要域名或发信 secret；存在有效管理员才启用注册。未审批不能登录，旧账号不重审，服务端权限和审计不依赖前端隐藏。Python 服务和 SAT/TOEFL 考试流程不变；2026-10-25 已合入 main 并部署原 Cloudflare 网站，不导入本地测试数据。详见 [站内审批注册](registration-approval.md)。
 
 > 2026-10-24 Cloudflare 适配分支更新：新增 Workers 同源入口 + SQLite Durable Objects（身份库、逐账号私有库、管理员旧格式共享题库），完整共享媒体由受保护静态资产提供。选择 DO 而非直接静态 Pages，是为了保留现有密码强度、账号隔离、64 MiB SAT 快照、CAS 与删除标记；2 MiB SQL 行限制由流式 256 KiB BLOB 分块处理。新云库为空，不迁移旧个人数据，不改原私人 TOEFL 部署。本机 Python 方式保持；下文“尚未选定供应商”等属于历史阶段。当前配置、发布步骤和免费约束见 [Cloudflare 部署](cloudflare-deployment.md)。

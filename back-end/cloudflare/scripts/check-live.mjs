@@ -37,13 +37,13 @@ assert.ok(login.response.headers.get('Content-Security-Policy').includes("frame-
 assert.match((await probe('/setup', 200)).text, /setup-form/);
 assert.match((await probe('/setup.js', 200)).text, /replaceState/);
 const sha = value => createHash('sha256').update(value).digest('hex');
-for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css']) {
+for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css', 'toefl-bridge.js']) {
   const live = await probe('/web/' + name, 200);
   const source = await readFile(new URL('../../../front-end/web/' + name, import.meta.url));
   assert.equal(sha(Buffer.from(live.text)), sha(source), 'Deployed public source hash: ' + name);
 }
-for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap']) await probe(path, 401);
-for (const path of ['/_catalog/routes.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js']) await probe(path, 404);
+for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap', '/api/toefl/ai-config', '/api/toefl/assess']) await probe(path, 401);
+for (const path of ['/_catalog/routes.json', '/_catalog/toefl-ai-questions.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js']) await probe(path, 404);
 const invalidOrigin = await probe('/api/auth/bootstrap', 403, {method: 'POST', headers: {'Content-Type': 'application/json', Origin: 'https://untrusted.invalid'}, body: '{}'});
 assert.equal(JSON.parse(invalidOrigin.text).code, 'invalid_origin');
 // This known-invalid setup token can never create an account. It exercises the

@@ -1,5 +1,18 @@
 # Cloudflare 部署与维护
 
+## TOEFL 六分制 AI 批改（2026-10-26 发布准备）
+
+用户在界面预览和真实本地测试后，明确授权实现写作/口语 **1–6 分、0.5 分档**非官方练习估分，上传 GitHub 并更新现有网站。本轮使用 `feature/toefl-ai-six-band` 分支，不自动合入 `main`。原站点、AUTH / ACCOUNTS / BANK 名称与数据保留；新增 AI binding 和按账号惰性创建的缓存/限流表，不导入本地账号、作文、录音，不升级付费。
+
+旧五分制不换算、不混入六分制统计。口语仅评估转写内容，不评发音或声学流利度。额度、隐私、配置、接口与验证边界见 [TOEFL AI 批改](cloudflare-ai-preview.md)。以下既有发布记录保留；本轮成功部署后补记准确版本与验收结果。
+
+本轮发布前验证：
+
+- 完整资源构建成功：7,551 文件、1,512,964,171 bytes；TOEFL 3,633 条记录 / 16,874 题、5,025 音频、1,934 图片；SAT 459 集合 / 18,867 题，目录与索引错误 0；新增评分专用题目索引保持私有。
+- 真实 Cloudflare AI：新六分制合成写作 **2/6**、合成口语 **5/6**；总分及维度均满足量表合同。Whisper 转写与合成文本一致、SHA-256 一致。新制初次 JSON object 输出畸形被后端拒绝，改为官方 JSON Schema 约束后通过，未放宽校验或自动补造分数。
+- 真实 Chrome：六分制写作报告、非官方标识、维度与反馈通过；独立演示 Chrome 的同意/拒绝、演示不保存、录音 hash、刷新、窄屏与外部请求隔离通过。
+- Cloudflare 完整回归 **140/140 通过**（含真实 workerd 认证、账号隔离、AI 边界/缓存/限流、SAT 与构建）；前端专项、TOEFL 源码清单检查通过；TOEFL 模块 45 通过、2 因本机 Windows 文件符号链接权限 `EPERM` 失败（shared-resources / task-format），不声称全通过。尚未进行真实麦克风/口音与人工标注校准。
+
 ## 本次边界
 
 从 GitHub `XcommandX/school-exam-platform` 的 `main` 基线 `4c00fced60d155d26ab68343ed5e2d60eec8321c` 创建 `chore/cloudflare-deployment`。保留 Python 本机运行方式，新增 Cloudflare 运行适配，不替换 SAT 考试界面，不连接原私人 TOEFL 站。

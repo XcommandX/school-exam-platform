@@ -1,6 +1,6 @@
 # School Exam Platform
 
-校内 SAT / TOEFL 练习平台。首页、TOEFL 和 SAT 共用账号；首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存。本分支新增 Cloudflare Workers + SQLite Durable Objects 云端适配，保留原 Python 本机运行方式；录音上传与外部 AI 不启用。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)，云端构建、初始化、配额与维护见 [Cloudflare 部署](docs/cloudflare-deployment.md)。
+校内 SAT / TOEFL 练习平台。首页、TOEFL 和 SAT 共用账号；首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存。本分支新增 Cloudflare Workers + SQLite Durable Objects 云端适配，保留原 Python 本机运行方式；Cloudflare 版新增用户同意后的 TOEFL 写作/口语内容 AI 批改（1–6 半分档，非官方单题估分），录音仅为本次识别临时发送、不云端持久保存。具体发布状态见部署记录。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)，云端构建、初始化、配额与维护见 [Cloudflare 部署](docs/cloudflare-deployment.md)。
 
 ## Cloudflare 在线版
 

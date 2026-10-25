@@ -152,10 +152,32 @@ export class AssetWriter {
   }
 }
 
+// Server-only grading input: never trust a browser's question snapshot.
+export function buildToeflAIQuestions(bank) {
+  const questions = [], seen = new Set();
+  for (const record of bank.records || []) {
+    if (!/^(?:speaking-t[12]|writing-t[23])$/.test(record.module)) continue;
+    for (const item of record.items || []) {
+      const kind = { write_email: 'email', academic_discussion: 'discussion' }[item.kind] || item.kind;
+      if (!['repeat', 'interview', 'email', 'discussion'].includes(kind)) continue;
+      const key = record.module + ':' + record.id;
+      const question = { id: item.id, kind, prompt: item.prompt_text || item.prompt || '',
+        posts: item.posts || [], recipient: item.recipient, subject: item.subject_line, requirements: item.requirements };
+      const identity = JSON.stringify([key, item.id]);
+      if (seen.has(identity) || typeof item.id !== 'string' || !question.prompt || Buffer.byteLength(JSON.stringify(question)) > 32 * 1024) throw new Error('Invalid or oversized TOEFL AI question.');
+      seen.add(identity); questions.push({ record: key, question });
+    }
+  }
+  const result = { schemaVersion: 1, questions };
+  if (Buffer.byteLength(JSON.stringify(result)) > 12 * 1024 * 1024) throw new Error('TOEFL AI index exceeds bounded runtime size.');
+  return result;
+}
+
 export async function writeToeflData(writer, bank, { maxPartBytes = MAX_DATA_PART_BYTES } = {}) {
   if (!Number.isSafeInteger(maxPartBytes) || maxPartBytes < 128 || maxPartBytes > MAX_DATA_PART_BYTES) {
     throw new Error('TOEFL executable parts must not exceed 8 MiB.');
   }
+  await writer.write('_catalog/toefl-ai-questions.json', JSON.stringify(buildToeflAIQuestions(bank)) + '\n');
   const limit = Math.min(maxPartBytes, writer.maxAssetBytes), serialized = JSON.stringify(bank);
   if (typeof serialized !== 'string') throw new Error('A JSON bank is required.');
   const parts = [];
