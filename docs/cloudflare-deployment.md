@@ -1,10 +1,14 @@
 # Cloudflare 部署与维护
 
-## TOEFL 六分制 AI 批改（2026-10-26 发布准备）
+## TOEFL 六分制 AI 批改（2026-10-26 已发布）
 
 用户在界面预览和真实本地测试后，明确授权实现写作/口语 **1–6 分、0.5 分档**非官方练习估分，上传 GitHub 并更新现有网站。本轮使用 `feature/toefl-ai-six-band` 分支，不自动合入 `main`。原站点、AUTH / ACCOUNTS / BANK 名称与数据保留；新增 AI binding 和按账号惰性创建的缓存/限流表，不导入本地账号、作文、录音，不升级付费。
 
-旧五分制不换算、不混入六分制统计。口语仅评估转写内容，不评发音或声学流利度。额度、隐私、配置、接口与验证边界见 [TOEFL AI 批改](cloudflare-ai-preview.md)。以下既有发布记录保留；本轮成功部署后补记准确版本与验收结果。
+旧五分制不换算、不混入六分制统计。口语仅评估转写内容，不评发音或声学流利度。额度、隐私、配置、接口与验证边界见 [TOEFL AI 批改](cloudflare-ai-preview.md)。以下既有发布记录保留。本轮功能提交 `aa0e296` 已推送 GitHub `feature/toefl-ai-six-band`，未合入 `main`；部署至原 Worker `school-exam-platform` 成功，版本 **`91e6cca8-4939-40c0-bfe2-1847ec861af6`**，地址仍为 <https://school-exam-platform.xcommandx-school.workers.dev>。Wrangler 验证显示 AI binding 与启用变量；仅上传 6 个新增/修改资产，其余 7,545 个复用。
+
+发布后匿名线上验收 **31/31 通过**：原登录跳转、安全头、公开源码 SHA-256（含新版 TOEFL bridge）、AI 接口未登录 401、私有评分题库索引 404，以及原 AUTH 的完整强度失败登录路径。未创建测试生产账号、未读取学生数据；生产登录后的实际批改未用学生会话测试。真实远程模型端到端验证在隔离本地账号完成。没有付费升级；未取得账户实际计划、剩余 Neurons 或账单，不保证免费额度能覆盖所有用户。
+
+回退应使用上一个正常含当前认证 schema 的发布 `f094a28c-2e3e-4c57-b07a-5042912a804b` 或修复后重新发布；禁止恢复一次性清理版本 `66e6e03c-9688-43ed-98cb-28261fbe8e45`，也不要使用早期 auth schema v1 的 Worker。
 
 本轮发布前验证：
 
