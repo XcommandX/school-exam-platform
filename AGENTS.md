@@ -25,6 +25,7 @@
 - 2026-10-24 本轮用户授权将 `local-data/references/Reference Folders/真题库/更新到26年10月SAT最新真题题库+答案/` 中的 PDF 转换为 SAT 题包，并将 `back-end/question-banks/sat-packs/pdf-official/` 中的题包与必要图片纳入本地 Git commit。该新增例外仅覆盖指定转换输出；原 PDF、抽取文本、截图、审阅产物、备份及个人数据仍留在忽略的 `local-data/`。当时仅授权本地 commit；2026-10-24 后续已明确授权将所有本地分支合入本地 `main`，仍未授权 push 或部署。转换、合并上架与验证规则见 `docs/sat-pdf-conversion.md`。
 - 2026-10-24 用户明确授权在确认 SAT 题库已进入 Git 后，将其现有全部 TOEFL 题目及所引用的来源音频、图片上传到 `toefl` 分支。共享副本仅位于 `back-end/question-banks/toefl/`，以 `RESOURCE_MANIFEST.json` 逐文件记录 SHA-256 和大小；不含用户作答、作文、口语录音、账号、数据库、密钥、原始资料包或重复产物。此授权覆盖 commit/push 至 `toefl`，main 由团队另行合并。私人托福站仅同步兼容源码，账号、数据、密钥和部署保持独立。详见 `docs/toefl/SHARED_BANK.md`。
 - 2026-10-24 用户已将 SAT 共享题库移动到 `back-end/question-banks/sat-packs/`，与 TOEFL 共享题库并列。服务、维护工具、验证用例和说明使用新路径；这次只调整访问位置，不校验或改写 SAT 题包内部，旧活动卷与个人数据继续留在 `local-data/`。
+- 2026-10-26 用户明确授权将最新 TOEFL 题库及引用音频、图片按现行格式推送至 main。本轮从最新远端 main 创建更新分支，仅改 `back-end/question-banks/toefl/` 与必要说明；推送前再次获取远端并保留他人更新，不强制推送。此授权不包含统一平台部署或私人账号、练习、录音和密钥。
 - 每次提交均忽略所有层级的 `.DS_Store`；根目录 `.gitignore` 的 `.DS_Store` 规则递归生效，不得强制加入或上传这类本机文件。
 - 不把前端隐藏菜单当作访问控制。学生只能访问自己的答题记录，管理员权限由后端或数据库策略实施。
 - 2026-10-24 本轮授权从 GitHub `main` 基线 `4c00fced` 在独立 `chore/cloudflare-deployment` 分支适配并部署现有完整共享内容，选择 Workers Free + SQLite Durable Objects Free。实现、验证、实际发布状态与维护以 `docs/cloudflare-deployment.md` 为准；原 Python 本机方式保留，既有 Windows 兼容性问题也在该文档如实记录。旧条目中 SAT 转换阶段“仅本地 commit / 未授权部署”不覆盖本次明确授权的 GitHub 现有共享副本。仍不迁移旧账号、记录或录音，不改私人 TOEFL 站，不自动合入 `main` 或升级付费；新增持续产生费用的依赖必须另行授权。
