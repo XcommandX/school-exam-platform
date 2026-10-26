@@ -12,6 +12,8 @@
 
 ## AP 英语语言与写作
 
+2026-10-26 已合入并推送 `main`，实际发布到上述 Cloudflare 网站，现有账号和记录不重置。发布版本与验证范围见 [AP 发布记录](docs/cloudflare-deployment.md#实际发布结果2026-10-26-1915asiashanghai)。
+
 首页新增独立蓝色 **AP** 卡片，课程入口为“英语语言与写作”；`/ap/` 需登录。支持 MCQ/FRQ、官方分部分限时、自由练习、草稿与复盘，记录只在当前浏览器按账号隔离保存。Cloudflare 仅提供原创示例，真实 AP 材料与 PDF 留在本机忽略目录，不公开上传。导入、数据协议与保存边界见 [AP Language](docs/ap-language.md)。本次还合入此前已上线的 TOEFL AI 分支，保留其现有功能。
 
 ## 项目结构
