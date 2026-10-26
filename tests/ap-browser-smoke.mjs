@@ -111,8 +111,11 @@ try {
     await evaluate('document.querySelector(".home-ap-entry").scrollIntoView({block:"center"})');
     await screenshot('home-ap-' + width + '.png');
   }
-  await evaluate('document.querySelector(\'.home-ap-entry a[href="/ap/?kind=mcq"]\').click()');
+  assert.equal(await evaluate('document.querySelector("#home-ap-title").textContent'), 'AP');
+  assert.equal(await evaluate('getComputedStyle(document.querySelector(".home-ap-entry .start-button")).backgroundColor'), 'rgb(255, 255, 255)');
+  await evaluate('document.querySelector(".home-ap-entry .start-button").click()');
   await wait('Boolean(document.querySelector(\'select[aria-label="类型"]\'))');
+  await navigate('/ap/?kind=mcq'); await wait('Boolean(document.querySelector(\'select[aria-label="类型"]\'))');
   assert.equal(await evaluate('document.querySelector(\'select[aria-label="类型"]\').value'), 'mcq');
   await navigate('/ap/?kind=frq'); await wait('Boolean(document.querySelector(\'select[aria-label="类型"]\'))');
   assert.equal(await evaluate('document.querySelector(\'select[aria-label="类型"]\').value'), 'frq');

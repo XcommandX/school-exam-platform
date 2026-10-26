@@ -2,7 +2,7 @@
 
 ## 范围与入口
 
-AP 本机应用位于 `apps/ap/`，从统一首页 **AP English Language and Composition** 独立卡片或 `/ap/` 进入；MCQ / FRQ 入口通过 `?kind=mcq|frq` 预选目录筛选。管理页面沿用 Study Space 的暖白背景、白色面板和共享样式变量。按用户要求，作答阶段参照 SAT/Bluebook 界面：浅蓝顶栏、居中计时、双阅读/作答栏、深蓝题组条、底部题号导航和翻题按钮；FRQ 左侧题目/材料、右侧编辑器。样式限定在 `body.ap-exam-active`，不改变 SAT 考试阶段或其素材。原生 HTML/CSS/JavaScript，无新增前端依赖或构建步骤。
+AP 本机应用位于 `apps/ap/`，从统一首页 **AP** 大卡片中的“英语语言与写作”课程或 `/ap/` 进入；MCQ / FRQ 在课程目录内筛选，`?kind=mcq|frq` 预选参数继续兼容。管理页面沿用 Study Space 的暖白背景、白色面板和共享样式变量。按用户要求，作答阶段参照 SAT/Bluebook 界面：浅蓝顶栏、居中计时、双阅读/作答栏、深蓝题组条、底部题号导航和翻题按钮；FRQ 左侧题目/材料、右侧编辑器。样式限定在 `body.ap-exam-active`，不改变 SAT 考试阶段或其素材。原生 HTML/CSS/JavaScript，无新增前端依赖或构建步骤。
 
 2026-10-26 通过 GitHub Git 远端获取最新主分支 `c6a7fd0`，核对 `front-end/sat/css/exam.css` 与 `front-end/sat/html/index.html`（主分支已迁目录）；本功能分支仍采用既有 `apps/` 结构，未擅自合并远端结构迁移。布局参照不等于复制 SAT 全部工具功能：未加入 SAT 的高亮/笔记、选项排除、分栏拖动或数学工具，不展示无功能占位按钮。
 

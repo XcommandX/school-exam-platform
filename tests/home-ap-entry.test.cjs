@@ -7,22 +7,22 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'apps/web/index.html'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'apps/web/styles.css'), 'utf8');
-const entry = html.match(/<section class="home-ap-entry"[^>]*>[\s\S]*?<\/section>/)?.[0];
+const entry = html.match(/<section class="exam-card home-ap-entry"[^>]*>[\s\S]*?<\/section>/)?.[0];
 
 test('AP is a separate labelled entry after the two existing primary exam cards', () => {
   assert.ok(entry);
   assert.match(entry, /aria-labelledby="home-ap-title"/);
-  assert.match(entry, /<h2 id="home-ap-title">AP English Language and Composition<\/h2>/);
-  assert.equal((html.match(/class="exam-card /g) || []).length, 2);
+  assert.match(entry, /<h2 id="home-ap-title">AP<\/h2>/);
+  assert.equal((html.match(/class="exam-card /g) || []).length, 3);
   assert.ok(html.indexOf(entry) > html.indexOf('class="exam-card sat"'));
   assert.ok(html.indexOf(entry) < html.indexOf('<footer'));
   assert.doesNotMatch(entry, /<(?:p|small)\b/);
 });
 
-test('AP uses three native destinations with meaningful accessible labels', () => {
+test('AP groups existing courses rather than question types', () => {
   const links = [...entry.matchAll(/<a\s+([^>]+)>/g)].map(match => match[1]);
-  assert.equal(links.length, 3);
-  assert.deepEqual(links.map(attrs => attrs.match(/href="([^"]+)"/)[1]), ['/ap/?kind=mcq', '/ap/?kind=frq', '/ap/']);
+  assert.equal(links.length, 2);
+  assert.deepEqual(links.map(attrs => attrs.match(/href="([^"]+)"/)[1]), ['/ap/', '/ap/']);
   links.forEach(attrs => assert.match(attrs, /aria-label="[^"]+"/));
   assert.doesNotMatch(entry, /onclick=|data-dialog=|target="_blank"/);
 });
@@ -39,10 +39,12 @@ test('primary exam destinations remain and footer keeps only Personal Vocab', ()
 });
 
 test('AP styles stay scoped and retain responsive, focus and reduced-motion support', () => {
-  assert.match(css, /\.home-ap-entry\{[^}]*grid-template-columns:minmax\(0,1fr\) auto/);
-  assert.match(css, /\.home-ap-entry \.home-ap-actions a\{[^}]*min-height:48px/);
-  assert.match(css, /@media\(max-width:1050px\)\{\.home-ap-entry\{grid-template-columns:1fr/);
-  assert.match(css, /@media\(max-width:720px\)\{\.home-ap-entry/);
+  assert.match(entry, /class="start-button"/);
+  assert.match(entry, /aria-label="AP 课程"/);
+  assert.match(entry, /英语语言与写作/);
+  assert.doesNotMatch(entry, /MCQ|FRQ|home-ap-kind/);
+  assert.match(css, /\.home-ap-entry\{--accent:var\(--blue\)/);
+  assert.match(css, /\.home-ap-entry \.subject-links>a\{[^}]*min-height:78px/);
   assert.match(css, /a:focus-visible/);
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
   assert.match(css, /\.reduced-motion \*/);

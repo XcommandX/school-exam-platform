@@ -5,7 +5,7 @@
 - 本项目将现有 SAT、托福刷题网站整合为校内平台，约 150 名总用户。
 - 已确认需要统一登录、统一网址和云端答题记录。
 - 三位开发者使用 Windows / macOS，并通过 GitHub 分支与 PR 协作。
-- 统一首页位于 `apps/web/`，采用 Study Space 品牌和已确认的暖白底、现行 TOEFL 青绿卡与 SAT 橙卡模板；保留两个主卡，下方 AP 独立卡进入 `/ap/` 并提供 MCQ/FRQ 筛选入口，Personal Vocab 在页脚保留接口。Python 3.10+ 标准库服务从 `scripts/serve_platform.py` 启动。详见 `docs/unified-home.md`。
+- 统一首页位于 `apps/web/`，采用 Study Space 品牌和已确认的暖白底、现行 TOEFL 青绿卡与 SAT 橙卡模板；保留两个主卡，下方 AP 同风格大卡片以“AP”为标题，课程区当前仅“英语语言与写作”进入 `/ap/`，为后续课程保留扩展结构；白色胶囊开始按钮与圆形箭头复用主卡样式，Personal Vocab 在页脚保留接口。Python 3.10+ 标准库服务从 `scripts/serve_platform.py` 启动。详见 `docs/unified-home.md`。
 - SAT Reading & Writing 复用 `apps/sat/` 原生答题引擎；非考试管理页面已做视觉更新，考试阶段继续保持原样。TOEFL 源码已从 `feature/toefl-exam-interface` 分支版本 `72ab41d` 接入 `apps/toefl/`，统一服务只提供其匿名样例构建，不连接私有题库、正式账号、云端记录或外部 AI。AP Language 已接入 `/ap/`，使用独立 AP v2 契约、私有 PDF 导入与浏览器草稿/记录；不自动评分 FRQ，扫描卷保留原文档，真实材料不上传。详见 `docs/ap-language.md`。Personal Vocab 与 SAT 数学仍待接入。
 - 测试阶段直接显示 `admin` 本机测试身份，无需密码；这不是正式认证或管理员授权。学习计划、目标分数及练习统计仅保存在当前浏览器的新平台命名空间，目前没有统一登录、按账号隔离或跨设备同步。
 - 读 README.md、CONTRIBUTING.md 和任务相关的 docs/ 文档后再修改。进入子模块时继续读取该目录下的 AGENTS.md（如果存在）。
