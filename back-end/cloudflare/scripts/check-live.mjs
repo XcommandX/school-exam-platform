@@ -28,7 +28,7 @@ assert.equal(JSON.parse(status.text).auth.loginEnabled, true);
 const session = await probe('/api/auth/session', 200);
 assert.equal(JSON.parse(session.text).authenticated, false);
 assert.equal(JSON.parse(session.text).user, null);
-for (const path of ['/', '/account', '/sat/', '/toefl/']) {
+for (const path of ['/', '/account', '/sat/', '/toefl/', '/ap', '/ap/', '/ap/index.html']) {
   const result = await probe(path, 302); assert.ok(result.response.headers.get('Location').startsWith('/login?next='));
 }
 const login = await probe('/login', 200);
@@ -42,8 +42,8 @@ for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css', 'toefl-br
   const source = await readFile(new URL('../../../front-end/web/' + name, import.meta.url));
   assert.equal(sha(Buffer.from(live.text)), sha(source), 'Deployed public source hash: ' + name);
 }
-for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap', '/api/toefl/ai-config', '/api/toefl/assess']) await probe(path, 401);
-for (const path of ['/_catalog/routes.json', '/_catalog/toefl-ai-questions.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js']) await probe(path, 404);
+for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap', '/api/toefl/ai-config', '/api/toefl/assess', '/api/ap/example', '/api/exams/ap/sources']) await probe(path, 401);
+for (const path of ['/_catalog/routes.json', '/_catalog/toefl-ai-questions.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js', '/ap/app.js', '/ap/examples/synthetic-practice.json']) await probe(path, 404);
 const invalidOrigin = await probe('/api/auth/bootstrap', 403, {method: 'POST', headers: {'Content-Type': 'application/json', Origin: 'https://untrusted.invalid'}, body: '{}'});
 assert.equal(JSON.parse(invalidOrigin.text).code, 'invalid_origin');
 // This known-invalid setup token can never create an account. It exercises the

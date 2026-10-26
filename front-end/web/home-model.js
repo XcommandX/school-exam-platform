@@ -23,7 +23,7 @@
     const sat = ['english','math'].every(k=>validScore(s?.[k],200,800,10)) ? {english:s.english,math:s.math,total:s.english+s.math} : null;
     return {toefl,sat};
   }
-  function summarize(satAttempts = [], toeflHistory = [], toeflLearning = [], now = Date.now()) {
+  function summarize(satAttempts = [], toeflHistory = [], toeflLearning = [], now = Date.now(), apHistory = []) {
     const rows = [];
     const seen = new Set();
     for (const a of satAttempts) {
@@ -46,6 +46,13 @@
       }
       rows.push({exam:'toefl',at:h.finished,answered,correct,graded,name:({reading:'TOEFL 阅读',listening:'TOEFL 听力',speaking:'TOEFL 口语',writing:'TOEFL 写作',full:'TOEFL 全科'})[h.subject] || 'TOEFL 练习'});
     }
+    for (const a of apHistory) {
+      if (!a || a.status !== 'completed' || a.contentMode !== 'private' || !finite(a.finished) || a.finished <= 0 || a.finished > now || typeof a.id !== 'string' || !a.id || seen.has(`ap:${a.id}`)) continue;
+      if (!/^ap:[a-z0-9][a-z0-9-]{0,119}$/.test(a.sourceId) || !/^[a-f0-9]{64}$/.test(a.revision)) continue;
+      if (![a.questionCount,a.answeredCount,a.correctCount,a.gradedCount].every(v=>Number.isInteger(v)&&v>=0&&v<=1000) || a.correctCount>a.gradedCount || a.gradedCount>a.answeredCount || a.answeredCount>a.questionCount) continue;
+      seen.add(`ap:${a.id}`);
+      rows.push({exam:'ap',at:a.finished,answered:a.answeredCount,correct:a.correctCount,graded:a.gradedCount,name:typeof a.title==='string'?a.title:'AP Language 练习'});
+    }
     const today = dayKey(now), active = new Set(rows.filter(r=>r.answered>0).map(r=>dayKey(r.at)));
     for (const log of toeflLearning) {
       if (!finite(log.at) || log.at > now || log.type!=='progress' || log.disabled || log.day !== dayKey(log.at)) continue;
@@ -54,7 +61,7 @@
     let cursor = active.has(today) ? today : shiftDay(today,-1), streak=0;
     while (active.has(cursor)) {streak++;cursor=shiftDay(cursor,-1);}
     const total = exam => rows.filter(r=>!exam||r.exam===exam).reduce((v,r)=>({answers:v.answers+r.answered,correct:v.correct+r.correct,graded:v.graded+r.graded,attempts:v.attempts+1}),{answers:0,correct:0,graded:0,attempts:0});
-    return {streak,today:rows.filter(r=>dayKey(r.at)===today).reduce((n,r)=>n+r.answered,0),all:total(),sat:total('sat'),toefl:total('toefl'),recent:rows.sort((a,b)=>b.at-a.at).slice(0,8)};
+    return {streak,today:rows.filter(r=>dayKey(r.at)===today).reduce((n,r)=>n+r.answered,0),all:total(),sat:total('sat'),toefl:total('toefl'),ap:total('ap'),recent:rows.sort((a,b)=>b.at-a.at).slice(0,8)};
   }
   const api = Object.freeze({dayKey,shiftDay,targets,summarize});
   if (typeof module !== 'undefined' && module.exports) module.exports=api;

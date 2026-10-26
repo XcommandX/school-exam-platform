@@ -182,6 +182,16 @@ PBKDF2 修复后重新执行完整 Cloudflare 回归：**112/112 通过**（包�
 
 **原 Python 测试未全绿，不能宣称 Windows 本机流程全部通过。** 同日执行原 `back-end/tests` 的 240 项，5 failures / 15 errors；只读核实相关 Python 服务、工具与测试同基线未改。已确认的既有 Windows 问题：TOEFL 服务端生成的反斜杠路径触发自身安全拒绝（4 failures）、系统 MIME 缺少 woff2（1 failure）、测试默认 GBK（4 errors）、转换器 CRLF 与修订过程 LF 字节比较冲突（3 errors）、符号链接权限（5 errors）、测试未关闭 SQLite 连接导致清理失败（3 errors）。UTF-8 定向复跑 6 项中 2 项通过、3 failures / 1 error，证实 UTF-8 并非全部原因。未在本次部署顺便修改原 Python。Cloudflare 不使用该 Python HTTP 路由、本机 SQLite 或转换修订器；其构建强制 UTF-8，最终完整题库与上述云运行时检查通过。原首页 Node 模型回归通过。另执行原 TOEFL `node back-end/toefl/scripts/test.mjs`：45 项通过、2 项在创建符号链接夹具时因 Windows `EPERM` 中止（`test-shared-resources.mjs`、`test-task-format.mjs`），没有绕过或移除符号链接安全检查；未使用外部 AI 或生产数据库。
 
+## 2026-10-26 AP 整合验证与发布准备
+
+用户授权合入主分支并更新既有 Worker `school-exam-platform`；发布前查询到现网版本为 `91e6cca8-4939-40c0-bfe2-1847ec861af6`，包含尚未进入 main 的 TOEFL Workers AI。经用户再次确认，合入 `feature/toefl-ai-six-band`，保留其 AI 绑定、同意流程与六分制行为，不将其回退或升级付费。
+
+本轮以 main `c6a7fd0` 为底适配 AP 旧分支 `29f2663` 的功能，沿用当前前后端目录和统一会话。首页新增 AP 蓝色大卡及英语语言与写作入口；MCQ/FRQ 官方计时、草稿、复盘仅按当前账号保存在当前浏览器。AP 不新增 DO、不迁移匿名历史，不触碰正式账号/记录或 bootstrap secret。Cloudflare 原创示例可用，真实 AP 来源目录为空；完整 SAT/TOEFL 共享资源仍由原有白名单构建，AP 真实 PDF、私有题库和导入报告不上传。
+
+已完成检查：AP/首页/TOEFL AI 前端 Node 36 项通过；AP Python 40 项中38通过、2项因符号链接权限跳过。平台 Python 14项中13通过、1项现有 WinError1314 符号链接测试受限；仅修复现有 Windows TOEFL 路径使用反斜杠触发安全拒绝的问题（改用 `.as_posix()`），没有绕过链接检查。隔离 Miniflare + Chrome AP 测试通过首页320/390/1440px、MCQ/FRQ、暂停/自由模式/刷新恢复、到时保留草稿不自动提交、真实两测试账号切换及会话失效清屏；无 JS 异常或外部请求。测试账号仅在本地临时数据库。
+
+最终完整 Cloudflare 回归、构建与实际发布结果将在下方记录；本段准备记录本身不表示已经更新生产。
+
 ## 官方资料
 
 - [Workers limits](https://developers.cloudflare.com/workers/platform/limits/)
