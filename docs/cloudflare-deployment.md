@@ -223,6 +223,15 @@ Cloudflare完整`npm test`首次 **143/144通过**；唯一失败为新增AP测�
 - 公网匿名检查 **42/42通过**：AP详情API401、真实PDF完整GET/HEAD/Range均404，内部清单不可访问，原SAT/TOEFL/AI权限与公共文件hash检查通过；无效初始化被拒绝、随机不存在账号经真实密码校验返回401。仅产生正常失败登录审计/限流状态，不建立生产测试账号。
 - 生产登录后的材料下载/练习未用真实账号再测；相同发布产物的隔离HTTPS Chrome已验证102材料目录、真实MCQ/FRQ/参考PDF和最大文件完整SHA-256。没有调用生产AI，不宣称已完成逐页PDF校对/OCR、版权或隐私审阅。协作者需拉取最新`main`再开新分支。
 
+## AP Lang AI实际发布（2026-10-26 21:42，Asia/Shanghai）
+
+- 用户明确要求“现在进行部署”，从本地 `feature/ap-lang-ai-assessment` 工作区发布到原Worker `school-exam-platform`；此次未commit、push或合入main。后续维护应先保存并合并此功能，勿直接部署旧main导致功能回退。
+- 当前版本 **`c9c55cb2-ae00-4bc5-88a5-a358ab66cda9`**，创建时间 `2026-10-26T13:42:36.365Z`，部署列表确认 **100%流量**。上一版本为 `582e23d2-d49e-41f2-8861-eefa2c540b19`。
+- `npm run deploy`成功，上传2项更新AP前端资产、8117项复用，Worker包227.32KiB。AUTH/ACCOUNTS/BANK/AI/ASSETS与现有AI模型/开关保持，无Durable Object命名空间迁移、账号或记录重置。AP新增限额控制表按需幂等创建，仅存额度/租约/请求哈希，不存作文或反馈。
+- 发布前完整测试156/156、AP前端36/36、最终AP后端12/12，完整构建与Chrome隔离测试通过。复核已构建AP前端与最新源码逐字节一致；部署直接打包最新后端。真实Cloudflare AI已用合成作文测试，具体问题修复和校准边界见[AP AI评分](ap-ai-assessment.md)。
+- 发布后生产匿名HTTP检查 **10/10通过**：登录200、AP页跳转登录，AP/TOEFL AI配置及评分接口、AP目录未登录401；内部目录/上下文路径、AP脚本未登录404。未使用生产账号、创建测试用户或读取学生数据，未在生产用户会话中调用AI；不能将匿名检查表述为生产登录后评分端到端验收。
+- 初期只有2025 Set1/Set2 Q2/Q3共4题允许0–6数字练习估分，其余有限反馈；结果不是College Board官方评分，也不等同AP最终1–5分。
+
 ## 官方资料
 
 - [Workers limits](https://developers.cloudflare.com/workers/platform/limits/)

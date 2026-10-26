@@ -73,7 +73,13 @@
     target.tabIndex = -1;
     target.focus({ preventScroll: true });
   }
+  const aiRequests = new Set();
+  function abortAssessments() {
+    for (const controller of aiRequests) controller.abort();
+    aiRequests.clear();
+  }
   function setView(view) {
+    abortAssessments();
     if (state.view === 'practice' && view !== 'practice') {
       tick();
       if (state.draft && state.draft.timing) state.draft.timing.paused = true;
@@ -450,10 +456,10 @@
       documentList(source, true), muted('仅对已作答且答案已核实的选择题计算正确率。作文与未核实题目不自动评分，不换算 AP 分数。'));
     const stats = element('div', { class: 'ap-stats' }, stat(counts.answeredCount + ' / ' + counts.questionCount, '已作答'), stat(counts.correctCount + ' / ' + counts.gradedCount, '正确 / 已判分'), stat(counts.gradedCount ? Math.round(counts.correctCount / counts.gradedCount * 100) + '%' : '—', '客观题正确率'));
     const outcomes = M.results(source, record.answers);
-    replace(back('练习记录', showHistory), report, stats, ...source.questions.map((q, index) => reviewQuestion(source, q, record.answers[q.id], outcomes[index])));
+    replace(back('练习记录', showHistory), report, stats, ...source.questions.map((q, index) => reviewQuestion(source, q, record.answers[q.id], outcomes[index], false, record)));
   }
   function stat(value, label) { return element('div', { class: 'ap-stat' }, element('b', {}, value), element('span', {}, label)); }
-  function reviewQuestion(source, q, response, outcome, open = false) {
+  function reviewQuestion(source, q, response, outcome, open = false, record = null) {
     const detail = element('details', { class: 'ap-panel ap-review' }, element('summary', {}, '第 ' + q.number + ' 题', element('span', { class: 'ap-result-label ap-result-label--' + outcome.status }, resultLabels[outcome.status])));
     detail.open = open;
     if (q.passage) detail.append(prose(q.passage));
@@ -469,9 +475,78 @@
     } else {
       detail.append(element('div', { class: 'ap-answer' }, element('h4', {}, '你的作答 · ' + M.countWords(response) + ' words'), prose(typeof response === 'string' && response.trim() ? response : '未作答', typeof response === 'string' && response.trim() ? 'en' : 'zh-CN')));
     }
+    if (record && q.type === 'free-response') detail.append(assessmentPanel(source, q, record, response));
     if (q.explanation) detail.append(element('h4', {}, q.type === 'free-response' ? '自查提示' : '解析'), prose(q.explanation));
     if (q.answerProvenance) detail.append(element('p', { class: 'ap-muted' }, '答案来源：' + q.answerProvenance));
     return detail;
+  }
+  function assessmentPanel(source, q, record, response) {
+    const request = state.request;
+    const box = element('section', { class: 'ap-ai-review', 'aria-label': 'AP Lang AI 评分' });
+    const status = element('p', { role: 'status', 'aria-live': 'polite' });
+    const output = element('div', {});
+    let controller = null, config = null;
+    const current = () => active() && state.view === 'review' && state.request === request && box.isConnected && record.answers[q.id] === response;
+    const run = button('AI评分', async () => {
+      if (!current() || controller || !config?.enabled) return;
+      if (!window.confirm('是否同意将本篇作文全文及服务器题库中的题目／材料发送至 Cloudflare AI 进行评估？\n结果是非官方练习反馈；单篇作文按 0–6 分（1+4+1）估分，不是 AP 1–5 分或 TOEFL 成绩。材料不完整时仅给反馈、不评分。\n结果仅保留在当前复盘页，离开或刷新即丢失；可下载反馈。')) return;
+      if (!current()) return;
+      controller = new AbortController();
+      const running = controller;
+      aiRequests.add(running);
+      run.disabled = true; cancel.hidden = false; output.replaceChildren();
+      status.textContent = '正在评估…取消不会更改作文；已发送的服务端请求可能仍会消耗额度。';
+      const timeout = setTimeout(() => running.abort(), 120000);
+      try {
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(response))), byte => byte.toString(16).padStart(2, '0')).join('');
+        if (!current() || running.signal.aborted) return;
+        const value = await auth.api('/api/ap/assess', { method: 'POST', signal: running.signal, body: {
+          sourceId: source.id, revision: source.revision, questionId: q.id, attemptId: record.id, response, consent: true
+        } });
+        if (!current() || running.signal.aborted) return;
+        const result = M.validateAssessment(value, { sourceId: source.id, revision: source.revision, questionId: q.id, responseHash: hash, questionType: q.responseType });
+        status.textContent = result.status === 'scored' ? 'AI估分 ' + result.total + ' / 6（非官方）' : '仅提供反馈，未评分：题目或材料不足以可靠评分。';
+        if (result.rows) for (const [key, label, maximum] of [['thesis', '论点 Thesis', 1], ['evidenceCommentary', '证据与评论 Evidence and Commentary', 4], ['sophistication', '复杂性 Sophistication', 1]]) {
+          const row = result.rows[key];
+          output.append(element('h4', {}, label + ' · ' + row.score + ' / ' + maximum), prose(row.reason, 'zh-CN'));
+          if (row.evidence.length) output.append(element('ul', {}, ...row.evidence.map(text => element('li', {}, text))));
+        }
+        output.append(prose(result.feedback, 'zh-CN'));
+        for (const [key, title] of [['strengths', '优点'], ['improvements', '改进建议'], ['limitations', '限制']]) if (result[key].length) output.append(element('h4', {}, title), element('ul', {}, ...result[key].map(text => element('li', {}, text))));
+        output.append(button('下载反馈', () => {
+          if (!current()) return;
+          const url = URL.createObjectURL(new Blob([JSON.stringify(result, null, 2)], { type: 'application/json;charset=utf-8' }));
+          const link = element('a', { href: url, download: 'ap-ai-feedback-' + q.number + '.json' });
+          document.body.append(link); link.click(); link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }));
+      } catch (error) {
+        if (!current()) return;
+        status.textContent = running.signal.aborted ? '评估已取消或超时。作文未改变，可重试。' : ({ 429: '评分额度已用完或请求过于频繁，请稍后重试。', 503: 'AI服务暂不可用，请稍后重试。', 409: '题目版本或账号状态已变更，请重新打开复盘。', 413: '作文过长，暂不能评估；原作答已保留。' }[error.status] || error.message || '评估失败，请稍后重试。') + ' 作文未改变。';
+      } finally {
+        clearTimeout(timeout); aiRequests.delete(running);
+        if (controller === running) controller = null;
+        if (current()) {
+          run.disabled = false; cancel.hidden = true;
+          if (running.signal.aborted) status.textContent = '评估已取消或超时。作文未改变，可重试。';
+        }
+      }
+    }, 'ap-button--primary', { disabled: true });
+    const cancel = button('取消评估', () => { controller?.abort(); }, '', { hidden: true });
+    box.append(actions(run, cancel, element('a', { href: 'https://apcentral.collegeboard.org/media/pdf/ap-english-language-and-composition-frqs-1-2-3-scoring-rubrics.pdf', target: '_blank', rel: 'noopener noreferrer' }, '官方评分标准')), status,
+      muted('AI反馈不自动保存；离开或刷新此复盘页即丢失，请下载反馈。不会修改作文或练习成绩。'), output);
+    if (typeof response !== 'string' || !response.trim()) { status.textContent = '未作答，无法评估。'; return box; }
+    status.textContent = '正在检查评分服务…';
+    getJSON('/api/ap/ai-config').then(value => {
+      if (!current()) return;
+      config = value;
+      if (value.enabled !== true || value.version !== M.AI_VERSION || value.scoreMin !== 0 || value.scoreMax !== 6 || value.scoreStep !== 1) { status.textContent = '当前服务未启用兼容的 AP Lang AI 评分。'; return; }
+      const max = Number.isSafeInteger(value.limits?.responseCharacters) ? Math.min(value.limits.responseCharacters, 18000) : 18000;
+      if (response.length > max) { status.textContent = '作文超过评分长度限制（' + max + ' 字符），原作答仍完整保留。'; return; }
+      run.disabled = false;
+      status.textContent = '可主动申请单篇 AI 反馈；不会自动发送作文。';
+    }).catch(() => { if (current()) status.textContent = '当前服务暂不支持 AI 评分或连接失败，请重新打开复盘重试。'; });
+    return box;
   }
   function showDrafts() {
     setView('drafts');
@@ -566,17 +641,22 @@
     tick();
     saveDraft(); // Persist the wall-clock anchor; reading a PDF in another tab must not stop time.
   });
-  window.addEventListener('pagehide', () => { tick(); saveDraft(); });
+  window.addEventListener('pagehide', () => { abortAssessments(); tick(); saveDraft(); });
   window.addEventListener('beforeunload', event => {
     tick();
     const saved = saveDraft();
     if (!saved || state.unsavedWork) { event.preventDefault(); event.returnValue = ''; }
   });
   window.addEventListener('storage', event => {
-    if (!active() || !Object.values(storageKeys).includes(event.key)) return;
+    if (!active() || (event.key !== null && !Object.values(storageKeys).includes(event.key))) return;
+    if (state.view === 'review' && (event.key === null || event.key === storageKeys.history)) {
+      showHistory();
+      announce('练习记录已在另一个标签页变更。已取消评估，请重新打开复盘。', true);
+    }
     if (state.view === 'practice') announce('另一个标签页修改了 AP 本机记录。请避免在多个标签页编辑同一草稿，并下载当前作答备份。', true);
   });
   document.addEventListener('platform:session-ended', () => {
+    abortAssessments();
     clearInterval(timerInterval);
     clearTimeout(state.saveTimer);
     state.request++;

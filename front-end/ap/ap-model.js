@@ -316,7 +316,35 @@
       }
     };
   }
-  return Object.freeze({ storageKeys, LIMITS, MAX_TEXT, validateSource, validateCatalog, normalizeSummary,
+  const AI_VERSION = 'ap-lang-rubric-2019-v1';
+  function validateAssessment(value, expected) {
+    const short = value => text(value, 12000);
+    const list = value => Array.isArray(value) && value.length <= 30 && value.every(short);
+    check(object(value) && object(expected), 'AI 返回格式不可用。');
+    check(value.version === AI_VERSION && ['scored', 'limited'].includes(value.status), 'AI 评分版本不兼容。');
+    for (const key of ['sourceId', 'revision', 'questionId', 'responseHash']) check(value[key] === expected[key], 'AI 结果与当前作答不匹配。');
+    check(REVISION.test(value.responseHash) && RESPONSE_TYPES.includes(value.questionType), 'AI 结果标识不可用。');
+    check(value.questionType === expected.questionType, 'AI 题型不匹配。');
+    check(short(value.feedback) && list(value.strengths) && list(value.improvements) && list(value.limitations), 'AI 反馈格式不可用。');
+    check(text(value.createdAt, 40) && Number.isFinite(Date.parse(value.createdAt)), 'AI 结果时间不可用。');
+    if (value.status === 'limited') check(value.rows === null && value.total === null, '材料不足时不能显示分数。');
+    else {
+      check(object(value.rows), 'AI 评分维度不完整。');
+      let total = 0;
+      for (const [key, maximum] of [['thesis', 1], ['evidenceCommentary', 4], ['sophistication', 1]]) {
+        const row = value.rows[key];
+        check(object(row) && integer(row.score, 0, maximum) && short(row.reason) && list(row.evidence), 'AI 评分维度无效。');
+        total += row.score;
+      }
+      check(integer(value.total, 0, 6) && value.total === total, 'AI 总分与维度分不一致。');
+    }
+    const clean = {};
+    for (const key of ['version', 'status', 'sourceId', 'revision', 'questionId', 'responseHash', 'questionType', 'total', 'feedback', 'createdAt']) clean[key] = value[key];
+    for (const key of ['strengths', 'improvements', 'limitations']) clean[key] = [...value[key]];
+    clean.rows = value.rows === null ? null : Object.fromEntries(['thesis', 'evidenceCommentary', 'sophistication'].map(key => [key, { score: value.rows[key].score, reason: value.rows[key].reason, evidence: [...value.rows[key].evidence] }]));
+    return clean;
+  }
+  return Object.freeze({ AI_VERSION, validateAssessment, storageKeys, LIMITS, MAX_TEXT, validateSource, validateCatalog, normalizeSummary,
     filterSources, pdfHref, countWords, formatTime, timingProfile, advanceTiming, timerStatus, answered, results, totals, sourceIdentity,
     createDraft, restoreDraft, finish, normalizeDraft, normalizeRecord, normalizeWrong, normalizeList,
     updateWrongBook, wrongKey, createStorage });

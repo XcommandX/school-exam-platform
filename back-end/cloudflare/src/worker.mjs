@@ -3,6 +3,7 @@ import {InputError,fail,readJSON} from './json-stream.mjs';
 import {fields,identity} from './validation.mjs';
 import {setupHTML,setupJS} from './setup.mjs';
 import {aiConfig,assess} from './toefl-ai.mjs';
+import {apConfig,assessAP} from './ap-ai.mjs';
 export {PlatformAuthStore} from './auth.mjs';
 export {PlatformAccountStore} from './data.mjs';
 export {PlatformBankStore} from './bank.mjs';
@@ -229,6 +230,16 @@ export async function handle(request,env){
     return authResponse(await auth(env,'/password',{token,targetId:admin[1],newPassword:body.password}));
   }
   if(admin&&!admin[2]&&method==='PATCH')return authResponse(await auth(env,'/update-user',{token,targetId:admin[1],changes:await readJSON(request,16*1024)}));
+  if(path==='/api/ap/ai-config'||path==='/api/ap/assess'){
+    if(url.search)fail('评分接口不接受查询参数。');
+    const config=apConfig(env);
+    if(path.endsWith('/ai-config')&&method==='GET')return json(config);
+    if(path.endsWith('/assess')&&method==='POST')return assessAP(request,env,{config,rpc:async(action,body)=>{
+      const response=await env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(new Request('https://internal/internal/ap-ai/'+action,{method:'POST',headers:{'Content-Type':'application/json','X-Platform-Token':token,'X-Platform-User':user.id},body:JSON.stringify(body)}));
+      const value=await response.json();if(!response.ok)throw new InputError(value.error,response.status,value.code,{...(value.retryAfter?{retryAfter:value.retryAfter}:{})});return value;
+    }});
+    return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
+  }
   if(path==='/api/toefl/ai-config'||path==='/api/toefl/assess'){
     if(url.search)fail('评分接口不接受查询参数。');
     const config=aiConfig(env,request.url);

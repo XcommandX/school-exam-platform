@@ -1,5 +1,6 @@
 import {createHash,randomUUID} from 'node:crypto';
 import {AccountAIStore} from './toefl-ai.mjs';
+import {AccountAPAIStore} from './ap-ai.mjs';
 import {ProjectedJSON,readJSON,InputError,fail} from './json-stream.mjs';
 import {satProjection,validateSAT,validateHome,mergeTOEFL,identity,settings,toeflKeys,fields,object,integer,MAX_ENTITY,MAX_SETTINGS,MAX_ACCOUNT,MiB} from './validation.mjs';
 const CHUNK=256*1024,MAX_PHYSICAL=704*MiB,encoder=new TextEncoder();
@@ -218,6 +219,10 @@ export class PlatformAccountStore {
         }
         if(path==='/api/sat/summary'&&request.method==='GET')return this.store.summary();
         if(path==='/api/toefl/bootstrap'&&request.method==='GET')return this.store.state('toefl',user,request.headers.has('X-Platform-AI-Config')?JSON.parse(request.headers.get('X-Platform-AI-Config')):undefined);
+        if(path.startsWith('/internal/ap-ai/')&&request.method==='POST'){
+          this.apAI??=new AccountAPAIStore(this.store);
+          return json(await this.apAI.handle(path.slice('/internal/ap-ai/'.length),await readJSON(request,2048),()=>this.verify(request)));
+        }
         if(path.startsWith('/internal/toefl-ai/')&&request.method==='POST'){
           this.ai??=new AccountAIStore(this.store);
           return json(await this.ai.handle(path.slice('/internal/toefl-ai/'.length),await readJSON(request,128*1024),()=>this.verify(request)));
