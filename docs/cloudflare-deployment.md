@@ -162,3 +162,16 @@ PBKDF2 修复后重新执行完整 Cloudflare 回归：**112/112 通过**（包�
 - [Durable Objects limits](https://developers.cloudflare.com/durable-objects/platform/limits/)
 - [Durable Objects pricing](https://developers.cloudflare.com/durable-objects/platform/pricing/)
 - [SQLite storage API](https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/)
+
+## 2026-10-26 竞赛适配：尚未发布
+
+本次新增数学竞赛构建/运行适配，不代表重新部署。**本轮没有合入 main，也没有执行 Cloudflare 发布**；上文 SAT / TOEFL 和审批注册的既有发布记录仍有效，不据此宣称新竞赛功能已在线。
+
+- `/contests/` 使用统一账号与登录门禁，静态白名单包含页面、样式、普通模型、应用、MathJax 配置及计时模型六个文件；不开放整个源码或本机目录。
+- [竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)只接受四份 Git 已跟踪且明确标记为原创示例的数据，不接受私有/外部图片资源。默认 private 目录为真实空态，`privateProblems: 0`；用户主动进入示例模式才显示四份示例。
+- 真实竞赛题库、来源缓存、下载 PDF、研究证据、账号浏览器记录与测试产物不进入云构建。既有 SAT / TOEFL 题库专项授权不授予竞赛内容发布权限。
+- 本机可选 MathJax 不导出；云目录明确返回 `mathjaxAvailable: false`，页面保留可读 LaTeX 文本并提示，不请求公共 CDN，不假称完成公式排版。
+- 即使登录的是云站账号，竞赛作答、收藏、计时和归档仍只存在当前浏览器按账号隔离的空间；不写入账号 Durable Objects，不等于跨设备云同步。
+- 定向检查入口为 `node --test --test-concurrency=1 back-end/cloudflare/tests/contest-worker.test.mjs`（仓库根目录）；还需执行现有完整 `npm test` 与 `npm run build`。检查、构建、commit / push 与部署分别记录；不能用旧版本通过数量替代本轮结果。
+
+完整使用方式、导入权限、历史赛制证据和客户端计时限制见 [数学竞赛](math-contests.md)。

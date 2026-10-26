@@ -95,3 +95,13 @@ Practice Builder 现在以 `/api/sat-library/question-index` 的纯文字全库�
 ## 2026-10-24 共享题库集中目录
 
 SAT 的两份目录统一放在 `back-end/question-banks/sat-packs/`（`gengdu-offline/`、`pdf-official/`），TOEFL 保留 `back-end/question-banks/toefl/`。此调整只统一存放位置，不统一两科题目模型。服务端默认路径、SAT 维护工具及说明已同步；前端 URL、collectionId、版本、账号记录与旧活动卷不变。原目录由用户移动，未检查或重写 SAT 题库内部。
+
+## 2026-10-26 数学竞赛独立模块
+
+竞赛浏览器代码位于 `front-end/contests/`；[规范化与资源校验](../back-end/shared/contest_bank.py)提供独立题目模型，[显式导入器](../back-end/tools/contests/import_contest_bank.py)只读外部来源，将全量验证后的不可变版本保存到忽略的 `local-data/contests/`，最后原子切换当前指针。旧版本保留，导入失败不替换活动题库，不并入 SAT / TOEFL 的共享题库或活动卷。
+
+统一服务的 `/contests/`、`/api/contests/`、`/contest-assets/` 与 `/contest-vendor/mathjax/` 受现有登录门禁和路径白名单保护。默认真实题库与显式 `mode=example` 隔离；无真实题库时为空态，只有用户选择后才展示原创示例。
+
+竞赛记录是现有云端账号记录架构的明确例外：普通作答、收藏与限时状态只存在本浏览器按账号命名的 localStorage，不写 SQLite / Durable Objects。限时状态机使用绝对截止时间与多场次不可逆结束状态；Web Locks 防止同账号多个标签页覆盖快照。会话失效后停止写入，不迁移匿名历史；客户端时间仍可被用户改变，不用于正式监考。
+
+Cloudflare 构建只通过[竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)打包四份 Git 已跟踪原创示例；private 目录为空，真实题库、来源缓存、研究资料与本机 MathJax 均不导出，公式保留文本降级。此次竞赛升级尚未合入 main 或部署，不改变此前 SAT / TOEFL 已发布状态。运行、权限、历史计时证据与测试命令见 [数学竞赛](math-contests.md)。
