@@ -2,7 +2,7 @@
 
 ## 实现与发布状态
 
-本功能在 `feature/ap-lang-ai-assessment` 开发。2026-10-26 21:42（Asia/Shanghai）经用户明确授权部署至现有Cloudflare网站，版本 `c9c55cb2-ae00-4bc5-88a5-a358ab66cda9` 已承接100%流量；未commit、push或合入main。不更改 TOEFL 量表、SAT 流程、现有账号或 AP 草稿身份。发布后匿名HTTP检查10/10通过；未使用生产账号测试登录后AI，真实模型与登录后流程的验证来自发布前隔离测试。详见[发布记录](cloudflare-deployment.md#ap-lang-ai实际发布2026-10-26-2142asiashanghai)。
+本功能在 `feature/ap-lang-ai-assessment` 开发。2026-10-26 21:42（Asia/Shanghai）经用户明确授权部署至现有Cloudflare网站，版本 `c9c55cb2-ae00-4bc5-88a5-a358ab66cda9` 已承接100%流量。后续用户明确授权提交GitHub并合入main：功能提交 `449e092` 已上传功能分支并快进合入远端main；推送前AP前端36/36、后端12/12复跑通过，未重复部署。不更改 TOEFL 量表、SAT 流程、现有账号或 AP 草稿身份。发布后匿名HTTP检查10/10通过；未使用生产账号测试登录后AI，真实模型与登录后流程的验证来自发布前隔离测试。详见[发布记录](cloudflare-deployment.md#ap-lang-ai实际发布2026-10-26-2142asiashanghai)。
 
 ## 官方依据
 

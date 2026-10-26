@@ -225,7 +225,7 @@ Cloudflare完整`npm test`首次 **143/144通过**；唯一失败为新增AP测�
 
 ## AP Lang AI实际发布（2026-10-26 21:42，Asia/Shanghai）
 
-- 用户明确要求“现在进行部署”，从本地 `feature/ap-lang-ai-assessment` 工作区发布到原Worker `school-exam-platform`；此次未commit、push或合入main。后续维护应先保存并合并此功能，勿直接部署旧main导致功能回退。
+- 用户明确要求“现在进行部署”，从本地 `feature/ap-lang-ai-assessment` 工作区发布到原Worker `school-exam-platform`；部署当时尚未commit、push或合入main。后续用户明确授权“现在提交到Github并合入main”，功能提交 `449e092` 已上传 `feature/ap-lang-ai-assessment` 并快进合入远端main；远端原基线 `cee1777` 无并发更新，无强推。本次复跑AP前端36/36、后端12/12通过，未重复部署或上传本机测试数据。协作者请拉取最新main再开分支。
 - 当前版本 **`c9c55cb2-ae00-4bc5-88a5-a358ab66cda9`**，创建时间 `2026-10-26T13:42:36.365Z`，部署列表确认 **100%流量**。上一版本为 `582e23d2-d49e-41f2-8861-eefa2c540b19`。
 - `npm run deploy`成功，上传2项更新AP前端资产、8117项复用，Worker包227.32KiB。AUTH/ACCOUNTS/BANK/AI/ASSETS与现有AI模型/开关保持，无Durable Object命名空间迁移、账号或记录重置。AP新增限额控制表按需幂等创建，仅存额度/租约/请求哈希，不存作文或反馈。
 - 发布前完整测试156/156、AP前端36/36、最终AP后端12/12，完整构建与Chrome隔离测试通过。复核已构建AP前端与最新源码逐字节一致；部署直接打包最新后端。真实Cloudflare AI已用合成作文测试，具体问题修复和校准边界见[AP AI评分](ap-ai-assessment.md)。

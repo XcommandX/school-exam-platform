@@ -12,7 +12,7 @@
 
 ## AP 英语语言与写作
 
-2026-10-26 21:42已部署的[AP Lang AI练习评分](docs/ap-ai-assessment.md)：采用College Board三行0–6分量表，复盘时明确同意后调用现有Cloudflare AI；首批仅2025两套卷Q2/Q3完成材料核验，可给分，其余仅有限反馈。AI结果仅当前复盘内存保留、可下载，不覆盖原作文或AP历史。此功能经明确授权发布到现有网站，但代码仍在本地功能分支，尚未commit、推送或合入main；请勿用旧main部署覆盖。
+2026-10-26 21:42已部署的[AP Lang AI练习评分](docs/ap-ai-assessment.md)：采用College Board三行0–6分量表，复盘时明确同意后调用现有Cloudflare AI；首批仅2025两套卷Q2/Q3完成材料核验，可给分，其余仅有限反馈。AI结果仅当前复盘内存保留、可下载，不覆盖原作文或AP历史。此功能已部署到现有网站，后续经明确授权将功能提交 `449e092` 推送GitHub并快进合入远端main；本次Git同步未重复部署。协作者请拉取最新main再开分支。
 
 2026-10-26 已合入并推送 `main`，实际发布到上述 Cloudflare 网站，现有账号和记录不重置。发布版本与验证范围见 [AP 发布记录](docs/cloudflare-deployment.md#实际发布结果2026-10-26-1915asiashanghai)。
 
