@@ -1,0 +1,182 @@
+{
+  "example": true,
+  "notice": "原创合成示例；非官方竞赛题，不代表真实历年覆盖。",
+  "exam": {
+    "id": "example-usamo-2026",
+    "contest": "USAMO",
+    "year": 2026,
+    "season": "regular",
+    "paper": null,
+    "special_paper": false,
+    "problem_count": 3,
+    "expected_problem_count": 3,
+    "missing_numbers": []
+  },
+  "problems": [
+    {
+      "id": "example-usamo-2026-01",
+      "exam_id": "example-usamo-2026",
+      "contest": "USAMO",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 1,
+      "question_type": "proof",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original proof example. Prove that the sum of two even integers is even.",
+        "html": "<p>Original proof example. Prove that the sum of two even integers is even.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": null,
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "Write the integers as $2a$ and $2b$, with $a,b$ integers. Their sum is $2(a+b)$, an even integer.",
+          "html": "<p>Write the integers as $2a$ and $2b$, with $a,b$ integers. Their sum is $2(a+b)$, an even integer.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": false,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-usamo-2026-02",
+      "exam_id": "example-usamo-2026",
+      "contest": "USAMO",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 2,
+      "question_type": "proof",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original proof example. Prove that $n(n+1)$ is even for every integer $n$.",
+        "html": "<p>Original proof example. Prove that $n(n+1)$ is even for every integer $n$.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": null,
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "Of two consecutive integers, one is even. Their product is therefore divisible by $2$.",
+          "html": "<p>Of two consecutive integers, one is even. Their product is therefore divisible by $2$.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": false,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-usamo-2026-03",
+      "exam_id": "example-usamo-2026",
+      "contest": "USAMO",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 3,
+      "question_type": "proof",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original proof example. Prove that $x^2+1$ is positive for every real number $x$.",
+        "html": "<p>Original proof example. Prove that $x^2+1$ is positive for every real number $x$.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [],
+      "answer": null,
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "For real $x$, $x^2\\ge0$, so $x^2+1\\ge1>0$.",
+          "html": "<p>For real $x$, $x^2\\ge0$, so $x^2+1\\ge1&gt;0$.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": false,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    }
+  ]
+}

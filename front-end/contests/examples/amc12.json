@@ -1,0 +1,195 @@
+{
+  "example": true,
+  "notice": "原创合成示例；非官方竞赛题，不代表真实历年覆盖。",
+  "exam": {
+    "id": "example-amc12-2026",
+    "contest": "AMC12",
+    "year": 2026,
+    "season": "regular",
+    "paper": null,
+    "special_paper": false,
+    "problem_count": 2,
+    "expected_problem_count": 2,
+    "missing_numbers": []
+  },
+  "problems": [
+    {
+      "id": "example-amc12-2026-01",
+      "exam_id": "example-amc12-2026",
+      "contest": "AMC12",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 1,
+      "question_type": "multiple_choice",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original example. Let $f(x)=x^2-3x+2$. Find $f(5)$.",
+        "html": "<p>Original example. Let $f(x)=x^2-3x+2$. Find $f(5)$.</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [
+        {
+          "label": "A",
+          "text_latex": "$2$",
+          "html": "$2$"
+        },
+        {
+          "label": "B",
+          "text_latex": "$5$",
+          "html": "$5$"
+        },
+        {
+          "label": "C",
+          "text_latex": "$10$",
+          "html": "$10$"
+        },
+        {
+          "label": "D",
+          "text_latex": "$12$",
+          "html": "$12$"
+        },
+        {
+          "label": "E",
+          "text_latex": "$17$",
+          "html": "$17$"
+        }
+      ],
+      "answer": {
+        "type": "choice",
+        "accepted": [
+          "D"
+        ],
+        "display": "D",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "$f(5)=25-15+2=12$.",
+          "html": "<p>$f(5)=25-15+2=12$.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "example-amc12-2026-02",
+      "exam_id": "example-amc12-2026",
+      "contest": "AMC12",
+      "year": 2026,
+      "season": "regular",
+      "paper": null,
+      "number": 2,
+      "question_type": "multiple_choice",
+      "special_paper": false,
+      "statement": {
+        "text_latex": "Original disagreement test. A display may show either $x+2=7$ or $x+2=8$. Which value of $x$ was intended?",
+        "html": "<p>Original disagreement test. A display may show either $x+2=7$ or $x+2=8$. Which value of $x$ was intended?</p>",
+        "html_includes_choices": false,
+        "source": {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      },
+      "choices": [
+        {
+          "label": "A",
+          "text_latex": "$4$",
+          "html": "$4$"
+        },
+        {
+          "label": "B",
+          "text_latex": "$5$",
+          "html": "$5$"
+        },
+        {
+          "label": "C",
+          "text_latex": "$6$",
+          "html": "$6$"
+        },
+        {
+          "label": "D",
+          "text_latex": "$7$",
+          "html": "$7$"
+        },
+        {
+          "label": "E",
+          "text_latex": "$8$",
+          "html": "$8$"
+        }
+      ],
+      "answer": {
+        "type": "choice",
+        "accepted": [
+          "B"
+        ],
+        "display": "B",
+        "verification": "synthetic_example"
+      },
+      "solutions": [
+        {
+          "title": "Original example solution",
+          "text_latex": "The two versions yield $5$ and $6$. This intentionally ambiguous example must not receive an automatic score.",
+          "html": "<p>The two versions yield $5$ and $6$. This intentionally ambiguous example must not receive an automatic score.</p>",
+          "verification": "synthetic_example",
+          "quality_flags": [],
+          "source": {
+            "dataset": "original_synthetic_example",
+            "record_id": "created-for-platform-testing",
+            "official_live_verified": false
+          }
+        }
+      ],
+      "quality": {
+        "flags": [
+          "original_synthetic_example",
+          "statement_variant_disagreement",
+          "answer_source_disagreement"
+        ],
+        "auto_gradable": true,
+        "ready_for_practice": true,
+        "structurally_complete": true,
+        "solutions_reviewed": false
+      },
+      "source_url": "",
+      "provenance": [
+        {
+          "dataset": "original_synthetic_example",
+          "record_id": "created-for-platform-testing",
+          "official_live_verified": false
+        }
+      ],
+      "assets": []
+    }
+  ]
+}

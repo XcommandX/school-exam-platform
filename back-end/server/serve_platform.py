@@ -20,7 +20,7 @@ import sys
 import tempfile
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import quote, unquote, urlsplit
+from urllib.parse import parse_qs, quote, unquote, urlsplit
 import webbrowser
 import xml.etree.ElementTree as ET
 
@@ -28,6 +28,9 @@ REPOSITORY = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY / 'back-end'))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
 from server.platform_auth import make_auth_handler
+from shared.contest_bank import ContestStore, safe_path as contest_safe_path
+
+CONTEST_PUBLIC_FILES = frozenset({'index.html', 'styles.css', 'model.js', 'app.js', 'mathjax-config.js', 'timer.js'})
 
 MAX_BYTES = 20 * 1024 * 1024
 MAX_PACK_BYTES = 128 * 1024 * 1024
@@ -675,6 +678,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     question_index_lock, question_index_cache = threading.Lock(), {}
     toefl_preview, toefl_preview_root, toefl_files = _toefl_asset_configuration(root)
     auth = make_auth_handler(private)
+    contests = ContestStore(root, private_root if private_root else root / 'local-data')
 
     def read_sets(exam):
         found, errors = [], []
@@ -708,7 +712,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             self.send_bytes(status, json.dumps(value, ensure_ascii=False).encode('utf-8'),
                             'application/json; charset=utf-8', cache='no-store')
 
-        def send_bytes(self, status, body, content_type, cache='no-cache'):
+        def send_bytes(self, status, body, content_type, cache='no-cache', csp=None):
             self.send_response(status)
             self.send_header('Content-Type', content_type)
             self.send_header('Content-Length', str(len(body)))
@@ -716,6 +720,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Referrer-Policy', 'same-origin')
             self.send_header('X-Frame-Options', 'DENY')
+            if csp:
+                self.send_header('Content-Security-Policy', csp)
             self.end_headers()
             self.wfile.write(body)
 
@@ -791,11 +797,57 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             if not user and not public:
                 if route.startswith('/api/'):
                     return self.reply(401, {'error': '请先登录。'})
-                if route in {'/', '/index.html', '/account', '/accounts', '/sat', '/sat/', '/toefl', '/toefl/'} or route.endswith('.html'):
+                if route in {'/', '/index.html', '/account', '/accounts', '/sat', '/sat/', '/toefl', '/toefl/', '/contests', '/contests/'} or route.endswith('.html'):
                     return self.redirect('/login?next=' + quote(self.path, safe=''))
                 return self.reply(404, {'error': 'Not found.'})
             if route in {'/login', '/login/'} and user:
                 return self.redirect('/')
+            if route.startswith('/api/contests/'):
+                parameters = parse_qs(parsed.query, keep_blank_values=True)
+                modes = parameters.get('mode', ['private'])
+                if len(modes) != 1 or modes[0] not in {'private', 'example'}:
+                    return self.reply(400, {'error': 'Contest mode must be private or example.'})
+                mode = modes[0]
+                try:
+                    if route == '/api/contests/catalog':
+                        return self.reply(200, contests.catalog(mode))
+                    prefix = '/api/contests/exams/'
+                    if route.startswith(prefix) and route[len(prefix):] and '/' not in route[len(prefix):]:
+                        document = contests.exam(route[len(prefix):], mode)
+                        return self.reply(200, document) if document else self.reply(404, {'error': 'Contest exam not found.'})
+                    return self.reply(404, {'error': 'Unknown contest interface.'})
+                except (OSError, ValueError, TypeError, KeyError):
+                    return self.reply(404, {'error': 'Contest data is unavailable or failed validation.'})
+            if route == '/contests':
+                return self.redirect('/contests/' + ('?' + parsed.query if parsed.query else ''))
+            if route.startswith(('/contests/', '/contest-assets/', '/contest-vendor/mathjax/')):
+                try:
+                    csp = None
+                    if route.startswith('/contests/'):
+                        name = route[len('/contests/'):] or 'index.html'
+                        if name not in CONTEST_PUBLIC_FILES:
+                            return self.reply(404, {'error': 'Not found.'})
+                        path = contest_safe_path(root / 'front-end/contests', name)
+                        body = path.read_bytes()
+                        kind = {'.js': 'application/javascript', '.css': 'text/css', '.html': 'text/html'}[path.suffix] + '; charset=utf-8'
+                        if name == 'index.html':
+                            # Only this module gets the new CSP; SAT/TOEFL stay intact.
+                            nonce = secrets.token_urlsafe(24)
+                            encoded = json.dumps({'authenticated': True, 'loginEnabled': True, 'user': user}, ensure_ascii=True).replace('<', '\\u003c')
+                            bootstrap = ('<head><script nonce="' + nonce + '">window.PlatformSession=' + encoded + ';</script>').encode()
+                            body = body.replace(b'<head>', bootstrap, 1)
+                            csp = "default-src 'self'; script-src 'self' 'nonce-" + nonce + "'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+                        response = body, kind
+                    elif route.startswith('/contest-assets/'):
+                        response = contests.asset(route[len('/contest-assets/'):])
+                        csp = "default-src 'none'; style-src 'none'; sandbox"
+                    else:
+                        response = contests.vendor(route[len('/contest-vendor/mathjax/'):])
+                    if response is None:
+                        return self.reply(404, {'error': 'Not found.'})
+                    return self.send_bytes(200, response[0], response[1], cache='no-store', csp=csp)
+                except (OSError, ValueError, TypeError, KeyError):
+                    return self.reply(404, {'error': 'Not found.'})
             if route == '/api/toefl/status':
                 return self.reply(200, toefl_preview)
             if route == '/api/sat-packs':
