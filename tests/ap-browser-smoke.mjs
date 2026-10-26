@@ -64,6 +64,10 @@ try {
   await screenshot('ap-empty-desktop.png');
   await click('打开原创示例'); await wait(has('开始练习'));
   await click('开始练习'); await wait('document.querySelectorAll("input[type=radio]").length > 0');
+  assert.equal(await evaluate('document.body.classList.contains("ap-exam-active")'), true);
+  assert.equal(await evaluate('getComputedStyle(document.querySelector(".ap-header")).display'), 'none');
+  await evaluate('document.activeElement.blur()');
+  await screenshot('ap-mcq-desktop.png');
   const fixture = await fetch(base + '/api/ap/example').then(r => r.json());
   const firstWrong = (fixture.questions[0].correctOption + 1) % fixture.questions[0].options.length;
   await evaluate(`document.querySelector('input[value="${firstWrong}"]').click()`);
@@ -74,6 +78,7 @@ try {
   await evaluate(`(() => { const field=document.querySelector('#ap-essay'); field.value=${JSON.stringify(essay)}; field.dispatchEvent(new Event('input',{bubbles:true})); })()`);
   await wait('document.querySelector("#ap-save-state").textContent === "草稿已保存"');
   assert.equal(await evaluate('document.querySelector("#ap-word-count").textContent'), '12 words');
+  await evaluate('document.activeElement.blur()');
   await screenshot('ap-writing-desktop.png');
   await cmd('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
   await cmd('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
@@ -99,6 +104,52 @@ try {
   assert.equal(await evaluate(`document.querySelector('a[href="/ap/"]') !== null`), true);
   assert.equal(await evaluate('PlatformHome.examRoutes.ap'), '/ap/');
   assert.equal(await evaluate('window.HomeModel ? HomeModel.summarize([],[],[],Date.now(),JSON.parse(localStorage.getItem("school-exam-platform:ap:history:v1"))).all.answers : -1'), 0, 'Synthetic practice excluded from home totals');
+  // Prominent entry is responsive and routes to the requested catalog filter.
+  for (const width of [1440, 390, 320]) {
+    await cmd('Emulation.setDeviceMetricsOverride', { width, height: 1000, deviceScaleFactor: 1, mobile: width < 720 });
+    assert.equal(await evaluate('document.documentElement.scrollWidth <= innerWidth'), true, 'Homepage overflow at ' + width);
+    await evaluate('document.querySelector(".home-ap-entry").scrollIntoView({block:"center"})');
+    await screenshot('home-ap-' + width + '.png');
+  }
+  await evaluate('document.querySelector(\'.home-ap-entry a[href="/ap/?kind=mcq"]\').click()');
+  await wait('Boolean(document.querySelector(\'select[aria-label="类型"]\'))');
+  assert.equal(await evaluate('document.querySelector(\'select[aria-label="类型"]\').value'), 'mcq');
+  await navigate('/ap/?kind=frq'); await wait('Boolean(document.querySelector(\'select[aria-label="类型"]\'))');
+  assert.equal(await evaluate('document.querySelector(\'select[aria-label="类型"]\').value'), 'frq');
+  await click('打开原创示例'); await wait(has('开始练习'));
+  assert.equal(await evaluate('document.querySelector("#ap-practice-mode").value'), 'timed');
+  await click('开始练习'); await wait(has('剩余'));
+  await wait('document.querySelector("#ap-timer").textContent !== "剩余 1:00:00"');
+  await click('暂停'); await wait(has('练习已暂停'));
+  assert.equal(await evaluate('getComputedStyle(document.querySelector(".ap-workspace")).display'), 'none');
+  assert.equal(await evaluate('document.activeElement.id'), 'ap-timer-pause');
+  assert.equal(await evaluate('getComputedStyle(document.querySelector(".ap-pagination")).display'), 'none');
+  assert.equal(await evaluate('getComputedStyle(document.querySelector(".ap-exam-navigator")).display'), 'none');
+  const pausedTime = await evaluate('document.querySelector("#ap-timer").textContent');
+  await navigate('/ap/?view=drafts'); await wait(has('继续练习')); await click('继续练习'); await wait(has('练习已暂停'));
+  assert.equal(await evaluate('document.querySelector("#ap-timer").textContent'), pausedTime);
+  await click('继续计时'); await wait('getComputedStyle(document.querySelector(".ap-workspace")).display !== "none"');
+  await click('保存并退出'); await wait(has('继续练习'));
+  assert.equal(await evaluate('JSON.parse(localStorage.getItem(APModel.KEYS.drafts))[0].timing.paused'), true);
+  // Persist an elapsed clock in the isolated synthetic attempt to verify reload reconciliation and expiry.
+  await evaluate(`(() => { const list=JSON.parse(localStorage.getItem(APModel.KEYS.drafts)); const d=list[0]; d.elapsedSeconds=0; d.started=Date.now()-3700000; d.timing.anchorAt=Date.now()-3700000; d.timing.paused=false; localStorage.setItem(APModel.KEYS.drafts,JSON.stringify(list)); })()`);
+  await navigate('/ap/?view=drafts'); await wait(has('继续练习')); await click('继续练习'); await wait(has('计时结束'));
+  assert.equal(await evaluate('document.querySelector("#ap-timer").textContent'), '剩余 00:00');
+  assert.equal(await evaluate('JSON.parse(localStorage.getItem(APModel.KEYS.history)).length'), 1, 'Expiry must not auto-submit');
+  assert.equal(await evaluate('document.documentElement.scrollWidth <= innerWidth'), true, 'Timer controls fit 320px');
+  await evaluate('document.querySelector(".ap-exam-navigator summary").click()');
+  assert.equal(await evaluate('document.querySelector(".ap-exam-navigator").open'), true);
+  assert.equal(await evaluate('document.documentElement.scrollWidth <= innerWidth'), true, 'Expanded navigator fits 320px');
+  await screenshot('ap-timer-expired-mobile.png');
+  await evaluate('document.querySelector("#ap-qnav-1").click()');
+  assert.equal(await evaluate('document.querySelector(".ap-exam-navigator summary").textContent'), '第 2 / 5 题');
+  await click('保存并退出');
+  await navigate('/ap/'); await wait(has('打开原创示例')); await click('打开原创示例'); await wait(has('开始练习'));
+  await evaluate('document.querySelector("#ap-practice-mode").value="free"');
+  await click('开始练习'); await wait(has('自由练习'));
+  assert.match(await evaluate('document.querySelector("#ap-timer").textContent'), /^已用 /);
+  await click('保存并退出');
+  await cmd('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
   // Failures must be visible; real questions are never silently replaced by sample content.
   await cmd('Page.removeScriptToEvaluateOnNewDocument', { identifier: stub.identifier });
   const failure = await cmd('Page.addScriptToEvaluateOnNewDocument', { source: `const originalFetch = window.fetch.bind(window); window.fetch = (input, options) => String(input) === '/api/exams/ap/sources' ? Promise.resolve(new Response('Unavailable',{status:503})) : originalFetch(input, options);` });
@@ -139,6 +190,10 @@ try {
       await wait(kind === 'mcq' ? 'document.querySelectorAll("input[type=radio]").length > 0' : 'Boolean(document.querySelector("#ap-essay"))');
       if (kind === 'mcq') assert.equal(await evaluate('document.querySelectorAll("input[type=radio]").length'), source.questions[0].options.length);
       else assert.equal(await evaluate('document.querySelector("#ap-essay").value'), '');
+      const storedClock = await evaluate('JSON.parse(localStorage.getItem(APModel.KEYS.drafts))[0].timing');
+      assert.equal(storedClock.durationSeconds, kind === 'mcq' ? 3600 : 8100);
+      assert.equal(storedClock.readingSeconds, kind === 'mcq' ? 0 : 900);
+      if (kind === 'frq') assert.equal(await evaluate('document.querySelector("#ap-timer-phase").textContent'), '阅读阶段');
       const question = source.questions[0], document = source.documents.find(doc => doc.id === question.sourceDocument);
       const expectedLinks = question.pages.map(page => '/' + document.asset + '#page=' + page);
       const actualLinks = await evaluate(`[...document.querySelectorAll('a')].map(node => node.getAttribute('href'))`);
@@ -154,7 +209,7 @@ try {
   await cmd('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Tab', code: 'Tab', windowsVirtualKeyCode: 9 });
   assert.equal(await evaluate('["A","BUTTON","INPUT","SELECT"].includes(document.activeElement.tagName)'), true);
   assert.deepEqual(exceptions, []);
-  console.log(JSON.stringify({ ok: true, browser: version.Browser, checks: ['empty catalog','synthetic MCQ scoring','FRQ no auto-grade','word count','draft navigation restore','wrong book','home synthetic exclusion','503 state','storage denied','390px overflow','reduced motion','keyboard focus','real catalog schema'], realCatalog: realCheck, realTypes, screenshots: fileURLToPath(output) }, null, 2));
+  console.log(JSON.stringify({ ok: true, browser: version.Browser, checks: ['empty catalog','synthetic MCQ scoring','FRQ no auto-grade','word count','draft navigation restore','wrong book','home synthetic exclusion','home AP links and filters','SAT-style exam layout','320/390/1440px layout','timer pause and restore','free mode','clock reload and expiry without submission','official MCQ/FRQ timing','503 state','storage denied','390px overflow','reduced motion','keyboard focus','real catalog schema'], realCatalog: realCheck, realTypes, screenshots: fileURLToPath(output) }, null, 2));
 } finally {
   await call('Target.disposeBrowserContext', { browserContextId: context }).catch(() => {});
   ws.close();

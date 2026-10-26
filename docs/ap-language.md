@@ -2,7 +2,9 @@
 
 ## 范围与入口
 
-AP 本机应用位于 `apps/ap/`，从统一首页页脚 **AP** 或 `/ap/` 进入。沿用 Study Space 的暖白背景、白色面板和共享样式变量，不改变 SAT 考试阶段。原生 HTML/CSS/JavaScript，无新增前端依赖或构建步骤。
+AP 本机应用位于 `apps/ap/`，从统一首页 **AP English Language and Composition** 独立卡片或 `/ap/` 进入；MCQ / FRQ 入口通过 `?kind=mcq|frq` 预选目录筛选。管理页面沿用 Study Space 的暖白背景、白色面板和共享样式变量。按用户要求，作答阶段参照 SAT/Bluebook 界面：浅蓝顶栏、居中计时、双阅读/作答栏、深蓝题组条、底部题号导航和翻题按钮；FRQ 左侧题目/材料、右侧编辑器。样式限定在 `body.ap-exam-active`，不改变 SAT 考试阶段或其素材。原生 HTML/CSS/JavaScript，无新增前端依赖或构建步骤。
+
+2026-10-26 通过 GitHub Git 远端获取最新主分支 `c6a7fd0`，核对 `front-end/sat/css/exam.css` 与 `front-end/sat/html/index.html`（主分支已迁目录）；本功能分支仍采用既有 `apps/` 结构，未擅自合并远端结构迁移。布局参照不等于复制 SAT 全部工具功能：未加入 SAT 的高亮/笔记、选项排除、分栏拖动或数学工具，不展示无功能占位按钮。
 
 - 按年份、题型和关键词查找本机材料。
 - MCQ 选择、提交、复盘与错题本。只有选项和独立答案键通过导入检查的题目才自动判对错；缺少答案不算错，也不进入正确率分母。
@@ -107,7 +109,24 @@ PDF 采用 `private, no-store`，按块读取，支持浏览器原生 PDF 查看
 
 ## 浏览器数据与首页统计
 
-AP 数据只使用 `school-exam-platform:ap:*` 命名空间。草稿关联题组 ID 和 `revision`，版本不一致时不能静默套用，但仍能下载旧作答。记录仅在当前浏览器/来源地址，不与其他设备同步，不等于按用户隔离；清除浏览器站点数据会删除它们。保留上限为 100 次历史、30 份草稿、2000 道错题，应及时下载重要作答；多标签页同时编辑仅提示冲突，不自动合并。可选计时在切换标签或离开作答时暂停，到时提示但不强制交卷，不是严格监考计时器。
+AP 数据只使用 `school-exam-platform:ap:*` 命名空间。草稿关联题组 ID 和 `revision`，版本不一致时不能静默套用，但仍能下载旧作答。记录仅在当前浏览器/来源地址，不与其他设备同步，不等于按用户隔离；清除浏览器站点数据会删除它们。保留上限为 100 次历史、30 份草稿、2000 道错题，应及时下载重要作答；多标签页同时编辑仅提示冲突，不自动合并。计时规则见下节；不是严格监考计时器。
+
+### 官方限时与练习时钟
+
+2026-10-26 核对 [College Board AP English Language and Composition Exam](https://apcentral.collegeboard.org/courses/ap-english-language-and-composition/exam)：
+
+| 部分 | 现行题量 | 限时 |
+| --- | --- | --- |
+| Section I — MCQ | 45 题 | 60 分钟 |
+| Section II — FRQ | 3 题 | 135 分钟，**已包含** 15 分钟阅读 |
+
+开始前可选择限时（默认）或自由练习；重练也回到设置页。纯 MCQ / FRQ 题组采用现行整部分限时，历史卷或缺题题组不因此成为现行完整模考，不按题数虚构官方限时。混合原创示例保留题组练习时长并明确非官方整卷。FRQ 前 15 分钟提示阅读，之后提示写作；不锁定编辑器，不把每篇 40 分钟称作强制官方限制。
+
+- 保存 `timing: {durationSeconds, readingSeconds, paused, anchorAt}` 与累计 `elapsedSeconds`；纯模型按毫秒时间锚点计算，后台节流后补算，不依赖 interval 调用次数。
+- 切换标签查看 PDF、刷新、关闭页面继续计时；“暂停”或“保存并退出”停止计时。暂停隐藏题目/输入，恢复草稿后需点“继续计时”。自由练习显示累计用时，同样可暂停。
+- 到时显示 00:00 与提醒，不自动提交，不删除答案；仍可继续、下载或自行提交复盘。
+- 老版无 `timing` 字段的草稿/历史继续兼容；首次恢复补时钟锚点，保留旧用时和旧限时，不追扣过去离线时间。浏览器 storage key 仍为 v1，源题库 schema 不变。
+- 时钟使用本机时间，用户调系统时钟可能影响它；不是防作弊或严格监考。多标签同时编辑仍不支持合并。
 
 首页读取 `school-exam-platform:ap:history:v1` 的完成记录：`id`、`status: "completed"`、`finished`（毫秒时间戳）、`sourceId`、`revision`、`contentMode`、`questionCount`、`answeredCount`、`correctCount`、`gradedCount`、`title`。只汇总 private 完成记录，去重并拒绝未来时间和不合理计数。FRQ 只贡献真实已作答数量，不增加已判分数量。原创示例不增加首页真实题库学习进度。SAT/TOEFL 存储与行为不受影响。
 
@@ -117,6 +136,8 @@ AP 数据只使用 `school-exam-platform:ap:*` 命名空间。草稿关联题组
 python3 -m unittest discover -s tests -v
 node tests/home-model.test.cjs
 node tests/ap-model.test.cjs
+node tests/ap-timing.test.cjs
+node tests/home-ap-entry.test.cjs
 node --check apps/ap/app.js
 node --check apps/web/app.js
 # 既有 TOEFL 回归，在 apps/toefl/ 执行：
@@ -136,4 +157,6 @@ node tests/ap-browser-smoke.mjs
 
 单元测试仅使用原创合成题、临时题库和 PDF/提取文本测试数据。验收重点：空库与示例、真实题组/原卷跳页、答题和草稿刷新恢复、错题复盘、FRQ 不自动评分、存储禁用、404/服务失败、键盘焦点、窄屏和 reduced-motion。不要将自动化单元检查描述为全量题目人工校对或所有平台启动验证。
 
-本轮 Windows 验证：Python 全量 55 项（53 通过，2 项因实际创建符号链接权限不足跳过；模拟链接拒绝测试通过）、AP 模型 16 项和首页模型检查通过，既有 TOEFL 源码检查及 38 项测试通过；Chrome 156 实际浏览器覆盖上述流程，并验证 102 个真实目录条目无契约错误。仅在当前 Windows 环境运行，未声称完成 macOS/其他浏览器测试。共用服务新增的重复 ID 拒绝仅限 AP，另有回归测试保证 SAT 同源修订文件仍可按既有方式同步。
+2026-10-26 计时与界面更新验证：AP 原有模型 16 项、新计时模型 7 项、首页入口 4 项及首页模型通过；Python 全量仍为 55 项（53 通过，2 项符号链接权限不足跳过）。Chrome 156 实测首页 1440/390/320px、MCQ/FRQ 路由筛选、SAT 风格双栏与窄屏作答、展开题号导航、暂停隐藏操作与焦点、暂停草稿恢复、自由模式、计时锚点恢复到期不自动提交，真实 MCQ/FRQ 限时及 102 条目录校验。截图只使用原创示例。尚未运行其他浏览器、读屏器或 macOS 验证。最新 `origin/main` 已迁至 `front-end/` / `back-end/`，后续 PR 合并需显式适配目录，不应直接覆盖主分支。
+
+原接入轮次 Windows 验证：Python 全量 55 项（53 通过，2 项因实际创建符号链接权限不足跳过；模拟链接拒绝测试通过）、AP 模型 16 项和首页模型检查通过，既有 TOEFL 源码检查及 38 项测试通过；Chrome 156 实际浏览器覆盖上述流程，并验证 102 个真实目录条目无契约错误。仅在当前 Windows 环境运行，未声称完成 macOS/其他浏览器测试。共用服务新增的重复 ID 拒绝仅限 AP，另有回归测试保证 SAT 同源修订文件仍可按既有方式同步。

@@ -70,11 +70,13 @@
   function setView(view) {
     if (state.view === 'practice' && view !== 'practice') {
       tick();
+      if (state.draft && state.draft.timing) state.draft.timing.paused = true;
       saveDraft();
       state.lastTick = 0;
       state.draft = null;
     }
     state.view = view;
+    document.body.classList.toggle('ap-exam-active', view === 'practice');
     state.request++;
     for (const item of nav.querySelectorAll('[data-view]')) {
       if (item.dataset.view === view) item.setAttribute('aria-current', 'page');
@@ -225,12 +227,23 @@
     const count = source.questions.length;
     const unverified = source.questions.filter(q => q.reviewStatus !== 'verified').length;
     const docOnly = !count;
+    const profile = M.timingProfile(source);
+    const modeSelect = element('select', { id: 'ap-practice-mode' },
+      element('option', { value: 'timed' }, '限时练习'), element('option', { value: 'free' }, '自由练习'));
+    const timingSetup = docOnly ? null : element('section', { class: 'ap-timing-setup', 'aria-label': '练习计时设置' },
+      element('label', { class: 'ap-field', for: 'ap-practice-mode' }, '练习模式', modeSelect),
+      element('div', {}, element('strong', {}, profile.label),
+        profile.readingSeconds ? muted('前 15 分钟显示阅读阶段，之后显示写作阶段；不会锁定写作，也不为三篇文章分别强制倒计时。') : null,
+        muted(source.contentMode === 'synthetic' ? '原创示例仅用于练习流程，不是完整模拟考试。' : '采用现行整部分限时；历史卷或缺题题组不等同于现行完整模考。'),
+        muted('切换标签、刷新或关闭页面仍继续计时；暂停或保存并退出可停止。到时提醒，不自动提交。'),
+        element('a', { href: 'https://apcentral.collegeboard.org/courses/ap-english-language-and-composition/exam', target: '_blank', rel: 'noopener noreferrer', class: 'ap-timing-source' }, 'College Board 官方限时 ↗')));
     const body = panel(heading(source.title, badge(source.contentMode)), meta(sourceName(source), labels[source.kind], count ? count + ' 道已结构化题目' : '文档阅读', source.documents.length + ' 份 PDF'),
       source.contentMode === 'synthetic' ? element('p', { class: 'ap-notice ap-notice--warning' }, '这是原创流程示例，不是 AP 真题，不计入首页真实练习统计。') : null,
       documentList(source), warnings(source),
       unverified ? muted(unverified + ' 道题尚待核对。未核实答案的选择题只保存作答，不自动判分；请以 PDF 原卷为准。') : null,
       docOnly ? muted('这份资料尚未拆分为可作答题目。可阅读原 PDF；不会虚构题量或生成答题成绩。') : muted('写作仅保存草稿与提交稿，不自动评分，也不换算 AP 1–5 分。记录仅保存在当前浏览器。'),
-      actions(...(docOnly ? [] : [button('开始练习', () => startNew(source), 'ap-button--primary')]),
+      timingSetup,
+      actions(...(docOnly ? [] : [button('开始练习', () => startNew(source, modeSelect.value === 'timed'), 'ap-button--primary')]),
         ...(drafts.length ? [button('继续草稿', () => enterPractice(source, M.restoreDraft(source, drafts[0])))] : []),
         ...(docOnly && source.documents.some(doc => ['scoring', 'sample'].includes(doc.role)) ? [button('进入资料复盘', () => renderDocumentReview(source))] : [])));
     replace(back(), body);
@@ -244,14 +257,20 @@
     if (window.crypto && typeof window.crypto.randomUUID === 'function') return 'ap-attempt:' + window.crypto.randomUUID();
     return 'ap-attempt:' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
   }
-  function startNew(source) {
+  function startNew(source, timed = true) {
     if (!source.questions.length) return;
-    enterPractice(source, M.createDraft(source, Date.now(), newId()));
+    enterPractice(source, M.createDraft(source, Date.now(), newId(), timed));
   }
   function enterPractice(source, draft) {
     if (!draft) { announce('草稿无法继续。可保留旧记录并开始新的练习。', true); return; }
     setView('practice');
     state.source = source;
+    // Legacy drafts have no clock anchor; preserve their elapsed time without charging offline time.
+    if (!draft.timing) {
+      draft.timing = { durationSeconds: source.defaultDurationSeconds, readingSeconds: 0, paused: false, anchorAt: Date.now() };
+      if (!draft.timing.durationSeconds) draft.timerEnabled = false;
+    }
+    M.advanceTiming(draft, Date.now());
     state.draft = draft;
     state.lastTick = Date.now();
     state.expiryNotified = false;
@@ -282,22 +301,21 @@
   }
   function tick() {
     if (state.view !== 'practice' || !state.draft || !state.lastTick) return;
-    const now = Date.now();
-    const seconds = Math.floor((now - state.lastTick) / 1000);
-    if (seconds > 0) {
-      state.draft.elapsedSeconds = Math.min(31536000, state.draft.elapsedSeconds + seconds);
-      state.lastTick += seconds * 1000;
-    }
+    M.advanceTiming(state.draft, Date.now());
     updateTimer();
   }
   function updateTimer() {
     const timer = document.getElementById('ap-timer');
     if (!state.draft || !timer) return;
-    timer.hidden = !state.draft.timerEnabled;
-    const duration = state.source.defaultDurationSeconds;
-    const remaining = Math.max(0, duration - state.draft.elapsedSeconds);
-    timer.textContent = duration ? '剩余 ' + M.formatTime(remaining) : '已用 ' + M.formatTime(state.draft.elapsedSeconds);
-    if (state.draft.timerEnabled && duration && remaining === 0 && !state.expiryNotified) {
+    const status = M.timerStatus(state.draft);
+    timer.textContent = state.draft.timerEnabled ? '剩余 ' + M.formatTime(status.remaining) : '已用 ' + M.formatTime(state.draft.elapsedSeconds);
+    timer.dataset.urgent = String(state.draft.timerEnabled && status.remaining <= 300);
+    const phase = document.getElementById('ap-timer-phase');
+    const phaseText = status.paused ? '已暂停 · ' + status.phase : status.phase;
+    if (phase && phase.textContent !== phaseText) phase.textContent = phaseText;
+    const pause = document.getElementById('ap-timer-pause');
+    if (pause) { pause.textContent = status.paused ? '继续计时' : '暂停'; pause.setAttribute('aria-pressed', String(status.paused)); }
+    if (status.expired && !state.expiryNotified) {
       state.expiryNotified = true;
       saveDraft();
       announce('计时结束。作答已保留，不会自动提交；你可以继续修改或提交复盘。', true);
@@ -327,29 +345,52 @@
     const source = state.source;
     const draft = state.draft;
     const q = source.questions[draft.cursor];
-    const timerCheck = element('input', { type: 'checkbox', checked: draft.timerEnabled, onchange: event => { tick(); draft.timerEnabled = event.target.checked; saveDraft(); updateTimer(); } });
-    const timer = element('span', { id: 'ap-timer', class: 'ap-timer', role: 'timer', 'aria-live': 'off', hidden: !draft.timerEnabled });
-    const toolbar = element('div', { class: 'ap-practice-toolbar' },
-      meta(element('label', { class: 'ap-check' }, timerCheck, '计时'), timer, element('span', { id: 'ap-save-state', class: 'ap-save-state', role: 'status' }, state.storageFailed ? '请保留作答备份' : '草稿已保存')),
-      actions(button('下载作答', () => downloadAnswers(draft, source)), button('保存并退出', () => { tick(); saveDraft(); showDrafts(); }), button('提交复盘', confirmSubmit, 'ap-button--primary')));
+    const timer = element('span', { id: 'ap-timer', class: 'ap-timer', role: 'timer', 'aria-live': 'off' });
+    const pause = button('暂停', () => {
+      tick();
+      draft.timing.paused = !draft.timing.paused;
+      draft.timing.anchorAt = Date.now();
+      saveDraft();
+      renderPractice();
+      document.getElementById('ap-timer-pause').focus();
+    }, '', { id: 'ap-timer-pause', 'aria-pressed': String(draft.timing.paused) });
+    const toolbar = element('header', { class: 'ap-exam-header' },
+      element('div', { class: 'ap-exam-section' }, element('h2', {}, 'AP English Language and Composition'),
+        element('span', { id: 'ap-timer-phase', class: 'ap-timer-phase', role: 'status' })),
+      element('div', { class: 'ap-exam-clock' }, timer, pause),
+      element('div', { class: 'ap-exam-tools' }, button('下载作答', () => downloadAnswers(draft, source)), button('保存并退出', () => { tick(); saveDraft(); showDrafts(); })));
     const qnav = element('nav', { class: 'ap-question-nav', 'aria-label': '题目导航' }, ...source.questions.map((question, index) =>
       element('button', { type: 'button', id: 'ap-qnav-' + index, 'aria-label': '第 ' + question.number + ' 题' + (M.answered(question, draft.answers[question.id]) ? '，已作答' : '，未作答'), 'aria-current': index === draft.cursor ? 'step' : null, 'data-answered': M.answered(question, draft.answers[question.id]), onclick: () => goQuestion(index) }, question.number)));
     const answer = q.type === 'mcq' ? renderOptions(q, draft.answers[q.id]) : renderEditor(q, draft.answers[q.id]);
-    const question = element('section', { class: 'ap-panel ap-question' }, heading('第 ' + q.number + ' 题', element('span', { class: 'ap-badge ap-badge--neutral' }, q.type === 'mcq' ? '选择题' : responseLabels[q.responseType])),
+    const isEssay = q.type === 'free-response';
+    const prompt = element('div', { class: 'ap-question-prompt' },
       q.reviewStatus !== 'verified' ? element('div', { class: 'ap-notice ap-notice--warning' }, '题目尚待核对，请对照原卷；本题不自动评分。') : null,
-      element('p', { class: 'ap-prompt', lang: 'en' }, q.prompt), questionDocuments(source, q), answer,
-      element('div', { class: 'ap-pagination' }, button('上一题', () => goQuestion(draft.cursor - 1), '', { disabled: draft.cursor === 0 }), button(draft.cursor === source.questions.length - 1 ? '提交复盘' : '下一题', draft.cursor === source.questions.length - 1 ? confirmSubmit : () => goQuestion(draft.cursor + 1), draft.cursor === source.questions.length - 1 ? 'ap-button--primary' : '')));
-    const workspace = element('div', { class: 'ap-workspace' + (!q.passage ? ' ap-workspace--single' : '') },
-      q.passage ? element('section', { class: 'ap-panel ap-reading', tabindex: '0', 'aria-label': '阅读材料' }, element('h3', {}, '阅读材料'), prose(q.passage)) : null,
-      question);
-    replace(heading(source.title, badge(source.contentMode)), toolbar, qnav, workspace);
+      element('p', { class: 'ap-prompt', lang: 'en' }, q.prompt), questionDocuments(source, q));
+    const question = element('section', { class: 'ap-panel ap-question', 'aria-label': '作答区' },
+      heading('第 ' + q.number + ' 题', element('span', { class: 'ap-badge ap-badge--neutral' }, isEssay ? responseLabels[q.responseType] : '选择题')),
+      isEssay ? null : prompt, answer);
+    const workspace = element('div', { class: 'ap-workspace' },
+      element('section', { class: 'ap-panel ap-reading', tabindex: '0', 'aria-label': isEssay ? '写作题目与阅读材料' : '阅读材料' },
+        element('h3', {}, isEssay ? responseLabels[q.responseType] : '阅读材料'),
+        isEssay ? prompt : null, q.passage ? prose(q.passage) : null,
+        !isEssay && !q.passage ? muted('本题无单独阅读材料，请阅读右侧题目。') : null), question);
+    const paused = draft.timing.paused;
+    workspace.hidden = paused;
+    const navigator = element('details', { class: 'ap-exam-navigator', hidden: paused }, element('summary', {}, '第 ' + (draft.cursor + 1) + ' / ' + source.questions.length + ' 题'), qnav);
+    const pagination = element('div', { class: 'ap-pagination', hidden: paused },
+      button('上一题', () => goQuestion(draft.cursor - 1), '', { disabled: draft.cursor === 0 }),
+      button(draft.cursor === source.questions.length - 1 ? '提交复盘' : '下一题', draft.cursor === source.questions.length - 1 ? confirmSubmit : () => goQuestion(draft.cursor + 1), 'ap-button--primary'));
+    const footer = element('footer', { class: 'ap-exam-footer' },
+      element('span', { id: 'ap-save-state', class: 'ap-save-state', role: 'status' }, state.storageFailed ? '请保留作答备份' : '草稿已保存'), navigator, pagination);
+    replace(toolbar, element('div', { class: 'ap-exam-strip' }, source.contentMode === 'synthetic' ? '原创示例 · 非官方模拟考试' : source.title),
+      paused ? element('section', { class: 'ap-paused-panel' }, heading('练习已暂停'), muted('点击“继续计时”返回作答。')) : document.createDocumentFragment(), workspace, footer);
     updateTimer();
   }
   function renderOptions(q, selected) {
     const fieldset = element('fieldset', { class: 'ap-options' }, element('legend', {}, '选择一个答案'));
     q.options.forEach((option, index) => fieldset.append(element('label', { class: 'ap-option' },
       element('input', { type: 'radio', name: 'ap-answer', value: index, checked: selected === index, onchange: () => setAnswer(q, index) }),
-      element('span', { class: 'ap-option-letter' }, String.fromCharCode(65 + index) + '.'), element('span', { class: 'ap-option-copy', lang: 'en' }, option))));
+      element('span', { class: 'ap-option-letter' }, String.fromCharCode(65 + index)), element('span', { class: 'ap-option-copy', lang: 'en' }, option))));
     fieldset.append(button('清除选择', () => {
       delete state.draft.answers[q.id];
       saveDraft();
@@ -399,7 +440,7 @@
     const counts = M.totals(source, record.answers);
     const report = panel(heading('练习复盘', badge(record.contentMode)), element('h3', {}, record.title),
       meta(formatDate(record.finished), '用时 ' + M.formatTime(record.elapsedSeconds)),
-      actions(button('下载作答', () => downloadAnswers(record, source)), button('重新练习', () => startNew(source))),
+      actions(button('下载作答', () => downloadAnswers(record, source)), button('重新练习', () => renderSourceView(source))),
       documentList(source, true), muted('仅对已作答且答案已核实的选择题计算正确率。作文与未核实题目不自动评分，不换算 AP 分数。'));
     const stats = element('div', { class: 'ap-stats' }, stat(counts.answeredCount + ' / ' + counts.questionCount, '已作答'), stat(counts.correctCount + ' / ' + counts.gradedCount, '正确 / 已判分'), stat(counts.gradedCount ? Math.round(counts.correctCount / counts.gradedCount * 100) + '%' : '—', '客观题正确率'));
     const outcomes = M.results(source, record.answers);
@@ -415,7 +456,7 @@
       const opts = element('div', { class: 'ap-options' });
       const canGrade = q.reviewStatus === 'verified' && q.correctOption !== null;
       q.options.forEach((option, index) => opts.append(element('div', { class: 'ap-option' + (canGrade && index === q.correctOption ? ' ap-option--correct' : outcome.correct === false && index === response ? ' ap-option--incorrect' : '') },
-        element('span', { class: 'ap-option-letter' }, String.fromCharCode(65 + index) + '.'),
+        element('span', { class: 'ap-option-letter' }, String.fromCharCode(65 + index)),
         element('span', { class: 'ap-option-copy', lang: 'en' }, option, index === response ? '（你的选择）' : '', canGrade && index === q.correctOption ? '（已核实答案）' : ''))));
       detail.append(opts);
       if (!canGrade) detail.append(muted('没有已核实答案，不判定对错。请对照原卷与评分资料自行核对。'));
@@ -458,7 +499,7 @@
     replace(back(context.type === 'draft' ? '草稿' : context.type === 'wrong' ? '错题本' : '练习记录', returnAction),
       panel(heading(record.title, badge(record.contentMode)), element('p', { class: 'ap-notice ap-notice--warning' }, message),
         meta('原版本 ' + record.revision.slice(0, 12), record.finished || record.updated ? formatDate(record.finished || record.updated) : ''),
-        actions(record.answers ? button('下载旧作答', () => downloadAnswers(record)) : null, source && source.questions.length ? button('以当前题集开始新练习', () => startNew(source), 'ap-button--primary') : null)),
+        actions(record.answers ? button('下载旧作答', () => downloadAnswers(record)) : null, source && source.questions.length ? button('以当前题集开始新练习', () => renderSourceView(source), 'ap-button--primary') : null)),
       ...savedAnswers.map(([id, response]) => panel(element('h3', {}, '保存的作答 · ' + id.split(':').pop()), prose(typeof response === 'string' ? response : '选项 ' + String.fromCharCode(65 + response), typeof response === 'string' ? 'en' : 'zh-CN'))));
   }
   function showWrong() {
@@ -482,7 +523,7 @@
       return;
     }
     const outcome = M.results(source, { [q.id]: record.selectedOption }).find(item => item.id === q.id);
-    replace(back('错题本', showWrong), panel(heading(record.title, badge(record.contentMode)), actions(button('重新练习题集', () => startNew(source), 'ap-button--primary'))), reviewQuestion(source, q, record.selectedOption, outcome, true));
+    replace(back('错题本', showWrong), panel(heading(record.title, badge(record.contentMode)), actions(button('重新练习题集', () => renderSourceView(source), 'ap-button--primary'))), reviewQuestion(source, q, record.selectedOption, outcome, true));
   }
   function downloadAnswers(record, source) {
     const questions = source ? new Map(source.questions.map(q => [q.id, q])) : new Map();
@@ -515,8 +556,8 @@
   });
   document.addEventListener('visibilitychange', () => {
     if (state.view !== 'practice') return;
-    if (document.hidden) { tick(); saveDraft(); state.lastTick = 0; }
-    else state.lastTick = Date.now();
+    tick();
+    saveDraft(); // Persist the wall-clock anchor; reading a PDF in another tab must not stop time.
   });
   window.addEventListener('pagehide', () => { tick(); saveDraft(); });
   window.addEventListener('beforeunload', event => {
@@ -528,7 +569,10 @@
     if (!Object.values(M.KEYS).includes(event.key)) return;
     if (state.view === 'practice') announce('另一个标签页修改了 AP 本机记录。请避免在多个标签页编辑同一草稿，并下载当前作答备份。', true);
   });
-  const initialView = new URLSearchParams(window.location.search).get('view');
+  const params = new URLSearchParams(window.location.search);
+  const initialKind = params.get('kind');
+  if (['mcq', 'frq'].includes(initialKind)) state.filters.kind = initialKind;
+  const initialView = params.get('view');
   if (initialView === 'history') showHistory();
   else if (initialView === 'wrong') showWrong();
   else if (initialView === 'drafts') showDrafts();

@@ -27,7 +27,8 @@ node scripts/build.mjs
 - 右上头像显示 `admin` 本机测试身份，无需输入密码。这不是正式登录或管理员授权；`/api/auth/session` 明确返回 `authenticated: false`、`loginEnabled: false`。
 - 学习计划可保存每日题目目标及个人计划；今日摘要显示新平台已完成题目数与每日目标。目标设置支持新 TOEFL 四科 1–6 分、每 0.5 分一档，目标总分为四科均值取最近的 0.5 分；SAT 两科各 200–800 分、每 10 分一档。目标提示支持鼠标悬浮和键盘聚焦，可查看具体分科目标。
 - 成绩报告和练习记录读取当前浏览器的新平台记录，展示完成练习数、已答题数、客观题正确率及最近记录；没有记录时显示真实空态，不预填模板进度。统计不换算官方考试分数，口语、写作和未评分题目不计入客观题正确率。
-- AP 页脚入口进入 `/ap/` 的 Language and Composition 本机练习，支持私有 PDF 题库与独立原创示例，详见 [AP 接入](ap-language.md)。跨考试 Personal Vocab 仍通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
+- 按用户最新要求，AP English Language and Composition 提升为 TOEFL / SAT 两张主卡下方的独立白色圆角入口卡；保留两张既有主卡的结构、配色和跳转。AP 主按钮进入 `/ap/`，MCQ / FRQ 分项入口分别进入 `/ap/?kind=mcq`、`/ap/?kind=frq` 并筛选对应题型；不新增营销副标题或重复的页脚 AP 导航。支持私有 PDF 题库与独立原创示例，详见 [AP 接入](ap-language.md)。跨考试 Personal Vocab 仍通过页脚保留待接入入口；个人词库弹层可跳转到已接入的 TOEFL 词汇样例功能，二者不是同一个完整产品。
+- AP 入口使用独立 `.home-ap-entry` 样式作用域、共享暖白/蓝色变量和原有图标，不引入依赖。窄屏自然换行并保持可点击区域；原生链接支持键盘、无 JavaScript 导航和减少动画偏好。
 
 ### 文案与后续交接约定
 
@@ -108,6 +109,7 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 | `/sat/` | 进入旧 SAT 引擎，支持首页功能入口参数 |
 | `/toefl/` | 仅服务通过匿名标记检查的预览文件及资源白名单 |
 | `/ap/` | AP Language 题库与练习；`?view=history` / `wrong` / `drafts` |
+| `/ap/?kind=mcq`、`/ap/?kind=frq` | 首页 AP 分项入口，进入对应题型的题库筛选 |
 | `GET /api/ap/example` | 原创合成 AP v2 示例，不计入真实题库 |
 | `GET/HEAD /question-assets/ap/<sha256>.pdf` | 仅有效 AP v2 题组引用的本机 PDF，支持单段 Range |
 
@@ -120,6 +122,7 @@ python3 scripts/migrate_sat_bank.py --source-root "/path/to/original-sat-folder"
 ```sh
 python3 -m unittest discover -s tests -v
 node tests/home-model.test.cjs
+node tests/home-ap-entry.test.cjs
 node tests/ap-model.test.cjs
 ```
 

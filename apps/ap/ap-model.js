@@ -132,6 +132,30 @@
     const minutes = Math.floor(s / 60) % 60;
     return (hours ? String(hours) + ':' : '') + String(minutes).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
   }
+  // Current section limits, not a claim about the length/completeness of historical papers.
+  function timingProfile(source) {
+    const questions = source.questions;
+    if (!questions.length) return { durationSeconds: 0, readingSeconds: 0, label: '文档阅读' };
+    if (questions.every(q => q.type === 'mcq')) return { durationSeconds: 3600, readingSeconds: 0, label: 'MCQ · 60 分钟' };
+    if (questions.every(q => q.type === 'free-response')) return { durationSeconds: 8100, readingSeconds: 900, label: 'FRQ · 135 分钟（含 15 分钟阅读）' };
+    return { durationSeconds: source.defaultDurationSeconds || 3600, readingSeconds: 0, label: '混合题组 · 练习限时（非官方整卷）' };
+  }
+  function advanceTiming(draft, now) {
+    const timing = draft.timing;
+    if (!timing || timing.paused || !timestamp(now) || now <= timing.anchorAt) return draft;
+    const seconds = Math.floor((now - timing.anchorAt) / 1000);
+    draft.elapsedSeconds = Math.min(31536000, draft.elapsedSeconds + seconds);
+    timing.anchorAt += seconds * 1000;
+    return draft;
+  }
+  function timerStatus(draft) {
+    const timing = draft.timing;
+    const duration = timing ? timing.durationSeconds : 0;
+    const remaining = Math.max(0, duration - draft.elapsedSeconds);
+    const expired = draft.timerEnabled && duration > 0 && remaining === 0;
+    return { remaining, expired, paused: Boolean(timing && timing.paused),
+      phase: !draft.timerEnabled ? '自由练习' : expired ? '时间已到' : timing && timing.readingSeconds > draft.elapsedSeconds ? '阅读阶段' : timing && timing.readingSeconds ? '写作阶段' : '限时练习' };
+  }
   function validAnswer(q, answer) {
     return q.type === 'mcq' ? integer(answer, 0, q.options.length - 1) : text(answer);
   }
@@ -168,9 +192,17 @@
     if (!timestamp(raw.started) || !timestamp(raw.updated) || raw.updated < raw.started || !integer(raw.elapsedSeconds, 0, 31536000) || !integer(raw.cursor, 0, MAX_QUESTIONS) || typeof raw.timerEnabled !== 'boolean') return null;
     const answers = cleanAnswers(raw.answers, raw.sourceId);
     if (!answers) return null;
+    let timing;
+    if (raw.timing !== undefined) {
+      const t = raw.timing;
+      if (!object(t) || !integer(t.durationSeconds, 0, 86400) || !integer(t.readingSeconds, 0, t.durationSeconds) ||
+          typeof t.paused !== 'boolean' || !timestamp(t.anchorAt) || t.anchorAt < raw.started ||
+          (raw.timerEnabled && !t.durationSeconds)) return null;
+      timing = { durationSeconds: t.durationSeconds, readingSeconds: t.readingSeconds, paused: t.paused, anchorAt: t.anchorAt };
+    }
     return { id: raw.id, sourceId: raw.sourceId, revision: raw.revision, contentMode: raw.contentMode,
       title: raw.title, started: raw.started, updated: raw.updated, elapsedSeconds: raw.elapsedSeconds,
-      cursor: raw.cursor, timerEnabled: raw.timerEnabled, answers };
+      cursor: raw.cursor, timerEnabled: raw.timerEnabled, answers, ...(timing ? { timing } : {}) };
   }
   function normalizeDraft(raw) {
     const base = normalizeAttempt(raw);
@@ -208,9 +240,11 @@
     items.sort((a, b) => (b.finished || b.updated) - (a.finished || a.updated));
     return { items: items.slice(0, LIMITS[name]), invalidCount };
   }
-  function createDraft(source, now, id) {
+  function createDraft(source, now, id, timed = false) {
+    const profile = timingProfile(source);
     const draft = normalizeDraft({ id, sourceId: source.id, revision: source.revision, contentMode: source.contentMode,
-      title: source.title, status: 'in-progress', started: now, updated: now, elapsedSeconds: 0, cursor: 0, timerEnabled: false, answers: {} });
+      title: source.title, status: 'in-progress', started: now, updated: now, elapsedSeconds: 0, cursor: 0, timerEnabled: Boolean(timed && profile.durationSeconds), answers: {},
+      timing: { durationSeconds: profile.durationSeconds, readingSeconds: profile.readingSeconds, paused: false, anchorAt: now } });
     check(draft, '无法开始练习。');
     return draft;
   }
@@ -277,7 +311,7 @@
     };
   }
   return Object.freeze({ PREFIX, KEYS, LIMITS, MAX_TEXT, validateSource, validateCatalog, normalizeSummary,
-    filterSources, pdfHref, countWords, formatTime, answered, results, totals, sourceIdentity,
+    filterSources, pdfHref, countWords, formatTime, timingProfile, advanceTiming, timerStatus, answered, results, totals, sourceIdentity,
     createDraft, restoreDraft, finish, normalizeDraft, normalizeRecord, normalizeWrong, normalizeList,
     updateWrongBook, wrongKey, createStorage });
 }));
