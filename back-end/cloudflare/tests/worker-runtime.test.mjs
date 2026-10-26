@@ -104,8 +104,9 @@ test('real workerd serves shared AP catalogue and authenticated PDF ranges',{tim
   const head=await call(mf,path,{...auth,method:'HEAD'});assert.equal(head.status,200);assert.equal(head.headers.get('Content-Length'),String(descriptor.bytes));assert.equal(head.value,'');
   const boundary=descriptor.chunkBytes?.[0]||8,start=boundary-3,end=Math.min(boundary+5,descriptor.bytes-1);
   const range=await mf.dispatchFetch(origin+path,{headers:{Cookie:admin.cookie,Range:`bytes=${start}-${end}`}});assert.equal(range.status,206);assert.equal(range.headers.get('Content-Range'),`bytes ${start}-${end}/${descriptor.bytes}`);
+  const received=Buffer.from(await range.arrayBuffer());
   const files=descriptor.chunks||[descriptor.asset];const expected=Buffer.concat(await Promise.all(files.map(file=>readFile(resolve(assets,'.'+file)))));
-  assert.deepEqual(Buffer.from(await range.arrayBuffer()),expected.subarray(start,end+1));
+  assert.deepEqual(received,expected.subarray(start,end+1));
   const {createHash}=await import('node:crypto');const full=await mf.dispatchFetch(origin+path,{headers:{Cookie:admin.cookie}});assert.equal(full.status,200);const hash=createHash('sha256');for await(const bytes of full.body)hash.update(bytes);assert.equal(hash.digest('hex'),descriptor.sha256);
   const badRange=await call(mf,path,{...auth,headers:{Range:`bytes=${descriptor.bytes}-`}});assert.equal(badRange.status,416);
 });

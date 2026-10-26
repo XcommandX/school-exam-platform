@@ -211,6 +211,8 @@ AUTH、ACCOUNTS、BANK、ASSETS、AI绑定与AI开关/模型继续沿用，不�
 
 本轮检查：AP Python **58项：55通过、3项Windows符号链接权限跳过**；AP/首页前端Node **34/34通过**，首页模型检查通过。完整构建 **8119文件 / 1,970,434,108 bytes**，单资产最大25MiB，原SAT459题集/18867题和TOEFL3744记录/17388题不变。150份PDF的所有输出块重组SHA-256、102份输出题组语义均与共享原件一致（4份PDF需要分块）。隔离HTTPS Chrome真实材料目录、MCQ/FRQ/参考PDF、最大77MB PDF完整下载哈希、暂停/恢复/到时不自动提交、双账号隔离及会话失效检查通过，无JS异常或外部请求；`wrangler deploy --dry-run`通过且绑定/AI配置保持。未使用生产账号验证登录后的流程。
 
+Cloudflare完整`npm test`首次 **143/144通过**；唯一失败为新增AP测试延迟消费Range响应时的`Body unusable`。调整测试为立即消费响应后，整个真实workerd runtime文件 **4/4通过**（含跨块Range、77MB完整SHA-256及原SAT大记录），未修改部署代码；未声称修正后完整144项单次重跑。
+
 另跑本机SAT服务24项：20通过、3项现有WinError1314符号链接权限错误、1项现有Windows WOFF2 MIME识别失败（系统注册表识别为None后回退application/octet-stream；基线代码行为相同）。未改动SAT或绕过链接保护，不声称该跨平台回归全绿。
 
 ## 官方资料
