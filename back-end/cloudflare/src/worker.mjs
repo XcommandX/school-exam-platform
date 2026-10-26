@@ -193,7 +193,7 @@ export async function handle(request,env){
   if(publicLogin&&!writing){if(current.authenticated)return redirect('/');return html(env,'/web/login.html',request,null);}
   if(!current.authenticated){
     if(path.startsWith('/api/'))fail('请先登录。',401,'session_expired');
-    if(['/', '/index.html','/account','/accounts','/sat','/sat/','/sat/html/index.html','/toefl','/toefl/','/toefl/index.html','/ap','/ap/','/ap/index.html'].includes(path))return redirect('/login?next='+encodeURIComponent(url.pathname+url.search));
+    if(['/', '/index.html','/account','/accounts','/sat','/sat/','/sat/html/index.html','/toefl','/toefl/','/toefl/index.html','/ap','/ap/','/ap/index.html','/contests','/contests/','/contests/index.html'].includes(path))return redirect('/login?next='+encodeURIComponent(url.pathname+url.search));
     return notFound();
   }
   const user=current.user,owner=request.headers.get('X-Account-ID');
@@ -270,12 +270,21 @@ export async function handle(request,env){
   if(writing)return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
   if(path==='/sat'||path==='/sat/')return redirect('/sat/html/index.html'+url.search);
   if(path==='/toefl')return redirect('/toefl/'+url.search);
+  if(path==='/contests')return redirect('/contests/'+url.search);
   if(path==='/ap')return redirect('/ap/'+url.search);
   const catalog=await catalogue(env);
+  if(path.startsWith('/api/contests/')){
+    const modes=url.searchParams.getAll('mode'),mode=modes.length?modes[0]:'private';
+    if(modes.length>1||!['private','example'].includes(mode))return json({error:'Contest mode must be private or example.'},400);
+    // Only the explicit example query selects examples. Shared real exams use
+    // private mode for backward-compatible frontend identity, never fallback.
+    const key=path+(mode==='example'?'?mode=example':'');
+    return Object.hasOwn(catalog.protectedRoutes,key)?protectedAsset(env,catalog.protectedRoutes[key],request):notFound();
+  }
   if(Object.hasOwn(catalog.htmlTemplates,path))return html(env,catalog.htmlTemplates[path],request,current);
   if(Object.hasOwn(catalog.protectedRoutes,path))return protectedAsset(env,catalog.protectedRoutes[path],request);
   if(path.startsWith('/api/'))return notFound();
-  if(path.startsWith('/sat/')||path.startsWith('/toefl/')||path.startsWith('/ap/')||path.startsWith('/question-assets/')){
+  if(path.startsWith('/ap/')||path.startsWith('/sat/')||path.startsWith('/toefl/')||/^\/contests\/(?:app\.js|model\.js|timer\.js|styles\.css|mathjax-config\.js)$/.test(path)||path.startsWith('/question-assets/')){
     // ASSETS contains an explicit build allowlist only; HTML must use injected
     // templates, and internal catalogue URLs are never available here.
     if(/\.html?$/i.test(path)||path.endsWith('/'))return notFound();

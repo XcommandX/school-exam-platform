@@ -1,5 +1,7 @@
 # 架构与整合计划
 
+> 2026-10-27 竞赛共享接入：AMC10/AMC12/AIME/USAMO 使用独立题目协议、统一会话和 `/api/contests/`。用户授权的 232 卷/4011 题/437 图与最小 MathJax 副本固定在 `back-end/question-banks/contests/`，云构建只读取 Git 跟踪清单并验证原始字节 SHA/大小；本机优先导入修订，未导入时使用共享副本。普通检查及全部限时场次结束后客户端生成练习评分，保留争议门禁，不调用 AI 或新增数据库。竞赛个人记录仍仅当前浏览器按账号隔离，不跨设备同步；现有 AUTH/ACCOUNTS/BANK/AI 绑定不变。接口与边界见 [数学竞赛](math-contests.md)，实际发布证据见 [部署记录](cloudflare-deployment.md)。
+
 > 2026-10-26 AP Lang AI 开发：复用统一会话与Cloudflare Workers AI，按官方现行三行0–6分量表建立独立AP批改边界，不套用TOEFL评分。仅在作文复盘中主动同意后调用，材料完整性核验绑定规范题组revision/题目指纹；未经核验只给有限反馈。AP作文仍不云同步，评分结果在当前复盘内存中保留并可下载，不覆盖历史。该新增功能已于2026-10-26 21:42授权部署到现有Cloudflare网站（功能提交 `449e092` 后续已推送并合入远端main），接口与验证记录见[AP AI评分](ap-ai-assessment.md)。
 
 > 2026-10-26 AP 接入：新增独立 `front-end/ap/`，本机导入采用 AP v2 协议，不改变 SAT/TOEFL 数据协议。首页 AP 蓝色大卡预留多课程扩展，当前提供英语语言与写作。沿用统一会话保护，但 AP 草稿/历史/错题仅按账号存于当前浏览器，不新增云端个人记录接口或迁移匿名记录。后续用户另授权全部已导入 AP 材料上传 GitHub 与现有网站，公网构建仅读取 `back-end/question-banks/ap/` 的 Git 跟踪资源清单与校验后的 102 题组/150 PDF，不读取本机私有目录；大 PDF 分块存储、经统一认证流式提供 GET/HEAD/Range。共享题目数据与个人记录仍分离，保留 v2 身份/修订号及既有浏览器草稿兼容。用户确认同时合入现网 TOEFL AI 分支避免回退；详见 [AP Language](ap-language.md)。
@@ -101,3 +103,13 @@ Practice Builder 现在以 `/api/sat-library/question-index` 的纯文字全库�
 ## 2026-10-24 共享题库集中目录
 
 SAT 的两份目录统一放在 `back-end/question-banks/sat-packs/`（`gengdu-offline/`、`pdf-official/`），TOEFL 保留 `back-end/question-banks/toefl/`。此调整只统一存放位置，不统一两科题目模型。服务端默认路径、SAT 维护工具及说明已同步；前端 URL、collectionId、版本、账号记录与旧活动卷不变。原目录由用户移动，未检查或重写 SAT 题库内部。
+
+## 2026-10-26 数学竞赛独立模块
+
+竞赛浏览器代码位于 `front-end/contests/`；[规范化与资源校验](../back-end/shared/contest_bank.py)提供独立题目模型，[显式导入器](../back-end/tools/contests/import_contest_bank.py)只读外部来源，将全量验证后的不可变版本保存到忽略的 `local-data/contests/`，最后原子切换当前指针。旧版本保留，导入失败不替换活动题库，不并入 SAT / TOEFL 的共享题库或活动卷。
+
+统一服务的 `/contests/`、`/api/contests/`、`/contest-assets/` 与 `/contest-vendor/mathjax/` 受现有登录门禁和路径白名单保护。默认真实题库与显式 `mode=example` 隔离；无真实题库时为空态，只有用户选择后才展示原创示例。
+
+竞赛记录是现有云端账号记录架构的明确例外：普通作答、收藏与限时状态只存在本浏览器按账号命名的 localStorage，不写 SQLite / Durable Objects。限时状态机使用绝对截止时间与多场次不可逆结束状态；Web Locks 防止同账号多个标签页覆盖快照。会话失效后停止写入，不迁移匿名历史；客户端时间仍可被用户改变，不用于正式监考。
+
+Cloudflare 构建只通过[竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)打包四份 Git 已跟踪原创示例；private 目录为空，真实题库、来源缓存、研究资料与本机 MathJax 均不导出，公式保留文本降级。此次竞赛升级尚未合入 main 或部署，不改变此前 SAT / TOEFL 已发布状态。运行、权限、历史计时证据与测试命令见 [数学竞赛](math-contests.md)。

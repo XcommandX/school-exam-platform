@@ -238,3 +238,36 @@ Cloudflare完整`npm test`首次 **143/144通过**；唯一失败为新增AP测�
 - [Durable Objects limits](https://developers.cloudflare.com/durable-objects/platform/limits/)
 - [Durable Objects pricing](https://developers.cloudflare.com/durable-objects/platform/pricing/)
 - [SQLite storage API](https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/)
+
+## 2026-10-26 竞赛适配：历史阶段（仅示例，未发布）
+
+本次新增数学竞赛构建/运行适配，不代表重新部署。**本轮没有合入 main，也没有执行 Cloudflare 发布**；上文 SAT / TOEFL 和审批注册的既有发布记录仍有效，不据此宣称新竞赛功能已在线。
+
+- `/contests/` 使用统一账号与登录门禁，静态白名单包含页面、样式、普通模型、应用、MathJax 配置及计时模型六个文件；不开放整个源码或本机目录。
+- [竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)只接受四份 Git 已跟踪且明确标记为原创示例的数据，不接受私有/外部图片资源。默认 private 目录为真实空态，`privateProblems: 0`；用户主动进入示例模式才显示四份示例。
+- 真实竞赛题库、来源缓存、下载 PDF、研究证据、账号浏览器记录与测试产物不进入云构建。既有 SAT / TOEFL 题库专项授权不授予竞赛内容发布权限。
+- 本机可选 MathJax 不导出；云目录明确返回 `mathjaxAvailable: false`，页面保留可读 LaTeX 文本并提示，不请求公共 CDN，不假称完成公式排版。
+- 即使登录的是云站账号，竞赛作答、收藏、计时和归档仍只存在当前浏览器按账号隔离的空间；不写入账号 Durable Objects，不等于跨设备云同步。
+- 定向检查入口为 `node --test --test-concurrency=1 back-end/cloudflare/tests/contest-worker.test.mjs`（仓库根目录）；还需执行现有完整 `npm test` 与 `npm run build`。检查、构建、commit / push 与部署分别记录；不能用旧版本通过数量替代本轮结果。
+
+完整使用方式、导入权限、历史赛制证据和客户端计时限制见 [数学竞赛](math-contests.md)。
+
+## 2026-10-27 竞赛完整题库与评分：已发布
+
+本节覆盖上一历史阶段的仅示例/未授权状态。用户已明确授权上传本机题目至 GitHub 并更新现有网站。
+
+- **线上地址**：https://school-exam-platform.xcommandx-school.workers.dev
+- **功能提交**：`7e28a58`，分支 `feature/contest-card-scoring-release`，已推送；[PR #20](https://github.com/XcommandX/school-exam-platform/pull/20) 尚未自动合入 main。已整合最新 main `31fe905`，不是用旧竞赛分支覆盖 AP/TOEFL AI。
+- **实际发布版本**：`1ff9814d-e260-4e10-81b5-da2b48d8f53d`，替代此前 AP AI 版本 `c9c55cb2-ae00-4bc5-88a5-a358ab66cda9`。Wrangler deploy 成功，687 个新/修改资产上传，8116 个复用。
+- 首页增加参考图风格绿色 MATH 大卡与四竞赛入口。共享 232 卷 / 4011 题 / 437 图及既有解答/参考链接，固定 MathJax 3.2.2 同源最小副本；四份原创示例 10 题独立保留。未上传来源缓存、研究 PDF、测试账号或个人记录。
+- 普通检查、限时交卷及到时结束后给出逐题与汇总练习分；2640 道 MC 的全部 13200 选项审计通过，其中 2629 可自动判分、11 道原答案来源分歧仍排除。证明题不自动批改；早年 AMC 分制依据限制在界面说明。
+- 构建清单 8803 文件、2012177280 字节；SAT 459 题集/18867 题、TOEFL 3744 记录/17388 题、AP 102 份/360 题/150 PDF 全保留。构建资源与最终前端源文件逐字节一致；675 份竞赛 payload 的 Git blob hash 与 manifest 全部一致，Git 属性明确禁止转换这些已哈希资源换行。
+- 配置与 AUTH/ACCOUNTS/BANK/AI 绑定未改名、未迁移或重置，不新增付费依赖。AP/TOEFL AI 配置和回归保持；竞赛记录仍只在当前浏览器按账号隔离。
+
+### 本轮验证及限制
+
+- 完整资产构建与 `wrangler deploy --dry-run` 成功；竞赛模型/计时 24 组、原生 Chrome 17 流程、共享 Python 7 项通过。
+- 隔离 HTTPS workerd 浏览器实际通过注册初始化/登录、Secure cookie、390/1440 首页卡、全部 232 卷 4011 题加载、同源公式和提交后 6/6 分。零运行异常、失败请求或外部请求。测试账号仅隔离实例，不在生产创建。
+- Cloudflare 排除 `auth.test.mjs` / `auth-runtime.test.mjs` 后 **125/125 通过**，含 AP/TOEFL AI、权限、共享资料、原有记录、64MiB 存储和竞赛。完整套件并非全绿完成：重型认证 runtime 构建并行负载下 60 秒超时，隔离单用例重跑约 40 秒通过；另一个既有重型认证文件长时运行主动停止。没有通过改弱密码算法或放松权限掩盖该情况。
+- **部署后生产匿名检查 53/53 通过**：首页/各模块登录跳转，竞赛题目 API 401、原始资源/脚本/MathJax 404，AP PDF 防绕过、公开首页 CSS hash 与当前构建相符、原登录 dummy verification 与初始化保护正常。
+- 未用真实用户凭据登录生产或读取学生记录；线上验证不冒充已完成生产登录后全流程。已登录答题与完整题库流程由同一构建的隔离 Cloudflare 浏览器测试覆盖。

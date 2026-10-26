@@ -23,3 +23,5 @@
 *.mp3 binary
 *.mp4 binary
 *.wav binary
+# Manifest hashes bind exact imported bytes, including SVG/JSON/vendor line endings.
+back-end/question-banks/contests/** -text whitespace=cr-at-eol

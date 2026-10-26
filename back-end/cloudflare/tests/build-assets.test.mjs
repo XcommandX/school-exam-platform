@@ -6,7 +6,7 @@ import { pathToFileURL } from 'node:url';
 import test from 'node:test';
 import { AssetWriter, MAX_ASSET_BYTES, MAX_ASSET_FILES, MAX_DATA_PART_BYTES, safeRelativePath,
   safeAssetPath, sha256, verifyBuildPaths, writeToeflData } from '../scripts/build-helpers.mjs';
-import { build, browserFiles, copyBrowserFiles, repositoryRoot, staticCatalogs, trackedFiles } from '../scripts/build.mjs';
+import { build, browserFiles, CONTEST_EXAMPLES, copyBrowserFiles, repositoryRoot, staticCatalogs, trackedFiles } from '../scripts/build.mjs';
 
 const testRoot = path.join(repositoryRoot, 'local-data/builds');
 async function temporary(t) {
@@ -40,6 +40,10 @@ async function readRoute(assets, descriptor) {
 async function anonymousRepository(root) {
   const bank = JSON.parse(await readFile(new URL('../../toefl/fixtures/anonymous-bank.json', import.meta.url), 'utf8'));
   for (const { source } of browserFiles()) await put(root, source, '/* Original anonymous browser fixture. */\n');
+  for (const name of CONTEST_EXAMPLES) await put(root, 'front-end/contests/examples/' + name,
+    await readFile(path.join(repositoryRoot, 'front-end/contests/examples', name)));
+  await put(root, 'local-data/contests/current.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
+  await put(root, 'front-end/contests/examples/unlisted.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
   await put(root, 'front-end/ap/examples/synthetic-practice.json', await readFile(new URL('../../../front-end/ap/examples/synthetic-practice.json', import.meta.url)));
   await put(root, 'local-data/question-banks/ap/private.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
   const apSet = JSON.parse(await readFile(new URL('../../../front-end/ap/examples/synthetic-practice.json', import.meta.url), 'utf8'));
@@ -115,7 +119,7 @@ test('explicit browser list has one remapped client and no wildcard/private sour
   assert.deepEqual(selected.filter(item => item.source.includes('/clients/')),
     [{ source: 'front-end/toefl/clients/cloud-client.js', target: 'web/toefl-cloud.js' }]);
   assert.equal(new Set(selected.map(item => item.target.toLowerCase())).size, selected.length);
-  assert.ok(selected.every(({ target }) => !/test|README|\.map|\.md|sources|clients/.test(target)));
+  assert.ok(selected.every(({ target }) => !/(?:^|\/)tests?(?:\/|\.)|README|\.map|\.md|sources|clients/.test(target)));
   await assert.rejects(copyBrowserFiles(root, writer, new Set()), /must be Git-tracked/);
 });
 
@@ -248,6 +252,10 @@ test('symbolic output or source parents are refused before copying or deletion',
 test('full anonymous build reuses canonical SAT readers, exact media, tracked allowlists and private boundaries', { timeout: 120_000 }, async t => {
   const root = await temporary(t), { bank, manifest, content } = await anonymousRepository(root);
   const expected = JSON.parse(await readFile(path.join(root, 'expected-sat.json'), 'utf8'));
+  const examplePath = 'front-end/contests/examples/amc10.json';
+  run('git', ['rm', '--cached', '--', examplePath], root);
+  await assert.rejects(build({ root, python }), /Source must be Git-tracked: front-end\/contests\/examples\/amc10.json/);
+  run('git', ['add', '--', examplePath], root);
   const originalLibrary = process.env.SAT_LIBRARY_ROOT;
   process.env.SAT_LIBRARY_ROOT = path.join(root, 'local-data/private-overridden-library');
   let info;
@@ -281,6 +289,20 @@ test('full anonymous build reuses canonical SAT readers, exact media, tracked al
   assert.deepEqual(routes.protectedRoutes, info.protectedRoutes);
   assert.deepEqual(routes.htmlTemplates, info.htmlTemplates);
   assert.equal(routes.htmlTemplates['/toefl/'], '/toefl/index.html');
+  assert.equal(routes.htmlTemplates['/contests/'], '/contests/index.html');
+  assert.deepEqual(JSON.parse(await readRoute(assets, info.protectedRoutes['/api/contests/catalog'])),
+    { mode: 'private', exams: [], totalProblems: 0, errors: [], mathjaxAvailable: false });
+  const examples = JSON.parse(await readRoute(assets, info.protectedRoutes['/api/contests/catalog?mode=example']));
+  assert.equal(examples.totalProblems, 10); assert.equal(examples.exams.length, 4);
+  for (const summary of examples.exams) {
+    const route = '/api/contests/exams/' + summary.id;
+    assert.equal(info.protectedRoutes[route], undefined);
+    const exam = JSON.parse(await readRoute(assets, info.protectedRoutes[route + '?mode=example']));
+    assert.equal(exam.mode, 'example'); assert.equal(exam.revision, summary.revision);
+    assert.equal(exam.problems.length, summary.problem_count);
+    assert.ok(exam.problems.every(problem => Array.isArray(problem.solutions) && problem.quality));
+  }
+  assert.deepEqual(info.contests, { exampleExams: 4, exampleProblems: 10, privateProblems: 0, privateExams: 0, assets: 0, mathjaxAvailable: false });
   for (const [name, bytes] of content) if (name !== 'bank.json') {
     assert.deepEqual(await readFile(path.join(assets, 'toefl', name)), bytes);
   }
