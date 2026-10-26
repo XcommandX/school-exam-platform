@@ -44,6 +44,16 @@ for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css', 'toefl-br
 }
 for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap', '/api/toefl/ai-config', '/api/toefl/assess', '/api/ap/example', '/api/exams/ap/sources']) await probe(path, 401);
 for (const path of ['/_catalog/routes.json', '/_catalog/toefl-ai-questions.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js', '/ap/app.js', '/ap/examples/synthetic-practice.json']) await probe(path, 404);
+// Published AP material URLs must remain protected even when exact ids/hashes are known.
+const apManifest = JSON.parse(await readFile(new URL('../../question-banks/ap/RESOURCE_MANIFEST.json', import.meta.url), 'utf8'));
+const apSetFile = apManifest.files.find(file => file.path.startsWith('sets/'));
+const apSet = JSON.parse(await readFile(new URL('../../question-banks/ap/' + apSetFile.path, import.meta.url), 'utf8'));
+await probe('/api/exams/ap/sources/' + encodeURIComponent(apSet.id), 401);
+const apPdf = apManifest.files.filter(file => file.path.endsWith('.pdf')).sort((a,b)=>b.bytes-a.bytes)[0];
+const apPdfRoute = '/question-assets/ap/' + apPdf.path.slice('assets/'.length);
+await probe(apPdfRoute, 404);
+await probe(apPdfRoute, 404, {method:'HEAD'});
+await probe(apPdfRoute, 404, {headers:{Range:'bytes=0-4'}});
 const invalidOrigin = await probe('/api/auth/bootstrap', 403, {method: 'POST', headers: {'Content-Type': 'application/json', Origin: 'https://untrusted.invalid'}, body: '{}'});
 assert.equal(JSON.parse(invalidOrigin.text).code, 'invalid_origin');
 // This known-invalid setup token can never create an account. It exercises the

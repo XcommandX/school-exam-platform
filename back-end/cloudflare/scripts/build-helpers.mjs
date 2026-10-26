@@ -103,7 +103,9 @@ export class AssetWriter {
   // streams before decoding; JSON and UTF-8 characters may cross chunk borders.
   async route(route, relative, input, contentType = 'application/json; charset=utf-8', options = {}) {
     if (typeof route !== 'string' || !route.startsWith('/')) throw new Error('An absolute route is required.');
-    safeRelativePath(route.slice(1));
+    // AP source IDs have one canonical colon; this is a URL-only exception.
+    // The independent output asset path still passes the unchanged strict gate.
+    if (!/^\/api\/exams\/ap\/sources\/ap:[a-z0-9][a-z0-9-]{0,119}$/.test(route)) safeRelativePath(route.slice(1));
     safeAssetPath(relative);
     const bytes = Buffer.isBuffer(input) ? input : Buffer.from(input);
     const common = { contentType, bytes: bytes.length, sha256: sha256(bytes) };

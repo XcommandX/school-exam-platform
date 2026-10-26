@@ -28,6 +28,7 @@ REPOSITORY = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY / 'back-end'))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
 from shared.ap_schema import AP_ASSET_RE, summarize_ap_set, validate_ap_set
+from shared.ap_shared import SHARED_AP, load_shared_ap, safe_path as safe_ap_path
 from server.platform_auth import make_auth_handler
 
 AP_PUBLIC_FILES = frozenset({'index.html', 'styles.css', 'ap-model.js', 'app.js'})
@@ -682,7 +683,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     bank_cache = {}
     bank_lock = threading.Lock()
 
-    def read_sets(exam):
+    def read_private_sets(exam):
         folder = banks / exam
         if folder.is_symlink() or not folder.resolve().is_relative_to(private):
             return [], [{'file': exam, 'error': 'Invalid private bank directory.'}]
@@ -694,7 +695,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
         with bank_lock:
             if exam == 'ap' and signature is not None and bank_cache.get(exam, (None,))[0] == signature:
                 return bank_cache[exam][1]
-            found, errors, seen = [], [], set()
+            found, errors, seen, ambiguous = [], [], {}, set()
             for path in paths:
                 if path.is_symlink() or not path.is_file():
                     continue
@@ -709,14 +710,65 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     # Keep v1/SAT's existing multi-file import semantics unchanged.
                     if exam == 'ap':
                         if document['id'] in seen:
+                            if seen[document['id']] != document:
+                                ambiguous.add(document['id'])
                             raise ValueError('Duplicate question set id.')
-                        seen.add(document['id'])
+                        seen[document['id']] = document
                     found.append((path, document))
                 except (OSError, ValueError, KeyError, TypeError) as error:
                     errors.append({'file': path.name, 'error': str(error)})
+            if exam == 'ap':
+                found = [row for row in found if row[1]['id'] not in ambiguous]
+                errors.extend({'file': 'ap', 'id': identity, 'error': 'Ambiguous private AP set id.'}
+                              for identity in sorted(ambiguous))
             if exam == 'ap' and signature is not None:
                 bank_cache[exam] = (signature, (found, errors))
             return found, errors
+
+    shared_ap_cache = {}
+    shared_ap_lock = threading.Lock()
+
+    def read_shared_ap_sets():
+        base = root / SHARED_AP
+        if not base.exists() and not base.is_symlink():
+            return [], []
+        try:
+            # Include directories, ctime/inode and all files, not only the manifest.
+            # Revalidate hashes whenever any member changes; cache only successes.
+            safe_ap_path(root, SHARED_AP)
+            paths = [base, *base.rglob('*')]
+            signature = tuple((p.relative_to(root).as_posix(), p.lstat().st_size,
+                               p.lstat().st_mtime_ns, p.lstat().st_ctime_ns,
+                               p.lstat().st_ino, p.is_symlink()) for p in sorted(paths))
+            with shared_ap_lock:
+                if shared_ap_cache.get('signature') != signature:
+                    loaded = load_shared_ap(root)
+                    set_files = [f['path'] for f in loaded['files'] if f['path'].startswith('sets/')]
+                    shared_ap_cache.update(signature=signature,
+                                           rows=[(base / name, doc) for name, doc in zip(set_files, loaded['sets'])])
+                return shared_ap_cache['rows'], []
+        except (OSError, ValueError, KeyError, TypeError):
+            return [], [{'file': 'shared-ap', 'error': 'Shared AP library failed integrity validation.'}]
+
+    def read_sets(exam):
+        private_rows, errors = read_private_sets(exam)
+        if exam != 'ap':
+            return private_rows, errors
+        shared_rows, shared_errors = read_shared_ap_sets()
+        errors = [*errors, *shared_errors]
+        if shared_errors:
+            return [], errors  # Do not hide a broken shared release with a private fallback.
+        merged = {doc['id']: (path, doc) for path, doc in shared_rows}
+        ambiguous = {error['id'] for error in errors if 'id' in error}
+        for path, document in private_rows:
+            identity = document['id']
+            previous = merged.get(identity)
+            if previous and (previous[1]['revision'] != document['revision'] or previous[1] != document):
+                ambiguous.add(identity)
+                errors.append({'file': path.name, 'error': 'Ambiguous shared/private AP set id.'})
+            elif previous is None:
+                merged[identity] = (path, document)
+        return [row for identity, row in merged.items() if identity not in ambiguous], errors
 
     def summary(document):
         if document.get('exam') == 'ap':
@@ -752,10 +804,15 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             if not AP_ASSET_RE.fullmatch(asset) or not any(
                     source['asset'] == asset for _, doc in rows for source in doc['documents']):
                 return self.reply(404, {'error': 'Document not found.'})
-            path = private / asset
-            if (not path.is_file() or path.is_symlink()
-                    or any(p.is_symlink() for p in path.parents if p != private.parent)
-                    or not path.resolve().is_relative_to(private.resolve())):
+            shared_reference = any(
+                path.is_relative_to(root / SHARED_AP) and any(source['asset'] == asset for source in doc['documents'])
+                for path, doc in rows)
+            try:
+                path = (safe_ap_path(root, SHARED_AP + '/assets/' + asset.split('/')[-1])
+                        if shared_reference else safe_ap_path(private, asset))
+                if not path.is_file():
+                    raise ValueError('Missing PDF.')
+            except (OSError, ValueError):
                 return self.reply(404, {'error': 'Document not found.'})
             try:
                 with path.open('rb') as stream:

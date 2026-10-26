@@ -125,6 +125,38 @@ try {
   await navigate('/ap/');
   await waitExpression('window.PlatformAuth?.active && document.querySelector("#ap-content[aria-busy=false]")','AP guarded catalogue');
   assert.equal(await evaluate('PlatformAuth.user.id'),aId);
+  const shared = await evaluate(`PlatformAuth.api('/api/exams/ap/sources')`);
+  assert.equal(shared.sources.length,102); assert.equal(shared.errors.length,0);
+  assert.equal(shared.sources.reduce((n,s)=>n+s.questionCount,0),360);
+  assert.equal(await evaluate('document.querySelectorAll(".ap-source").length'),102);
+  log('complete shared AP catalogue', {sources:shared.sources.length,questions:360});
+  for (const kind of ['mcq','frq','reference']) {
+    const source = shared.sources.find(s=>s.kind===kind && (kind==='reference'||s.questionCount>0)); assert.ok(source);
+    const loaded = await evaluate(`PlatformAuth.api('/api/exams/ap/sources/'+encodeURIComponent(${JSON.stringify(source.id)}))`);
+    assert.equal(loaded.id,source.id); assert.ok(loaded.documents.length);
+    const pdf = '/'+loaded.documents[0].asset;
+    const pdfResult = await evaluate(`(async()=>{const r=await fetch(${JSON.stringify(pdf)},{headers:{Range:'bytes=0-4'}});return {status:r.status,type:r.headers.get('Content-Type'),text:await r.text()};})()`);
+    assert.equal(pdfResult.status,206);assert.equal(pdfResult.type,'application/pdf');assert.equal(pdfResult.text,'%PDF-');
+    await evaluate(`([...document.querySelectorAll('.ap-source')].find(e=>e.querySelector('h3').textContent===${JSON.stringify(source.title)})).querySelector('button').click()`);
+    await waitExpression('document.querySelector("#ap-content[aria-busy=false]") && [...document.querySelectorAll("a[href]")].some(a=>a.pathname.startsWith("/question-assets/ap/"))','real '+kind+' material');
+    if (kind!=='reference') {
+      await clickText('开始练习');
+      await waitExpression('document.querySelector("#ap-timer")','real '+kind+' practice');
+      await fit(); await screenshot('shared-'+kind);
+      await clickText('保存并退出');
+    }
+    log('shared material and PDF range',kind);
+    await navigate('/ap/');
+    await waitExpression('document.querySelectorAll(".ap-source").length===102','shared catalogue return');
+  }
+  const manifest = JSON.parse(await readFile(resolve(root,'../question-banks/ap/RESOURCE_MANIFEST.json'),'utf8'));
+  const largest = manifest.files.filter(f=>f.path.endsWith('.pdf')).sort((a,b)=>b.bytes-a.bytes)[0];
+  const largeRoute = '/question-assets/ap/'+basename(largest.path);
+  const largeResult = await evaluate(`(async()=>{const r=await fetch(${JSON.stringify(largeRoute)});const b=await r.arrayBuffer();const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',b)),n=>n.toString(16).padStart(2,'0')).join('');return {status:r.status,bytes:b.byteLength,digest};})()`);
+  assert.equal(largeResult.status,200);assert.equal(largeResult.bytes,largest.bytes);assert.equal(largeResult.digest,largest.sha256);
+  log('largest chunked PDF full browser download SHA-256', {bytes:largest.bytes,sha256:largest.sha256});
+  // Real-material smoke drafts must not interfere with the isolated demo assertions below.
+  await evaluate(`localStorage.removeItem('school-exam-platform:account:'+PlatformAuth.user.id+':ap:drafts:v1')`);
   await evaluate(`localStorage.setItem('school-exam-platform:ap:drafts:v1','[{"anonymous":"never migrate"}]')`);
   await clickText('打开原创示例');
   await waitExpression('document.querySelector("#ap-practice-mode")','demo source');

@@ -38,7 +38,7 @@
   const panel = (...children) => element('section', { class: 'ap-panel' }, ...children);
   const meta = (...children) => element('div', { class: 'ap-meta' }, ...children.map(value => typeof value === 'string' ? element('span', {}, value) : value));
   const actions = (...children) => element('div', { class: 'ap-actions' }, ...children);
-  const badge = mode => element('span', { class: 'ap-badge' + (mode === 'synthetic' ? ' ap-badge--synthetic' : '') }, mode === 'synthetic' ? '原创示例 · 不计入真实题库' : '本机私有题库');
+  const badge = mode => element('span', { class: 'ap-badge' + (mode === 'synthetic' ? ' ap-badge--synthetic' : '') }, mode === 'synthetic' ? '原创示例 · 不计入真实题库' : 'AP 材料');
   const muted = message => element('p', { class: 'ap-muted' }, message);
   const prose = (message, lang = 'en') => element('p', { class: 'ap-text', lang }, message);
   const formatDate = value => new Intl.DateTimeFormat('zh-CN', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
@@ -143,7 +143,7 @@
       element('label', { class: 'ap-field' }, '搜索', search),
       selectField('年份', 'year', [['', '全部年份'], ...years.map(year => [year, year])]),
       selectField('类型', 'kind', [['', '全部类型'], ...Object.entries(labels)]),
-      selectField('来源', 'contentMode', [['', '全部来源'], ['private', '本机私有题库'], ['synthetic', '原创示例']]));
+      selectField('来源', 'contentMode', [['', '全部来源'], ['private', 'AP 材料'], ['synthetic', '原创示例']]));
     replace(heading('题库', actions(button('刷新', () => showCatalog(true)), button('打开原创示例', () => openSource(null, 'synthetic')))),
       state.catalogErrors ? element('div', { class: 'ap-notice ap-notice--warning', role: 'status' }, state.catalogErrors + ' 份题库记录暂不可用；其余题集仍可使用。') : document.createDocumentFragment(),
       filters, element('div', { id: 'ap-catalog-results', 'aria-live': 'polite' }));
@@ -154,9 +154,9 @@
     if (!container) return;
     const sources = M.filterSources(state.catalog, state.filters);
     const real = state.catalog.filter(source => source.contentMode === 'private');
-    const count = element('p', { class: 'ap-count' }, real.length + ' 份私有题集 · ' + real.reduce((sum, source) => sum + source.questionCount, 0) + ' 道已结构化题目 · ' + real.reduce((sum, source) => sum + source.documentCount, 0) + ' 份 PDF');
+    const count = element('p', { class: 'ap-count' }, real.length + ' 份材料 · ' + real.reduce((sum, source) => sum + source.questionCount, 0) + ' 道已结构化题目 · ' + real.reduce((sum, source) => sum + source.documentCount, 0) + ' 份 PDF');
     if (!state.catalog.length) {
-      container.replaceChildren(count, empty('本机题库为空', '尚未载入私有 AP 资料。可打开原创示例测试选择题与写作流程；示例不计入真实题库或首页练习统计。', button('打开原创示例', () => openSource(null, 'synthetic'), 'ap-button--primary')));
+      container.replaceChildren(count, empty('题库为空', '尚未载入 AP 材料。可打开原创示例测试选择题与写作流程；示例不计入真实题库或首页练习统计。', button('打开原创示例', () => openSource(null, 'synthetic'), 'ap-button--primary')));
       return;
     }
     if (!sources.length) {
@@ -534,7 +534,7 @@
   function downloadAnswers(record, source) {
     const questions = source ? new Map(source.questions.map(q => [q.id, q])) : new Map();
     const lines = [record.title, 'AP Language and Composition', '来源：' + record.sourceId, '版本：' + record.revision,
-      '内容：' + (record.contentMode === 'synthetic' ? '原创示例' : '本机私有题库'), '状态：' + record.status,
+      '内容：' + (record.contentMode === 'synthetic' ? '原创示例' : 'AP 材料'), '状态：' + record.status,
       '更新时间：' + new Date(record.finished || record.updated).toISOString(), ''];
     for (const [id, response] of Object.entries(record.answers)) {
       const q = questions.get(id);

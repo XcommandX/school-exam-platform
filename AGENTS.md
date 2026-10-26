@@ -15,7 +15,7 @@
 
 - 用户已明确授权 AP 合入主分支并更新现有 Cloudflare 网站；发现现网 TOEFL AI 六分制分支尚未合入 main 后，用户另确认一并合入、保留现网 AI 功能，不新增付费依赖。
 - 首页 AP 已为独立蓝色大卡，标题固定为 `AP`，下设“英语语言与写作”，保留未来课程扩展空间；Personal Vocab 仍为占位。AP 作答页参照获授权 SAT/Bluebook 风格，但不改 SAT 受保护考试流程。
-- AP 代码在 `front-end/ap/`，导入工具在 `back-end/tools/ap/`，协议验证在 `back-end/shared/ap_schema.py`。真实材料仍在忽略的 `local-data/question-banks/ap/` 与 `local-data/question-assets/ap/`，不上传 GitHub 或公网；公网只部署原创示例和真实空目录。
+- AP 代码在 `front-end/ap/`，导入工具在 `back-end/tools/ap/`，协议验证在 `back-end/shared/ap_schema.py`。2026-10-26 后续用户明确选择“上传网站并提交 GitHub”，授权此前已导入的 102 份材料及关联 150 份 PDF 复制至 `back-end/question-banks/ap/` 并推送 main、发布现有 Cloudflare 网站；该授权覆盖此前“仅本机”限制。共享副本由 `RESOURCE_MANIFEST.json` 记录大小/SHA-256，仅含题组与引用 PDF，不含账号、作答、导入报告、原始压缩包或此前跳过的 19 份附件 PDF。网站访问继续要求登录；GitHub 仓库公开时这些共享副本也会公开。
 - AP 页面/API 受统一会话保护，草稿、历史、错题仅在浏览器按当前账号隔离，不自动迁移匿名记录，不声称 AP 云端同步。官方 MCQ 60 分钟、FRQ 135 分钟（含15分钟阅读），暂停/自由练习/到时不自动交卷；详情见 `docs/ap-language.md`。
 - 已授权原有 TOEFL Workers AI 保留，部署绑定、账号和记录不重置。实际发布状态见 `docs/cloudflare-deployment.md`，旧条目“不接AI/AP待接入”不再描述当前 Cloudflare 功能。
 

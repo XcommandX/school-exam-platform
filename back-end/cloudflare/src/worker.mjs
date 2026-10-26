@@ -25,6 +25,8 @@ function safePath(url){
   if(account){try{return '/api/sat/'+account[1]+'/'+identity(decodeURIComponent(account[2]));}catch{return null;}}
   const source=url.pathname.match(/^\/api\/exams\/sat\/sources\/([^/]+)$/);
   if(source){try{const id=decodeURIComponent(source[1]);return /^sat:[A-Za-z0-9._-]+$/.test(id)?'/api/exams/sat/sources/'+id:null;}catch{return null;}}
+  const apSource=url.pathname.match(/^\/api\/exams\/ap\/sources\/([^/]+)$/);
+  if(apSource){try{const id=decodeURIComponent(apSource[1]);return /^ap:[a-z0-9][a-z0-9-]{0,119}$/.test(id)?'/api/exams/ap/sources/'+id:null;}catch{return null;}}
   let path;try{path=decodeURIComponent(url.pathname);}catch{return null;}
   if(/[%:\\\x00-\x1f\x7f]/.test(path)||path.split('/').some(s=>s==='.'||s==='..'||/[ .]$/.test(s))||path.includes('//'))return null;
   return path;
@@ -66,7 +68,41 @@ async function asset(env,path,request){
   const headers=new Headers(request.headers);headers.delete('Cookie');headers.delete('Authorization');headers.delete('If-None-Match');headers.delete('If-Modified-Since');
   return env.ASSETS.fetch(new Request(url,{method:request.method==='HEAD'?'HEAD':'GET',headers}));
 }
+async function pdfAsset(env,record,request){
+  const total=record.bytes,etag='"'+record.sha256+'"';
+  const h=new Headers({'Content-Type':'application/pdf','Accept-Ranges':'bytes','Content-Length':String(total),ETag:etag});
+  let start=0,end=total-1,status=200;
+  const range=request.headers.get('Range'),ifRange=request.headers.get('If-Range');
+  if(request.method!=='HEAD'&&range&&(!ifRange||ifRange===etag)){
+    const match=/^bytes=(\d*)-(\d*)$/.exec(range);
+    if(!match||(!match[1]&&!match[2]))return new Response(null,{status:416,headers:{...Object.fromEntries(h),'Content-Range':`bytes */${total}`,'Content-Length':'0'}});
+    if(match[1]){start=Number(match[1]);end=match[2]?Math.min(Number(match[2]),total-1):total-1;}
+    else {const suffix=Number(match[2]);start=Math.max(0,total-suffix);}
+    if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>end||start>=total)
+      return new Response(null,{status:416,headers:{...Object.fromEntries(h),'Content-Range':`bytes */${total}`,'Content-Length':'0'}});
+    status=206;h.set('Content-Range',`bytes ${start}-${end}/${total}`);h.set('Content-Length',String(end-start+1));
+  }
+  if(request.method==='HEAD')return new Response(null,{headers:h});
+  const names=record.chunks||[record.asset],sizes=record.chunkBytes||[total];
+  let offset=0;const selected=[];
+  for(let i=0;i<names.length;i++){if(offset<=end&&offset+sizes[i]>start)selected.push({name:names[i],offset});offset+=sizes[i];}
+  const requestHeaders=new Headers(request.headers);requestHeaders.delete('Range');requestHeaders.delete('If-Range');
+  const fullRequest=new Request(request,{headers:requestHeaders});let index=0,reader,position=0;
+  const stream=new ReadableStream({async pull(controller){
+    try{while(true){
+      if(!reader){if(index>=selected.length){controller.close();return;}const item=selected[index++];position=item.offset;
+        const response=await asset(env,item.name,fullRequest);if(!response.ok||!response.body)throw new Error('Incomplete PDF asset');reader=response.body.getReader();}
+      const part=await reader.read();if(part.done){reader.releaseLock();reader=null;continue;}
+      const next=position+part.value.length,from=Math.max(0,start-position),to=Math.min(part.value.length,end+1-position);position=next;
+      if(to>from)controller.enqueue(part.value.subarray(from,to));
+      if(position>end){await reader.cancel();reader=null;controller.close();return;}
+      if(to>from)return;
+    }}catch(error){await reader?.cancel().catch(()=>{});controller.error(error);}
+  },async cancel(){await reader?.cancel();}});
+  return new Response(stream,{status,headers:h});
+}
 async function protectedAsset(env,record,request){
+  if(record.byteRanges&&record.contentType==='application/pdf')return pdfAsset(env,record,request);
   if(record.asset){const res=await asset(env,record.asset,request);if(!res.ok)return res;const h=new Headers(res.headers);h.set('Content-Type',record.contentType);return new Response(res.body,{status:record.status||res.status,headers:h});}
   const h={'Content-Type':record.contentType,'Content-Length':String(record.bytes)};
   const chunkHeaders=new Headers(request.headers);chunkHeaders.delete('Range');chunkHeaders.delete('If-Range');

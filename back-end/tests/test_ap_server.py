@@ -154,6 +154,18 @@ class APServerTests(unittest.TestCase):
         finally:
             path.write_bytes(before)
 
+    def test_conflicting_private_ap_source_ids_are_not_served(self):
+        duplicate = self.bank.with_name('zzz-conflict.json')
+        changed = dict(self.doc, revision='c' * 64)
+        duplicate.write_text(json.dumps(changed), encoding='utf-8')
+        try:
+            listing = json.loads(self.request('/api/exams/ap/sources')[1])
+            self.assertEqual(listing['sources'], [])
+            self.assertTrue(listing['errors'])
+            self.assertEqual(self.request(self.asset_route)[0], 404)
+        finally:
+            duplicate.unlink()
+
     def test_invalid_pdf_and_missing_manifest(self):
         self.asset.write_bytes(b'<script>not a PDF</script>')
         self.assertEqual(self.request(self.asset_route)[0], 404)
@@ -170,6 +182,93 @@ class APServerTests(unittest.TestCase):
             self.asset.symlink_to(target)
         except OSError:
             self.skipTest('Symlink privileges are not available on this host.')
+        self.assertEqual(self.request(self.asset_route)[0], 404)
+
+
+class SharedAPServerTests(unittest.TestCase):
+    request = APServerTests.request
+
+    def setUp(self):
+        from test_ap_shared import write_shared, PDF
+        from shared.ap_shared import SHARED_AP
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        self.doc = write_shared(self.root)
+        self.base = self.root / SHARED_AP
+        self.pdf_bytes = PDF
+        self.asset_route = '/' + self.doc['documents'][0]['asset']
+        # Explicit private_root continues to work without suppressing shared AP.
+        self.private = self.root / 'custom-private'
+        self.server = create_server(self.root, 0, private_root=self.private)
+        self.server.auth.store.create_user('shared-ap-student', 'original-fixture-password')
+        token, _ = self.server.auth.store.login('shared-ap-student', 'original-fixture-password')
+        self.cookie = 'study_session=' + token
+        self.port = self.server.server_port
+        self.worker = threading.Thread(target=self.server.serve_forever, daemon=True)
+        self.worker.start()
+
+    def tearDown(self):
+        self.server.shutdown()
+        self.server.server_close()
+        self.worker.join()
+        self.temporary.cleanup()
+
+    def test_shared_catalog_detail_pdf_and_auth(self):
+        listing = json.loads(self.request('/api/exams/ap/sources')[1])
+        self.assertEqual(len(listing['sources']), 1)
+        self.assertEqual(listing['errors'], [])
+        detail = json.loads(self.request('/api/exams/ap/sources/' + self.doc['id'])[1])
+        self.assertEqual(detail, self.doc)
+        self.assertEqual(self.request(self.asset_route)[:2], (200, self.pdf_bytes))
+        self.assertEqual(self.request(self.asset_route, headers={'Range': 'bytes=0-4'})[:2], (206, b'%PDF-'))
+        self.assertEqual(self.request(self.asset_route, method='HEAD')[:2], (200, b''))
+        self.assertEqual(self.request(self.asset_route, headers={'Cookie': ''})[0], 404)
+        self.assertEqual(self.request('/api/exams/ap/sources', headers={'Cookie': ''})[0], 401)
+        self.assertEqual(self.request('/back-end/question-banks/ap/RESOURCE_MANIFEST.json')[0], 404)
+        self.assertEqual(json.loads(self.request('/api/exams/sat/sources')[1])['sources'], [])
+
+    def test_identical_shared_private_sets_deduplicated(self):
+        bank = self.private / 'question-banks/ap/local-copy.json'
+        bank.write_text(json.dumps(self.doc), encoding='utf-8')
+        listing = json.loads(self.request('/api/exams/ap/sources')[1])
+        self.assertEqual(len(listing['sources']), 1)
+        self.assertEqual(listing['errors'], [])
+        # Shared PDF wins, so a corrupt/missing private copy cannot override it.
+        asset = self.private / self.doc['documents'][0]['asset']
+        asset.parent.mkdir(parents=True)
+        asset.write_bytes(b'private corrupt PDF')
+        self.assertEqual(self.request(self.asset_route)[:2], (200, self.pdf_bytes))
+
+    def test_ambiguous_shared_private_id_is_not_served(self):
+        self.doc['revision'] = 'b' * 64
+        bank = self.private / 'question-banks/ap/local-conflict.json'
+        bank.write_text(json.dumps(self.doc), encoding='utf-8')
+        listing = json.loads(self.request('/api/exams/ap/sources')[1])
+        self.assertEqual(listing['sources'], [])
+        self.assertTrue(listing['errors'])
+        self.assertEqual(self.request('/api/exams/ap/sources/' + self.doc['id'])[0], 404)
+        self.assertEqual(self.request(self.asset_route)[0], 404)
+
+    def test_conflicting_private_copies_cannot_fall_back_to_shared(self):
+        folder = self.private / 'question-banks/ap'
+        (folder / 'one.json').write_text(json.dumps(self.doc), encoding='utf-8')
+        (folder / 'two.json').write_text(json.dumps(dict(self.doc, revision='d' * 64)), encoding='utf-8')
+        listing = json.loads(self.request('/api/exams/ap/sources')[1])
+        self.assertEqual(listing['sources'], [])
+        self.assertTrue(listing['errors'])
+        self.assertEqual(self.request(self.asset_route)[0], 404)
+
+    def test_shared_integrity_cache_invalidated_by_pdf_or_extra_file(self):
+        self.assertEqual(self.request(self.asset_route)[0], 200)
+        pdf = next((self.base / 'assets').glob('*.pdf'))
+        pdf.write_bytes(self.pdf_bytes + b'changed')
+        self.assertEqual(self.request(self.asset_route)[0], 404)
+        listing = json.loads(self.request('/api/exams/ap/sources')[1])
+        self.assertEqual(listing['sources'], [])
+        self.assertTrue(listing['errors'])
+        pdf.write_bytes(self.pdf_bytes)
+        self.assertEqual(self.request(self.asset_route)[0], 200)
+        (self.base / 'account-data.json').write_text('private sentinel')
         self.assertEqual(self.request(self.asset_route)[0], 404)
 
 
