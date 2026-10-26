@@ -215,6 +215,14 @@ Cloudflare完整`npm test`首次 **143/144通过**；唯一失败为新增AP测�
 
 另跑本机SAT服务24项：20通过、3项现有WinError1314符号链接权限错误、1项现有Windows WOFF2 MIME识别失败（系统注册表识别为None后回退application/octet-stream；基线代码行为相同）。未改动SAT或绕过链接保护，不声称该跨平台回归全绿。
 
+### 材料实际发布结果（2026-10-26 20:29，Asia/Shanghai）
+
+- 授权材料与实现提交 `6f311fb` 已上传 `feature/ap-shared-materials`，快进合入 `main`；测试修正与验证记录 `639ea0d` 同样已推送 `main`，无强推。GitHub接受全部150份PDF，仅对最大73.63MiB文件给出50MiB建议阈值警告，非失败；不删减原件。
+- 切换main后重新核对102题组/150PDF及前端产物一致，无需因仅测试/文档变动重建。现网站仍为 <https://school-exam-platform.xcommandx-school.workers.dev>，AP入口 <https://school-exam-platform.xcommandx-school.workers.dev/ap/>，登录后使用。
+- `npm run deploy`成功，261项新增/变更资产上传、7858项复用。当前版本 **`582e23d2-d49e-41f2-8861-eefa2c540b19`**，创建于`2026-10-26T12:29:41.706Z`，部署列表确认 **100%流量**。AUTH/ACCOUNTS/BANK/AI/ASSETS及AI配置保持，无生产账号/记录重置或新迁移。
+- 公网匿名检查 **42/42通过**：AP详情API401、真实PDF完整GET/HEAD/Range均404，内部清单不可访问，原SAT/TOEFL/AI权限与公共文件hash检查通过；无效初始化被拒绝、随机不存在账号经真实密码校验返回401。仅产生正常失败登录审计/限流状态，不建立生产测试账号。
+- 生产登录后的材料下载/练习未用真实账号再测；相同发布产物的隔离HTTPS Chrome已验证102材料目录、真实MCQ/FRQ/参考PDF和最大文件完整SHA-256。没有调用生产AI，不宣称已完成逐页PDF校对/OCR、版权或隐私审阅。协作者需拉取最新`main`再开新分支。
+
 ## 官方资料
 
 - [Workers limits](https://developers.cloudflare.com/workers/platform/limits/)
