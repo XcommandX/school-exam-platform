@@ -31,7 +31,17 @@ test('full Worker security boundary, authentication, account isolation and API c
   for(const path of ['/_catalog/routes.json','/%5fcatalog/routes.json','/back-end/server/platform_auth.py','/.git/config','/local-data/auth/accounts.db','/toefl/audio/not-real.mp3'])assert.equal((await call(mf,path)).status,404,path);
   assert.equal((await call(mf,'/')).status,302);assert.equal((await call(mf,'/api/sat/bootstrap')).status,401);
   assert.equal((await call(mf,'/login')).status,200);assert.equal((await call(mf,'/web/styles.css')).status,200);
+  for(const path of ['/ap','/ap/','/ap/index.html'])assert.equal((await call(mf,path)).status,302,path);
+  for(const path of ['/api/ap/example','/api/exams/ap/sources'])assert.equal((await call(mf,path)).status,401,path);
+  assert.equal((await call(mf,'/ap/examples/synthetic-practice.json')).status,404);
   const admin=await setup(mf),owner=admin.value.user.id,auth={cookie:admin.cookie,user:owner};
+  const apHTML=await call(mf,'/ap/',auth);assert.equal(apHTML.status,200);assert.match(apHTML.value,/window.PlatformSession=/);assert.match(apHTML.value,/platform-auth.js/);
+  assert.equal((await call(mf,'/ap?kind=frq',auth)).headers.get('Location'),'/ap/?kind=frq');
+  assert.equal((await call(mf,'/ap/app.js',auth)).status,200);
+  const apCatalog=await call(mf,'/api/exams/ap/sources',auth);assert.equal(apCatalog.status,200);assert.equal(apCatalog.value.schemaVersion,2);assert.ok(Array.isArray(apCatalog.value.sources));
+  const apExample=await call(mf,'/api/ap/example',auth);assert.equal(apExample.status,200);assert.equal(apExample.value.contentMode,'synthetic');assert.deepEqual(apExample.value.documents,[]);
+  assert.equal((await call(mf,'/api/ap/example',{...auth,user:'another-account'})).status,409);
+  assert.equal((await call(mf,'/api/exams/ap/sources/local-private',auth)).status,404);
   assert.equal('token'in admin.value,false);assert.match(admin.headers.get('Set-Cookie'),/HttpOnly; Secure; SameSite=Strict/);
   assert.match(admin.headers.get('Cache-Control'),/no-store/);
   assert.equal((await call(mf,'/api/auth/bootstrap',{method:'POST',body:{setupToken,username:'other',password:'password'}})).status,409);
@@ -80,6 +90,25 @@ test('real workerd stores and streams a 62MiB SAT record across SQLite row limit
   assert.equal(response.status,200,await response.text());
   const result=await mf.dispatchFetch(origin+'/api/sat/attempts/big',{headers:{Cookie:admin.cookie}});assert.equal(result.status,200);
   const parser=new ProjectedJSON({select:satProjection});for await(const chunk of result.body)parser.write(chunk);assert.equal(parser.end().value.id,'big');assert.ok(parser.captureEnd-parser.captureStart>60*1024*1024);
+});
+test('real workerd serves shared AP catalogue and authenticated PDF ranges',{timeout:60000},async t=>{
+  const mf=await runtime();t.after(()=>mf.dispose());const admin=await setup(mf),auth={cookie:admin.cookie};
+  const sources=await call(mf,'/api/exams/ap/sources',auth);assert.equal(sources.status,200);assert.ok(sources.value.sources.length>0);
+  const selected=sources.value.sources.find(source=>source.documentCount>0);assert.ok(selected);
+  const set=await call(mf,'/api/exams/ap/sources/'+encodeURIComponent(selected.id),auth);assert.equal(set.status,200);assert.equal(set.value.id,selected.id);
+  const catalog=JSON.parse(await readFile(resolve(assets,'_catalog/routes.json'),'utf8'));
+  const routes=Object.entries(catalog.protectedRoutes).filter(([path])=>/^\/question-assets\/ap\/[a-f0-9]{64}\.pdf$/.test(path));assert.ok(routes.length>0);
+  const [path,descriptor]=routes.sort((a,b)=>b[1].bytes-a[1].bytes)[0];
+  assert.equal((await call(mf,path)).status,404);assert.equal((await call(mf,'/api/exams/ap/sources/'+encodeURIComponent(selected.id))).status,401);
+  for(const bad of ['ap%253Abad','ap%3Afoo%2Fbar','ap%3AUPPER'])assert.equal((await call(mf,'/api/exams/ap/sources/'+bad,auth)).status,404);
+  const head=await call(mf,path,{...auth,method:'HEAD'});assert.equal(head.status,200);assert.equal(head.headers.get('Content-Length'),String(descriptor.bytes));assert.equal(head.value,'');
+  const boundary=descriptor.chunkBytes?.[0]||8,start=boundary-3,end=Math.min(boundary+5,descriptor.bytes-1);
+  const range=await mf.dispatchFetch(origin+path,{headers:{Cookie:admin.cookie,Range:`bytes=${start}-${end}`}});assert.equal(range.status,206);assert.equal(range.headers.get('Content-Range'),`bytes ${start}-${end}/${descriptor.bytes}`);
+  const received=Buffer.from(await range.arrayBuffer());
+  const files=descriptor.chunks||[descriptor.asset];const expected=Buffer.concat(await Promise.all(files.map(file=>readFile(resolve(assets,'.'+file)))));
+  assert.deepEqual(received,expected.subarray(start,end+1));
+  const {createHash}=await import('node:crypto');const full=await mf.dispatchFetch(origin+path,{headers:{Cookie:admin.cookie}});assert.equal(full.status,200);const hash=createHash('sha256');for await(const bytes of full.body)hash.update(bytes);assert.equal(hash.digest('hex'),descriptor.sha256);
+  const badRange=await call(mf,path,{...auth,headers:{Range:`bytes=${descriptor.bytes}-`}});assert.equal(badRange.status,416);
 });
 test('real workerd concatenates protected catalogue chunks without JSON/Unicode damage',{timeout:60000},async t=>{
   const mf=await runtime();t.after(()=>mf.dispose());const admin=await setup(mf);

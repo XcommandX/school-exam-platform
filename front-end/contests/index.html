@@ -24,7 +24,7 @@
     <a class="home-link" href="/">↖ 学习首页</a>
   </header>
   <main class="page-shell" id="main-content">
-    <div class="contest-heading"><h1>数学竞赛</h1><div class="mode-control" role="group" aria-label="题库来源"><button id="private-mode" type="button" aria-pressed="true">本机题库</button><button id="example-mode" type="button" aria-pressed="false">原创示例</button></div></div>
+    <div class="contest-heading"><h1>数学竞赛</h1><div class="mode-control" role="group" aria-label="题库来源"><button id="private-mode" type="button" aria-pressed="true">竞赛题库</button><button id="example-mode" type="button" aria-pressed="false">原创示例</button></div></div>
     <div id="notice" class="notice" role="status" hidden></div>
     <div id="storage-notice" class="notice warning" role="alert" hidden></div>
     <div id="math-notice" class="notice warning" role="status" hidden></div>
@@ -47,6 +47,7 @@
         <div class="timer-controls"><strong id="timer-status" role="status"></strong><output id="timer-remaining" aria-label="剩余时间"></output><button id="timer-start" type="button" class="primary-button">开始计时</button><button id="timer-finish" type="button" class="quiet-button">结束本场</button></div>
         <p id="timer-note"></p><a id="timer-source" href="https://maa.org/student-programs/amc/" target="_blank" rel="noopener noreferrer">MAA 赛制与计时来源</a>
       </section>
+      <section id="score-report" class="score-report" aria-label="练习成绩" aria-live="polite" hidden><h3 id="score-title"></h3><p id="score-total"></p><p id="score-counts"></p><p id="score-policy"></p><details><summary>逐题判分</summary><ol id="score-items"></ol></details></section>
       <div class="practice-grid">
         <aside class="question-sidebar"><div class="sidebar-heading"><h3>题号</h3><span id="question-total"></span></div><div id="question-nav" class="question-nav" aria-label="选择题号"></div><div class="nav-legend"><span><i class="dot done"></i>已答</span><span><i class="dot draft"></i>草稿</span></div><div id="missing-notice" class="notice warning" hidden></div></aside>
         <article id="question-panel" class="question-panel" aria-labelledby="question-title" aria-busy="false">

@@ -44,6 +44,19 @@ async function anonymousRepository(root) {
     await readFile(path.join(repositoryRoot, 'front-end/contests/examples', name)));
   await put(root, 'local-data/contests/current.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
   await put(root, 'front-end/contests/examples/unlisted.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
+  await put(root, 'front-end/ap/examples/synthetic-practice.json', await readFile(new URL('../../../front-end/ap/examples/synthetic-practice.json', import.meta.url)));
+  await put(root, 'local-data/question-banks/ap/private.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
+  const apSet = JSON.parse(await readFile(new URL('../../../front-end/ap/examples/synthetic-practice.json', import.meta.url), 'utf8'));
+  const apPDF = Buffer.from('%PDF-1.7\nOriginal synthetic shared AP fixture\n%%EOF\n'), apHash = sha256(apPDF);
+  apSet.documents = [{ id: 'source', role: 'questions', label: 'Original synthetic PDF', asset: 'question-assets/ap/' + apHash + '.pdf', pageCount: 1 }];
+  apSet.contentMode = 'private';
+  for (const question of apSet.questions) { question.sourceDocument = 'source'; question.pages = [1]; }
+  const apDraft = await put(root, 'ap-fixture-draft.json', JSON.stringify(apSet));
+  run(python, ['-B', '-c', 'import hashlib,json,pathlib,sys; p=pathlib.Path(sys.argv[1]); d=json.loads(p.read_text()); d.pop("revision"); d["revision"]=hashlib.sha256((json.dumps(d,ensure_ascii=False,sort_keys=True,indent=2)+"\\n").encode()).hexdigest(); p.write_text(json.dumps(d,ensure_ascii=False),encoding="utf-8")', apDraft], root);
+  const apBytes = await readFile(apDraft);
+  const apFiles = [['sets/synthetic.json', apBytes], ['assets/' + apHash + '.pdf', apPDF]];
+  for (const [relative, bytes] of apFiles) await put(root, 'back-end/question-banks/ap/' + relative, bytes);
+  await put(root, 'back-end/question-banks/ap/RESOURCE_MANIFEST.json', JSON.stringify({ schemaVersion: 1, files: apFiles.map(([relative, bytes]) => ({ path: relative, bytes: bytes.length, sha256: sha256(bytes) })) }));
   const manifest = { schema_version: 1, kind: 'toefl-shared-bank', bank: 'bank.json', files: [],
     counts: { records: bank.records.length, questions: bank.records.reduce((sum, record) => sum + record.items.length, 0), audio: 1, images: 1 },
     source: { kind: 'anonymous-fixture' } };
@@ -151,6 +164,18 @@ test('oversized route chunks preserve bytes and Unicode even across byte boundar
   assert.equal(ordinary.asset, '/_catalog/catalog.json');
 });
 
+test('AP colon is allowed only in canonical source URLs, never filesystem paths', async t => {
+  const root = await temporary(t), writer = new AssetWriter(root, { maxAssetBytes: 128 });
+  const route = await writer.route('/api/exams/ap/sources/ap:fixture', '_catalog/ap/fixture.json', '{}');
+  assert.equal(route.asset, '/_catalog/ap/fixture.json');
+  for (const bad of ['/api/exams/ap/sources/ap:UPPER', '/api/exams/ap/sources/ap:foo_bar', '/api/exams/ap/sources/ap%3Afixture', '/api/exams/ap/sources/ap:foo/bar', '/api/other/ap:fixture'])
+    await assert.rejects(writer.route(bad, '_catalog/ap/bad.json', '{}'), /Unsafe/);
+  await assert.rejects(writer.route('/api/exams/ap/sources/ap:valid', '_catalog/ap/ap:valid.json', '{}'), /Unsafe/);
+  const pdf = Buffer.from('%PDF-1.7\n' + 'anonymous'.repeat(100));
+  const pdfRoute = await writer.route('/question-assets/ap/' + sha256(pdf) + '.pdf', '_catalog/ap-pdfs/' + sha256(pdf) + '.pdf', pdf, 'application/pdf');
+  assert.ok(pdfRoute.chunks.length > 1); assert.deepEqual(await readRoute(root, pdfRoute), pdf);
+});
+
 test('TOEFL executable modules preserve all data, order and hostile strings with awaited loading', async t => {
   const root = await temporary(t), writer = new AssetWriter(path.join(root, 'assets'));
   await put(root, 'package.json', '{"type":"module"}');
@@ -199,7 +224,8 @@ test('new cloud catalog preserves API shapes without reading or inventing old ac
   const exams = routes['/api/platform/catalog'].exams;
   assert.equal(exams.find(exam => exam.id === 'toefl').questionCount, 42);
   assert.equal(exams.find(exam => exam.id === 'sat').questionCount, 0);
-  assert.equal(exams.find(exam => exam.id === 'ap').available, false);
+  assert.equal(exams.find(exam => exam.id === 'ap').available, true);
+  assert.equal(routes['/api/exams/ap/sources'].schemaVersion, 2);
   assert.ok(exams.every(exam => exam.sources.length === 0));
 });
 
@@ -242,6 +268,16 @@ test('full anonymous build reuses canonical SAT readers, exact media, tracked al
   assert.equal(info.sat.questions, 2);
   assert.equal(info.sat.indexQuestions, 2);
   assert.equal(info.sat.catalogErrors, 1);
+  assert.equal(info.ap.sets, 1); assert.equal(info.ap.pdfs, 1);
+  const apSources = JSON.parse(await readRoute(assets, info.protectedRoutes['/api/exams/ap/sources']));
+  assert.equal(apSources.schemaVersion, 2); assert.equal(apSources.sources.length, 1);
+  const apSet = JSON.parse(await readRoute(assets, info.protectedRoutes['/api/exams/ap/sources/' + apSources.sources[0].id]));
+  const apPDFRoute = info.protectedRoutes['/' + apSet.documents[0].asset];
+  assert.equal(apPDFRoute.byteRanges, true); assert.equal(apPDFRoute.contentType, 'application/pdf');
+  assert.match((await readRoute(assets, apPDFRoute)).toString(), /^%PDF-1.7/);
+  const apExam = JSON.parse(await readRoute(assets, info.protectedRoutes['/api/platform/catalog'])).exams.find(exam => exam.id === 'ap');
+  assert.equal(apExam.sourceCount, 1); assert.equal(apExam.questionCount, apSet.questions.length); assert.deepEqual(apExam.sources, apSources.sources);
+  assert.deepEqual(apExam.sections, [apSet.section]);
   assert.equal(info.toefl.records, bank.records.length);
   assert.equal(info.toefl.questions, manifest.counts.questions);
   assert.ok(info.fileCount < MAX_ASSET_FILES);
@@ -266,7 +302,7 @@ test('full anonymous build reuses canonical SAT readers, exact media, tracked al
     assert.equal(exam.problems.length, summary.problem_count);
     assert.ok(exam.problems.every(problem => Array.isArray(problem.solutions) && problem.quality));
   }
-  assert.deepEqual(info.contests, { exampleExams: 4, exampleProblems: 10, privateProblems: 0, mathjaxAvailable: false });
+  assert.deepEqual(info.contests, { exampleExams: 4, exampleProblems: 10, privateProblems: 0, privateExams: 0, assets: 0, mathjaxAvailable: false });
   for (const [name, bytes] of content) if (name !== 'bank.json') {
     assert.deepEqual(await readFile(path.join(assets, 'toefl', name)), bytes);
   }
@@ -287,6 +323,16 @@ test('full anonymous build reuses canonical SAT readers, exact media, tracked al
   // A second build is repeatable and only replaces its dedicated output tree.
   const second = await build({ root, python });
   assert.deepEqual(second.files, info.files);
+  // The AP reader checks manifest hashes and tracked status before invalidating output.
+  const sharedAP = path.join(root, 'back-end/question-banks/ap/sets/synthetic.json');
+  const originalAP = await readFile(sharedAP);
+  await writeFile(sharedAP, '{}');
+  await assert.rejects(build({ root, python }), /exited/);
+  assert.deepEqual(JSON.parse(await readFile(path.join(root, 'local-data/builds/cloudflare/build-info.json'), 'utf8')), second);
+  await writeFile(sharedAP, originalAP);
+  run('git', ['rm', '--cached', '--quiet', '--', 'back-end/question-banks/ap/sets/synthetic.json'], root);
+  await assert.rejects(build({ root, python }), /exited/);
+  run('git', ['add', '--', 'back-end/question-banks/ap/sets/synthetic.json'], root);
   // Corrupt shared bytes: fail validation, retaining the last successful build.
   await writeFile(path.join(root, 'back-end/question-banks/toefl/audio/fixture-tone.wav'), 'tampered');
   await assert.rejects(build({ root, python }), /byte size|SHA-256/);

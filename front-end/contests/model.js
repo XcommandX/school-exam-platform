@@ -87,6 +87,43 @@
     }
     return {answered, graded, correct, drafts, accuracy: graded ? Math.round(correct * 100 / graded) : null};
   }
+  function scoringPolicy(exam) {
+    const amc = ['AMC10', 'AMC12'].includes(exam.contest), year = Number(exam.year);
+    if (amc) {
+      const blank = year === 2000 ? 2 : year >= 2001 && year <= 2006 ? 2.5 : 1.5;
+      return {correct: 6, blank, expected: 25, historicalUnverified: !Number.isInteger(year) || year < 2007,
+        label: year >= 2007 ? 'AMC：答对 6 分，空白 1.5 分，答错 0 分' : year >= 2000 ? `历史 AMC 练习计分：答对 6 分，空白 ${blank} 分，答错 0 分；历史分值据二手资料，未独立核验当年官方原卷` : '现代 AMC 练习计分：答对 6 分，空白 1.5 分，答错 0 分；未按该年历史规则核定'};
+    }
+    if (exam.contest === 'AIME') return {correct: 1, blank: 0, expected: 15, historicalUnverified: false, label: 'AIME：答对 1 分，其他 0 分'};
+    return null;
+  }
+  // Derive reports from the immutable answer revision; never persist a second, stale score.
+  // Ordinary practice includes only first checks, not drafts or unattempted blanks.
+  function scoreReport(exam, responses = {}, {submitted = false, mode = 'private'} = {}) {
+    const policy = scoringPolicy(exam), problems = exam.problems || [];
+    const report = {policy, correct: 0, incorrect: 0, blank: 0, invalid: 0, omitted: 0, revealed: 0, pending: 0, scored: 0, score: 0, maximum: 0, items: []};
+    for (const p of problems) {
+      const r = responses[p.id] || {}, value = String(r.value ?? '').trim();
+      let status;
+      if (!canGrade(p)) { status = 'ungraded'; report.omitted++; }
+      else if (r.revealed && !r.result) { status = 'revealed'; report.revealed++; }
+      else if (!submitted && !['correct', 'incorrect'].includes(r.result)) { status = 'pending'; report.pending++; }
+      else {
+        status = !value ? 'blank' : grade(p, value).status;
+        if (!['correct', 'incorrect', 'blank', 'invalid'].includes(status)) { status = 'ungraded'; report.omitted++; }
+        else { report[status]++; report.scored++; }
+      }
+      const points = policy && status === 'correct' ? policy.correct : policy && status === 'blank' ? policy.blank : 0;
+      report.score += points;
+      report.items.push({id: p.id, number: p.number, status, points: policy && ['correct','incorrect','blank','invalid'].includes(status) ? points : null});
+    }
+    report.maximum = policy ? report.scored * policy.correct : null;
+    if (!policy) report.score = null;
+    const numbers = new Set(problems.map(p => p.number));
+    report.fullExam = !!policy && submitted && mode !== 'example' && !exam.example && !policy.historicalUnverified && !exam.missing_numbers?.length && problems.length === policy.expected && numbers.size === policy.expected && Array.from({length: policy.expected}, (_, i) => i + 1).every(n => numbers.has(n)) && report.scored === policy.expected;
+    report.label = !policy ? '证明题仅人工复盘' : report.fullExam ? '整卷练习分（非官方成绩）' : submitted ? '部分题练习分（非整卷官方总分）' : '已提交题练习分（非整卷总分）';
+    return report;
+  }
   function examTitle(exam) {
     if (exam.title) return exam.title;
     return `${exam.contest} · ${exam.year}${exam.season === 'fall' ? ' 秋季' : exam.season === 'spring' ? ' 春季' : ''} ${exam.paper === 'SINGLE' || exam.paper === 'single' ? '单卷' : exam.paper}${exam.special_paper ? ' · 补充卷' : ''}`;
@@ -96,5 +133,5 @@
     return exams.filter(e => (!contest || e.contest === contest) && (!year || String(e.year) === String(year)) && (supplemental || !e.special_paper) && (!search || examTitle(e).toLowerCase().includes(search)))
       .sort((a, b) => b.year - a.year || (a.season === b.season ? String(a.paper).localeCompare(String(b.paper)) : a.season === 'fall' ? -1 : 1));
   }
-  return {STORAGE_KEY, CONTESTS, empty, load, canGrade, grade, getSession, updateResponse, submit, summarize, examTitle, filterExams, sessionKey, bookmarkKey};
+  return {STORAGE_KEY, CONTESTS, empty, load, canGrade, grade, getSession, updateResponse, submit, summarize, scoringPolicy, scoreReport, examTitle, filterExams, sessionKey, bookmarkKey};
 });

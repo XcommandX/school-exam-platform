@@ -1,6 +1,6 @@
 # School Exam Platform
 
-校内 SAT / TOEFL 练习平台。首页、TOEFL 和 SAT 共用账号；首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存。本分支新增 Cloudflare Workers + SQLite Durable Objects 云端适配，保留原 Python 本机运行方式；录音上传与外部 AI 不启用。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)，云端构建、初始化、配额与维护见 [Cloudflare 部署](docs/cloudflare-deployment.md)。
+校内 SAT / TOEFL 练习平台。首页、TOEFL 和 SAT 共用账号；首页设置、TOEFL 文字记录以及 SAT 练习记录、错题本、练习设置按用户保存。本分支新增 Cloudflare Workers + SQLite Durable Objects 云端适配，保留原 Python 本机运行方式；Cloudflare 版新增用户同意后的 TOEFL 写作/口语内容 AI 批改（1–6 半分档，非官方单题估分），录音仅为本次识别临时发送、不云端持久保存。具体发布状态见部署记录。账号菜单与保存边界见 [统一账号](docs/unified-auth.md)，云端构建、初始化、配额与维护见 [Cloudflare 部署](docs/cloudflare-deployment.md)。
 
 ## Cloudflare 在线版
 
@@ -9,6 +9,14 @@
 ## 管理员站内审批注册
 
 线上已启用与首页同风格的注册入口：申请进入所有有效管理员共享可见的「账号管理 → 注册申请」列表，任一管理员通过后才创建学生账号，也可拒绝；原有账号直接登录。无需邮件服务或自有域名，有有效管理员时才开放注册。此方案是人工把关，尚不通过学号保证一人一号。使用、安全与验证边界见 [站内审批注册](docs/registration-approval.md)。2026-10-25 已发布到上述线上地址，线上原有账号无需重新创建。
+
+## AP 英语语言与写作
+
+2026-10-26 21:42已部署的[AP Lang AI练习评分](docs/ap-ai-assessment.md)：采用College Board三行0–6分量表，复盘时明确同意后调用现有Cloudflare AI；首批仅2025两套卷Q2/Q3完成材料核验，可给分，其余仅有限反馈。AI结果仅当前复盘内存保留、可下载，不覆盖原作文或AP历史。此功能已部署到现有网站，后续经明确授权将功能提交 `449e092` 推送GitHub并快进合入远端main；本次Git同步未重复部署。协作者请拉取最新main再开分支。
+
+2026-10-26 已合入并推送 `main`，实际发布到上述 Cloudflare 网站，现有账号和记录不重置。发布版本与验证范围见 [AP 发布记录](docs/cloudflare-deployment.md#实际发布结果2026-10-26-1915asiashanghai)。
+
+首页新增独立蓝色 **AP** 卡片，课程入口为“英语语言与写作”；`/ap/` 需登录。支持 MCQ/FRQ、官方分部分限时、自由练习、草稿与复盘，记录只在当前浏览器按账号隔离保存。用户随后明确授权将已导入的 102 份材料、150 份关联 PDF 纳入 GitHub 和现有网站；共享副本位于 `back-end/question-banks/ap/`，实际发布状态以部署记录为准。共有 360 道结构化题目，扫描卷和参考资料保留文档阅读，不伪造题目。导入、数据协议与保存边界见 [AP Language](docs/ap-language.md)。本次还合入此前已上线的 TOEFL AI 分支，保留其现有功能。
 
 ## 项目结构
 
@@ -22,6 +30,7 @@ back-end/                   本机服务、托福后端源码、维护工具与�
   cloudflare/               统一云端 Worker、SQLite DO、完整资源构建与匿名测试
   question-banks/sat-packs/   用户授权共享的 SAT 题库副本
   question-banks/toefl/      用户授权共享的完整托福题目、来源音频与图片
+  question-banks/ap/         用户授权共享的 AP 题组、原卷和参考 PDF
   toefl/                    Worker 源码、匿名/共享构建、题型协议及模块测试
   tools/sat/                SAT 导入、转换、打包、源码导出和独立服务
   shared/                   公共校验与旧题库兼容工具
@@ -81,4 +90,4 @@ node back-end/toefl/scripts/test.mjs
 
 原模块浏览器回归需要已有 Playwright 与 Chrome，运行方式见相应模块文档。新增 Cloudflare `npm run test:browser` 使用已安装 Chrome 与 CDP，不需要 Playwright；最终本地云运行时 110 项、隔离 HTTPS 浏览器 15 项通过。原 Python 240 项测试在当前 Windows 环境仍有已确认的历史路径、编码与测试环境问题，详见 [验证范围](docs/cloudflare-deployment.md#验证范围)。这些检查不等于 Safari、两台真实硬件或 150 人并发验收。
 
-`push.command`、`pull.command` 仍位于根目录，只处理当前分支，不自动合入 `main` 或发布网站。除上述明确授权的 SAT 与 TOEFL 共享题库目录外，真实资源、备份、录音、密钥和 `.DS_Store` 不提交；目录中的重复 ZIP 及对应校验文件也不提交。修改读取路径不会自动 commit 或 push。
+`push.command`、`pull.command` 仍位于根目录，只处理当前分支，不自动合入 `main` 或发布网站。除上述明确授权的 SAT、TOEFL 与 AP 共享题库目录外，真实资源、备份、录音、密钥和 `.DS_Store` 不提交；目录中的重复 ZIP 及对应校验文件也不提交。修改读取路径不会自动 commit 或 push。

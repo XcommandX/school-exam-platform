@@ -79,6 +79,10 @@
     s.status = 'finished'; s.endedAt = now; return true;
   }
   const ended = session => ['finished', 'expired'].includes(session?.status);
+  function report(attempt, exam, model) {
+    if (!attempt || attempt.key !== key(attempt.mode, exam) || !attempt.sessions.some(ended) || attempt.sessions.some(s => !ended(s) && s.status !== 'unavailable')) return null;
+    return model.scoreReport(exam, attempt.responses, {submitted: true, mode: attempt.mode});
+  }
   // Reject malformed snapshots instead of silently losing attempts or extending deadlines.
   function load(input) {
     if (!input || input.version !== 1 || !Array.isArray(input.attempts)) throw Error('计时记录格式异常；未覆盖原记录。');
@@ -109,5 +113,5 @@
     }
     return copy;
   }
-  return {SOURCE, empty, key, storageKey, plan, create, start, reconcile, remaining, write, finish, ended, load};
+  return {SOURCE, empty, key, storageKey, plan, create, start, reconcile, remaining, write, finish, ended, report, load};
 });

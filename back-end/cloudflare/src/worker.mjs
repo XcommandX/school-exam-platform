@@ -2,6 +2,8 @@ import {createHash,timingSafeEqual} from 'node:crypto';
 import {InputError,fail,readJSON} from './json-stream.mjs';
 import {fields,identity} from './validation.mjs';
 import {setupHTML,setupJS} from './setup.mjs';
+import {aiConfig,assess} from './toefl-ai.mjs';
+import {apConfig,assessAP} from './ap-ai.mjs';
 export {PlatformAuthStore} from './auth.mjs';
 export {PlatformAccountStore} from './data.mjs';
 export {PlatformBankStore} from './bank.mjs';
@@ -24,6 +26,8 @@ function safePath(url){
   if(account){try{return '/api/sat/'+account[1]+'/'+identity(decodeURIComponent(account[2]));}catch{return null;}}
   const source=url.pathname.match(/^\/api\/exams\/sat\/sources\/([^/]+)$/);
   if(source){try{const id=decodeURIComponent(source[1]);return /^sat:[A-Za-z0-9._-]+$/.test(id)?'/api/exams/sat/sources/'+id:null;}catch{return null;}}
+  const apSource=url.pathname.match(/^\/api\/exams\/ap\/sources\/([^/]+)$/);
+  if(apSource){try{const id=decodeURIComponent(apSource[1]);return /^ap:[a-z0-9][a-z0-9-]{0,119}$/.test(id)?'/api/exams/ap/sources/'+id:null;}catch{return null;}}
   let path;try{path=decodeURIComponent(url.pathname);}catch{return null;}
   if(/[%:\\\x00-\x1f\x7f]/.test(path)||path.split('/').some(s=>s==='.'||s==='..'||/[ .]$/.test(s))||path.includes('//'))return null;
   return path;
@@ -48,9 +52,9 @@ async function session(env,token){
   if(!response.ok)throw new InputError('账号服务暂不可用。',503,'storage_unavailable');
   return response.json();
 }
-function writeOrigin(request,url){
+function writeOrigin(request,url,{multipart=false}={}){
   if(request.headers.get('Origin')!==url.origin||request.headers.get('Sec-Fetch-Site')==='cross-site')fail('请从当前网站页面操作。',403,'invalid_origin');
-  if(request.headers.get('Content-Type')?.split(';')[0].trim().toLowerCase()!=='application/json')fail('请求必须使用 JSON。',415,'json_required');
+  if(!multipart&&request.headers.get('Content-Type')?.split(';')[0].trim().toLowerCase()!=='application/json')fail('请求必须使用 JSON。',415,'json_required');
 }
 async function catalogue(env){
   if(!catalogues.has(env))catalogues.set(env,(async()=>{
@@ -65,7 +69,41 @@ async function asset(env,path,request){
   const headers=new Headers(request.headers);headers.delete('Cookie');headers.delete('Authorization');headers.delete('If-None-Match');headers.delete('If-Modified-Since');
   return env.ASSETS.fetch(new Request(url,{method:request.method==='HEAD'?'HEAD':'GET',headers}));
 }
+async function pdfAsset(env,record,request){
+  const total=record.bytes,etag='"'+record.sha256+'"';
+  const h=new Headers({'Content-Type':'application/pdf','Accept-Ranges':'bytes','Content-Length':String(total),ETag:etag});
+  let start=0,end=total-1,status=200;
+  const range=request.headers.get('Range'),ifRange=request.headers.get('If-Range');
+  if(request.method!=='HEAD'&&range&&(!ifRange||ifRange===etag)){
+    const match=/^bytes=(\d*)-(\d*)$/.exec(range);
+    if(!match||(!match[1]&&!match[2]))return new Response(null,{status:416,headers:{...Object.fromEntries(h),'Content-Range':`bytes */${total}`,'Content-Length':'0'}});
+    if(match[1]){start=Number(match[1]);end=match[2]?Math.min(Number(match[2]),total-1):total-1;}
+    else {const suffix=Number(match[2]);start=Math.max(0,total-suffix);}
+    if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>end||start>=total)
+      return new Response(null,{status:416,headers:{...Object.fromEntries(h),'Content-Range':`bytes */${total}`,'Content-Length':'0'}});
+    status=206;h.set('Content-Range',`bytes ${start}-${end}/${total}`);h.set('Content-Length',String(end-start+1));
+  }
+  if(request.method==='HEAD')return new Response(null,{headers:h});
+  const names=record.chunks||[record.asset],sizes=record.chunkBytes||[total];
+  let offset=0;const selected=[];
+  for(let i=0;i<names.length;i++){if(offset<=end&&offset+sizes[i]>start)selected.push({name:names[i],offset});offset+=sizes[i];}
+  const requestHeaders=new Headers(request.headers);requestHeaders.delete('Range');requestHeaders.delete('If-Range');
+  const fullRequest=new Request(request,{headers:requestHeaders});let index=0,reader,position=0;
+  const stream=new ReadableStream({async pull(controller){
+    try{while(true){
+      if(!reader){if(index>=selected.length){controller.close();return;}const item=selected[index++];position=item.offset;
+        const response=await asset(env,item.name,fullRequest);if(!response.ok||!response.body)throw new Error('Incomplete PDF asset');reader=response.body.getReader();}
+      const part=await reader.read();if(part.done){reader.releaseLock();reader=null;continue;}
+      const next=position+part.value.length,from=Math.max(0,start-position),to=Math.min(part.value.length,end+1-position);position=next;
+      if(to>from)controller.enqueue(part.value.subarray(from,to));
+      if(position>end){await reader.cancel();reader=null;controller.close();return;}
+      if(to>from)return;
+    }}catch(error){await reader?.cancel().catch(()=>{});controller.error(error);}
+  },async cancel(){await reader?.cancel();}});
+  return new Response(stream,{status,headers:h});
+}
 async function protectedAsset(env,record,request){
+  if(record.byteRanges&&record.contentType==='application/pdf')return pdfAsset(env,record,request);
   if(record.asset){const res=await asset(env,record.asset,request);if(!res.ok)return res;const h=new Headers(res.headers);h.set('Content-Type',record.contentType);return new Response(res.body,{status:record.status||res.status,headers:h});}
   const h={'Content-Type':record.contentType,'Content-Length':String(record.bytes)};
   const chunkHeaders=new Headers(request.headers);chunkHeaders.delete('Range');chunkHeaders.delete('If-Range');
@@ -115,7 +153,7 @@ export async function handle(request,env){
   if(!path||path.startsWith('/_catalog')||path.startsWith('/.'))return notFound();
   if(!['GET','HEAD','POST','PUT','PATCH'].includes(method))return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
   const writing=!['GET','HEAD'].includes(method);
-  if(writing)writeOrigin(request,url);
+  if(writing)writeOrigin(request,url,{multipart:path==='/api/toefl/assess'&&method==='POST'});
   if(path==='/robots.txt'&&method==='GET')return new Response('User-agent: *\nDisallow: /\n');
   if(path==='/api/platform/status'&&method==='GET')return json({service:'school-exam-platform-v1',deployment:'cloudflare',auth:{mode:'session',loginEnabled:true}});
   if(path==='/setup'&&!writing)return new Response(setupHTML,{headers:{'Content-Type':'text/html; charset=utf-8'}});
@@ -155,7 +193,7 @@ export async function handle(request,env){
   if(publicLogin&&!writing){if(current.authenticated)return redirect('/');return html(env,'/web/login.html',request,null);}
   if(!current.authenticated){
     if(path.startsWith('/api/'))fail('请先登录。',401,'session_expired');
-    if(['/', '/index.html','/account','/accounts','/sat','/sat/','/sat/html/index.html','/toefl','/toefl/','/toefl/index.html','/contests','/contests/','/contests/index.html'].includes(path))return redirect('/login?next='+encodeURIComponent(url.pathname+url.search));
+    if(['/', '/index.html','/account','/accounts','/sat','/sat/','/sat/html/index.html','/toefl','/toefl/','/toefl/index.html','/ap','/ap/','/ap/index.html','/contests','/contests/','/contests/index.html'].includes(path))return redirect('/login?next='+encodeURIComponent(url.pathname+url.search));
     return notFound();
   }
   const user=current.user,owner=request.headers.get('X-Account-ID');
@@ -192,7 +230,32 @@ export async function handle(request,env){
     return authResponse(await auth(env,'/password',{token,targetId:admin[1],newPassword:body.password}));
   }
   if(admin&&!admin[2]&&method==='PATCH')return authResponse(await auth(env,'/update-user',{token,targetId:admin[1],changes:await readJSON(request,16*1024)}));
-  if(path.startsWith('/api/sat/')||path==='/api/me/home'||path==='/api/toefl/state'||path==='/api/toefl/bootstrap')return env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(internal(request,user,token));
+  if(path==='/api/ap/ai-config'||path==='/api/ap/assess'){
+    if(url.search)fail('评分接口不接受查询参数。');
+    const config=apConfig(env);
+    if(path.endsWith('/ai-config')&&method==='GET')return json(config);
+    if(path.endsWith('/assess')&&method==='POST')return assessAP(request,env,{config,rpc:async(action,body)=>{
+      const response=await env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(new Request('https://internal/internal/ap-ai/'+action,{method:'POST',headers:{'Content-Type':'application/json','X-Platform-Token':token,'X-Platform-User':user.id},body:JSON.stringify(body)}));
+      const value=await response.json();if(!response.ok)throw new InputError(value.error,response.status,value.code,{...(value.retryAfter?{retryAfter:value.retryAfter}:{})});return value;
+    }});
+    return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
+  }
+  if(path==='/api/toefl/ai-config'||path==='/api/toefl/assess'){
+    if(url.search)fail('评分接口不接受查询参数。');
+    const config=aiConfig(env,request.url);
+    if(path.endsWith('/ai-config')&&method==='GET')return json(config);
+    if(path.endsWith('/assess')&&method==='POST')return assess(request,env,{config,rpc:async(action,body)=>{
+      const rpc=new Request('https://internal/internal/toefl-ai/'+action,{method:'POST',headers:{'Content-Type':'application/json','X-Platform-Token':token,'X-Platform-User':user.id},body:JSON.stringify(body)});
+      const response=await env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(rpc),value=await response.json();
+      if(!response.ok)throw new InputError(value.error,response.status,value.code,{...(value.retryAfter?{retryAfter:value.retryAfter}:{})});return value;
+    }});
+    return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
+  }
+  if(path.startsWith('/api/sat/')||path==='/api/me/home'||path==='/api/toefl/state'||path==='/api/toefl/bootstrap'){
+    const forwarded=internal(request,user,token);
+    if(path==='/api/toefl/bootstrap')forwarded.headers.set('X-Platform-AI-Config',JSON.stringify(aiConfig(env,request.url)));
+    return env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(forwarded);
+  }
   if(path==='/api/question-bank/status'&&method==='GET')return json({service:'sat-question-bank-v1',project:'school-exam-platform-cloudflare',name:'SAT shared question bank',token:csrf(token),writable:user.role==='admin'});
   if(path==='/api/question-bank'){
     if(method==='POST'&&!same(request.headers.get('X-SAT-Bank-Token'),csrf(token)))fail('题库操作验证已过期，请刷新后重试。',403);
@@ -208,19 +271,20 @@ export async function handle(request,env){
   if(path==='/sat'||path==='/sat/')return redirect('/sat/html/index.html'+url.search);
   if(path==='/toefl')return redirect('/toefl/'+url.search);
   if(path==='/contests')return redirect('/contests/'+url.search);
+  if(path==='/ap')return redirect('/ap/'+url.search);
   const catalog=await catalogue(env);
   if(path.startsWith('/api/contests/')){
     const modes=url.searchParams.getAll('mode'),mode=modes.length?modes[0]:'private';
     if(modes.length>1||!['private','example'].includes(mode))return json({error:'Contest mode must be private or example.'},400);
-    // Only the explicit example query can select example content. Private exams
-    // are never exported and must not fall through to an example of the same ID.
+    // Only the explicit example query selects examples. Shared real exams use
+    // private mode for backward-compatible frontend identity, never fallback.
     const key=path+(mode==='example'?'?mode=example':'');
     return Object.hasOwn(catalog.protectedRoutes,key)?protectedAsset(env,catalog.protectedRoutes[key],request):notFound();
   }
   if(Object.hasOwn(catalog.htmlTemplates,path))return html(env,catalog.htmlTemplates[path],request,current);
   if(Object.hasOwn(catalog.protectedRoutes,path))return protectedAsset(env,catalog.protectedRoutes[path],request);
   if(path.startsWith('/api/'))return notFound();
-  if(path.startsWith('/sat/')||path.startsWith('/toefl/')||/^\/contests\/(?:app\.js|model\.js|styles\.css|mathjax-config\.js)$/.test(path)||path.startsWith('/question-assets/')){
+  if(path.startsWith('/ap/')||path.startsWith('/sat/')||path.startsWith('/toefl/')||/^\/contests\/(?:app\.js|model\.js|timer\.js|styles\.css|mathjax-config\.js)$/.test(path)||path.startsWith('/question-assets/')){
     // ASSETS contains an explicit build allowlist only; HTML must use injected
     // templates, and internal catalogue URLs are never available here.
     if(/\.html?$/i.test(path)||path.endsWith('/'))return notFound();

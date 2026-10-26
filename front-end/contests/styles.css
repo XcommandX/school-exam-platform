@@ -1,5 +1,7 @@
 /* Scoped addition to the existing Study Space design system. */
 body.contest-app{min-width:0}
+.contest-app .score-report{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;margin:0 0 24px;overflow-wrap:anywhere}
+.contest-app #score-total{font-size:28px;font-weight:750;margin:12px 0}.contest-app #score-counts,.contest-app #score-policy{font-size:13px;line-height:1.8;color:#686b73}.contest-app #score-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;list-style:none;padding:0;font-size:13px}.contest-app .score-report summary{cursor:pointer}
 @media(max-width:430px){.contest-app .site-header{flex-wrap:wrap}.contest-app .contest-heading{flex-wrap:wrap}.contest-app .practice-stats{gap:12px}.contest-app .workspace-tabs{gap:10px}}
 .contest-app .home-link{font-size:14px;font-weight:650;padding:12px 17px;border:1px solid var(--line);border-radius:50px;background:#fff;transition:transform .2s var(--ease)}
 .contest-app .home-link:hover{transform:translateY(-2px)}

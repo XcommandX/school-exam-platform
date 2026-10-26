@@ -268,7 +268,7 @@ test('review: TOEFL state shapes and home conflicts preserve original client con
   assert.deepEqual((await store.state('toefl').json()).items.map(item => item.key), ['four.learning.v1', 'four.words.v1']);
   const me = { id: 'anonymous-owner', role: 'student' };
   const bootstrap = await store.state('toefl', me).json();
-  assert.deepEqual(bootstrap.me, { ...me, aiReady: false });
+  assert.deepEqual(bootstrap.me, { ...me, aiReady: false, aiDemo: false, aiProvider: 'Cloudflare Workers AI' });
   assert.equal(bootstrap.state.items.length, 2);
   await assert.rejects(() => store.putState('toefl', req({ key: 'four.learning.v1', value: {}, revision: 1 })), InputError);
   await assert.rejects(() => store.putState('toefl', req({ key: 'four.words.v1', value: [], revision: 1 })), InputError);

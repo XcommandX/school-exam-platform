@@ -13,10 +13,16 @@ function fixture() {
   const route = asset => ({asset,contentType:'application/json; charset=utf-8'});
   const files = new Map([
     ['/_catalog/routes.json', JSON.stringify({schemaVersion:1,htmlTemplates:HTML_TEMPLATES,protectedRoutes:{
+      '/contest-assets/assets/shared.png':{...route('/_catalog/contest-media/shared.png'),contentType:'image/png'},
+      '/contest-vendor/mathjax/es5/tex-svg.js':{...route('/_catalog/contest-media/tex-svg.js'),contentType:'application/javascript'},
+      '/api/contests/exams/shared-2026':route('/_catalog/contests/shared.json'),
       '/api/contests/catalog':route('/_catalog/contests/catalog.json'),
       '/api/contests/catalog?mode=example':route('/_catalog/contests/examples.json'),
       [`/api/contests/exams/${exam.id}?mode=example`]:route('/_catalog/contests/exam.json'),
     }})],
+    ['/_catalog/contest-media/shared.png','synthetic-image'],
+    ['/_catalog/contest-media/tex-svg.js','/* pinned fixture */'],
+    ['/_catalog/contests/shared.json',JSON.stringify({id:'shared-2026',mode:'private',problems:[]})],
     ['/_catalog/contests/catalog.json',JSON.stringify(empty)],
     ['/_catalog/contests/examples.json',JSON.stringify(examples)],
     ['/_catalog/contests/exam.json',JSON.stringify(exam)],
@@ -62,6 +68,12 @@ test('contest HTML injects escaped PlatformSession and private APIs never fall b
   for(const query of ['?mode=','?mode=other','?mode=example&mode=private','?mode=example&mode=example'])assert.equal((await call('/api/contests/catalog'+query)).status,400);
   assert.equal((await call('/api/contests/exams/not-found?mode=example')).status,404);
   assert.equal((await call('/contests/app.js')).status,200);
+  assert.equal((await (await call('/api/contests/exams/shared-2026')).json()).mode,'private');
+  assert.equal((await call('/api/contests/exams/shared-2026?mode=example')).status,404);
+  for (const path of ['/contest-assets/assets/shared.png','/contest-vendor/mathjax/es5/tex-svg.js']) {
+    assert.equal((await call(path)).status,200); assert.equal((await call(path,false)).status,404);
+  }
+  assert.equal((await call('/_catalog/contest-media/shared.png')).status,404);
   for(const path of ['/contests/examples/amc10.json','/_catalog/contests/examples.json','/contests/%252e%252e/private.json','/contest-assets/assets/test.svg'])assert.equal((await call(path)).status,404);
   const head=await call('/api/contests/catalog?mode=example',true,'HEAD');assert.equal(head.status,200);assert.equal(await head.text(),'');
 });

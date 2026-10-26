@@ -32,8 +32,9 @@ export const SAT_FILES = Object.freeze([
   'vendor/marked/marked.umd.js',
   ...fontFamilies.flatMap(name => ['ttf', 'woff', 'woff2'].map(extension => `vendor/katex/fonts/KaTeX_${name}.${extension}`)),
 ]);
-export const CONTEST_FILES = Object.freeze(['index.html', 'app.js', 'model.js', 'styles.css', 'mathjax-config.js']);
+export const CONTEST_FILES = Object.freeze(['index.html', 'app.js', 'model.js', 'timer.js', 'styles.css', 'mathjax-config.js']);
 export const CONTEST_EXAMPLES = Object.freeze(['amc10.json', 'amc12.json', 'aime.json', 'usamo.json']);
+export const AP_FILES = Object.freeze(['index.html', 'styles.css', 'app.js', 'ap-model.js', 'examples/synthetic-practice.json']);
 export const TOEFL_FILES = Object.freeze(['index.html', 'four.css', 'four-logic.js', 'four-learning.js', 'four-app.js', 'favicon.svg']);
 
 export const HTML_TEMPLATES = Object.freeze({
@@ -41,12 +42,14 @@ export const HTML_TEMPLATES = Object.freeze({
   '/contests/': '/contests/index.html', '/contests/index.html': '/contests/index.html',
   '/login': '/web/login.html', '/login/': '/web/login.html', '/web/login.html': '/web/login.html',
   '/account': '/web/account.html', '/accounts': '/web/account.html', '/web/account.html': '/web/account.html',
+  '/ap/': '/ap/index.html', '/ap/index.html': '/ap/index.html',
   '/sat/html/index.html': '/sat/html/index.html', '/toefl/': '/toefl/index.html', '/toefl/index.html': '/toefl/index.html',
 });
 
 export function browserFiles() {
   return [
     ...WEB_FILES.map(name => ({ source: `front-end/web/${name}`, target: `web/${name}` })),
+    ...AP_FILES.map(name => ({ source: `front-end/ap/${name}`, target: `ap/${name}` })),
     ...SAT_FILES.map(name => ({ source: `front-end/sat/${name}`, target: `sat/${name}` })),
     ...CONTEST_FILES.map(name => ({ source: `front-end/contests/${name}`, target: `contests/${name}` })),
     ...TOEFL_FILES.map(name => ({ source: `front-end/toefl/${name}`, target: `toefl/${name}` })),
@@ -94,13 +97,18 @@ function mediaType(relative) {
     '.svg': 'image/svg+xml' }[path.posix.extname(relative).toLowerCase()] ?? 'application/octet-stream';
 }
 
-export function staticCatalogs(counts) {
+export function staticCatalogs(counts, apSources = []) {
   const status = { available: true, contentMode: 'shared-bank', recordCount: counts.records,
     questionCount: counts.questions, practiceUrl: '/toefl/' };
   const exams = Object.entries({ sat: 'SAT', ap: 'AP', toefl: 'TOEFL', vocab: 'Personal Vocab' }).map(([id, name]) => ({
-    id, name, available: ['sat', 'toefl'].includes(id), questionCount: id === 'toefl' ? counts.questions : 0,
+    id, name, available: ['sat', 'toefl', 'ap'].includes(id), questionCount: id === 'toefl' ? counts.questions : 0,
     sourceCount: id === 'toefl' ? counts.records : 0, sources: [], sections: [], ...(id === 'toefl' ? { preview: status } : {}),
   }));
+  Object.assign(exams.find(exam => exam.id === 'ap'), {
+    questionCount: apSources.reduce((sum, source) => sum + source.questionCount, 0),
+    sourceCount: apSources.length, sources: apSources,
+    sections: [...new Set(apSources.map(source => source.section))],
+  });
   return {
     '/api/toefl/status': status,
     '/api/platform/catalog': { schemaVersion: 1, exams, errors: [], auth: { mode: 'session', loginEnabled: true, authenticated: true } },
@@ -108,7 +116,7 @@ export function staticCatalogs(counts) {
     '/api/question-bank/status': { service: 'sat-question-bank-v1', project: 'study-space-cloudflare',
       name: 'SAT cloud question bank', token: '', writable: false },
     '/api/question-bank': { files: [], errors: [] },
-    ...Object.fromEntries(exams.map(({ id }) => [`/api/exams/${id}/sources`, { schemaVersion: 1, exam: id, sources: [], errors: [] }])),
+    ...Object.fromEntries(exams.map(({ id }) => [`/api/exams/${id}/sources`, { schemaVersion: id === 'ap' ? 2 : 1, exam: id, sources: [], errors: [] }])),
   };
 }
 
@@ -146,6 +154,14 @@ export async function build({ root = repositoryRoot, python = process.env.PYTHON
   const exported = JSON.parse(await readFile(path.join(paths.stageRoot, 'export-info.json'), 'utf8'));
   if (exported.schemaVersion !== 1 || !exported.routes || !exported.counts) throw new Error('Invalid SAT export manifest.');
 
+  console.log('Exporting manifest-validated shared AP sets and PDF references...');
+  subprocess(python, ['-B', fileURLToPath(new URL('./export_ap.py', import.meta.url)),
+    '--repository', root, '--output', paths.stageRoot, '--tracked-file', trackedFile], {
+    cwd: root, env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1', PYTHONUTF8: '1' },
+  });
+  const ap = JSON.parse(await readFile(path.join(paths.stageRoot, 'ap-export-info.json'), 'utf8'));
+  if (ap.schemaVersion !== 1 || !ap.routes || !Array.isArray(ap.pdfs) || !Array.isArray(ap.sources) || !ap.counts) throw new Error('Invalid AP export manifest.');
+
   // Invalidate the previous success marker before touching its assets.
   await verifyBuildPaths(root);
   await rm(paths.buildInfoPath, { force: true });
@@ -174,15 +190,50 @@ export async function build({ root = repositoryRoot, python = process.env.PYTHON
   }
   for (const [route, descriptor] of Object.entries(contests.routes)) {
     safeRelativePath(descriptor.file);
-    if (!/^\/api\/contests\/(?:catalog(?:\?mode=example)?|exams\/[a-zA-Z0-9_-]+\?mode=example)$/.test(route)
+    if (!/^\/api\/contests\/(?:catalog(?:\?mode=example)?|exams\/[a-zA-Z0-9_-]+(?:\?mode=example)?)$/.test(route)
         || descriptor.asset !== '/_catalog/contests/' + descriptor.file) throw new Error('Unsafe contest export route.');
     const source = path.join(paths.stageRoot, descriptor.file);
     await assertNoSymlink(source);
     protectedRoutes[route] = await writer.route('/api/contests/export/' + descriptor.file, descriptor.asset.slice(1), await readFile(source));
   }
-  for (const [route, value] of Object.entries(staticCatalogs(resources.counts))) {
+  for (const entry of contests.media) {
+    safeRelativePath(entry.path);
+    const allowed = entry.path.startsWith('assets/') ? '/contest-assets/' + entry.path
+      : entry.path.startsWith('vendor/mathjax/') ? '/contest-vendor/mathjax/' + entry.path.slice('vendor/mathjax/'.length) : null;
+    if (!allowed || entry.route !== allowed) throw new Error('Unsafe contest media route.');
+    const source = 'back-end/question-banks/contests/' + entry.path;
+    const content = await readFile(await checkedSource(root, source, tracked));
+    if (content.length !== entry.bytes || sha256(content) !== entry.sha256) throw new Error('Contest media changed during build.');
+    const target = '_catalog/contest-media/' + (entry.path.endsWith('/LICENSE') ? 'mathjax-license.txt' : entry.path);
+    protectedRoutes[entry.route] = await writer.route(entry.route, target, content, entry.contentType, { source });
+  }
+  if (contests.files.length) sourceFiles.push('back-end/question-banks/contests/RESOURCE_MANIFEST.json', ...contests.files.map(entry => 'back-end/question-banks/contests/' + entry.path));
+  for (const [route, value] of Object.entries(staticCatalogs(resources.counts, ap.sources))) {
+    if (route === '/api/exams/ap/sources') continue;
     protectedRoutes[route] = await writer.route(route, `_catalog/static/${route.slice('/api/'.length)}.json`, JSON.stringify(value) + '\n');
   }
+  for (const [route, descriptor] of Object.entries(ap.routes)) {
+    safeRelativePath(descriptor.file);
+    if (!/^\/api\/exams\/ap\/sources(?:\/ap:[a-z0-9][a-z0-9-]{0,119})?$/.test(route)
+      || !/^ap\/(?:sources|[a-f0-9]{64})\.json$/.test(descriptor.file)
+      || descriptor.asset !== '/_catalog/' + descriptor.file) throw new Error('Unsafe AP export route.');
+    const source = path.join(paths.stageRoot, ...descriptor.file.split('/'));
+    await assertNoSymlink(source);
+    protectedRoutes[route] = await writer.route(route, descriptor.asset.slice(1), await readFile(source), descriptor.contentType);
+  }
+  for (const entry of ap.pdfs) {
+    if (!/^assets\/[a-f0-9]{64}\.pdf$/.test(entry.path)
+      || entry.route !== '/question-assets/ap/' + entry.path.slice('assets/'.length)) throw new Error('Unsafe AP PDF route.');
+    const source = 'back-end/question-banks/ap/' + entry.path;
+    const content = await readFile(await checkedSource(root, source, tracked));
+    if (content.length !== entry.bytes || sha256(content) !== entry.sha256) throw new Error('AP PDF changed during build.');
+    protectedRoutes[entry.route] = { ...await writer.route(entry.route, '_catalog/ap-pdfs/' + path.posix.basename(entry.path), content, 'application/pdf', { source }), byteRanges: true };
+  }
+  sourceFiles.push('back-end/question-banks/ap/RESOURCE_MANIFEST.json', ...ap.files.map(entry => 'back-end/question-banks/ap/' + entry.path));
+  // The original example remains separate; never enumerate local AP libraries.
+  const apExample = JSON.parse(await readFile(await checkedSource(root, 'front-end/ap/examples/synthetic-practice.json', tracked), 'utf8'));
+  if (apExample.contentMode !== 'synthetic' || apExample.documents?.length !== 0) throw new Error('AP cloud example must be original and self-contained.');
+  protectedRoutes['/api/ap/example'] = await writer.route('/api/ap/example', '_catalog/static/ap/example.json', JSON.stringify(apExample) + '\n');
   const routesManifest = { schemaVersion: 1, htmlTemplates: HTML_TEMPLATES, protectedRoutes };
   await writer.write('_catalog/routes.json', JSON.stringify(routesManifest) + '\n');
   const inventory = await writer.audit();
@@ -192,12 +243,12 @@ export async function build({ root = repositoryRoot, python = process.env.PYTHON
     limits: { maxAssetBytes: MAX_ASSET_BYTES, maxAssetFiles: MAX_ASSET_FILES, maxToeflPartBytes: MAX_DATA_PART_BYTES },
     htmlTemplates: HTML_TEMPLATES, protectedRoutes, sourceFiles,
     toefl: { ...resources.counts, vocabulary: resources.bank.vocab?.length ?? 0, manifestSha256, data },
-    sat: exported.counts, contests: contests.counts, catalogErrors: exported.errors, ...inventory };
+    sat: exported.counts, ap: ap.counts, contests: contests.counts, catalogErrors: exported.errors, ...inventory };
   await writeFile(paths.buildInfoPath, JSON.stringify(info, null, 2) + '\n', { flag: 'wx' });
   await verifyBuildPaths(root);
   await rm(paths.stageRoot, { recursive: true, force: true });
   console.log(JSON.stringify({ output: info.assetsDirectory, files: info.fileCount, bytes: info.totalBytes,
-    largestAssetBytes: info.largestAssetBytes, toefl: resources.counts, toeflParts: data.parts.length, sat: info.sat }, null, 2));
+    largestAssetBytes: info.largestAssetBytes, toefl: resources.counts, toeflParts: data.parts.length, sat: info.sat, ap: info.ap }, null, 2));
   return info;
 }
 

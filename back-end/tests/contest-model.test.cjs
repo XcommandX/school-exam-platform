@@ -79,4 +79,34 @@ test('Catalog filters keep supplemental exams explicit', () => {
   assert.equal(M.filterExams(rows, {contest:'AMC10',year:'2002',supplemental:true}).length, 1);
   assert.equal(M.filterExams(rows, {query:'秋季'}).length, 1);
 });
+test('Submitted AMC scores each choice, blank and invalid without guessing disputed answers', () => {
+  const problems = Array.from({length:25}, (_,i) => ({...problem,id:'p'+i,number:i+1}));
+  const full = {...exam,contest:'AMC10',year:2026,problems};
+  const responses = Object.fromEntries(problems.map(p => [p.id,{value:'B'}]));
+  let report = M.scoreReport(full,responses,{submitted:true});
+  assert.equal(report.score,150); assert.equal(report.maximum,150); assert.equal(report.fullExam,true);
+  assert.equal(M.scoreReport(full,{}, {submitted:true}).score,37.5);
+  responses.p0.value='A'; responses.p1.value=''; responses.p2.value='Z';
+  report=M.scoreReport(full,responses,{submitted:true});
+  assert.equal(report.score,133.5); assert.equal(report.correct,22); assert.equal(report.incorrect,1); assert.equal(report.blank,1); assert.equal(report.invalid,1);
+  assert.equal(M.scoreReport(full,responses,{submitted:true,mode:'example'}).fullExam,false);
+  assert.equal(M.scoreReport({...full,year:2001},responses,{submitted:true}).fullExam,false);
+  for(const [year,blank] of [[2000,2],[2001,2.5],[2006,2.5],[2007,1.5]]) assert.equal(M.scoreReport({...full,year},{},{submitted:true}).score,25*blank);
+  assert.equal(M.scoreReport({...full,problems:problems.slice(1)},responses,{submitted:true}).maximum,144);
+  const gated={...full,problems:problems.map((p,i)=>i===0?{...p,quality:{...p.quality,flags:['answer_source_disagreement']}}:p)};
+  report=M.scoreReport(gated,responses,{submitted:true});assert.equal(report.omitted,1);assert.equal(report.maximum,144);assert.equal(report.fullExam,false);
+});
+test('Regular scoring excludes drafts and prior reveal, preserves first check after later reveal', () => {
+  const full={...exam,contest:'AMC12',year:2026,problems:[problem]};
+  assert.equal(M.scoreReport(full,{[problem.id]:{value:'B'}}).maximum,0);
+  assert.equal(M.scoreReport(full,{[problem.id]:{value:'B',revealed:true}}).revealed,1);
+  const r=M.scoreReport(full,{[problem.id]:{value:'B',result:'correct',revealed:true}}); assert.equal(r.score,6);assert.equal(r.maximum,6);assert.equal(r.fullExam,false);
+});
+test('AIME padded answers score one; proofs remain ungraded',()=>{
+ const p={...problem,question_type:'integer',answer:{type:'integer',value:7}};
+ const e={...exam,contest:'AIME',year:2026,problems:[p]};
+ assert.equal(M.scoreReport(e,{[p.id]:{value:'007'}},{submitted:true}).score,1);
+ assert.equal(M.scoreReport(e,{}, {submitted:true}).score,0);
+ assert.equal(M.scoreReport({...e,contest:'USAMO',problems:[{...p,question_type:'proof'}]}, {}, {submitted:true}).score,null);
+});
 console.log(`Contest model: ${checks} groups passed.`);

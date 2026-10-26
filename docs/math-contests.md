@@ -1,14 +1,15 @@
-# 数学竞赛：本机题库、普通练习与限时练习
+# 数学竞赛：共享题库、普通练习与限时练习
 
 ## 范围与发布状态
 
 AMC 10、AMC 12、AIME、USAMO 是独立的竞赛模块，不复用或改写 SAT 考试引擎，不改变 TOEFL 题库与评分。入口为 `/contests/`，沿用 Study Space 页面与统一账号。
 
-本说明描述 2026-10-26 的竞赛升级工作。**本轮没有合入 main，也没有发布新的线上版本**。既有 SAT / TOEFL Cloudflare 网站已经部署；不能由此推断竞赛升级也已上线。commit、push、merge、deploy 是不同操作。
+2026-10-26 后续用户明确授权上传本机题库至 GitHub 和现有 Cloudflare。当前工作在 `feature/contest-card-scoring-release`，保留最新 main 的 AP、TOEFL AI 与共享题库；实际提交、发布版本与线上验证另见 [部署记录](cloudflare-deployment.md)。授权、commit、push、merge、deploy 是不同操作，不自动合入 main。
 
-- 真实竞赛题库、来源缓存、研究证据、导入产物和测试报告只留在忽略的 `local-data/`，不随 Git 或 Cloudflare 构建发布。
-- Git 只带四份明确标记 `example: true` 的原创示例，每项竞赛一题；它们不是官方真题，不代表完整试卷。
-- 默认 `private` 模式没有导入时显示真实空态；不会悄悄用示例冒充题库。用户主动选择示例后才使用 `mode=example`。
+- 授权共享副本位于 `back-end/question-banks/contests/`：232 卷、4011 题、437 份必要图片资源，包含既有解析和参考链接，保留来源与未审/争议状态。清单记录大小和 SHA-256；不复制原始下载 PDF、研究证据、缓存、测试报告、账号或答题记录。GitHub 仓库若公开，此共享副本也会公开。
+- 另保留四份明确标记 `example: true` 的原创示例，每项竞赛一题；它们不是官方真题，不代表完整试卷。
+- 默认 `private` 模式使用真实题库：Cloudflare 从授权共享清单构建；本机优先当前导入修订，无修订时回退共享副本。显式指定私有根目录仍保持隔离语义。没有题库时显示真实空态；用户主动选择示例后才使用 `mode=example`。
+- 公式使用同站固定版本 MathJax 3.2.2 最小副本（含许可证与安全扩展），不向公共 CDN 请求题目或公式。
 - 账号登录是访问条件，但**竞赛作答、收藏和限时记录目前仅在本浏览器按账号保存，不同步到 SQLite / Durable Objects，不跨设备同步**。
 
 ## 本机启动与访问
@@ -54,7 +55,10 @@ Windows 可用 `python` 替代 `python3`。在同一个地址登录后打开：
 - 当前场次只允许填写该场题号。未开始、已结束或超时后只读；手动结束与到时都保留归档，不能恢复为进行中。
 - 同一模式、试卷与修订存在未完成练习时，不能另开一场覆盖它；全部场次结束后可新建练习，旧场保留。
 - 练习进行中不开放检查答案或参考解答；同卷仍有待开始场次时也不通过切换普通模式提前复盘。全部结束后才查看参考内容。
-- 限时记录与普通练习统计分开，不产生官方成绩、排名或证明题自动评分。
+- 限时记录与普通练习统计分开。全部场次结束（手动提交或到时）后按保存答案生成分数、正确/错误/空白/无效/待核对数量与逐题结果，刷新后可复查，不伪造官方认证成绩或排名；USAMO 证明不自动判分。
+- 普通练习在有效检查后显示逐题分值和已检查部分总分；未检查题不当作已交卷空白题，先看答案的题不纳入有效得分。
+- AMC 答对 6 分、答错 0 分；2007 年起空白 1.5 分。2000 年空白 2 分、2001–2006 年 2.5 分依据 [Wikipedia 历史说明](https://en.wikipedia.org/w/index.php?title=American_Mathematics_Competitions&action=raw)，未逐卷核验官方原件，界面明确历史依据限制；2000 年前采用现代练习约定，不冒充原赛制。AIME 答对 1 分，否则 0 分。
+- 示例、缺题、仅部分已检查或存在排除题的报告标为部分练习分数，分母只包含可计分题；争议答案、缺答案和先看答案题不硬判错，也不凭空补分。
 - 示例与缺题试卷标注为示例/部分题限时练习，不声称是完整全真卷；没有收录题目的场次不可开始。
 - 早年 AMC 12 来源（例如历史 AHSME）并非已逐年核定原赛制；本实现采用现代 75 分钟练习标准，并提示这一限制。
 
@@ -159,7 +163,7 @@ python3 back-end/tools/contests/setup_contest_mathjax.py --archive "/absolute/pa
 
 六个模块文件为 [页面](../front-end/contests/index.html)、[样式](../front-end/contests/styles.css)、[普通练习模型](../front-end/contests/model.js)、[应用](../front-end/contests/app.js)、[MathJax 配置](../front-end/contests/mathjax-config.js)及[计时状态机](../front-end/contests/timer.js)。源题库、整个本机目录及示例 JSON 不作为任意静态目录暴露。
 
-Cloudflare [竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)只处理 Git 已跟踪的四份原创示例，拒绝带私有/外部资产的示例。云端 `private` 目录为空，`privateProblems: 0`；不导出本机 MathJax，`mathjaxAvailable: false`，采用 LaTeX 文本降级。完整真实竞赛题库与本机研究资料不会因现有 SAT / TOEFL 共享授权而获得发布许可。进一步说明见 [Cloudflare 部署](cloudflare-deployment.md)。
+Cloudflare [竞赛导出器](../back-end/cloudflare/scripts/export_contests.py)处理四份 Git 已跟踪原创示例及后续明确授权的共享副本，只接受固定目录内清单列出的 Git 跟踪资源，并校验 SHA-256、大小、题卷结构和图片引用。云端 `private` 模式为 4011 题 / 232 卷，图片与最小 MathJax 资源仅通过登录保护的路由提供；内部构建路径不能绕过登录。本机研究资料和用户记录不参与导出。进一步说明及实际发布状态见 [Cloudflare 部署](cloudflare-deployment.md)。
 
 ## 检查与复现
 

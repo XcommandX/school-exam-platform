@@ -11,6 +11,14 @@
 - 读 README.md、docs/CONTRIBUTING.md 和任务相关的 docs/ 文档后再修改。进入子模块时继续读取该目录下的 AGENTS.md（如果存在）。
 - 项目固定四个主体目录：`front-end/`（浏览器代码）、`back-end/`（服务、维护工具与检查）、`docs/`（共享说明）、`local-data/`（本机数据与产物，整体忽略）。截图、临时报告、参考目录和构建结果写入 `local-data/` 对应子目录，不再散落根目录。根目录仅保留 README、AGENTS、启动/同步入口与必要 Git 配置；布局、运行命令和迁移说明见 `docs/project-structure.md`。已有源码搬家不等于实现了正式认证。
 
+## 2026-10-26 AP 与现网整合补充（覆盖早期占位描述）
+
+- 用户已明确授权 AP 合入主分支并更新现有 Cloudflare 网站；发现现网 TOEFL AI 六分制分支尚未合入 main 后，用户另确认一并合入、保留现网 AI 功能，不新增付费依赖。
+- 首页 AP 已为独立蓝色大卡，标题固定为 `AP`，下设“英语语言与写作”，保留未来课程扩展空间；Personal Vocab 仍为占位。AP 作答页参照获授权 SAT/Bluebook 风格，但不改 SAT 受保护考试流程。
+- AP 代码在 `front-end/ap/`，导入工具在 `back-end/tools/ap/`，协议验证在 `back-end/shared/ap_schema.py`。2026-10-26 后续用户明确选择“上传网站并提交 GitHub”，授权此前已导入的 102 份材料及关联 150 份 PDF 复制至 `back-end/question-banks/ap/` 并推送 main、发布现有 Cloudflare 网站；该授权覆盖此前“仅本机”限制。共享副本由 `RESOURCE_MANIFEST.json` 记录大小/SHA-256，仅含题组与引用 PDF，不含账号、作答、导入报告、原始压缩包或此前跳过的 19 份附件 PDF。网站访问继续要求登录；GitHub 仓库公开时这些共享副本也会公开。
+- AP 页面/API 受统一会话保护，草稿、历史、错题仅在浏览器按当前账号隔离，不自动迁移匿名记录，不声称 AP 云端同步。官方 MCQ 60 分钟、FRQ 135 分钟（含15分钟阅读），暂停/自由练习/到时不自动交卷；详情见 `docs/ap-language.md`。
+- 已授权原有 TOEFL Workers AI 保留，部署绑定、账号和记录不重置。实际发布状态见 `docs/cloudflare-deployment.md`，旧条目“不接AI/AP待接入”不再描述当前 Cloudflare 功能。
+
 ## 工作约定
 
 - 默认用中文解释工作结果；代码命名和工具原有标识保留英文。
@@ -75,7 +83,7 @@
 ## 2026-10-26 数学竞赛升级边界
 
 - AMC 10 / AMC 12 / AIME / USAMO 独立接入 `/contests/`，使用统一登录，不改 SAT 考试引擎或 TOEFL 题库；用法、导入、计时与证据限制见 [数学竞赛](docs/math-contests.md)。本轮升级尚未合入 main 或发布；既有 SAT / TOEFL 云站已部署的事实不变。
-- 真实竞赛题库、来源缓存、研究 PDF / 截图和测试档案只存忽略的 `local-data/`。既有 SAT / TOEFL 指定共享目录授权不覆盖竞赛资料；竞赛 Git 与 Cloudflare 只带四份原创示例，云端 private 目录为空，不导出本机 MathJax，保留 LaTeX 文本降级。
+- 2026-10-26 后续用户明确授权“上传本机的题目（可以同步到github）”，覆盖此前竞赛真实题库仅本机的限制。本轮将当前已导入的 232 卷 / 4011 题及必要图片、已有解析和参考链接复制到 `back-end/question-banks/contests/`，以 `RESOURCE_MANIFEST.json` 记录大小与 SHA-256，允许 GitHub 功能分支及现有 Cloudflare 发布。来源缓存、原始下载 PDF、研究截图、测试档案、账号、答题记录、密钥仍仅本机；不 force-add 私有目录。发布与合入 main 分别记录于部署文档，不能将授权或构建完成等同发布完成。GitHub 仓库若公开，共享题库副本也会公开。
 - 竞赛作答、收藏与限时记录按登录账号隔离在浏览器 localStorage，不上传 SQLite / Durable Objects，不跨设备同步，不自动迁移匿名历史。Web Locks 协调同账号单写者；损坏或不可写时提示而非假称保存成功。
 - 计时采用绝对截止时间、明确开始、不可暂停、结束只读；USAMO 1996–2001 是同日两场各 180 分钟，2002 起两天各 270 分钟。早年统一 210 分钟是练习约定，不能声称每一年原赛制均已核验；历史镜像未经官方原件逐字节认证。客户端时钟不是可信监考。
 - 外部解答只保留来源链接，不将可访问网页当作转载许可；独立生成解答保留 `unreviewed_generated`，缺解答、答案分歧及来源待审状态不能改成已认证。

@@ -104,4 +104,13 @@ test('More than 500 archived attempts preserved without truncation', () => {
   for(let i=0;i<501;i++){const a=T.create(state,'private',e,'a-'+i,i*100);T.start(a,0,i*100);T.finish(a,0,i*100+1);}
   assert.equal(T.load(state).attempts.length,501);
 });
+test('Reports appear only after submission/expiry and never mutate archived answers',()=>{
+ const e=exam(); e.problems=e.problems.map(p=>({...p,question_type:'multiple_choice',choices:['A','B','C','D','E'].map(label=>({label})),answer:{type:'choice',accepted:['A']},quality:{auto_gradable:true,ready_for_practice:true,structurally_complete:true,flags:[]}}));
+ const {a,state}=make(e); assert.equal(T.report(a,e,M),null);T.start(a,0,2000);T.write(a,0,e.problems[0],'A',3000);assert.equal(T.report(a,e,M),null);
+ T.finish(a,0,4000);const snapshot=JSON.stringify(a);const r=T.report(a,e,M);assert.equal(r.score,42);assert.equal(r.maximum,150);assert.equal(r.blank,24);assert.equal(JSON.stringify(a),snapshot);
+ assert.deepEqual(T.report(T.load(state).attempts[0],e,M),r);
+ assert.equal(T.report(a,{...e,revision:'b'.repeat(64)},M),null);
+ const second=make(e).a;T.start(second,0,2000);T.reconcile(second,second.sessions[0].deadline);assert.equal(T.report(second,e,M).score,37.5);
+ const u=make(exam('USAMO'));T.start(u.a,0,2000);T.finish(u.a,0,3000);assert.equal(T.report(u.a,u.e,M),null);T.start(u.a,1,4000);T.finish(u.a,1,5000);assert.equal(T.report(u.a,u.e,M).score,null);
+});
 console.log(`Contest timer: ${checks} groups passed.`);

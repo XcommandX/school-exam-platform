@@ -21,7 +21,7 @@ export function safeRelativePath(value) {
 
 export function safeAssetPath(value) {
   safeRelativePath(value);
-  if (!['web', 'sat', 'toefl', 'contests', '_catalog'].includes(value.split('/')[0])
+  if (!['web', 'sat', 'toefl', 'contests', 'ap', '_catalog'].includes(value.split('/')[0])
       || value.split('/').some(part => forbiddenSegments.has(part.toLowerCase()))
       || /(?:^|\/)(?:AGENTS|README|LICENSE)(?:\.|$)/iu.test(value)
       || /\.(?:py|pyc|md|sqlite3?|db|pem|key|p12|zip|log|map)$/iu.test(value)) {
@@ -103,7 +103,9 @@ export class AssetWriter {
   // streams before decoding; JSON and UTF-8 characters may cross chunk borders.
   async route(route, relative, input, contentType = 'application/json; charset=utf-8', options = {}) {
     if (typeof route !== 'string' || !route.startsWith('/')) throw new Error('An absolute route is required.');
-    safeRelativePath(route.slice(1));
+    // AP source IDs have one canonical colon; this is a URL-only exception.
+    // The independent output asset path still passes the unchanged strict gate.
+    if (!/^\/api\/exams\/ap\/sources\/ap:[a-z0-9][a-z0-9-]{0,119}$/.test(route)) safeRelativePath(route.slice(1));
     safeAssetPath(relative);
     const bytes = Buffer.isBuffer(input) ? input : Buffer.from(input);
     const common = { contentType, bytes: bytes.length, sha256: sha256(bytes) };
@@ -152,10 +154,32 @@ export class AssetWriter {
   }
 }
 
+// Server-only grading input: never trust a browser's question snapshot.
+export function buildToeflAIQuestions(bank) {
+  const questions = [], seen = new Set();
+  for (const record of bank.records || []) {
+    if (!/^(?:speaking-t[12]|writing-t[23])$/.test(record.module)) continue;
+    for (const item of record.items || []) {
+      const kind = { write_email: 'email', academic_discussion: 'discussion' }[item.kind] || item.kind;
+      if (!['repeat', 'interview', 'email', 'discussion'].includes(kind)) continue;
+      const key = record.module + ':' + record.id;
+      const question = { id: item.id, kind, prompt: item.prompt_text || item.prompt || '',
+        posts: item.posts || [], recipient: item.recipient, subject: item.subject_line, requirements: item.requirements };
+      const identity = JSON.stringify([key, item.id]);
+      if (seen.has(identity) || typeof item.id !== 'string' || !question.prompt || Buffer.byteLength(JSON.stringify(question)) > 32 * 1024) throw new Error('Invalid or oversized TOEFL AI question.');
+      seen.add(identity); questions.push({ record: key, question });
+    }
+  }
+  const result = { schemaVersion: 1, questions };
+  if (Buffer.byteLength(JSON.stringify(result)) > 12 * 1024 * 1024) throw new Error('TOEFL AI index exceeds bounded runtime size.');
+  return result;
+}
+
 export async function writeToeflData(writer, bank, { maxPartBytes = MAX_DATA_PART_BYTES } = {}) {
   if (!Number.isSafeInteger(maxPartBytes) || maxPartBytes < 128 || maxPartBytes > MAX_DATA_PART_BYTES) {
     throw new Error('TOEFL executable parts must not exceed 8 MiB.');
   }
+  await writer.write('_catalog/toefl-ai-questions.json', JSON.stringify(buildToeflAIQuestions(bank)) + '\n');
   const limit = Math.min(maxPartBytes, writer.maxAssetBytes), serialized = JSON.stringify(bank);
   if (typeof serialized !== 'string') throw new Error('A JSON bank is required.');
   const parts = [];

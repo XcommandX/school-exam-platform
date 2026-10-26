@@ -1,0 +1,76 @@
+{
+  "contentMode": "private",
+  "defaultDurationSeconds": 7200,
+  "documents": [
+    {
+      "asset": "question-assets/ap/475884449c34c5e5e23581ce6c4bc0deeaee1b66b80b7617fa3fd3204cdc89b7.pdf",
+      "id": "paper",
+      "label": "Original question paper",
+      "pageCount": 4,
+      "role": "questions"
+    },
+    {
+      "asset": "question-assets/ap/258fac94f992d061333058a9a48b3f3fa6a38de5ba086519ef7f80d8ec06528b.pdf",
+      "id": "scoring-258fac94f992d061",
+      "label": "Scoring guidelines",
+      "pageCount": 4,
+      "role": "scoring"
+    }
+  ],
+  "exam": "ap",
+  "form": "Standard",
+  "id": "ap:english-language-1999-standard-frq-c868e310ff2f550f6906",
+  "importWarnings": [
+    "Automated privacy checks cover paths, extracted text and inspectable PDF objects only. Handwriting, encrypted objects and all pages have not been fully visually audited; verify the original PDF before sharing.",
+    "The PDF is encrypted but readable without a supplied password; encrypted object streams were not decrypted by the privacy inspector.",
+    "Question 2: the source withholds passage text; no structured question created.",
+    "FRQ text is an automatic transcription, not human-verified. All extracted source passages are retained; diagrams, cartoons, typography and missing scan text require the original PDF pages."
+  ],
+  "kind": "frq",
+  "questions": [
+    {
+      "answerDocument": "scoring-258fac94f992d061",
+      "answerPage": 2,
+      "answerProvenance": "Scoring guidelines paired by unambiguous exam year/form; essays require rubric-based self/teacher review, not automatic scoring.",
+      "correctOption": null,
+      "explanation": "",
+      "id": "ap:english-language-1999-standard-frq-c868e310ff2f550f6906:q001",
+      "number": 1,
+      "options": [],
+      "pages": [
+        2
+      ],
+      "passage": "Question 1\n(Suggested time— 40 minutes. This question counts one-third of the total essay section score.)\nRead the following two passages about Florida’s Okefenokee Swamp carefully. Then write an essay in which\nyou analyze how the distinctive style of each passage reveals the purpose of its writer.\nPassage 1\nOkefenokee Swamp , primitive swamp and wildlife\nrefuge in southeastern Georgia and northern Florida,\nis a shallow, saucer-shaped depression approximately\nLine 25 mi wide and 40 mi long and covers an area of\n(5) more than 600 sq mi. Lying about 50 mi inland from\nthe Atlantic Coast, the swamp is bounded on the east\nby the low, sandy Trail Ridge, which prevents direct\ndrainage into the Atlantic. The swamp is partially\ndrained southward into the Atlantic by the Suwannee\n(10) and St. Mary’s rivers. The Okefenokee Swamp\nincludes low, sandy ridges, wet grassy savannas,\nsmall islands (called hummocks) surrounded by\nmarshes, and extensive “prairies,” or dark water areas\ncovered by undergrowth and trees. Vegetation is\n(15) dense in the swamp and includes giant tupelo and\nbald cypress trees festooned with Spanish moss,\nbrush, and vines: where sandy soil is above the\nwater, pine trees predominate. Meandering channels\nof open water form an intricate maze. Exotic flowers,\n(20) among them floating hearts, lilies, and rare orchids,\nabound. The swamp is populated with diverse and\nabundant wildlife, with about 175 species of birds\nand at least 40 species of mammals, which include\nraccoons, black bear, white-tail deer, bobcats, fox,\nand otter. Alligators are also present.\n(1988)\nPassage 2\nVast and primeval, unfathomable, unconquerable,\nbastion of cottonmouth, rattlesnake and leech, mother\nof vegetation, father of mosquito, soul of silt, the\nLine Okefenokee is the swamp archetypal, the swamp of\n(5) legend, of racial memory, of Hollywood. It gives birth\nto two rivers, the St. Mary’s and the Suwannee,\nfanning out over 430,000 leaf-choked acres, every last\none as sodden as a sponge. Four hundred and thirty\nthousand acres of stinging, biting and boring insects,\n(10) of maiden cane and gum and cypress, of palmetto,\nslash pine and peat, of muck, mud, slime and ooze.\nThings fester here, things cook down, decompose,\ndeliquesce. The swamp is home to two hundred and\ntwenty-five species of birds, forty-three of mammals,\n(15) fifty-eight of reptiles, thirty-two of amphibians and\nthirty-four of fish—all variously equipped with\nbeaks, talons, claws, teeth, stingers\nand fangs—not to mention the seething galaxies of\ngnats and deerflies and no-see-ums, the ticks, mites,\n(20) hookworms and paramecia that exist only to com-\npound the misery of life. There are alligators here,\nbears, puma, bobcats and bowfin, there are cooters\nand snappers, opossum, coon and gar. They feed\non one another, in the sludge and muck and on the\n(25) floating mats of peat they bury eggs, they scratch\nand stink and sniff at themselves, caterwauling and\nscreeching through every minute of every day and\nnight till the place reverberates like some hellish zoo.\n(1990)",
+      "prompt": "Question 1",
+      "responseType": "rhetorical-analysis",
+      "reviewStatus": "needs-review",
+      "sourceDocument": "paper",
+      "type": "free-response"
+    },
+    {
+      "answerDocument": "scoring-258fac94f992d061",
+      "answerPage": 4,
+      "answerProvenance": "Scoring guidelines paired by unambiguous exam year/form; essays require rubric-based self/teacher review, not automatic scoring.",
+      "correctOption": null,
+      "explanation": "",
+      "id": "ap:english-language-1999-standard-frq-c868e310ff2f550f6906:q003",
+      "number": 3,
+      "options": [],
+      "pages": [
+        4
+      ],
+      "passage": "Question 3\n(Suggested time— 40 minutes. This question counts one-third of the total essay section score.)\nIn the following excerpt from Antigone , by the classical Greek playwright Sophocles, the wise Teiresias observes\nThink: all men make mistakes,\nBut a good man yields when he\nKnows his course is wrong,\nAnd repairs the evil: The only\nCrime is pride.\nTake some time to think about the implications of the quotation. Then write a carefully reasoned essay that explores\nthe validity of the assertion, using examples from your reading, observation, or experience to develop your position.",
+      "prompt": "Question 3",
+      "responseType": "argument",
+      "reviewStatus": "needs-review",
+      "sourceDocument": "paper",
+      "type": "free-response"
+    }
+  ],
+  "revision": "6ed364d321a0abea29990313e556788aef0a96cef506a318ca87e5b540d6147e",
+  "schemaVersion": 2,
+  "section": "English Language and Composition",
+  "subject": "english-language",
+  "title": "AP English Language 1999 · Standard · Free Response",
+  "year": 1999
+}

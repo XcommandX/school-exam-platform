@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-"""Export only four Git-tracked original contest examples, never a private bank.
-
-Cloud builds deliberately omit optional local MathJax and all local-data contest
-content. Use the same canonical normalization/revisions as the Python service.
+"""Export original examples and the explicitly authorized manifest-checked shared bank.
+Never enumerate local-data: only fixed shared resources listed in the manifest.
 """
 from __future__ import annotations
 
@@ -12,7 +10,8 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'back-end'))
-from shared.contest_bank import EXAMPLE_FILES, no_symlinks, normalize_exam, read_json
+from shared.contest_bank import EXAMPLE_FILES, no_symlinks, normalize_exam, read_json, safe_path, validate_image
+from shared.contest_shared import validate_shared
 
 
 def export_contests(repository, output, tracked_file):
@@ -46,13 +45,38 @@ def export_contests(repository, output, tracked_file):
         summaries.append(summary)
         emit('/api/contests/exams/' + document['id'] + '?mode=example', 'exam-' + name, document)
     empty = {'mode': 'private', 'exams': [], 'totalProblems': 0, 'errors': [], 'mathjaxAvailable': False}
-    emit('/api/contests/catalog', 'catalog.json', empty)
+    shared_root = repository / 'back-end/question-banks/contests'
+    shared, bank, media = None, None, []
+    manifest_name = 'back-end/question-banks/contests/RESOURCE_MANIFEST.json'
+    if no_symlinks(shared_root / 'RESOURCE_MANIFEST.json').exists():
+        if manifest_name not in tracked:
+            raise ValueError('Shared contest manifest must be Git-tracked.')
+        shared, bank = validate_shared(shared_root, tracked)
+        for summary in bank['exams']:
+            document = read_json(safe_path(shared_root, 'exams/' + summary['id'] + '.json'))
+            emit('/api/contests/exams/' + summary['id'], 'shared-' + summary['id'] + '.json', document)
+        for entry in shared['files']:
+            name = entry['path']
+            if name.startswith('assets/'):
+                mime = validate_image(safe_path(shared_root, name).read_bytes(), name)
+                media.append({**entry, 'route': '/contest-assets/' + name, 'contentType': mime})
+            elif name.startswith('vendor/mathjax/') and name.endswith('.js'):
+                media.append({**entry, 'route': '/contest-vendor/mathjax/' + name[len('vendor/mathjax/'):], 'contentType': 'application/javascript; charset=utf-8'})
+            elif name == 'vendor/mathjax/LICENSE':
+                media.append({**entry, 'route': '/contest-vendor/mathjax/LICENSE', 'contentType': 'text/plain; charset=utf-8'})
+        empty['mathjaxAvailable'] = any(e['path'] == 'vendor/mathjax/es5/tex-svg.js' for e in media)
+    emit('/api/contests/catalog', 'catalog.json', {**empty, 'exams': bank['exams'] if bank else [],
+        'totalProblems': sum(e['problem_count'] for e in bank['exams']) if bank else 0})
     emit('/api/contests/catalog?mode=example', 'examples.json', {
         **empty, 'mode': 'example', 'exams': summaries,
         'totalProblems': sum(item['problem_count'] for item in summaries)})
     result = {'schemaVersion': 1, 'routes': routes,
               'counts': {'exampleExams': len(summaries), 'exampleProblems': sum(item['problem_count'] for item in summaries),
-                         'privateProblems': 0, 'mathjaxAvailable': False}}
+                         'privateProblems': sum(e['problem_count'] for e in bank['exams']) if bank else 0,
+                         'privateExams': len(bank['exams']) if bank else 0,
+                         'assets': len(bank['assets']) if bank else 0,
+                         'mathjaxAvailable': empty['mathjaxAvailable']},
+              'media': media, 'files': shared['files'] if shared else []}
     with (output / 'contest-export-info.json').open('x', encoding='utf-8', newline='\n') as stream:
         json.dump(result, stream, ensure_ascii=False, allow_nan=False)
         stream.write('\n')

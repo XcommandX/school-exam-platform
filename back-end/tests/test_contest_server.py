@@ -126,11 +126,7 @@ class ContestServerTests(unittest.TestCase):
         self.assertEqual(self.request('/sat/')[2]['Location'], '/sat/html/index.html')
         for route, marker in (('/sat/html/index.html', b'Synthetic SAT'), ('/toefl/', b'Synthetic TOEFL')):
             status, body, headers = self.request(route)
-            # Existing TOEFL Windows path adapter uses native separators with a
-            # URL-only validator; this pre-existing route returns 404 on Windows.
-            if route == '/toefl/' and sys.platform == 'win32':
-                self.assertEqual(status, 404)
-                continue
+            # Latest main normalizes TOEFL paths to URL separators on Windows.
             self.assertEqual(status, 200)
             self.assertIn(marker, body)
             self.assertEqual(headers['Cache-Control'], 'no-store')

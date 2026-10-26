@@ -87,6 +87,21 @@
       if (attempt && storageWriter && storageHealthy && T.write(attempt, day, p, value, Date.now())) save();
     } else if (!response().result) { M.updateResponse(state, mode, exam, p, {value}); save(); }
   }
+  function currentReport() {
+    if (!exam || !canReview()) return null;
+    return timedMode ? T.report(attempt, exam, M) : M.scoreReport(exam, M.getSession(state, mode, exam)?.responses || {}, {mode});
+  }
+  function renderScore() {
+    const report = currentReport();
+    $('score-report').hidden = !report;
+    if (!report) { $('score-items').replaceChildren(); $('score-total').textContent = ''; return; }
+    $('score-title').textContent = report.label;
+    $('score-total').textContent = report.policy ? `${report.score} / ${report.maximum} 分` : '不自动给分';
+    $('score-counts').textContent = `正确 ${report.correct} · 错误 ${report.incorrect} · 空白 ${report.blank} · 无效作答 ${report.invalid} · 待提交 ${report.pending} · 不可判分 ${report.omitted} · 看答案后作答 ${report.revealed}`;
+    $('score-policy').textContent = report.policy ? `${report.policy.label}。缺题、不可判分及先看答案的题不计入分数与满分；答案依据当前题库，未经官方认证。` : '证明题保留草稿，请自行或由教师复核。';
+    const labels = {correct:'正确',incorrect:'错误',blank:'空白',invalid:'无效作答',ungraded:'不可判分',revealed:'已看答案，不计分',pending:'待提交'};
+    $('score-items').replaceChildren(...report.items.map(item => node('li', `第 ${item.number} 题 · ${labels[item.status]}${item.points === null ? '' : ` · ${item.points} 分`}`)));
+  }
   function renderTimer() {
     if (!exam) return;
     const schedule = T.plan(exam, mode), s = session();
@@ -118,6 +133,7 @@
     $('timer-source').hidden = !canReview();
     if (canReview()) $('timer-source').href = schedule.source;
     else $('timer-source').removeAttribute('href');
+    renderScore();
   }
   function tick() {
     if (!active()) return;
@@ -257,7 +273,7 @@
     const rows = M.filterExams(catalog, {contest, year: $('year').value, query: $('search').value, supplemental: $('supplemental').checked});
     $('exam-count').textContent = `${rows.length} 份试卷`;
     if (!rows.length) {
-      $('exam-list').replaceChildren(catalog.length ? empty('没有匹配的试卷', '调整年份、搜索条件或补充卷选项。') : empty('尚未导入本机题库', '真实题目不随源码上传。完成本机导入后即可练习，也可以先体验原创示例。', button('打开原创示例', () => changeMode('example'), 'primary-button')));
+      $('exam-list').replaceChildren(catalog.length ? empty('没有匹配的试卷', '调整年份、搜索条件或补充卷选项。') : empty('尚未导入竞赛题库', '当前尚无可用的真实题目。请联系管理员检查题库，也可以先体验原创示例。', button('打开原创示例', () => changeMode('example'), 'primary-button')));
       return;
     }
     $('exam-list').replaceChildren(...rows.map(item => {
@@ -279,10 +295,10 @@
     catalog = result.exams;
     $('private-mode').setAttribute('aria-pressed', String(mode === 'private'));
     $('example-mode').setAttribute('aria-pressed', String(mode === 'example'));
-    notice('notice', mode === 'example' ? '原创示例模式：不是历年真题，记录与本机题库分开保存。' : result.errors?.length ? '部分本机资源未通过校验，请检查导入报告。' : '');
+    notice('notice', mode === 'example' ? '原创示例模式：不是历年真题，记录与竞赛题库分开保存。' : result.errors?.length ? '部分本机资源未通过校验，请检查导入报告。' : '');
     updateYears(); renderCards(); stats(); renderLibrary();
     if (['wrong','bookmarks','history'].includes(view)) renderSaved();
-    window.startContestMath(result.mathjaxAvailable).then(ok => { if (!ok) notice('math-notice', '公式渲染未就绪，当前显示 LaTeX 原文。请先运行本机公式资源安装脚本。', 'warning'); });
+    window.startContestMath(result.mathjaxAvailable).then(ok => { if (!ok) notice('math-notice', '公式渲染未就绪，当前显示 LaTeX 原文。请重试或联系管理员检查公式资源。', 'warning'); });
     if (navigationToken !== requestVersion) return;
     if (initialExam && catalog.some(e => e.id === initialExam)) await openExam(initialExam, initialQuestion, false);
     else if (['wrong','bookmarks','history'].includes(initialView)) switchView(initialView);
@@ -297,7 +313,7 @@
     captureDraft();
     const token = ++requestVersion;
     const item = catalog.find(e => e.id === id);
-    if (!item) throw Error('本机题库中未找到该试卷');
+    if (!item) throw Error('竞赛题库中未找到该试卷');
     notice('error', '');
     const data = await get(`/api/contests/exams/${encodeURIComponent(id)}${modeQuery()}`);
     if (token !== requestVersion) return;
@@ -360,10 +376,14 @@
     $('bookmark').setAttribute('aria-pressed', String(marked)); $('bookmark').textContent = marked ? '★ 已收藏' : '☆ 收藏';
   }
   function showFeedback() {
+    renderScore();
     const r = response(), p = current();
     if (!canReview()) { notice('feedback', ''); return; }
     let text = '', kind = '';
     if (r.result) { text = r.result === 'correct' ? '回答正确。' : '答案不匹配，已加入错题本。'; kind = r.result; }
+    const item = currentReport()?.items.find(item => item.id === p.id);
+    if (timedMode && item) { kind = ['correct','incorrect'].includes(item.status) ? item.status : ''; text = ({correct:'回答正确。',incorrect:'答案不匹配。',blank:'未作答。',invalid:'作答格式无效。',ungraded:'本题不可自动判分。'}[item.status] || '') + (item.points === null ? '' : ` 本题 ${item.points} 分。`); }
+    else if (r.result && item?.points !== null && item) text += ` 本题 ${item.points} 分。`;
     if (r.revealed || r.result || timedMode && reviewed.has(reviewKey())) {
       if (p.answer) text += ` 参考答案：${p.answer.display ?? p.answer.value ?? p.answer.accepted?.join(' / ')}`;
       if (!r.result) text += timedMode ? '（限时记录只读，不计入普通练习统计。）' : '（查看参考内容后，不计入本题正确率。）';
@@ -562,7 +582,7 @@
     }).catch(() => notice('math-notice', '部分解答公式无法渲染，请核对原文。', 'warning'));
   });
   $('clear-history').onclick = () => {
-    if (!active() || !confirm(`清除${mode === 'example' ? '原创示例' : '本机题库'}的普通练习作答和证明草稿？限时记录、收藏和另一模式的记录保留。`)) return;
+    if (!active() || !confirm(`清除${mode === 'example' ? '原创示例' : '竞赛题库'}的普通练习作答和证明草稿？限时记录、收藏和另一模式的记录保留。`)) return;
     for (const [key, record] of Object.entries(state.sessions)) if (record.mode === mode) delete state.sessions[key];
     save(); stats(); renderSaved();
   };

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f4f0">
-  <meta name="description" content="TOEFL 与 SAT 的统一学习空间。">
+  <meta name="description" content="TOEFL、SAT 与 AP 的统一学习空间。">
   <title>Study Space · 学习空间</title>
   <link rel="stylesheet" href="/web/styles.css">
   <script src="/web/platform-auth.js" defer></script>
@@ -65,12 +65,27 @@
         <div class="card-bottom"><div class="subject-links" aria-label="SAT 分项练习"><a href="/sat/?view=practiceBuilder&amp;mode=custom&amp;section=reading-writing"><span data-icon="book"></span>英语</a><a href="/sat/?view=practiceBuilder&amp;mode=custom&amp;section=math"><span data-icon="function"></span>数学</a></div><a class="start-button" href="/sat/?view=dashboard">开始练习<span data-icon="arrow"></span></a></div>
       </article>
     </section>
-    <section class="contest-entry" aria-labelledby="contest-entry-title">
-      <div class="contest-entry-heading"><span class="contest-entry-symbol" data-icon="sigma" aria-hidden="true"></span><h2 id="contest-entry-title">数学竞赛</h2></div>
-      <nav class="contest-entry-links" aria-label="数学竞赛分类"><a href="/contests/?contest=AMC10">AMC 10</a><a href="/contests/?contest=AMC12">AMC 12</a><a href="/contests/?contest=AIME">AIME</a><a href="/contests/?contest=USAMO">USAMO</a></nav>
-      <a class="contest-entry-start" href="/contests/">开始练习<span data-icon="arrow" aria-hidden="true"></span></a>
+    <section class="exam-card contest-entry" aria-labelledby="contest-entry-title">
+      <div class="card-texture" aria-hidden="true"></div>
+      <div class="floating-tile tile-one" data-icon="sigma" aria-hidden="true"></div><div class="floating-tile tile-two" data-icon="function" aria-hidden="true"></div><div class="floating-tile tile-three" data-icon="trophy" aria-hidden="true"></div><div class="card-glyph" data-icon="calculator" aria-hidden="true"></div>
+      <div class="card-badge"><span data-icon="sigma" aria-hidden="true"></span>Mathematics</div>
+      <div class="card-title"><h2 id="contest-entry-title">MATH</h2><p>数学竞赛</p></div>
+      <div class="card-bottom">
+        <nav class="subject-links contest-entry-links" aria-label="数学竞赛分类"><a href="/contests/?contest=AMC10"><span data-icon="calculator" aria-hidden="true"></span>AMC 10</a><a href="/contests/?contest=AMC12"><span data-icon="function" aria-hidden="true"></span>AMC 12</a><a href="/contests/?contest=AIME"><span data-icon="sigma" aria-hidden="true"></span>AIME</a><a href="/contests/?contest=USAMO"><span data-icon="trophy" aria-hidden="true"></span>USAMO</a></nav>
+        <a class="start-button contest-entry-start" href="/contests/">开始练习<span data-icon="arrow" aria-hidden="true"></span></a>
+      </div>
     </section>
-    <footer class="site-footer"><div><button type="button" data-dialog="ap">AP</button><span>·</span><button type="button" data-dialog="vocab">Personal Vocab</button></div></footer>
+    <section class="exam-card home-ap-entry" aria-labelledby="home-ap-title">
+      <div class="card-texture" aria-hidden="true"></div>
+      <div class="floating-tile tile-one" data-icon="cap" aria-hidden="true"></div><div class="floating-tile tile-two" data-icon="book" aria-hidden="true"></div><div class="floating-tile tile-three" data-icon="pencil" aria-hidden="true"></div><div class="card-glyph" data-icon="cap" aria-hidden="true"></div>
+      <div class="card-badge"><span data-icon="landmark" aria-hidden="true"></span>Advanced Placement</div>
+      <div class="card-title"><h2 id="home-ap-title">AP</h2></div>
+      <div class="card-bottom">
+        <nav class="subject-links" aria-label="AP 课程"><a href="/ap/" aria-label="AP English Language and Composition 英语语言与写作"><span data-icon="book" aria-hidden="true"></span>英语语言与写作</a></nav>
+        <a class="start-button" href="/ap/" aria-label="开始 AP 英语语言与写作练习">开始练习<span data-icon="arrow" aria-hidden="true"></span></a>
+      </div>
+    </section>
+    <footer class="site-footer"><div><button type="button" data-dialog="vocab">Personal Vocab</button></div></footer>
   </main>
   <dialog class="home-dialog" id="home-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" class="icon-button" data-close-dialog aria-label="关闭"><span data-icon="close"></span></button></div><div id="dialog-content"></div></dialog>
   <div class="toast" id="toast" role="status" hidden></div>

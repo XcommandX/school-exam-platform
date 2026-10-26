@@ -27,11 +27,14 @@ import xml.etree.ElementTree as ET
 REPOSITORY = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPOSITORY / 'back-end'))
 from shared.question_schema import normalize_question_set, to_sat_legacy, validate_question_set
+from shared.ap_schema import AP_ASSET_RE, summarize_ap_set, validate_ap_set
+from shared.ap_shared import SHARED_AP, load_shared_ap, safe_path as safe_ap_path
 from server.platform_auth import make_auth_handler
 from shared.contest_bank import ContestStore, safe_path as contest_safe_path
 
 CONTEST_PUBLIC_FILES = frozenset({'index.html', 'styles.css', 'model.js', 'app.js', 'mathjax-config.js', 'timer.js'})
 
+AP_PUBLIC_FILES = frozenset({'index.html', 'styles.css', 'ap-model.js', 'app.js'})
 MAX_BYTES = 20 * 1024 * 1024
 MAX_PACK_BYTES = 128 * 1024 * 1024
 MAX_BACKUP_BYTES = 256 * 1024 * 1024
@@ -679,25 +682,107 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
     toefl_preview, toefl_preview_root, toefl_files = _toefl_asset_configuration(root)
     auth = make_auth_handler(private)
     contests = ContestStore(root, private_root if private_root else root / 'local-data')
+    # Explicit private roots retain their isolated/empty semantics for local tests.
+    # A normal checkout uses the authorized shared bank unless a local revision exists.
+    if (private_root is None and not (root / 'local-data/contests/current.json').exists()
+            and (root / 'back-end/question-banks/contests/RESOURCE_MANIFEST.json').is_file()):
+        from shared.contest_shared import SharedContestStore
+        contests = SharedContestStore(root)
+
+    # Parse large AP text sets once per changed bank, not for every PDF request.
+    bank_cache = {}
+    bank_lock = threading.Lock()
+
+    def read_private_sets(exam):
+        folder = banks / exam
+        if folder.is_symlink() or not folder.resolve().is_relative_to(private):
+            return [], [{'file': exam, 'error': 'Invalid private bank directory.'}]
+        paths = sorted(folder.glob('*.json'))
+        try:
+            signature = tuple((p.name, p.stat().st_mtime_ns, p.stat().st_size, p.is_symlink()) for p in paths)
+        except OSError:
+            signature = None
+        with bank_lock:
+            if exam == 'ap' and signature is not None and bank_cache.get(exam, (None,))[0] == signature:
+                return bank_cache[exam][1]
+            found, errors, seen, ambiguous = [], [], {}, set()
+            for path in paths:
+                if path.is_symlink() or not path.is_file():
+                    continue
+                try:
+                    if path.stat().st_size > MAX_BYTES:
+                        raise ValueError('Question set exceeds 20 MB.')
+                    document = json.loads(path.read_text(encoding='utf-8'))
+                    (validate_ap_set if exam == 'ap' else validate_question_set)(document)
+                    if document['exam'] != exam:
+                        raise ValueError('Question set belongs to a different exam.')
+                    # AP sources are revision-addressed and must be unambiguous.
+                    # Keep v1/SAT's existing multi-file import semantics unchanged.
+                    if exam == 'ap':
+                        if document['id'] in seen:
+                            if seen[document['id']] != document:
+                                ambiguous.add(document['id'])
+                            raise ValueError('Duplicate question set id.')
+                        seen[document['id']] = document
+                    found.append((path, document))
+                except (OSError, ValueError, KeyError, TypeError) as error:
+                    errors.append({'file': path.name, 'error': str(error)})
+            if exam == 'ap':
+                found = [row for row in found if row[1]['id'] not in ambiguous]
+                errors.extend({'file': 'ap', 'id': identity, 'error': 'Ambiguous private AP set id.'}
+                              for identity in sorted(ambiguous))
+            if exam == 'ap' and signature is not None:
+                bank_cache[exam] = (signature, (found, errors))
+            return found, errors
+
+    shared_ap_cache = {}
+    shared_ap_lock = threading.Lock()
+
+    def read_shared_ap_sets():
+        base = root / SHARED_AP
+        if not base.exists() and not base.is_symlink():
+            return [], []
+        try:
+            # Include directories, ctime/inode and all files, not only the manifest.
+            # Revalidate hashes whenever any member changes; cache only successes.
+            safe_ap_path(root, SHARED_AP)
+            paths = [base, *base.rglob('*')]
+            signature = tuple((p.relative_to(root).as_posix(), p.lstat().st_size,
+                               p.lstat().st_mtime_ns, p.lstat().st_ctime_ns,
+                               p.lstat().st_ino, p.is_symlink()) for p in sorted(paths))
+            with shared_ap_lock:
+                if shared_ap_cache.get('signature') != signature:
+                    loaded = load_shared_ap(root)
+                    set_files = [f['path'] for f in loaded['files'] if f['path'].startswith('sets/')]
+                    shared_ap_cache.update(signature=signature,
+                                           rows=[(base / name, doc) for name, doc in zip(set_files, loaded['sets'])])
+                return shared_ap_cache['rows'], []
+        except (OSError, ValueError, KeyError, TypeError):
+            return [], [{'file': 'shared-ap', 'error': 'Shared AP library failed integrity validation.'}]
 
     def read_sets(exam):
-        found, errors = [], []
-        for path in sorted((banks / exam).glob('*.json')):
-            if path.is_symlink() or not path.is_file():
-                continue
-            try:
-                if path.stat().st_size > MAX_BYTES:
-                    raise ValueError('Question set exceeds 20 MB.')
-                document = json.loads(path.read_text(encoding='utf-8'))
-                validate_question_set(document)
-                if document['exam'] != exam:
-                    raise ValueError('Question set belongs to a different exam.')
-                found.append((path, document))
-            except (OSError, ValueError, KeyError, TypeError) as error:
-                errors.append({'file': path.name, 'error': str(error)})
-        return found, errors
+        private_rows, errors = read_private_sets(exam)
+        if exam != 'ap':
+            return private_rows, errors
+        shared_rows, shared_errors = read_shared_ap_sets()
+        errors = [*errors, *shared_errors]
+        if shared_errors:
+            return [], errors  # Do not hide a broken shared release with a private fallback.
+        merged = {doc['id']: (path, doc) for path, doc in shared_rows}
+        ambiguous = {error['id'] for error in errors if 'id' in error}
+        for path, document in private_rows:
+            identity = document['id']
+            previous = merged.get(identity)
+            if previous and (previous[1]['revision'] != document['revision'] or previous[1] != document):
+                ambiguous.add(identity)
+                errors.append({'file': path.name, 'error': 'Ambiguous shared/private AP set id.'})
+            elif previous is None:
+                merged[identity] = (path, document)
+        return [row for identity, row in merged.items() if identity not in ambiguous], errors
 
     def summary(document):
+        if document.get('exam') == 'ap':
+            return summarize_ap_set(document)
         return {'id': document['id'], 'title': document['title'],
                 'questionCount': len(document['questions']),
                 'section': document.get('section', ''),
@@ -724,6 +809,84 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                 self.send_header('Content-Security-Policy', csp)
             self.end_headers()
             self.wfile.write(body)
+
+        def send_ap_pdf(self, asset, *, head=False):
+            # Authentication is required; only valid manifest-referenced PDFs may be served.
+            rows, _ = read_sets('ap')
+            if not AP_ASSET_RE.fullmatch(asset) or not any(
+                    source['asset'] == asset for _, doc in rows for source in doc['documents']):
+                return self.reply(404, {'error': 'Document not found.'})
+            shared_reference = any(
+                path.is_relative_to(root / SHARED_AP) and any(source['asset'] == asset for source in doc['documents'])
+                for path, doc in rows)
+            try:
+                path = (safe_ap_path(root, SHARED_AP + '/assets/' + asset.split('/')[-1])
+                        if shared_reference else safe_ap_path(private, asset))
+                if not path.is_file():
+                    raise ValueError('Missing PDF.')
+            except (OSError, ValueError):
+                return self.reply(404, {'error': 'Document not found.'})
+            try:
+                with path.open('rb') as stream:
+                    if stream.read(5) != b'%PDF-':
+                        return self.reply(404, {'error': 'Invalid PDF document.'})
+                    size = os.fstat(stream.fileno()).st_size
+                    start, end, status = 0, size - 1, 200
+                    value = self.headers.get('Range')
+                    if value and not head:
+                        match = re.fullmatch(r'bytes=(\d{0,20})-(\d{0,20})', value)
+                        valid = bool(match and any(match.groups()))
+                        if valid:
+                            left, right = match.groups()
+                            if left:
+                                start, end = int(left), min(int(right), size - 1) if right else size - 1
+                            else:
+                                length = int(right)
+                                start = max(0, size - length)
+                                valid = length > 0
+                            valid = valid and 0 <= start <= end < size
+                        if not valid:
+                            self.send_response(416)
+                            self.send_header('Content-Range', f'bytes */{size}')
+                            self.send_header('Content-Length', '0')
+                            self.end_headers()
+                            return
+                        status = 206
+                    self.send_response(status)
+                    self.send_header('Content-Type', 'application/pdf')
+                    self.send_header('Content-Length', str(end - start + 1))
+                    self.send_header('Accept-Ranges', 'bytes')
+                    self.send_header('Content-Disposition', 'inline; filename="ap-source.pdf"')
+                    self.send_header('Cache-Control', 'private, no-store')
+                    self.send_header('X-Content-Type-Options', 'nosniff')
+                    self.send_header('Referrer-Policy', 'same-origin')
+                    if status == 206:
+                        self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+                    self.end_headers()
+                    if not head:
+                        stream.seek(start)
+                        remaining = end - start + 1
+                        while remaining:
+                            chunk = stream.read(min(65536, remaining))
+                            if not chunk:
+                                break
+                            self.wfile.write(chunk)
+                            remaining -= len(chunk)
+            except (BrokenPipeError, ConnectionResetError):
+                pass
+            except OSError:
+                # A resource removed during access must not expose a filesystem path.
+                self.close_connection = True
+
+        def do_HEAD(self):
+            route = unquote(urlsplit(self.path).path)
+            if (self.valid_host() and auth.authenticate(self.headers.get('Cookie', ''))
+                    and route.startswith('/question-assets/ap/')):
+                return self.send_ap_pdf(route[1:], head=True)
+            self.send_response(404)
+            self.send_header('Content-Length', '0')
+            self.send_header('Cache-Control', 'no-store')
+            self.end_headers()
 
         def send_toefl_media(self, path):
             """Only reached after authentication and the TOEFL manifest allowlist."""
@@ -797,7 +960,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             if not user and not public:
                 if route.startswith('/api/'):
                     return self.reply(401, {'error': '请先登录。'})
-                if route in {'/', '/index.html', '/account', '/accounts', '/sat', '/sat/', '/toefl', '/toefl/', '/contests', '/contests/'} or route.endswith('.html'):
+                if route in {'/', '/index.html', '/account', '/accounts', '/sat', '/sat/', '/toefl', '/toefl/', '/ap', '/ap/', '/contests', '/contests/'} or route.endswith('.html'):
                     return self.redirect('/login?next=' + quote(self.path, safe=''))
                 return self.reply(404, {'error': 'Not found.'})
             if route in {'/login', '/login/'} and user:
@@ -848,6 +1011,20 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     return self.send_bytes(200, response[0], response[1], cache='no-store', csp=csp)
                 except (OSError, ValueError, TypeError, KeyError):
                     return self.reply(404, {'error': 'Not found.'})
+            if route.startswith('/question-assets/ap/'):
+                return self.send_ap_pdf(route[1:])
+            if route == '/api/ap/example':
+                try:
+                    example = root / 'front-end/ap/examples/synthetic-practice.json'
+                    if example.is_symlink() or not example.resolve().is_relative_to((root / 'front-end/ap').resolve()):
+                        raise ValueError('Invalid example path.')
+                    document = json.loads(example.read_text(encoding='utf-8'))
+                    validate_ap_set(document)
+                    if document['contentMode'] != 'synthetic' or document['documents']:
+                        raise ValueError('Only original self-contained examples may be served here.')
+                    return self.reply(200, document)
+                except (OSError, ValueError, TypeError, KeyError):
+                    return self.reply(503, {'error': 'AP 原创示例尚未就绪。'})
             if route == '/api/toefl/status':
                 return self.reply(200, toefl_preview)
             if route == '/api/sat-packs':
@@ -890,7 +1067,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                         except (OSError, ValueError, TypeError, KeyError, ET.ParseError) as error:
                             failures.append({'file': 'active SAT packages', 'error': str(error)})
                     shared_toefl = exam == 'toefl' and toefl_preview['available'] and toefl_preview['contentMode'] == 'shared-bank'
-                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'toefl' and toefl_preview['available'],
+                    exams.append({'id': exam, 'name': name, 'available': exam == 'sat' or exam == 'ap' and (root / 'front-end/ap/index.html').is_file() or exam == 'toefl' and toefl_preview['available'],
                                   'questionCount': toefl_preview['questionCount'] if shared_toefl else sum(s['questionCount'] for s in sources),
                                   'sourceCount': toefl_preview['recordCount'] if shared_toefl else len(sources), 'sources': sources,
                                   'sections': sorted({s['section'] for s in sources if s['section']}),
@@ -904,7 +1081,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                     return self.reply(404, {'error': 'Unknown exam interface.'})
                 rows, errors = read_sets(parts[2])
                 if len(parts) == 4:
-                    return self.reply(200, {'schemaVersion': 1, 'exam': parts[2],
+                    return self.reply(200, {'schemaVersion': 2 if parts[2] == 'ap' else 1, 'exam': parts[2],
                                            'sources': [summary(d) for _, d in rows], 'errors': errors})
                 document = next((d for _, d in rows if d['id'] == parts[4]), None)
                 return self.reply(200, document) if document else self.reply(404, {'error': 'Source not found.'})
@@ -919,8 +1096,8 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                                        'errors': [f"{e['file']}: {e['error']}" for e in failures]})
             if route in {'/sat', '/sat/'}:
                 return self.redirect('/sat/html/index.html' + ('?' + parsed.query if parsed.query else ''))
-            if route == '/toefl':
-                return self.redirect('/toefl/' + ('?' + parsed.query if parsed.query else ''))
+            if route in {'/toefl', '/ap'}:
+                return self.redirect(route + '/' + ('?' + parsed.query if parsed.query else ''))
             # Explicit application-only routes; repository metadata and private files
             # cannot be fetched as static content.
             if route in {'/', '/index.html'}:
@@ -934,6 +1111,10 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
             elif route.startswith('/web/'):
                 base, relative = root / 'front-end/web', route[len('/web/'):]
                 if Path(relative).suffix not in {'.html', '.css', '.js', '.svg', '.png', '.ico'}:
+                    return self.reply(404, {'error': 'Not found.'})
+            elif route.startswith('/ap/'):
+                base, relative = root / 'front-end/ap', route[len('/ap/'):] or 'index.html'
+                if relative not in AP_PUBLIC_FILES:
                     return self.reply(404, {'error': 'Not found.'})
             elif route.startswith('/toefl/'):
                 if not toefl_preview['available']:
@@ -959,7 +1140,7 @@ def create_server(root=REPOSITORY, port=8888, private_root=None, sat_library_roo
                 return self.reply(404, {'error': 'Not found.'})
             if base == toefl_preview_root:
                 try:
-                    _safe_local_path(root, str(base.relative_to(root) / relative))
+                    _safe_local_path(root, (base.relative_to(root) / relative).as_posix())
                 except ValueError:
                     return self.reply(404, {'error': 'Not found.'})
             path = (base / relative).resolve()

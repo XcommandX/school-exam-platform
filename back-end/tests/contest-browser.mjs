@@ -72,6 +72,7 @@ try {
   await questionReady();assert.equal(await run(`document.activeElement.id`),'question-title');results.push('Keyboard Enter opens exam and moves focus to new question');
   const first=amc.problems[0], wrong=first.choices.find(c=>!first.answer.accepted.includes(c.label)).label;
   await click(`#choices input[value="${wrong}"]`);await click('#check-answer');assert.match(await run(`document.querySelector('#feedback').textContent`),/不匹配/);
+  assert.equal(await run(`document.querySelector('#score-report').hidden`),false);assert.equal(await run(`document.querySelector('#score-total').textContent`),'0 / 6 分');
   await click('#bookmark');assert.equal(await run(`document.querySelector('#bookmark').getAttribute('aria-pressed')`),'true');
   await click('[data-view="wrong"]');assert.equal(await run(`document.querySelectorAll('#saved-list .saved-row').length`),1);
   await click('#saved-list button');await questionReady();assert.equal(await run(`document.querySelector('#check-answer').disabled`),true);
@@ -191,6 +192,11 @@ try {
   await call('Page.navigate',{url:`http://127.0.0.1:${port}/`});await until(`document.querySelector('.contest-entry a[href="/contests/"]')`);assert.ok(await run(`document.querySelector('.subject-links a[href^="/sat/"]')!==null`));
   await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:false});await assertLayout(); await screenshot('home-mobile');
   await call('Emulation.setDeviceMetricsOverride',{width:1360,height:1000,deviceScaleFactor:1,mobile:false});await assertLayout();await screenshot('home-desktop');
+  await run(`document.querySelector('.contest-entry').scrollIntoView({block:'center'})`);await screenshot('contest-card-desktop');
+  assert.equal(await run(`document.querySelectorAll('.contest-entry .subject-links a').length`),4);
+  assert.ok(await run(`document.querySelector('.home-ap-entry a[href="/ap/"]')!==null`));
+  await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:false});await assertLayout();await run(`document.querySelector('.contest-entry').scrollIntoView({block:'center'})`);await screenshot('contest-card-mobile');
+  await call('Emulation.setDeviceMetricsOverride',{width:1360,height:1000,deviceScaleFactor:1,mobile:false});
   results.push('Home link and existing SAT entry remain present');
   // Native dialogs are accepted only for explicit test start/finish actions.
   async function confirmClick(selector){await until(`!document.querySelector(${JSON.stringify(selector)}).disabled&&!document.querySelector(${JSON.stringify(selector)}).hidden`);const opened=new Promise((resolve,reject)=>{const timer=setTimeout(()=>{ws.removeEventListener('message',listener);reject(Error('Expected confirmation: '+selector));},10000);function listener(event){const m=JSON.parse(event.data);if(m.method==='Page.javascriptDialogOpening'){clearTimeout(timer);ws.removeEventListener('message',listener);resolve();}}ws.addEventListener('message',listener);});const promise=click(selector);await opened;await call('Page.handleJavaScriptDialog',{accept:true});await promise;}
@@ -199,6 +205,7 @@ try {
   await click('#timed-mode');await confirmClick('#timer-start');
   await until(`document.querySelector('#timer-status').dataset.status==='running'`);
   assert.equal(await run(`document.querySelector('#reveal-answer').hidden&&document.querySelector('#solution-details').hidden&&document.querySelector('#check-answer').hidden`),true);
+  assert.equal(await run(`document.querySelector('#score-report').hidden`),true);
   await click(`#choices input[value="${first.answer.accepted[0]}"]`);
   const started=await run(`JSON.parse(localStorage.getItem(ContestTimer.storageKey(PlatformAuth.user.id))).timed.attempts.at(-1)`);
   assert.equal(started.sessions[0].deadline-started.sessions[0].startedAt,75*60*1000);
@@ -209,13 +216,18 @@ try {
   await screenshot('timed-desktop');await call('Emulation.setDeviceMetricsOverride',{width:320,height:720,deviceScaleFactor:1,mobile:false});await assertLayout();await screenshot('timed-mobile');await call('Emulation.setDeviceMetricsOverride',{width:1360,height:1000,deviceScaleFactor:1,mobile:false});await confirmClick('#timer-finish');await until(`document.querySelector('#timer-status').dataset.status==='finished'`);
   assert.equal(await run(`[...document.querySelectorAll('#choices input')].every(e=>e.disabled)`),true);
   assert.equal(await run(`JSON.stringify(JSON.parse(localStorage.getItem(ContestTimer.storageKey(PlatformAuth.user.id))).regular)`),regularBefore);
+  const expectedTimed=6+(amc.problems.filter(p=>p.quality.auto_gradable).length-1)*1.5;
+  assert.equal(await run(`document.querySelector('#score-report').hidden`),false);assert.match(await run(`document.querySelector('#score-title').textContent`),/部分题/);
+  assert.equal(await run(`document.querySelector('#score-total').textContent`),`${expectedTimed} / ${amc.problems.filter(p=>p.quality.auto_gradable).length*6} 分`);
+  const finishedScore=await run(`document.querySelector('#score-report').textContent`);await call('Page.reload');await questionReady();assert.equal(await run(`document.querySelector('#score-report').textContent`),finishedScore);await screenshot('submitted-score');
   // Resume a synthetically expired attempt to avoid a 75-minute smoke wait.
   await click('#new-attempt');await confirmClick('#timer-start');
   const clockShift=await call('Page.addScriptToEvaluateOnNewDocument',{source:`const realNow=Date.now;Date.now=()=>realNow()+76*60000;`});
   await call('Page.reload');await questionReady();await until(`document.querySelector('#timer-status').dataset.status==='expired'`);
   await call('Page.removeScriptToEvaluateOnNewDocument',{identifier:clockShift.identifier});
   assert.equal(await run(`[...document.querySelectorAll('#choices input')].every(e=>e.disabled)`),true);
-  results.push('Timed start/reload keeps absolute deadline; finish/expiry lock inputs and preserve untimed records');
+  assert.equal(await run(`document.querySelector('#score-report').hidden`),false);assert.equal(await run(`document.querySelector('#score-total').textContent`),`${amc.problems.filter(p=>p.quality.auto_gradable).length*1.5} / ${amc.problems.filter(p=>p.quality.auto_gradable).length*6} 分`);
+  results.push('Timed scores hidden live; finish/reload/expiry show correct and blank scores, readonly records and separate untimed totals');
   const fullUsamo=await call('Page.addScriptToEvaluateOnNewDocument',{source:`const nativeFetch=window.fetch;window.fetch=async(...args)=>{const r=await nativeFetch(...args);if(String(args[0]).includes('/api/contests/exams/${exams.USAMO.id}')){const d=await r.json();d.problems.push(...d.problems.map((p,i)=>({...p,id:d.id+'-0'+(i+4),number:i+4})));return new Response(JSON.stringify(d),{status:200,headers:{'Content-Type':'application/json'}});}return r;};`});
   await navigate(`/contests/?mode=example&exam=${exams.USAMO.id}`);await questionReady();await click('#timed-mode');await confirmClick('#timer-start');
   assert.match(await run(`document.querySelector('#timer-remaining').textContent`),/^04:29:|^04:30:/);

@@ -28,7 +28,7 @@ assert.equal(JSON.parse(status.text).auth.loginEnabled, true);
 const session = await probe('/api/auth/session', 200);
 assert.equal(JSON.parse(session.text).authenticated, false);
 assert.equal(JSON.parse(session.text).user, null);
-for (const path of ['/', '/account', '/sat/', '/toefl/']) {
+for (const path of ['/', '/account', '/sat/', '/toefl/', '/ap', '/ap/', '/ap/index.html', '/contests', '/contests/', '/contests/index.html']) {
   const result = await probe(path, 302); assert.ok(result.response.headers.get('Location').startsWith('/login?next='));
 }
 const login = await probe('/login', 200);
@@ -37,13 +37,30 @@ assert.ok(login.response.headers.get('Content-Security-Policy').includes("frame-
 assert.match((await probe('/setup', 200)).text, /setup-form/);
 assert.match((await probe('/setup.js', 200)).text, /replaceState/);
 const sha = value => createHash('sha256').update(value).digest('hex');
-for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css']) {
+for (const name of ['sat-bridge.js', 'platform-auth.js', 'styles.css', 'toefl-bridge.js']) {
   const live = await probe('/web/' + name, 200);
   const source = await readFile(new URL('../../../front-end/web/' + name, import.meta.url));
   assert.equal(sha(Buffer.from(live.text)), sha(source), 'Deployed public source hash: ' + name);
 }
-for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap']) await probe(path, 401);
-for (const path of ['/_catalog/routes.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js']) await probe(path, 404);
+for (const path of ['/api/me', '/api/me/home', '/api/admin/users', '/api/sat/bootstrap', '/api/sat-library/catalog', '/api/sat-question-catalog', '/api/question-bank', '/api/toefl/bootstrap', '/api/toefl/ai-config', '/api/toefl/assess', '/api/ap/example', '/api/exams/ap/sources']) await probe(path, 401);
+for (const path of ['/_catalog/routes.json', '/_catalog/toefl-ai-questions.json', '/.git/config', '/toefl/four-data.js', '/sat/js/question-bank.js', '/ap/app.js', '/ap/examples/synthetic-practice.json']) await probe(path, 404);
+// Contest APIs, actual shared images, vendor code and internal copies remain guarded.
+for (const path of ['/api/contests/catalog','/api/contests/catalog?mode=example']) await probe(path,401);
+const contestManifest = JSON.parse(await readFile(new URL('../../question-banks/contests/RESOURCE_MANIFEST.json', import.meta.url),'utf8'));
+const contestExam = contestManifest.files.find(file=>file.path.startsWith('exams/'));
+await probe('/api/contests/exams/'+contestExam.path.slice(6,-5),401);
+const contestImage = contestManifest.files.find(file=>file.path.startsWith('assets/'));
+for (const path of ['/contests/app.js','/contests/timer.js','/_catalog/contests/catalog.json','/contest-assets/'+contestImage.path,'/contest-vendor/mathjax/es5/tex-svg.js']) await probe(path,404);
+// Published AP material URLs must remain protected even when exact ids/hashes are known.
+const apManifest = JSON.parse(await readFile(new URL('../../question-banks/ap/RESOURCE_MANIFEST.json', import.meta.url), 'utf8'));
+const apSetFile = apManifest.files.find(file => file.path.startsWith('sets/'));
+const apSet = JSON.parse(await readFile(new URL('../../question-banks/ap/' + apSetFile.path, import.meta.url), 'utf8'));
+await probe('/api/exams/ap/sources/' + encodeURIComponent(apSet.id), 401);
+const apPdf = apManifest.files.filter(file => file.path.endsWith('.pdf')).sort((a,b)=>b.bytes-a.bytes)[0];
+const apPdfRoute = '/question-assets/ap/' + apPdf.path.slice('assets/'.length);
+await probe(apPdfRoute, 404);
+await probe(apPdfRoute, 404, {method:'HEAD'});
+await probe(apPdfRoute, 404, {headers:{Range:'bytes=0-4'}});
 const invalidOrigin = await probe('/api/auth/bootstrap', 403, {method: 'POST', headers: {'Content-Type': 'application/json', Origin: 'https://untrusted.invalid'}, body: '{}'});
 assert.equal(JSON.parse(invalidOrigin.text).code, 'invalid_origin');
 // This known-invalid setup token can never create an account. It exercises the
