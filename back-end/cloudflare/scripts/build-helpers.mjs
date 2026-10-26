@@ -21,7 +21,7 @@ export function safeRelativePath(value) {
 
 export function safeAssetPath(value) {
   safeRelativePath(value);
-  if (!['web', 'sat', 'toefl', '_catalog'].includes(value.split('/')[0])
+  if (!['web', 'sat', 'toefl', 'ap', '_catalog'].includes(value.split('/')[0])
       || value.split('/').some(part => forbiddenSegments.has(part.toLowerCase()))
       || /(?:^|\/)(?:AGENTS|README|LICENSE)(?:\.|$)/iu.test(value)
       || /\.(?:py|pyc|md|sqlite3?|db|pem|key|p12|zip|log|map)$/iu.test(value)) {

@@ -40,6 +40,8 @@ async function readRoute(assets, descriptor) {
 async function anonymousRepository(root) {
   const bank = JSON.parse(await readFile(new URL('../../toefl/fixtures/anonymous-bank.json', import.meta.url), 'utf8'));
   for (const { source } of browserFiles()) await put(root, source, '/* Original anonymous browser fixture. */\n');
+  await put(root, 'front-end/ap/examples/synthetic-practice.json', await readFile(new URL('../../../front-end/ap/examples/synthetic-practice.json', import.meta.url)));
+  await put(root, 'local-data/question-banks/ap/private.json', 'PRIVATE_DO_NOT_EXPORT_8675309');
   const manifest = { schema_version: 1, kind: 'toefl-shared-bank', bank: 'bank.json', files: [],
     counts: { records: bank.records.length, questions: bank.records.reduce((sum, record) => sum + record.items.length, 0), audio: 1, images: 1 },
     source: { kind: 'anonymous-fixture' } };
@@ -195,7 +197,8 @@ test('new cloud catalog preserves API shapes without reading or inventing old ac
   const exams = routes['/api/platform/catalog'].exams;
   assert.equal(exams.find(exam => exam.id === 'toefl').questionCount, 42);
   assert.equal(exams.find(exam => exam.id === 'sat').questionCount, 0);
-  assert.equal(exams.find(exam => exam.id === 'ap').available, false);
+  assert.equal(exams.find(exam => exam.id === 'ap').available, true);
+  assert.equal(routes['/api/exams/ap/sources'].schemaVersion, 2);
   assert.ok(exams.every(exam => exam.sources.length === 0));
 });
 

@@ -32,18 +32,21 @@ export const SAT_FILES = Object.freeze([
   'vendor/marked/marked.umd.js',
   ...fontFamilies.flatMap(name => ['ttf', 'woff', 'woff2'].map(extension => `vendor/katex/fonts/KaTeX_${name}.${extension}`)),
 ]);
+export const AP_FILES = Object.freeze(['index.html', 'styles.css', 'app.js', 'ap-model.js', 'examples/synthetic-practice.json']);
 export const TOEFL_FILES = Object.freeze(['index.html', 'four.css', 'four-logic.js', 'four-learning.js', 'four-app.js', 'favicon.svg']);
 
 export const HTML_TEMPLATES = Object.freeze({
   '/': '/web/index.html', '/index.html': '/web/index.html', '/web/index.html': '/web/index.html',
   '/login': '/web/login.html', '/login/': '/web/login.html', '/web/login.html': '/web/login.html',
   '/account': '/web/account.html', '/accounts': '/web/account.html', '/web/account.html': '/web/account.html',
+  '/ap/': '/ap/index.html', '/ap/index.html': '/ap/index.html',
   '/sat/html/index.html': '/sat/html/index.html', '/toefl/': '/toefl/index.html', '/toefl/index.html': '/toefl/index.html',
 });
 
 export function browserFiles() {
   return [
     ...WEB_FILES.map(name => ({ source: `front-end/web/${name}`, target: `web/${name}` })),
+    ...AP_FILES.map(name => ({ source: `front-end/ap/${name}`, target: `ap/${name}` })),
     ...SAT_FILES.map(name => ({ source: `front-end/sat/${name}`, target: `sat/${name}` })),
     ...TOEFL_FILES.map(name => ({ source: `front-end/toefl/${name}`, target: `toefl/${name}` })),
     { source: 'front-end/toefl/clients/cloud-client.js', target: 'web/toefl-cloud.js' },
@@ -94,7 +97,7 @@ export function staticCatalogs(counts) {
   const status = { available: true, contentMode: 'shared-bank', recordCount: counts.records,
     questionCount: counts.questions, practiceUrl: '/toefl/' };
   const exams = Object.entries({ sat: 'SAT', ap: 'AP', toefl: 'TOEFL', vocab: 'Personal Vocab' }).map(([id, name]) => ({
-    id, name, available: ['sat', 'toefl'].includes(id), questionCount: id === 'toefl' ? counts.questions : 0,
+    id, name, available: ['sat', 'toefl', 'ap'].includes(id), questionCount: id === 'toefl' ? counts.questions : 0,
     sourceCount: id === 'toefl' ? counts.records : 0, sources: [], sections: [], ...(id === 'toefl' ? { preview: status } : {}),
   }));
   return {
@@ -104,7 +107,7 @@ export function staticCatalogs(counts) {
     '/api/question-bank/status': { service: 'sat-question-bank-v1', project: 'study-space-cloudflare',
       name: 'SAT cloud question bank', token: '', writable: false },
     '/api/question-bank': { files: [], errors: [] },
-    ...Object.fromEntries(exams.map(({ id }) => [`/api/exams/${id}/sources`, { schemaVersion: 1, exam: id, sources: [], errors: [] }])),
+    ...Object.fromEntries(exams.map(({ id }) => [`/api/exams/${id}/sources`, { schemaVersion: id === 'ap' ? 2 : 1, exam: id, sources: [], errors: [] }])),
   };
 }
 
@@ -163,6 +166,10 @@ export async function build({ root = repositoryRoot, python = process.env.PYTHON
   for (const [route, value] of Object.entries(staticCatalogs(resources.counts))) {
     protectedRoutes[route] = await writer.route(route, `_catalog/static/${route.slice('/api/'.length)}.json`, JSON.stringify(value) + '\n');
   }
+  // Only the tracked original example is deployable; never enumerate local AP libraries.
+  const apExample = JSON.parse(await readFile(await checkedSource(root, 'front-end/ap/examples/synthetic-practice.json', tracked), 'utf8'));
+  if (apExample.contentMode !== 'synthetic' || apExample.documents?.length !== 0) throw new Error('AP cloud example must be original and self-contained.');
+  protectedRoutes['/api/ap/example'] = await writer.route('/api/ap/example', '_catalog/static/ap/example.json', JSON.stringify(apExample) + '\n');
   const routesManifest = { schemaVersion: 1, htmlTemplates: HTML_TEMPLATES, protectedRoutes };
   await writer.write('_catalog/routes.json', JSON.stringify(routesManifest) + '\n');
   const inventory = await writer.audit();

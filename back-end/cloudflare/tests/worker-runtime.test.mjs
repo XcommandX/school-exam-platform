@@ -31,7 +31,17 @@ test('full Worker security boundary, authentication, account isolation and API c
   for(const path of ['/_catalog/routes.json','/%5fcatalog/routes.json','/back-end/server/platform_auth.py','/.git/config','/local-data/auth/accounts.db','/toefl/audio/not-real.mp3'])assert.equal((await call(mf,path)).status,404,path);
   assert.equal((await call(mf,'/')).status,302);assert.equal((await call(mf,'/api/sat/bootstrap')).status,401);
   assert.equal((await call(mf,'/login')).status,200);assert.equal((await call(mf,'/web/styles.css')).status,200);
+  for(const path of ['/ap','/ap/','/ap/index.html'])assert.equal((await call(mf,path)).status,302,path);
+  for(const path of ['/api/ap/example','/api/exams/ap/sources'])assert.equal((await call(mf,path)).status,401,path);
+  assert.equal((await call(mf,'/ap/examples/synthetic-practice.json')).status,404);
   const admin=await setup(mf),owner=admin.value.user.id,auth={cookie:admin.cookie,user:owner};
+  const apHTML=await call(mf,'/ap/',auth);assert.equal(apHTML.status,200);assert.match(apHTML.value,/window.PlatformSession=/);assert.match(apHTML.value,/platform-auth.js/);
+  assert.equal((await call(mf,'/ap?kind=frq',auth)).headers.get('Location'),'/ap/?kind=frq');
+  assert.equal((await call(mf,'/ap/app.js',auth)).status,200);
+  const apCatalog=await call(mf,'/api/exams/ap/sources',auth);assert.equal(apCatalog.status,200);assert.deepEqual(apCatalog.value.sources,[]);
+  const apExample=await call(mf,'/api/ap/example',auth);assert.equal(apExample.status,200);assert.equal(apExample.value.contentMode,'synthetic');assert.deepEqual(apExample.value.documents,[]);
+  assert.equal((await call(mf,'/api/ap/example',{...auth,user:'another-account'})).status,409);
+  assert.equal((await call(mf,'/api/exams/ap/sources/local-private',auth)).status,404);
   assert.equal('token'in admin.value,false);assert.match(admin.headers.get('Set-Cookie'),/HttpOnly; Secure; SameSite=Strict/);
   assert.match(admin.headers.get('Cache-Control'),/no-store/);
   assert.equal((await call(mf,'/api/auth/bootstrap',{method:'POST',body:{setupToken,username:'other',password:'password'}})).status,409);
