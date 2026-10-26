@@ -1,4 +1,5 @@
 import {createHash,randomUUID} from 'node:crypto';
+import {AccountAIStore} from './toefl-ai.mjs';
 import {ProjectedJSON,readJSON,InputError,fail} from './json-stream.mjs';
 import {satProjection,validateSAT,validateHome,mergeTOEFL,identity,settings,toeflKeys,fields,object,integer,MAX_ENTITY,MAX_SETTINGS,MAX_ACCOUNT,MiB} from './validation.mjs';
 const CHUNK=256*1024,MAX_PHYSICAL=704*MiB,encoder=new TextEncoder();
@@ -139,11 +140,11 @@ export class AccountStore {
       return json(result);
     }finally{this.staging.delete(staged.id);if(!committed)this.removeUpload(staged.id);this.cleanup();}
   }
-  state(namespace,user=null){
+  state(namespace,user=null,ai={enabled:false,preview:false,provider:'Cloudflare Workers AI'}){
     const rows=this.rows('SELECT * FROM entities WHERE kind=? ORDER BY id',namespace),self=this;
     if(namespace==='home')return this.stateItem('home','settings');
     return this.stream((async function*(){
-      if(user)yield '{"me":'+JSON.stringify({...user,aiReady:false})+',"state":';
+      if(user)yield '{"me":'+JSON.stringify({...user,aiReady:ai.enabled===true,aiDemo:ai.preview===true,aiProvider:ai.provider})+',"state":';
       yield '{"items":[';for(let i=0;i<rows.length;i++){const row=rows[i];if(i)yield ',';yield '{"key":'+JSON.stringify(row.id)+',"revision":'+row.revision+',"value":';yield* self.raw(row);yield '}';}yield ']}';
       if(user)yield '}';
     })(),rows);
@@ -216,7 +217,11 @@ export class PlatformAccountStore {
           return await this.store.bootstrap(url.searchParams.get('cursor'));
         }
         if(path==='/api/sat/summary'&&request.method==='GET')return this.store.summary();
-        if(path==='/api/toefl/bootstrap'&&request.method==='GET')return this.store.state('toefl',user);
+        if(path==='/api/toefl/bootstrap'&&request.method==='GET')return this.store.state('toefl',user,request.headers.has('X-Platform-AI-Config')?JSON.parse(request.headers.get('X-Platform-AI-Config')):undefined);
+        if(path.startsWith('/internal/toefl-ai/')&&request.method==='POST'){
+          this.ai??=new AccountAIStore(this.store);
+          return json(await this.ai.handle(path.slice('/internal/toefl-ai/'.length),await readJSON(request,128*1024),()=>this.verify(request)));
+        }
         if(['/api/me/home','/api/toefl/state'].includes(path)){
           const namespace=path==='/api/me/home'?'home':'toefl';
           if(request.method==='GET')return this.store.state(namespace);

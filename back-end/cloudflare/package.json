@@ -9,6 +9,7 @@
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
     "test:browser": "node tests/browser-smoke.mjs",
     "test:registration-browser": "node tests/registration-browser.mjs",
+    "preview:ai": "node scripts/preview-ai.mjs",
     "dev": "wrangler dev --config wrangler.jsonc --ip 127.0.0.1",
     "deploy": "wrangler deploy --config wrangler.jsonc"
   },

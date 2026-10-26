@@ -6,6 +6,12 @@
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
   "preview_urls": false,
+  "ai": { "binding": "AI", "remote": true },
+  "vars": {
+    "ENABLE_AI": "true",
+    "ASSESSMENT_PROVIDER": "cloudflare",
+    "TEXT_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
   "assets": {
     "directory": "../../local-data/builds/cloudflare/assets",
     "binding": "ASSETS",

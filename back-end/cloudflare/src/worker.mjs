@@ -2,6 +2,7 @@ import {createHash,timingSafeEqual} from 'node:crypto';
 import {InputError,fail,readJSON} from './json-stream.mjs';
 import {fields,identity} from './validation.mjs';
 import {setupHTML,setupJS} from './setup.mjs';
+import {aiConfig,assess} from './toefl-ai.mjs';
 export {PlatformAuthStore} from './auth.mjs';
 export {PlatformAccountStore} from './data.mjs';
 export {PlatformBankStore} from './bank.mjs';
@@ -48,9 +49,9 @@ async function session(env,token){
   if(!response.ok)throw new InputError('账号服务暂不可用。',503,'storage_unavailable');
   return response.json();
 }
-function writeOrigin(request,url){
+function writeOrigin(request,url,{multipart=false}={}){
   if(request.headers.get('Origin')!==url.origin||request.headers.get('Sec-Fetch-Site')==='cross-site')fail('请从当前网站页面操作。',403,'invalid_origin');
-  if(request.headers.get('Content-Type')?.split(';')[0].trim().toLowerCase()!=='application/json')fail('请求必须使用 JSON。',415,'json_required');
+  if(!multipart&&request.headers.get('Content-Type')?.split(';')[0].trim().toLowerCase()!=='application/json')fail('请求必须使用 JSON。',415,'json_required');
 }
 async function catalogue(env){
   if(!catalogues.has(env))catalogues.set(env,(async()=>{
@@ -115,7 +116,7 @@ export async function handle(request,env){
   if(!path||path.startsWith('/_catalog')||path.startsWith('/.'))return notFound();
   if(!['GET','HEAD','POST','PUT','PATCH'].includes(method))return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
   const writing=!['GET','HEAD'].includes(method);
-  if(writing)writeOrigin(request,url);
+  if(writing)writeOrigin(request,url,{multipart:path==='/api/toefl/assess'&&method==='POST'});
   if(path==='/robots.txt'&&method==='GET')return new Response('User-agent: *\nDisallow: /\n');
   if(path==='/api/platform/status'&&method==='GET')return json({service:'school-exam-platform-v1',deployment:'cloudflare',auth:{mode:'session',loginEnabled:true}});
   if(path==='/setup'&&!writing)return new Response(setupHTML,{headers:{'Content-Type':'text/html; charset=utf-8'}});
@@ -192,7 +193,22 @@ export async function handle(request,env){
     return authResponse(await auth(env,'/password',{token,targetId:admin[1],newPassword:body.password}));
   }
   if(admin&&!admin[2]&&method==='PATCH')return authResponse(await auth(env,'/update-user',{token,targetId:admin[1],changes:await readJSON(request,16*1024)}));
-  if(path.startsWith('/api/sat/')||path==='/api/me/home'||path==='/api/toefl/state'||path==='/api/toefl/bootstrap')return env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(internal(request,user,token));
+  if(path==='/api/toefl/ai-config'||path==='/api/toefl/assess'){
+    if(url.search)fail('评分接口不接受查询参数。');
+    const config=aiConfig(env,request.url);
+    if(path.endsWith('/ai-config')&&method==='GET')return json(config);
+    if(path.endsWith('/assess')&&method==='POST')return assess(request,env,{config,rpc:async(action,body)=>{
+      const rpc=new Request('https://internal/internal/toefl-ai/'+action,{method:'POST',headers:{'Content-Type':'application/json','X-Platform-Token':token,'X-Platform-User':user.id},body:JSON.stringify(body)});
+      const response=await env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(rpc),value=await response.json();
+      if(!response.ok)throw new InputError(value.error,response.status,value.code,{...(value.retryAfter?{retryAfter:value.retryAfter}:{})});return value;
+    }});
+    return json({error:'接口不支持此操作。',code:'method_not_allowed'},405);
+  }
+  if(path.startsWith('/api/sat/')||path==='/api/me/home'||path==='/api/toefl/state'||path==='/api/toefl/bootstrap'){
+    const forwarded=internal(request,user,token);
+    if(path==='/api/toefl/bootstrap')forwarded.headers.set('X-Platform-AI-Config',JSON.stringify(aiConfig(env,request.url)));
+    return env.ACCOUNTS.getByName('account-v1:'+user.id).fetch(forwarded);
+  }
   if(path==='/api/question-bank/status'&&method==='GET')return json({service:'sat-question-bank-v1',project:'school-exam-platform-cloudflare',name:'SAT shared question bank',token:csrf(token),writable:user.role==='admin'});
   if(path==='/api/question-bank'){
     if(method==='POST'&&!same(request.headers.get('X-SAT-Bank-Token'),csrf(token)))fail('题库操作验证已过期，请刷新后重试。',403);

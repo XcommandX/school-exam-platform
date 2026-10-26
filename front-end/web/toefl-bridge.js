@@ -42,6 +42,8 @@ async function initialize() {
     },
     preserveLegacyStorage: true,
     recordingsReady: false,
+    examplesReady: false,
+    consentRequired: true,
     recordingDatabase,
     accountsUrl: '/account',
     lockChannel: 'school-exam-platform:toefl:lock',
@@ -50,7 +52,25 @@ async function initialize() {
     logout: () => auth.logout(),
   });
   const { initializeCloud } = await import('/web/toefl-cloud.js');
-  await initializeCloud();
+  const initial = await initializeCloud();
+  if (auth && !auth.active) return;
+  const cloud = window.PracticeCloud;
+  cloud.aiReady = false;
+  cloud.aiNotice = 'AI 练习评分暂未启用；作答和本机录音仍可保存。';
+  // These capability fields are emitted only by the Cloudflare adapter.
+  if (Object.hasOwn(initial.me, 'aiProvider') || Object.hasOwn(initial.me, 'aiDemo')) {
+    try {
+      const config = await cloud.aiConfig();
+      const currentScale = config.scoreScale === 'toefl-practice-1-6-v1' && config.scoreMin === 1 && config.scoreMax === 6;
+      cloud.aiPreview = config.preview === true;
+      cloud.aiReady = config.enabled === true && (cloud.aiPreview || currentScale);
+      cloud.aiProvider = config.provider || '';
+      cloud.aiNotice = config.enabled && !cloud.aiReady ? '评分服务量表版本不兼容，暂不能评估；旧版结果仍可回顾。' : config.notice || (cloud.aiReady ? 'AI估分 1–6，非官方成绩；仅在确认后发送作答用于本次练习评估。' : cloud.aiNotice);
+    } catch (error) {
+      // Python and older deployments may not implement this optional endpoint.
+      if (error.status === 401) throw error;
+    }
+  }
   if (auth && !auth.active) return;
   // No practice code runs until the server has verified the account and
   // restored only that account's learning state.
